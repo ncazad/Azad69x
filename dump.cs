@@ -15997,3 +15997,29000 @@ public class ProfilerFileOutput : MonoBehaviour // TypeDefIndex: 553
 	public void FlushToFile() { }
 
 	// RVA: 0x6761E18 Offset: 0x675DE18 VA: 0x6761E18
+public void Close() { }
+
+	// RVA: 0x6762000 Offset: 0x675E000 VA: 0x6762000
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class ProfilerLogger // TypeDefIndex: 554
+{
+	// Fields
+	private static float m_StartTime; // 0x8FB5B3B9
+	private static int m_FrameCount; // 0x83A4B5A3
+	private static float m_LastSecondTime; // 0xB4BEA5BF
+	private static float m_LastFrameTime; // 0xB3A5BFA4
+
+	// Methods
+
+	// RVA: 0x6762088 Offset: 0x675E088 VA: 0x6762088
+	public static void Flush() { }
+
+	// RVA: 0x676215C Offset: 0x675E15C VA: 0x676215C
+	public static void OnApplicationQuit() { }
+
+	// RVA: 0x6762244 Offset: 0x675E244 VA: 0x6762244
+	public static void Update() { }
+
+	// RVA: 0x676247C Offset: 0x675E47C VA: 0x676247C
+	public static void Log(object message) { }
+
+	// RVA: 0x67626D8 Offset: 0x675E6D8 VA: 0x67626D8
+	public static void StartLoading() { }
+
+	// RVA: 0x6762728 Offset: 0x675E728 VA: 0x6762728
+	public static void EndLoading() { }
+
+	// RVA: 0x67624F0 Offset: 0x675E4F0 VA: 0x67624F0
+	private static string ProfileFormatMessage(object message) { }
+
+	// RVA: 0x67625FC Offset: 0x675E5FC VA: 0x67625FC
+	public static void WriteToProfileFile(string message) { }
+
+	// RVA: 0x6762850 Offset: 0x675E850 VA: 0x6762850
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum DynamicBone.FreezeAxis // TypeDefIndex: 555
+{
+	// Fields
+	public int value__; // 0xA4B980B8
+	public const FreezeAxis None = 0;
+	public const FreezeAxis X = 1;
+	public const FreezeAxis Y = 2;
+	public const FreezeAxis Z = 3;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+private class DynamicBone.Particle // TypeDefIndex: 556
+{
+	// Fields
+	public Transform m_Transform; // 0xB5949B94
+	public int m_ParentIndex; // 0xA0B582BC
+	public float m_Damping; // 0x94A4A2BF
+	public float m_Elasticity; // 0xD0B1A4B1
+	public float m_Stiffness; // 0x8FB1A8B3
+	public float m_Inert; // 0xA2A2A5B3
+	public float m_Radius; // 0x8FA4BEB5
+	public float m_BoneLength; // 0xBDB9A2A0
+	public float m_Length2Parent; // 0x8FA9A2B1
+	public Vector3 m_Position; // 0x8FBCB1BD
+	public Vector3 m_PrevPosition; // 0xB5B3A8B5
+	public Vector3 m_EndOffset; // 0xBFB9A4A0
+	public Vector3 m_InitLocalPosition; // 0xB193D0BE
+	public Quaternion m_InitLocalRotation; // 0xA4BFBEBE
+	public Vector3 m_TransformPosition; // 0xA2B1BDF0
+	public Vector3 m_TransformLocalPosition; // 0xBCB1B8A3
+	public Matrix4x4 m_TransformLocalToWorldMatrix; // 0xB5B9B6F0
+
+	// Methods
+
+	// RVA: 0x6765300 Offset: 0x6761300 VA: 0x6765300
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+protected struct DynamicBone.CachedCollider // TypeDefIndex: 557
+{
+	// Fields
+	public float radius; // 0xF7F0B4BC
+	public bool isSphere; // 0xBCA2A4B3
+	public bool isOutside; // 0xB6BFF0F7
+	public Vector3 p0; // 0xA0A9A4F0
+	public Vector3 p1; // 0x95F7F0B5
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum DynamicBone.UpdateMode // TypeDefIndex: 558
+{
+	// Fields
+	public int value__; // 0xA4BEB5A6
+	public const UpdateMode Normal = 0;
+	public const UpdateMode AnimatePhysics = 1;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class DynamicBone.<>c__DisplayClass75_0 // TypeDefIndex: 559
+{
+	// Fields
+	public Transform b; // 0xF0EAF7A9
+
+	// Methods
+
+	// RVA: 0x67652F8 Offset: 0x67612F8 VA: 0x67652F8
+	public void .ctor() { }
+
+	// RVA: 0x67660A0 Offset: 0x67620A0 VA: 0x67660A0
+	internal bool <AppendParticles>b__0(Transform temp) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[AddComponentMenu("Dynamic Bone/Dynamic Bone")]
+public class DynamicBone : MonoBehaviour // TypeDefIndex: 560
+{
+	// Fields
+	public Transform m_Root; // 0xB5B6B582
+	public float m_UpdateRate; // 0xB3BEB5A2
+	[Range(0, 1)]
+	public float m_Damping; // 0xA9A4F0B5
+	public AnimationCurve m_DampingDistrib; // 0xB6F0B5A0
+	[Range(0, 1)]
+	public float m_Elasticity; // 0xB4BCB5B9
+	public AnimationCurve m_ElasticityDistrib; // 0xA2B1BDF0
+	[Range(0, 1)]
+	public float m_Stiffness; // 0xBCB1B8A3
+	public AnimationCurve m_StiffnessDistrib; // 0xF0B7BEB9
+	[Range(0, 1)]
+	public float m_Inert; // 0xBEF0A3B9
+	public AnimationCurve m_InertDistrib; // 0xA3F0A4BF
+	public float m_Radius; // 0xBFA0A0A5
+	public AnimationCurve m_RadiusDistrib; // 0xB4B5A4A2
+	public float m_EndLength; // 0xB193D0FE
+	public Vector3 m_EndOffset; // 0xA4BFBEBE
+	public Vector3 m_Gravity; // 0xA2B1BDF0
+	public Vector3 m_Force; // 0xBCB1B8A3
+	public List<DynamicBoneCollider> m_Colliders; // 0xB5B9B6F0
+	public List<Transform> m_Exclusions; // 0xF7F0B4BC
+	public List<Transform> m_ValidBones; // 0xA4918FBD
+	public bool m_AnimationControlled; // 0xF7A3B1BC
+	public bool m_Permanant; // 0xF0B6BFF0
+	private float m_DumbTime; // 0xB5A0A9A4
+	private float m_OrginalStiffness; // 0xA791F7F0
+	[CompilerGenerated]
+	private bool <FullInert>k__BackingField; // 0x87B5BBB1
+	public FreezeAxis m_FreezeAxis; // 0xBFA0B1B5
+	public bool m_DistantDisable; // 0xBFB399BE
+	public Transform m_ReferenceObject; // 0xA4B19DBE
+	public float m_DistanceToObject; // 0xB1B9A2B5
+	public Vector3 m_RandomAcceleration; // 0xB1A483BC
+	public int m_RandomAccelerationInterval; // 0xEAF7B5A4
+	protected int m_RAIndex; // 0xB6B582F0
+	protected int m_RALerpCount; // 0xBEB5A2B5
+	protected Vector3 m_LocalGravity; // 0xA4F0B5B3
+	protected Vector3 m_ObjectMove; // 0xF0B5A0A9
+	protected Vector3 m_ObjectPrevPosition; // 0xBCB5B9B6
+	protected int m_RandomAccelerationCount; // 0xB1BDF0B4
+	protected float m_BoneTotalLength; // 0xB1B8A3A2
+	protected float m_ObjectScale; // 0xB7BEB9BC
+	protected float m_Time; // 0xF0A3B9F0
+	protected float m_Weight; // 0xF0A4BFBE
+	protected bool m_DistantDisabled; // 0xA0A0A5A3
+	protected bool m_Rand; // 0xB5A4A2BF
+	private Vector3 m_CurrentRandomAcceleration; // 0x93D0FEB4
+	private int m_PreUpdateCount; // 0xBFBEBEB1
+	public bool m_UseRandomForce; // 0xB1BDF0A4
+	public bool m_RemoveWhenUMARebuild; // 0xB1B8A3A2
+	public float m_MaxMoveDelta; // 0xB9B6F0BC
+	private List<Particle> m_Particles; // 0xF0B4BCB5
+	private float m_DeltaTime; // 0xA4B580F7
+	protected CachedCollider[] m_CachedColliders; // 0xA4B1948F
+	protected int m_CachedColliderCount; // 0xBFF0F7B1
+	public UpdateMode m_UpdateMode; // 0xA9A4F0B6
+
+	// Properties
+	public bool FullInert { get; set; }
+
+	// Methods
+
+	[CompilerGenerated]
+	// RVA: 0x6762858 Offset: 0x675E858 VA: 0x6762858
+	public bool get_FullInert() { }
+
+	[CompilerGenerated]
+	// RVA: 0x6762860 Offset: 0x675E860 VA: 0x6762860
+	public void set_FullInert(bool value) { }
+
+	// RVA: 0x676286C Offset: 0x675E86C VA: 0x676286C
+	private void PreUpdate() { }
+
+	// RVA: 0x67628BC Offset: 0x675E8BC VA: 0x67628BC
+	private void Start() { }
+
+	// RVA: 0x67628FC Offset: 0x675E8FC VA: 0x67628FC
+	private void FixedUpdate() { }
+
+	// RVA: 0x6762910 Offset: 0x675E910 VA: 0x6762910
+	private void Update() { }
+
+	// RVA: 0x6762920 Offset: 0x675E920 VA: 0x6762920
+	private void Awake() { }
+
+	// RVA: 0x6762924 Offset: 0x675E924 VA: 0x6762924
+	public void ResetDumbTime() { }
+
+	// RVA: 0x676295C Offset: 0x675E95C VA: 0x676295C
+	private void LateUpdate() { }
+
+	// RVA: 0x6762CB8 Offset: 0x675ECB8 VA: 0x6762CB8
+	private void Prepare() { }
+
+	// RVA: 0x6762B30 Offset: 0x675EB30 VA: 0x6762B30
+	private void CheckDistance() { }
+
+	// RVA: 0x6763440 Offset: 0x675F440 VA: 0x6763440
+	private void OnEnable() { }
+
+	// RVA: 0x6763464 Offset: 0x675F464 VA: 0x6763464
+	private void OnDisable() { }
+
+	// RVA: 0x6763488 Offset: 0x675F488 VA: 0x6763488
+	private void OnValidate() { }
+
+	// RVA: 0x6762AC8 Offset: 0x675EAC8 VA: 0x6762AC8
+	public void SetWeight(float w) { }
+
+	// RVA: 0x67635A0 Offset: 0x675F5A0 VA: 0x67635A0
+	public float GetWeight() { }
+
+	// RVA: 0x6762E9C Offset: 0x675EE9C VA: 0x6762E9C
+	private void UpdateDynamicBones(float t) { }
+
+	// RVA: 0x67647C0 Offset: 0x67607C0 VA: 0x67647C0 Slot: 4
+	public virtual void SetupParticles() { }
+
+	// RVA: 0x6764B48 Offset: 0x6760B48 VA: 0x6764B48
+	private void AppendParticles(Transform b, int parentIndex, float boneLength) { }
+
+	// RVA: 0x67653DC Offset: 0x67613DC VA: 0x67653DC Slot: 5
+	public virtual void InitTransforms() { }
+
+	// RVA: 0x67654E0 Offset: 0x67614E0 VA: 0x67654E0 Slot: 6
+	public virtual void ResetParticlesPosition() { }
+
+	// RVA: 0x67637C4 Offset: 0x675F7C4 VA: 0x67637C4
+	private void UpdateParticles1(float timeVar, int loopIndex) { }
+
+	// RVA: 0x6763C18 Offset: 0x675FC18 VA: 0x6763C18
+	private void UpdateParticles2(float timeVar, bool useColliderCache = false) { }
+
+	// RVA: 0x67635A8 Offset: 0x675F5A8 VA: 0x67635A8
+	protected void BuildColliderCache() { }
+
+	// RVA: 0x6764398 Offset: 0x6760398 VA: 0x6764398
+	private void SkipUpdateParticles() { }
+
+	// RVA: 0x67631F8 Offset: 0x675F1F8 VA: 0x67631F8
+	private void ApplyParticlesToTransforms() { }
+
+	// RVA: 0x6765D80 Offset: 0x6761D80 VA: 0x6765D80
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum DynamicBoneCollider.Direction // TypeDefIndex: 561
+{
+	// Fields
+	public int value__; // 0xF7F0B5A0
+	public const Direction X = 0;
+	public const Direction Y = 1;
+	public const Direction Z = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum DynamicBoneCollider.Bound // TypeDefIndex: 562
+{
+	// Fields
+	public int value__; // 0xF0EAF7BF
+	public const Bound Outside = 0;
+	public const Bound Inside = 1;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[AddComponentMenu("Dynamic Bone/Dynamic Bone Collider")]
+public class DynamicBoneCollider : MonoBehaviour // TypeDefIndex: 563
+{
+	// Fields
+	public Vector3 m_Center; // 0xA9A4F0B5
+	public float m_Radius; // 0xB6F0B5A0
+	public float m_Height; // 0xB4BCB5B9
+	public Direction m_Direction; // 0xA2B1BDF0
+	public Bound m_Bound; // 0xBCB1B8A3
+	private int m_CacheFrame; // 0xF0B7BEB9
+	private bool m_FrameEnabled; // 0xBEF0A3B9
+	private float m_FrameRadius; // 0xA3F0A4BF
+	private float m_FrameH; // 0xBFA0A0A5
+	private Vector3 m_FrameP0; // 0xB4B5A4A2
+	private Vector3 m_FrameP1; // 0xB6B6D0FE
+
+	// Methods
+
+	// RVA: 0x6765BA8 Offset: 0x6761BA8 VA: 0x6765BA8
+	public bool UpdateFrameCache() { }
+
+	// RVA: 0x6765D4C Offset: 0x6761D4C VA: 0x6765D4C
+	public void GetCachedData(out float radius, out float h, out Vector3 p0, out Vector3 p1) { }
+
+	// RVA: 0x676610C Offset: 0x676210C VA: 0x676610C
+	private void OnValidate() { }
+
+	// RVA: 0x67659B4 Offset: 0x67619B4 VA: 0x67659B4
+	public void Collide(ref Vector3 particlePosition, float particleRadius) { }
+
+	// RVA: 0x6766124 Offset: 0x6762124 VA: 0x6766124
+	public void PostCollide(ref Vector3 particlePosition, ref Vector3 parentParticlePosition, float particleRadius) { }
+
+	// RVA: 0x676562C Offset: 0x676162C VA: 0x676562C
+	public static void OutsideSphere(ref Vector3 particlePosition, float particleRadius, Vector3 sphereCenter, float sphereRadius) { }
+
+	// RVA: 0x6766394 Offset: 0x6762394 VA: 0x6766394
+	public static Vector3 OutsideSphereDelta(Vector3 particlePosition, float particleRadius, Vector3 sphereCenter, float sphereRadius) { }
+
+	// RVA: 0x67664F0 Offset: 0x67624F0 VA: 0x67664F0
+	public static Vector3 OutsideCapsuleDelta(Vector3 particlePosition, float particleRadius, Vector3 capsuleP0, Vector3 capsuleP1, float capsuleRadius) { }
+
+	// RVA: 0x6766814 Offset: 0x6762814 VA: 0x6766814
+	private static Vector3 LinePointProjection(Vector3 P, Vector3 A, Vector3 B) { }
+
+	// RVA: 0x676568C Offset: 0x676168C VA: 0x676568C
+	public static void InsideSphere(ref Vector3 particlePosition, float particleRadius, Vector3 sphereCenter, float sphereRadius) { }
+
+	// RVA: 0x67656E4 Offset: 0x67616E4 VA: 0x67656E4
+	public static void OutsideCapsule(ref Vector3 particlePosition, float particleRadius, Vector3 capsuleP0, Vector3 capsuleP1, float capsuleRadius) { }
+
+	// RVA: 0x6765858 Offset: 0x6761858 VA: 0x6765858
+	public static void InsideCapsule(ref Vector3 particlePosition, float particleRadius, Vector3 capsuleP0, Vector3 capsuleP1, float capsuleRadius) { }
+
+	// RVA: 0x676687C Offset: 0x676287C VA: 0x676687C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+private class DynamicBoneNet.Particle // TypeDefIndex: 564
+{
+	// Fields
+	public Transform m_Transform; // 0xBCB9A4A5
+	public int m_ParentIndex; // 0xA4B5838F
+	public float m_Damping; // 0xB1BDBE85
+	public float m_Elasticity; // 0xA2B184A0
+	public float m_Stiffness; // 0xD0A4B5B7
+	public float m_Inert; // 0xA4A5B6B6
+	public float m_Radius; // 0x858FBCB9
+	public float m_BoneLength; // 0xA0B1BDBE
+	public Particle m_ColomnParent; // 0xA2B4B491
+	public Particle m_RowParent; // 0x8F8693D0
+	public float m_Length2Parent; // 0x94A4B597
+	public float m_Length2NetParent; // 0xA4B1A2A5
+	public Vector3 m_Position; // 0xD0BEBFB9
+	public Vector3 m_PrevPosition; // 0xB5A2B996
+	public Vector3 m_EndOffset; // 0xB5A3B1B2
+	public Vector3 m_InitLocalPosition; // 0xA0A0918F
+	public Quaternion m_InitLocalRotation; // 0xB883938F
+
+	// Methods
+
+	// RVA: 0x6769630 Offset: 0x6765630 VA: 0x6769630
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class DynamicBoneNet.<>c__DisplayClass14_0 // TypeDefIndex: 565
+{
+	// Fields
+	public Transform b; // 0x8FA0A2B1
+
+	// Methods
+
+	// RVA: 0x727AB4C Offset: 0x7276B4C VA: 0x727AB4C
+	public void .ctor() { }
+
+	// RVA: 0x727AB54 Offset: 0x7276B54 VA: 0x727AB54
+	internal bool <AppendParticles>b__0(Transform temp) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[AddComponentMenu("Dynamic Bone/DynamicBoneNet")]
+public class DynamicBoneNet : DynamicBone // TypeDefIndex: 566
+{
+	// Fields
+	private Dictionary<int, List<Particle>> m_ParticleDic; // 0x8FA7B5BE
+	private List<Transform> m_RootChildren; // 0xB9A2A483
+	private SortedDictionary<string, Transform> m_ChildSortedDic; // 0xA483B7BE
+	private Vector3 m_currentScale; // 0xB7BEB9A2
+
+	// Methods
+
+	// RVA: 0x67668EC Offset: 0x67628EC VA: 0x67668EC
+	private void Start() { }
+
+	// RVA: 0x676698C Offset: 0x676298C VA: 0x676698C
+	private void Update() { }
+
+	// RVA: 0x6766BB0 Offset: 0x6762BB0 VA: 0x6766BB0
+	private void LateUpdate() { }
+
+	// RVA: 0x6766C00 Offset: 0x6762C00 VA: 0x6766C00
+	private void CheckDistance() { }
+
+	// RVA: 0x6767118 Offset: 0x6763118 VA: 0x6767118
+	private void OnEnable() { }
+
+	// RVA: 0x676713C Offset: 0x676313C VA: 0x676713C
+	private void OnDisable() { }
+
+	// RVA: 0x6767160 Offset: 0x6763160 VA: 0x6767160
+	private void OnValidate() { }
+
+	// RVA: 0x6766D88 Offset: 0x6762D88 VA: 0x6766D88
+	private void UpdateDynamicBones(float t) { }
+
+	// RVA: 0x676858C Offset: 0x676458C VA: 0x676858C Slot: 4
+	public override void SetupParticles() { }
+
+	// RVA: 0x6768D70 Offset: 0x6764D70 VA: 0x6768D70
+	private void AppendParticles(Transform b, int parentIndex, float boneLength, List<Particle> particleList, int listIndex) { }
+
+	// RVA: 0x676970C Offset: 0x676570C VA: 0x676970C
+	private Vector3 LinePointProjection(Vector3 P, Vector3 A, Vector3 B) { }
+
+	// RVA: 0x6769774 Offset: 0x6765774 VA: 0x6769774 Slot: 5
+	public override void InitTransforms() { }
+
+	// RVA: 0x67698FC Offset: 0x67658FC VA: 0x67698FC Slot: 6
+	public override void ResetParticlesPosition() { }
+
+	// RVA: 0x6767278 Offset: 0x6763278 VA: 0x6767278
+	private void UpdateParticles1() { }
+
+	// RVA: 0x6767564 Offset: 0x6763564 VA: 0x6767564
+	private void UpdateParticles2(bool useColliderCache = false) { }
+
+	// RVA: 0x6767E7C Offset: 0x6763E7C VA: 0x6767E7C
+	private void SkipUpdateParticles() { }
+
+	// RVA: 0x67682A4 Offset: 0x67642A4 VA: 0x67682A4
+	private void ApplyParticlesToTransforms() { }
+
+	// RVA: 0x6769AD8 Offset: 0x6765AD8 VA: 0x6769AD8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum HangColliderType // TypeDefIndex: 567
+{
+	// Fields
+	public int value__; // 0x8FA0B19D
+	public const HangColliderType eNone = 0;
+	public const HangColliderType eCapsule = 1;
+	public const HangColliderType ePlane = 2;
+	public const HangColliderType eSphere = 3;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class HangCollider : MonoBehaviour // TypeDefIndex: 568
+{
+	// Fields
+	public bool RemoveWhenUMARebuild; // 0xA0A0918F
+
+	// Methods
+
+	// RVA: 0x727ABC0 Offset: 0x7276BC0 VA: 0x727ABC0 Slot: 4
+	public virtual HangColliderType GetColliderType() { }
+
+	// RVA: 0x727ABC8 Offset: 0x7276BC8 VA: 0x727ABC8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[AddComponentMenu("HangLib/HangCollider_Capsule")]
+public class HangCollider_Capsule : HangCollider // TypeDefIndex: 569
+{
+	// Fields
+	public float ColliCapsuleRadius; // 0xB883938F
+	public float ColliCapsuleHeight; // 0x8FA0A2B1
+	private Vector3 m_CachedPosition; // 0xB5BCB5B4
+	private Vector3 m_CachedForward; // 0x838FB5A4
+	private float m_CachedRadius; // 0xBEB9A2A4
+	private float m_CachedHeight; // 0xA2A483B7
+
+	// Methods
+
+	// RVA: 0x727ABD8 Offset: 0x7276BD8 VA: 0x727ABD8
+	public void Update() { }
+
+	// RVA: 0x727ACEC Offset: 0x7276CEC VA: 0x727ACEC
+	public void Collider_Capsule(ref Vector3 Pos, float Rad, Matrix4x4 simulationFromRenderMatrix, bool hasRenderFromSimulationMatrix) { }
+
+	// RVA: 0x727B52C Offset: 0x727752C VA: 0x727B52C Slot: 4
+	public override HangColliderType GetColliderType() { }
+
+	// RVA: 0x727B534 Offset: 0x7277534 VA: 0x727B534
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[AddComponentMenu("HangLib/HangCollider_Plane")]
+public class HangCollider_Plane : HangCollider // TypeDefIndex: 570
+{
+	// Fields
+	private Vector3 m_CachedPosition; // 0x9DB7BEB9
+	private Vector3 m_CachedForward; // 0x96D0A0B1
+
+	// Methods
+
+	// RVA: 0x727B550 Offset: 0x7277550 VA: 0x727B550
+	public void Update() { }
+
+	// RVA: 0x727B5F8 Offset: 0x72775F8 VA: 0x727B5F8
+	public void Collider_Plane(ref Vector3 Pos, float Rad, Matrix4x4 simulationFromRenderMatrix, bool hasRenderFromSimulationMatrix) { }
+
+	// RVA: 0x727B920 Offset: 0x7277920 VA: 0x727B920 Slot: 4
+	public override HangColliderType GetColliderType() { }
+
+	// RVA: 0x727B928 Offset: 0x7277928 VA: 0x727B928
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[AddComponentMenu("HangLib/HangCollider_Sphere")]
+public class HangCollider_Sphere : HangCollider // TypeDefIndex: 571
+{
+	// Fields
+	public float ColliSphereRadius; // 0xB2B5A2B9
+	private Vector3 m_CachedPosition; // 0x8FB5A3B1
+	private float m_CachedRadius; // 0x8FA0A091
+
+	// Methods
+
+	// RVA: 0x727B938 Offset: 0x7277938 VA: 0x727B938
+	public void Update() { }
+
+	// RVA: 0x727B9F0 Offset: 0x72779F0 VA: 0x727B9F0
+	public void Collider_Sphere(ref Vector3 Pos, float Rad, Matrix4x4 simulationFromRenderMatrix, bool hasRenderFromSimulationMatrix) { }
+
+	// RVA: 0x727BB24 Offset: 0x7277B24 VA: 0x727BB24 Slot: 4
+	public override HangColliderType GetColliderType() { }
+
+	// RVA: 0x727BB2C Offset: 0x7277B2C VA: 0x727BB2C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public interface IAvatarProvider // TypeDefIndex: 572
+{
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract bool IsAvatarIdle();
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum HangManager.LANGUAGE_TYPE // TypeDefIndex: 573
+{
+	// Fields
+	public int value__; // 0xB1B88393
+	public const LANGUAGE_TYPE JAPAN = 0;
+	public const LANGUAGE_TYPE ENGLISH = 1;
+	public const LANGUAGE_TYPE CHINESE = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[AddComponentMenu("HangLib/HangManager")]
+public class HangManager : MonoBehaviour // TypeDefIndex: 574
+{
+	// Fields
+	public LANGUAGE_TYPE LanguageType; // 0xA3B99CB7
+	public Transform FarClippingObjRef; // 0x838F8FA4
+	public float UpdateRate; // 0x8F979987
+	public int StartResetWaitFrame; // 0xB996D0E0
+	public bool CalcFlag; // 0xB1B2B5A2
+	public bool CalcHangTransCopyOnlyFlag; // 0x918FB5A3
+	public bool DBG_DispFlag; // 0x938FA0A0
+	[Range(0, 3)]
+	public int SetupFrameCount; // 0xA2B1B883
+	[Range(1, 5)]
+	public int ResetKeepFrameCount; // 0xA4838FA0
+	private int ResetCount; // 0xB7BEB9A2
+	private GameObject HangObj; // 0xA4A3B99C
+	private HangString[] children; // 0xA4B5A38F
+	private float TimePass; // 0xBDB5A4B9
+	private int m_PendingFixedUpdateCount; // 0xA2B996D0
+	private Vector3 m_CacheWorldPosition; // 0xA3B1B2B5
+	private IAvatarProvider m_AvatarProvider; // 0xA0918FB5
+	private Player m_OwnerPlayer; // 0x83938FA0
+
+	// Methods
+
+	// RVA: 0x727BB44 Offset: 0x7277B44 VA: 0x727BB44
+	private void Start() { }
+
+	// RVA: 0x727BDD4 Offset: 0x7277DD4 VA: 0x727BDD4
+	private void OnEnable() { }
+
+	// RVA: 0x727BDD8 Offset: 0x7277DD8 VA: 0x727BDD8
+	private void OnTransformParentChanged() { }
+
+	// RVA: 0x727BDDC Offset: 0x7277DDC VA: 0x727BDDC
+	private void FixedUpdate() { }
+
+	// RVA: 0x727BDEC Offset: 0x7277DEC VA: 0x727BDEC
+	private void LateUpdate() { }
+
+	// RVA: 0x727C4AC Offset: 0x72784AC VA: 0x727C4AC
+	public void SetAvatarProvider() { }
+
+	// RVA: 0x727C504 Offset: 0x7278504 VA: 0x727C504
+	public bool IsWindEnabled() { }
+
+	// RVA: 0x727BD7C Offset: 0x7277D7C VA: 0x727BD7C
+	private void CacheOwnerPlayer() { }
+
+	// RVA: 0x727C1CC Offset: 0x72781CC VA: 0x727C1CC
+	private bool ExcuteAsUpdateCheck() { }
+
+	// RVA: 0x727C620 Offset: 0x7278620 VA: 0x727C620
+	public void Teleport() { }
+
+	// RVA: 0x727C72C Offset: 0x727872C VA: 0x727C72C
+	public void StringSetup() { }
+
+	// RVA: 0x727CB30 Offset: 0x7278B30 VA: 0x727CB30
+	public void ResetChildren() { }
+
+	// RVA: 0x727CC2C Offset: 0x7278C2C VA: 0x727CC2C
+	public static float CalcInter(float v1, float v2, float t) { }
+
+	// RVA: 0x727CC44 Offset: 0x7278C44 VA: 0x727CC44
+	private static float CalcSpherePlateDist(Vector3 pos, Vector3 nml, float coef_d) { }
+
+	// RVA: 0x727B8C8 Offset: 0x72778C8 VA: 0x727B8C8
+	public static void CalcPlateNodePerpendicular(Vector3 c_pos, out Vector3 dst, Vector3 p0, Vector3 nml) { }
+
+	// RVA: 0x727B884 Offset: 0x7277884 VA: 0x727B884
+	public static int CalcTriangle3DWrongSideOutNormal(Vector3 node, Vector3 l_node, Vector3 nml) { }
+
+	// RVA: 0x727AFF8 Offset: 0x7276FF8 VA: 0x727AFF8
+	public static void CalcSphereHit(ref Vector3 StringPos, float StringRad, Vector3 SpherePos, float SphereRad) { }
+
+	// RVA: 0x727B124 Offset: 0x7277124 VA: 0x727B124
+	public static void CalcCapsuleHit(ref Vector3 StringPos, float StringRad, Vector3 CapsulePos_0, Vector3 CapsulePos_1, float CapsuleRad) { }
+
+	// RVA: 0x727CC60 Offset: 0x7278C60 VA: 0x727CC60
+	public static Vector3 VectorRot(Vector3 VecSide, Vector3 VecForward, float Deg) { }
+
+	// RVA: 0x727CCDC Offset: 0x7278CDC VA: 0x727CCDC
+	public static float CalcSinTblGet(float x1, float x2, float rot) { }
+
+	// RVA: 0x727CD14 Offset: 0x7278D14 VA: 0x727CD14
+	public static void Anglelimit(Vector3 SideVec, Vector3 UpVec, Vector3 ForwardVec, float AngleMin, float AngleMax, ref Vector3 NodePos) { }
+
+	// RVA: 0x727CF84 Offset: 0x7278F84 VA: 0x727CF84
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class HangPivot : MonoBehaviour // TypeDefIndex: 575
+{
+	// Fields
+	public bool RemoveWhenUMARebuild; // 0xA0A2B1B8
+
+	// Methods
+
+	// RVA: 0x727CFB0 Offset: 0x7278FB0 VA: 0x727CFB0
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class HangResourcesManager : TSingleton<HangResourcesManager> // TypeDefIndex: 576
+{
+	// Fields
+	private Queue<GameObject> m_hangStrings; // 0xB1B8938F
+	private Queue<GameObject> m_hangPivots; // 0xB3B586A2
+	private Queue<GameObject> m_hangCollider_Capsules; // 0x8FA2BFA4
+	private Queue<GameObject> m_hangCollider_Planes; // 0xBFBDB582
+	private Queue<GameObject> m_hangCollider_Spheres; // 0xA491B5A6
+	private GameObject m_Parent; // 0xA2B996D0
+	private const int maxHangStringsCapacity = 20;
+	private const int maxHangPivotsCapacity = 10;
+	private const int maxHangCollider_CapsulesCapacity = 10;
+	private const int maxHangCollider_PlanesCapacity = 10;
+	private const int maxHangCollider_SpheresCapacity = 10;
+
+	// Methods
+
+	// RVA: 0x727CFC0 Offset: 0x7278FC0 VA: 0x727CFC0
+	private void Init() { }
+
+	// RVA: 0x727D098 Offset: 0x7279098 VA: 0x727D098
+	public void GetHangString(out GameObject obj, out HangString hangstring) { }
+
+	// RVA: 0x727D2CC Offset: 0x72792CC VA: 0x727D2CC
+	public void GetHangPivot(out GameObject obj) { }
+
+	// RVA: 0x727D4C8 Offset: 0x72794C8 VA: 0x727D4C8
+	public void GetHangColliderCapsule(out GameObject obj, out HangCollider_Capsule hangcollidercapsule) { }
+
+	// RVA: 0x727D6FC Offset: 0x72796FC VA: 0x727D6FC
+	public void GetHangColliderPlane(out GameObject obj, out HangCollider_Plane hangcolliderplane) { }
+
+	// RVA: 0x727D930 Offset: 0x7279930 VA: 0x727D930
+	public void GetHangColliderSphere(out GameObject obj, out HangCollider_Sphere hangcollidersphere) { }
+
+	// RVA: 0x727DB64 Offset: 0x7279B64 VA: 0x727DB64
+	public void RecyleHangString(GameObject obj) { }
+
+	// RVA: 0x727DCAC Offset: 0x7279CAC VA: 0x727DCAC
+	public void RecyleHangPivot(GameObject obj) { }
+
+	// RVA: 0x727DDF4 Offset: 0x7279DF4 VA: 0x727DDF4
+	public void RecyleHangColliderCapsule(GameObject obj) { }
+
+	// RVA: 0x727DF3C Offset: 0x7279F3C VA: 0x727DF3C
+	public void RecyleHangColliderPlane(GameObject obj) { }
+
+	// RVA: 0x727E084 Offset: 0x727A084 VA: 0x727E084
+	public void RecyleHangColliderSphere(GameObject obj) { }
+
+	// RVA: 0x727E1CC Offset: 0x727A1CC VA: 0x727E1CC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class ANGLE_LIMIT // TypeDefIndex: 577
+{
+	// Fields
+	public Transform BaseAxis_1; // 0xA3B1B2B5
+	[Tooltip("基軸２つ目...２つ目の基軸を設定すると、１つ目と２つ目の両方を合成した姿勢を基軸にする。
+2nd Axis ... If 2nd Axis is set, the posture will be a combination of both the first axis and the second axis as basic axis.")]
+	public Transform BaseAxis_2; // 0xA0A091B5
+	[Range(0, 1)]
+	public float BaseAxisTwoSettingsRate; // 0x94A3998F
+	public float BoneBlendRate; // 0x93B1A4B1
+	public bool PivotLimitUseFlag; // 0xB5BCBCBF
+	public float PivotLimitRotOffset; // 0xBFB9A4B3
+	public bool DBG_PivotLimitDispFlag; // 0xB6B594BE
+	[Range(-89, 0)]
+	public float Y_AngleMin; // 0xA4BCA5B1
+	[Range(0, 89)]
+	public float Y_AngleMax; // 0xB2B1BE95
+	[Range(-89, 0)]
+	public float Z_AngleMin; // 0x99B4B5BC
+	[Range(0, 89)]
+	public float Z_AngleMax; // 0xA2B5A4BE
+	public LANGUAGE_TYPE LanguageType; // 0xD0BCB1BE
+
+	// Methods
+
+	// RVA: 0x727E30C Offset: 0x727A30C VA: 0x727E30C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum HangString.StringType // TypeDefIndex: 578
+{
+	// Fields
+	public int value__; // 0xB5A2B996
+	public const StringType Lobby = 0;
+	public const StringType InGame = 1;
+	public const StringType All = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum HangString.FREEZE_AXIS // TypeDefIndex: 579
+{
+	// Fields
+	public int value__; // 0x8FA0A2B1
+	public const FREEZE_AXIS None = 0;
+	public const FREEZE_AXIS X = 1;
+	public const FREEZE_AXIS Y = 2;
+	public const FREEZE_AXIS Z = 3;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class HangString.STRING // TypeDefIndex: 580
+{
+	// Fields
+	public Transform Trans; // 0xB9A38FA0
+	public int ParentId; // 0x96D0B5AA
+	public float Hardness; // 0xB2B5A2B9
+	public float AirResistance; // 0x8FB5A3B1
+	public float Radius; // 0x8FA0A091
+	public float Length; // 0xB1B88393
+	public Vector3 PosNow; // 0x868FA0A2
+	public Vector3 PosPrev; // 0xB1B9A2B1
+	public Vector3 InitLocalPos; // 0xB99CA4BE
+	public Quaternion InitLocalRot; // 0x918FA4A3
+
+	// Methods
+
+	// RVA: 0x728160C Offset: 0x727D60C VA: 0x728160C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum HangString.GravityType // TypeDefIndex: 581
+{
+	// Fields
+	public int value__; // 0x96D0B4B4
+	public const GravityType NegY = 0;
+	public const GravityType X = 1;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[AddComponentMenu("HangLib/HangString")]
+public class HangString : MonoBehaviour // TypeDefIndex: 582
+{
+	// Fields
+	[Range(0, 4)]
+	public int CalcPriorityId; // 0x8FA0A091
+	public Transform StringFirstBonTrans; // 0xB1B88393
+	[Range(0, 1000)]
+	public float Hardness; // 0xBE8FA0A2
+	public AnimationCurve HardnessCurve; // 0x868FA7B5
+	[Range(0, 1)]
+	public float AirResistance; // 0xB1B9A2B1
+	public AnimationCurve AirResistanceCurve; // 0xB99CA4BE
+	public float StringRad; // 0x8F8FA4A3
+	public AnimationCurve StringRadCurve; // 0x97998783
+	public float StringGravity; // 0x96D0E28F
+	public List<float> NodeGravity; // 0xB2B5A2B9
+	public List<Transform> ExcludeTrans; // 0x8FB5A3B1
+	[Range(0, 1)]
+	public List<float> NodeWindForcePercentage; // 0x8FA0A091
+	public StringType StringSetting; // 0xB1B88393
+	public bool RemoveWhenUMARebuild; // 0x968FA0A2
+	public FREEZE_AXIS FreezeAxis; // 0xA2A5A4A5
+	public float FarClipCalcDist; // 0xBFBF92B5
+	[Tooltip("コリジョンの設定...コリジョンを設定したゲームオブジェクトのドラッグ&ドロップしてください
+Collision settings ... Drag and drop the collision-set game object")]
+	public List<HangCollider_Sphere> HangCollider_SphereList; // 0x87838FBC
+	public List<HangCollider_Capsule> HangCollider_CapsuleList; // 0xA0859799
+	public List<HangCollider_Plane> HangCollider_PlaneList; // 0xA4A3B1B3
+	public bool DBG_AngleLimitDisp; // 0xA2B996D0
+	public ANGLE_LIMIT[] AngleLimit; // 0xA3B1B2B5
+	public float FirstBoneRotZOffset; // 0xA2938FB5
+	private float[] InitSpringLength; // 0xBCB8A3B1
+	private float s_StringTotalLength; // 0xB3B9A4A9
+	private float s_ObjectScale; // 0x83938FA3
+	private bool s_DistantDisabled; // 0xA0A2B1B8
+	private bool s_TeleportFlag; // 0xB1A4838F
+	private float s_ConstraintAbsorb; // 0xA296BBB3
+	private int s_Start_SetupFrameCount; // 0xA3B5BDB1
+	private bool s_Start_SetupOnceFlag; // 0xA6B5828F
+	private int s_Start_ResetKeepFrameCount; // 0xB5A3A2B5
+	private List<STRING> String; // 0x87838F8F
+	private HangManager script_HangManager; // 0xE18F9799
+	private bool IsNeedUpdate; // 0xA2B996D0
+	private bool m_UseFixedSnapshotMode; // 0xA3B1B2B5
+	private Matrix4x4 m_RenderFromSimulationMatrix; // 0xB59D8FB5
+	private Matrix4x4 m_SimulationFromRenderMatrix; // 0xB7B1A3A3
+	private Matrix4x4 m_RenderFirstBoneMatrix; // 0x8FB7BEB9
+	private bool m_HasRenderFirstBoneMatrix; // 0xB1B88393
+	private Vector3 m_LastSimulationFirstBonePosition; // 0x918FA0A2
+	private Vector3 m_RenderOffsetFromSimulation; // 0xBFA2B4BE
+	private float m_RenderInterpolationRate; // 0xBF9EB4B9
+	private bool m_HasRenderPosition; // 0xB9B6B9A4
+	private bool m_EnableRenderOnlyCompensation; // 0xB9A4B1B3
+	public GravityType GTpye; // 0xB180BEBF
+
+	// Methods
+
+	// RVA: 0x727BC68 Offset: 0x7277C68 VA: 0x727BC68
+	public void SetHangManager(HangManager Manager) { }
+
+	// RVA: 0x727C2D0 Offset: 0x72782D0 VA: 0x727C2D0
+	public void LateUpdateCalc(bool isNeedUpdate, float deltaTime, bool useFixedSnapshotMode, int fixedUpdateCount) { }
+
+	// RVA: 0x727E314 Offset: 0x727A314 VA: 0x727E314
+	private void FarClipCalc() { }
+
+	// RVA: 0x727E754 Offset: 0x727A754 VA: 0x727E754
+	private void StringPos2ModelPos() { }
+
+	// RVA: 0x727C814 Offset: 0x7278814 VA: 0x727C814
+	public void LocalTransInit() { }
+
+	// RVA: 0x727EA40 Offset: 0x727AA40 VA: 0x727EA40
+	private void OnDisable() { }
+
+	// RVA: 0x727EA58 Offset: 0x727AA58 VA: 0x727EA58
+	private void OnEnable() { }
+
+	// RVA: 0x727EA5C Offset: 0x727AA5C VA: 0x727EA5C
+	private Matrix4x4 GetFirstBoneMatrix() { }
+
+	// RVA: 0x727EC4C Offset: 0x727AC4C VA: 0x727EC4C
+	private Quaternion TransformRotation(Matrix4x4 matrix, Quaternion rotation) { }
+
+	// RVA: 0x727EDD0 Offset: 0x727ADD0 VA: 0x727EDD0
+	private void SetFirstBoneMatrix(Matrix4x4 matrix) { }
+
+	// RVA: 0x727E848 Offset: 0x727A848 VA: 0x727E848
+	private void ResetFixedSnapshotState() { }
+
+	// RVA: 0x727EF74 Offset: 0x727AF74 VA: 0x727EF74
+	private void UpdateFixedSnapshotMatrices(bool useFixedSnapshotMode, Matrix4x4 renderFirstBoneMatrix, int pendingFixedUpdateCount) { }
+
+	// RVA: 0x727F208 Offset: 0x727B208 VA: 0x727F208
+	private bool HasRenderFromSimulationMatrix() { }
+
+	// RVA: 0x727F210 Offset: 0x727B210 VA: 0x727F210
+	private bool HasRenderOutputMatrix() { }
+
+	// RVA: 0x727F240 Offset: 0x727B240 VA: 0x727F240
+	private void PrepareFixedSnapshotSimulationPose(int fixedUpdateCount) { }
+
+	// RVA: 0x727F3CC Offset: 0x727B3CC VA: 0x727F3CC
+	private void UpdateRenderOnlyCompensation(Matrix4x4 renderFirstBoneMatrix) { }
+
+	// RVA: 0x727F63C Offset: 0x727B63C VA: 0x727F63C
+	private Vector3 GetRenderPosition(int nodeIndex) { }
+
+	// RVA: 0x727E47C Offset: 0x727A47C VA: 0x727E47C
+	private void StringCalc(float Dt, bool useFixedSnapshotMode, int fixedUpdateCount) { }
+
+	// RVA: 0x727C918 Offset: 0x7278918 VA: 0x727C918
+	public void StringSetup() { }
+
+	// RVA: 0x7280F2C Offset: 0x727CF2C VA: 0x7280F2C
+	private void AddStringNode(Transform Trans, int ParentId, float Length) { }
+
+	// RVA: 0x7281420 Offset: 0x727D420 VA: 0x7281420
+	private void UpdateParam() { }
+
+	// RVA: 0x727F6CC Offset: 0x727B6CC VA: 0x727F6CC
+	private void StringCalcSub_1_FirstBone() { }
+
+	// RVA: 0x727F764 Offset: 0x727B764 VA: 0x727F764
+	private void StringCalcSub_2_WindAndMove(float Dt) { }
+
+	// RVA: 0x7280264 Offset: 0x727C264 VA: 0x7280264
+	private void StringCalcSub_3_LimitAndTransform() { }
+
+	// RVA: 0x7280578 Offset: 0x727C578 VA: 0x7280578
+	private void StringCalcSub_4_ColiHit() { }
+
+	// RVA: 0x7280C48 Offset: 0x727CC48 VA: 0x7280C48
+	private void StringCalcSub_5_Trans() { }
+
+	// RVA: 0x7281754 Offset: 0x727D754 VA: 0x7281754
+	private void AngleLimit_YZ(int NodeId) { }
+
+	// RVA: 0x727C710 Offset: 0x7278710 VA: 0x727C710
+	public void Teleport() { }
+
+	// RVA: 0x728209C Offset: 0x727E09C VA: 0x728209C
+	public void DeserializeCollider(UMASkeleton skeleton, HangStringProperty property) { }
+
+	// RVA: 0x728309C Offset: 0x727F09C VA: 0x728309C
+	public void Deserialize(UMASkeleton skeleton, HangStringProperty se) { }
+
+	// RVA: 0x728344C Offset: 0x727F44C VA: 0x728344C
+	public void DeserializeAngleLimit(UMASkeleton skeleton, List<ANGLELIMIT_PROPERTY> properties) { }
+
+	// RVA: 0x72837D0 Offset: 0x727F7D0 VA: 0x72837D0
+	private Transform GetPivotTransform(UMASkeleton skeleton, string BaseAxis, string BaseAxisParent, Quaternion BaseAxis_quaternion) { }
+
+	// RVA: 0x7283A9C Offset: 0x727FA9C VA: 0x7283A9C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public static class HangWindManager // TypeDefIndex: 583
+{
+	// Fields
+	private static bool _enable; // 0xA3BDB1A2
+	private static bool _init; // 0xB5A4BE99
+	private static int _loopTime; // 0xBCB1BEA2
+	private static float timeOffset; // 0xB1B8B38F
+	private static Vector3 _windMainDirection; // 0xBCB5BEBE
+	private static float _windMainPower; // 0x8FB4B98F
+	private static Vector3 _windSecondaryDirection; // 0xD0A4B5B7
+	private static float _windSecondaryPower; // 0xBEBEB193
+	private static Quaternion _windQua; // 0xBDF0A4BF
+	private static CreateCurveConfig _windMainCurve; // 0xB8A3A2B1
+	private static CreateCurveConfig _windSecondaryCurve; // 0xB6F0BCB1
+
+	// Properties
+	public static bool Enable { get; set; }
+	public static Vector3 WindMainDirection { get; }
+	public static float WindMainPower { get; }
+	public static Vector3 WindSecondaryDirection { get; }
+	public static float WindSecondaryPower { get; }
+	public static CreateCurveConfig WindMainCurve { get; }
+	public static CreateCurveConfig WindSecondaryCurve { get; }
+	public static Quaternion WindQua { get; set; }
+
+	// Methods
+
+	// RVA: 0x7283D98 Offset: 0x727FD98 VA: 0x7283D98
+	public static bool get_Enable() { }
+
+	// RVA: 0x7283DF0 Offset: 0x727FDF0 VA: 0x7283DF0
+	public static void set_Enable(bool value) { }
+
+	// RVA: 0x7284224 Offset: 0x7280224 VA: 0x7284224
+	public static Vector3 get_WindMainDirection() { }
+
+	// RVA: 0x7284280 Offset: 0x7280280 VA: 0x7284280
+	public static float get_WindMainPower() { }
+
+	// RVA: 0x72842D8 Offset: 0x72802D8 VA: 0x72842D8
+	public static Vector3 get_WindSecondaryDirection() { }
+
+	// RVA: 0x7284334 Offset: 0x7280334 VA: 0x7284334
+	public static float get_WindSecondaryPower() { }
+
+	// RVA: 0x728438C Offset: 0x728038C VA: 0x728438C
+	public static CreateCurveConfig get_WindMainCurve() { }
+
+	// RVA: 0x72843E4 Offset: 0x72803E4 VA: 0x72843E4
+	public static CreateCurveConfig get_WindSecondaryCurve() { }
+
+	// RVA: 0x728443C Offset: 0x728043C VA: 0x728443C
+	public static Quaternion get_WindQua() { }
+
+	// RVA: 0x7284498 Offset: 0x7280498 VA: 0x7284498
+	public static void set_WindQua(Quaternion value) { }
+
+	// RVA: 0x7283E90 Offset: 0x727FE90 VA: 0x7283E90
+	private static void Init() { }
+
+	// RVA: 0x72816D4 Offset: 0x727D6D4 VA: 0x72816D4
+	public static float GetDuration() { }
+
+	// RVA: 0x7284514 Offset: 0x7280514 VA: 0x7284514
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class HangColliderCapsuleProperty // TypeDefIndex: 584
+{
+	// Fields
+	public string name; // 0xB4BCB5B9
+	public string rootName; // 0x8FBDF7F0
+	public Vector3 localPosition; // 0xB3BEA9A3
+	public Vector3 localEulerAngles; // 0xBEBFA2B8
+	public Vector3 localScale; // 0xA4B1AAB9
+	public float ColliCapsuleRadius; // 0x93BEBFB9
+	public float ColliCapsuleHeight; // 0xB5A4BEBF
+
+	// Methods
+
+	// RVA: 0x7282F04 Offset: 0x727EF04 VA: 0x7282F04
+	public void ApplyValues(HangCollider_Capsule collider) { }
+
+	// RVA: 0x72845EC Offset: 0x72805EC VA: 0x72845EC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class HangColliderPlaneProperty // TypeDefIndex: 585
+{
+	// Fields
+	public string name; // 0xF0F7A4A8
+	public string rootName; // 0xA4F0B6BF
+	public Vector3 localPosition; // 0xF0B5A0A9
+	public Vector3 localEulerAngles; // 0xA9A391F7
+	public Vector3 localScale; // 0xBF86B3BE
+
+	// Methods
+
+	// RVA: 0x7282F90 Offset: 0x727EF90 VA: 0x7282F90
+	public void ApplyValues(HangCollider_Plane collider) { }
+
+	// RVA: 0x7284680 Offset: 0x7280680 VA: 0x7284680
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class HangColliderSphereProperty // TypeDefIndex: 586
+{
+	// Fields
+	public string name; // 0xB59DB4B9
+	public string rootName; // 0xB4BFB8A4
+	public Vector3 localPosition; // 0xBCB9A592
+	public Vector3 localEulerAngles; // 0xF7A2B5B4
+	public Vector3 localScale; // 0xB582F0EA
+	public float ColliSphereRadius; // 0xB5A2B5B6
+
+	// Methods
+
+	// RVA: 0x7283010 Offset: 0x727F010 VA: 0x7283010
+	public void ApplyValues(HangCollider_Sphere collider) { }
+
+	// RVA: 0x7284708 Offset: 0x7280708 VA: 0x7284708
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class ANGLELIMIT_PROPERTY // TypeDefIndex: 587
+{
+	// Fields
+	public string BaseAxis_1; // 0xF0B5B3BE
+	public string BaseAxis_1_Parent; // 0xB5A0A9A4
+	public Quaternion BaseAxis_1_quaternion; // 0xB5B9B6F0
+	[Tooltip("2nd Axis ... If 2nd Axis is set, the posture will be a combination of both the first axis and the second axis as basic axis.")]
+	public string BaseAxis_2; // 0xBDF0B4BC
+	public string BaseAxis_2_Parent; // 0xB8A3A2B1
+	public Quaternion BaseAxis_2_quaternion; // 0xBEB9BCB1
+	[Range(0, 1)]
+	public float BaseAxisTwoSettingsRate; // 0xA3B9F0B7
+	public float BoneBlendRate; // 0xA4BFBEF0
+	public bool PivotLimitUseFlag; // 0xA0A5A3F0
+	public float PivotLimitRotOffset; // 0xA4A2BFA0
+	public bool DBG_PivotLimitDispFlag; // 0xD0FEB4B5
+	[Range(-89, 0)]
+	public float Y_AngleMin; // 0xBEBEB193
+	[Range(0, 89)]
+	public float Y_AngleMax; // 0xBDF0A4BF
+	[Range(-89, 0)]
+	public float Z_AngleMin; // 0xB8A3A2B1
+	[Range(0, 89)]
+	public float Z_AngleMax; // 0xB6F0BCB1
+
+	// Methods
+
+	// RVA: 0x7284798 Offset: 0x7280798 VA: 0x7284798
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class HangStringProperty : ScriptableObject // TypeDefIndex: 588
+{
+	// Fields
+	[Range(0, 4)]
+	public int CalcPriorityId; // 0xB4BCB5B9
+	public string StringFirstBonTrans; // 0xA08FF7F0
+	[Range(0, 1000)]
+	public float Hardness; // 0xB1BEBEB9
+	public AnimationCurve HardnessCurve; // 0xF7B5BCB2
+	[Range(0, 1)]
+	public float AirResistance; // 0xF0B6BFF0
+	public AnimationCurve AirResistanceCurve; // 0xB5A0A9A4
+	public float StringRad; // 0xB59DF7F0
+	public AnimationCurve StringRadCurve; // 0xA9A2BFBD
+	public float StringGravity; // 0xB4BEB198
+	public List<float> NodeGravity; // 0xEAF7B5BC
+	public List<string> ExcludeTrans; // 0xB6B582F0
+	public FREEZE_AXIS FreezeAxis; // 0xBEB5A2B5
+	public float FarClipCalcDist; // 0xA4F0B5B3
+	[Tooltip("Collision settings ... Drag and drop the collision-set game object")]
+	public List<HangColliderSphereProperty> HangCollider_SphereList; // 0xF0B5A0A9
+	public List<HangColliderCapsuleProperty> HangCollider_CapsuleList; // 0xBCB5B9B6
+	public List<HangColliderPlaneProperty> HangCollider_PlaneList; // 0xB1BDF0B4
+	public bool DBG_AngleLimitDisp; // 0xB1B8A3A2
+	public List<ANGLELIMIT_PROPERTY> AngleLimit; // 0xB7BEB9BC
+	public float FirstBoneRotZOffset; // 0xF0A3B9F0
+	public List<float> NodeWindForcePercentage; // 0xF0A4BFBE
+	public StringType StringSetting; // 0xA0A0A5A3
+
+	// Methods
+
+	// RVA: 0x72847A0 Offset: 0x72807A0 VA: 0x72847A0
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class HangWindManagerProperty : ScriptableObject // TypeDefIndex: 589
+{
+	// Fields
+	public int LoopTime; // 0xB5A4A2BF
+	public Vector3 WindMainDirection; // 0x93D0FEB4
+	public float WindMainPower; // 0xBFBEBEB1
+	public Vector3 WindSecondaryDirection; // 0xB1BDF0A4
+	public float WindSecondaryPower; // 0xB1B8A3A2
+
+	// Methods
+
+	// RVA: 0x7284954 Offset: 0x7280954 VA: 0x7284954
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class GAutomationManager : MonoBehaviour // TypeDefIndex: 590
+{
+	// Methods
+
+	// RVA: 0x728497C Offset: 0x728097C VA: 0x728497C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum RCC_Camera.CameraMode // TypeDefIndex: 591
+{
+	// Fields
+	public int value__; // 0xB9B6F0BC
+	public const CameraMode TPS = 0;
+	public const CameraMode FPS = 1;
+	public const CameraMode WHEEL = 2;
+	public const CameraMode FIXED = 3;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class RCC_Camera.<FixShakeDelayed>d__36 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 592
+{
+	// Fields
+	private int <>1__state; // 0x9EF7F0B5
+	private object <>2__current; // 0xA3B5BDB1
+	public RCC_Camera <>4__this; // 0xB5B3B1A0
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x7285DE4 Offset: 0x7281DE4 VA: 0x7285DE4
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHidden]
+	// RVA: 0x7285E90 Offset: 0x7281E90 VA: 0x7285E90 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x7285E94 Offset: 0x7281E94 VA: 0x7285E94 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x728605C Offset: 0x728205C VA: 0x728605C Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x7286064 Offset: 0x7282064 VA: 0x7286064 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x728609C Offset: 0x728209C VA: 0x728609C Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class RCC_Camera : MonoBehaviour // TypeDefIndex: 593
+{
+	// Fields
+	public Transform playerCar; // 0xB8B3B193
+	private Rigidbody playerRigid; // 0xF0EAF7B5
+	private Camera cam; // 0xB5B6B582
+	public GameObject pivot; // 0xB3BEB5A2
+	private GameObject boundCenter; // 0xA9A4F0B5
+	public CameraMode cameraMode; // 0xB6F0B5A0
+	public float distance; // 0xB4BCB5B9
+	public float height; // 0xA2B1BDF0
+	private float heightDamping; // 0xBCB1B8A3
+	private float rotationDamping; // 0xF0B7BEB9
+	public float targetFieldOfView; // 0xBEF0A3B9
+	public float minimumFOV; // 0xA3F0A4BF
+	public float maximumFOV; // 0xBFA0A0A5
+	public float hoodCameraFOV; // 0xB4B5A4A2
+	public float wheelCameraFOV; // 0xBE85D0FE
+	public float maximumTilt; // 0x95A9A4B9
+	private float tiltAngle; // 0xBEB9B7BE
+	internal int cameraSwitchCount; // 0xBE91FEB5
+	private Vector3 targetPosition; // 0xB9BFA2B4
+	private float speed; // 0x999E9AB4
+	private Vector3 localVector; // 0xA0BCB598
+	private Vector3 collisionPos; // 0xEAEAA2B5
+	private Quaternion collisionRot; // 0x8FA4B5A3
+	private float index; // 0xA5B2B5B4
+
+	// Properties
+	public Transform _playerCar { get; set; }
+
+	// Methods
+
+	// RVA: 0x7284984 Offset: 0x7280984 VA: 0x7284984
+	public Transform get__playerCar() { }
+
+	// RVA: 0x728498C Offset: 0x728098C VA: 0x728498C
+	public void set__playerCar(Transform value) { }
+
+	// RVA: 0x7284BF0 Offset: 0x7280BF0 VA: 0x7284BF0
+	private void Awake() { }
+
+	// RVA: 0x72849A8 Offset: 0x72809A8 VA: 0x72849A8
+	private void GetPlayerCar() { }
+
+	// RVA: 0x7284CD4 Offset: 0x7280CD4 VA: 0x7284CD4
+	public void SetPlayerCar(GameObject player) { }
+
+	// RVA: 0x7284D0C Offset: 0x7280D0C VA: 0x7284D0C
+	private void Update() { }
+
+	// RVA: 0x7284EE8 Offset: 0x7280EE8 VA: 0x7284EE8
+	private void LateUpdate() { }
+
+	// RVA: 0x7284FA4 Offset: 0x7280FA4 VA: 0x7284FA4
+	private void TPS() { }
+
+	// RVA: 0x7285958 Offset: 0x7281958 VA: 0x7285958
+	public void Collision(Collision collision) { }
+
+	// RVA: 0x7285D2C Offset: 0x7281D2C VA: 0x7285D2C
+	public void FixShake() { }
+
+	[IteratorStateMachine(typeof(<FixShakeDelayed>d__36))]
+	// RVA: 0x7285D78 Offset: 0x7281D78 VA: 0x7285D78
+	private IEnumerator FixShakeDelayed() { }
+
+	// RVA: 0x7285E0C Offset: 0x7281E0C VA: 0x7285E0C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[AddComponentMenu("BoneCracker Games/Realistic Car Controller/Camera/Auto Camera Config")]
+public class RCC_CameraConfig : MonoBehaviour // TypeDefIndex: 594
+{
+	// Fields
+	public bool automatic; // 0xA983F8B7
+	private Bounds combinedBounds; // 0xBDB5A4A3
+	public float distance; // 0xBFBF92FE
+	public float height; // 0xBEB1B5BC
+
+	// Methods
+
+	// RVA: 0x72860A4 Offset: 0x72820A4 VA: 0x72860A4
+	private void Awake() { }
+
+	// RVA: 0x7284C48 Offset: 0x7280C48 VA: 0x7284C48
+	public void SetCameraSettings() { }
+
+	// RVA: 0x72861C4 Offset: 0x72821C4 VA: 0x72861C4
+	public static float MaxBoundsExtent(Transform obj) { }
+
+	// RVA: 0x72864A4 Offset: 0x72824A4 VA: 0x72864A4
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum RCC_CarControllerV3.WheelType // TypeDefIndex: 595
+{
+	// Fields
+	public int value__; // 0xBE85D0F9
+	public const WheelType FWD = 0;
+	public const WheelType RWD = 1;
+	public const WheelType AWD = 2;
+	public const WheelType BIASED = 3;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum RCC_CarControllerV3.IndicatorsOn // TypeDefIndex: 596
+{
+	// Fields
+	public int value__; // 0x999E9AB4
+	public const IndicatorsOn Off = 0;
+	public const IndicatorsOn Right = 1;
+	public const IndicatorsOn Left = 2;
+	public const IndicatorsOn All = 3;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class RCC_CarControllerV3.<ChangingGear>d__223 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 597
+{
+	// Fields
+	private int <>1__state; // 0x95A9A4B9
+	private object <>2__current; // 0xBEB9B7BE
+	public RCC_CarControllerV3 <>4__this; // 0xBE91FEB5
+	public int gear; // 0xB9BFA2B4
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x7E84B04 Offset: 0x7E80B04 VA: 0x7E84B04
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHidden]
+	// RVA: 0x7E84B2C Offset: 0x7E80B2C VA: 0x7E84B2C Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x7E84B30 Offset: 0x7E80B30 VA: 0x7E84B30 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x7E84C8C Offset: 0x7E80C8C VA: 0x7E84C8C Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x7E84C94 Offset: 0x7E80C94 VA: 0x7E84C94 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x7E84CCC Offset: 0x7E80CCC VA: 0x7E84CCC Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class RCC_CarControllerV3 : MonoBehaviour, VehicleControllerInterface // TypeDefIndex: 598
+{
+	// Fields
+	protected Rigidbody rigid; // 0x999E9AB4
+	internal bool sleepingRigid; // 0xB583EAEA
+	public bool AIController; // 0xBAB29FA4
+	public RCC_WheelCollider FrontLeftWheelCollider; // 0x96A4B3B5
+	public Action ChangeGearDele; // 0xB4BCB5B9
+	public RCC_WheelCollider FrontRightWheelCollider; // 0xA3A983F8
+	public RCC_WheelCollider RearLeftWheelCollider; // 0xFEBDB5A4
+	public RCC_WheelCollider RearRightWheelCollider; // 0x80A4BE99
+	internal RCC_WheelCollider[] allWheelColliders; // 0x83FCA2A4
+	[HideInInspector]
+	public Transform[] ExtraRearWheelsTransform; // 0xB5A4A3A9
+	[HideInInspector]
+	public RCC_WheelCollider[] ExtraRearWheelsCollider; // 0xBE99FEBD
+	[HideInInspector]
+	public bool applyEngineTorqueToExtraRearWheelColliders; // 0xA2A480A4
+	public Transform SteeringWheel; // 0xA3A983FC
+	public WheelType WheelTypeChoise; // 0xFEBDB5A4
+	[Range(0, 100)]
+	public float biasedWheelTorque; // 0x80A4BE99
+	public Transform COM; // 0xD0F9A2A4
+	public Transform SkinContainer; // 0xA4B9BE85
+	public Transform SteeringWheelContainer; // 0xB7BE95A9
+	private List<RCC_WheelCollider> m_WheelColliders; // 0xFEB5BEB9
+	public bool canControl; // 0xBDB9BE91
+	public bool engineRunning; // 0xBFB9A4B1
+	public bool semiAutomaticGear; // 0xA3EAEABE
+	private bool canGoReverseNow; // 0xA78FA4B5
+	public AnimationCurve[] engineTorqueCurve; // 0x9DA0B1A2
+	public float[] gearSpeed; // 0xF8B5B4BF
+	public float engineTorque; // 0xA4B9BE85
+	public float brakeTorque; // 0xB7BE95A9
+	public float maxEngineRPM; // 0xFEB5BEB9
+	public float minEngineRPM; // 0xA0B1A287
+	[Range(0.75, 2)]
+	public float engineInertia; // 0xB5B4BF9D
+	public bool useRevLimiter; // 0xBE85D0F9
+	public bool useExhaustFlame; // 0x95A9A4B9
+	public float steerAngle; // 0xBEB9B7BE
+	public int SpeedSteerAudio; // 0xBE91FEB5
+	public string SpeedSteerAudioResID; // 0xA4B1BDB9
+	public float highspeedsteerAngle; // 0xEABEBFB9
+	public float highspeedsteerAngleAtspeed; // 0xBFA483EA
+	public float antiRollFrontHorizontal; // 0xD0F9F8A0
+	public float antiRollRearHorizontal; // 0xA4B9BE85
+	public float antiRollVertical; // 0xB7BE95A9
+	[HideInInspector]
+	public float downForce; // 0xFEB5BEB9
+	private float speed; // 0xBDB9BE91
+	public Transform RootTrans; // 0xBFB9A4B1
+	public float defMaxSpeed; // 0xA3EAEABE
+	public float maxspeed; // 0xBC8FA4B5
+	private float mSpeedScale; // 0xBCB1B3BF
+	protected float mDriverSpeedScale; // 0xBEA5BF92
+	private float m_MaxSpeedChangePrecent; // 0x998FA3B4
+	private float resetTime; // 0xB3B5BABE
+	private float orgSteerAngle; // 0xF8B4B5A4
+	private float fuelInput; // 0xA4B9BE85
+	public int currentGear; // 0xB7BE95A9
+	public int totalGears; // 0xFEB5BEB9
+	[Range(0, 0.5)]
+	public float gearShiftingDelay; // 0xBEA5BF92
+	public bool changingGear; // 0xF9F6A3B4
+	private int direction; // 0xB9BE85D0
+	private bool m_ReachSpeedAndTurnMax; // 0xBE95A9A4
+	public bool autoGenerateGearCurves; // 0xB5BEB9B7
+	public bool autoGenerateTargetSpeedsForChangingGear; // 0xB9BE91FE
+	private bool mModelVisible; // 0xB9A4B1BD
+	[HideInInspector]
+	private float gasInput; // 0xA483BEBF
+	[HideInInspector]
+	private float brakeInput; // 0xEAB5A4B1
+	[HideInInspector]
+	private float steerInput; // 0xA4B5A3EA
+	[HideInInspector]
+	public float clutchInput; // 0xA2BFBE8F
+	[HideInInspector]
+	public float handbrakeInput; // 0xB9BCB1BD
+	[HideInInspector]
+	public float boostInput; // 0x84B4B5AA
+	[HideInInspector]
+	public bool cutGas; // 0xF8B5BDB9
+	[HideInInspector]
+	public float idleInput; // 0xA4A3A983
+	private bool m_IsInWater; // 0x83FEBDB5
+	internal float engineRPM; // 0xBCB7BEB9
+	internal float rawEngineRPM; // 0x85D0F9B5
+	public float EngineRPMShow; // 0xA9A4B9BE
+	[HideInInspector]
+	public IndicatorsOn indicatorsOn; // 0xB9B7BE95
+	[HideInInspector]
+	public float indicatorTimer; // 0x91FEB5BE
+	private float oldRotation; // 0xB1BDB9BE
+	public Transform velocityDirection; // 0xBEBFB9A4
+	public Transform steeringDirection; // 0xA4B1A483
+	public float velocityAngle; // 0xA3EAEAB5
+	private float angle; // 0xBC8FA4B5
+	private float angularVelo; // 0xA2B5A9B1
+	public bool ABS; // 0xA3A983F8
+	public bool TCS; // 0xFEBDB5A4
+	public bool ESP; // 0xE3A4BE99
+	public bool steeringHelper; // 0x85D0F9E2
+	public bool tractionHelper; // 0xA9A4B9BE
+	[Range(0.05, 0.5)]
+	public float ABSThreshold; // 0xB9B7BE95
+	[Range(0.05, 0.5)]
+	public float TCSThreshold; // 0x91FEB5BE
+	[Range(0, 1)]
+	public float TCSStrength; // 0xB1BDB9BE
+	[Range(0.05, 0.5)]
+	public float ESPThreshold; // 0xBEBFB9A4
+	[Range(0.1, 1)]
+	public float ESPStrength; // 0xA0B9BC93
+	[Range(0, 1)]
+	public float steerHelperLinearVelStrength; // 0xB5B7EAEA
+	[Range(0, 1)]
+	public float steerHelperAngularVelStrength; // 0xB1B88FA4
+	[Range(0, 1)]
+	public float tractionHelperStrength; // 0xA4BF9DA3
+	public bool ABSAct; // 0x93BEBFB9
+	public bool TCSAct; // 0xB5A6A2A5
+	public bool ESPAct; // 0xD0F9F8A3
+	public bool overSteering; // 0xA4B9BE85
+	public bool underSteering; // 0xB7BE95A9
+	internal float driftAngle; // 0xFEB5BEB9
+	internal bool driftingNow; // 0xBDB9BE91
+	private bool applyCounterSteering; // 0xA2BFA4B1
+	public float frontCamber; // 0xB5B7EAEA
+	public float rearCamber; // 0xA0A58FA4
+	public float frontSlip; // 0xB5A4B1B4
+	public float rearSlip; // 0xB5B4BF9D
+	public float turboBoost; // 0x85D0F9F8
+	public float NoS; // 0xA9A4B9BE
+	public bool useNOS; // 0xB9B7BE95
+	public bool useTurbo; // 0x91FEB5BE
+	private RCC_Camera carCamera; // 0xB1BDB9BE
+	private float m_GearFactor; // 0xEAA2BFA4
+	public float IdleBrakeInput; // 0xA4B597EA
+	public float ClimbAdditionMinTorque; // 0xBDB9BE91
+	public float ClimbAdditionMaxTorque; // 0xA2BFA4B1
+	public float ClimbForwardYMinDegree; // 0xA0B9BC93
+	public float ClimbForwardYMaxDegree; // 0xBFB6BE99
+	public float ClimbUpAddEngineScale; // 0xB5A4BE99
+	public float ReverseClimbUpAddEngineScale; // 0xBCB1BEA2
+	public float StopDownHillAddBrakeScale; // 0xA3A983F8
+	public float StopGoDownAddBrakeScale; // 0xFEBDB5A4
+	public float CurAddTorqueShow; // 0xE3A4BE99
+	public float ReverseMaxSpeed; // 0xA983FCE2
+	public float ReverseTorqueScale; // 0xBDB5A4A3
+	public float FlyAgainstGravityAcceleration; // 0xBFBF92FE
+	public float FlyAgainstGravityFrontRatio; // 0xBEB1B5BC
+	public float FlyAgainstGravityRearRatio; // 0xA3A983FC
+	public float FlyAnainstGravityRollRatio; // 0xFEBDB5A4
+	private bool m_isBoosting; // 0xB5BAB29F
+	private float m_maxSpeedBackup; // 0xD0F9A4B3
+	private float m_engineTorqueBackup; // 0xA4B9BE85
+	private float m_highSpeedSteerAngleBackup; // 0xB7BE95A9
+	private TssSdtFloat mHighSpeedSteerAngleRate; // 0xFEB5BEB9
+	private TssSdtFloat mEngineTorqueRate; // 0xBDB9BE91
+	private TssSdtFloat mBrakeTorqueRate; // 0xA2BFA4B1
+	private float originDefMaxSpeed; // 0xB597EAEA
+	private AnimationCurve[] originEngineTorqueCurve; // 0xA2B180A4
+	private float[] originGearSpeed; // 0xA4B5BDB1
+	public Vector3 mobileDirction; // 0xBE99A2B5
+	protected float m_LockSpeed; // 0xBEA2B5A4
+
+	// Properties
+	private RCC_Settings RCCSettings { get; }
+	public Transform VehicleCOM { get; }
+	public List<RCC_WheelCollider> WheelColliders { get; }
+	public bool autoReverse { get; }
+	public bool automaticGear { get; }
+	public float SteerAngle { get; }
+	public float Velocity { get; }
+	public int Direction { get; }
+	public bool ReachSpeedAndTurnMax { get; }
+	public virtual bool IsGrounded { get; }
+	public bool ModelVisible { get; set; }
+	public float GasInput { get; }
+	public float BrakeInput { get; }
+	public float SteerInput { get; }
+	internal float _gasInput { get; set; }
+	internal float _brakeInput { get; set; }
+	internal float _boostInput { get; set; }
+	public bool IsInWater { get; set; }
+	public float CurEngineRPM { get; }
+	public VehicleControllerInfo ControllerInfo { get; }
+
+	// Methods
+
+	// RVA: 0x72864C0 Offset: 0x72824C0 VA: 0x72864C0
+	private RCC_Settings get_RCCSettings() { }
+
+	// RVA: 0x72864C8 Offset: 0x72824C8 VA: 0x72864C8 Slot: 18
+	public Transform get_VehicleCOM() { }
+
+	// RVA: 0x72864D0 Offset: 0x72824D0 VA: 0x72864D0
+	public List<RCC_WheelCollider> get_WheelColliders() { }
+
+	// RVA: 0x7286770 Offset: 0x7282770 VA: 0x7286770
+	public bool get_autoReverse() { }
+
+	// RVA: 0x7286790 Offset: 0x7282790 VA: 0x7286790
+	public bool get_automaticGear() { }
+
+	// RVA: 0x72867B0 Offset: 0x72827B0 VA: 0x72867B0 Slot: 7
+	public float get_SteerAngle() { }
+
+	// RVA: 0x72867B8 Offset: 0x72827B8 VA: 0x72867B8 Slot: 8
+	public float get_Velocity() { }
+
+	// RVA: 0x72867C0 Offset: 0x72827C0 VA: 0x72867C0 Slot: 24
+	public float GetCurrentMaxSpeed() { }
+
+	// RVA: 0x72867D8 Offset: 0x72827D8 VA: 0x72867D8 Slot: 25
+	public float GetCurrentMaxHighYSpeed() { }
+
+	// RVA: 0x72867F0 Offset: 0x72827F0 VA: 0x72867F0
+	public float GetCurrentReverseMaxSpeed() { }
+
+	// RVA: 0x7286808 Offset: 0x7282808 VA: 0x7286808 Slot: 12
+	public int get_Direction() { }
+
+	// RVA: 0x7286810 Offset: 0x7282810 VA: 0x7286810 Slot: 6
+	public bool get_ReachSpeedAndTurnMax() { }
+
+	// RVA: 0x7286818 Offset: 0x7282818 VA: 0x7286818 Slot: 48
+	public virtual bool get_IsGrounded() { }
+
+	// RVA: 0x7286950 Offset: 0x7282950 VA: 0x7286950 Slot: 4
+	public void set_ModelVisible(bool value) { }
+
+	// RVA: 0x728695C Offset: 0x728295C VA: 0x728695C Slot: 5
+	public bool get_ModelVisible() { }
+
+	// RVA: 0x7286964 Offset: 0x7282964 VA: 0x7286964 Slot: 9
+	public float get_GasInput() { }
+
+	// RVA: 0x728696C Offset: 0x728296C VA: 0x728696C Slot: 10
+	public float get_BrakeInput() { }
+
+	// RVA: 0x7286974 Offset: 0x7282974 VA: 0x7286974 Slot: 11
+	public float get_SteerInput() { }
+
+	// RVA: 0x728697C Offset: 0x728297C VA: 0x728697C
+	internal float get__gasInput() { }
+
+	// RVA: 0x7286A18 Offset: 0x7282A18 VA: 0x7286A18
+	internal void set__gasInput(float value) { }
+
+	// RVA: 0x7286A20 Offset: 0x7282A20 VA: 0x7286A20
+	internal float get__brakeInput() { }
+
+	// RVA: 0x7286A94 Offset: 0x7282A94 VA: 0x7286A94
+	internal void set__brakeInput(float value) { }
+
+	// RVA: 0x7286A9C Offset: 0x7282A9C VA: 0x7286A9C
+	internal float get__boostInput() { }
+
+	// RVA: 0x7286AEC Offset: 0x7282AEC VA: 0x7286AEC
+	internal void set__boostInput(float value) { }
+
+	// RVA: 0x7286AF4 Offset: 0x7282AF4 VA: 0x7286AF4 Slot: 16
+	public bool get_IsInWater() { }
+
+	// RVA: 0x7286AFC Offset: 0x7282AFC VA: 0x7286AFC Slot: 17
+	public void set_IsInWater(bool value) { }
+
+	// RVA: 0x7286B08 Offset: 0x7282B08 VA: 0x7286B08 Slot: 14
+	public float get_CurEngineRPM() { }
+
+	// RVA: 0x7286B24 Offset: 0x7282B24 VA: 0x7286B24 Slot: 19
+	public VehicleControllerInfo get_ControllerInfo() { }
+
+	// RVA: 0x7286BBC Offset: 0x7282BBC VA: 0x7286BBC Slot: 21
+	public void SetControllerInfo(VehicleControllerInfo i) { }
+
+	// RVA: 0x7286C10 Offset: 0x7282C10 VA: 0x7286C10 Slot: 22
+	public void SetVehicleEnable(bool isEnable, bool switchController = false) { }
+
+	// RVA: 0x7286CA4 Offset: 0x7282CA4 VA: 0x7286CA4
+	protected void Awake() { }
+
+	// RVA: 0x7287234 Offset: 0x7283234 VA: 0x7287234 Slot: 49
+	public virtual void KillEngine() { }
+
+	// RVA: 0x728729C Offset: 0x728329C VA: 0x728729C Slot: 50
+	public virtual void StartEngine() { }
+
+	// RVA: 0x72872E4 Offset: 0x72832E4 VA: 0x72872E4 Slot: 51
+	public virtual void VehicleUpdateInput(bool gas, bool brake, Vector3 steer) { }
+
+	// RVA: 0x728747C Offset: 0x728347C VA: 0x728747C Slot: 52
+	public virtual void VehicleUpdateInput(float gas, float brake, Vector3 steer) { }
+
+	// RVA: 0x728751C Offset: 0x728351C VA: 0x728751C Slot: 33
+	public void VehicleLasyUpdate(float gameTime, float deltaTime) { }
+
+	// RVA: 0x7287B54 Offset: 0x7283B54 VA: 0x7287B54
+	private void Inputs() { }
+
+	// RVA: 0x7287B58 Offset: 0x7283B58 VA: 0x7287B58 Slot: 53
+	public virtual void VehicleLazyFixedUpdate(float gameTime, float deltaTime) { }
+
+	// RVA: 0x728A1D4 Offset: 0x72861D4 VA: 0x728A1D4 Slot: 23
+	public void SetMaxSpeedScale(float scale) { }
+
+	// RVA: 0x728A1DC Offset: 0x72861DC VA: 0x728A1DC Slot: 42
+	public void SetHightSpeedSteerAngleRate(float rate) { }
+
+	// RVA: 0x728A200 Offset: 0x7286200 VA: 0x728A200 Slot: 43
+	public void SetEngineTorqueRate(float rate) { }
+
+	// RVA: 0x728A224 Offset: 0x7286224 VA: 0x728A224 Slot: 44
+	public void SetBrakeTorqueRate(float rate) { }
+
+	// RVA: 0x728A248 Offset: 0x7286248 VA: 0x728A248 Slot: 45
+	public float GetEngineTorqueRate() { }
+
+	// RVA: 0x728A254 Offset: 0x7286254 VA: 0x728A254 Slot: 46
+	public float GetBrakeTorqueRate() { }
+
+	// RVA: 0x728A260 Offset: 0x7286260 VA: 0x728A260 Slot: 26
+	public void SetDriverSpeedScale(float scale) { }
+
+	// RVA: 0x728A268 Offset: 0x7286268 VA: 0x728A268 Slot: 27
+	public float GetDriverSpeedScale() { }
+
+	// RVA: 0x728A270 Offset: 0x7286270 VA: 0x728A270 Slot: 28
+	public void LockMaxSpeed(float speed) { }
+
+	// RVA: 0x728A278 Offset: 0x7286278 VA: 0x728A278 Slot: 29
+	public void UnLockMaxSpeed() { }
+
+	// RVA: 0x72880C8 Offset: 0x72840C8 VA: 0x72880C8
+	private void Engine(float fixedDeltaTime) { }
+
+	// RVA: 0x728A2EC Offset: 0x72862EC VA: 0x728A2EC
+	private void ApplyMotorTorque(RCC_WheelCollider wc, float torque) { }
+
+	// RVA: 0x7289E1C Offset: 0x7285E1C VA: 0x7289E1C
+	private void ESPCheck(float velocity, float steering) { }
+
+	// RVA: 0x728739C Offset: 0x728339C VA: 0x728739C
+	private void ApplyBrakeTorque(RCC_WheelCollider wc, float brake) { }
+
+	// RVA: 0x7289308 Offset: 0x7285308 VA: 0x7289308
+	private void ApplySteering(RCC_WheelCollider wc) { }
+
+	// RVA: 0x72888A0 Offset: 0x72848A0 VA: 0x72888A0
+	private void Braking() { }
+
+	// RVA: 0x728A284 Offset: 0x7286284 VA: 0x728A284
+	private float GetClimbAddEngineOrBrakeTorque() { }
+
+	// RVA: 0x728A0E4 Offset: 0x72860E4 VA: 0x728A0E4
+	private float GetCarForwardYAngle() { }
+
+	// RVA: 0x728A184 Offset: 0x7286184 VA: 0x728A184
+	private float GetCarForwardZAngle() { }
+
+	// RVA: 0x7288B00 Offset: 0x7284B00 VA: 0x7288B00
+	private void AntiRollBars() { }
+
+	// RVA: 0x728945C Offset: 0x728545C VA: 0x728945C
+	private void SteerHelper() { }
+
+	// RVA: 0x7289BD0 Offset: 0x7285BD0 VA: 0x7289BD0
+	private void TractionHelper() { }
+
+	// RVA: 0x7287864 Offset: 0x7283864 VA: 0x7287864
+	private void Clutch(float deltaTime) { }
+
+	// RVA: 0x7287588 Offset: 0x7283588 VA: 0x7287588
+	private void GearBox() { }
+
+	[IteratorStateMachine(typeof(<ChangingGear>d__223))]
+	// RVA: 0x728A5EC Offset: 0x72865EC VA: 0x728A5EC
+	internal IEnumerator ChangingGear(int gear) { }
+
+	// RVA: 0x72892C8 Offset: 0x72852C8 VA: 0x72892C8
+	private void RevLimiter() { }
+
+	// RVA: 0x7287A08 Offset: 0x7283A08 VA: 0x7287A08
+	private void Turbo() { }
+
+	// RVA: 0x7289228 Offset: 0x7285228 VA: 0x7289228
+	private void DriftVariables() { }
+
+	// RVA: 0x7287A0C Offset: 0x7283A0C VA: 0x7287A0C
+	private void ResetCar(float deltaTime) { }
+
+	// RVA: 0x728A580 Offset: 0x7286580 VA: 0x728A580
+	private bool OverTorque() { }
+
+	// RVA: 0x7287080 Offset: 0x7283080 VA: 0x7287080
+	public void TorqueCurve() { }
+
+	// RVA: 0x728A670 Offset: 0x7286670 VA: 0x728A670
+	private void OnDisable() { }
+
+	// RVA: 0x728A674 Offset: 0x7286674 VA: 0x728A674 Slot: 30
+	public void UpdateVehicleSpeed(float rpm, float velocity) { }
+
+	// RVA: 0x728A780 Offset: 0x7286780 VA: 0x728A780 Slot: 31
+	public void UpdateVehicleSteerAngle(float steerAngle) { }
+
+	// RVA: 0x728A7F8 Offset: 0x72867F8 VA: 0x728A7F8 Slot: 38
+	public int GetWheelType(GameObject go) { }
+
+	// RVA: 0x728A958 Offset: 0x7286958 VA: 0x728A958 Slot: 15
+	public float CaculateVehicleRevs() { }
+
+	// RVA: 0x728AAB8 Offset: 0x7286AB8 VA: 0x728AAB8 Slot: 39
+	public void StartBoost(float torque, float maxSpeed, float angle, bool ingoreVelocityChange = false) { }
+
+	// RVA: 0x7287274 Offset: 0x7283274 VA: 0x7287274 Slot: 40
+	public void StopBoost() { }
+
+	// RVA: 0x728ABB0 Offset: 0x7286BB0 VA: 0x728ABB0 Slot: 20
+	public void BindVehicleSkin(VehicleSkinInfoBase skin_info) { }
+
+	// RVA: 0x728B224 Offset: 0x7287224 VA: 0x728B224 Slot: 41
+	public void SetJumpHeightRate(float rate) { }
+
+	// RVA: 0x728B228 Offset: 0x7287228 VA: 0x728B228 Slot: 47
+	public void ForceStop() { }
+
+	// RVA: 0x728B294 Offset: 0x7287294 VA: 0x728B294
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum RCC_Settings.BehaviorType // TypeDefIndex: 599
+{
+	// Fields
+	public int value__; // 0x83F8BCB1
+	public const BehaviorType Simulator = 0;
+	public const BehaviorType Racing = 1;
+	public const BehaviorType SemiArcade = 2;
+	public const BehaviorType Drift = 3;
+	public const BehaviorType Fun = 4;
+	public const BehaviorType Custom = 5;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum RCC_Settings.ControllerType // TypeDefIndex: 600
+{
+	// Fields
+	public int value__; // 0xB9BE91FE
+	public const ControllerType Keyboard = 0;
+	public const ControllerType Mobile = 1;
+	public const ControllerType Custom = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum RCC_Settings.Units // TypeDefIndex: 601
+{
+	// Fields
+	public int value__; // 0xB1B6B594
+	public const Units KMH = 0;
+	public const Units MPH = 1;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class RCC_Settings // TypeDefIndex: 602
+{
+	// Fields
+	public static RCC_Settings instance; // 0xD0F9F8A3
+	public bool overrideFixedTimeStep; // 0xA4B9BE85
+	[Range(0.005, 0.06)]
+	public float fixedTimeStep; // 0xB7BE95A9
+	[Range(0.5, 20)]
+	public float maxAngularVelocity; // 0xFEB5BEB9
+	public BehaviorType behaviorType; // 0xBDB9BE91
+	public bool useFixedWheelColliders; // 0xA2BFA4B1
+	public ControllerType controllerType; // 0xB5A3EAEA
+	public string verticalInput; // 0xBCA08FA4
+	public string horizontalInput; // 0xB1B2A9B1
+	public KeyCode handbrakeKB; // 0xB984BBB3
+	public KeyCode changeCameraKB; // 0x83F8B5BD
+	public KeyCode enterExitVehicleKB; // 0xB5A4A3A9
+	public bool useAutomaticGear; // 0xB983FEBD
+	public bool keepEnginesAlive; // 0xB5BCB7BE
+	public bool autoReverse; // 0xBE85D0F9
+	public GameObject contactParticles; // 0x95A9A4B9
+	public Units units; // 0xBEB9B7BE
+	public bool useTelemetry; // 0xBE91FEB5
+	public bool useAccelerometerForSteering; // 0xA4B1BDB9
+	public bool useSteeringWheelForSteering; // 0xA3BEBFB9
+	public float UIButtonSensitivity; // 0xB1B383FE
+	public float UIButtonGravity; // 0xBF93B5BC
+	public float gyroSensitivity; // 0xA2A4A3BE
+	public bool useLightsAsVertexLights; // 0xA4BEB9B1
+	public bool useLightProjectorForLightingEffect; // 0xB597EAEA
+	public string RCCLayer; // 0xA5BF83A4
+	public string RCCTag; // 0x99B5B3A2
+	public bool tagAllChildrenGameobjects; // 0xA2B5A4BE
+	public GameObject chassisJoint; // 0x8FBCB1BE
+	public GameObject exhaustGas; // 0xB5BABE99
+	public GameObject projector; // 0xB4B5A4B3
+	public LayerMask projectorIgnoreLayer; // 0xA3A983F8
+	public GameObject headLights; // 0xFEBDB5A4
+	public GameObject brakeLights; // 0xE3A4BE99
+	public GameObject reverseLights; // 0xBE85FCE2
+	public GameObject indicatorLights; // 0x95A9A4B9
+	public GameObject mirrors; // 0xBEB9B7BE
+	public bool dontUseAnyParticleEffects; // 0xBE91FEB5
+	public bool dontUseChassisJoint; // 0xA4B1BDB9
+	public bool dontUseSkidmarks; // 0xA3BEBFB9
+	public bool foldGeneralSettings; // 0xBEBF93FE
+	public bool foldControllerSettings; // 0xB1A2A4A3
+	public bool foldUISettings; // 0x83A4BEB9
+	public bool foldWheelPhysics; // 0xB3A2A5BF
+	public bool foldSFX; // 0xD0F9F6B5
+	public bool foldOptimization; // 0xA4B9BE85
+
+	// Properties
+	public static RCC_Settings Instance { get; }
+
+	// Methods
+
+	// RVA: 0x7E84CD4 Offset: 0x7E80CD4 VA: 0x7E84CD4
+	public static RCC_Settings get_Instance() { }
+
+	// RVA: 0x7E84D58 Offset: 0x7E80D58 VA: 0x7E84D58
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[AddComponentMenu("BoneCracker Games/Realistic Car Controller/Camera/Top Camera")]
+public class RCC_TopCamera : MonoBehaviour // TypeDefIndex: 603
+{
+	// Fields
+	public Transform playerCar; // 0xB7BE95A9
+	private Rigidbody playerRigid; // 0xFEB5BEB9
+	private Camera cam; // 0xBDB9BE91
+	public GameObject pivot; // 0xBFB9A4B1
+	public float distance; // 0x80FEA3BE
+	private float distanceOffset; // 0xBEB5A2B1
+	public float maximumDistanceOffset; // 0xBEBF93A4
+	private float targetFieldOfView; // 0xB1A2A4A3
+	public float minimumOrtSize; // 0xEAA4BEB9
+	public float maximumOrtSize; // 0xA4B597EA
+	private Vector3 targetPosition; // 0xA2A5BF83
+	private Vector3 pastFollowerPosition; // 0xBE99B5B3
+	private Vector3 pastTargetPosition; // 0xBEA2B5A4
+	private float speed; // 0x998FBCB1
+
+	// Properties
+	public Transform _playerCar { get; set; }
+
+	// Methods
+
+	// RVA: 0x7E84E2C Offset: 0x7E80E2C VA: 0x7E84E2C
+	public Transform get__playerCar() { }
+
+	// RVA: 0x7E84E34 Offset: 0x7E80E34 VA: 0x7E84E34
+	public void set__playerCar(Transform value) { }
+
+	// RVA: 0x7E84FA8 Offset: 0x7E80FA8 VA: 0x7E84FA8
+	private void Awake() { }
+
+	// RVA: 0x7E84E50 Offset: 0x7E80E50 VA: 0x7E84E50
+	private void GetPlayerCar() { }
+
+	// RVA: 0x7E85000 Offset: 0x7E81000 VA: 0x7E85000
+	public void SetPlayerCar(GameObject player) { }
+
+	// RVA: 0x7E85038 Offset: 0x7E81038 VA: 0x7E85038
+	private void Update() { }
+
+	// RVA: 0x7E8536C Offset: 0x7E8136C VA: 0x7E8536C
+	private Vector3 SmoothApproach(Vector3 pastPosition, Vector3 pastTargetPosition, Vector3 targetPosition, float delta) { }
+
+	// RVA: 0x7E85520 Offset: 0x7E81520 VA: 0x7E85520
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class RCC_WheelCollider : MonoBehaviour, WheelColliderInterface // TypeDefIndex: 604
+{
+	// Fields
+	public RCC_CarControllerV3 carController; // 0xB3B5BABE
+	public bool fixWheelOverlap; // 0xF8B4B5A4
+	private Rigidbody rigid; // 0xA4A3A983
+	private WheelCollider _wheelCollider; // 0x99FEBDB5
+	private List<RCC_WheelCollider> allWheelColliders; // 0xE2E3A4BE
+	public Transform wheelModel; // 0xB9BE85FC
+	[HideInInspector]
+	public Vector3 WheelModelOffset; // 0xBE95A9A4
+	private Transform WheelModelRotation; // 0xB5BEB9B7
+	private float wheelRotation; // 0xB9BE91FE
+	private float camber; // 0xB9A4B1BD
+	internal float steerAngle; // 0xFEA3BEBF
+	internal bool isGrounded; // 0xA3BEBF93
+	public bool isGroundedShow; // 0xB9B1A2A4
+	internal float totalSlip; // 0xBF83A4BE
+	internal float rpm; // 0xB5B3A2A5
+	internal float wheelRPMToSpeed; // 0x85D0F9F6
+	private float wheelSlipAmountSideways; // 0xA9A4B9BE
+	private float wheelSlipAmountForward; // 0xB9B7BE95
+	private float orgSidewaysStiffness; // 0x91FEB5BE
+	private float orgForwardStiffness; // 0xBFB9B4A5
+	public WheelFrictionCurve forwardFrictionCurve; // 0xA2A5BF83
+	public WheelFrictionCurve sidewaysFrictionCurve; // 0xEAEAB5B3
+	internal float tractionHelpedSidewaysStiffness; // 0x80A4B583
+	private float minForwardStiffness; // 0xB8B3A4B9
+	private float maxForwardStiffness; // 0xB9BE85F8
+	private float minSidewaysStiffness; // 0xBE95A9A4
+	private float maxSidewaysStiffness; // 0xB5BEB9B7
+	public float ForwardSlip; // 0xB4A591FE
+	public float SidewaySlip; // 0xBF83BFB9
+	public LayerMask ColliderMask; // 0xB5B3A2A5
+	internal bool disableModelTransUpdate; // 0xA3A983FC
+	private float m_ScaleY; // 0xFEBDB5A4
+	public bool VehicleHighSpeedFrictionController; // 0xB7BEB983
+	public float XFrictionSpeedStartMul; // 0xD0F9B5BC
+	public float XFrictionSpeedMaxMul; // 0xA4B9BE85
+	public float XFrictionValueMinMul; // 0xB7BE95A9
+	private float mOrgRadius; // 0xFEB5BEB9
+	public int raysNumber; // 0xB9B4A591
+	public float rayStartAngle; // 0xA5BF83BF
+	public float raysMaxAngle; // 0xEAB5B3A2
+	public float wheelWidth; // 0xA4B5B7EA
+	public float wheelColliderMaxScale; // 0xBEB7B98F
+	private bool m_HasFixedUpdate; // 0x9CB5A2BF
+	public bool doWheelAlign; // 0xB5A4A3B9
+
+	// Properties
+	public WheelCollider wheelCollider { get; set; }
+	public bool IsGrounded { get; }
+	public float motorTorque { get; set; }
+	public float brakeTorque { get; set; }
+
+	// Methods
+
+	// RVA: 0x7E855A8 Offset: 0x7E815A8 VA: 0x7E855A8
+	public WheelCollider get_wheelCollider() { }
+
+	// RVA: 0x7E85650 Offset: 0x7E81650 VA: 0x7E85650
+	public void set_wheelCollider(WheelCollider value) { }
+
+	// RVA: 0x7E85658 Offset: 0x7E81658 VA: 0x7E85658 Slot: 5
+	public bool get_IsGrounded() { }
+
+	// RVA: 0x7E85660 Offset: 0x7E81660 VA: 0x7E85660
+	public void set_motorTorque(float value) { }
+
+	// RVA: 0x7E85708 Offset: 0x7E81708 VA: 0x7E85708
+	public float get_motorTorque() { }
+
+	// RVA: 0x7E857A0 Offset: 0x7E817A0 VA: 0x7E857A0
+	public void set_brakeTorque(float value) { }
+
+	// RVA: 0x7E85848 Offset: 0x7E81848 VA: 0x7E85848
+	public float get_brakeTorque() { }
+
+	// RVA: 0x7E858E0 Offset: 0x7E818E0 VA: 0x7E858E0
+	private void Awake() { }
+
+	// RVA: 0x7E85B78 Offset: 0x7E81B78 VA: 0x7E85B78
+	private void Start() { }
+
+	// RVA: 0x7E85C08 Offset: 0x7E81C08 VA: 0x7E85C08
+	private void Update() { }
+
+	// RVA: 0x7E864F4 Offset: 0x7E824F4 VA: 0x7E864F4
+	private void FixedUpdate() { }
+
+	// RVA: 0x7E867E4 Offset: 0x7E827E4 VA: 0x7E867E4 Slot: 6
+	public WheelHit UpdateGrounded() { }
+
+	// RVA: 0x7E8652C Offset: 0x7E8252C VA: 0x7E8652C
+	public void UpdateWheelCollider() { }
+
+	// RVA: 0x7E8696C Offset: 0x7E8296C VA: 0x7E8696C
+	private void FixWheelOverlap() { }
+
+	// RVA: 0x7E86DDC Offset: 0x7E82DDC VA: 0x7E86DDC
+	private WheelFrictionCurve SetFrictionCurves(WheelFrictionCurve curve, float extremumSlip, float extremumValue, float asymptoteSlip, float asymptoteValue) { }
+
+	// RVA: 0x7E85E64 Offset: 0x7E81E64 VA: 0x7E85E64
+	public void WheelAlign() { }
+
+	// RVA: 0x7E86404 Offset: 0x7E82404 VA: 0x7E86404
+	public void WheelCamber() { }
+
+	// RVA: 0x7E8684C Offset: 0x7E8284C VA: 0x7E8684C
+	private void Frictions(bool contacted, float forwardSlip) { }
+
+	// RVA: 0x7E86E6C Offset: 0x7E82E6C VA: 0x7E86E6C
+	private void Drift(float forwardSlip) { }
+
+	// RVA: 0x7E87190 Offset: 0x7E83190 VA: 0x7E87190
+	private bool isSkidding() { }
+
+	// RVA: 0x7E87234 Offset: 0x7E83234 VA: 0x7E87234
+	public void EnableWheelCollider(bool e) { }
+
+	// RVA: 0x7E872DC Offset: 0x7E832DC VA: 0x7E872DC Slot: 4
+	public void AttachWheelModel(Transform model) { }
+
+	// RVA: 0x7E876EC Offset: 0x7E836EC VA: 0x7E876EC Slot: 7
+	public void ClearTorque() { }
+
+	// RVA: 0x7E8770C Offset: 0x7E8370C VA: 0x7E8770C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class MotorcycleWheelController : MonoBehaviour, WheelColliderInterface // TypeDefIndex: 605
+{
+	// Fields
+	public RMCRealisticMotorcycleController m_Controller; // 0x86A2B5BE
+	public WheelCollider m_WheelCollider; // 0xBDA5BCBF
+	public Transform m_WheelTransform; // 0xD0F9F8B5
+	public bool isGrounded; // 0xA4B9BE85
+	private float rot; // 0xB7BE95A9
+	public bool VehicleHighSpeedFrictionController; // 0xFEB5BEB9
+	public float XFrictionSpeedStartMul; // 0xB9B4A591
+	public float XFrictionSpeedMaxMul; // 0xA5BF83BF
+	public float XFrictionValueMinMul; // 0xEAB5B3A2
+	private WheelFrictionCurve sidewaysFrictionCurve; // 0xA4B5B7EA
+	private float orgSidewaysStiffness; // 0xB1BCA08F
+
+	// Properties
+	public bool IsGrounded { get; }
+
+	// Methods
+
+	// RVA: 0x7E87824 Offset: 0x7E83824 VA: 0x7E87824 Slot: 5
+	public bool get_IsGrounded() { }
+
+	// RVA: 0x7E8782C Offset: 0x7E8382C VA: 0x7E8782C
+	private void Awake() { }
+
+	// RVA: 0x7E878DC Offset: 0x7E838DC VA: 0x7E878DC Slot: 4
+	public void AttachWheelModel(Transform model) { }
+
+	// RVA: 0x7E87A34 Offset: 0x7E83A34 VA: 0x7E87A34
+	public void EnableWheelCollider(bool e) { }
+
+	// RVA: 0x7E87ACC Offset: 0x7E83ACC VA: 0x7E87ACC
+	private void Update() { }
+
+	// RVA: 0x7E8807C Offset: 0x7E8407C VA: 0x7E8807C
+	private void FixedUpdate() { }
+
+	// RVA: 0x7E88134 Offset: 0x7E84134 VA: 0x7E88134
+	public void UpdateWheelCollider() { }
+
+	// RVA: 0x7E8821C Offset: 0x7E8421C VA: 0x7E8821C Slot: 6
+	public WheelHit UpdateGrounded() { }
+
+	// RVA: 0x7E88280 Offset: 0x7E84280 VA: 0x7E88280 Slot: 7
+	public void ClearTorque() { }
+
+	// RVA: 0x7E8831C Offset: 0x7E8431C VA: 0x7E8831C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class RMCRealisticMotorcycleController.<ChangingGear>d__152 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 606
+{
+	// Fields
+	private int <>1__state; // 0x91BE9FA9
+	private object <>2__current; // 0xB5BBB1A7
+	public RMCRealisticMotorcycleController <>4__this; // 0x85D0F9F8
+	public int gear; // 0xA9A4B9BE
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x7E8B5D4 Offset: 0x7E875D4 VA: 0x7E8B5D4
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHidden]
+	// RVA: 0x7E8C6CC Offset: 0x7E886CC VA: 0x7E8C6CC Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x7E8C6D0 Offset: 0x7E886D0 VA: 0x7E8C6D0 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x7E8C794 Offset: 0x7E88794 VA: 0x7E8C794 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x7E8C79C Offset: 0x7E8879C VA: 0x7E8C79C Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x7E8C7D4 Offset: 0x7E887D4 VA: 0x7E8C7D4 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class RMCRealisticMotorcycleController : MonoBehaviour, VehicleControllerInterface // TypeDefIndex: 607
+{
+	// Fields
+	protected bool engineRunning; // 0xB9B7BE95
+	public bool TryResetCar; // 0x91FEB5BE
+	private float resetTime; // 0xBFB9B4A5
+	protected Rigidbody rigid; // 0xA2A5BF83
+	public MotorcycleWheelController FrontWheelCollider; // 0xEAEAB5B3
+	public MotorcycleWheelController RearWheelCollider; // 0x8FA4B5B7
+	public Transform Fender; // 0xBFBEB7B9
+	public Transform SteeringHandlebar; // 0xB99CB5A2
+	public Transform FenderContainer; // 0xBEB5A4A3
+	public Transform SteeringHandlebarContainer; // 0xB180A2B5
+	public Transform COM; // 0xF8B5A3A5
+	public Transform SkinContainer; // 0xBE85D0F9
+	protected bool m_ReachSpeedAndTurnMax; // 0x95A9A4B9
+	protected List<WheelColliderInterface> m_WheelColliders; // 0xBEB9B7BE
+	protected Transform FrontWheelColliderTrans; // 0xA591FEB5
+	protected Transform RearWheelColliderTrans; // 0x83BFB9B4
+	public bool changingGear; // 0xB3A2A5BF
+	public float gearShiftRate; // 0xA3EAEAB5
+	public float[] gearSpeed; // 0xB98FA4B5
+	public int currentGear; // 0xA2BFBEB7
+	public int totalGears; // 0xA3B99CB5
+	public Transform chassis; // 0xB5BEB5A4
+	public float chassisVerticalLean; // 0xA5B180A2
+	public float chassisHorizontalLean; // 0x83F8B5A3
+	protected float horizontalLean; // 0xB5A4A3A9
+	protected float verticalLean; // 0xBF92FEBD
+	public float MaxVerticalLean; // 0xB1B5BCBF
+	public float MaxHorizontalLean; // 0x85D0F9BE
+	public float ChassisLenLerpFactor; // 0xA9A4B9BE
+	public AnimationCurve[] engineTorqueCurve; // 0xB9B7BE95
+	public float EngineTorque; // 0x91FEB5BE
+	public float MaxEngineRPM; // 0xBFB9B4A5
+	public float MinEngineRPM; // 0xA2A5BF83
+	public float m_SteerAngle; // 0xEAEAB5B3
+	public int SpeedSteerAudio; // 0x8FA4B5B7
+	public string SpeedSteerAudioResID; // 0xB1A0A9B2
+	public float ClimbAdditionMinTorque; // 0xB99CA3A3
+	public float ClimbAdditionMaxTorque; // 0xBEB5A4A3
+	public float ClimbForwardYMinDegree; // 0xB695A2B5
+	public float ClimbForwardYMaxDegree; // 0xA4B3B5B6
+	public float ClimbUpAddEngineScale; // 0xD0F9F8A3
+	public float ReverseClimbUpAddEngineScale; // 0xA4B9BE85
+	public float StopDownHillAddBrakeScale; // 0xB7BE95A9
+	public float StopGoDownAddBrakeScale; // 0xFEB5BEB9
+	public float CurAddTorqueShow; // 0xA2B3B99D
+	public float FlyAgainstGravityAcceleration; // 0xBFB8A0BF
+	public float FlyAgainstGravityFrontRatio; // 0xEAEAB5BE
+	public float FlyAgainstGravityRearRatio; // 0x8FA4B5B7
+	public bool IsAWD; // 0xB9A6B5B4
+	public float FastStopSpeed; // 0xF8A3B5B3
+	public float FastStopBrake; // 0xBE85D0F9
+	private bool m_isBoosting; // 0xFEA9A4B9
+	private float m_maxSpeedBackup; // 0xB6BFA280
+	private float m_engineTorqueBackup; // 0xBEB9BCB9
+	private float m_highSpeedSteerAngleBackup; // 0xBF9CFEB7
+	private float m_EPSILON; // 0xA6B59CA7
+	[HideInInspector]
+	protected float Speed; // 0x85FEBCB5
+	public float highSpeedSteerAngle; // 0xB6B1A3BE
+	public float highSpeedSteerAngleAtSpeed; // 0xA280FEB5
+	public float maxSpeed; // 0xBCB9B6BF
+	public float Brake; // 0xBE85A2B5
+	protected float EngineRPM; // 0xB5B6B1A3
+	protected float motorInput; // 0xBCB9A485
+	protected float defsteerAngle; // 0xEAA9A4B9
+	protected float RotationValue1; // 0xB5A293EA
+	protected float RotationValue2; // 0x93B5A4B1
+	public float EngineRPMShow; // 0xA4BEA5BF
+	private bool mModelVisible; // 0xB186A2B5
+	public bool UpdateWheelTransforms; // 0x8FB5A5BC
+	public float IdleBrakeInput; // 0xBDBE858F
+	[HideInInspector]
+	public bool brakingNow; // 0xB7B1BEB1
+	[HideInInspector]
+	protected float steerInput; // 0x83F8B4B5
+	[HideInInspector]
+	public bool crashed; // 0xB5A4A3A9
+	protected bool reversing; // 0xBE99FEBD
+	protected float mSpeedScale; // 0xA2A480A4
+	protected float mDriverSpeedScale; // 0xA983FCF6
+	public LayerMask ColliderMask; // 0xBDB5A4A3
+	public float ReverseMaxSpeed; // 0xA4A992FE
+	public float ReverseTorqueScale; // 0x83FCFAB5
+	protected TssSdtFloat mHighSpeedSteerAngleRate; // 0xB5A4A3A9
+	protected TssSdtFloat mEngineTorqueRate; // 0xBE99FEBD
+	protected TssSdtFloat mBrakeTorqueRate; // 0xFCE2E3A4
+	private bool m_IsInWater; // 0xA4A3A983
+	protected float m_GearFactor; // 0x85FEBDB5
+	public bool Enable3PSimulate; // 0xE1A4BE99
+	protected float m_LockSpeed; // 0xBE85FCE6
+	public float CurrentSteerAngle; // 0xFEA9A4B9
+	public Vector3 SteerAxis; // 0xB6BFA280
+
+	// Properties
+	public Transform VehicleCOM { get; }
+	public bool ReachSpeedAndTurnMax { get; }
+	public virtual List<WheelColliderInterface> WheelColliders { get; }
+	private int _totalGears { get; }
+	public float SteerAngle { get; }
+	public float Velocity { get; }
+	public float CurEngineRPM { get; }
+	public bool ModelVisible { get; set; }
+	public float GasInput { get; }
+	public float BrakeInput { get; }
+	public float SteerInput { get; }
+	public int Direction { get; }
+	public virtual bool IsGrounded { get; }
+	public bool IsInWater { get; set; }
+	public VehicleControllerInfo ControllerInfo { get; }
+	protected virtual Transform VehicleTransform { get; }
+
+	// Methods
+
+	// RVA: 0x7E8834C Offset: 0x7E8434C VA: 0x7E8834C Slot: 18
+	public Transform get_VehicleCOM() { }
+
+	// RVA: 0x7E88354 Offset: 0x7E84354 VA: 0x7E88354 Slot: 6
+	public bool get_ReachSpeedAndTurnMax() { }
+
+	// RVA: 0x7E8835C Offset: 0x7E8435C VA: 0x7E8835C Slot: 48
+	public virtual List<WheelColliderInterface> get_WheelColliders() { }
+
+	// RVA: 0x7E8850C Offset: 0x7E8450C VA: 0x7E8850C
+	private int get__totalGears() { }
+
+	// RVA: 0x7E88518 Offset: 0x7E84518 VA: 0x7E88518 Slot: 7
+	public float get_SteerAngle() { }
+
+	// RVA: 0x7E88520 Offset: 0x7E84520 VA: 0x7E88520 Slot: 8
+	public float get_Velocity() { }
+
+	// RVA: 0x7E88528 Offset: 0x7E84528 VA: 0x7E88528 Slot: 14
+	public float get_CurEngineRPM() { }
+
+	// RVA: 0x7E88544 Offset: 0x7E84544 VA: 0x7E88544 Slot: 4
+	public void set_ModelVisible(bool value) { }
+
+	// RVA: 0x7E88550 Offset: 0x7E84550 VA: 0x7E88550 Slot: 5
+	public bool get_ModelVisible() { }
+
+	// RVA: 0x7E88558 Offset: 0x7E84558 VA: 0x7E88558 Slot: 9
+	public float get_GasInput() { }
+
+	// RVA: 0x7E88574 Offset: 0x7E84574 VA: 0x7E88574 Slot: 10
+	public float get_BrakeInput() { }
+
+	// RVA: 0x7E88594 Offset: 0x7E84594 VA: 0x7E88594 Slot: 11
+	public float get_SteerInput() { }
+
+	// RVA: 0x7E8859C Offset: 0x7E8459C VA: 0x7E8859C Slot: 12
+	public int get_Direction() { }
+
+	// RVA: 0x7E885B0 Offset: 0x7E845B0 VA: 0x7E885B0 Slot: 49
+	public virtual bool get_IsGrounded() { }
+
+	// RVA: 0x7E886EC Offset: 0x7E846EC VA: 0x7E886EC Slot: 16
+	public bool get_IsInWater() { }
+
+	// RVA: 0x7E886F4 Offset: 0x7E846F4 VA: 0x7E886F4 Slot: 17
+	public void set_IsInWater(bool value) { }
+
+	// RVA: 0x7E88700 Offset: 0x7E84700 VA: 0x7E88700 Slot: 19
+	public VehicleControllerInfo get_ControllerInfo() { }
+
+	// RVA: 0x7E8879C Offset: 0x7E8479C VA: 0x7E8879C Slot: 21
+	public void SetControllerInfo(VehicleControllerInfo i) { }
+
+	// RVA: 0x7E887EC Offset: 0x7E847EC VA: 0x7E887EC Slot: 50
+	protected virtual void Start() { }
+
+	// RVA: 0x7E88818 Offset: 0x7E84818 VA: 0x7E88818 Slot: 51
+	protected virtual void InitInNeed() { }
+
+	// RVA: 0x7E88B60 Offset: 0x7E84B60 VA: 0x7E88B60
+	public AudioSource CreateAudioSource(string audioName, float minDistance, float volume, AudioClip audioClip, bool loop, bool playNow, bool destroyAfterFinished) { }
+
+	// RVA: 0x7E88814 Offset: 0x7E84814 VA: 0x7E88814
+	public void SoundsInitialize() { }
+
+	// RVA: 0x7E88E08 Offset: 0x7E84E08 VA: 0x7E88E08 Slot: 52
+	public virtual void VehicleLazyFixedUpdate(float gameTime, float deltaTime) { }
+
+	// RVA: 0x7E89050 Offset: 0x7E85050 VA: 0x7E89050 Slot: 53
+	public virtual void FlyCarAgainstGravity() { }
+
+	// RVA: 0x7E893B0 Offset: 0x7E853B0 VA: 0x7E893B0 Slot: 23
+	public void SetMaxSpeedScale(float scale) { }
+
+	// RVA: 0x7E893B8 Offset: 0x7E853B8 VA: 0x7E893B8 Slot: 42
+	public void SetHightSpeedSteerAngleRate(float rate) { }
+
+	// RVA: 0x7E893DC Offset: 0x7E853DC VA: 0x7E893DC Slot: 43
+	public void SetEngineTorqueRate(float rate) { }
+
+	// RVA: 0x7E89400 Offset: 0x7E85400 VA: 0x7E89400 Slot: 44
+	public void SetBrakeTorqueRate(float rate) { }
+
+	// RVA: 0x7E89424 Offset: 0x7E85424 VA: 0x7E89424 Slot: 26
+	public void SetDriverSpeedScale(float scale) { }
+
+	// RVA: 0x7E8942C Offset: 0x7E8542C VA: 0x7E8942C Slot: 45
+	public float GetEngineTorqueRate() { }
+
+	// RVA: 0x7E89438 Offset: 0x7E85438 VA: 0x7E89438 Slot: 46
+	public float GetBrakeTorqueRate() { }
+
+	// RVA: 0x7E89444 Offset: 0x7E85444 VA: 0x7E89444 Slot: 27
+	public float GetDriverSpeedScale() { }
+
+	// RVA: 0x7E8944C Offset: 0x7E8544C VA: 0x7E8944C Slot: 28
+	public void LockMaxSpeed(float speed) { }
+
+	// RVA: 0x7E89454 Offset: 0x7E85454 VA: 0x7E89454 Slot: 29
+	public void UnLockMaxSpeed() { }
+
+	// RVA: 0x7E89460 Offset: 0x7E85460 VA: 0x7E89460 Slot: 24
+	public float GetCurrentMaxSpeed() { }
+
+	// RVA: 0x7E89478 Offset: 0x7E85478 VA: 0x7E89478 Slot: 25
+	public float GetCurrentMaxHighYSpeed() { }
+
+	// RVA: 0x7E89490 Offset: 0x7E85490 VA: 0x7E89490 Slot: 33
+	public void VehicleLasyUpdate(float gameTime, float deltaTime) { }
+
+	// RVA: 0x7E89508 Offset: 0x7E85508 VA: 0x7E89508
+	private void ResetCar(float deltaTime) { }
+
+	// RVA: 0x7E89808 Offset: 0x7E85808 VA: 0x7E89808 Slot: 54
+	protected virtual void InputHandle() { }
+
+	// RVA: 0x7E89AA0 Offset: 0x7E85AA0 VA: 0x7E89AA0 Slot: 30
+	public void UpdateVehicleSpeed(float rpm, float velocity) { }
+
+	// RVA: 0x7E89B90 Offset: 0x7E85B90 VA: 0x7E89B90 Slot: 31
+	public void UpdateVehicleSteerAngle(float steerAngle) { }
+
+	// RVA: 0x7E89C00 Offset: 0x7E85C00 VA: 0x7E89C00 Slot: 55
+	public virtual void VehicleUpdateInput(bool gas, bool brake, Vector3 steer) { }
+
+	// RVA: 0x7E89CB4 Offset: 0x7E85CB4 VA: 0x7E89CB4 Slot: 56
+	public virtual void VehicleUpdateInput(float gas, float brake, Vector3 steer) { }
+
+	// RVA: 0x7E89D4C Offset: 0x7E85D4C VA: 0x7E89D4C Slot: 57
+	protected virtual void Engine() { }
+
+	// RVA: 0x7E89EE4 Offset: 0x7E85EE4 VA: 0x7E89EE4 Slot: 58
+	protected virtual void ApplyMotorTorque() { }
+
+	// RVA: 0x7E8A4F8 Offset: 0x7E864F8 VA: 0x7E8A4F8 Slot: 59
+	public virtual void Braking() { }
+
+	// RVA: 0x7E8A7EC Offset: 0x7E867EC VA: 0x7E8A7EC Slot: 60
+	protected virtual void WheelAlign() { }
+
+	// RVA: 0x7E8B1B0 Offset: 0x7E871B0 VA: 0x7E8B1B0 Slot: 61
+	protected virtual void RotateHandlebarFenders() { }
+
+	// RVA: 0x7E88EC4 Offset: 0x7E84EC4 VA: 0x7E88EC4
+	public void ShiftGears() { }
+
+	[IteratorStateMachine(typeof(<ChangingGear>d__152))]
+	// RVA: 0x7E8B558 Offset: 0x7E87558 VA: 0x7E8B558
+	private IEnumerator ChangingGear(int gear) { }
+
+	// RVA: 0x7E8B5FC Offset: 0x7E875FC VA: 0x7E8B5FC Slot: 62
+	protected virtual void Lean() { }
+
+	// RVA: 0x7E8904C Offset: 0x7E8504C VA: 0x7E8904C
+	public void SkidAudio() { }
+
+	// RVA: 0x7E8B97C Offset: 0x7E8797C VA: 0x7E8B97C
+	private void OnCollisionEnter(Collision collision) { }
+
+	// RVA: 0x7E8B980 Offset: 0x7E87980 VA: 0x7E8B980 Slot: 63
+	public virtual void SetVehicleEnable(bool isEnable, bool switchController = false) { }
+
+	// RVA: 0x7E8BA0C Offset: 0x7E87A0C VA: 0x7E8BA0C Slot: 64
+	public virtual void KillEngine() { }
+
+	// RVA: 0x7E8BA68 Offset: 0x7E87A68 VA: 0x7E8BA68 Slot: 65
+	public virtual void StartEngine() { }
+
+	// RVA: 0x7E8BAB0 Offset: 0x7E87AB0 VA: 0x7E8BAB0 Slot: 66
+	public virtual int GetWheelType(GameObject go) { }
+
+	// RVA: 0x7E89B3C Offset: 0x7E85B3C VA: 0x7E89B3C
+	private int GetGearBySpeed(float velocity) { }
+
+	// RVA: 0x7E8BB88 Offset: 0x7E87B88 VA: 0x7E8BB88 Slot: 15
+	public float CaculateVehicleRevs() { }
+
+	// RVA: 0x7E8BC80 Offset: 0x7E87C80 VA: 0x7E8BC80 Slot: 39
+	public void StartBoost(float torque, float maxSpeed, float angle, bool ingoreVelocityChange = false) { }
+
+	// RVA: 0x7E8BA40 Offset: 0x7E87A40 VA: 0x7E8BA40 Slot: 40
+	public void StopBoost() { }
+
+	// RVA: 0x7E8BD80 Offset: 0x7E87D80 VA: 0x7E8BD80 Slot: 67
+	public virtual void BindVehicleSkin(VehicleSkinInfoBase skin_info) { }
+
+	// RVA: 0x7E8C458 Offset: 0x7E88458 VA: 0x7E8C458 Slot: 41
+	public void SetJumpHeightRate(float rate) { }
+
+	// RVA: 0x7E8C45C Offset: 0x7E8845C VA: 0x7E8C45C Slot: 47
+	public void ForceStop() { }
+
+	// RVA: 0x7E8A494 Offset: 0x7E86494 VA: 0x7E8A494
+	protected float GetClimbAddEngineOrBrakeTorque() { }
+
+	// RVA: 0x7E892F8 Offset: 0x7E852F8 VA: 0x7E892F8
+	protected float GetCarForwardYAngle() { }
+
+	// RVA: 0x7E8C4C4 Offset: 0x7E884C4 VA: 0x7E8C4C4 Slot: 68
+	protected virtual Transform get_VehicleTransform() { }
+
+	// RVA: 0x7E8C4CC Offset: 0x7E884CC VA: 0x7E8C4CC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum SABoneColliderCommon.BoneWeightType // TypeDefIndex: 608
+{
+	// Fields
+	public int value__; // 0xBEB9BCB9
+	public const BoneWeightType Bone2 = 0;
+	public const BoneWeightType Bone4 = 1;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum SABoneColliderCommon.BoneTriangleExtent // TypeDefIndex: 609
+{
+	// Fields
+	public int value__; // 0x9DFEBCB5
+	public const BoneTriangleExtent Disable = 0;
+	public const BoneTriangleExtent Vertex2 = 1;
+	public const BoneTriangleExtent Vertex1 = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class SABoneColliderCommon.BoneProperty // TypeDefIndex: 610
+{
+	// Fields
+	public bool recursivery; // 0xB5A4A3A9
+
+	// Methods
+
+	// RVA: 0x7E8C7E4 Offset: 0x7E887E4 VA: 0x7E8C7E4
+	public BoneProperty ShallowCopy() { }
+
+	// RVA: 0x7E8C864 Offset: 0x7E88864 VA: 0x7E8C864
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class SABoneColliderCommon.SplitProperty // TypeDefIndex: 611
+{
+	// Fields
+	public BoneWeightType boneWeightType; // 0xA992FEBD
+	public int boneWeight2; // 0x83FCB5A4
+	public int boneWeight3; // 0xB5A4A3A9
+	public int boneWeight4; // 0xA992FEBD
+	public bool greaterBoneWeight; // 0x83FCB5A4
+	public BoneTriangleExtent boneTriangleExtent; // 0xB5A4A3A9
+
+	// Methods
+
+	// RVA: 0x7E8C86C Offset: 0x7E8886C VA: 0x7E8C86C
+	public SplitProperty ShallowCopy() { }
+
+	// RVA: 0x7E8C8EC Offset: 0x7E888EC VA: 0x7E8C8EC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class SABoneColliderCommon.SABoneColliderProperty // TypeDefIndex: 612
+{
+	// Fields
+	public BoneProperty boneProperty; // 0xBE99FEBD
+	public SplitProperty splitProperty; // 0xFCE2E3A4
+	public ReducerProperty reducerProperty; // 0xA4B9BE85
+	public ColliderProperty colliderProperty; // 0xA280FEA9
+	public RigidbodyProperty rigidbodyProperty; // 0xBCB9B6BF
+	public bool modifyNameEnabled; // 0xFEB7BEB9
+
+	// Methods
+
+	// RVA: 0x7E8C914 Offset: 0x7E88914 VA: 0x7E8C914
+	public SABoneColliderProperty Copy() { }
+
+	// RVA: 0x7E8CA1C Offset: 0x7E88A1C VA: 0x7E8CA1C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class SABoneColliderCommon.SABoneColliderBuilderProperty // TypeDefIndex: 613
+{
+	// Fields
+	public SplitProperty splitProperty; // 0xB6BFA280
+	public ReducerProperty reducerProperty; // 0xA2B5BCB9
+	public ColliderProperty colliderProperty; // 0xBEA5BF93
+	public RigidbodyProperty rigidbodyProperty; // 0x9FA2B5A4
+	public bool modifyNameEnabled; // 0xBFB9A4A0
+
+	// Methods
+
+	// RVA: 0x7E8CE64 Offset: 0x7E88E64 VA: 0x7E8CE64
+	public SABoneColliderBuilderProperty Copy() { }
+
+	// RVA: 0x7E8D0AC Offset: 0x7E890AC VA: 0x7E8D0AC
+	public SABoneColliderProperty ToSABoneColliderProperty() { }
+
+	// RVA: 0x7E8CF4C Offset: 0x7E88F4C VA: 0x7E8CF4C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class SABoneColliderCommon // TypeDefIndex: 614
+{
+	// Methods
+
+	// RVA: 0x7E8C7DC Offset: 0x7E887DC VA: 0x7E8C7DC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum SAColliderBuilderCommon.ShapeType // TypeDefIndex: 615
+{
+	// Fields
+	public int value__; // 0xD0F9A3BE
+	public const ShapeType None = 0;
+	public const ShapeType Mesh = 1;
+	public const ShapeType Box = 2;
+	public const ShapeType Capsule = 3;
+	public const ShapeType Sphere = 4;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum SAColliderBuilderCommon.FitType // TypeDefIndex: 616
+{
+	// Fields
+	public int value__; // 0xA2A593BE
+	public const FitType Outer = 0;
+	public const FitType Inner = 1;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum SAColliderBuilderCommon.MeshType // TypeDefIndex: 617
+{
+	// Fields
+	public int value__; // 0xBCB1BEA2
+	public const MeshType Raw = 0;
+	public const MeshType ConvexBoxes = 1;
+	public const MeshType ConvexHull = 2;
+	public const MeshType Box = 3;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum SAColliderBuilderCommon.SliceMode // TypeDefIndex: 618
+{
+	// Fields
+	public int value__; // 0xFEB5BEB9
+	public const SliceMode Auto = 0;
+	public const SliceMode X = 1;
+	public const SliceMode Y = 2;
+	public const SliceMode Z = 3;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum SAColliderBuilderCommon.ElementType // TypeDefIndex: 619
+{
+	// Fields
+	public int value__; // 0xB7BE95A9
+	public const ElementType X = 0;
+	public const ElementType XYZ = 1;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public struct SAColliderBuilderCommon.Bool3 // TypeDefIndex: 620
+{
+	// Fields
+	public bool x; // 0xBFB9A4B1
+	public bool y; // 0xA2A593BE
+	public bool z; // 0xEAEAB5A6
+
+	// Methods
+
+	// RVA: 0x7E8D1F0 Offset: 0x7E891F0 VA: 0x7E8D1F0
+	public void .ctor(bool x, bool y, bool z) { }
+
+	// RVA: 0x7E8D228 Offset: 0x7E89228 VA: 0x7E8D228
+	public void SetValue(bool x, bool y, bool z) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum SAColliderBuilderCommon.ColliderToChild // TypeDefIndex: 621
+{
+	// Fields
+	public int value__; // 0x9BA4B597
+	public const ColliderToChild Auto = 0;
+	public const ColliderToChild On = 1;
+	public const ColliderToChild Off = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class SAColliderBuilderCommon.ReducerProperty // TypeDefIndex: 622
+{
+	// Fields
+	public ShapeType shapeType; // 0xBEB9B7BE
+	public FitType fitType; // 0xB193FEB5
+	public MeshType meshType; // 0xB1A2B5BD
+	public int maxTriangles; // 0xB597EAEA
+	public SliceMode sliceMode; // 0xBCBC91A4
+	public Vector3 scale; // 0xB5BDB193
+	public ElementType scaleElementType; // 0x93A3B1A2
+	public Vector3 minThickness; // 0xA4BEA5BF
+	public ElementType minThicknessElementType; // 0x85D0F9F8
+	public Bool3 optimizeRotation; // 0xA9A4B9BE
+	public ElementType optimizeRotationElementType; // 0xB9B7BE95
+	public ColliderToChild colliderToChild; // 0x93FEB5BE
+	public Vector3 offset; // 0xA2B5BDB1
+	public Vector3 thicknessA; // 0xB7EAEAB1
+	public Vector3 thicknessB; // 0xB38FA4B5
+	public bool viewAdvanced; // 0xB1BDBDBF
+
+	// Methods
+
+	// RVA: 0x7E8CBB4 Offset: 0x7E88BB4 VA: 0x7E8CBB4
+	public ReducerProperty ShallowCopy() { }
+
+	// RVA: 0x7E8CD34 Offset: 0x7E88D34 VA: 0x7E8CD34
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class SAColliderBuilderCommon.ColliderProperty // TypeDefIndex: 623
+{
+	// Fields
+	public bool convex; // 0xA592B4BE
+	public bool isTrigger; // 0xA2B5B6B6
+	public PhysicMaterial material; // 0xBEA5BF93
+	public bool isCreateAsset; // 0xD0F9F8A4
+
+	// Methods
+
+	// RVA: 0x7E8CC34 Offset: 0x7E88C34 VA: 0x7E8CC34
+	public ColliderProperty ShallowCopy() { }
+
+	// RVA: 0x7E8CE2C Offset: 0x7E88E2C VA: 0x7E8CE2C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class SAColliderBuilderCommon.RigidbodyProperty // TypeDefIndex: 624
+{
+	// Fields
+	public float mass; // 0xA4B9BE85
+	public float drag; // 0xB7BE95A9
+	public float angularDrag; // 0xFEB5BEB9
+	public bool isKinematic; // 0xB5BDB193
+	public bool useGravity; // 0xEAEAB1A2
+	public RigidbodyInterpolation interpolation; // 0x8FA4B5B7
+	public CollisionDetectionMode collisionDetectionMode; // 0xA3BEB5BC
+	public bool isCreate; // 0xB6B9B883
+	public bool viewAdvanced; // 0xBE998FA4
+
+	// Methods
+
+	// RVA: 0x7E8CCB4 Offset: 0x7E88CB4 VA: 0x7E8CCB4
+	public RigidbodyProperty ShallowCopy() { }
+
+	// RVA: 0x7E8CE3C Offset: 0x7E88E3C VA: 0x7E8CE3C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class SAColliderBuilderCommon // TypeDefIndex: 625
+{
+	// Methods
+
+	// RVA: 0x7E8D194 Offset: 0x7E89194 VA: 0x7E8D194
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class SABoneCollider : MonoBehaviour // TypeDefIndex: 626
+{
+	// Fields
+	public SABoneColliderProperty boneColliderProperty; // 0xA4B3B5BA
+	public string defaultName; // 0x85F8B4B5
+	public SABoneColliderProperty defaultBoneColliderProperty; // 0xA9A4B9BE
+	public SABoneColliderProperty edittingBoneColliderProperty; // 0xB9B7BE95
+	public bool modified; // 0x86FEB5BE
+	public bool modifiedChildren; // 0xBFA4B3B5
+	public bool cleanupModified; // 0xF9F6E2A2
+	public bool isDebug; // 0xB9BE85D0
+
+	// Properties
+	public BoneProperty boneProperty { get; }
+	public SplitProperty splitProperty { get; }
+	public ReducerProperty reducerProperty { get; }
+	public ColliderProperty colliderProperty { get; }
+	public RigidbodyProperty rigidbodyProperty { get; }
+	public bool recursivery { get; }
+	public bool modifyNameEnalbed { get; }
+
+	// Methods
+
+	// RVA: 0x7E8D260 Offset: 0x7E89260 VA: 0x7E8D260
+	public BoneProperty get_boneProperty() { }
+
+	// RVA: 0x7E8D278 Offset: 0x7E89278 VA: 0x7E8D278
+	public SplitProperty get_splitProperty() { }
+
+	// RVA: 0x7E8D290 Offset: 0x7E89290 VA: 0x7E8D290
+	public ReducerProperty get_reducerProperty() { }
+
+	// RVA: 0x7E8D2A8 Offset: 0x7E892A8 VA: 0x7E8D2A8
+	public ColliderProperty get_colliderProperty() { }
+
+	// RVA: 0x7E8D2C0 Offset: 0x7E892C0 VA: 0x7E8D2C0
+	public RigidbodyProperty get_rigidbodyProperty() { }
+
+	// RVA: 0x7E8D2D8 Offset: 0x7E892D8 VA: 0x7E8D2D8
+	public bool get_recursivery() { }
+
+	// RVA: 0x7E8D300 Offset: 0x7E89300 VA: 0x7E8D300
+	public bool get_modifyNameEnalbed() { }
+
+	// RVA: 0x7E8D320 Offset: 0x7E89320 VA: 0x7E8D320
+	public void ChangeDefaultName(string defaultName) { }
+
+	// RVA: 0x7E8D558 Offset: 0x7E89558 VA: 0x7E8D558
+	public void ChangeModified(bool modified) { }
+
+	// RVA: 0x7E8D5D0 Offset: 0x7E895D0 VA: 0x7E8D5D0
+	public void ChangeModifiedChildren(bool modifiedChildren) { }
+
+	// RVA: 0x7E8D648 Offset: 0x7E89648 VA: 0x7E8D648
+	public void ResetModified() { }
+
+	// RVA: 0x7E8D6BC Offset: 0x7E896BC VA: 0x7E8D6BC
+	public void ResetModifyName() { }
+
+	// RVA: 0x7E8D45C Offset: 0x7E8945C VA: 0x7E8D45C
+	public string _ComputeModifyName() { }
+
+	// RVA: 0x7E8D3B8 Offset: 0x7E893B8 VA: 0x7E8D3B8
+	public bool _IsModifyName() { }
+
+	// RVA: 0x7E8D718 Offset: 0x7E89718 VA: 0x7E8D718
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class SABoneColliderBuilder : MonoBehaviour // TypeDefIndex: 627
+{
+	// Fields
+	public SABoneColliderBuilderProperty boneColliderBuilderProperty; // 0xBE95A9A4
+	public SABoneColliderBuilderProperty edittingBoneColliderBuilderProperty; // 0xB5BEB9B7
+	public bool cleanupModified; // 0xBDB193FE
+	public bool isDebug; // 0xEAB1A2B5
+
+	// Properties
+	public SplitProperty splitProperty { get; }
+	public ReducerProperty reducerProperty { get; }
+	public ColliderProperty colliderProperty { get; }
+	public RigidbodyProperty rigidbodyProperty { get; }
+
+	// Methods
+
+	// RVA: 0x7E8D7CC Offset: 0x7E897CC VA: 0x7E8D7CC
+	public SplitProperty get_splitProperty() { }
+
+	// RVA: 0x7E8D7E4 Offset: 0x7E897E4 VA: 0x7E8D7E4
+	public ReducerProperty get_reducerProperty() { }
+
+	// RVA: 0x7E8D7FC Offset: 0x7E897FC VA: 0x7E8D7FC
+	public ColliderProperty get_colliderProperty() { }
+
+	// RVA: 0x7E8D814 Offset: 0x7E89814 VA: 0x7E8D814
+	public RigidbodyProperty get_rigidbodyProperty() { }
+
+	// RVA: 0x7E8D82C Offset: 0x7E8982C VA: 0x7E8D82C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class SABoneColliderChild : MonoBehaviour // TypeDefIndex: 628
+{
+	// Methods
+
+	// RVA: 0x7E8D894 Offset: 0x7E89894 VA: 0x7E8D894
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class DynamicOverlayLibrary : OverlayLibrary // TypeDefIndex: 629
+{
+	// Fields
+	public bool dynamicallyAddFromResources; // 0xA4B5B7EA
+	[Tooltip("Limit the Resources search to the following folders (no starting slash and seperate multiple entries with a comma)")]
+	public string resourcesFolderPath; // 0xA2BFA78F
+	public bool dynamicallyAddFromAssetBundles; // 0xBF84B4BC
+	[Tooltip("Limit the AssetBundles search to the following bundles (no starting slash and seperate multiple entries with a comma)")]
+	public string assetBundleNamesToSearch; // 0xB5BDB193
+	public Dictionary<string, List<string>> assetBundlesUsedDict; // 0xB19DB1A2
+	[HideInInspector]
+	public bool downloadAssetsEnabled; // 0xA8B9A2A4
+
+	// Methods
+
+	// RVA: 0x7E8D89C Offset: 0x7E8989C VA: 0x7E8D89C
+	public void Start() { }
+
+	// RVA: 0x7E8D928 Offset: 0x7E89928 VA: 0x7E8D928
+	private void OnDestroy() { }
+
+	// RVA: 0x7E8D92C Offset: 0x7E8992C VA: 0x7E8D92C
+	public void ClearEditorAddedAssets() { }
+
+	// RVA: 0x7E8D930 Offset: 0x7E89930 VA: 0x7E8D930
+	public void UpdateDynamicOverlayLibrary(Nullable<int> nameHash) { }
+
+	// RVA: 0x7E8DA98 Offset: 0x7E89A98 VA: 0x7E8DA98
+	public void UpdateDynamicOverlayLibrary(string overlayName) { }
+
+	// RVA: 0x7E8DBE8 Offset: 0x7E89BE8 VA: 0x7E8DBE8
+	private void AddOverlayAssets(OverlayDataAsset[] overlays) { }
+
+	// RVA: 0x7E8DC68 Offset: 0x7E89C68 VA: 0x7E8DC68 Slot: 5
+	public override OverlayData InstantiateOverlay(string name) { }
+
+	// RVA: 0x7E8DEAC Offset: 0x7E89EAC VA: 0x7E8DEAC Slot: 6
+	public override OverlayData InstantiateOverlay(int nameHash) { }
+
+	// RVA: 0x7E8E198 Offset: 0x7E8A198 VA: 0x7E8E198 Slot: 7
+	public override OverlayData InstantiateOverlay(string name, Color color) { }
+
+	// RVA: 0x7E8E384 Offset: 0x7E8A384 VA: 0x7E8E384 Slot: 8
+	public override OverlayData InstantiateOverlay(int nameHash, Color color) { }
+
+	// RVA: 0x7E8E620 Offset: 0x7E8A620 VA: 0x7E8E620
+	public string GetOriginatingAssetBundle(string overlayName) { }
+
+	// RVA: 0x7E8E8CC Offset: 0x7E8A8CC VA: 0x7E8E8CC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class DynamicRaceLibrary : RaceLibrary // TypeDefIndex: 630
+{
+	// Fields
+	public bool dynamicallyAddFromResources; // 0xBABE998F
+	[Tooltip("Limit the Global Library search to the following folders (no starting slash and seperate multiple entries with a comma)")]
+	public string resourcesFolderPath; // 0xB5A4B3B5
+	public bool dynamicallyAddFromAssetBundles; // 0xBE85F8B4
+	[Tooltip("Limit the AssetBundles search to the following bundles (no starting slash and seperate multiple entries with a comma)")]
+	public string assetBundleNamesToSearch; // 0x95A9A4B9
+	public Dictionary<string, List<string>> assetBundlesUsedDict; // 0xBEB9B7BE
+	private bool allStartingAssetsAdded; // 0xB19DFEB5
+	[HideInInspector]
+	public bool downloadAssetsEnabled; // 0xA8B9A2A4
+
+	// Methods
+
+	// RVA: 0x7E8E9FC Offset: 0x7E8A9FC VA: 0x7E8E9FC
+	public void Awake() { }
+
+	// RVA: 0x7E8EA00 Offset: 0x7E8AA00 VA: 0x7E8EA00
+	public void Start() { }
+
+	// RVA: 0x7E8EA8C Offset: 0x7E8AA8C VA: 0x7E8EA8C
+	private void OnDestroy() { }
+
+	// RVA: 0x7E8EA90 Offset: 0x7E8AA90 VA: 0x7E8EA90
+	public void ClearEditorAddedAssets() { }
+
+	// RVA: 0x7E8EA94 Offset: 0x7E8AA94 VA: 0x7E8EA94
+	public void UpdateDynamicRaceLibrary(bool downloadAssets, Nullable<int> raceHash) { }
+
+	// RVA: 0x7E8ECA4 Offset: 0x7E8ACA4 VA: 0x7E8ECA4
+	public void UpdateDynamicRaceLibrary(string raceName) { }
+
+	// RVA: 0x7E8EDF4 Offset: 0x7E8ADF4 VA: 0x7E8EDF4
+	private void AddRaces(RaceData[] races) { }
+
+	// RVA: 0x7E8F018 Offset: 0x7E8B018 VA: 0x7E8F018 Slot: 4
+	public override void AddRace(RaceData race) { }
+
+	// RVA: 0x7E8F494 Offset: 0x7E8B494 VA: 0x7E8F494 Slot: 5
+	public override RaceData GetRace(string raceName) { }
+
+	// RVA: 0x7E8F49C Offset: 0x7E8B49C VA: 0x7E8F49C
+	public RaceData GetRace(string raceName, bool allowUpdate = true) { }
+
+	// RVA: 0x7E8F630 Offset: 0x7E8B630 VA: 0x7E8F630 Slot: 6
+	public override RaceData GetRace(int nameHash) { }
+
+	// RVA: 0x7E8F638 Offset: 0x7E8B638 VA: 0x7E8F638
+	public RaceData GetRace(int nameHash, bool allowUpdate = true) { }
+
+	// RVA: 0x7E8F93C Offset: 0x7E8B93C VA: 0x7E8F93C
+	public RaceData[] GetAllRacesBase() { }
+
+	// RVA: 0x7E8F944 Offset: 0x7E8B944 VA: 0x7E8F944 Slot: 7
+	public override RaceData[] GetAllRaces() { }
+
+	// RVA: 0x7E8F964 Offset: 0x7E8B964 VA: 0x7E8F964
+	public string GetOriginatingAssetBundle(string raceName) { }
+
+	// RVA: 0x7E8FC10 Offset: 0x7E8BC10 VA: 0x7E8FC10
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class DynamicSlotLibrary : SlotLibrary // TypeDefIndex: 631
+{
+	// Fields
+	public bool dynamicallyAddFromResources; // 0xF6E4A8E4
+	[Tooltip("Limit the Resources search to the following folders (no starting slash and seperate multiple entries with a comma)")]
+	public string resourcesFolderPath; // 0xBE85D0F9
+	public bool dynamicallyAddFromAssetBundles; // 0x95A9A4B9
+	[Tooltip("Limit the AssetBundles search to the following bundles (no starting slash and seperate multiple entries with a comma)")]
+	public string assetBundleNamesToSearch; // 0xBEB9B7BE
+	public Dictionary<string, List<string>> assetBundlesUsedDict; // 0xB383FEB5
+	[HideInInspector]
+	public bool downloadAssetsEnabled; // 0xBEB5B5A2
+
+	// Methods
+
+	// RVA: 0x7E8FD38 Offset: 0x7E8BD38 VA: 0x7E8FD38
+	public void Start() { }
+
+	// RVA: 0x7E8FDC4 Offset: 0x7E8BDC4 VA: 0x7E8FDC4
+	private void OnDestroy() { }
+
+	// RVA: 0x7E8FDC8 Offset: 0x7E8BDC8 VA: 0x7E8FDC8
+	public void ClearEditorAddedAssets() { }
+
+	// RVA: 0x7E8FDCC Offset: 0x7E8BDCC VA: 0x7E8FDCC
+	public void UpdateDynamicSlotLibrary(Nullable<int> nameHash) { }
+
+	// RVA: 0x7E8FF34 Offset: 0x7E8BF34 VA: 0x7E8FF34
+	public void UpdateDynamicSlotLibrary(string slotName) { }
+
+	// RVA: 0x7E90084 Offset: 0x7E8C084 VA: 0x7E90084 Slot: 12
+	public override SlotDataAsset GetSlotDataAsset(string name) { }
+
+	// RVA: 0x7E901D4 Offset: 0x7E8C1D4 VA: 0x7E901D4
+	private void AddSlotAssets(SlotDataAsset[] slots) { }
+
+	// RVA: 0x7E90254 Offset: 0x7E8C254 VA: 0x7E90254 Slot: 6
+	public override SlotData InstantiateSlot(string name) { }
+
+	// RVA: 0x7E90548 Offset: 0x7E8C548 VA: 0x7E90548 Slot: 7
+	public override SlotData InstantiateSlot(int nameHash) { }
+
+	// RVA: 0x7E90750 Offset: 0x7E8C750 VA: 0x7E90750 Slot: 8
+	public override SlotData InstantiateSlot(string name, List<OverlayData> overlayList) { }
+
+	// RVA: 0x7E90918 Offset: 0x7E8C918 VA: 0x7E90918 Slot: 9
+	public override SlotData InstantiateSlot(int nameHash, List<OverlayData> overlayList) { }
+
+	// RVA: 0x7E90B44 Offset: 0x7E8CB44 VA: 0x7E90B44
+	public string GetOriginatingAssetBundle(string slotName) { }
+
+	// RVA: 0x7E90E48 Offset: 0x7E8CE48 VA: 0x7E90E48
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+private class UMATextRecipe.DCSRecipeChecker // TypeDefIndex: 632
+{
+	// Fields
+	public string packedRecipeType; // 0xB5B7EAEA
+	public List<WardrobeSettings> wardrobeRecipesJson; // 0xBCA38FA4
+	public List<WardrobeSettings> wardrobeSet; // 0x84A0B5B5
+
+	// Properties
+	public List<WardrobeSettings> checkedWardrobeSet { get; }
+
+	// Methods
+
+	// RVA: 0x7E929C4 Offset: 0x7E8E9C4 VA: 0x7E929C4
+	public List<WardrobeSettings> get_checkedWardrobeSet() { }
+
+	// RVA: 0x7E93C58 Offset: 0x7E8FC58 VA: 0x7E93C58
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class UMATextRecipe.DCSPackRecipe // TypeDefIndex: 633
+{
+	// Fields
+	public string packedRecipeType; // 0xBFB5BDB9
+	public string name; // 0xF9F8A4A5
+	public string race; // 0xB9BE85D0
+	public List<PackedOverlayColorDataV3> characterColors; // 0xBE95A9A4
+	public List<WardrobeSettings> wardrobeSet; // 0xB5BEB9B7
+	public string raceAnimatorController; // 0xEA9C97FE
+	private OverlayColorData[] _sharedColors; // 0xBDBD99EA
+
+	// Properties
+	public OverlayColorData[] sharedColors { get; }
+
+	// Methods
+
+	// RVA: 0x7E93D28 Offset: 0x7E8FD28 VA: 0x7E93D28
+	public OverlayColorData[] get_sharedColors() { }
+
+	// RVA: 0x7E93ED4 Offset: 0x7E8FED4 VA: 0x7E93ED4
+	public void .ctor() { }
+
+	// RVA: 0x7E93F2C Offset: 0x7E8FF2C VA: 0x7E93F2C
+	public void .ctor(DynamicCharacterAvatar dcaToSave, string recipeName, string pRecipeType, SaveOptions saveOptions, string[] slotsToSave) { }
+
+	// RVA: 0x7E942A8 Offset: 0x7E902A8 VA: 0x7E942A8
+	public void .ctor(UMAPackRecipe umaPackRecipe, string recipeName = "", string pRecipeType = "Standard", List<WardrobeSettings> wardrobeSetToSave) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class UMATextRecipe.DCSUniversalPackRecipe : UMAPackRecipe // TypeDefIndex: 634
+{
+	// Fields
+	[SerializeField]
+	public List<WardrobeSettings> wardrobeSet; // 0xB1B9B4B5
+	public string packedRecipeType; // 0xBF93B5A4
+	private OverlayColorData[] _sharedColors; // 0xF8A2BFBC
+
+	// Properties
+	public OverlayColorData[] sharedColors { get; }
+
+	// Methods
+
+	// RVA: 0x7E94438 Offset: 0x7E90438 VA: 0x7E94438
+	public OverlayColorData[] get_sharedColors() { }
+
+	// RVA: 0x7E91758 Offset: 0x7E8D758 VA: 0x7E91758
+	public void .ctor() { }
+
+	// RVA: 0x7E9195C Offset: 0x7E8D95C VA: 0x7E9195C
+	public void .ctor(UMAPackRecipe umaPackRecipe, string pRecipeType = "Standard") { }
+
+	// RVA: 0x7E91834 Offset: 0x7E8D834 VA: 0x7E91834
+	public void .ctor(DCSPackRecipe dcsPackRecipe) { }
+
+	// RVA: 0x7E946A0 Offset: 0x7E906A0 VA: 0x7E946A0
+	public void .ctor(UMARecipe recipeToSave, Dictionary<string, UMATextRecipe> wardrobeRecipes, string pRecipeType = "DynamicCharacterAvatar") { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum UMATextRecipe.ERecipeType // TypeDefIndex: 635
+{
+	// Fields
+	public byte value__; // 0xA4A3A983
+	public const ERecipeType Standard = 0;
+	public const ERecipeType Wardrobe = 1;
+	public const ERecipeType WardrobeCollection = 2;
+	public const ERecipeType DynamicCharacterAvatar = 3;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class UMATextRecipe.ByteFlags // TypeDefIndex: 636
+{
+	// Fields
+	public byte flags; // 0xBEB983FE
+
+	// Methods
+
+	// RVA: 0x7E94800 Offset: 0x7E90800 VA: 0x7E94800
+	public bool HasFlag(byte b) { }
+
+	// RVA: 0x7E94810 Offset: 0x7E90810 VA: 0x7E94810
+	public void SetFlag(byte b) { }
+
+	// RVA: 0x7E94820 Offset: 0x7E90820 VA: 0x7E94820
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class UMATextRecipe.MiniPackRecipe // TypeDefIndex: 637
+{
+	// Fields
+	public string race; // 0xFCB5BCB7
+	public MiniPackedSlotData[] slots; // 0xA4A3A983
+
+	// Methods
+
+	// RVA: 0x7E93804 Offset: 0x7E8F804 VA: 0x7E93804
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class UMATextRecipe.MiniPackedSlotData // TypeDefIndex: 638
+{
+	// Fields
+	public string id; // 0x83FEBDB5
+	public int scale; // 0xBCB7BEB9
+	public int copyIdx; // 0xA983FCB5
+	public MiniPackedOverlayData overlay; // 0xBDB5A4A3
+
+	// Methods
+
+	// RVA: 0x7E93964 Offset: 0x7E8F964 VA: 0x7E93964
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class UMATextRecipe.MiniPackedOverlayData : ByteFlags // TypeDefIndex: 639
+{
+	// Fields
+	public const byte FLAG_SKIN_COLOR = 1;
+	public string id; // 0xF9B5BCB7
+
+	// Methods
+
+	// RVA: 0x7E93A90 Offset: 0x7E8FA90 VA: 0x7E93A90
+	public void SetSkinColor() { }
+
+	// RVA: 0x7E93244 Offset: 0x7E8F244 VA: 0x7E93244
+	public bool HasSkinColor() { }
+
+	// RVA: 0x7E93A88 Offset: 0x7E8FA88 VA: 0x7E93A88
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+private class UMATextRecipe.IntVec2 // TypeDefIndex: 640
+{
+	// Fields
+	public int a; // 0xB9BE85D0
+	public int b; // 0xBE95A9A4
+
+	// Methods
+
+	// RVA: 0x7E937FC Offset: 0x7E8F7FC VA: 0x7E937FC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class UMATextRecipe : UMAPackedRecipeBase, IUintId // TypeDefIndex: 641
+{
+	// Fields
+	public byte recipeTypeByte; // 0xB5BEB9B7
+	[SerializeField]
+	public string DisplayValue; // 0xB1A581FE
+	[SerializeField]
+	public List<string> compatibleRaces; // 0xA9A4B9BC
+	public string wardrobeSlot; // 0xA4A4B583
+	[SerializeField]
+	public List<string> Hides; // 0xA3B7BEB9
+	[SerializeField]
+	public List<string> suppressWardrobeSlots; // 0xB5A3EAEA
+	[SerializeField]
+	public List<string> beSuppressWardrobeSlots; // 0xB8A38FA4
+	[CompilerGenerated]
+	private uint <Id>k__BackingField; // 0xA7BFB4B1
+	public const byte RecipeTypeStandard = 0;
+	public const byte RecipeTypeWardrobe = 1;
+	public const byte RecipeTypeWardrobeCollection = 2;
+	public MiniPackRecipe recipeData; // 0xBE95A9A4
+	private static int[] m_DefaultRect; // 0xB5BEB9B7
+
+	// Properties
+	public uint Id { get; set; }
+
+	// Methods
+
+	[CompilerGenerated]
+	// RVA: 0x7E90F70 Offset: 0x7E8CF70 VA: 0x7E90F70 Slot: 8
+	public uint get_Id() { }
+
+	[CompilerGenerated]
+	// RVA: 0x7E90F78 Offset: 0x7E8CF78 VA: 0x7E90F78 Slot: 9
+	public void set_Id(uint value) { }
+
+	// RVA: 0x7E90F80 Offset: 0x7E8CF80 VA: 0x7E90F80
+	public string GetWardrobeSlot() { }
+
+	// RVA: 0x7E90F88 Offset: 0x7E8CF88 VA: 0x7E90F88
+	public static List<WardrobeSettings> GenerateWardrobeSet(Dictionary<string, UMATextRecipe> wardrobeRecipes, string[] slotsToSave) { }
+
+	// RVA: 0x7E914B0 Offset: 0x7E8D4B0 VA: 0x7E914B0 Slot: 4
+	public override void Load(UMARecipe umaRecipe, UMAContext context) { }
+
+	// RVA: 0x7E91500 Offset: 0x7E8D500 VA: 0x7E91500
+	protected DCSUniversalPackRecipe PackedLoadDCSInternal(UMAContext context) { }
+
+	// RVA: 0x7E91538 Offset: 0x7E8D538 VA: 0x7E91538
+	public static DCSUniversalPackRecipe PackedLoadDCS(UMAContext context, string recipeToUnpack, UMATextRecipe targetUTR) { }
+
+	// RVA: 0x7E91B40 Offset: 0x7E8DB40 VA: 0x7E91B40
+	public static DCSUniversalPackRecipe PackedLoadDCS(UMAContext context, UMATextRecipe recipe, UMATextRecipe targetUTR) { }
+
+	// RVA: 0x7E91BE8 Offset: 0x7E8DBE8 VA: 0x7E91BE8
+	public void Save(UMARecipe umaRecipe, UMAContext context, Dictionary<string, UMATextRecipe> wardrobeRecipes, bool backwardsCompatible = true) { }
+
+	// RVA: 0x7E91C8C Offset: 0x7E8DC8C VA: 0x7E91C8C Slot: 5
+	public override void Save(UMARecipe umaRecipe, UMAContext context) { }
+
+	// RVA: 0x7E9298C Offset: 0x7E8E98C VA: 0x7E9298C
+	public void SaveDCS(DynamicCharacterAvatar dcaToSave, string recipeName, SaveOptions saveOptions) { }
+
+	// RVA: 0x7E917B0 Offset: 0x7E8D7B0 VA: 0x7E917B0
+	public static string GetRecipesType(string recipeString) { }
+
+	// RVA: 0x7E91A40 Offset: 0x7E8DA40 VA: 0x7E91A40
+	public static bool RecipeHasWardrobeSet(string recipeString) { }
+
+	// RVA: 0x7E91ACC Offset: 0x7E8DACC VA: 0x7E91ACC
+	public static List<WardrobeSettings> GetRecipesWardrobeSet(string recipeString) { }
+
+	// RVA: 0x7E91C88 Offset: 0x7E8DC88 VA: 0x7E91C88
+	public static byte RecipeTypeToByte(ERecipeType t) { }
+
+	// RVA: 0x7E92A20 Offset: 0x7E8EA20 VA: 0x7E92A20 Slot: 6
+	public override UMAPackRecipe PackedLoad(UMAContext context) { }
+
+	// RVA: 0x7E92E4C Offset: 0x7E8EE4C VA: 0x7E92E4C
+	private PackedSlotDataV2 ConvertToSlotDataV2(MiniPackedSlotData s, ref bool hasSkinColor) { }
+
+	// RVA: 0x7E930F4 Offset: 0x7E8F0F4 VA: 0x7E930F4
+	private PackedOverlayDataV2 ConvertToOverlayDataV2(MiniPackedOverlayData v, ref bool hasSkinColor) { }
+
+	// RVA: 0x7E93028 Offset: 0x7E8F028 VA: 0x7E93028
+	public static PackedOverlayColorDataV3 CreateColorDataV3(string name) { }
+
+	// RVA: 0x7E93250 Offset: 0x7E8F250 VA: 0x7E93250 Slot: 7
+	public override void PackedSave(UMAPackRecipe packedRecipe, UMAContext context) { }
+
+	// RVA: 0x7E9380C Offset: 0x7E8F80C VA: 0x7E9380C
+	private int GetSkipCount(int i, LinkedList<IntVec2> skips) { }
+
+	// RVA: 0x7E935C8 Offset: 0x7E8F5C8 VA: 0x7E935C8
+	private MiniPackedSlotData ConvertToSlotDataMini(PackedSlotDataV2 s2, int skinColorIndex, LinkedList<IntVec2> skips) { }
+
+	// RVA: 0x7E93978 Offset: 0x7E8F978 VA: 0x7E93978
+	private MiniPackedOverlayData ConvertToOverlayDataMini(PackedOverlayDataV2 o2, int skinColorIndex) { }
+
+	// RVA: 0x7E93AA0 Offset: 0x7E8FAA0 VA: 0x7E93AA0
+	public void ClearResourceRef() { }
+
+	// RVA: 0x7E93AC4 Offset: 0x7E8FAC4 VA: 0x7E93AC4
+	public void .ctor() { }
+
+	// RVA: 0x7E93BE4 Offset: 0x7E8FBE4 VA: 0x7E93BE4
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum UMAAssetIndexer.EAssetItemType // TypeDefIndex: 642
+{
+	// Fields
+	public int value__; // 0xB1B883FE
+	public const EAssetItemType EAssetItemType_Slot = 0;
+	public const EAssetItemType EAssetItemType_Overlay = 1;
+	public const EAssetItemType EAssetItemType_Race = 2;
+	public const EAssetItemType EAssetItemType_TextRecipe = 3;
+	public const EAssetItemType EAssetItemType_WardrobeRecipe = 4;
+	public const EAssetItemType EAssetItemType_MAX = 5;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class UMAAssetIndexer.AssetItem // TypeDefIndex: 643
+{
+	// Fields
+	public string _QualifiedName; // 0xB1A581FE
+	public int _TypeIndex; // 0xA9A4B9BC
+	public string _Name; // 0xA4A4B583
+	public Object m_Item; // 0xA3B7BEB9
+	public string _Path; // 0xB5A3EAEA
+
+	// Properties
+	public Object _Item { get; }
+	public Type _Type { get; }
+	public string _AssetBaseName { get; }
+	public string AssetName { get; }
+	public string EvilName { get; }
+
+	// Methods
+
+	// RVA: 0x7E9691C Offset: 0x7E9291C VA: 0x7E9691C
+	public Object get__Item() { }
+
+	// RVA: 0x7E95898 Offset: 0x7E91898 VA: 0x7E95898
+	public Type get__Type() { }
+
+	// RVA: 0x7E96924 Offset: 0x7E92924 VA: 0x7E96924
+	public string get__AssetBaseName() { }
+
+	// RVA: 0x7E96980 Offset: 0x7E92980 VA: 0x7E96980
+	public string get_AssetName() { }
+
+	// RVA: 0x7E96194 Offset: 0x7E92194 VA: 0x7E96194
+	public string get_EvilName() { }
+
+	// RVA: 0x7E9699C Offset: 0x7E9299C VA: 0x7E9699C
+	public static string GetEvilName(Object o) { }
+
+	// RVA: 0x7E95518 Offset: 0x7E91518 VA: 0x7E95518
+	public void .ctor(Type Type, string Name, string Path, Object Item) { }
+
+	// RVA: 0x7E96B20 Offset: 0x7E92B20 VA: 0x7E96B20
+	public void .ctor(Type Type, Object Item) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class UMAAssetIndexer : MonoBehaviour, ISerializationCallbackReceiver // TypeDefIndex: 644
+{
+	// Fields
+	public static string SortOrder; // 0xBEB18FA4
+	public static string[] SortOrders; // 0xBC91B9A4
+	public static Dictionary<Type, Type> TypeToLookup; // 0xB9A3B1B9
+	public static Type[] Types; // 0x83F8B7BE
+	public bool NoSaveObjectRefs; // 0xB5A4A3A9
+	public List<string> IndexedTypeNames; // 0xBE99FEBD
+	public List<AssetItem> Items; // 0xF9E2E3A4
+	public UMAMeshAsset BaseMaleBone; // 0xB9BE85D0
+	public UMAMeshAsset BaseFemaleBone; // 0xBE95A9A4
+	internal Dictionary<Type, Dictionary<string, AssetItem>> TypeLookup; // 0xB5BEB9B7
+	private static GameObject theIndex; // 0xB1A284FE
+	private static UMAAssetIndexer theIndexer; // 0xB582BCB9
+
+	// Properties
+	public static bool IsInstanceLoaded { get; }
+	public static UMAAssetIndexer Instance { get; }
+
+	// Methods
+
+	// RVA: 0x7E94828 Offset: 0x7E90828 VA: 0x7E94828
+	private static Type GetAssetType(int typeIndex) { }
+
+	// RVA: 0x7E948B4 Offset: 0x7E908B4 VA: 0x7E948B4
+	private static int GetAssetTypeIndex(Type type) { }
+
+	// RVA: 0x7E94A08 Offset: 0x7E90A08 VA: 0x7E94A08
+	public static bool get_IsInstanceLoaded() { }
+
+	// RVA: 0x7E94A94 Offset: 0x7E90A94 VA: 0x7E94A94
+	public static UMAAssetIndexer get_Instance() { }
+
+	// RVA: 0x7E94C8C Offset: 0x7E90C8C VA: 0x7E94C8C
+	public static void Cleanup() { }
+
+	// RVA: 0x7E94D78 Offset: 0x7E90D78 VA: 0x7E94D78
+	public void ClearResourceRef() { }
+
+	// RVA: -1 Offset: -1
+	public AssetItem GetAssetItem<T>(string Name) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-UMAAssetIndexer.GetAssetItem<object>
+	|-UMAAssetIndexer.GetAssetItem<__Il2CppFullySharedGenericType>
+	*/
+
+	// RVA: -1 Offset: -1
+	public List<T> GetAllAssets<T>(string[] foldersToSearch) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-UMAAssetIndexer.GetAllAssets<object>
+	*/
+
+	// RVA: -1 Offset: -1
+	public T GetAsset<T>(int nameHash, string[] foldersToSearch) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-UMAAssetIndexer.GetAsset<object>
+	*/
+
+	// RVA: 0x7E952B4 Offset: 0x7E912B4 VA: 0x7E952B4
+	private void GetEvilAssetNameAndHash(Type type, Object o, ref string assetName, ref int assetHash) { }
+
+	// RVA: -1 Offset: -1
+	public T GetAsset<T>(string name, string[] foldersToSearch) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-UMAAssetIndexer.GetAsset<object>
+	*/
+
+	// RVA: 0x7E953F8 Offset: 0x7E913F8 VA: 0x7E953F8
+	private bool AssetFolderCheck(AssetItem itemToCheck, string[] foldersToSearch) { }
+
+	// RVA: 0x7E9548C Offset: 0x7E9148C VA: 0x7E9548C
+	public void AddAsset(Type type, string Name, string Path, Object o, bool SkipBundleCheck = false) { }
+
+	// RVA: 0x7E95620 Offset: 0x7E91620 VA: 0x7E95620
+	private void AddAssetItem(AssetItem ai, bool SkipBundleCheck = false) { }
+
+	// RVA: 0x7E959A4 Offset: 0x7E919A4 VA: 0x7E959A4
+	internal void UpdateDictionaries(bool SkipBundleCheck = false) { }
+
+	// RVA: 0x7E95C18 Offset: 0x7E91C18 VA: 0x7E95C18
+	public void CreateLookupDictionary(Type type) { }
+
+	// RVA: 0x7E95D1C Offset: 0x7E91D1C VA: 0x7E95D1C
+	private void UpdateList(bool beforeSerialize = false) { }
+
+	// RVA: 0x7E95160 Offset: 0x7E91160 VA: 0x7E95160
+	public Dictionary<string, AssetItem> GetAssetDictionary(Type type) { }
+
+	// RVA: 0x7E96018 Offset: 0x7E92018 VA: 0x7E96018
+	public void RebuildIndex() { }
+
+	// RVA: 0x7E9619C Offset: 0x7E9219C VA: 0x7E9619C
+	public UMAMeshData GetBaseBoneData(bool isMale) { }
+
+	// RVA: 0x7E9625C Offset: 0x7E9225C VA: 0x7E9625C Slot: 4
+	private void UnityEngine.ISerializationCallbackReceiver.OnBeforeSerialize() { }
+
+	// RVA: 0x7E96264 Offset: 0x7E92264 VA: 0x7E96264 Slot: 5
+	private void UnityEngine.ISerializationCallbackReceiver.OnAfterDeserialize() { }
+
+	// RVA: 0x7E9630C Offset: 0x7E9230C VA: 0x7E9630C
+	public void .ctor() { }
+
+	// RVA: 0x7E96444 Offset: 0x7E92444 VA: 0x7E96444
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class UMAWardrobeRecipe : UMATextRecipe // TypeDefIndex: 645
+{
+	// Methods
+
+	// RVA: 0x7E96C0C Offset: 0x7E92C0C VA: 0x7E96C0C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class UMAContextIndividual : UMAContextSimple // TypeDefIndex: 646
+{
+	// Methods
+
+	// RVA: 0x7E96C6C Offset: 0x7E92C6C VA: 0x7E96C6C Slot: 11
+	protected override void Awake() { }
+
+	// RVA: 0x7E96C78 Offset: 0x7E92C78 VA: 0x7E96C78
+	public void Init(SlotOverlayAssetCache cache) { }
+
+	// RVA: 0x7E96D08 Offset: 0x7E92D08 VA: 0x7E96D08
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class UMAContextSimple : UMAContext // TypeDefIndex: 647
+{
+	// Fields
+	public bool CacheSlotOverlay; // 0xA2B5B4BE
+	protected SlotOverlayAssetCache m_Cache; // 0xEAEAA2B5
+	private bool m_AsyncLoadAllCancled; // 0x87A4B583
+
+	// Properties
+	public SlotOverlayAssetCache Cache { get; }
+
+	// Methods
+
+	// RVA: 0x7E96D18 Offset: 0x7E92D18 VA: 0x7E96D18
+	public SlotOverlayAssetCache get_Cache() { }
+
+	// RVA: 0x7E96D20 Offset: 0x7E92D20 VA: 0x7E96D20 Slot: 11
+	protected virtual void Awake() { }
+
+	// RVA: 0x7E96E10 Offset: 0x7E92E10 VA: 0x7E96E10 Slot: 4
+	public override void Start() { }
+
+	// RVA: 0x7E96F40 Offset: 0x7E92F40 VA: 0x7E96F40 Slot: 5
+	public override void OnDestroy() { }
+
+	// RVA: 0x7E96D24 Offset: 0x7E92D24 VA: 0x7E96D24
+	private void InitCacheAndManagers() { }
+
+	// RVA: 0x7E96FDC Offset: 0x7E92FDC VA: 0x7E96FDC
+	public static void ClearForRestart() { }
+
+	// RVA: 0x7E97050 Offset: 0x7E93050 VA: 0x7E97050 Slot: 12
+	public virtual void SetCacheSlotOverlay(bool cache) { }
+
+	// RVA: 0x7E9705C Offset: 0x7E9305C VA: 0x7E9705C
+	public SlotDataAsset GetSlotDataAsset(string name) { }
+
+	// RVA: 0x7E97080 Offset: 0x7E93080 VA: 0x7E97080
+	public SlotDataAsset GetSlotDataAsset(int hash) { }
+
+	// RVA: 0x7E970A4 Offset: 0x7E930A4 VA: 0x7E970A4
+	public OverlayDataAsset GetOverlayDataAsset(string name) { }
+
+	// RVA: 0x7E970C8 Offset: 0x7E930C8 VA: 0x7E970C8
+	public OverlayDataAsset GetOverlayDataAsset(int hash) { }
+
+	// RVA: 0x7E970EC Offset: 0x7E930EC VA: 0x7E970EC Slot: 7
+	public override SlotData InstantiateSlot(string name) { }
+
+	// RVA: 0x7E971B0 Offset: 0x7E931B0 VA: 0x7E971B0 Slot: 8
+	public override SlotData InstantiateSlot(int hash) { }
+
+	// RVA: 0x7E97274 Offset: 0x7E93274 VA: 0x7E97274 Slot: 9
+	public override OverlayData InstantiateOverlay(string name) { }
+
+	// RVA: 0x7E97338 Offset: 0x7E93338 VA: 0x7E97338 Slot: 10
+	public override OverlayData InstantiateOverlay(int hash) { }
+
+	// RVA: 0x7E973FC Offset: 0x7E933FC VA: 0x7E973FC
+	public bool IsSlotDataAssetCached(int hash) { }
+
+	// RVA: 0x7E9741C Offset: 0x7E9341C VA: 0x7E9741C
+	public bool IsOverlayDataAssetCached(int hash) { }
+
+	// RVA: 0x7E9743C Offset: 0x7E9343C VA: 0x7E9743C
+	public bool PreloadSlotDataAsset(string name) { }
+
+	// RVA: 0x7E97464 Offset: 0x7E93464 VA: 0x7E97464
+	public bool PreloadSlotDataAsset(int hash) { }
+
+	// RVA: 0x7E9748C Offset: 0x7E9348C VA: 0x7E9748C
+	public bool PreloadOverlayDataAsset(string name) { }
+
+	// RVA: 0x7E974B4 Offset: 0x7E934B4 VA: 0x7E974B4
+	public bool PreloadOverlayDataAsset(int hash) { }
+
+	// RVA: 0x7E974DC Offset: 0x7E934DC VA: 0x7E974DC
+	public bool IsSlotContainsOverlay(string slotName, string overlayName) { }
+
+	// RVA: 0x7E97500 Offset: 0x7E93500 VA: 0x7E97500
+	public bool IsSlotContainsOverlay(int slotHash, int overlayHash) { }
+
+	// RVA: 0x7E97524 Offset: 0x7E93524 VA: 0x7E97524
+	public uint LoadSlotOrOverlayDataAsset(string name, bool isSlot, Action<Object, uint> callback) { }
+
+	// RVA: 0x7E97554 Offset: 0x7E93554 VA: 0x7E97554
+	public uint LoadSlotOrOverlayDataAsset(int hash, bool isSlot, Action<Object, uint, int> callback, int param) { }
+
+	// RVA: 0x7E97588 Offset: 0x7E93588 VA: 0x7E97588
+	public void CancelAsyncLoad(ICollection<uint> tickets, bool clear = true) { }
+
+	// RVA: 0x7E979C4 Offset: 0x7E939C4 VA: 0x7E979C4
+	public void CancelAsyncLoad(uint ticket) { }
+
+	// RVA: 0x7E979F0 Offset: 0x7E939F0 VA: 0x7E979F0
+	public UMATextRecipe GetTextRecipe(int name) { }
+
+	// RVA: 0x7E97B14 Offset: 0x7E93B14 VA: 0x7E97B14
+	public static UmaRecipeSimple GetSimpleRecipe(int hash) { }
+
+	// RVA: 0x7E96D10 Offset: 0x7E92D10 VA: 0x7E96D10
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class OverlayLibrary : OverlayLibraryBase // TypeDefIndex: 648
+{
+	// Fields
+	[SerializeField]
+	protected OverlayDataAsset[] overlayElementList; // 0xB8A4B4B9
+	private Dictionary<int, OverlayDataAsset> overlayDictionary; // 0xA6A2A593
+	public int scaleAdjust; // 0xBE85F8B5
+	public bool readWrite; // 0x95A9A4B9
+	public bool compress; // 0xBEB9B7BE
+
+	// Methods
+
+	// RVA: 0x7E97BEC Offset: 0x7E93BEC VA: 0x7E97BEC
+	private void Awake() { }
+
+	// RVA: 0x7E97C10 Offset: 0x7E93C10 VA: 0x7E97C10 Slot: 10
+	public override void UpdateDictionary() { }
+
+	// RVA: 0x7E97D94 Offset: 0x7E93D94 VA: 0x7E97D94 Slot: 4
+	public override void AddOverlayAsset(OverlayDataAsset overlay) { }
+
+	// RVA: 0x7E97FEC Offset: 0x7E93FEC VA: 0x7E97FEC Slot: 11
+	public override void ValidateDictionary() { }
+
+	// RVA: 0x7E8DE0C Offset: 0x7E89E0C VA: 0x7E8DE0C Slot: 5
+	public override OverlayData InstantiateOverlay(string name) { }
+
+	// RVA: 0x7E8E100 Offset: 0x7E8A100 VA: 0x7E8E100 Slot: 6
+	public override OverlayData InstantiateOverlay(int nameHash) { }
+
+	// RVA: 0x7E98154 Offset: 0x7E94154 VA: 0x7E98154 Slot: 7
+	public override OverlayData InstantiateOverlay(string name, Color color) { }
+
+	// RVA: 0x7E98244 Offset: 0x7E94244 VA: 0x7E98244 Slot: 8
+	public override OverlayData InstantiateOverlay(int nameHash, Color color) { }
+
+	// RVA: 0x7E98090 Offset: 0x7E94090 VA: 0x7E98090
+	private OverlayData Internal_InstantiateOverlay(int nameHash) { }
+
+	// RVA: 0x7E9832C Offset: 0x7E9432C VA: 0x7E9832C Slot: 9
+	public override OverlayDataAsset[] GetAllOverlayAssets() { }
+
+	// RVA: 0x7E8E990 Offset: 0x7E8A990 VA: 0x7E8E990
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class RaceLibrary : RaceLibraryBase // TypeDefIndex: 649
+{
+	// Fields
+	[SerializeField]
+	protected RaceData[] raceElementList; // 0xBE91FEB5
+	private Dictionary<string, RaceData> raceDictionary; // 0xA4B1BDB9
+
+	// Methods
+
+	// RVA: 0x7E98334 Offset: 0x7E94334 VA: 0x7E98334
+	private void Awake() { }
+
+	// RVA: 0x7E98358 Offset: 0x7E94358 VA: 0x7E98358 Slot: 9
+	public override void ValidateDictionary() { }
+
+	// RVA: 0x7E983FC Offset: 0x7E943FC VA: 0x7E983FC Slot: 8
+	public override void UpdateDictionary() { }
+
+	// RVA: 0x7E8F28C Offset: 0x7E8B28C VA: 0x7E8F28C Slot: 4
+	public override void AddRace(RaceData race) { }
+
+	// RVA: 0x7E8F58C Offset: 0x7E8B58C VA: 0x7E8F58C Slot: 5
+	public override RaceData GetRace(string raceName) { }
+
+	// RVA: 0x7E8F754 Offset: 0x7E8B754 VA: 0x7E8F754 Slot: 6
+	public override RaceData GetRace(int raceHash) { }
+
+	// RVA: 0x7E98570 Offset: 0x7E94570 VA: 0x7E98570 Slot: 7
+	public override RaceData[] GetAllRaces() { }
+
+	// RVA: 0x7E8FCD4 Offset: 0x7E8BCD4 VA: 0x7E8FCD4
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class SharedColorTable : ScriptableObject, ISerializationCallbackReceiver // TypeDefIndex: 650
+{
+	// Fields
+	public int channelCount; // 0x93BEBFB9
+	public string sharedColorName; // 0xB5A6A2A5
+	public float colorNormalized; // 0xBE85D0F9
+	public OverlayColorData[] colors; // 0x95A9A4B9
+
+	// Methods
+
+	// RVA: 0x7E98578 Offset: 0x7E94578 VA: 0x7E98578 Slot: 5
+	public void OnAfterDeserialize() { }
+
+	// RVA: 0x7E9857C Offset: 0x7E9457C VA: 0x7E9857C Slot: 4
+	public void OnBeforeSerialize() { }
+
+	// RVA: 0x7E98600 Offset: 0x7E94600 VA: 0x7E98600
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class SlotLibrary : SlotLibraryBase // TypeDefIndex: 651
+{
+	// Fields
+	[SerializeField]
+	protected SlotDataAsset[] slotElementList; // 0xBEB9B7BE
+	private Dictionary<int, SlotDataAsset> slotDictionary; // 0xB99CFEB5
+
+	// Methods
+
+	// RVA: 0x7E98610 Offset: 0x7E94610 VA: 0x7E98610
+	private void Awake() { }
+
+	// RVA: 0x7E98638 Offset: 0x7E94638 VA: 0x7E98638 Slot: 13
+	public override void UpdateDictionary() { }
+
+	// RVA: 0x7E987B0 Offset: 0x7E947B0 VA: 0x7E987B0 Slot: 14
+	public override void ValidateDictionary() { }
+
+	// RVA: 0x7E98858 Offset: 0x7E94858 VA: 0x7E98858 Slot: 4
+	public override void AddSlotAsset(SlotDataAsset slot) { }
+
+	// RVA: 0x7E98AA0 Offset: 0x7E94AA0 VA: 0x7E98AA0 Slot: 10
+	public override bool HasSlot(string name) { }
+
+	// RVA: 0x7E98B24 Offset: 0x7E94B24 VA: 0x7E98B24 Slot: 11
+	public override bool HasSlot(int nameHash) { }
+
+	// RVA: 0x7E904A8 Offset: 0x7E8C4A8 VA: 0x7E904A8 Slot: 6
+	public override SlotData InstantiateSlot(string name) { }
+
+	// RVA: 0x7E90410 Offset: 0x7E8C410 VA: 0x7E90410 Slot: 7
+	public override SlotData InstantiateSlot(int nameHash) { }
+
+	// RVA: 0x7E98C60 Offset: 0x7E94C60 VA: 0x7E98C60 Slot: 8
+	public override SlotData InstantiateSlot(string name, List<OverlayData> overlayList) { }
+
+	// RVA: 0x7E98D24 Offset: 0x7E94D24 VA: 0x7E98D24 Slot: 9
+	public override SlotData InstantiateSlot(int nameHash, List<OverlayData> overlayList) { }
+
+	// RVA: 0x7E98B98 Offset: 0x7E94B98 VA: 0x7E98B98
+	private SlotData Internal_InstantiateSlot(int nameHash) { }
+
+	// RVA: 0x7E98DE0 Offset: 0x7E94DE0 VA: 0x7E98DE0 Slot: 5
+	public override SlotDataAsset[] GetAllSlotAssets() { }
+
+	// RVA: 0x7E90138 Offset: 0x7E8C138 VA: 0x7E90138 Slot: 12
+	public override SlotDataAsset GetSlotDataAsset(string name) { }
+
+	// RVA: 0x7E90F0C Offset: 0x7E8CF0C VA: 0x7E90F0C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class UMAPackedRecipeBase.packedSlotData // TypeDefIndex: 652
+{
+	// Fields
+	public string slotID; // 0xB582B5BE
+	public int overlayScale; // 0xA2B5B4BE
+	public int copyOverlayIndex; // 0xEAEAA2B5
+	public packedOverlayData[] OverlayDataList; // 0x8FA4B5A3
+
+	// Methods
+
+	// RVA: 0x86FAC94 Offset: 0x86F6C94 VA: 0x86FAC94
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class UMAPackedRecipeBase.packedOverlayData // TypeDefIndex: 653
+{
+	// Fields
+	public string overlayID; // 0x93BDA5BE
+	public int[] colorList; // 0xB586A0B1
+	public int[][] channelMaskList; // 0xB3B9A4A2
+	public int[][] channelAdditiveMaskList; // 0x83F8A3B5
+	public int[] rectList; // 0xB5A4A3A9
+
+	// Methods
+
+	// RVA: 0x86FACA8 Offset: 0x86F6CA8 VA: 0x86FACA8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class UMAPackedRecipeBase.PackedSlotDataV2 // TypeDefIndex: 654
+{
+	// Fields
+	public string id; // 0xBE99FEBD
+	public int scale; // 0xF9E2E3A4
+	public int copyIdx; // 0xB9BE85D0
+	public PackedOverlayDataV2[] overlays; // 0xBE95A9A4
+
+	// Methods
+
+	// RVA: 0x86FACB0 Offset: 0x86F6CB0 VA: 0x86FACB0
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class UMAPackedRecipeBase.PackedOverlayDataV2 // TypeDefIndex: 655
+{
+	// Fields
+	public string id; // 0xB5BEB9B7
+	public int colorIdx; // 0xBEB99CFE
+	public int[] rect; // 0xBEB582B5
+
+	// Methods
+
+	// RVA: 0x86FACC4 Offset: 0x86F6CC4 VA: 0x86FACC4
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class UMAPackedRecipeBase.PackedOverlayColorDataV2 // TypeDefIndex: 656
+{
+	// Fields
+	public string name; // 0xB5A2B5B4
+	public byte[] color; // 0xB7EAEAA2
+	public byte[][] masks; // 0xA38FA4B5
+	public byte[][] addMasks; // 0xBFB4B1B8
+
+	// Methods
+
+	// RVA: 0x86FACCC Offset: 0x86F6CCC VA: 0x86FACCC
+	public void .ctor() { }
+
+	// RVA: 0x86FAD5C Offset: 0x86F6D5C VA: 0x86FAD5C
+	public void SetOverlayColorData(OverlayColorData overlayColorData) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class UMAPackedRecipeBase.PackedOverlayColorDataV3 // TypeDefIndex: 657
+{
+	// Fields
+	public string name; // 0xB1B992A7
+	public short[] colors; // 0xD0F9F8A3
+
+	// Methods
+
+	// RVA: 0x86FB050 Offset: 0x86F7050 VA: 0x86FB050
+	public void .ctor() { }
+
+	// RVA: 0x86FB0E0 Offset: 0x86F70E0 VA: 0x86FB0E0
+	public void .ctor(OverlayColorData colorData) { }
+
+	// RVA: 0x86FB5A8 Offset: 0x86F75A8 VA: 0x86FB5A8
+	public void SetOverlayColorData(OverlayColorData overlayColorData) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class UMAPackedRecipeBase.UMAPackRecipe // TypeDefIndex: 658
+{
+	// Fields
+	public int version; // 0xA4B9BE85
+	public packedSlotData[] packedSlotDataList; // 0xB7BE95A9
+	public PackedSlotDataV2[] slotsV2; // 0xFEB5BEB9
+	public PackedOverlayColorDataV2[] colors; // 0xB5A4B19D
+	public PackedOverlayColorDataV3[] fColors; // 0xBCB1B9A2
+	public int sharedColorCount; // 0xA0BFA280
+	public string race; // 0xA9A4A2B5
+
+	// Methods
+
+	// RVA: 0x86FB030 Offset: 0x86F7030 VA: 0x86FB030
+	public static bool ArrayHasData(Array array) { }
+
+	// RVA: 0x86FB810 Offset: 0x86F7810 VA: 0x86FB810
+	public static bool SlotIsValid(SlotData slotData) { }
+
+	// RVA: 0x86FB8B8 Offset: 0x86F78B8 VA: 0x86FB8B8
+	public static bool SlotIsValid(PackedSlotDataV2 packedSlot) { }
+
+	// RVA: 0x86FB8E4 Offset: 0x86F78E4 VA: 0x86FB8E4
+	public static bool MaterialIsValid(UMAMaterial material) { }
+
+	// RVA: 0x86FB974 Offset: 0x86F7974 VA: 0x86FB974
+	public static bool RaceIsValid(RaceData raceData) { }
+
+	// RVA: 0x86FB9FC Offset: 0x86F79FC VA: 0x86FB9FC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public abstract class UMAPackedRecipeBase : UMARecipeBase // TypeDefIndex: 659
+{
+	// Methods
+
+	// RVA: 0x7E914B8 Offset: 0x7E8D4B8 VA: 0x7E914B8 Slot: 4
+	public override void Load(UMARecipe umaRecipe, UMAContext context) { }
+
+	// RVA: 0x7E91D48 Offset: 0x7E8DD48 VA: 0x7E91D48 Slot: 5
+	public override void Save(UMARecipe umaRecipe, UMAContext context) { }
+
+	// RVA: -1 Offset: -1 Slot: 6
+	public abstract UMAPackRecipe PackedLoad(UMAContext context);
+
+	// RVA: -1 Offset: -1 Slot: 7
+	public abstract void PackedSave(UMAPackRecipe packedRecipe, UMAContext context);
+
+	// RVA: 0x7E91DA8 Offset: 0x7E8DDA8 VA: 0x7E91DA8
+	public static UMAPackRecipe PackRecipeV2(UMARecipe umaRecipe) { }
+
+	// RVA: 0x7E993F8 Offset: 0x7E953F8 VA: 0x7E993F8
+	public static UMARecipe UnpackRecipeVersion2(UMAPackRecipe umaPackRecipe, UMAContext context) { }
+
+	// RVA: 0x7E98DE8 Offset: 0x7E94DE8 VA: 0x7E98DE8
+	public static void UnpackRecipeVersion2(UMARecipe umaRecipe, UMAPackRecipe umaPackRecipe, UMAContext context) { }
+
+	// RVA: 0x7E9946C Offset: 0x7E9546C VA: 0x7E9946C
+	private static OverlayData InstantiateOverlay(UMAContext context, SlotData tempSlotData, string id) { }
+
+	// RVA: 0x7E93BDC Offset: 0x7E8FBDC VA: 0x7E93BDC
+	protected void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class UMAContext : MonoBehaviour // TypeDefIndex: 660
+{
+	// Fields
+	public DynamicCharacterSystemBase dynamicCharacterSystem; // 0xB3BFBC92
+	public static UMAContext Instance; // 0x97EAEABB
+	public RaceLibraryBase raceLibrary; // 0xBF93A4B5
+	public SlotLibraryBase slotLibrary; // 0x99A2BFBC
+	public OverlayLibraryBase overlayLibrary; // 0x8FBCA0BD
+
+	// Methods
+
+	// RVA: 0x86FBA0C Offset: 0x86F7A0C VA: 0x86FBA0C Slot: 4
+	public virtual void Start() { }
+
+	// RVA: 0x86FBBEC Offset: 0x86F7BEC VA: 0x86FBBEC Slot: 5
+	public virtual void OnDestroy() { }
+
+	// RVA: 0x86FBCA0 Offset: 0x86F7CA0 VA: 0x86FBCA0
+	public void ValidateDictionaries() { }
+
+	// RVA: 0x86FBD1C Offset: 0x86F7D1C VA: 0x86FBD1C Slot: 6
+	public virtual RaceData GetRace(string name) { }
+
+	// RVA: 0x86FBD58 Offset: 0x86F7D58 VA: 0x86FBD58
+	public RaceData GetRace(int nameHash) { }
+
+	// RVA: 0x86FBD94 Offset: 0x86F7D94 VA: 0x86FBD94 Slot: 7
+	public virtual SlotData InstantiateSlot(string name) { }
+
+	// RVA: 0x86FBDD0 Offset: 0x86F7DD0 VA: 0x86FBDD0 Slot: 8
+	public virtual SlotData InstantiateSlot(int nameHash) { }
+
+	// RVA: 0x86FBE0C Offset: 0x86F7E0C VA: 0x86FBE0C
+	public SlotData InstantiateSlot(string name, List<OverlayData> overlayList) { }
+
+	// RVA: 0x86FBE50 Offset: 0x86F7E50 VA: 0x86FBE50
+	public SlotData InstantiateSlot(int nameHash, List<OverlayData> overlayList) { }
+
+	// RVA: 0x86FBE94 Offset: 0x86F7E94 VA: 0x86FBE94 Slot: 9
+	public virtual OverlayData InstantiateOverlay(string name) { }
+
+	// RVA: 0x86FBED0 Offset: 0x86F7ED0 VA: 0x86FBED0 Slot: 10
+	public virtual OverlayData InstantiateOverlay(int nameHash) { }
+
+	// RVA: 0x86FBF0C Offset: 0x86F7F0C VA: 0x86FBF0C
+	public OverlayData InstantiateOverlay(string name, Color color) { }
+
+	// RVA: 0x86FBF78 Offset: 0x86F7F78 VA: 0x86FBF78
+	public OverlayData InstantiateOverlay(int nameHash, Color color) { }
+
+	// RVA: 0x86FBFE4 Offset: 0x86F7FE4 VA: 0x86FBFE4
+	public static UMAContext FindInstance() { }
+
+	// RVA: 0x86FC100 Offset: 0x86F8100 VA: 0x86FC100
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public abstract class OverlayLibraryBase : MonoBehaviour // TypeDefIndex: 661
+{
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public abstract void AddOverlayAsset(OverlayDataAsset overlay);
+
+	// RVA: -1 Offset: -1 Slot: 5
+	public abstract OverlayData InstantiateOverlay(string name);
+
+	// RVA: -1 Offset: -1 Slot: 6
+	public abstract OverlayData InstantiateOverlay(int nameHash);
+
+	// RVA: -1 Offset: -1 Slot: 7
+	public abstract OverlayData InstantiateOverlay(string name, Color color);
+
+	// RVA: -1 Offset: -1 Slot: 8
+	public abstract OverlayData InstantiateOverlay(int nameHash, Color color);
+
+	// RVA: -1 Offset: -1 Slot: 9
+	public abstract OverlayDataAsset[] GetAllOverlayAssets();
+
+	// RVA: -1 Offset: -1 Slot: 10
+	public abstract void UpdateDictionary();
+
+	// RVA: -1 Offset: -1 Slot: 11
+	public abstract void ValidateDictionary();
+
+	// RVA: 0x86FC108 Offset: 0x86F8108 VA: 0x86FC108
+	protected void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public abstract class SlotLibraryBase : MonoBehaviour // TypeDefIndex: 662
+{
+	// Methods
+
+	// RVA: 0x86FC110 Offset: 0x86F8110 VA: 0x86FC110 Slot: 4
+	public virtual void AddSlotAsset(SlotDataAsset slot) { }
+
+	// RVA: 0x86FC148 Offset: 0x86F8148 VA: 0x86FC148 Slot: 5
+	public virtual SlotDataAsset[] GetAllSlotAssets() { }
+
+	// RVA: -1 Offset: -1 Slot: 6
+	public abstract SlotData InstantiateSlot(string name);
+
+	// RVA: -1 Offset: -1 Slot: 7
+	public abstract SlotData InstantiateSlot(int nameHash);
+
+	// RVA: -1 Offset: -1 Slot: 8
+	public abstract SlotData InstantiateSlot(string name, List<OverlayData> overlayList);
+
+	// RVA: -1 Offset: -1 Slot: 9
+	public abstract SlotData InstantiateSlot(int nameHash, List<OverlayData> overlayList);
+
+	// RVA: 0x86FC180 Offset: 0x86F8180 VA: 0x86FC180 Slot: 10
+	public virtual bool HasSlot(string name) { }
+
+	// RVA: 0x86FC1B8 Offset: 0x86F81B8 VA: 0x86FC1B8 Slot: 11
+	public virtual bool HasSlot(int nameHash) { }
+
+	// RVA: 0x86FC1F0 Offset: 0x86F81F0 VA: 0x86FC1F0 Slot: 12
+	public virtual SlotDataAsset GetSlotDataAsset(string name) { }
+
+	// RVA: -1 Offset: -1 Slot: 13
+	public abstract void UpdateDictionary();
+
+	// RVA: -1 Offset: -1 Slot: 14
+	public abstract void ValidateDictionary();
+
+	// RVA: 0x86FC228 Offset: 0x86F8228 VA: 0x86FC228
+	protected void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class UMAAssetFieldVisible : Attribute // TypeDefIndex: 663
+{
+	// Methods
+
+	// RVA: 0x86FC230 Offset: 0x86F8230 VA: 0x86FC230
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class UMAGenerator : UMAGeneratorBuiltin // TypeDefIndex: 664
+{
+	// Methods
+
+	// RVA: 0x86FC238 Offset: 0x86F8238 VA: 0x86FC238 Slot: 13
+	public override void Awake() { }
+
+	// RVA: 0x86FC240 Offset: 0x86F8240 VA: 0x86FC240 Slot: 4
+	public override void addDirtyUMA(UMAData umaToAdd) { }
+
+	// RVA: 0x86FC340 Offset: 0x86F8340 VA: 0x86FC340
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public abstract class UMARecipeBase : ScriptableObject // TypeDefIndex: 665
+{
+	// Fields
+	protected UMARecipe umaRecipe; // 0xB5BABE99
+	protected bool cached; // 0xB4B5A4B3
+
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public abstract void Load(UMARecipe umaRecipe, UMAContext context);
+
+	// RVA: -1 Offset: -1 Slot: 5
+	public abstract void Save(UMARecipe umaRecipe, UMAContext context);
+
+	// RVA: 0x86FC398 Offset: 0x86F8398 VA: 0x86FC398
+	public UMARecipe GetCachedRecipe(UMAContext context) { }
+
+	// RVA: 0x86FC43C Offset: 0x86F843C VA: 0x86FC43C
+	protected void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public interface IUMAInterface // TypeDefIndex: 666
+{
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract GameObject GetAssetIndexResource();
+
+	// RVA: -1 Offset: -1 Slot: 1
+	public abstract Type GetDynamicAssetLoaderType();
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class IUMAInterfaceImplNone : IUMAInterface // TypeDefIndex: 667
+{
+	// Methods
+
+	// RVA: 0x86FC444 Offset: 0x86F8444 VA: 0x86FC444 Slot: 4
+	public GameObject GetAssetIndexResource() { }
+
+	// RVA: 0x86FC44C Offset: 0x86F844C VA: 0x86FC44C Slot: 5
+	public Type GetDynamicAssetLoaderType() { }
+
+	// RVA: 0x86FC4B8 Offset: 0x86F84B8 VA: 0x86FC4B8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public static class UMAFacade // TypeDefIndex: 668
+{
+	// Fields
+	private static IUMAInterface m_Impl; // 0xA3A983F8
+
+	// Methods
+
+	// RVA: 0x86FC4C0 Offset: 0x86F84C0 VA: 0x86FC4C0
+	public static void SetImpl(IUMAInterface impl) { }
+
+	// RVA: 0x86FC554 Offset: 0x86F8554 VA: 0x86FC554
+	public static GameObject GetAssetIndexResource() { }
+
+	// RVA: 0x86FC628 Offset: 0x86F8628 VA: 0x86FC628
+	public static Type GetDynamicAssetLoaderType() { }
+
+	// RVA: 0x86FC700 Offset: 0x86F8700 VA: 0x86FC700
+	public static UMAData FindUMAData(GameObject go) { }
+
+	// RVA: 0x86FC9CC Offset: 0x86F89CC VA: 0x86FC9CC
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class MotorcyleSkinInfo : VehicleSkinInfoBase // TypeDefIndex: 669
+{
+	// Fields
+	public Transform MotorcyleBodyModel; // 0xFEBDB5A4
+	public Transform VehicleBrakeLight; // 0xE3A4BE99
+	public Transform FrontWheelModel; // 0xBE85FCE2
+	public Transform RearWheelModel; // 0x95A9A4B9
+	public Transform FenderModel; // 0xBEB9B7BE
+	public Transform SteerHandleModel; // 0xBF93FEB5
+	protected List<Transform> m_WheelModels; // 0xF6A2BFBC
+
+	// Properties
+	public override Transform BodyModel { get; }
+	public override List<Transform> WheelModels { get; }
+
+	// Methods
+
+	// RVA: 0x86FCA48 Offset: 0x86F8A48 VA: 0x86FCA48 Slot: 4
+	public override Transform get_BodyModel() { }
+
+	// RVA: 0x86FCA50 Offset: 0x86F8A50 VA: 0x86FCA50 Slot: 5
+	public override List<Transform> get_WheelModels() { }
+
+	// RVA: 0x86FCC00 Offset: 0x86F8C00 VA: 0x86FCC00 Slot: 6
+	public override void SetSkinState(bool is_show) { }
+
+	// RVA: 0x86FCEA4 Offset: 0x86F8EA4 VA: 0x86FCEA4 Slot: 7
+	public override void ClearSkinAttached() { }
+
+	// RVA: 0x86FD170 Offset: 0x86F9170 VA: 0x86FD170 Slot: 8
+	public override void EnableBrakeLightsEffect(bool enable) { }
+
+	// RVA: 0x86FD214 Offset: 0x86F9214 VA: 0x86FD214 Slot: 9
+	public override void EnableTailAimi(int state) { }
+
+	// RVA: 0x86FD218 Offset: 0x86F9218 VA: 0x86FD218
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class TrikeMotorcycleSkinInfo : MotorcyleSkinInfo // TypeDefIndex: 670
+{
+	// Fields
+	public Transform SideWheelModel; // 0xBE85D0F9
+
+	// Properties
+	public override List<Transform> WheelModels { get; }
+
+	// Methods
+
+	// RVA: 0x86FD228 Offset: 0x86F9228 VA: 0x86FD228 Slot: 5
+	public override List<Transform> get_WheelModels() { }
+
+	// RVA: 0x86FD450 Offset: 0x86F9450 VA: 0x86FD450
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class VehicleControllerInfo // TypeDefIndex: 671
+{
+	// Fields
+	public int WheelTypeChoise; // 0x95A9A4B9
+	public float maxEngineRPM; // 0xBEB9B7BE
+	public float minEngineRPM; // 0xB582FEB5
+	public float engineTorque; // 0xA2B5B4BE
+	public float brakeTorque; // 0xEAEAA2B5
+	public float gearShiftingDelay; // 0x8FA4B5A3
+	public float maxspeed; // 0xB1B3BFBC
+	public float defMaxspeed; // 0xA5BF92BC
+	public float idleBrakeInput; // 0x8FA3B4BE
+	public float highSpeedSteerAngle; // 0xB5BABE99
+	public float highSpeedSteerAngleAtSpeed; // 0xB4B5A4B3
+
+	// Methods
+
+	// RVA: 0x86FD458 Offset: 0x86F9458 VA: 0x86FD458
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public interface WheelColliderInterface // TypeDefIndex: 672
+{
+	// Properties
+	public abstract bool IsGrounded { get; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract void AttachWheelModel(Transform wheelModel);
+
+	// RVA: -1 Offset: -1 Slot: 1
+	public abstract bool get_IsGrounded();
+
+	// RVA: -1 Offset: -1 Slot: 2
+	public abstract WheelHit UpdateGrounded();
+
+	// RVA: -1 Offset: -1 Slot: 3
+	public abstract void ClearTorque();
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public interface VehicleControllerInterface // TypeDefIndex: 673
+{
+	// Properties
+	public abstract bool ModelVisible { get; set; }
+	public abstract bool ReachSpeedAndTurnMax { get; }
+	public abstract float SteerAngle { get; }
+	public abstract float Velocity { get; }
+	public abstract float GasInput { get; }
+	public abstract float BrakeInput { get; }
+	public abstract float SteerInput { get; }
+	public abstract int Direction { get; }
+	public abstract bool IsGrounded { get; }
+	public abstract float CurEngineRPM { get; }
+	public abstract bool IsInWater { get; set; }
+	public abstract Transform VehicleCOM { get; }
+	public abstract VehicleControllerInfo ControllerInfo { get; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract void set_ModelVisible(bool value);
+
+	// RVA: -1 Offset: -1 Slot: 1
+	public abstract bool get_ModelVisible();
+
+	// RVA: -1 Offset: -1 Slot: 2
+	public abstract bool get_ReachSpeedAndTurnMax();
+
+	// RVA: -1 Offset: -1 Slot: 3
+	public abstract float get_SteerAngle();
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public abstract float get_Velocity();
+
+	// RVA: -1 Offset: -1 Slot: 5
+	public abstract float get_GasInput();
+
+	// RVA: -1 Offset: -1 Slot: 6
+	public abstract float get_BrakeInput();
+
+	// RVA: -1 Offset: -1 Slot: 7
+	public abstract float get_SteerInput();
+
+	// RVA: -1 Offset: -1 Slot: 8
+	public abstract int get_Direction();
+
+	// RVA: -1 Offset: -1 Slot: 9
+	public abstract bool get_IsGrounded();
+
+	// RVA: -1 Offset: -1 Slot: 10
+	public abstract float get_CurEngineRPM();
+
+	// RVA: -1 Offset: -1 Slot: 11
+	public abstract float CaculateVehicleRevs();
+
+	// RVA: -1 Offset: -1 Slot: 12
+	public abstract bool get_IsInWater();
+
+	// RVA: -1 Offset: -1 Slot: 13
+	public abstract void set_IsInWater(bool value);
+
+	// RVA: -1 Offset: -1 Slot: 14
+	public abstract Transform get_VehicleCOM();
+
+	// RVA: -1 Offset: -1 Slot: 15
+	public abstract VehicleControllerInfo get_ControllerInfo();
+
+	// RVA: -1 Offset: -1 Slot: 16
+	public abstract void BindVehicleSkin(VehicleSkinInfoBase skin_info);
+
+	// RVA: -1 Offset: -1 Slot: 17
+	public abstract void SetControllerInfo(VehicleControllerInfo i);
+
+	// RVA: -1 Offset: -1 Slot: 18
+	public abstract void SetVehicleEnable(bool isEnable, bool switchController = false);
+
+	// RVA: -1 Offset: -1 Slot: 19
+	public abstract void SetMaxSpeedScale(float scale);
+
+	// RVA: -1 Offset: -1 Slot: 20
+	public abstract float GetCurrentMaxSpeed();
+
+	// RVA: -1 Offset: -1 Slot: 21
+	public abstract float GetCurrentMaxHighYSpeed();
+
+	// RVA: -1 Offset: -1 Slot: 22
+	public abstract void SetDriverSpeedScale(float scale);
+
+	// RVA: -1 Offset: -1 Slot: 23
+	public abstract float GetDriverSpeedScale();
+
+	// RVA: -1 Offset: -1 Slot: 24
+	public abstract void LockMaxSpeed(float speed);
+
+	// RVA: -1 Offset: -1 Slot: 25
+	public abstract void UnLockMaxSpeed();
+
+	// RVA: -1 Offset: -1 Slot: 26
+	public abstract void UpdateVehicleSpeed(float rpm, float velocity);
+
+	// RVA: -1 Offset: -1 Slot: 27
+	public abstract void UpdateVehicleSteerAngle(float steerAngle);
+
+	// RVA: -1 Offset: -1 Slot: 28
+	public abstract void VehicleLazyFixedUpdate(float gameTime, float deltaTime);
+
+	// RVA: -1 Offset: -1 Slot: 29
+	public abstract void VehicleLasyUpdate(float gameTime, float deltaTime);
+
+	// RVA: -1 Offset: -1 Slot: 30
+	public abstract void VehicleUpdateInput(bool gas, bool brake, Vector3 steer);
+
+	// RVA: -1 Offset: -1 Slot: 31
+	public abstract void VehicleUpdateInput(float gas, float brake, Vector3 steer);
+
+	// RVA: -1 Offset: -1 Slot: 32
+	public abstract void KillEngine();
+
+	// RVA: -1 Offset: -1 Slot: 33
+	public abstract void StartEngine();
+
+	// RVA: -1 Offset: -1 Slot: 34
+	public abstract int GetWheelType(GameObject go);
+
+	// RVA: -1 Offset: -1 Slot: 35
+	public abstract void StartBoost(float torque, float maxSpeed, float angle, bool ingoreVelocityChange = false);
+
+	// RVA: -1 Offset: -1 Slot: 36
+	public abstract void StopBoost();
+
+	// RVA: -1 Offset: -1 Slot: 37
+	public abstract void SetJumpHeightRate(float rate);
+
+	// RVA: -1 Offset: -1 Slot: 38
+	public abstract void SetHightSpeedSteerAngleRate(float rate);
+
+	// RVA: -1 Offset: -1 Slot: 39
+	public abstract void SetEngineTorqueRate(float rate);
+
+	// RVA: -1 Offset: -1 Slot: 40
+	public abstract void SetBrakeTorqueRate(float rate);
+
+	// RVA: -1 Offset: -1 Slot: 41
+	public abstract float GetEngineTorqueRate();
+
+	// RVA: -1 Offset: -1 Slot: 42
+	public abstract float GetBrakeTorqueRate();
+
+	// RVA: -1 Offset: -1 Slot: 43
+	public abstract void ForceStop();
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public static class VehicleCaculateTool // TypeDefIndex: 674
+{
+	// Methods
+
+	// RVA: 0x86FD460 Offset: 0x86F9460 VA: 0x86FD460
+	public static float ULerp(float from, float to, float value) { }
+
+	// RVA: 0x86FD478 Offset: 0x86F9478 VA: 0x86FD478
+	public static float CurveFactor(float factor) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public abstract class VehicleSkinInfoBase : MonoBehaviour // TypeDefIndex: 675
+{
+	// Fields
+	[CompilerGenerated]
+	private uint <SkinResID>k__BackingField; // 0xB9BE85F8
+	public Animation TailAni; // 0xBE95A9A4
+	public int FirstAniSpeed; // 0xB5BEB9B7
+	public int SecondAniSpeed; // 0xA5BF92FE
+	public string BoostEndEffectRes; // 0xF6A3B4BE
+	public string BoostStartEffectRes; // 0xBE85D0F9
+	public string BoostLoopEffectRes; // 0x95A9A4B9
+	public Vector3 LeftFrontWheel; // 0xBEB9B7BE
+	public Vector3 RightFrontWheel; // 0xB582FEB5
+	public Vector3 LeftBottomWheel; // 0xA2B5B4BE
+	public Vector3 RightBottomWheel; // 0xA4A4B583
+	public Vector3 DriveSeat; // 0xA3B7BEB9
+	public Vector3 PassengerSeat; // 0xB5B7EAEA
+	public Vector3 SteeringWheel; // 0xA5A38FA4
+	public string GearVFX; // 0xD0F9F8BE
+	public GameObject RunningVFX; // 0xA4B9BE85
+	public Transform[] Seats; // 0xB7BE95A9
+
+	// Properties
+	public uint SkinResID { get; set; }
+	public abstract Transform BodyModel { get; }
+	public abstract List<Transform> WheelModels { get; }
+
+	// Methods
+
+	[CompilerGenerated]
+	// RVA: 0x86FD48C Offset: 0x86F948C VA: 0x86FD48C
+	public uint get_SkinResID() { }
+
+	[CompilerGenerated]
+	// RVA: 0x86FD494 Offset: 0x86F9494 VA: 0x86FD494
+	public void set_SkinResID(uint value) { }
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public abstract Transform get_BodyModel();
+
+	// RVA: -1 Offset: -1 Slot: 5
+	public abstract List<Transform> get_WheelModels();
+
+	// RVA: -1 Offset: -1 Slot: 6
+	public abstract void SetSkinState(bool is_show);
+
+	// RVA: -1 Offset: -1 Slot: 7
+	public abstract void ClearSkinAttached();
+
+	// RVA: -1 Offset: -1 Slot: 8
+	public abstract void EnableBrakeLightsEffect(bool enable);
+
+	// RVA: -1 Offset: -1 Slot: 9
+	public abstract void EnableTailAimi(int state);
+
+	// RVA: 0x86FD220 Offset: 0x86F9220 VA: 0x86FD220
+	protected void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum VehicleSkinInfo.TailAnimState // TypeDefIndex: 676
+{
+	// Fields
+	public int value__; // 0xFEB5BEB9
+	public const TailAnimState DownFirstState = 1;
+	public const TailAnimState DownSecondState = 2;
+	public const TailAnimState UpFirstState = 3;
+	public const TailAnimState UpSecondState = 4;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class VehicleSkinInfo : VehicleSkinInfoBase // TypeDefIndex: 677
+{
+	// Fields
+	public Transform VehicleBodyModel; // 0xB19DBCB1
+	public Transform VehicleBrakeLight; // 0xA5BDB9A8
+	public Transform VehicleSteeringWheel; // 0x949F9CBD
+	public Transform FrontLeftWheelModel; // 0xA3A983F8
+	public Transform FrontRightWheelModel; // 0xFEBDB5A4
+	public Transform RearLeftWheelModel; // 0xE3A4BE99
+	public Transform RearRightWheelModel; // 0x85D0F9E2
+	private int AnimState; // 0xA9A4B9BE
+	private List<Transform> m_WheelModels; // 0xB9B7BE95
+
+	// Properties
+	public override Transform BodyModel { get; }
+	public override List<Transform> WheelModels { get; }
+
+	// Methods
+
+	// RVA: 0x86FD49C Offset: 0x86F949C VA: 0x86FD49C Slot: 4
+	public override Transform get_BodyModel() { }
+
+	// RVA: 0x86FD4A4 Offset: 0x86F94A4 VA: 0x86FD4A4 Slot: 5
+	public override List<Transform> get_WheelModels() { }
+
+	// RVA: 0x86FD744 Offset: 0x86F9744 VA: 0x86FD744 Slot: 6
+	public override void SetSkinState(bool is_show) { }
+
+	// RVA: 0x86FD9A0 Offset: 0x86F99A0 VA: 0x86FD9A0 Slot: 7
+	public override void ClearSkinAttached() { }
+
+	// RVA: 0x86FDBE4 Offset: 0x86F9BE4 VA: 0x86FDBE4 Slot: 8
+	public override void EnableBrakeLightsEffect(bool enable) { }
+
+	// RVA: 0x86FDC88 Offset: 0x86F9C88 VA: 0x86FDC88 Slot: 9
+	public override void EnableTailAimi(int state) { }
+
+	// RVA: 0x86FDE1C Offset: 0x86F9E1C VA: 0x86FDE1C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class MinimalEncoder : MonoBehaviour // TypeDefIndex: 678
+{
+	// Fields
+	public Camera selfCamera; // 0x83FEB5BE
+	private float _startTime; // 0xB5B4B1B8
+	private RenderTexture m_ownRT; // 0x83EAEAA2
+	private RenderTexture m_recordRT; // 0xBC97A4B5
+	private Camera m_selfCamera; // 0xBCB1B2BF
+	private List<Camera> m_managedCameras; // 0xB1BFBC96
+	private List<PostEffectManagerBase> m_injectedManagers; // 0xA0BD99A4
+	private List<Camera> m_cachedLowerCameras; // 0xA983F8BC
+	private List<PostEffectManagerBase> m_cachedLowerCameraPEs; // 0xBDB5A4A3
+	private HashSet<Camera> m_customShadowCameras; // 0xA4BE99FE
+	private Camera[] m_allCamerasBuffer; // 0x83FCE2E3
+
+	// Methods
+
+	// RVA: 0x86FDE2C Offset: 0x86F9E2C VA: 0x86FDE2C
+	private static extern IntPtr UEP_GetRenderEventFunc() { }
+
+	// RVA: 0x86FDE94 Offset: 0x86F9E94 VA: 0x86FDE94
+	private void OnEnable() { }
+
+	// RVA: 0x86FDEB0 Offset: 0x86F9EB0 VA: 0x86FDEB0
+	private void OnDisable() { }
+
+	// RVA: 0x86FE2F4 Offset: 0x86FA2F4 VA: 0x86FE2F4
+	private void EnsureRTs() { }
+
+	// RVA: 0x86FE1E4 Offset: 0x86FA1E4 VA: 0x86FE1E4
+	private void ReleaseRTs() { }
+
+	// RVA: 0x86FE0BC Offset: 0x86FA0BC VA: 0x86FE0BC
+	private void RestoreManagedCameras() { }
+
+	// RVA: 0x86FDF94 Offset: 0x86F9F94 VA: 0x86FDF94
+	private void RestoreInjectedManagers() { }
+
+	// RVA: 0x86FE508 Offset: 0x86FA508 VA: 0x86FE508
+	private int GetAllCamerasNoAlloc() { }
+
+	// RVA: 0x86FE59C Offset: 0x86FA59C VA: 0x86FE59C
+	private bool NeedRebuildCache(int allCount) { }
+
+	// RVA: 0x86FE758 Offset: 0x86FA758 VA: 0x86FE758
+	private void RebuildCache(int allCount) { }
+
+	// RVA: 0x86FEAF0 Offset: 0x86FAAF0 VA: 0x86FEAF0
+	private void LateUpdate() { }
+
+	// RVA: 0x86FEE58 Offset: 0x86FAE58 VA: 0x86FEE58
+	private void OnPreRender() { }
+
+	// RVA: 0x86FEF08 Offset: 0x86FAF08 VA: 0x86FEF08
+	private void OnPostRender() { }
+
+	// RVA: 0x86FF074 Offset: 0x86FB074 VA: 0x86FF074
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public interface IPreviewLayer // TypeDefIndex: 679
+{
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract void OriginLoaded(string previewName);
+
+	// RVA: -1 Offset: -1 Slot: 1
+	public abstract void OriginUnloaded(string previewName);
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public struct LStreamer.Coordinate // TypeDefIndex: 680
+{
+	// Fields
+	public int X; // 0xB5A4A3A9
+	public int Y; // 0xB983FEBD
+	public int Z; // 0xB5BCB7BE
+
+	// Methods
+
+	// RVA: 0x86FFC90 Offset: 0x86FBC90 VA: 0x86FFC90
+	public bool Equals(ref Coordinate r) { }
+
+	// RVA: 0x8700908 Offset: 0x86FC908 VA: 0x8700908 Slot: 3
+	public override string ToString() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class LStreamer.Tile // TypeDefIndex: 681
+{
+	// Fields
+	public Coordinate Coord; // 0xBE85D0F9
+	public List<LEntity> DynamicLEntitys; // 0x95A9A4B9
+	public List<LEntity> StaticLEntitys; // 0xBEB9B7BE
+
+	// Methods
+
+	// RVA: 0x87009D4 Offset: 0x86FC9D4 VA: 0x87009D4
+	public int ProcessDynamicEntity(Vector3 min, Vector3 max) { }
+
+	// RVA: 0x8700B70 Offset: 0x86FCB70 VA: 0x8700B70
+	public int ProcessStaticEntity(Vector3 min, Vector3 max) { }
+
+	// RVA: 0x87004D0 Offset: 0x86FC4D0 VA: 0x87004D0
+	public static void ProcessEntity(LEntity lEntity, Vector3 min, Vector3 max) { }
+
+	// RVA: 0x86FF2C4 Offset: 0x86FB2C4 VA: 0x86FF2C4
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class LStreamer.<ProcessStaticEntityCo>d__49 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 682
+{
+	// Fields
+	private int <>1__state; // 0xB883FEB5
+	private object <>2__current; // 0xA2B5B4B1
+	public LStreamer <>4__this; // 0xB583EAEA
+	private Enumerator<Tile> <>7__wrap1; // 0xBFBC97A4
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x8700774 Offset: 0x86FC774 VA: 0x8700774
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHidden]
+	// RVA: 0x8700D0C Offset: 0x86FCD0C VA: 0x8700D0C Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x8700D28 Offset: 0x86FCD28 VA: 0x8700D28 Slot: 6
+	private bool MoveNext() { }
+
+	// RVA: 0x8700F5C Offset: 0x86FCF5C VA: 0x8700F5C
+	private void <>m__Finally1() { }
+
+	[DebuggerHidden]
+	// RVA: 0x8700FAC Offset: 0x86FCFAC VA: 0x8700FAC Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x8700FB4 Offset: 0x86FCFB4 VA: 0x8700FB4 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x8700FEC Offset: 0x86FCFEC VA: 0x8700FEC Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[DefaultMember("Item")]
+public class LStreamer // TypeDefIndex: 683
+{
+	// Fields
+	public const int TileRangeY = 5000;
+	public const int InValidTile = -1;
+	public int TileExtend; // 0xA0BD99A2
+	public int MapHeight; // 0xA983F8BC
+	public int MapWidth; // 0xBDB5A4A3
+	public int TileSizeX; // 0xA4BE99FE
+	public int TileSizeY; // 0x85FCE2E3
+	public int TileSizeZ; // 0xA9A4B9BE
+	public int TileIndexMax_X; // 0xB9B7BE95
+	public int TileIndexMax_Y; // 0x93FEB5BE
+	public int TileIndexMax_Z; // 0xA5A0BDBF
+	public int TileCountX; // 0xA592B5A4
+	public int TileCountY; // 0xA2B5B6B6
+	public int TileCountZ; // 0xBE85D0F9
+	public Vector3 TileOrigin; // 0x95A9A4B9
+	public Tile[] Tiles; // 0xBEB9B7BE
+	public StreamerType StreamerType; // 0xB19DFEB5
+	private Coordinate m_LastCoord; // 0xB9A2B5A4
+	public List<LEntity> DynamicLEntitys; // 0xEAEABCB1
+	private int m_DynamicCallBackCount; // 0xB1B5A293
+	private int m_StaticCallBackCount; // 0xB987B5A4
+	private HashSet<Tile> m_LastTiles; // 0xA483B8A4
+	private HashSet<Tile> m_LastSmallTiles; // 0xB7BEB9A2
+	private HashSet<Tile> m_CurTiles; // 0xB9BE85F8
+	private HashSet<Tile> m_CurSmallTiles; // 0xBE95A9A4
+	private HashSet<Tile> m_ProcessTiles; // 0xB5BEB9B7
+	private IEnumerator m_StaticFCO; // 0xA4B19DFE
+	private Vector3 m_StaticMin; // 0xB1B9A2B5
+	private Vector3 m_StaticMax; // 0x85D0F9BC
+	private FTimer m_Timer; // 0xA9A4B9BE
+
+	// Properties
+	public Tile Item { get; }
+
+	// Methods
+
+	// RVA: 0x86FF1C8 Offset: 0x86FB1C8 VA: 0x86FF1C8
+	public Tile get_Item(int tileIndex) { }
+
+	// RVA: 0x86FF2DC Offset: 0x86FB2DC VA: 0x86FF2DC
+	public void InitLStreamer(StreamerType streamerType, Vector3 tileOrigin, Vector3 mapSize, int _TileSizeX, int _TileSizeZ) { }
+
+	// RVA: 0x86FF520 Offset: 0x86FB520 VA: 0x86FF520
+	public void Attach(LEntity lEntity, bool isDynamic) { }
+
+	// RVA: 0x86FF9A4 Offset: 0x86FB9A4 VA: 0x86FF9A4
+	public void Detach(LEntity lEntity, bool isDynamic) { }
+
+	// RVA: 0x86FF668 Offset: 0x86FB668 VA: 0x86FF668
+	private void AddToTile(LEntity lEntity, bool isDynamic, ref Coordinate coord) { }
+
+	// RVA: 0x86FFA54 Offset: 0x86FBA54 VA: 0x86FFA54
+	private void RemoveFromTile(LEntity lEntity, bool isDynamic, ref Coordinate coord) { }
+
+	// RVA: 0x86FF630 Offset: 0x86FB630 VA: 0x86FF630
+	public void GetCoord(ref Coordinate coord, LTransform ltransform) { }
+
+	// RVA: 0x86FFCCC Offset: 0x86FBCCC VA: 0x86FFCCC
+	public void GetCoord(ref Coordinate coord, Vector3 origin) { }
+
+	// RVA: 0x86FFD68 Offset: 0x86FBD68 VA: 0x86FFD68
+	public Vector3 GetCoordMin(int X, int Z) { }
+
+	// RVA: 0x86FFDE0 Offset: 0x86FBDE0 VA: 0x86FFDE0
+	public Vector3 GetCoordMax(int X, int Z) { }
+
+	// RVA: 0x86FFD4C Offset: 0x86FBD4C VA: 0x86FFD4C
+	public static int Clamp(int value, int min, int max) { }
+
+	// RVA: 0x86FFE60 Offset: 0x86FBE60 VA: 0x86FFE60
+	public void GetInRangeTile(ref Coordinate coord, HashSet<Tile> tiles, HashSet<Tile> tilesSmall, HashSet<Tile> allTiles) { }
+
+	// RVA: 0x8700014 Offset: 0x86FC014 VA: 0x8700014
+	public void CheckPosition(Vector3 pos, bool forceUpdate = false) { }
+
+	// RVA: 0x87001A0 Offset: 0x86FC1A0 VA: 0x87001A0
+	public void DispatchAllDynamic(ref Coordinate lastCoord, ref Coordinate coord, Vector3 min, Vector3 max) { }
+
+	// RVA: 0x87006F4 Offset: 0x86FC6F4 VA: 0x87006F4
+	public void SetLastCordInvalid() { }
+
+	// RVA: 0x8700324 Offset: 0x86FC324 VA: 0x8700324
+	public void DispatchAllTileStatic(ref Coordinate lastCoord, ref Coordinate coord, Vector3 min, Vector3 max) { }
+
+	[IteratorStateMachine(typeof(<ProcessStaticEntityCo>d__49))]
+	// RVA: 0x8700708 Offset: 0x86FC708 VA: 0x8700708
+	public IEnumerator ProcessStaticEntityCo() { }
+
+	// RVA: 0x870079C Offset: 0x86FC79C VA: 0x870079C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class NonStreamPreview : MonoBehaviour, IPreviewLayer // TypeDefIndex: 684
+{
+	// Fields
+	private Dictionary<string, GameObject> previewGameObjects; // 0xB9B7BE95
+
+	// Methods
+
+	// RVA: 0x8700FF4 Offset: 0x86FCFF4 VA: 0x8700FF4
+	private void Awake() { }
+
+	// RVA: 0x8701480 Offset: 0x86FD480 VA: 0x8701480 Slot: 4
+	public void OriginLoaded(string previewName) { }
+
+	// RVA: 0x8701540 Offset: 0x86FD540 VA: 0x8701540 Slot: 5
+	public void OriginUnloaded(string previewName) { }
+
+	// RVA: 0x8701600 Offset: 0x86FD600 VA: 0x8701600
+	public void AddPreview(string previewName, GameObject previewGO) { }
+
+	// RVA: 0x8701668 Offset: 0x86FD668 VA: 0x8701668
+	public void RemovePreview(string previewName) { }
+
+	// RVA: 0x87016F8 Offset: 0x86FD6F8 VA: 0x87016F8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+[Serializable]
+public class SceneCollection : MonoBehaviour // TypeDefIndex: 685
+{
+	// Fields
+	public string prefixName; // 0x9CFEB5BE
+	public string prefixScene; // 0xA4B8B7B9
+	public string path; // 0xB5B7EAEA
+	public string[] names; // 0xA5B38FA4
+	public bool xSplitIs; // 0xBEB9BCBC
+	public bool ySplitIs; // 0xA3B19DB7
+	public bool zSplitIs; // 0xD0F9F8BB
+	public int xSize; // 0xA4B9BE85
+	public int ySize; // 0xB7BE95A9
+	public int zSize; // 0xFEB5BEB9
+	public int xLimitsx; // 0xB8B7B99C
+	public int xLimitsy; // 0xA3EAEAA4
+	public int yLimitsx; // 0xA28FA4B5
+	public int yLimitsy; // 0xB5B4BEB5
+	public int zLimitsx; // 0xB7BEB9A2
+	public int zLimitsy; // 0xB5A9B19C
+	[HideInInspector]
+	public bool collapsed; // 0xA3B19DA2
+	[HideInInspector]
+	public int layerNumber; // 0xA983F8BB
+	public Color color; // 0xBDB5A4A3
+	public List<string> replaceLabels; // 0xA4BE99FE
+
+	// Methods
+
+	// RVA: 0x8701780 Offset: 0x86FD780 VA: 0x8701780
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+[Serializable]
+public class SceneCollectionExt : MonoBehaviour // TypeDefIndex: 686
+{
+	// Fields
+	public int[] buildIndex; // 0xD0F9E2E3
+
+	// Methods
+
+	// RVA: 0x8701864 Offset: 0x86FD864 VA: 0x8701864
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class SceneSplit // TypeDefIndex: 687
+{
+	// Fields
+	public int posX; // 0xA4B9BE85
+	public int posY; // 0xB7BE95A9
+	public int posZ; // 0xFEB5BEB9
+	public string sceneName; // 0xBEB9BB83
+	public GameObject sceneGo; // 0x9DB4B5BE
+	public bool loaded; // 0x82B8A3B5
+	public float posXLimitMove; // 0xB5B4BEB5
+	public int xDeloadLimit; // 0xEAA2B5A2
+	public float posYLimitMove; // 0xA4B5A3EA
+	public int yDeloadLimit; // 0xB9BBA38F
+	public float posZLimitMove; // 0xB4B5BEBE
+	public int zDeloadLimit; // 0xB9A4BF9D
+	public int sceneNameID; // 0xB586BEBF
+	public int sceneBuildID; // 0xA2BFA4B3
+	public StreamerSceneCollectionInfo sceneStreamerInfo; // 0xA983F8A3
+	public AsyncOperation sceneUnloadOperation; // 0xBDB5A4A3
+	public int replaceLabelOffset; // 0xBFBF92FE
+
+	// Methods
+
+	// RVA: 0x870186C Offset: 0x86FD86C VA: 0x870186C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class SceneSplitManager : MonoBehaviour // TypeDefIndex: 688
+{
+	// Fields
+	public string sceneName; // 0xBEB1B5BC
+	public Color color; // 0xBE85D0F9
+	[HideInInspector]
+	public Vector3 position; // 0x95A9A4B9
+	[HideInInspector]
+	public Vector3 size; // 0xBEB9B7BE
+
+	// Methods
+
+	// RVA: 0x8701874 Offset: 0x86FD874 VA: 0x8701874
+	private void Start() { }
+
+	// RVA: 0x8701878 Offset: 0x86FD878 VA: 0x8701878
+	private void OnDrawGizmosSelected() { }
+
+	// RVA: 0x87018C4 Offset: 0x86FD8C4 VA: 0x87018C4
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class SceneSplitterSettings : MonoBehaviour // TypeDefIndex: 689
+{
+	// Fields
+	public string scenesPath; // 0x9F9CFEB5
+	public string prefabPath; // 0xBFA29794
+	public string recordPath; // 0xEAEAA0A5
+
+	// Methods
+
+	// RVA: 0x87018DC Offset: 0x86FD8DC VA: 0x87018DC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+private class SceneStreamerInfo.MaterialInfo // TypeDefIndex: 690
+{
+	// Fields
+	public List<int> TextureMatIDList; // 0x8FA4B5B7
+	public List<uint> TextureIndexList; // 0xB5AAB9A3
+	public List<Texture> Textures; // 0x85D0F9F8
+	public Material OwnedMat; // 0xA9A4B9BE
+
+	// Methods
+
+	// RVA: 0x87024B4 Offset: 0x86FE4B4 VA: 0x87024B4
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+private class SceneStreamerInfo.MeshInfo // TypeDefIndex: 691
+{
+	// Fields
+	public uint TargetMeshIndex; // 0xB9B7BE95
+	public Mesh TargetMesh; // 0x9DFEB5BE
+	public MeshFilter OwnedMeshFilter; // 0xEAB8A3B5
+
+	// Methods
+
+	// RVA: 0x87025E4 Offset: 0x86FE5E4 VA: 0x87025E4
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class SceneStreamerInfo : MonoBehaviour // TypeDefIndex: 692
+{
+	// Fields
+	[SerializeField]
+	private List<MaterialInfo> MaterialInfos; // 0xA4BE99EA
+	[SerializeField]
+	private List<MeshInfo> MeshInfos; // 0xB1BEA2B5
+	public List<StreamerMeshInfo> OwnedMeshInfos; // 0xA4B583BC
+	public List<StreamerTextureInfo> OwnedTextureInfos; // 0xB5B4BE99
+
+	// Methods
+
+	// RVA: 0x8701970 Offset: 0x86FD970 VA: 0x8701970
+	private void Start() { }
+
+	// RVA: 0x87020BC Offset: 0x86FE0BC VA: 0x87020BC
+	private void OnDestroy() { }
+
+	// RVA: 0x87023D8 Offset: 0x86FE3D8 VA: 0x87023D8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class SceneStreamerInfoCollection : MonoBehaviour // TypeDefIndex: 693
+{
+	// Fields
+	public StreamerSceneCollectionInfo[] streamerInfos; // 0xB6A592A8
+
+	// Methods
+
+	// RVA: 0x87025EC Offset: 0x86FE5EC VA: 0x87025EC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public abstract class StreamerObjectRefInfo // TypeDefIndex: 694
+{
+	// Fields
+	public int RefCount; // 0x94A2B5B6
+
+	// Methods
+
+	// RVA: 0x87025F4 Offset: 0x86FE5F4 VA: 0x87025F4
+	public void InCreaseRefCount() { }
+
+	// RVA: 0x87023AC Offset: 0x86FE3AC VA: 0x87023AC
+	public void DecreaseRefCount(SceneStreamerInfoHelper helper) { }
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public abstract void UnLoadAsset(SceneStreamerInfoHelper helper);
+
+	// RVA: 0x87026C0 Offset: 0x86FE6C0 VA: 0x87026C0
+	protected void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class StreamerMeshInfo : StreamerObjectRefInfo // TypeDefIndex: 695
+{
+	// Fields
+	public uint MeshIndex; // 0xF8B1A4B1
+	public Mesh OwnedMesh; // 0xA4A3A983
+
+	// Methods
+
+	// RVA: 0x87026C8 Offset: 0x86FE6C8 VA: 0x87026C8 Slot: 4
+	public override void UnLoadAsset(SceneStreamerInfoHelper helper) { }
+
+	// RVA: 0x87027D4 Offset: 0x86FE7D4 VA: 0x87027D4
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class StreamerTextureInfo : StreamerObjectRefInfo // TypeDefIndex: 696
+{
+	// Fields
+	public uint TextureIndex; // 0x99FEBDB5
+	public Texture OwnedTexture; // 0xA480A4BE
+
+	// Methods
+
+	// RVA: 0x87027DC Offset: 0x86FE7DC VA: 0x87027DC Slot: 4
+	public override void UnLoadAsset(SceneStreamerInfoHelper helper) { }
+
+	// RVA: 0x87028E8 Offset: 0x86FE8E8 VA: 0x87028E8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class StreamerSceneCollectionInfo // TypeDefIndex: 697
+{
+	// Fields
+	public List<uint> TextureIndexList; // 0xA983FCA2
+	public List<uint> MeshIndexList; // 0xBDB5A4A3
+
+	// Methods
+
+	// RVA: 0x87028F0 Offset: 0x86FE8F0 VA: 0x87028F0
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class SceneStreamerInfoHelper // TypeDefIndex: 698
+{
+	// Fields
+	private static SceneStreamerInfoHelper m_Instance; // 0xA4BE99FE
+	public bool m_HaveUnloaded; // 0x83FCE2E3
+	public bool EnableMeshUnload; // 0xB5A4A3A9
+	public bool EnableTextureUnload; // 0xBE99FEBD
+	private bool m_IsInited; // 0xFCE2E3A4
+	private Dictionary<uint, StreamerMeshInfo> m_MeshInfos; // 0xA4A3A983
+	private Dictionary<uint, StreamerTextureInfo> m_TexureInfos; // 0x99FEBDB5
+	private List<StreamerObjectRefInfo> m_NeedUnloadInfos; // 0xE2E3A4BE
+
+	// Properties
+	public static SceneStreamerInfoHelper Instance { get; }
+
+	// Methods
+
+	// RVA: 0x8701E84 Offset: 0x86FDE84 VA: 0x8701E84
+	public static SceneStreamerInfoHelper get_Instance() { }
+
+	// RVA: 0x870299C Offset: 0x86FE99C VA: 0x870299C
+	public static SceneStreamerInfoHelper CreateInstance(bool enable_mesh_unload, bool enbale_texture_unlaod) { }
+
+	// RVA: 0x8702BBC Offset: 0x86FEBBC VA: 0x8702BBC
+	public static void ClearInstance() { }
+
+	// RVA: 0x8702A6C Offset: 0x86FEA6C VA: 0x8702A6C
+	public void Init(bool enable_mesh_unload, bool enbale_texture_unlaod) { }
+
+	// RVA: 0x8702C24 Offset: 0x86FEC24 VA: 0x8702C24
+	public void UnInit() { }
+
+	// RVA: 0x8702D10 Offset: 0x86FED10 VA: 0x8702D10
+	public void UpdateObjectRefs(StreamerSceneCollectionInfo scene_streamer_info) { }
+
+	// RVA: 0x8701EE4 Offset: 0x86FDEE4 VA: 0x8701EE4
+	public StreamerMeshInfo FindMeshInfo(uint _mesh_id, bool could_create = false) { }
+
+	// RVA: 0x8701FD0 Offset: 0x86FDFD0 VA: 0x8701FD0
+	public StreamerTextureInfo FindTextureInfo(uint _text_id, bool could_create = false) { }
+
+	// RVA: 0x870277C Offset: 0x86FE77C VA: 0x870277C
+	public void RemoveMeshInfo(uint _mesh_id) { }
+
+	// RVA: 0x8702890 Offset: 0x86FE890 VA: 0x8702890
+	public void RemoveTexureInfo(uint _texture_id) { }
+
+	// RVA: 0x8702604 Offset: 0x86FE604 VA: 0x8702604
+	public void RecordNeedUnloadObject(StreamerObjectRefInfo ref_info) { }
+
+	// RVA: 0x8702FAC Offset: 0x86FEFAC VA: 0x8702FAC
+	public void UnloadUnusedAssets() { }
+
+	// RVA: 0x8702A5C Offset: 0x86FEA5C VA: 0x8702A5C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class ABSceneLightMapInfo // TypeDefIndex: 699
+{
+	// Fields
+	public static readonly List<ABSceneLightMapInfo> EmptyList; // 0xA3A983FC
+	public int m_id; // 0xFEBDB5A4
+	public Vector4 m_offset; // 0xE3A4BE99
+
+	// Methods
+
+	// RVA: 0x8703170 Offset: 0x86FF170 VA: 0x8703170
+	public void .ctor(int id, Vector4 offset) { }
+
+	// RVA: 0x87031C0 Offset: 0x86FF1C0 VA: 0x87031C0
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class ABSceneGOInfo // TypeDefIndex: 700
+{
+	// Fields
+	public int m_id; // 0xBE85FCE2
+	public int m_prefabID; // 0x95A9A4B9
+	public Vector3 m_pos; // 0xBEB9B7BE
+	public Quaternion m_rotation; // 0xB582FEB5
+	public Vector3 m_scale; // 0xA2B5B4BE
+	public string m_previewName; // 0xFEB7BEB9
+	public List<ABSceneLightMapInfo> m_lightmapInfoList; // 0xB8A3B59D
+	public ABLevelObjectInfo LevelObjectInfo; // 0xB1B4A085
+	public List<AlterationInfo> m_alterations; // 0xBC96B5A4
+
+	// Methods
+
+	// RVA: 0x870325C Offset: 0x86FF25C VA: 0x870325C
+	public void .ctor(int id, int prefabid, Vector3 pos, Quaternion rotation, Vector3 scale, string previewname, List<ABSceneLightMapInfo> lightmapInfoList) { }
+
+	// RVA: 0x87032A4 Offset: 0x86FF2A4 VA: 0x87032A4
+	public void .ctor(int prefabid, Vector3 pos, Quaternion rotation, Vector3 scale, string previewname, List<ABSceneLightMapInfo> lightmapInfoList) { }
+
+	// RVA: 0x8703354 Offset: 0x86FF354 VA: 0x8703354
+	public static bool IsSame(ABSceneGOInfo a, ABSceneGOInfo b) { }
+
+	// RVA: 0x8703398 Offset: 0x86FF398 VA: 0x8703398
+	public static bool IsSameExceptID(ABSceneGOInfo a, ABSceneGOInfo b) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class ABScenePrefabMeshInfo // TypeDefIndex: 701
+{
+	// Fields
+	public int m_prefabID; // 0xF9A3B7B1
+	public List<int> m_meshIDList; // 0xB9BE85D0
+
+	// Methods
+
+	// RVA: 0x87034B8 Offset: 0x86FF4B8 VA: 0x87034B8
+	public void .ctor(int prefabID, List<int> meshIDList) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class ABSceneMeshRef // TypeDefIndex: 702
+{
+	// Fields
+	public int m_refCount; // 0xBE95A9A4
+	public Mesh m_mesh; // 0xB5BEB9B7
+
+	// Methods
+
+	// RVA: 0x87034F0 Offset: 0x86FF4F0 VA: 0x87034F0
+	public void .ctor(int refCount, Mesh mesh) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class ABSceneTexRef // TypeDefIndex: 703
+{
+	// Fields
+	public Texture m_tex; // 0xA3B59DFE
+	public int m_refCount; // 0x99EAEAB8
+
+	// Methods
+
+	// RVA: 0x8703528 Offset: 0x86FF528 VA: 0x8703528
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class ABSceneMatRef // TypeDefIndex: 704
+{
+	// Fields
+	public List<KeyValuePair<int, short>> m_texPairs; // 0xA2B5A4BE
+	public int m_refCount; // 0x83BCB1BE
+	public Material m_mat; // 0xB586A4B5
+
+	// Methods
+
+	// RVA: 0x8703530 Offset: 0x86FF530 VA: 0x8703530
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum EABLevelObjectInfoType // TypeDefIndex: 705
+{
+	// Fields
+	public int value__; // 0xA8B5A4A2
+	public const EABLevelObjectInfoType eNone = 0;
+	public const EABLevelObjectInfoType eFountain = 1;
+	public const EABLevelObjectInfoType eClimbingTrigger = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public abstract class ABLevelObjectInfo // TypeDefIndex: 706
+{
+	// Fields
+	public int GoInfoIndex; // 0xB5A4A3A9
+
+	// Methods
+
+	// RVA: 0x8703538 Offset: 0x86FF538 VA: 0x8703538
+	public static ABLevelObjectInfo CreateInfoDataByType(EABLevelObjectInfoType type) { }
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public abstract EABLevelObjectInfoType GetABLevelObjectInfoType();
+
+	// RVA: 0x87035D4 Offset: 0x86FF5D4 VA: 0x87035D4
+	public void UnSerializedData(ref BinaryReader reader) { }
+
+	// RVA: -1 Offset: -1 Slot: 5
+	protected abstract void OnUnSerializedData(ref BinaryReader reader);
+
+	// RVA: -1 Offset: -1 Slot: 6
+	public abstract void ApplyData(GameObject inst_object);
+
+	// RVA: -1 Offset: -1 Slot: 7
+	public abstract bool CreateInfo(GameObject level_object);
+
+	// RVA: 0x8703638 Offset: 0x86FF638 VA: 0x8703638
+	protected void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class ABSceneInfo // TypeDefIndex: 707
+{
+	// Fields
+	public bool m_hasLMOrCollider; // 0xBE99FEBD
+	public List<ABSceneGOInfo> m_sceneGOInfoList; // 0xFCE2E3A4
+	public List<int> m_sharedSceneGOInfoList; // 0xA4A3A983
+	public GameObject m_rootGO; // 0x99FEBDB5
+
+	// Methods
+
+	// RVA: 0x8703640 Offset: 0x86FF640 VA: 0x8703640
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class ABScenePrefabRef // TypeDefIndex: 708
+{
+	// Fields
+	public GameObject m_prefab; // 0xA480A4BE
+	public int m_refCount; // 0xA983FCA2
+
+	// Methods
+
+	// RVA: 0x870371C Offset: 0x86FF71C VA: 0x870371C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum StreamerType // TypeDefIndex: 709
+{
+	// Fields
+	public int value__; // 0xBDB5A4A3
+	public const StreamerType HackDef = -1;
+	public const StreamerType None = 0;
+	public const StreamerType Default = 1;
+	public const StreamerType LLevelContainer = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public interface IStreamerFunc // TypeDefIndex: 710
+{
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract Transform GetTargetPlayer();
+
+	// RVA: -1 Offset: -1 Slot: 1
+	public abstract AsyncOperation LoadSceneAsync(string sourcePath, LoadSceneMode mode, bool forceSync = false);
+
+	// RVA: -1 Offset: -1 Slot: 2
+	public abstract AssetBundle GetStreamSceneAB();
+
+	// RVA: -1 Offset: -1 Slot: 3
+	public abstract Dictionary<int, List<CFIJFGBBLON>> GetStreamScenePatchAB();
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public abstract byte[] GetStreamSceneABTexRefInfo();
+
+	// RVA: -1 Offset: -1 Slot: 5
+	public abstract void OnLoadSceneFinish(bool result, string sourcePath);
+
+	// RVA: -1 Offset: -1 Slot: 6
+	public abstract void RepeatAction(float interval, Action action);
+
+	// RVA: -1 Offset: -1 Slot: 7
+	public abstract void NotifySceneEvent(StreamerType type, string name, GameObject go, bool loaded);
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public struct StreamerTypeComparer : IEqualityComparer<int> // TypeDefIndex: 711
+{
+	// Methods
+
+	// RVA: 0x8703724 Offset: 0x86FF724 VA: 0x8703724 Slot: 4
+	public bool Equals(int x, int y) { }
+
+	// RVA: 0x870373C Offset: 0x86FF73C VA: 0x870373C Slot: 5
+	public int GetHashCode(int obj) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class StreamerFuncDefaultImpl : IStreamerFunc // TypeDefIndex: 712
+{
+	// Methods
+
+	// RVA: 0x870374C Offset: 0x86FF74C VA: 0x870374C Slot: 4
+	public Transform GetTargetPlayer() { }
+
+	// RVA: 0x8703754 Offset: 0x86FF754 VA: 0x8703754 Slot: 5
+	public AsyncOperation LoadSceneAsync(string sourcePath, LoadSceneMode mode, bool forceSync = false) { }
+
+	// RVA: 0x870375C Offset: 0x86FF75C VA: 0x870375C Slot: 6
+	public AssetBundle GetStreamSceneAB() { }
+
+	// RVA: 0x8703764 Offset: 0x86FF764 VA: 0x8703764 Slot: 7
+	public Dictionary<int, List<CFIJFGBBLON>> GetStreamScenePatchAB() { }
+
+	// RVA: 0x870376C Offset: 0x86FF76C VA: 0x870376C Slot: 8
+	public byte[] GetStreamSceneABTexRefInfo() { }
+
+	// RVA: 0x8703774 Offset: 0x86FF774 VA: 0x8703774 Slot: 9
+	public void OnLoadSceneFinish(bool result, string sourcePath) { }
+
+	// RVA: 0x8703778 Offset: 0x86FF778 VA: 0x8703778 Slot: 10
+	public void RepeatAction(float interval, Action action) { }
+
+	// RVA: 0x870377C Offset: 0x86FF77C VA: 0x870377C Slot: 11
+	public void NotifySceneEvent(StreamerType type, string name, GameObject go, bool loaded) { }
+
+	// RVA: 0x8703780 Offset: 0x86FF780 VA: 0x8703780
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+private class StreamerFacade.VisibleFunc // TypeDefIndex: 713
+{
+	// Fields
+	public List<VisibleHandler> StaticHandler; // 0xFCE2E3A4
+	public List<VisibleHandler> DynamicHandler; // 0xA4A3A983
+	public List<VisibleHandler> StaticHandlerNeedAdd; // 0x99FEBDB5
+	public List<VisibleHandler> StaticHandlerNeedRemove; // 0xE2E3A4BE
+	public List<VisibleHandler> DynamicHandlerNeedRemove; // 0xA3A983FC
+
+	// Methods
+
+	// RVA: 0x8705AEC Offset: 0x8701AEC VA: 0x8705AEC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class StreamerFacade.VisibleHandler : MulticastDelegate // TypeDefIndex: 714
+{
+	// Methods
+
+	// RVA: 0x8706760 Offset: 0x8702760 VA: 0x8706760
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x8706800 Offset: 0x8702800 VA: 0x8706800 Slot: 13
+	public virtual void Invoke(Vector3 min, Vector3 max) { }
+
+	// RVA: 0x8706814 Offset: 0x8702814 VA: 0x8706814 Slot: 14
+	public virtual IAsyncResult BeginInvoke(Vector3 min, Vector3 max, AsyncCallback callback, object object) { }
+
+	// RVA: 0x87068BC Offset: 0x87028BC VA: 0x87068BC Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class StreamerFacade.<DispatchVisibleEnventDefaultStaticCo>d__39 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 715
+{
+	// Fields
+	private int <>1__state; // 0xFEBDB5A4
+	private object <>2__current; // 0xE3A4BE99
+	private VisibleFunc <streamerHandlers>5__2; // 0xBE85FCE2
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x87056F0 Offset: 0x87016F0 VA: 0x87056F0
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHidden]
+	// RVA: 0x87068C8 Offset: 0x87028C8 VA: 0x87068C8 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x87068CC Offset: 0x87028CC VA: 0x87068CC Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x8706ED8 Offset: 0x8702ED8 VA: 0x8706ED8 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x8706EE0 Offset: 0x8702EE0 VA: 0x8706EE0 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x8706F18 Offset: 0x8702F18 VA: 0x8706F18 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class StreamerFacade.<DispatchVisibleEnventLLevelObjectCo>d__45 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 716
+{
+	// Fields
+	private int <>1__state; // 0x95A9A4B9
+	private object <>2__current; // 0xBEB9B7BE
+	private VisibleFunc <streamerHandlers>5__2; // 0xB582FEB5
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x8705924 Offset: 0x8701924 VA: 0x8705924
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHidden]
+	// RVA: 0x8706F20 Offset: 0x8702F20 VA: 0x8706F20 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x8706F24 Offset: 0x8702F24 VA: 0x8706F24 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x8707530 Offset: 0x8703530 VA: 0x8707530 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x8707538 Offset: 0x8703538 VA: 0x8707538 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x8707570 Offset: 0x8703570 VA: 0x8707570 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public static class StreamerFacade // TypeDefIndex: 717
+{
+	// Fields
+	private static IStreamerFunc m_Impl; // 0xA2B5B4BE
+	private static Dictionary<int, VisibleFunc> m_Handler; // 0xFEB7BEB9
+	private static List<Streamer> m_streamerList; // 0xB8A3B59D
+	private static SimulationStreamer m_simulationStreamer; // 0xB1B4A085
+	private static bool mIsStreamingFinished; // 0xBC96B5A4
+	[CompilerGenerated]
+	private static int <SceneAddFailureCount>k__BackingField; // 0xF9A3B7B1
+	private static IEnumerator m_DefaultStaticFCO; // 0xB9BE85D0
+	private static Vector3 m_DefaultStaticMin; // 0xBE95A9A4
+	private static Vector3 m_DefaultStaticMax; // 0xB5BEB9B7
+	private static Enumerator<VisibleHandler> m_DefaultHandlers; // 0xA3B59DFE
+	private static int m_ResetTick; // 0x97EAEAB8
+	public static FTimer m_Timer; // 0xB586A4B5
+	private static IEnumerator m_LLevelObjectStaticFCO; // 0xA8B5A4A2
+	private static Vector3 m_LLevelObjectStaticMin; // 0xA2A4A491
+	private static Vector3 m_LLevelObjectStaticMax; // 0xA4A5B2B9
+	private static Enumerator<VisibleHandler> m_LLevelObjectHandlers; // 0xB99CA3B5
+
+	// Properties
+	public static bool IsMainStreamFinished { get; set; }
+	public static int SceneAddFailureCount { get; set; }
+
+	// Methods
+
+	// RVA: 0x8703788 Offset: 0x86FF788 VA: 0x8703788
+	public static void SetImpl(IStreamerFunc impl) { }
+
+	// RVA: 0x870381C Offset: 0x86FF81C VA: 0x870381C
+	public static Transform GetTargetPlayer() { }
+
+	// RVA: 0x87038F0 Offset: 0x86FF8F0 VA: 0x87038F0
+	public static AsyncOperation LoadSceneAsync(string sourcePath, LoadSceneMode mode, bool forceSync = false) { }
+
+	// RVA: 0x87039F0 Offset: 0x86FF9F0 VA: 0x87039F0
+	public static AssetBundle GetStreamSceneAB() { }
+
+	// RVA: 0x8703AC8 Offset: 0x86FFAC8 VA: 0x8703AC8
+	public static Dictionary<int, List<CFIJFGBBLON>> GetStreamScenePatchAB() { }
+
+	// RVA: 0x8703BA0 Offset: 0x86FFBA0 VA: 0x8703BA0
+	public static byte[] GetStreamSceneABTexRefInfo() { }
+
+	// RVA: 0x8703C78 Offset: 0x86FFC78 VA: 0x8703C78
+	public static void OnLoadSceneFinish(bool result, string sourcePath) { }
+
+	// RVA: 0x8703D68 Offset: 0x86FFD68 VA: 0x8703D68
+	public static void RepeatAction(float interval, Action action) { }
+
+	// RVA: 0x8703E60 Offset: 0x86FFE60 VA: 0x8703E60
+	public static void NotifySceneEvent(StreamerType type, string name, GameObject go, bool loaded) { }
+
+	// RVA: 0x8703F68 Offset: 0x86FFF68 VA: 0x8703F68
+	public static void set_IsMainStreamFinished(bool value) { }
+
+	// RVA: 0x8703FC8 Offset: 0x86FFFC8 VA: 0x8703FC8
+	public static bool get_IsMainStreamFinished() { }
+
+	[CompilerGenerated]
+	// RVA: 0x8704020 Offset: 0x8700020 VA: 0x8704020
+	public static int get_SceneAddFailureCount() { }
+
+	[CompilerGenerated]
+	// RVA: 0x8704078 Offset: 0x8700078 VA: 0x8704078
+	public static void set_SceneAddFailureCount(int value) { }
+
+	// RVA: 0x87040D4 Offset: 0x87000D4 VA: 0x87040D4
+	private static Streamer GetStreamer(StreamerType streamerType) { }
+
+	// RVA: 0x870424C Offset: 0x870024C VA: 0x870424C
+	private static LStreamer GetLStreamer(StreamerType streamerType) { }
+
+	// RVA: 0x87043C8 Offset: 0x87003C8 VA: 0x87043C8
+	public static void RegistLEntity(StreamerType streamerType, LEntity lEntity, bool isDynamic) { }
+
+	// RVA: 0x8704558 Offset: 0x8700558 VA: 0x8704558
+	public static void UnRegistLEntity(StreamerType streamerType, LEntity lEntity, bool isDynamic, bool removeLater = false) { }
+
+	// RVA: 0x8704678 Offset: 0x8700678 VA: 0x8704678
+	public static void RegistVisibleHandler(StreamerType type, VisibleHandler handler, bool isDynamic) { }
+
+	// RVA: 0x8704800 Offset: 0x8700800 VA: 0x8704800
+	public static void UnRegistVisibleHandler(StreamerType type, VisibleHandler handler, bool isDynamic, bool removeLater = false) { }
+
+	// RVA: 0x87049D8 Offset: 0x87009D8 VA: 0x87049D8
+	public static void DispatchVisibleEnvent(StreamerType type, bool isDynamic, Vector3 min, Vector3 max) { }
+
+	// RVA: 0x870516C Offset: 0x870116C VA: 0x870516C
+	public static void InvokeCallBack(StreamerType streamerType, VisibleHandler handler, Vector3 min, Vector3 max) { }
+
+	// RVA: 0x870543C Offset: 0x870143C VA: 0x870543C
+	public static void ResetTimer() { }
+
+	// RVA: 0x87054E4 Offset: 0x87014E4 VA: 0x87054E4
+	public static void DispatchVisibleEnventDefaultStaticTimeLimit(StreamerType type, bool isDynamic, Vector3 min, Vector3 max) { }
+
+	[IteratorStateMachine(typeof(<DispatchVisibleEnventDefaultStaticCo>d__39))]
+	// RVA: 0x8705698 Offset: 0x8701698 VA: 0x8705698
+	public static IEnumerator DispatchVisibleEnventDefaultStaticCo() { }
+
+	// RVA: 0x8705718 Offset: 0x8701718 VA: 0x8705718
+	public static void DispatchVisibleEnventLLevelObjectStaticTimeLimit(StreamerType type, bool isDynamic, Vector3 min, Vector3 max) { }
+
+	[IteratorStateMachine(typeof(<DispatchVisibleEnventLLevelObjectCo>d__45))]
+	// RVA: 0x87058CC Offset: 0x87018CC VA: 0x87058CC
+	public static IEnumerator DispatchVisibleEnventLLevelObjectCo() { }
+
+	// RVA: 0x870594C Offset: 0x870194C VA: 0x870594C
+	public static bool RegistStreamer(StreamerType type) { }
+
+	// RVA: 0x8705C04 Offset: 0x8701C04 VA: 0x8705C04
+	public static void UnRegistStreamer(StreamerType type) { }
+
+	// RVA: 0x8705D70 Offset: 0x8701D70 VA: 0x8705D70
+	public static void AddStreamer(Streamer streamer) { }
+
+	// RVA: 0x8705E54 Offset: 0x8701E54 VA: 0x8705E54
+	public static void StopAllStreamer() { }
+
+	// RVA: 0x8706180 Offset: 0x8702180 VA: 0x8706180
+	public static void ForceUpdatePositionChecker() { }
+
+	// RVA: 0x87062F4 Offset: 0x87022F4 VA: 0x87062F4
+	public static bool GetStreamerRange(out Vector3 min, out Vector3 max) { }
+
+	// RVA: 0x870640C Offset: 0x870240C VA: 0x870640C
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class IntArrayComparer : IEqualityComparer<int[]> // TypeDefIndex: 718
+{
+	// Methods
+
+	// RVA: 0x8707578 Offset: 0x8703578 VA: 0x8707578 Slot: 4
+	public bool Equals(int[] x, int[] y) { }
+
+	// RVA: 0x8707600 Offset: 0x8703600 VA: 0x8707600 Slot: 5
+	public int GetHashCode(int[] obj) { }
+
+	// RVA: 0x8707658 Offset: 0x8703658 VA: 0x8707658
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class ObjectsParent : MonoBehaviour // TypeDefIndex: 719
+{
+	// Fields
+	public string gameObjectPrefix; // 0x83F8A4A3
+
+	// Methods
+
+	// RVA: 0x8707660 Offset: 0x8703660 VA: 0x8707660
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public interface IAudioInterface // TypeDefIndex: 720
+{}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class IAudioInterfaceImplNone : IAudioInterface // TypeDefIndex: 721
+{
+	// Methods
+
+	// RVA: 0x8707668 Offset: 0x8703668 VA: 0x8707668
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public static class AudioFacade // TypeDefIndex: 722
+{
+	// Fields
+	private static IAudioInterface m_Impl; // 0xB5A4A3A9
+
+	// Methods
+
+	// RVA: 0x8707670 Offset: 0x8703670 VA: 0x8707670
+	public static void SetImpl(IAudioInterface impl) { }
+
+	// RVA: 0x8707704 Offset: 0x8703704 VA: 0x8707704
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public struct ArrayMap`1<TVal>.Enumerator<TVal> : IEnumerator<KeyValuePair<int, TVal>>, IEnumerator, IDisposable // TypeDefIndex: 723
+{
+	// Fields
+	private bool m_FallBackToDic; // 0xBF93FEBD
+	private int m_Index; // 0xB3B5BCBC
+	private int m_Length; // 0xBEBFB9A4
+	private object m_Current; // 0xB597FEA3
+	private IList m_InnerList; // 0xB9A2B5BE
+	private IDictionary m_InnerDic; // 0xB99CFEB3
+	private Enumerator<int, object> enumDic; // 0xE1B0A4A3
+	private object m_InvalidValue; // 0xB9BE85EC
+
+	// Properties
+	public KeyValuePair<int, TVal> Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	internal void .ctor(bool fallBackToDic, object[] array, Dictionary<int, object> dic) { }
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public KeyValuePair<int, TVal> get_Current() { }
+
+	// RVA: -1 Offset: -1 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+
+	// RVA: -1 Offset: -1 Slot: 5
+	public void Dispose() { }
+
+	// RVA: -1 Offset: -1 Slot: 6
+	public bool MoveNext() { }
+
+	// RVA: -1 Offset: -1 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[DefaultMember("Item")]
+public class ArrayMap`1<TVal> // TypeDefIndex: 724
+{
+	// Fields
+	private bool m_FallBackToDic; // 0xBE95A9A4
+	private Dictionary<int, object> m_FallBackDic; // 0xB5BEB9B7
+	private object[] m_ArrayMap; // 0xBEB582FE
+	private static readonly object m_InvalidValue; // 0xB9A2B5B4
+
+	// Properties
+	public int Count { get; }
+	public TVal Item { get; set; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(int count) { }
+
+	// RVA: -1 Offset: -1
+	public int get_Count() { }
+
+	// RVA: -1 Offset: -1
+	public TVal get_Item(int key) { }
+	// RVA: -1 Offset: -1
+	public void set_Item(int key, TVal value) { }
+
+	// RVA: -1 Offset: -1
+	public void Add(int key, TVal val) { }
+
+	// RVA: -1 Offset: -1
+	public void Clear() { }
+
+	// RVA: -1 Offset: -1
+	public bool ContainsKey(int key) { }
+
+	// RVA: -1 Offset: -1
+	public bool TryGetValue(int key, out TVal val) { }
+
+	// RVA: -1 Offset: -1
+	public bool Remove(int key) { }
+
+	// RVA: -1 Offset: -1
+	public Enumerator<TVal> GetEnumerator() { }
+
+	// RVA: -1 Offset: -1
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[DefaultMember("Item")]
+public class LazyDictionary`2<TKey, TValue> // TypeDefIndex: 725
+{
+	// Fields
+	private static readonly Enumerator<TKey, TValue> s_EmptyEnumerator; // 0x86FEB7BE
+	private Dictionary<TKey, TValue> m_InnerDic; // 0xB5A4A2B5
+
+	// Properties
+	public int Count { get; }
+	public TValue Item { get; set; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-LazyDictionary<BHGGAEEHJCO, int>..ctor
+	|-LazyDictionary<short, object>..ctor
+	|-LazyDictionary<int, bool>..ctor
+	|-LazyDictionary<int, Color>..ctor
+	|-LazyDictionary<int, object>..ctor
+	|-LazyDictionary<int, float>..ctor
+	|-LazyDictionary<object, object>..ctor
+	|-LazyDictionary<ResourceID, object>..ctor
+	|-LazyDictionary<uint, bool>..ctor
+	|-LazyDictionary<uint, object>..ctor
+	|-LazyDictionary<uint, float>..ctor
+	|-LazyDictionary<uint, uint>..ctor
+	|-LazyDictionary<uint, Vector3>..ctor
+	|-LazyDictionary<__Il2CppFullySharedGenericType, __Il2CppFullySharedGenericType>..ctor
+	*/
+
+	// RVA: -1 Offset: -1
+	public int get_Count() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-LazyDictionary<BHGGAEEHJCO, int>.get_Count
+	|-LazyDictionary<short, object>.get_Count
+	|-LazyDictionary<int, bool>.get_Count
+	|-LazyDictionary<int, Color>.get_Count
+	|-LazyDictionary<int, object>.get_Count
+	|-LazyDictionary<int, float>.get_Count
+	|-LazyDictionary<object, object>.get_Count
+	|-LazyDictionary<ResourceID, object>.get_Count
+	|-LazyDictionary<uint, bool>.get_Count
+	|-LazyDictionary<uint, object>.get_Count
+	|-LazyDictionary<uint, float>.get_Count
+	|-LazyDictionary<uint, uint>.get_Count
+	|-LazyDictionary<uint, Vector3>.get_Count
+	|-LazyDictionary<__Il2CppFullySharedGenericType, __Il2CppFullySharedGenericType>.get_Count
+	*/
+
+	// RVA: -1 Offset: -1
+	public TValue get_Item(TKey key) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-LazyDictionary<BHGGAEEHJCO, int>.get_Item
+	|-LazyDictionary<short, object>.get_Item
+	|-LazyDictionary<int, bool>.get_Item
+	|-LazyDictionary<int, Color>.get_Item
+	|-LazyDictionary<int, object>.get_Item
+	|-LazyDictionary<int, float>.get_Item
+	|-LazyDictionary<object, object>.get_Item
+	|-LazyDictionary<ResourceID, object>.get_Item
+	|-LazyDictionary<uint, bool>.get_Item
+	|-LazyDictionary<uint, object>.get_Item
+	|-LazyDictionary<uint, float>.get_Item
+	|-LazyDictionary<uint, uint>.get_Item
+	|-LazyDictionary<uint, Vector3>.get_Item
+	|-LazyDictionary<__Il2CppFullySharedGenericType, __Il2CppFullySharedGenericType>.get_Item
+	*/
+
+	// RVA: -1 Offset: -1
+	public void set_Item(TKey key, TValue value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-LazyDictionary<BHGGAEEHJCO, int>.set_Item
+	|-LazyDictionary<short, object>.set_Item
+	|-LazyDictionary<int, bool>.set_Item
+	|-LazyDictionary<int, Color>.set_Item
+	|-LazyDictionary<int, object>.set_Item
+	|-LazyDictionary<int, float>.set_Item
+	|-LazyDictionary<object, object>.set_Item
+	|-LazyDictionary<ResourceID, object>.set_Item
+	|-LazyDictionary<uint, bool>.set_Item
+	|-LazyDictionary<uint, object>.set_Item
+	|-LazyDictionary<uint, float>.set_Item
+	|-LazyDictionary<uint, uint>.set_Item
+	|-LazyDictionary<uint, Vector3>.set_Item
+	|-LazyDictionary<__Il2CppFullySharedGenericType, __Il2CppFullySharedGenericType>.set_Item
+	*/
+
+	// RVA: -1 Offset: -1
+	public void Add(TKey key, TValue value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-LazyDictionary<BHGGAEEHJCO, int>.Add
+	|-LazyDictionary<short, object>.Add
+	|-LazyDictionary<int, bool>.Add
+	|-LazyDictionary<int, Color>.Add
+	|-LazyDictionary<int, object>.Add
+	|-LazyDictionary<int, float>.Add
+	|-LazyDictionary<object, object>.Add
+	|-LazyDictionary<ResourceID, object>.Add
+	|-LazyDictionary<uint, bool>.Add
+	|-LazyDictionary<uint, object>.Add
+	|-LazyDictionary<uint, float>.Add
+	|-LazyDictionary<uint, uint>.Add
+	|-LazyDictionary<uint, Vector3>.Add
+	|-LazyDictionary<__Il2CppFullySharedGenericType, __Il2CppFullySharedGenericType>.Add
+	*/
+
+	// RVA: -1 Offset: -1
+	public void Clear() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-LazyDictionary<BHGGAEEHJCO, int>.Clear
+	|-LazyDictionary<short, object>.Clear
+	|-LazyDictionary<int, bool>.Clear
+	|-LazyDictionary<int, Color>.Clear
+	|-LazyDictionary<int, object>.Clear
+	|-LazyDictionary<int, float>.Clear
+	|-LazyDictionary<object, object>.Clear
+	|-LazyDictionary<ResourceID, object>.Clear
+	|-LazyDictionary<uint, bool>.Clear
+	|-LazyDictionary<uint, object>.Clear
+	|-LazyDictionary<uint, float>.Clear
+	|-LazyDictionary<uint, uint>.Clear
+	|-LazyDictionary<uint, Vector3>.Clear
+	|-LazyDictionary<__Il2CppFullySharedGenericType, __Il2CppFullySharedGenericType>.Clear
+	*/
+
+	// RVA: -1 Offset: -1
+	public bool ContainsKey(TKey key) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-LazyDictionary<BHGGAEEHJCO, int>.ContainsKey
+	|-LazyDictionary<short, object>.ContainsKey
+	|-LazyDictionary<int, bool>.ContainsKey
+	|-LazyDictionary<int, Color>.ContainsKey
+	|-LazyDictionary<int, object>.ContainsKey
+	|-LazyDictionary<int, float>.ContainsKey
+	|-LazyDictionary<object, object>.ContainsKey
+	|-LazyDictionary<ResourceID, object>.ContainsKey
+	|-LazyDictionary<uint, bool>.ContainsKey
+	|-LazyDictionary<uint, object>.ContainsKey
+	|-LazyDictionary<uint, float>.ContainsKey
+	|-LazyDictionary<uint, uint>.ContainsKey
+	|-LazyDictionary<uint, Vector3>.ContainsKey
+	|-LazyDictionary<__Il2CppFullySharedGenericType, __Il2CppFullySharedGenericType>.ContainsKey
+	*/
+
+	// RVA: -1 Offset: -1
+	public bool TryGetValue(TKey key, out TValue value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-LazyDictionary<BHGGAEEHJCO, int>.TryGetValue
+	|-LazyDictionary<short, object>.TryGetValue
+	|-LazyDictionary<int, bool>.TryGetValue
+	|-LazyDictionary<int, Color>.TryGetValue
+	|-LazyDictionary<int, object>.TryGetValue
+	|-LazyDictionary<int, float>.TryGetValue
+	|-LazyDictionary<object, object>.TryGetValue
+	|-LazyDictionary<ResourceID, object>.TryGetValue
+	|-LazyDictionary<uint, bool>.TryGetValue
+	|-LazyDictionary<uint, object>.TryGetValue
+	|-LazyDictionary<uint, float>.TryGetValue
+	|-LazyDictionary<uint, uint>.TryGetValue
+	|-LazyDictionary<uint, Vector3>.TryGetValue
+	|-LazyDictionary<__Il2CppFullySharedGenericType, __Il2CppFullySharedGenericType>.TryGetValue
+	*/
+
+	// RVA: -1 Offset: -1
+	public bool Remove(TKey key) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-LazyDictionary<BHGGAEEHJCO, int>.Remove
+	|-LazyDictionary<short, object>.Remove
+	|-LazyDictionary<int, bool>.Remove
+	|-LazyDictionary<int, Color>.Remove
+	|-LazyDictionary<int, object>.Remove
+	|-LazyDictionary<int, float>.Remove
+	|-LazyDictionary<object, object>.Remove
+	|-LazyDictionary<ResourceID, object>.Remove
+	|-LazyDictionary<uint, bool>.Remove
+	|-LazyDictionary<uint, object>.Remove
+	|-LazyDictionary<uint, float>.Remove
+	|-LazyDictionary<uint, uint>.Remove
+	|-LazyDictionary<uint, Vector3>.Remove
+	|-LazyDictionary<__Il2CppFullySharedGenericType, __Il2CppFullySharedGenericType>.Remove
+	*/
+
+	// RVA: -1 Offset: -1
+	private void EnsureCreated() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-LazyDictionary<BHGGAEEHJCO, int>.EnsureCreated
+	|-LazyDictionary<short, object>.EnsureCreated
+	|-LazyDictionary<int, bool>.EnsureCreated
+	|-LazyDictionary<int, Color>.EnsureCreated
+	|-LazyDictionary<int, object>.EnsureCreated
+	|-LazyDictionary<int, float>.EnsureCreated
+	|-LazyDictionary<object, object>.EnsureCreated
+	|-LazyDictionary<ResourceID, object>.EnsureCreated
+	|-LazyDictionary<uint, bool>.EnsureCreated
+	|-LazyDictionary<uint, object>.EnsureCreated
+	|-LazyDictionary<uint, float>.EnsureCreated
+	|-LazyDictionary<uint, uint>.EnsureCreated
+	|-LazyDictionary<uint, Vector3>.EnsureCreated
+	|-LazyDictionary<__Il2CppFullySharedGenericType, __Il2CppFullySharedGenericType>.EnsureCreated
+	*/
+
+	// RVA: -1 Offset: -1
+	public Enumerator<TKey, TValue> GetEnumerator() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-LazyDictionary<BHGGAEEHJCO, int>.GetEnumerator
+	|-LazyDictionary<short, object>.GetEnumerator
+	|-LazyDictionary<int, bool>.GetEnumerator
+	|-LazyDictionary<int, Color>.GetEnumerator
+	|-LazyDictionary<int, object>.GetEnumerator
+	|-LazyDictionary<int, float>.GetEnumerator
+	|-LazyDictionary<object, object>.GetEnumerator
+	|-LazyDictionary<ResourceID, object>.GetEnumerator
+	|-LazyDictionary<uint, bool>.GetEnumerator
+	|-LazyDictionary<uint, object>.GetEnumerator
+	|-LazyDictionary<uint, float>.GetEnumerator
+	|-LazyDictionary<uint, uint>.GetEnumerator
+	|-LazyDictionary<uint, Vector3>.GetEnumerator
+	|-LazyDictionary<__Il2CppFullySharedGenericType, __Il2CppFullySharedGenericType>.GetEnumerator
+	*/
+
+	// RVA: -1 Offset: -1
+	private static void .cctor() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-LazyDictionary<BHGGAEEHJCO, int>..cctor
+	|-LazyDictionary<short, object>..cctor
+	|-LazyDictionary<int, bool>..cctor
+	|-LazyDictionary<int, Color>..cctor
+	|-LazyDictionary<int, object>..cctor
+	|-LazyDictionary<int, float>..cctor
+	|-LazyDictionary<object, object>..cctor
+	|-LazyDictionary<ResourceID, object>..cctor
+	|-LazyDictionary<uint, bool>..cctor
+	|-LazyDictionary<uint, object>..cctor
+	|-LazyDictionary<uint, float>..cctor
+	|-LazyDictionary<uint, uint>..cctor
+	|-LazyDictionary<uint, Vector3>..cctor
+	|-LazyDictionary<__Il2CppFullySharedGenericType, __Il2CppFullySharedGenericType>..cctor
+	*/
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum TweenPropertyType // TypeDefIndex: 726
+{
+	// Fields
+	public int value__; // 0xA4A491A8
+	public const TweenPropertyType Float = 0;
+	public const TweenPropertyType Vector4 = 1;
+	public const TweenPropertyType Color = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum TweenPlayStyle // TypeDefIndex: 727
+{
+	// Fields
+	public int value__; // 0xA2BFA4A0
+	public const TweenPlayStyle Once = 0;
+	public const TweenPlayStyle Loop = 1;
+	public const TweenPlayStyle PingPong = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class TweenMaterialPropertyConfig // TypeDefIndex: 728
+{
+	// Fields
+	public TweenPropertyType PropertyType; // 0x9DFEB5BE
+	public string PropertyName; // 0xEAB8A3B5
+	public float FromFloat; // 0xA4B597EA
+	public float ToFloat; // 0xA4A2B586
+	public int Vec4Index; // 0xA491A8B5
+	public Gradient ColorGradient; // 0xB2B9A2A4
+	public TweenPlayStyle PlayStyle; // 0x93B5A4A5
+	public AnimationCurve Curve; // 0xA4BEA5BF
+	public float DurationTime; // 0xBCA0BD99
+	public float StartDelay; // 0x85D0F9F8
+
+	// Methods
+
+	// RVA: 0x8707780 Offset: 0x8703780 VA: 0x8707780
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class AdditiveEffectPlayableAsset : PlayableAsset // TypeDefIndex: 729
+{
+	// Fields
+	public Material OverideMaterial; // 0xA9A4B9BE
+	public bool IsTransparent; // 0xB9B7BE95
+	public GameObject EditorRigObject; // 0x9DFEB5BE
+	public string EditorRigObjectName; // 0xEAB8A3B5
+	[SerializeField]
+	private List<SkinnedMeshRenderer> m_CachedRenderers; // 0xA4B5A3EA
+	public bool EnableTweenMaterialProperty; // 0xA2B5A68F
+	public List<TweenMaterialPropertyConfig> TweenConfigs; // 0x92A8B5A4
+
+	// Methods
+
+	// RVA: 0x8707944 Offset: 0x8703944 VA: 0x8707944 Slot: 6
+	public override Playable CreatePlayable(PlayableGraph graph, GameObject go) { }
+
+	// RVA: 0x8707CB8 Offset: 0x8703CB8 VA: 0x8707CB8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class AdditiveEffectPlayableBehaviour : PlayableBehaviour // TypeDefIndex: 730
+{
+	// Fields
+	public Material OverideMaterial; // 0xB5B6B6A5
+	public GameObject BoundObject; // 0xA2B184A2
+	public bool IsTransparent; // 0xF8A4B5B7
+	public bool EnableTweenMaterialProperty; // 0xA4B9BE85
+	private List<TweenMaterialPropertyConfig> m_TweenConfigs; // 0xB7BE95A9
+	private List<int> m_TweenPropertyIDs; // 0xFEB5BEB9
+	private int m_EffectIndex; // 0xA0B1A297
+	private Player m_TargetPlayer; // 0xA3B3B9B8
+	private UIMaleAvatar m_TargetUIAvatar; // 0xB6B6A592
+	private bool m_IsBoundToUIAvatar; // 0x84FFA2B5
+	private SkinnedMeshRenderer m_TargetRenderer; // 0xB5B7A2B1
+	private SkinnedMeshRenderer[] m_TransformRenderers; // 0x85D0F9A4
+	private bool m_EffectsHidden; // 0xA9A4B9BE
+	private bool m_TransformEffectHidden; // 0xB9B7BE95
+	private List<SkinnedMeshRenderer> m_EffectHeadRenderers; // 0x9DFEB5BE
+	private bool m_BodyHideUsedForceRenderingOff; // 0xFFB8A3B5
+	private bool m_OriginalUpdateWhenOffscreen; // 0xB8A3B59D
+	private Bounds m_OriginalLocalBounds; // 0xB1A4B194
+	private List<bool> m_OriginalTransformUpdateWhenOffscreen; // 0xB1A2A291
+	private List<Bounds> m_OriginalTransformLocalBounds; // 0x93EAEAA9
+	private List<bool> m_OriginalEffectHeadUpdateWhenOffscreen; // 0xA4B1B5A2
+	private List<Bounds> m_OriginalEffectHeadLocalBounds; // 0xA7B59EB5
+	private Animator m_TargetAnimator; // 0xB8A3B59D
+	private AnimatorCullingMode m_OriginalAnimatorCullingMode; // 0xB1A4B194
+	private List<Material> m_OriginalMaterials; // 0xA983F8A3
+	private List<int> m_OriginalRenderQueues; // 0xBDB5A4A3
+	private static Dictionary<PlayableGraph, int> s_GraphExecuteCount; // 0xA4BE99FE
+
+	// Methods
+
+	// RVA: 0x8707AA4 Offset: 0x8703AA4 VA: 0x8707AA4
+	public void SetTweenConfigs(List<TweenMaterialPropertyConfig> configs) { }
+
+	// RVA: 0x8707D94 Offset: 0x8703D94 VA: 0x8707D94
+	private bool ShouldHideBodyViaForceRenderingOff() { }
+
+	// RVA: 0x8707E28 Offset: 0x8703E28 VA: 0x8707E28 Slot: 17
+	public override void OnBehaviourPlay(Playable playable, FrameData info) { }
+
+	// RVA: 0x8709710 Offset: 0x8705710 VA: 0x8709710
+	private Camera GetCurrentLobbyCamera() { }
+
+	// RVA: 0x870A350 Offset: 0x8706350 VA: 0x870A350 Slot: 18
+	public override void OnBehaviourPause(Playable playable, FrameData info) { }
+
+	// RVA: 0x870A99C Offset: 0x870699C VA: 0x870A99C Slot: 14
+	public override void OnGraphStop(Playable playable) { }
+
+	// RVA: 0x870ACF8 Offset: 0x8706CF8 VA: 0x870ACF8 Slot: 19
+	public override void PrepareFrame(Playable playable, FrameData info) { }
+
+	// RVA: 0x870B0A4 Offset: 0x87070A4 VA: 0x870B0A4
+	private void ApplyTweenValue(TweenMaterialPropertyConfig config, int propertyID, float progress) { }
+
+	// RVA: 0x870B2EC Offset: 0x87072EC VA: 0x870B2EC
+	private void OnPriorityRejected(int effectIndex) { }
+
+	// RVA: 0x870A674 Offset: 0x8706674 VA: 0x870A674
+	private void RestoreRendererVisibility() { }
+
+	// RVA: 0x870B3C0 Offset: 0x87073C0 VA: 0x870B3C0
+	private void RestoreClothEffectsVisibility() { }
+
+	// RVA: 0x8709980 Offset: 0x8705980 VA: 0x8709980
+	private void ApplyForceRenderingOff(SkinnedMeshRenderer renderer, int unused) { }
+
+	// RVA: 0x870B5E0 Offset: 0x87075E0 VA: 0x870B5E0
+	private void RestoreForceRenderingOff(SkinnedMeshRenderer renderer) { }
+
+	// RVA: 0x8709D00 Offset: 0x8705D00 VA: 0x8709D00
+	private void ApplyForceRenderingOffTransform(SkinnedMeshRenderer renderer, int index) { }
+
+	// RVA: 0x870B6A0 Offset: 0x87076A0 VA: 0x870B6A0
+	private void RestoreForceRenderingOffTransform(SkinnedMeshRenderer renderer, int index) { }
+
+	// RVA: 0x870A028 Offset: 0x8706028 VA: 0x870A028
+	private void ApplyForceRenderingOffEffectHead(SkinnedMeshRenderer renderer, int index) { }
+
+	// RVA: 0x870B7D0 Offset: 0x87077D0 VA: 0x870B7D0
+	private void RestoreForceRenderingOffEffectHead(SkinnedMeshRenderer renderer, int index) { }
+
+	// RVA: 0x8709AD0 Offset: 0x8705AD0 VA: 0x8709AD0
+	private void CollectAndModifyRenderQueues(Renderer renderer, int newQueue) { }
+
+	// RVA: 0x870B900 Offset: 0x8707900 VA: 0x870B900
+	private void RestoreRenderQueues() { }
+
+	// RVA: 0x870BA7C Offset: 0x8707A7C VA: 0x870BA7C
+	public void .ctor() { }
+
+	// RVA: 0x870BC9C Offset: 0x8707C9C VA: 0x870BC9C
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[TrackColor(0.8, 0.8, 0.8)]
+[TrackClipType(typeof(AdditiveEffectPlayableAsset))]
+[TrackBindingType(typeof(GameObject))]
+public class AdditiveEffectTrack : TrackAsset // TypeDefIndex: 731
+{
+	// Methods
+
+	// RVA: 0x870BD34 Offset: 0x8707D34 VA: 0x870BD34 Slot: 24
+	public override Playable CreateTrackMixer(PlayableGraph graph, GameObject go, int inputCount) { }
+
+	// RVA: 0x870BDD4 Offset: 0x8707DD4 VA: 0x870BDD4
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteAlways]
+[RequireComponent(typeof(MeshFilter))]
+[RequireComponent(typeof(MeshRenderer))]
+public class AlignNormal : MonoBehaviour // TypeDefIndex: 732
+{
+	// Fields
+	[Tooltip("射线检测距离")]
+	public float rayLength; // 0xFAA2A480
+	[Tooltip("射线检测的层级")]
+	public LayerMask layerMask; // 0xA3A983FC
+	[Tooltip("使用世界空间射线方向，关闭时使用当前物体的下方向")]
+	public bool useGlobalDirection; // 0xFEBDB5A4
+	[Tooltip("设置检测射线方向，开启使用世界空间射线方向时有效")]
+	public Vector3 rayDirection; // 0xE3A4BE99
+	[Tooltip("额外的位置偏移")]
+	public Vector3 positionOffset; // 0x85D0F9E2
+	[Tooltip("射线检测的位置偏移")]
+	public Vector3 raycastPositionOffset; // 0xA9A4B9BE
+	[Tooltip("是否是移动贴花")]
+	public bool isMovable; // 0xB9B7BE95
+	private int SubmeshCount; // 0x84FEB5BE
+	private List<Vector3> localVertices; // 0xA5A4A8B5
+	private List<Vector3> localNormal; // 0xEAEAB5A2
+	private Mesh mesh; // 0x8FA4B5A3
+	private Matrix4x4 cacheLocalToWorld; // 0xA3B9BEB1
+	private static readonly List<Vector3> originalVertices; // 0xA6B59CBF
+	private static readonly List<Vector3> originalNormal; // 0x83F8BCB5
+	private static readonly List<Vector2> uv; // 0xB5A4A3A9
+	private static readonly int[] triangles; // 0xBE99FEBD
+
+	// Methods
+
+	// RVA: 0x870BE2C Offset: 0x8707E2C VA: 0x870BE2C
+	private void Awake() { }
+
+	// RVA: 0x870C250 Offset: 0x8708250 VA: 0x870C250
+	private void OnEnable() { }
+
+	// RVA: 0x870C924 Offset: 0x8708924 VA: 0x870C924
+	private void Update() { }
+
+	// RVA: 0x870C9C4 Offset: 0x87089C4 VA: 0x870C9C4
+	private void OnDestroy() { }
+
+	// RVA: 0x870BE30 Offset: 0x8707E30 VA: 0x870BE30
+	private void CreateMesh() { }
+
+	// RVA: 0x870C254 Offset: 0x8708254 VA: 0x870C254
+	public void UpdateImp() { }
+
+	// RVA: 0x870CA8C Offset: 0x8708A8C VA: 0x870CA8C
+	private void CalculateBasisVectors(Vector3 normal, out Vector3 basisx, out Vector3 basisz) { }
+
+	// RVA: 0x870CDA0 Offset: 0x8708DA0 VA: 0x870CDA0
+	public void .ctor() { }
+
+	// RVA: 0x870CEB4 Offset: 0x8708EB4 VA: 0x870CEB4
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum CameraReflection.SizeEnum // TypeDefIndex: 733
+{
+	// Fields
+	public int value__; // 0xF9E2E3A4
+	public const SizeEnum Sixteenth = 64;
+	public const SizeEnum Eighth = 128;
+	public const SizeEnum Quarter = 256;
+	public const SizeEnum Half = 512;
+	public const SizeEnum One = 1024;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum CameraReflection.ReflectDistrict // TypeDefIndex: 734
+{
+	// Fields
+	public int value__; // 0xBE99EAEA
+	public const ReflectDistrict Sea = 0;
+	public const ReflectDistrict Dam = 1;
+	public const ReflectDistrict UnderDam = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[RequireComponent(typeof(Camera))]
+public class CameraReflection : MonoBehaviour // TypeDefIndex: 735
+{
+	// Fields
+	public const int DISTRICT_COUNT = 3;
+	public CameraClearFlags clearFlag; // 0xA4A8B584
+	public Color backgroundColor; // 0x93B5A2A5
+	public SizeEnum sizeType; // 0xA2BFBCBF
+
+	// Methods
+
+	// RVA: 0x870E290 Offset: 0x870A290 VA: 0x870E290
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[DisallowMultipleComponent]
+public class KeepFacingCameraInVertical : MonoBehaviour // TypeDefIndex: 736
+{
+	// Methods
+
+	// RVA: 0x870E2B4 Offset: 0x870A2B4 VA: 0x870E2B4
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum PlanarReflection.SizeEnum // TypeDefIndex: 737
+{
+	// Fields
+	public int value__; // 0xB3B1A083
+	public const SizeEnum Sixteenth = 64;
+	public const SizeEnum Eighth = 128;
+	public const SizeEnum Quarter = 256;
+	public const SizeEnum Half = 512;
+	public const SizeEnum One = 1024;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class PlanarReflection : MonoBehaviour // TypeDefIndex: 738
+{
+	// Fields
+	public SizeEnum m_sizeType; // 0xEAA0B1BD
+	public Camera m_mainCamera; // 0xA4B5B7EA
+	public Camera m_reflectionCamera; // 0x82A3B98F
+	private Material m_reflectionMaterial; // 0xB1B4B1B5
+	private RenderTexture m_reflectionRT; // 0xF8B5BCB2
+	private int m_reflectionRTsize; // 0xBE85D0F9
+	private int m_reflectionTexID; // 0x95A9A4B9
+	private Matrix4x4 m_reflectMatrix; // 0xBEB9B7BE
+
+	// Methods
+
+	// RVA: 0x870E2BC Offset: 0x870A2BC VA: 0x870E2BC
+	private void Start() { }
+
+	// RVA: 0x870E7E8 Offset: 0x870A7E8 VA: 0x870E7E8
+	private void LateUpdate() { }
+
+	// RVA: 0x870E51C Offset: 0x870A51C VA: 0x870E51C
+	private void UpdateRefCamera() { }
+
+	// RVA: 0x870E8CC Offset: 0x870A8CC VA: 0x870E8CC
+	private void OnDestroy() { }
+
+	// RVA: 0x870E9DC Offset: 0x870A9DC VA: 0x870E9DC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum ReflectionDownsampleMode // TypeDefIndex: 739
+{
+	// Fields
+	public int value__; // 0xB582FEB5
+	public const ReflectionDownsampleMode Half = 2;
+	public const ReflectionDownsampleMode Quarter = 4;
+	public const ReflectionDownsampleMode Eighth = 8;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+public class PlanarReflectionPro : MonoSingleton<PlanarReflectionPro> // TypeDefIndex: 740
+{
+	// Fields
+	public LayerMask _reflectionMask; // 0xA4B5B7EA
+	public bool _reflectSkybox; // 0xA4BEB18F
+	public float _clipPlaneOffset; // 0xB9BC91B9
+	private const string _reflectionTex = "_ReflectionTex";
+	public Material _sharedMaterial; // 0xD0F9F8B7
+	public ReflectionDownsampleMode _downsample; // 0xA4B9BE85
+	private static Camera s_reflectionCamera; // 0xB7BE95A9
+	private static bool s_insideRendering; // 0xFEB5BEB9
+	private ReflectionDownsampleMode _oldDownsample; // 0xA4B9BE85
+	private bool _oldReflectSkybox; // 0xB7BF9CA9
+	private LayerMask _oldReflectionMask; // 0xA4B9A287
+	private bool _cameraSettingsDirty; // 0xEAEAA2B5
+	private static int s_lastRTWidth; // 0xA4B9A287
+	private static int s_lastRTHeight; // 0xA2A483B5
+	private static bool s_lastHDR; // 0x84B7BEB9
+
+	// Methods
+
+	// RVA: 0x870E9F0 Offset: 0x870A9F0 VA: 0x870E9F0 Slot: 4
+	protected override void Awake() { }
+
+	// RVA: 0x870EA54 Offset: 0x870AA54 VA: 0x870EA54
+	private void OnEnable() { }
+
+	// RVA: 0x870EB60 Offset: 0x870AB60 VA: 0x870EB60
+	private void Update() { }
+
+	// RVA: 0x870EBE0 Offset: 0x870ABE0 VA: 0x870EBE0
+	private void ReleaseRenderTextures() { }
+
+	// RVA: 0x870ED18 Offset: 0x870AD18 VA: 0x870ED18
+	private Camera CreateReflectionCamera(Camera cam) { }
+
+	// RVA: 0x870EE48 Offset: 0x870AE48 VA: 0x870EE48
+	private void HoldCameraSettings(Camera helperCam) { }
+
+	// RVA: 0x870EEFC Offset: 0x870AEFC VA: 0x870EEFC
+	private RenderTexture CreateTexture(Camera sourceCam) { }
+
+	// RVA: 0x870EFFC Offset: 0x870AFFC VA: 0x870EFFC
+	private bool NeedsRTRebuild(Camera cam) { }
+
+	// RVA: 0x870F0B8 Offset: 0x870B0B8 VA: 0x870F0B8
+	private void OnWillRenderObject() { }
+
+	// RVA: 0x870F3E0 Offset: 0x870B3E0 VA: 0x870F3E0
+	private void RenderReflection(Camera currentCam, Camera reflectCamera) { }
+
+	// RVA: 0x870FCEC Offset: 0x870BCEC VA: 0x870FCEC
+	private static Matrix4x4 CalculateObliqueMatrix(Matrix4x4 projection, Vector4 clipPlane) { }
+
+	// RVA: 0x870FB44 Offset: 0x870BB44 VA: 0x870FB44
+	private Vector4 CameraSpacePlane(Camera cam, float planeY) { }
+
+	// RVA: 0x870FE4C Offset: 0x870BE4C VA: 0x870FE4C Slot: 6
+	protected override void OnDestroy() { }
+
+	// RVA: 0x870FFE0 Offset: 0x870BFE0 VA: 0x870FFE0
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class PlannarShadowRenderer.OnPLShadowContainerChanged : MulticastDelegate // TypeDefIndex: 741
+{
+	// Methods
+
+	// RVA: 0x8710488 Offset: 0x870C488 VA: 0x8710488
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x8710594 Offset: 0x870C594 VA: 0x8710594 Slot: 13
+	public virtual void Invoke(PlannarShadowRenderer shadowRenderer, bool isAdd) { }
+
+	// RVA: 0x87105AC Offset: 0x870C5AC VA: 0x87105AC Slot: 14
+	public virtual IAsyncResult BeginInvoke(PlannarShadowRenderer shadowRenderer, bool isAdd, AsyncCallback callback, object object) { }
+
+	// RVA: 0x8710644 Offset: 0x870C644 VA: 0x8710644 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class PlannarShadowRenderer : MonoBehaviour // TypeDefIndex: 742
+{
+	// Fields
+	public CommandBuffer commandBuffer; // 0xB9BE85BF
+	public Camera drawCamera; // 0xBF9CA9A4
+	public bool inconsistentCamera; // 0xA0BD99B7
+	public OnPLShadowContainerChanged onContainerChanged; // 0xA983F8BC
+
+	// Methods
+
+	// RVA: 0x8710054 Offset: 0x870C054 VA: 0x8710054
+	private void OnEnable() { }
+
+	// RVA: 0x87100E8 Offset: 0x870C0E8 VA: 0x87100E8
+	private void OnDisable() { }
+
+	// RVA: 0x871017C Offset: 0x870C17C VA: 0x871017C
+	private void OnDestroy() { }
+
+	// RVA: 0x87101F8 Offset: 0x870C1F8 VA: 0x87101F8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class ReflectionReceiver : MonoBehaviour // TypeDefIndex: 743
+{
+	// Methods
+
+	// RVA: 0x8710650 Offset: 0x870C650 VA: 0x8710650
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class RendererVisibilityNotifier : MonoBehaviour // TypeDefIndex: 744
+{
+	// Fields
+	[CompilerGenerated]
+	private Action<RendererVisibilityNotifier> BecameVisibleEvent; // 0xBDB5A4A3
+	[CompilerGenerated]
+	private Action<RendererVisibilityNotifier> BecameInvisibleEvent; // 0xA2A483FE
+
+	// Methods
+
+	[CompilerGenerated]
+	// RVA: 0x8710658 Offset: 0x870C658 VA: 0x8710658
+	public void add_BecameVisibleEvent(Action<RendererVisibilityNotifier> value) { }
+
+	[CompilerGenerated]
+	// RVA: 0x8710708 Offset: 0x870C708 VA: 0x8710708
+	public void remove_BecameVisibleEvent(Action<RendererVisibilityNotifier> value) { }
+
+	[CompilerGenerated]
+	// RVA: 0x87107B8 Offset: 0x870C7B8 VA: 0x87107B8
+	public void add_BecameInvisibleEvent(Action<RendererVisibilityNotifier> value) { }
+
+	[CompilerGenerated]
+	// RVA: 0x8710868 Offset: 0x870C868 VA: 0x8710868
+	public void remove_BecameInvisibleEvent(Action<RendererVisibilityNotifier> value) { }
+
+	// RVA: 0x8710918 Offset: 0x870C918 VA: 0x8710918
+	private void OnBecameVisible() { }
+
+	// RVA: 0x8710938 Offset: 0x870C938 VA: 0x8710938
+	private void OnBecameInvisible() { }
+
+	// RVA: 0x8710958 Offset: 0x870C958 VA: 0x8710958
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public struct SampleCachedPointsData.PointInfo // TypeDefIndex: 745
+{
+	// Fields
+	public Vector3 Pos; // 0xF9B7BEB9
+	public Vector3 Normal; // 0xB9BE85D0
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class SampleCachedPointsData : ScriptableObject // TypeDefIndex: 746
+{
+	// Fields
+	public PointInfo[] Points; // 0xBE95A9A4
+	[HideInInspector]
+	public int Num; // 0xB5BEB9B7
+
+	// Methods
+
+	// RVA: 0x8710960 Offset: 0x870C960 VA: 0x8710960
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[RequireComponent(typeof(LineRenderer))]
+[ExecuteInEditMode]
+public class CustomTrail : MonoBehaviour // TypeDefIndex: 747
+{
+	// Fields
+	public Transform customSpace; // 0xA8B584FE
+	public float trailTime; // 0xA3A391A4
+	public float pointSpacing; // 0xEAEAA4B5
+	private List<Vector3> localPoints; // 0x94A4B597
+	private List<float> timeStamps; // 0x80B1A4B1
+	private LineRenderer line; // 0xF9F8A2A4
+
+	// Methods
+
+	// RVA: 0x8710968 Offset: 0x870C968 VA: 0x8710968
+	private void Start() { }
+
+	// RVA: 0x8710CC0 Offset: 0x870CCC0 VA: 0x8710CC0
+	private void Update() { }
+
+	// RVA: 0x871106C Offset: 0x870D06C VA: 0x871106C
+	private float GetTime() { }
+
+	// RVA: 0x8710A9C Offset: 0x870CA9C VA: 0x8710A9C
+	private void AddPoint(Nullable<Vector3> localPos, Nullable<float> time) { }
+
+	// RVA: 0x8711074 Offset: 0x870D074 VA: 0x8711074
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class VFXColoring.VFXColoringSetting // TypeDefIndex: 748
+{
+	// Fields
+	public string Name; // 0xB9BE85D0
+	public List<float> RenderersWeight; // 0xBE95A9A4
+	public Color Highlights; // 0xB5BEB9B7
+	public Color Midtones; // 0xBAB29FFE
+	public Color Shadows; // 0xEAA4B3B5
+
+	// Methods
+
+	// RVA: 0x87116B4 Offset: 0x870D6B4 VA: 0x87116B4
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class VFXColoring : MonoBehaviour // TypeDefIndex: 749
+{
+	// Fields
+	public int SettingsIndex; // 0xBEBF94EA
+	public List<VFXColoringSetting> ColoringSettings; // 0xA3B594A4
+	public List<Renderer> RenderersScanned; // 0xA9BFA2A4
+	public List<Renderer> Renderers; // 0xBF9CBE9F
+	public List<int> RenderersChildLayer; // 0x85F8B4B1
+	public List<bool> RenderersChildFold; // 0xA9A4B9BE
+	public bool _NULL_RenderersFold; // 0xB9B7BE95
+	public bool _NULL_ColoringFold; // 0x9FFEB5BE
+	private static int ColorId; // 0xB3B5BAB2
+	private static int TintId; // 0x93D0F9A4
+	private static int ColorTexId; // 0xBFBEBEB1
+	private static bool propIdsReady; // 0xB1BDF0A4
+
+	// Methods
+
+	// RVA: 0x871115C Offset: 0x870D15C VA: 0x871115C
+	private static void EnsurePropIds() { }
+
+	// RVA: 0x8711234 Offset: 0x870D234 VA: 0x8711234
+	public void ApplySettings(int index) { }
+
+	// RVA: 0x871123C Offset: 0x870D23C VA: 0x871123C
+	public void ChangeMaterialColors() { }
+
+	// RVA: 0x8711558 Offset: 0x870D558 VA: 0x8711558
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+public class VFXSampleCachedPoints : MonoBehaviour // TypeDefIndex: 750
+{
+	// Fields
+	private const int MAX_SURFACE_POINTS = 200;
+	public SampleCachedPointsData SampleCachedPointsData; // 0xB9B6F0BC
+	[Range(0, 200)]
+	public int CacheDataSize; // 0xF0B4BCB5
+
+	// Methods
+
+	// RVA: 0x871177C Offset: 0x870D77C VA: 0x871177C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+public class VignetteEffect : MonoBehaviour // TypeDefIndex: 751
+{
+	// Fields
+	public Shader curShader; // 0x878FBDF7
+	public float VignettePower; // 0x98A4B9B1
+	private Material curMaterial; // 0xBCB4BEB1
+
+	// Properties
+	private Material material { get; }
+
+	// Methods
+
+	// RVA: 0x871178C Offset: 0x870D78C VA: 0x871178C
+	private Material get_material() { }
+
+	// RVA: 0x871185C Offset: 0x870D85C VA: 0x871185C
+	private void Start() { }
+
+	// RVA: 0x871188C Offset: 0x870D88C VA: 0x871188C
+	private void OnRenderImage(RenderTexture sourceTexture, RenderTexture destTexture) { }
+
+	// RVA: 0x87119B0 Offset: 0x870D9B0 VA: 0x87119B0
+	private void OnDisable() { }
+
+	// RVA: 0x8711A3C Offset: 0x870DA3C VA: 0x8711A3C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class AnimationClipEvent : MonoBehaviour // TypeDefIndex: 752
+{
+	// Methods
+
+	// RVA: 0x8711A4C Offset: 0x870DA4C VA: 0x8711A4C
+	public void AnimationHide() { }
+
+	// RVA: 0x8711AF4 Offset: 0x870DAF4 VA: 0x8711AF4
+	public void AnimationShow() { }
+
+	// RVA: 0x8711B9C Offset: 0x870DB9C VA: 0x8711B9C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+public class ActiveOnBaking : MonoBehaviour // TypeDefIndex: 753
+{
+	// Methods
+
+	// RVA: 0x8711BA4 Offset: 0x870DBA4 VA: 0x8711BA4
+	public void Active() { }
+
+	// RVA: 0x8711EC4 Offset: 0x870DEC4 VA: 0x8711EC4
+	public void Deactive() { }
+
+	// RVA: 0x87121E4 Offset: 0x870E1E4 VA: 0x87121E4
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class AvoidBatching : MonoBehaviour // TypeDefIndex: 754
+{
+	// Methods
+
+	// RVA: 0x87121EC Offset: 0x870E1EC VA: 0x87121EC
+	private void Start() { }
+
+	// RVA: 0x871230C Offset: 0x870E30C VA: 0x871230C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class BoxColToMeshCol : MonoBehaviour // TypeDefIndex: 755
+{
+	// Methods
+
+	// RVA: 0x8712314 Offset: 0x870E314 VA: 0x8712314
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class CameraFogSetting : MonoBehaviour // TypeDefIndex: 756
+{
+	// Fields
+	public bool needFog; // 0xBFF0F7B5
+	private bool doWeHaveFogInScene; // 0xA9A4F0B6
+
+	// Methods
+
+	// RVA: 0x871231C Offset: 0x870E31C VA: 0x871231C
+	private void OnPreRender() { }
+
+	// RVA: 0x8712348 Offset: 0x870E348 VA: 0x8712348
+	private void OnPostRender() { }
+
+	// RVA: 0x8712354 Offset: 0x870E354 VA: 0x8712354
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class CameraUtility // TypeDefIndex: 757
+{
+	// Methods
+
+	// RVA: 0x871235C Offset: 0x870E35C VA: 0x871235C
+	public static Camera GetMainCamera() { }
+
+	// RVA: 0x8712454 Offset: 0x870E454 VA: 0x8712454
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class CopyBonesToUMA : MonoBehaviour // TypeDefIndex: 758
+{
+	// Fields
+	private const string COPY_BONE_PREFIX = "Copy_";
+	private Renderer m_umaRenderer; // 0xBBA2BF87
+	[SerializeField]
+	public GameObject targetGameObject; // 0xA5A1B582
+	private SkinnedMeshRenderer[] skinnedRenderers; // 0xF7A4A3B5
+	private UMAData m_umaData; // 0xB582F0EA
+
+	// Methods
+
+	// RVA: 0x871245C Offset: 0x870E45C VA: 0x871245C
+	private void Start() { }
+
+	// RVA: 0x871254C Offset: 0x870E54C VA: 0x871254C
+	private void FindRender() { }
+
+	// RVA: 0x871278C Offset: 0x870E78C VA: 0x871278C
+	private UMAData FindUMAData(GameObject go) { }
+
+	// RVA: 0x8712BD8 Offset: 0x870EBD8 VA: 0x8712BD8
+	private void OnUMARendererFound() { }
+
+	// RVA: 0x8712BDC Offset: 0x870EBDC VA: 0x8712BDC
+	private void InitializeSkinnedRenderers() { }
+
+	// RVA: 0x8712644 Offset: 0x870E644 VA: 0x8712644
+	private bool RebindAllSkinnedRenderers() { }
+
+	// RVA: 0x8712E60 Offset: 0x870EE60 VA: 0x8712E60
+	private bool RebindSingleSkinnedRenderer(SkinnedMeshRenderer renderer, Transform boneRoot) { }
+
+	// RVA: 0x8712C88 Offset: 0x870EC88 VA: 0x8712C88
+	private Transform FindBoneRoot() { }
+
+	// RVA: 0x8713038 Offset: 0x870F038 VA: 0x8713038
+	private Transform FindBoneInHierarchy(Transform root, string boneName) { }
+
+	// RVA: 0x8713130 Offset: 0x870F130 VA: 0x8713130
+	private bool RebindBones(SkinnedMeshRenderer renderer) { }
+
+	// RVA: 0x871341C Offset: 0x870F41C VA: 0x871341C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[DefaultMember("Item")]
+public interface IIndexString // TypeDefIndex: 759
+{
+	// Properties
+	public abstract string Item { get; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract string get_Item(int index);
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+private enum CustomVideoPlayer.ActionType // TypeDefIndex: 760
+{
+	// Fields
+	public int value__; // 0xB5A2B5B6
+	public const ActionType Prepare = 9413;
+	public const ActionType Play = 9414;
+	public const ActionType Pause = 9415;
+	public const ActionType Update = 9416;
+	public const ActionType Destroy = 9417;
+	public const ActionType ClearException = 9418;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+private enum CustomVideoPlayer.CallbackType // TypeDefIndex: 761
+{
+	// Fields
+	public int value__; // 0xA3B9F0B7
+	public const CallbackType PrepareCB = 9413;
+	public const CallbackType PlayCB = 9414;
+	public const CallbackType PauseCB = 9415;
+	public const CallbackType SeekToCB = 9416;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class CustomVideoPlayer.PrepareCallbackSta : MulticastDelegate // TypeDefIndex: 762
+{
+	// Methods
+
+	// RVA: 0x3617E90 Offset: 0x3613E90 VA: 0x3617E90
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x3617F2C Offset: 0x3613F2C VA: 0x3617F2C Slot: 13
+	public virtual void Invoke() { }
+
+	// RVA: 0x3617F40 Offset: 0x3613F40 VA: 0x3617F40 Slot: 14
+	public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
+
+	// RVA: 0x3617F60 Offset: 0x3613F60 VA: 0x3617F60 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class CustomVideoPlayer.PlayCallbackSta : MulticastDelegate // TypeDefIndex: 763
+{
+	// Methods
+
+	// RVA: 0x3617FC0 Offset: 0x3613FC0 VA: 0x3617FC0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x361805C Offset: 0x361405C VA: 0x361805C Slot: 13
+	public virtual void Invoke() { }
+
+	// RVA: 0x3618070 Offset: 0x3614070 VA: 0x3618070 Slot: 14
+	public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
+
+	// RVA: 0x3618090 Offset: 0x3614090 VA: 0x3618090 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class CustomVideoPlayer.PauseCallbackSta : MulticastDelegate // TypeDefIndex: 764
+{
+	// Methods
+
+	// RVA: 0x36180F0 Offset: 0x36140F0 VA: 0x36180F0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x361818C Offset: 0x361418C VA: 0x361818C Slot: 13
+	public virtual void Invoke() { }
+
+	// RVA: 0x36181A0 Offset: 0x36141A0 VA: 0x36181A0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
+
+	// RVA: 0x36181C0 Offset: 0x36141C0 VA: 0x36181C0 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class CustomVideoPlayer.SeekToCallbackSta : MulticastDelegate // TypeDefIndex: 765
+{
+	// Methods
+
+	// RVA: 0x3618220 Offset: 0x3614220 VA: 0x3618220
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x36182BC Offset: 0x36142BC VA: 0x36182BC Slot: 13
+	public virtual void Invoke() { }
+
+	// RVA: 0x36182D0 Offset: 0x36142D0 VA: 0x36182D0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
+
+	// RVA: 0x36182F0 Offset: 0x36142F0 VA: 0x36182F0 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+private class CustomVideoPlayer.InstanceData // TypeDefIndex: 766
+{
+	// Fields
+	public bool isInit; // 0xA4B9BE85
+	public bool isAction; // 0xB7BE95A9
+	public Texture2D outTexture; // 0xFEB5BEB9
+	public List<uint> callbackList; // 0xA0BDBF93
+	public PrepareCallbackSta prepareCallback; // 0x83B5A4A5
+	public PlayCallbackSta playCallback; // 0xB5B4B1B8
+	public PauseCallbackSta pauseCallback; // 0x96EAEAA2
+	public SeekToCallbackSta seekToCallback; // 0x9BB4BEB9
+
+	// Methods
+
+	// RVA: 0x36182FC Offset: 0x36142FC VA: 0x36182FC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[UnmanagedFunctionPointer(2)]
+private sealed class CustomVideoPlayer.CallbackCoreSta : MulticastDelegate // TypeDefIndex: 767
+{
+	// Methods
+
+	// RVA: 0x3618400 Offset: 0x3614400 VA: 0x3618400
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x36184A0 Offset: 0x36144A0 VA: 0x36184A0 Slot: 13
+	public virtual void Invoke(int handle, uint callbackType) { }
+
+	// RVA: 0x36184B4 Offset: 0x36144B4 VA: 0x36184B4 Slot: 14
+	public virtual IAsyncResult BeginInvoke(int handle, uint callbackType, AsyncCallback callback, object object) { }
+
+	// RVA: 0x361856C Offset: 0x361456C VA: 0x361856C Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class CustomVideoPlayer // TypeDefIndex: 768
+{
+	// Fields
+	private static int s_NextHandle; // 0xB5BEA2B5
+	private static Dictionary<int, InstanceData> s_Instances; // 0xA983F8BC
+	private static Mutex s_Mutex; // 0xBDB5A4A3
+	private static bool s_NativeCallbackInited; // 0xA2A483FE
+	private static CallbackCoreSta s_CallbackCoreDelegate; // 0xF9B7BEB9
+
+	// Methods
+
+	// RVA: 0x87135E4 Offset: 0x870F5E4 VA: 0x87135E4
+	private static extern int CV_MakeEventID(int handle, int action) { }
+
+	// RVA: 0x8713668 Offset: 0x870F668 VA: 0x8713668
+	private static extern void CV_SetVideoClip(int handle, string path, ulong offset, ulong size, float volume) { }
+
+	// RVA: 0x8713728 Offset: 0x870F728 VA: 0x8713728
+	private static extern void CV_SetVideoClipWithURL(int handle, string path, float volume) { }
+
+	// RVA: 0x87137D0 Offset: 0x870F7D0 VA: 0x87137D0
+	private static extern void CV_SetOutTexture(int handle, IntPtr id, int width, int height) { }
+
+	// RVA: 0x871386C Offset: 0x870F86C VA: 0x871386C
+	private static extern void CV_SetTime(int handle, int time) { }
+
+	// RVA: 0x87138F0 Offset: 0x870F8F0 VA: 0x87138F0
+	private static extern void CV_SetLooping(int handle, bool isLooping) { }
+
+	// RVA: 0x8713974 Offset: 0x870F974 VA: 0x8713974
+	private static extern void CV_SetCallbackCore(int handle, IntPtr callbackPtr) { }
+
+	// RVA: 0x87139F8 Offset: 0x870F9F8 VA: 0x87139F8
+	private static extern int CV_GetTime(int handle) { }
+
+	// RVA: 0x8713A74 Offset: 0x870FA74 VA: 0x8713A74
+	private static extern int CV_GetDuration(int handle) { }
+
+	// RVA: 0x8713AF0 Offset: 0x870FAF0 VA: 0x8713AF0
+	private static extern bool CV_IsLooping(int handle) { }
+
+	// RVA: 0x8713B74 Offset: 0x870FB74 VA: 0x8713B74
+	private static extern bool CV_IsPlaying(int handle) { }
+
+	[MonoPInvokeCallback(typeof(CallbackCoreSta))]
+	[SafeOnAnyThread("???")]
+	// RVA: 0x8713470 Offset: 0x870F470 VA: 0x8713470
+	private static void CallbackCoreDef(int handle, uint callbackType) { }
+
+	// RVA: 0x8713BF8 Offset: 0x870FBF8 VA: 0x8713BF8
+	private static void EnsureNativeCallback() { }
+
+	// RVA: 0x8713CD0 Offset: 0x870FCD0 VA: 0x8713CD0
+	private static InstanceData GetOrCreate(int handle) { }
+
+	// RVA: 0x8713DDC Offset: 0x870FDDC VA: 0x8713DDC
+	public static int AllocHandle() { }
+
+	// RVA: 0x8713EA0 Offset: 0x870FEA0 VA: 0x8713EA0
+	public static Texture2D GetTexture(int handle) { }
+
+	// RVA: 0x8713F4C Offset: 0x870FF4C VA: 0x8713F4C
+	public static void SetTime(int handle, int time) { }
+
+	// RVA: 0x8713FE8 Offset: 0x870FFE8 VA: 0x8713FE8
+	public static void SetLooping(int handle, bool isLooping) { }
+
+	// RVA: 0x8714084 Offset: 0x8710084 VA: 0x8714084
+	public static int GetTime(int handle) { }
+
+	// RVA: 0x8714110 Offset: 0x8710110 VA: 0x8714110
+	public static int GetDuration(int handle) { }
+
+	// RVA: 0x871419C Offset: 0x871019C VA: 0x871419C
+	public static bool IsLooping(int handle) { }
+
+	// RVA: 0x8714228 Offset: 0x8710228 VA: 0x8714228
+	public static bool IsPlaying(int handle) { }
+
+	// RVA: 0x87142B4 Offset: 0x87102B4 VA: 0x87142B4
+	private static void OnInit(int handle) { }
+
+	// RVA: 0x871439C Offset: 0x871039C VA: 0x871439C
+	private static void InitOutTexture(int handle, int width, int height) { }
+
+	// RVA: 0x871458C Offset: 0x871058C VA: 0x871458C
+	public static void SetPrepareCallback(int handle, PrepareCallbackSta cb) { }
+
+	// RVA: 0x8714600 Offset: 0x8710600 VA: 0x8714600
+	public static void SetPlayCallback(int handle, PlayCallbackSta cb) { }
+
+	// RVA: 0x8714674 Offset: 0x8710674 VA: 0x8714674
+	public static void SetPauseCallback(int handle, PauseCallbackSta cb) { }
+
+	// RVA: 0x87146E8 Offset: 0x87106E8 VA: 0x87146E8
+	public static void SetSeekToCallback(int handle, SeekToCallbackSta cb) { }
+
+	// RVA: 0x871475C Offset: 0x871075C VA: 0x871475C
+	public static void Prepare(int handle, VideoClip clip, float volume) { }
+
+	// RVA: 0x87148DC Offset: 0x87108DC VA: 0x87148DC
+	public static void PrepareWithURL(int handle, string path, int width, int height, float volume) { }
+
+	// RVA: 0x87149B8 Offset: 0x87109B8 VA: 0x87149B8
+	public static void Play(int handle) { }
+
+	// RVA: 0x8714A54 Offset: 0x8710A54 VA: 0x8714A54
+	public static void Pause(int handle) { }
+
+	// RVA: 0x8714AF0 Offset: 0x8710AF0 VA: 0x8714AF0
+	public static void Update(int handle) { }
+
+	// RVA: 0x8714D2C Offset: 0x8710D2C VA: 0x8714D2C
+	public static void Destroy(int handle) { }
+
+	// RVA: 0x8714F5C Offset: 0x8710F5C VA: 0x8714F5C
+	public static void ClearException(int handle) { }
+
+	// RVA: 0x8714FBC Offset: 0x8710FBC VA: 0x8714FBC
+	public void .ctor() { }
+
+	// RVA: 0x8714FC4 Offset: 0x8710FC4 VA: 0x8714FC4
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class CustomVideoPlayerUpdate : MonoBehaviour // TypeDefIndex: 769
+{
+	// Fields
+	public ICustomVideoPlayer videoPlayer; // 0xB9BE85D0
+
+	// Methods
+
+	// RVA: 0x3618578 Offset: 0x3614578 VA: 0x3618578
+	private void OnPreRender() { }
+
+	// RVA: 0x36186B4 Offset: 0x36146B4 VA: 0x36186B4
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+public class EditorSceneTools : MonoBehaviour // TypeDefIndex: 770
+{
+	// Fields
+	private Mesh meshTobeDrawed; // 0xBE95A9A4
+
+	// Methods
+
+	// RVA: 0x36186BC Offset: 0x36146BC VA: 0x36186BC
+	public void SetMesh(Mesh mesh) { }
+
+	// RVA: 0x361873C Offset: 0x361473C VA: 0x361873C
+	public void ClearMesh() { }
+
+	// RVA: 0x36187C0 Offset: 0x36147C0 VA: 0x36187C0
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class FakeLinearColorSpace : MonoBehaviour // TypeDefIndex: 771
+{
+	// Fields
+	public bool m_OpenFakeLinearColorSpace; // 0xB5BEB9B7
+	public Light m_MainLight; // 0xBDB984FE
+	public Color m_MainLightColor; // 0xB7EAEAB5
+	public bool m_IsLinear; // 0xA28FA4B5
+	private bool m_bAmbientProcessed; // 0xA4BCB1B5
+
+	// Methods
+
+	// RVA: 0x36187C8 Offset: 0x36147C8 VA: 0x36187C8
+	public void ProcessFakeLinearColorSpace(bool start, bool open) { }
+
+	// RVA: 0x3618900 Offset: 0x3614900 VA: 0x3618900
+	private void ProcessDirectionalLight() { }
+
+	// RVA: 0x3618A28 Offset: 0x3614A28 VA: 0x3618A28
+	public void ProcessAmbient() { }
+
+	// RVA: 0x3618AFC Offset: 0x3614AFC VA: 0x3618AFC
+	private void OnEnable() { }
+
+	// RVA: 0x3618BB8 Offset: 0x3614BB8 VA: 0x3618BB8
+	private void OnDisable() { }
+
+	// RVA: 0x3618C6C Offset: 0x3614C6C VA: 0x3618C6C
+	private void OnSceneLoaded(Scene scene, LoadSceneMode mode) { }
+
+	// RVA: 0x3618C84 Offset: 0x3614C84 VA: 0x3618C84
+	public static void UpdateSkyboxAmbient() { }
+
+	// RVA: 0x3618CDC Offset: 0x3614CDC VA: 0x3618CDC
+	public void UpdateMainLightColor() { }
+
+	// RVA: 0x3618D70 Offset: 0x3614D70 VA: 0x3618D70
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class FiveYearsSkyboxController : MonoBehaviour // TypeDefIndex: 772
+{
+	// Fields
+	public Material material; // 0x83B5BDB9
+	[Range(0, 1)]
+	public float SunSize; // 0xB5B3BEB9
+	[Range(1, 10)]
+	public float SunSizeConvergence; // 0xA2B1A483
+	[Range(0, 5)]
+	public float AtmosphereThickness; // 0xF8A0A5A4
+	public Color SkyTint; // 0xBE85D0F9
+	public Color GroundColor; // 0x95A9A4B9
+	[Range(0, 8)]
+	public float Exposure; // 0xBEB9B7BE
+	private int _SunSize; // 0xA284FEB5
+	private int _SunSizeConvergence; // 0xB6A3BEB1
+	private int _AtmosphereThickness; // 0xEABDA2BF
+	private int _SkyTint; // 0xA4B597EA
+	private int _GroundColor; // 0xBCB2B983
+	private int _Exposure; // 0x99B7BEB9
+
+	// Methods
+
+	// RVA: 0x3618D8C Offset: 0x3614D8C VA: 0x3618D8C
+	private void Awake() { }
+
+	// RVA: 0x3618EA8 Offset: 0x3614EA8 VA: 0x3618EA8
+	private void Start() { }
+
+	// RVA: 0x3618FAC Offset: 0x3614FAC VA: 0x3618FAC
+	private void Update() { }
+
+	// RVA: 0x36190B8 Offset: 0x36150B8 VA: 0x36190B8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class FixBillboardAxis : MonoBehaviour // TypeDefIndex: 773
+{
+	// Fields
+	public ParticleSystemRenderer[] particles; // 0xA8B5B4BE
+
+	// Methods
+
+	// RVA: 0x36190C0 Offset: 0x36150C0 VA: 0x36190C0
+	private void Start() { }
+
+	// RVA: 0x36191DC Offset: 0x36151DC VA: 0x36191DC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[AddComponentMenu("")]
+[ExecuteInEditMode]
+public class HDTextureOverride : MonoBehaviour // TypeDefIndex: 774
+{
+	// Fields
+	public string[] textureNames; // 0x85D0F9F8
+	public string[] texturePaths; // 0xA9A4B9BE
+	private Texture2D[] originalTextures; // 0xB9B7BE95
+	private MeshRenderer renderer; // 0x84FEB5BE
+
+	// Methods
+
+	// RVA: 0x36191E4 Offset: 0x36151E4 VA: 0x36191E4
+	private void Awake() { }
+
+	// RVA: 0x361923C Offset: 0x361523C VA: 0x361923C
+	public void SetOverrideTextures() { }
+
+	// RVA: 0x36194D8 Offset: 0x36154D8 VA: 0x36194D8
+	public void ResetTextures() { }
+
+	// RVA: 0x3619660 Offset: 0x3615660 VA: 0x3619660
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+public class HeightFog : MonoBehaviour // TypeDefIndex: 775
+{
+	// Fields
+	public Color highColor; // 0xA3BEB1A2
+	public Color midColor; // 0xBDA2BFB6
+	public Color lowColor; // 0xB5B7EAEA
+	public Vector4 lerpLowMidHigh; // 0xBFBC8FA4
+	public Vector2 lerpStartEndAnd; // 0x82BCB1B3
+	[Range(0, 1)]
+	public float intensity; // 0xA4B1A4BF
+	private int[] propsID; // 0x8FBEBFB9
+
+	// Methods
+
+	// RVA: 0x3619668 Offset: 0x3615668 VA: 0x3619668
+	private void Start() { }
+
+	// RVA: 0x36197D0 Offset: 0x36157D0 VA: 0x36197D0
+	private void UpdateProps() { }
+
+	// RVA: 0x3619910 Offset: 0x3615910 VA: 0x3619910
+	private void Update() { }
+
+	// RVA: 0x3619914 Offset: 0x3615914 VA: 0x3619914
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+private class Lame.MP3.Impl // TypeDefIndex: 776
+{
+	// Methods
+
+	// RVA: 0x3619D38 Offset: 0x3615D38 VA: 0x3619D38 Slot: 4
+	public virtual IntPtr Init() { }
+
+	// RVA: 0x3619D40 Offset: 0x3615D40 VA: 0x3619D40 Slot: 5
+	public virtual void Set_In_SampleRate(IntPtr lame, int rate) { }
+
+	// RVA: 0x3619D44 Offset: 0x3615D44 VA: 0x3619D44 Slot: 6
+	public virtual void Set_Out_SampleRate(IntPtr lame, int rate) { }
+
+	// RVA: 0x3619D48 Offset: 0x3615D48 VA: 0x3619D48 Slot: 7
+	public virtual void Set_Num_Channels(IntPtr lame, int channels) { }
+
+	// RVA: 0x3619D4C Offset: 0x3615D4C VA: 0x3619D4C Slot: 8
+	public virtual void Set_BitRate(IntPtr lame, int brate) { }
+
+	// RVA: 0x3619D50 Offset: 0x3615D50 VA: 0x3619D50 Slot: 9
+	public virtual void Init_Params(IntPtr lame) { }
+
+	// RVA: 0x3619D54 Offset: 0x3615D54 VA: 0x3619D54 Slot: 10
+	public virtual int Encode_Buffer(IntPtr lame, short[] pcm_l, short[] pcm_r, int num_samples, byte[] mp3buf, int mp3buf_size) { }
+
+	// RVA: 0x3619D5C Offset: 0x3615D5C VA: 0x3619D5C Slot: 11
+	public virtual int Encode_Flush(IntPtr lame, byte[] mp3buf, int mp3buf_size) { }
+
+	// RVA: 0x3619D64 Offset: 0x3615D64 VA: 0x3619D64 Slot: 12
+	public virtual int PCM_to_MP3(float[] pcm, uint pcm_size, ref byte[] mp3, ref uint mp3_size, int sampleRate, int channels, int bitRate) { }
+
+	// RVA: 0x3619D6C Offset: 0x3615D6C VA: 0x3619D6C Slot: 13
+	public virtual void Close(IntPtr lame) { }
+
+	// RVA: 0x3619D70 Offset: 0x3615D70 VA: 0x3619D70
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+private class Lame.MP3.Impl_PInvoke : Impl // TypeDefIndex: 777
+{
+	// Fields
+	private const string LIB_NAME = "mp3lame";
+
+	// Methods
+
+	// RVA: 0x3619D78 Offset: 0x3615D78 VA: 0x3619D78
+	private static extern int pcm_to_mp3_float([In] float[] pcm, uint pcmSize, [In] [Out] byte[] mp3Data, ref uint mp3Size, int sampleRate, int channels, int bitRate) { }
+
+	// RVA: 0x3619E4C Offset: 0x3615E4C VA: 0x3619E4C
+	private static extern IntPtr lame_init() { }
+
+	// RVA: 0x3619EB4 Offset: 0x3615EB4 VA: 0x3619EB4
+	private static extern void lame_set_in_samplerate(IntPtr lame, int rate) { }
+
+	// RVA: 0x3619F38 Offset: 0x3615F38 VA: 0x3619F38
+	private static extern void lame_set_out_samplerate(IntPtr lame, int rate) { }
+
+	// RVA: 0x3619FBC Offset: 0x3615FBC VA: 0x3619FBC
+	private static extern void lame_set_num_channels(IntPtr lame, int channels) { }
+
+	// RVA: 0x361A040 Offset: 0x3616040 VA: 0x361A040
+	private static extern void lame_set_brate(IntPtr lame, int brate) { }
+
+	// RVA: 0x361A0C4 Offset: 0x36160C4 VA: 0x361A0C4
+	private static extern void lame_init_params(IntPtr lame) { }
+
+	// RVA: 0x361A140 Offset: 0x3616140 VA: 0x361A140
+	private static extern int lame_encode_buffer(IntPtr lame, [In] short[] pcm_l, [In] short[] pcm_r, int num_samples, [In] byte[] mp3buf, int mp3buf_size) { }
+
+	// RVA: 0x361A20C Offset: 0x361620C VA: 0x361A20C
+	private static extern int lame_encode_flush(IntPtr lame, [In] byte[] mp3buf, int mp3buf_size) { }
+
+	// RVA: 0x361A2A8 Offset: 0x36162A8 VA: 0x361A2A8
+	private static extern void lame_close(IntPtr lame) { }
+
+	// RVA: 0x361A324 Offset: 0x3616324 VA: 0x361A324 Slot: 4
+	public override IntPtr Init() { }
+
+	// RVA: 0x361A328 Offset: 0x3616328 VA: 0x361A328 Slot: 5
+	public override void Set_In_SampleRate(IntPtr lame, int rate) { }
+
+	// RVA: 0x361A334 Offset: 0x3616334 VA: 0x361A334 Slot: 6
+	public override void Set_Out_SampleRate(IntPtr lame, int rate) { }
+
+	// RVA: 0x361A340 Offset: 0x3616340 VA: 0x361A340 Slot: 7
+	public override void Set_Num_Channels(IntPtr lame, int channels) { }
+
+	// RVA: 0x361A34C Offset: 0x361634C VA: 0x361A34C Slot: 8
+	public override void Set_BitRate(IntPtr lame, int brate) { }
+
+	// RVA: 0x361A358 Offset: 0x3616358 VA: 0x361A358 Slot: 9
+	public override void Init_Params(IntPtr lame) { }
+
+	// RVA: 0x361A360 Offset: 0x3616360 VA: 0x361A360 Slot: 10
+	public override int Encode_Buffer(IntPtr lame, short[] pcm_l, short[] pcm_r, int num_samples, byte[] mp3buf, int mp3buf_size) { }
+
+	// RVA: 0x361A37C Offset: 0x361637C VA: 0x361A37C Slot: 11
+	public override int Encode_Flush(IntPtr lame, byte[] mp3buf, int mp3buf_size) { }
+
+	// RVA: 0x361A38C Offset: 0x361638C VA: 0x361A38C Slot: 12
+	public override int PCM_to_MP3(float[] pcm, uint pcm_size, ref byte[] mp3, ref uint mp3_size, int sampleRate, int channels, int bitRate) { }
+
+	// RVA: 0x361A3B0 Offset: 0x36163B0 VA: 0x361A3B0 Slot: 13
+	public override void Close(IntPtr lame) { }
+
+	// RVA: 0x36199F4 Offset: 0x36159F4 VA: 0x36199F4
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public static class Lame.MP3 // TypeDefIndex: 778
+{
+	// Fields
+	private static Impl __Impl; // 0xB4B5A4B3
+
+	// Properties
+	private static Impl _Impl { get; }
+
+	// Methods
+
+	// RVA: 0x3619958 Offset: 0x3615958 VA: 0x3619958
+	private static Impl get__Impl() { }
+
+	// RVA: 0x36199FC Offset: 0x36159FC VA: 0x36199FC
+	public static IntPtr Init() { }
+
+	// RVA: 0x3619A2C Offset: 0x3615A2C VA: 0x3619A2C
+	public static void Set_In_SampleRate(IntPtr lame, int rate) { }
+
+	// RVA: 0x3619A74 Offset: 0x3615A74 VA: 0x3619A74
+	public static void Set_Out_SampleRate(IntPtr lame, int rate) { }
+
+	// RVA: 0x3619ABC Offset: 0x3615ABC VA: 0x3619ABC
+	public static void Set_Num_Channels(IntPtr lame, int channels) { }
+
+	// RVA: 0x3619B04 Offset: 0x3615B04 VA: 0x3619B04
+	public static void Set_BitRate(IntPtr lame, int brate) { }
+
+	// RVA: 0x3619B4C Offset: 0x3615B4C VA: 0x3619B4C
+	public static void Init_Params(IntPtr lame) { }
+
+	// RVA: 0x3619B8C Offset: 0x3615B8C VA: 0x3619B8C
+	public static int Encode_Buffer(IntPtr lame, short[] pcm_l, short[] pcm_r, int num_samples, byte[] mp3buf, int mp3buf_size) { }
+
+	// RVA: 0x3619C04 Offset: 0x3615C04 VA: 0x3619C04
+	public static int Encode_Flush(IntPtr lame, byte[] mp3buf, int mp3buf_size) { }
+
+	// RVA: 0x3619C5C Offset: 0x3615C5C VA: 0x3619C5C
+	public static int PCM_to_MP3(float[] pcm, uint pcm_size, ref byte[] mp3, ref uint mp3_size, int sampleRate, int channels, int bitRate) { }
+
+	// RVA: 0x3619CF4 Offset: 0x3615CF4 VA: 0x3619CF4
+	public static void Close(IntPtr lame) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public static class Lame // TypeDefIndex: 779
+{}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class CutSceneLightmapStorage.RendererInfo // TypeDefIndex: 780
+{
+	// Fields
+	public Renderer renderer; // 0xB9BE85F8
+	public int lightmapIndex; // 0xBE95A9A4
+	public Vector4 lightmapOffsetScale; // 0xB5BEB9B7
+
+	// Methods
+
+	// RVA: 0x361AA20 Offset: 0x3616A20 VA: 0x361AA20
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class CutSceneLightmapStorage.LightInfo // TypeDefIndex: 781
+{
+	// Fields
+	public Light light; // 0xB1A581FE
+	public int lightmapBaketype; // 0xBEA2B5A4
+	public int mixedLightingMode; // 0xF6BEBFB9
+
+	// Methods
+
+	// RVA: 0x361AA28 Offset: 0x3616A28 VA: 0x361AA28
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteAlways]
+public class CutSceneLightmapStorage : MonoBehaviour // TypeDefIndex: 782
+{
+	// Fields
+	public RendererInfo[] m_RendererInfo; // 0xBE85D0F9
+	public Texture2D[] m_Lightmaps; // 0x95A9A4B9
+	public Texture2D[] m_ShadowMasks; // 0xBEB9B7BE
+	public LightInfo[] m_LightInfo; // 0xA284FEB5
+
+	// Methods
+
+	// RVA: 0x361A3B8 Offset: 0x36163B8 VA: 0x361A3B8
+	private void Awake() { }
+
+	// RVA: 0x361A3BC Offset: 0x36163BC VA: 0x361A3BC
+	private void Init() { }
+
+	// RVA: 0x361A840 Offset: 0x3616840 VA: 0x361A840
+	private void ApplyRendererInfo(RendererInfo[] infos, int[] lightmapOffsetIndex, LightInfo[] lightsInfo) { }
+
+	// RVA: 0x361A8F0 Offset: 0x36168F0 VA: 0x361A8F0
+	private void SetAllLightBaked(LightInfo[] lightsInfo) { }
+
+	// RVA: 0x361AA18 Offset: 0x3616A18 VA: 0x361AA18
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+public class LightmapTextureInfo2 : MonoBehaviour // TypeDefIndex: 783
+{
+	// Fields
+	public int[] lightmapIndexes; // 0xB6A3BEB1
+	public Texture2D[] lightmaps; // 0xEABDA2BF
+	public Texture2D[] shadowmasks; // 0xA4B5B7EA
+
+	// Methods
+
+	// RVA: 0x361AA30 Offset: 0x3616A30 VA: 0x361AA30
+	private void Awake() { }
+
+	// RVA: 0x361AD84 Offset: 0x3616D84 VA: 0x361AD84
+	private void OnDestroy() { }
+
+	// RVA: 0x361B180 Offset: 0x3617180 VA: 0x361B180
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+public class RuntimePrefabLightmap : MonoBehaviour // TypeDefIndex: 784
+{
+	// Fields
+	public string prefabID; // 0xB3BFBC8F
+	public List<Renderer> renderers; // 0xB383BCB1
+	public List<Texture2D> lightmaps; // 0x8FB5BCB1
+	public List<LightmapInfo> lightmapInfo; // 0xB5BABE99
+	private bool m_loadedLightmap; // 0xB4B5A4B3
+
+	// Methods
+
+	// RVA: 0x361B188 Offset: 0x3617188 VA: 0x361B188
+	private void Start() { }
+
+	// RVA: 0x361B438 Offset: 0x3617438 VA: 0x361B438
+	private void OnDestroy() { }
+
+	// RVA: 0x361B1A4 Offset: 0x36171A4 VA: 0x361B1A4
+	public void LoadLightmap() { }
+
+	// RVA: 0x361BAFC Offset: 0x3617AFC VA: 0x361BAFC
+	public void Clear() { }
+
+	// RVA: 0x361BBDC Offset: 0x3617BDC VA: 0x361BBDC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+private struct LightmapStorage.RendererInfo // TypeDefIndex: 785
+{
+	// Fields
+	public Renderer renderer; // 0xB9BE85F8
+	public int lightmapIndex; // 0xBE95A9A4
+	public Vector4 lightmapOffsetScale; // 0xB5BEB9B7
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+public class LightmapStorage : MonoBehaviour // TypeDefIndex: 786
+{
+	// Fields
+	[SerializeField]
+	private List<Texture2D> m_Lightmaps; // 0xB3B586FE
+	[SerializeField]
+	private List<RendererInfo> m_RendererInfos; // 0xE3A2BFA4
+
+	// Methods
+
+	// RVA: 0x361BD0C Offset: 0x3617D0C VA: 0x361BD0C
+	private void OnEnable() { }
+
+	// RVA: 0x361BF44 Offset: 0x3617F44 VA: 0x361BF44
+	private void OnDestroy() { }
+
+	// RVA: 0x361BF48 Offset: 0x3617F48 VA: 0x361BF48
+	public void SaveLightmapInfo() { }
+
+	// RVA: 0x361C234 Offset: 0x3618234 VA: 0x361C234
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+public class LightmapTextureInfo : MonoBehaviour // TypeDefIndex: 787
+{
+	// Fields
+	public int lightmapOffset; // 0x85D0F9F6
+	public Texture2D[] lightmaps; // 0xA9A4B9BE
+	public Texture2D[] shadowmasks; // 0xB9B7BE95
+
+	// Methods
+
+	// RVA: 0x361C344 Offset: 0x3618344 VA: 0x361C344
+	private void Awake() { }
+
+	// RVA: 0x361C684 Offset: 0x3618684 VA: 0x361C684
+	private void OnDestroy() { }
+
+	// RVA: 0x361CA2C Offset: 0x3618A2C VA: 0x361CA2C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+public class LightningInfo : MonoBehaviour // TypeDefIndex: 788
+{
+	// Fields
+	public int lightmapIndex; // 0x83FEB5BE
+	public Vector4 lightmapScaleOffset; // 0xB5BEB5B3
+
+	// Methods
+
+	// RVA: 0x361CA34 Offset: 0x3618A34 VA: 0x361CA34
+	private void Awake() { }
+
+	// RVA: 0x361CA44 Offset: 0x3618A44 VA: 0x361CA44
+	public void SetLightingInfo() { }
+
+	// RVA: 0x361CB20 Offset: 0x3618B20 VA: 0x361CB20
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+[AddComponentMenu("")]
+public class LineRendererFollower : MonoBehaviour // TypeDefIndex: 789
+{
+	// Fields
+	public LineRenderer line; // 0xB1BEB19D
+	[Range(0, 1)]
+	public float progress; // 0xB5BDB5B7
+	private float m_currentProgress; // 0x83FEA4BE
+	private bool m_useWorldSpace; // 0xB5BEB5B3
+
+	// Methods
+
+	// RVA: 0x361CB30 Offset: 0x3618B30 VA: 0x361CB30
+	private void Update() { }
+
+	// RVA: 0x361CDA8 Offset: 0x3618DA8 VA: 0x361CDA8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class LobbyFog : MonoBehaviour // TypeDefIndex: 790
+{
+	// Fields
+	protected static int _FogColor1; // 0xB597EAEA
+	protected static int _FogColor2; // 0xBFBF82A4
+	protected static int _FogColor3; // 0xBDB197A4
+	protected static int _FogColor4; // 0xBAB29FB5
+	protected static int _FogLerp1234; // 0xA3A4B3B5
+	protected static int _FogLerp23StartEnd; // 0xB5A4BE99
+	protected static int _FogCenter; // 0xBCB1BEA2
+	protected static int _FogEllipse; // 0xA3A983F8
+	public Color color1; // 0xFEBDB5A4
+	public Vector2 lerp12; // 0xE3A4BE99
+	public Color color2; // 0xA983FCE2
+	public Vector2 lerp23; // 0xBDB5A4A3
+	public Color color3; // 0xBAB29FFE
+	public Vector2 lerp34; // 0xF9A4B3B5
+	public Color color4; // 0xB9BE85D0
+	public Vector2 startEnd; // 0xBE95A9A4
+	protected Vector4 mLerp1234; // 0xB5BEB9B7
+	protected Vector4 mLerp23StartEnd; // 0xB5B383FE
+	public Vector4 center; // 0xB19DB5BE
+	public Vector4 ellipse; // 0xB5B7B1BE
+	protected Vector4 mEllipse; // 0xA4BEB5BD
+
+	// Methods
+
+	// RVA: 0x361CDC0 Offset: 0x3618DC0 VA: 0x361CDC0
+	private void Start() { }
+
+	// RVA: 0x361D05C Offset: 0x361905C VA: 0x361D05C
+	private void OnDestroy() { }
+
+	// RVA: 0x361D13C Offset: 0x361913C VA: 0x361D13C
+	private void OnSceneChange(Scene scene1, Scene scene2) { }
+
+	// RVA: 0x361D020 Offset: 0x3619020 VA: 0x361D020
+	private void ResetUnityFog() { }
+
+	// RVA: 0x361D140 Offset: 0x3619140 VA: 0x361D140
+	private void OnEnable() { }
+
+	// RVA: 0x361D1C8 Offset: 0x36191C8 VA: 0x361D1C8
+	private void OnDisable() { }
+
+	// RVA: 0x361D250 Offset: 0x3619250 VA: 0x361D250
+	private void Update() { }
+
+	// RVA: 0x361CEA8 Offset: 0x3618EA8 VA: 0x361CEA8
+	protected void UpdateProps() { }
+
+	// RVA: 0x361D2C4 Offset: 0x36192C4 VA: 0x361D2C4
+	public void .ctor() { }
+
+	// RVA: 0x361D350 Offset: 0x3619350 VA: 0x361D350
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+public class LobbyFogSetting : MonoBehaviour // TypeDefIndex: 791
+{
+	// Fields
+	public bool updateEveryFrame; // 0xB5B383FE
+	public Color fogColor; // 0xB19DB5BE
+	public bool useCustomStart; // 0xB5B7B1BE
+	public float fogStartDistance; // 0x9DEAEAA2
+	public float fogEndDistance; // 0x97B5A6BF
+	private bool _fogEnabled; // 0x9FB5BDB1
+	private FogMode _fogMode; // 0xB3B5BAB2
+	private float _originalStartDistance; // 0x83BF84A4
+	private float _originalEndDistance; // 0xB5BEB5B3
+	private Color _orginalColor; // 0xBABE998F
+
+	// Methods
+
+	// RVA: 0x361D50C Offset: 0x361950C VA: 0x361D50C
+	private void OnValidate() { }
+
+	// RVA: 0x361D524 Offset: 0x3619524 VA: 0x361D524
+	private void OnEnable() { }
+
+	// RVA: 0x361D5CC Offset: 0x36195CC VA: 0x361D5CC
+	private void Update() { }
+
+	// RVA: 0x361D620 Offset: 0x3619620 VA: 0x361D620
+	private void OnDisable() { }
+
+	// RVA: 0x361D66C Offset: 0x361966C VA: 0x361D66C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class MaterialLOD.TextureLODInfo // TypeDefIndex: 792
+{
+	// Fields
+	public List<Material> m_matList; // 0xB5A4B3B5
+
+	// Methods
+
+	// RVA: 0x361E2BC Offset: 0x361A2BC VA: 0x361E2BC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class MaterialLOD.MaterialLODInfo // TypeDefIndex: 793
+{
+	// Fields
+	public Renderer m_renderer; // 0xBE85F8B4
+	public List<int> m_matIDList; // 0x95A9A4B9
+	public List<string> m_matNameList; // 0xBEB9B7BE
+
+	// Methods
+
+	// RVA: 0x361E344 Offset: 0x361A344 VA: 0x361E344
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class MaterialLOD : MonoBehaviour // TypeDefIndex: 794
+{
+	// Fields
+	public List<MaterialLODInfo> m_materialLODInfoList; // 0xB197FEB5
+	public List<TextureLODInfo> m_textureLODInfoList; // 0xB29FB5BD
+	private MNMBLBKENMK m_quality; // 0xA4B3B5BA
+
+	// Methods
+
+	// RVA: 0x361D67C Offset: 0x361967C VA: 0x361D67C
+	private void Start() { }
+
+	// RVA: 0x361DD18 Offset: 0x3619D18 VA: 0x361DD18
+	private void OnDestroy() { }
+
+	// RVA: 0x361E1E0 Offset: 0x361A1E0 VA: 0x361E1E0
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class MaterialLODManager.TextureLODInfoManager // TypeDefIndex: 795
+{
+	// Fields
+	public string m_matName; // 0xB9BE85FC
+	public List<string> m_texNameList; // 0xBE95A9A4
+	public List<string> m_texPathList; // 0xB5BEB9B7
+
+	// Methods
+
+	// RVA: 0x361EA44 Offset: 0x361AA44 VA: 0x361EA44
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class MaterialLODManager.MaterialLODInfoManager // TypeDefIndex: 796
+{
+	// Fields
+	public Material m_material; // 0xB5B383FE
+	public int m_refCount; // 0xB19DB5BE
+
+	// Methods
+
+	// RVA: 0x361E880 Offset: 0x361A880 VA: 0x361E880
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class MaterialLODManager : MonoSingleton<MaterialLODManager> // TypeDefIndex: 797
+{
+	// Fields
+	public List<TextureLODInfoManager> m_TextureLODList; // 0xB5B7B1BE
+	private Dictionary<string, TextureLODInfoManager> m_textureLODDict; // 0xA4BEB5BD
+	private Dictionary<string, int> m_loadedMatDict; // 0xB5B383FE
+	private Dictionary<string, MaterialLODInfoManager> m_materialLOD; // 0xF9F6B5BE
+	private string m_materialLODResPath; // 0xB9BE85D0
+
+	// Methods
+
+	// RVA: 0x361E420 Offset: 0x361A420 VA: 0x361E420
+	private void Start() { }
+
+	// RVA: 0x361D85C Offset: 0x361985C VA: 0x361D85C
+	public void ApplyMaterial(Renderer render, List<int> matIDList, List<string> matNameList) { }
+
+	// RVA: 0x361E6B4 Offset: 0x361A6B4 VA: 0x361E6B4
+	private Material CreateMaterial(string matName) { }
+
+	// RVA: 0x361DA30 Offset: 0x3619A30 VA: 0x361DA30
+	public void ApplyTexture(List<Material> matList) { }
+
+	// RVA: 0x361DF2C Offset: 0x3619F2C VA: 0x361DF2C
+	public void UnloadMaterial(string matName) { }
+
+	// RVA: 0x361E014 Offset: 0x361A014 VA: 0x361E014
+	public void UnloadTexture(List<Material> matList) { }
+
+	// RVA: 0x361E888 Offset: 0x361A888 VA: 0x361E888
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class MaterialRef.TweenerRecorder // TypeDefIndex: 798
+{
+	// Fields
+	public Method method; // 0xBE95A9A4
+	public Style style; // 0xB5BEB9B7
+	public AnimationCurve animationCurve; // 0xBEB582FE
+	public bool ignoreTimeScale; // 0xB9A2B5B4
+	public float delay; // 0x83FEB7BE
+	public float duration; // 0xB9A4A2BF
+	public bool steeperCurves; // 0xA297B7BE
+	public int tweenGroup; // 0xEAA0A5BF
+
+	// Methods
+
+	// RVA: 0x361F408 Offset: 0x361B408 VA: 0x361F408
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class MaterialRef.RecorderBase // TypeDefIndex: 799
+{
+	// Fields
+	public string shaderName; // 0xA4B5B7EA
+	public string textureName; // 0xA6BEB98F
+
+	// Methods
+
+	// RVA: 0x361F568 Offset: 0x361B568 VA: 0x361F568
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class MaterialRef.PositionRecorder // TypeDefIndex: 800
+{
+	// Methods
+
+	// RVA: 0x361F570 Offset: 0x361B570 VA: 0x361F570
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class MaterialRef.UVPlayerRecorder : RecorderBase // TypeDefIndex: 801
+{
+	// Fields
+	public int[] columnRow; // 0xB4B9BCB1
+	public float playVelocity; // 0xA4A2BF83
+	public float startIndex; // 0x97B7BEB9
+	public bool useInterval; // 0xA0A5BFA2
+	public List<Interval> intervals; // 0xF9F89499
+	public List<string> propertyNames; // 0xB9BE85D0
+	public List<Vector2> propertyScale; // 0xBE95A9A4
+	public PlayType playType; // 0xB5BEB9B7
+
+	// Methods
+
+	// RVA: 0x361F3F8 Offset: 0x361B3F8 VA: 0x361F3F8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class MaterialRef.PropertyRecorder : RecorderBase // TypeDefIndex: 802
+{
+	// Fields
+	public int propertyIndex; // 0xB1BC80FE
+	public string propertyName; // 0xBCB2B1A9
+	public TweenPropertyAlpha tweenPropertyAlpha; // 0x80FEA3B5
+	public int propType; // 0xB1A9B1BC
+	public float fromFloat; // 0x97B5BCB2
+	public float toFloat; // 0xB8A0B1A2
+	public int vec4Idx; // 0xB597EAEA
+	public bool colorHDR; // 0xBFBF82A4
+	public Gradient fromToColor; // 0xB1BC80A4
+	public TweenerRecorder tweenerRecorder; // 0xBCB2B1A9
+
+	// Methods
+
+	// RVA: 0x361F32C Offset: 0x361B32C VA: 0x361F32C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class MaterialRef.RotationRecorder // TypeDefIndex: 803
+{
+	// Methods
+
+	// RVA: 0x361F578 Offset: 0x361B578 VA: 0x361F578
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class MaterialRef.ScaleRecorder // TypeDefIndex: 804
+{
+	// Methods
+
+	// RVA: 0x361F580 Offset: 0x361B580 VA: 0x361F580
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class MaterialRef.TransformRecorder // TypeDefIndex: 805
+{
+	// Methods
+
+	// RVA: 0x361F588 Offset: 0x361B588 VA: 0x361F588
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class MaterialRef : ScriptableObject // TypeDefIndex: 806
+{
+	// Fields
+	[HideInInspector]
+	public List<PropertyRecorder> propertyRecorders; // 0xA4BE99B5
+	[HideInInspector]
+	public List<UVPlayerRecorder> UVPlayerRecorders; // 0xB1BEA2B5
+	[CompilerGenerated]
+	private string <LogRecordForEditor>k__BackingField; // 0xBE998FBC
+
+	// Properties
+	public string LogRecordForEditor { get; set; }
+
+	// Methods
+
+	[CompilerGenerated]
+	// RVA: 0x361EAF0 Offset: 0x361AAF0 VA: 0x361EAF0
+	public string get_LogRecordForEditor() { }
+
+	[CompilerGenerated]
+	// RVA: 0x361EAF8 Offset: 0x361AAF8 VA: 0x361EAF8
+	private void set_LogRecordForEditor(string value) { }
+
+	// RVA: 0x361EB00 Offset: 0x361AB00 VA: 0x361EB00
+	public bool CopyPublicTweenerToRecorder(UITweener target, TweenerRecorder tr) { }
+
+	// RVA: 0x361EB64 Offset: 0x361AB64 VA: 0x361EB64
+	public bool CopyTargetToRecorder(UVSeqPlayer tar, UVPlayerRecorder recorder) { }
+
+	// RVA: 0x361ED0C Offset: 0x361AD0C VA: 0x361ED0C
+	public bool CopyTargetToRecorder(TweenProperty tar, PropertyRecorder recorder) { }
+
+	// RVA: 0x361EF58 Offset: 0x361AF58 VA: 0x361EF58
+	public void UpdateComponents(GameObject root) { }
+
+	// RVA: 0x361F400 Offset: 0x361B400 VA: 0x361F400
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public abstract class MonoSingleton`1<T> : MonoBehaviour // TypeDefIndex: 807
+{
+	// Fields
+	private static T m_Instance; // 0xA4B3B5BA
+
+	// Properties
+	public static T instance { get; }
+	public static bool hasInstance { get; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public static T get_instance() { }
+
+	// RVA: -1 Offset: -1
+	public static bool get_hasInstance() { }
+
+	// RVA: -1 Offset: -1 Slot: 4
+	protected virtual void Awake() { }
+
+	// RVA: -1 Offset: -1 Slot: 5
+	public virtual void Init() { }
+
+	// RVA: -1 Offset: -1 Slot: 6
+	protected virtual void OnDestroy() { }
+
+	// RVA: -1 Offset: -1
+	private void OnApplicationQuit() { }
+
+	// RVA: -1 Offset: -1
+	protected void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+public class NoCastShadow : MonoBehaviour // TypeDefIndex: 808
+{
+	// Fields
+	public bool ForceDisableBRShadow; // 0x85F8B4B5
+	public Renderer[] renderers; // 0xA9A4B9BE
+	public ShadowCastingMode[] shadowCastingMode; // 0xB9B7BE95
+
+	// Methods
+
+	// RVA: 0x361F590 Offset: 0x361B590 VA: 0x361F590
+	private void OnEnable() { }
+
+	// RVA: 0x361F768 Offset: 0x361B768 VA: 0x361F768
+	private void OnDisable() { }
+
+	// RVA: 0x361F928 Offset: 0x361B928 VA: 0x361F928
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class PaintGrass : PaintMeshes // TypeDefIndex: 809
+{
+	// Fields
+	public Sprite currentSprite; // 0x80FEB5BE
+
+	// Properties
+	public override bool HasMesh { get; }
+
+	// Methods
+
+	// RVA: 0x361F930 Offset: 0x361B930 VA: 0x361F930 Slot: 4
+	public override bool get_HasMesh() { }
+
+	// RVA: 0x361F990 Offset: 0x361B990 VA: 0x361F990
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class PaintMeshes : MonoBehaviour // TypeDefIndex: 810
+{
+	// Fields
+	public float radius; // 0xB1A9B1BC
+	public float offset; // 0xA3B5BCB2
+	public float density; // 0xB1BC80FE
+	public float slopeInfluence; // 0xBCB2B1A9
+	public float randomRotation; // 0xB1A297B5
+	public bool slopeCorrection; // 0xFCF6B8A0
+	public Vector2 randomScaleRange; // 0xA4A3A983
+	private float nextFeasibleStrokeTime; // 0x99FEBDB5
+	[SerializeField]
+	public List<GameObject> meshes; // 0xE2E3A4BE
+	protected List<Transform> paintedMeshes; // 0xB9BE85FC
+	protected List<Transform> paintedMeshesInsideBrushArea; // 0xBE95A9A4
+
+	// Properties
+	public int meshCount { get; }
+	public virtual bool HasMesh { get; }
+
+	// Methods
+
+	// RVA: 0x361FB74 Offset: 0x361BB74 VA: 0x361FB74
+	public int get_meshCount() { }
+
+	// RVA: 0x361FC40 Offset: 0x361BC40 VA: 0x361FC40 Slot: 4
+	public virtual bool get_HasMesh() { }
+
+	// RVA: 0x361F994 Offset: 0x361B994 VA: 0x361F994
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+public class PBRGlobalParameterController : MonoBehaviour // TypeDefIndex: 811
+{
+	// Fields
+	[Range(0, 1)]
+	public float aoLevelMin; // 0xB5BEB9B7
+	[Range(0, 1)]
+	public float aoLevelMax; // 0xB1BC80FE
+	[Range(0, 1)]
+	public float aoStrength; // 0xBCB2B1A9
+	[Range(0, 1)]
+	public float shadowmaskStrength; // 0x80FEA3B5
+
+	// Methods
+
+	// RVA: 0x361FC58 Offset: 0x361BC58 VA: 0x361FC58
+	private void Awake() { }
+
+	// RVA: 0x361FD24 Offset: 0x361BD24 VA: 0x361FD24
+	private void OnValidate() { }
+
+	// RVA: 0x361FC5C Offset: 0x361BC5C VA: 0x361FC5C
+	private void ApplyParameters() { }
+
+	// RVA: 0x361FD28 Offset: 0x361BD28 VA: 0x361FD28
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class CameraNode_Shadow.CameraStateChanged : MulticastDelegate // TypeDefIndex: 812
+{
+	// Methods
+
+	// RVA: 0x3620120 Offset: 0x361C120 VA: 0x3620120
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x362022C Offset: 0x361C22C VA: 0x362022C Slot: 13
+	public virtual void Invoke(CameraNode_Shadow node, bool active) { }
+
+	// RVA: 0x3620244 Offset: 0x361C244 VA: 0x3620244 Slot: 14
+	public virtual IAsyncResult BeginInvoke(CameraNode_Shadow node, bool active, AsyncCallback callback, object object) { }
+
+	// RVA: 0x36202DC Offset: 0x361C2DC VA: 0x36202DC Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class CameraNode_Shadow : PlanarShadowNode // TypeDefIndex: 813
+{
+	// Fields
+	private Camera m_camera; // 0xB1A9B1BC
+	public CameraStateChanged OnCameraNodeChanged; // 0x98B5BCB2
+
+	// Properties
+	public Camera camera { get; set; }
+
+	// Methods
+
+	// RVA: 0x361FD44 Offset: 0x361BD44 VA: 0x361FD44
+	public Camera get_camera() { }
+
+	// RVA: 0x361FD4C Offset: 0x361BD4C VA: 0x361FD4C
+	public void set_camera(Camera value) { }
+
+	// RVA: 0x361FD68 Offset: 0x361BD68 VA: 0x361FD68
+	private void Init() { }
+
+	// RVA: 0x361FDB4 Offset: 0x361BDB4 VA: 0x361FDB4 Slot: 6
+	protected override void OnEnableDisable(bool isActive) { }
+
+	// RVA: 0x361FDDC Offset: 0x361BDDC VA: 0x361FDDC Slot: 7
+	protected override void OnDestroy() { }
+
+	// RVA: 0x361FE88 Offset: 0x361BE88 VA: 0x361FE88
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class LightNode_Shadow.LightNodeActiveChanged : MulticastDelegate // TypeDefIndex: 814
+{
+	// Methods
+
+	// RVA: 0x3620710 Offset: 0x361C710 VA: 0x3620710
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x362081C Offset: 0x361C81C VA: 0x362081C Slot: 13
+	public virtual void Invoke(LightNode_Shadow node, bool active) { }
+
+	// RVA: 0x3620834 Offset: 0x361C834 VA: 0x3620834 Slot: 14
+	public virtual IAsyncResult BeginInvoke(LightNode_Shadow node, bool active, AsyncCallback callback, object object) { }
+
+	// RVA: 0x36208CC Offset: 0x361C8CC VA: 0x36208CC Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class LightNode_Shadow : PlanarShadowNode // TypeDefIndex: 815
+{
+	// Fields
+	public Light m_light; // 0xBCB4BEB1
+	public LightNodeActiveChanged OnLightNodeChanged; // 0xD0F9F6B5
+
+	// Properties
+	public Light light { get; set; }
+
+	// Methods
+
+	// RVA: 0x36202E8 Offset: 0x361C2E8 VA: 0x36202E8
+	public Light get_light() { }
+
+	// RVA: 0x36202F0 Offset: 0x361C2F0 VA: 0x36202F0
+	public void set_light(Light value) { }
+
+	// RVA: 0x36203B0 Offset: 0x361C3B0 VA: 0x36203B0 Slot: 6
+	protected override void OnEnableDisable(bool isActive) { }
+
+	// RVA: 0x362030C Offset: 0x361C30C VA: 0x362030C
+	private void Init() { }
+
+	// RVA: 0x36203D8 Offset: 0x361C3D8 VA: 0x36203D8 Slot: 7
+	protected override void OnDestroy() { }
+
+	// RVA: 0x3620480 Offset: 0x361C480 VA: 0x3620480
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class PlanarShadowManager : MonoSingleton<PlanarShadowManager> // TypeDefIndex: 816
+{
+	// Fields
+	private const CameraEvent CAMERA_EVENT = 11;
+	private Material mainShadowMat; // 0xB7BE95A9
+	private int centerPoint; // 0xFEB5BEB9
+	private int planeNormal; // 0xA9B1BC80
+	private int mainLightDir; // 0xB5BCB2B1
+	private HashSet<RenderNode_Shadow> m_rendererList; // 0xBC80FEA3
+	private HashSet<LightNode_Shadow> m_lightList; // 0xB2B1A9B1
+	private List<PlaneNode_Shadow> m_planeList; // 0xB198B5BC
+	private LightNode_Shadow m_mainLight; // 0xB5BCB4BE
+	private Camera m_camera; // 0xB583EAEA
+	private Transform m_shadowPlane; // 0xA0BE99A4
+	private Renderer m_shadowPlaneRenderer; // 0xB587A4A5
+	private ShadowResolution originalShadowResolution; // 0xA4B8B7B9
+
+	// Methods
+
+	// RVA: 0x36208D8 Offset: 0x361C8D8 VA: 0x36208D8 Slot: 5
+	public override void Init() { }
+
+	// RVA: 0x3620A50 Offset: 0x361CA50 VA: 0x3620A50
+	public void UpdatePlanarShadow(Renderer[] renderers, Camera camera, GameObject avatarLightGo, Transform shadowPlane) { }
+
+	// RVA: 0x362104C Offset: 0x361D04C VA: 0x362104C
+	public void UpdatePlanarShadow(Renderer renderer, Camera camera, GameObject avatarLightGo, Transform shadowPlane) { }
+
+	// RVA: 0x3620DE4 Offset: 0x361CDE4 VA: 0x3620DE4
+	public void UpdateRenderer(Renderer[] renderers) { }
+
+	// RVA: 0x36210A0 Offset: 0x361D0A0 VA: 0x36210A0
+	public void UpdateRenderer(Renderer renderer) { }
+
+	// RVA: 0x3620E50 Offset: 0x361CE50 VA: 0x3620E50
+	public void UpdateAvatarLight(GameObject avatarLightGo) { }
+
+	// RVA: 0x3620C20 Offset: 0x361CC20 VA: 0x3620C20
+	public void UpdateReceivedShadowPlane(Transform lobbyShadowParent) { }
+
+	// RVA: 0x3620AA4 Offset: 0x361CAA4 VA: 0x3620AA4
+	public void UpdateCamera(Camera camera) { }
+
+	// RVA: 0x36219A0 Offset: 0x361D9A0 VA: 0x36219A0
+	private void FindMainLight(LightNode_Shadow lightNode, bool isActive) { }
+
+	// RVA: 0x3621E90 Offset: 0x361DE90 VA: 0x3621E90
+	private void UpdateMainLight() { }
+
+	// RVA: 0x3621FD8 Offset: 0x361DFD8 VA: 0x3621FD8
+	private bool CheckShadowCondition(RenderNode_Shadow node) { }
+
+	// RVA: 0x3621700 Offset: 0x361D700 VA: 0x3621700
+	private void InitCommandBuffer(Renderer renderer, CommandBuffer commandBuffer) { }
+
+	// RVA: 0x3621CDC Offset: 0x361DCDC VA: 0x3621CDC
+	private void RefreshCommandBuffer() { }
+
+	// RVA: 0x362246C Offset: 0x361E46C VA: 0x362246C
+	private void RefreshCommandBuffer(RenderNode_Shadow node, bool isActive) { }
+
+	// RVA: 0x3622334 Offset: 0x361E334 VA: 0x3622334
+	private void MainCameraController(int mode, CommandBuffer commandBuffer) { }
+
+	// RVA: 0x3622580 Offset: 0x361E580 VA: 0x3622580
+	public void OnRendererStateChanged(RenderNode_Shadow rnode, bool isActive) { }
+
+	// RVA: 0x3622664 Offset: 0x361E664 VA: 0x3622664
+	public void OnLightStateChanged(LightNode_Shadow lnode, bool isActive) { }
+
+	// RVA: 0x3622738 Offset: 0x361E738 VA: 0x3622738
+	public void OnPlaneStateChanged(PlaneNode_Shadow pnode, bool isActive) { }
+
+	// RVA: 0x3622A0C Offset: 0x361EA0C VA: 0x3622A0C
+	public void OnCameraStateChanged(CameraNode_Shadow cnode, bool isActive) { }
+
+	// RVA: 0x36208F8 Offset: 0x361C8F8 VA: 0x36208F8
+	private void InitMainShadowMaterial() { }
+
+	// RVA: 0x3622A4C Offset: 0x361EA4C VA: 0x3622A4C Slot: 6
+	protected override void OnDestroy() { }
+
+	// RVA: 0x36224C8 Offset: 0x361E4C8 VA: 0x36224C8
+	private void SwithShadowState(bool drawingPlanarShadow) { }
+
+	// RVA: 0x3622AB4 Offset: 0x361EAB4 VA: 0x3622AB4
+	private void ChangeShadowmapSize(bool drawingPlanarShadow) { }
+
+	// RVA: 0x3621688 Offset: 0x361D688 VA: 0x3621688
+	private bool IsSkinnedMeshRenderer(Renderer renderer) { }
+
+	// RVA: 0x3622ACC Offset: 0x361EACC VA: 0x3622ACC
+	private void RefreshReceiveShadowPlane(PlaneNode_Shadow pnode) { }
+
+	// RVA: 0x36228B4 Offset: 0x361E8B4 VA: 0x36228B4
+	private void RefreshReceiver(PlaneNode_Shadow pnode) { }
+
+	// RVA: 0x3622C24 Offset: 0x361EC24 VA: 0x3622C24
+	private bool IsVisableInCurCamera(Vector3 pos) { }
+
+	// RVA: 0x362139C Offset: 0x361D39C VA: 0x362139C
+	private bool DontCastShadow(Renderer renderer) { }
+
+	// RVA: 0x36221BC Offset: 0x361E1BC VA: 0x36221BC
+	private bool DontCastShadow(Renderer renderer, int matIndex) { }
+
+	// RVA: 0x3622D38 Offset: 0x361ED38 VA: 0x3622D38
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class PlanarShadowNode : MonoBehaviour // TypeDefIndex: 817
+{
+	// Methods
+
+	// RVA: 0x3622E84 Offset: 0x361EE84 VA: 0x3622E84 Slot: 4
+	protected virtual void OnEnable() { }
+
+	// RVA: 0x3622EAC Offset: 0x361EEAC VA: 0x3622EAC Slot: 5
+	protected virtual void OnDisable() { }
+
+	// RVA: 0x3622ED4 Offset: 0x361EED4 VA: 0x3622ED4 Slot: 6
+	protected virtual void OnEnableDisable(bool isActive) { }
+
+	// RVA: 0x361FE84 Offset: 0x361BE84 VA: 0x361FE84 Slot: 7
+	protected virtual void OnDestroy() { }
+
+	// RVA: 0x361FE90 Offset: 0x361BE90 VA: 0x361FE90
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class PlaneNode_Shadow.PlaneStateChanged : MulticastDelegate // TypeDefIndex: 818
+{
+	// Methods
+
+	// RVA: 0x3621878 Offset: 0x361D878 VA: 0x3621878
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x362334C Offset: 0x361F34C VA: 0x362334C Slot: 13
+	public virtual void Invoke(PlaneNode_Shadow node, bool active) { }
+
+	// RVA: 0x3623364 Offset: 0x361F364 VA: 0x3623364 Slot: 14
+	public virtual IAsyncResult BeginInvoke(PlaneNode_Shadow node, bool active, AsyncCallback callback, object object) { }
+
+	// RVA: 0x36233FC Offset: 0x361F3FC VA: 0x36233FC Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class PlaneNode_Shadow : PlanarShadowNode // TypeDefIndex: 819
+{
+	// Fields
+	private Transform m_transform; // 0xBABE998F
+	public Renderer shadowPlaneRender; // 0xB5A4B3B5
+	private float altitude; // 0xBE85F8B4
+	private float curError; // 0x95A9A4B9
+	public PlaneStateChanged OnPlaneNodeChanged; // 0xBEB9B7BE
+
+	// Properties
+	public Transform shadowPlaneTrans { get; set; }
+
+	// Methods
+
+	// RVA: 0x3622ED8 Offset: 0x361EED8 VA: 0x3622ED8
+	public Transform get_shadowPlaneTrans() { }
+
+	// RVA: 0x3621984 Offset: 0x361D984 VA: 0x3621984
+	public void set_shadowPlaneTrans(Transform value) { }
+
+	// RVA: 0x3622EE0 Offset: 0x361EEE0 VA: 0x3622EE0
+	private void Init() { }
+
+	// RVA: 0x3622F48 Offset: 0x361EF48 VA: 0x3622F48 Slot: 6
+	protected override void OnEnableDisable(bool isActive) { }
+
+	// RVA: 0x3622F70 Offset: 0x361EF70 VA: 0x3622F70
+	private void LateUpdate() { }
+
+	// RVA: 0x3623014 Offset: 0x361F014 VA: 0x3623014 Slot: 7
+	protected override void OnDestroy() { }
+
+	// RVA: 0x36230BC Offset: 0x361F0BC VA: 0x36230BC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class RenderNode_Shadow.RenderNodeActiveChanged : MulticastDelegate // TypeDefIndex: 820
+{
+	// Methods
+
+	// RVA: 0x362157C Offset: 0x361D57C VA: 0x362157C
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x3623960 Offset: 0x361F960 VA: 0x3623960 Slot: 13
+	public virtual void Invoke(RenderNode_Shadow node, bool active) { }
+
+	// RVA: 0x3623978 Offset: 0x361F978 VA: 0x3623978 Slot: 14
+	public virtual IAsyncResult BeginInvoke(RenderNode_Shadow node, bool active, AsyncCallback callback, object object) { }
+
+	// RVA: 0x3623A10 Offset: 0x361FA10 VA: 0x3623A10 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class RenderNode_Shadow : PlanarShadowNode // TypeDefIndex: 821
+{
+	// Fields
+	private Renderer m_Renderer; // 0xBC80FEB5
+	public CommandBuffer commandBuffer; // 0xB2B1A9B1
+	private ShadowCastingMode shadowCastingMode; // 0xFEA3B5BC
+	public RenderNodeActiveChanged OnRenderNodeChanged; // 0xA9B1BC80
+	public int subMeshCnt; // 0xB5BCB2B1
+
+	// Properties
+	public Renderer Render { get; set; }
+
+	// Methods
+
+	// RVA: 0x3623408 Offset: 0x361F408 VA: 0x3623408
+	public Renderer get_Render() { }
+
+	// RVA: 0x362185C Offset: 0x361D85C VA: 0x362185C
+	public void set_Render(Renderer value) { }
+
+	// RVA: 0x36234FC Offset: 0x361F4FC VA: 0x36234FC Slot: 6
+	protected override void OnEnableDisable(bool isActive) { }
+
+	// RVA: 0x3623410 Offset: 0x361F410 VA: 0x3623410
+	private void Init() { }
+
+	// RVA: 0x3623538 Offset: 0x361F538 VA: 0x3623538
+	private void LateUpdate() { }
+
+	// RVA: 0x3623604 Offset: 0x361F604 VA: 0x3623604 Slot: 7
+	protected override void OnDestroy() { }
+
+	// RVA: 0x36236D0 Offset: 0x361F6D0 VA: 0x36236D0
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class PosSync : MonoBehaviour // TypeDefIndex: 822
+{
+	// Fields
+	public MeshRenderer targetMatObj; // 0xB4BEB198
+	public TechAirdropState State; // 0xFCF6B5BC
+	public Vector2 VfxPosYRange; // 0xA4B9BE85
+	private List<Material> targetMats; // 0xB7BE95A9
+	private int m_Custom_PlaneNormalID; // 0xFEB5BEB9
+	private int m_Custom_PlanePosID; // 0xA9B1BC80
+	private Vector3 m_PlanePos; // 0xB5BCB2B1
+	private Vector3 m_PlaneNormal; // 0xBC80FEA3
+	private bool m_Finish; // 0xB2B1A9B1
+
+	// Methods
+
+	// RVA: 0x3623A1C Offset: 0x361FA1C VA: 0x3623A1C
+	private void Start() { }
+
+	// RVA: 0x3623A24 Offset: 0x361FA24 VA: 0x3623A24
+	private void Init(bool test = false) { }
+
+	// RVA: 0x3623D24 Offset: 0x361FD24 VA: 0x3623D24
+	private void Refresh(bool test = false) { }
+
+	// RVA: 0x36241C4 Offset: 0x36201C4 VA: 0x36241C4
+	private void Update() { }
+
+	[ContextMenu("Exceute")]
+	// RVA: 0x36241CC Offset: 0x36201CC VA: 0x36241CC
+	public void Exceute() { }
+
+	// RVA: 0x36241EC Offset: 0x36201EC VA: 0x36241EC
+	public void InitStateCtrl(TechAirdropState mModelCtrl) { }
+
+	// RVA: 0x3624230 Offset: 0x3620230 VA: 0x3624230
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+public class PrefabColliderExportHelper : MonoBehaviour // TypeDefIndex: 823
+{
+	// Methods
+
+	// RVA: 0x3624308 Offset: 0x3620308 VA: 0x3624308
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class PreviewInstanceReference : MonoBehaviour // TypeDefIndex: 824
+{
+	// Fields
+	public string previewName; // 0xB198B5BC
+
+	// Methods
+
+	// RVA: 0x3624310 Offset: 0x3620310 VA: 0x3624310
+	private void OnEnable() { }
+
+	// RVA: 0x3624314 Offset: 0x3620314 VA: 0x3624314
+	public void ForceEnable() { }
+
+	// RVA: 0x36244E0 Offset: 0x36204E0 VA: 0x36244E0
+	private void OnDisable() { }
+
+	// RVA: 0x36246B0 Offset: 0x36206B0 VA: 0x36246B0
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class LightmapInfo // TypeDefIndex: 825
+{
+	// Fields
+	public int lightmapIndex; // 0xB5BCB4BE
+	public Vector4 lightmapScaleOffset; // 0xA983FCF6
+
+	// Methods
+
+	// RVA: 0x36246B8 Offset: 0x36206B8 VA: 0x36246B8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class ReplaceSceneMapping // TypeDefIndex: 826
+{
+	// Fields
+	public string label; // 0xBDB5A4A3
+	public int offset; // 0xBEB983FE
+	public int length; // 0xF9B5BCB7
+
+	// Methods
+
+	// RVA: 0x36246C0 Offset: 0x36206C0 VA: 0x36246C0
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class ReplaceSceneTextureList // TypeDefIndex: 827
+{
+	// Fields
+	public List<Texture2D> lightmaps; // 0xB9BE85D0
+
+	// Methods
+
+	// RVA: 0x36246C8 Offset: 0x36206C8 VA: 0x36246C8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class RepalceSceneLightMapConfig // TypeDefIndex: 828
+{
+	// Fields
+	public int allLightmapsNum; // 0xBE95A9A4
+	public List<ReplaceSceneMapping> mapping; // 0xB5BEB9B7
+	public List<LightmapAreaInfoNoRef> areaLightmapsFromFile; // 0xB1BC80FE
+	public List<ReplaceSceneTextureList> allLightmaps; // 0xBCB2B1A9
+
+	// Methods
+
+	// RVA: 0x3624750 Offset: 0x3620750 VA: 0x3624750
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class LightmapAreaInfo // TypeDefIndex: 829
+{
+	// Fields
+	public int[] areaID; // 0x80FEA3B5
+	public List<Renderer> renderers; // 0xB1A9B1BC
+	public List<Texture2D> lightmaps; // 0x94B5BCB2
+	public List<Texture2D> shadowmasks; // 0xB3B5A2B9
+	public List<LightmapInfo> lightmapInfo; // 0xEAA2BFA4
+
+	// Methods
+
+	// RVA: 0x362488C Offset: 0x362088C VA: 0x362488C
+	public void Clear() { }
+
+	// RVA: 0x3624998 Offset: 0x3620998 VA: 0x3624998
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class RuntimePrefabStat // TypeDefIndex: 830
+{
+	// Fields
+	public int indexOffset; // 0xA4B583EA
+	public int refCount; // 0xA9B1BC80
+
+	// Methods
+
+	// RVA: 0x3624AEC Offset: 0x3620AEC VA: 0x3624AEC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+public class SceneExtensionInfo : MonoBehaviour // TypeDefIndex: 831
+{
+	// Fields
+	private static SceneExtensionInfo _instance; // 0xB5BCB2B1
+	public bool version2018; // 0xB5A3A391
+	public int lightmapNum; // 0xBE85F8A4
+	public List<LightmapAreaInfo> areaLightmaps; // 0x95A9A4B9
+	[CompilerGenerated]
+	private LightmapData[] <LightmapDataArr>k__BackingField; // 0xBEB9B7BE
+	private int[] LightmapRefCount; // 0xB383FEB5
+	private const int LightmapBlockSize = 3;
+	private int extraPrefabLightmapNum; // 0xB5BCB2B1
+	private List<LightmapData> LightmapDataArrWithExtra; // 0xB5BAB29F
+	private Dictionary<string, RuntimePrefabStat> extraPrefabLightmaps; // 0xD0F9A4B3
+	public const int P_blockSize = 100;
+	public const int L_blockSize = 50;
+	public const int S_blockSize = 30;
+	public static int ReplaceSceneOffsetConst; // 0xBEB5A695
+	public RepalceSceneLightMapConfig ReplaceSceneLightMapConf; // 0xA3EAEAA4
+	private const float shadowOnlyScale = 0.01;
+	public bool hasShadowmask; // 0xBF93A9B5
+	public bool skipLightmapFile; // 0x85F8B5B4
+	public static bool bakingMode; // 0xA9A4B9BE
+	public static bool enableAlert; // 0xB9B7BE95
+	public const string c_NegScaleMeshName = "__NegScaleMesh__";
+	private bool isBaseScene; // 0xBF93A9B5
+	private bool hack_isUGCWorkshopMainScene; // 0xD0F9B5B4
+	public static int baseSceneLmLength; // 0xA4B9BE85
+	public SimulationStreamer simulateStreamer; // 0xB7BE95A9
+	public List<SceneExtensionInfoExtData> extensionDatas; // 0xFEB5BEB9
+	private Dictionary<int, LightmapData> pendingLightmaps; // 0x93998597
+
+	// Properties
+	public static SceneExtensionInfo instance { get; set; }
+	public LightmapData[] LightmapDataArr { get; set; }
+
+	// Methods
+
+	// RVA: 0x3624AF4 Offset: 0x3620AF4 VA: 0x3624AF4
+	public static SceneExtensionInfo get_instance() { }
+
+	// RVA: 0x3624B4C Offset: 0x3620B4C VA: 0x3624B4C
+	private static void set_instance(SceneExtensionInfo value) { }
+
+	[CompilerGenerated]
+	// RVA: 0x3624BB4 Offset: 0x3620BB4 VA: 0x3624BB4
+	public LightmapData[] get_LightmapDataArr() { }
+
+	[CompilerGenerated]
+	// RVA: 0x3624BBC Offset: 0x3620BBC VA: 0x3624BBC
+	private void set_LightmapDataArr(LightmapData[] value) { }
+
+	// RVA: 0x3624BC4 Offset: 0x3620BC4 VA: 0x3624BC4
+	private void Awake() { }
+
+	// RVA: 0x3625290 Offset: 0x3621290 VA: 0x3625290
+	private void Start() { }
+
+	// RVA: 0x3625B74 Offset: 0x3621B74 VA: 0x3625B74
+	private void OnDestroy() { }
+
+	// RVA: 0x3625CA0 Offset: 0x3621CA0 VA: 0x3625CA0
+	public void InitLightmaps() { }
+
+	// RVA: 0x3624E8C Offset: 0x3620E8C VA: 0x3624E8C
+	public void InitLightmapInfo() { }
+
+	// RVA: 0x3625300 Offset: 0x3621300 VA: 0x3625300
+	public void InitLightmapTextures() { }
+
+	// RVA: 0x3625D20 Offset: 0x3621D20 VA: 0x3625D20
+	public void LoadPendingLightmaps() { }
+
+	// RVA: 0x3625F60 Offset: 0x3621F60 VA: 0x3625F60
+	public void RefreshLightmapNum() { }
+
+	// RVA: 0x36260D4 Offset: 0x36220D4 VA: 0x36260D4
+	public void ResizeLightmapNum(int newLightmapNum) { }
+
+	// RVA: 0x361C488 Offset: 0x3618488 VA: 0x361C488
+	public void LoadLightmap(LightmapTextureInfo info) { }
+
+	// RVA: 0x361C7C8 Offset: 0x36187C8 VA: 0x361C7C8
+	public void UnloadLightmap(LightmapTextureInfo info) { }
+
+	// RVA: 0x361AB74 Offset: 0x3616B74 VA: 0x361AB74
+	public void LoadLightmap(LightmapTextureInfo2 info) { }
+
+	// RVA: 0x361AEC8 Offset: 0x3616EC8 VA: 0x361AEC8
+	public void UnloadLightmap(LightmapTextureInfo2 info) { }
+
+	// RVA: 0x3626308 Offset: 0x3622308 VA: 0x3626308
+	public void LoadLightmap(int[] lightmapIndexes, Texture2D[] lightmaps, Texture2D[] shadowmasks) { }
+
+	// RVA: 0x3626520 Offset: 0x3622520 VA: 0x3626520
+	public void UnloadLightmap(int[] lightmapIndexes, Texture2D[] lightmaps, Texture2D[] shadowmasks) { }
+
+	// RVA: 0x36267E0 Offset: 0x36227E0 VA: 0x36267E0
+	public bool IsUGCWorkshopMainScene() { }
+
+	// RVA: 0x361B728 Offset: 0x3617728 VA: 0x361B728
+	public int LoadLightmapEx(RuntimePrefabLightmap info) { }
+
+	// RVA: 0x361B5E4 Offset: 0x36175E4 VA: 0x361B5E4
+	public void UnloadLightmapEx(RuntimePrefabLightmap info) { }
+
+	// RVA: 0x36267E8 Offset: 0x36227E8 VA: 0x36267E8
+	public void ClearLightmapEx() { }
+
+	// RVA: 0x362687C Offset: 0x362287C VA: 0x362687C
+	public void AddToPendingLightmaps(int lmID, LightmapData lmData) { }
+
+	// RVA: 0x3626938 Offset: 0x3622938 VA: 0x3626938
+	public static bool UseBoundsForStreamBlocks(string sceneName) { }
+
+	// RVA: 0x3626A68 Offset: 0x3622A68 VA: 0x3626A68
+	public void .ctor() { }
+
+	// RVA: 0x3626B24 Offset: 0x3622B24 VA: 0x3626B24
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class PerfInfo // TypeDefIndex: 832
+{
+	// Fields
+	public float height; // 0xEAA0B9BC
+	public int matNum; // 0xA4BE99EA
+	public HashSet<Material> materials; // 0xB1BEA2B5
+	public int drawCallNum; // 0xA5808FBC
+	public int drawCallNumInTotal; // 0xB180B8A3
+	public int tris; // 0xA4BEB5A2
+	public int trisInTotal; // 0xA0B9BC93
+	public string hint; // 0xBABE998F
+	public int warning; // 0xB5A4B3B5
+
+	// Methods
+
+	// RVA: 0x3626B7C Offset: 0x3622B7C VA: 0x3626B7C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+public class SceneExtensionInfoExtData : MonoBehaviour // TypeDefIndex: 833
+{
+	// Fields
+	public bool version2018; // 0xBE85F8B4
+	public int lightmapNum; // 0x95A9A4B9
+	public List<LightmapAreaInfo> areaLightmaps; // 0xBEB9B7BE
+	public string replaceLabel; // 0xB19DFEB5
+	public int lightMapOffset; // 0xA8B9A2A4
+	public int lightMapLength; // 0xF6E4A8E4
+	public int lightMapTotal; // 0xB9BE85FC
+	private bool init; // 0xBE95A9A4
+	private bool skipFile; // 0xB5BEB9B7
+	private const float shadowOnlyScale = 0.01;
+
+	// Methods
+
+	// RVA: 0x3626C04 Offset: 0x3622C04 VA: 0x3626C04
+	private void Start() { }
+
+	// RVA: 0x36272C4 Offset: 0x36232C4 VA: 0x36272C4
+	public void RefreshLightmapNum() { }
+
+	// RVA: 0x3625CB8 Offset: 0x3621CB8 VA: 0x3625CB8
+	public void MergeToMainScene(bool forceUpdate = false) { }
+
+	// RVA: 0x3627438 Offset: 0x3623438 VA: 0x3627438
+	public void RemoveFromMainScene(bool forceUpdate = false) { }
+
+	// RVA: 0x3627054 Offset: 0x3623054 VA: 0x3627054
+	private void initReplaceSceneLightMapInfo() { }
+
+	// RVA: 0x3626C6C Offset: 0x3622C6C VA: 0x3626C6C
+	private void initReplaceSceneLightMapNoInStreamerTexture() { }
+
+	// RVA: 0x362743C Offset: 0x362343C VA: 0x362743C
+	private void initLMSettingForOverlay() { }
+
+	// RVA: 0x3627750 Offset: 0x3623750 VA: 0x3627750
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class LightmapAreaInfoNoRef // TypeDefIndex: 834
+{
+	// Fields
+	public int[] areaID; // 0xE4A8B9A2
+	public List<string> rendererID; // 0xFCF6E4A8
+	public List<Texture2D> lightmaps; // 0xA4B9BE85
+	public List<Texture2D> shadowmasks; // 0xB7BE95A9
+	public List<LightmapInfo> lightmapInfo; // 0xFEB5BEB9
+
+	// Methods
+
+	// RVA: 0x3627804 Offset: 0x3623804 VA: 0x3627804
+	public void Clear() { }
+
+	// RVA: 0x3627910 Offset: 0x3623910 VA: 0x3627910
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class SceneLightmapFile : ScriptableObject // TypeDefIndex: 835
+{
+	// Fields
+	public int versionID; // 0xA4B3B582
+	public bool version2018; // 0x85D0F9F6
+	public List<LightmapAreaInfoNoRef> areaLightmaps; // 0xA9A4B9BE
+
+	// Methods
+
+	// RVA: 0x3627A64 Offset: 0x3623A64 VA: 0x3627A64
+	public static bool SameID(int[] lhs, int[] rhs, int offset = 0) { }
+
+	// RVA: 0x3627B94 Offset: 0x3623B94 VA: 0x3627B94
+	public LightmapAreaInfoNoRef GetAreaLightmap(int[] areaID, bool createIfNotExists = true) { }
+
+	// RVA: 0x3627D3C Offset: 0x3623D3C VA: 0x3627D3C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+public class SceneLightSync : MonoBehaviour // TypeDefIndex: 836
+{
+	// Fields
+	private readonly string MAINLIGHTNAME; // 0xB9B7BE95
+	private readonly string BACKLIGHTNAME; // 0x97FEB5BE
+	private readonly string PREFABNAME; // 0xA4839985
+	public GameObject PrefabScene; // 0xEAB5BCA9
+	public Light MainLight; // 0xA4B5A3EA
+	public Light BackLight; // 0xBEBFB68F
+	public float CharLightOFF; // 0xAAB983A4
+	public float CharLightON; // 0xA983F8B5
+	public bool isBrightness; // 0xBDB5A4A3
+	private SceneGraphicsOverride m_sgo; // 0xA4BE99FE
+	private bool m_isInit; // 0xD0F9E2E3
+
+	// Methods
+
+	// RVA: 0x3627DC4 Offset: 0x3623DC4 VA: 0x3627DC4
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class SceneBlockHotspot : MonoBehaviour // TypeDefIndex: 837
+{
+	// Methods
+
+	// RVA: 0x3627E6C Offset: 0x3623E6C VA: 0x3627E6C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class SceneRuntimeRenderAnalyse : MonoBehaviour // TypeDefIndex: 838
+{
+	// Methods
+
+	// RVA: 0x3627E74 Offset: 0x3623E74 VA: 0x3627E74
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[SaveDuringPlay]
+public class SceneRuntimeRenderHotspot : MonoBehaviour // TypeDefIndex: 839
+{
+	// Methods
+
+	// RVA: 0x3627E7C Offset: 0x3623E7C VA: 0x3627E7C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+public class SceneRenderHotspot : MonoBehaviour // TypeDefIndex: 840
+{
+	// Methods
+
+	// RVA: 0x3627E84 Offset: 0x3623E84 VA: 0x3627E84
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+public class SharedSceneObject : MonoBehaviour // TypeDefIndex: 841
+{
+	// Fields
+	public int key; // 0xA4B9BE85
+	public bool isMain; // 0xB7BE95A9
+	public GameObject sceneObject; // 0xFEB5BEB9
+	public int[] lightmapIndexList; // 0x85998597
+
+	// Methods
+
+	// RVA: 0x3627E8C Offset: 0x3623E8C VA: 0x3627E8C
+	private void Awake() { }
+
+	// RVA: 0x3628080 Offset: 0x3624080 VA: 0x3628080
+	private void OnDestroy() { }
+
+	// RVA: 0x3628230 Offset: 0x3624230 VA: 0x3628230
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class SharedSceneObjectRecord // TypeDefIndex: 842
+{
+	// Fields
+	public int refCount; // 0xB9BCB9A4
+	public GameObject sceneObject; // 0xEAEAA9A4
+
+	// Methods
+
+	// RVA: 0x3628238 Offset: 0x3624238 VA: 0x3628238
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class SharedSceneObjectManager : MonoSingleton<SharedSceneObjectManager> // TypeDefIndex: 843
+{
+	// Fields
+	private Dictionary<int, SharedSceneObjectRecord> objectDict; // 0x8FA4B5A3
+
+	// Methods
+
+	// RVA: 0x3627F20 Offset: 0x3623F20 VA: 0x3627F20
+	public void Register(SharedSceneObject obj, int key) { }
+
+	// RVA: 0x3628130 Offset: 0x3624130 VA: 0x3628130
+	public void Unregister(SharedSceneObject obj, int key) { }
+
+	// RVA: 0x3628240 Offset: 0x3624240 VA: 0x3628240 Slot: 6
+	protected override void OnDestroy() { }
+
+	// RVA: 0x3628440 Offset: 0x3624440 VA: 0x3628440
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+public class StaticBatchHint : MonoBehaviour // TypeDefIndex: 844
+{
+	// Fields
+	public bool shouldBatch; // 0xA4A3A9A3
+
+	// Methods
+
+	// RVA: 0x36284DC Offset: 0x36244DC VA: 0x36284DC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+public class TextureMipmapBias : MonoBehaviour // TypeDefIndex: 845
+{
+	// Fields
+	public string[] textureNames; // 0xBF93BDB5
+	public bool[] textureMipmapBias; // 0xA592A9A0
+	private MeshRenderer renderer; // 0xA2B5B6B6
+
+	// Methods
+
+	// RVA: 0x36284E4 Offset: 0x36244E4 VA: 0x36284E4
+	private void Awake() { }
+
+	// RVA: 0x362853C Offset: 0x362453C VA: 0x362853C
+	public void SetMipmapBias(bool forceUpdate = false) { }
+
+	// RVA: 0x3628704 Offset: 0x3624704 VA: 0x3628704
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class TssSdtDataTypeFactory // TypeDefIndex: 846
+{
+	// Fields
+	private static byte m_byte_xor_key; // 0xA3A983F8
+	private static short m_short_xor_key; // 0xFEBDB5A4
+	private static ushort m_ushort_xor_key; // 0xB9A2A483
+	private static int m_int_xor_key; // 0xD0F9B7BE
+	private static uint m_uint_xor_key; // 0xA4B9BE85
+	private static long m_long_xor_key; // 0xB7BE95A9
+	private static ulong m_ulong_xor_key; // 0xFEB5BEB9
+
+	// Methods
+
+	// RVA: 0x362870C Offset: 0x362470C VA: 0x362870C
+	public static byte GetByteXORKey() { }
+
+	// RVA: 0x36287B4 Offset: 0x36247B4 VA: 0x36287B4
+	public static void SetByteXORKey(byte v) { }
+
+	// RVA: 0x3628800 Offset: 0x3624800 VA: 0x3628800
+	public static short GetShortXORKey() { }
+
+	// RVA: 0x36288A8 Offset: 0x36248A8 VA: 0x36288A8
+	public static ushort GetUshortXORKey() { }
+
+	// RVA: 0x3628950 Offset: 0x3624950 VA: 0x3628950
+	public static int GetIntXORKey() { }
+
+	// RVA: 0x36289F8 Offset: 0x36249F8 VA: 0x36289F8
+	public static uint GetUintXORKey() { }
+
+	// RVA: 0x3628AA0 Offset: 0x3624AA0 VA: 0x3628AA0
+	public static long GetLongXORKey() { }
+
+	// RVA: 0x3628B4C Offset: 0x3624B4C VA: 0x3628B4C
+	public static ulong GetUlongXORKey() { }
+
+	// RVA: 0x3628BF8 Offset: 0x3624BF8 VA: 0x3628BF8
+	public static int GetRandomValueIndex() { }
+
+	// RVA: 0x3628C40 Offset: 0x3624C40 VA: 0x3628C40
+	public static int GetValueArraySize() { }
+
+	// RVA: 0x3628C48 Offset: 0x3624C48 VA: 0x3628C48
+	public static uint GetFloatEncValue(float v, byte key) { }
+
+	// RVA: 0x3628CB0 Offset: 0x3624CB0 VA: 0x3628CB0
+	public static float GetFloatDecValue(uint v, byte key) { }
+
+	// RVA: 0x3628D18 Offset: 0x3624D18 VA: 0x3628D18
+	public static ulong GetDoubleEncValue(double v, byte key) { }
+
+	// RVA: 0x3628D80 Offset: 0x3624D80 VA: 0x3628D80
+	public static double GetDoubleDecValue(ulong v, byte key) { }
+
+	// RVA: 0x3628DE8 Offset: 0x3624DE8 VA: 0x3628DE8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class TssSdtIntSlot // TypeDefIndex: 847
+{
+	// Fields
+	private int[] m_value; // 0x85998597
+	private int m_xor_key; // 0xB9BCB9A4
+	private int m_index; // 0xEAEAA9A4
+
+	// Methods
+
+	// RVA: 0x3628DF0 Offset: 0x3624DF0 VA: 0x3628DF0
+	public static TssSdtIntSlot NewSlot(TssSdtIntSlot slot) { }
+
+	// RVA: 0x3628E40 Offset: 0x3624E40 VA: 0x3628E40
+	private static void CollectSlot(TssSdtIntSlot slot) { }
+
+	// RVA: 0x3628E44 Offset: 0x3624E44 VA: 0x3628E44
+	public void .ctor() { }
+
+	// RVA: 0x3628F00 Offset: 0x3624F00 VA: 0x3628F00
+	public void SetValue(int v) { }
+
+	// RVA: 0x3628F60 Offset: 0x3624F60 VA: 0x3628F60
+	public int GetValue() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class TssSdtInt // TypeDefIndex: 848
+{
+	// Fields
+	private TssSdtIntSlot m_slot; // 0x8FA4B5B7
+
+	// Methods
+
+	// RVA: 0x3628F9C Offset: 0x3624F9C VA: 0x3628F9C
+	public static TssSdtInt NewTssSdtInt() { }
+
+	// RVA: 0x3629018 Offset: 0x3625018 VA: 0x3629018
+	private int GetValue() { }
+
+	// RVA: 0x3629050 Offset: 0x3625050 VA: 0x3629050
+	private void SetValue(int v) { }
+
+	// RVA: 0x3629098 Offset: 0x3625098 VA: 0x3629098
+	public static int op_Implicit(TssSdtInt v) { }
+
+	// RVA: 0x362916C Offset: 0x362516C VA: 0x362916C
+	public static TssSdtInt op_Implicit(int v) { }
+
+	// RVA: 0x36291D8 Offset: 0x36251D8 VA: 0x36291D8 Slot: 0
+	public override bool Equals(object obj) { }
+
+	// RVA: 0x36291E0 Offset: 0x36251E0 VA: 0x36291E0 Slot: 2
+	public override int GetHashCode() { }
+
+	// RVA: 0x36290CC Offset: 0x36250CC VA: 0x36290CC
+	public static bool op_Equality(TssSdtInt a, TssSdtInt b) { }
+
+	// RVA: 0x3629200 Offset: 0x3625200 VA: 0x3629200
+	public static bool op_Inequality(TssSdtInt a, TssSdtInt b) { }
+
+	// RVA: 0x36292A0 Offset: 0x36252A0 VA: 0x36292A0
+	public static TssSdtInt op_Increment(TssSdtInt v) { }
+
+	// RVA: 0x3629334 Offset: 0x3625334 VA: 0x3629334
+	public static TssSdtInt op_Decrement(TssSdtInt v) { }
+
+	// RVA: 0x36293C8 Offset: 0x36253C8 VA: 0x36293C8 Slot: 3
+	public override string ToString() { }
+
+	// RVA: 0x3629010 Offset: 0x3625010 VA: 0x3629010
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class TssSdtLongSlot // TypeDefIndex: 849
+{
+	// Fields
+	private long[] m_value; // 0xA0BDBFB3
+	private long m_xor_key; // 0xA4B9A3BF
+	private int m_index; // 0x83BEBFB9
+
+	// Methods
+
+	// RVA: 0x3629454 Offset: 0x3625454 VA: 0x3629454
+	public static TssSdtLongSlot NewSlot(TssSdtLongSlot slot) { }
+
+	// RVA: 0x36294A4 Offset: 0x36254A4 VA: 0x36294A4
+	private static void CollectSlot(TssSdtLongSlot slot) { }
+
+	// RVA: 0x36294A8 Offset: 0x36254A8 VA: 0x36294A8
+	public void .ctor() { }
+
+	// RVA: 0x3629564 Offset: 0x3625564 VA: 0x3629564
+	public void SetValue(long v) { }
+
+	// RVA: 0x36295C4 Offset: 0x36255C4 VA: 0x36295C4
+	public long GetValue() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class TssSdtFloatSlot // TypeDefIndex: 850
+{
+	// Fields
+	private uint[] m_value; // 0xBEB9A2A4
+	private byte m_xor_key; // 0xD0F9F8B7
+	private int m_index; // 0xA4B9BE85
+
+	// Methods
+
+	// RVA: 0x3629600 Offset: 0x3625600 VA: 0x3629600
+	public static TssSdtFloatSlot NewSlot(TssSdtFloatSlot slot) { }
+
+	// RVA: 0x3629650 Offset: 0x3625650 VA: 0x3629650
+	private static void CollectSlot(TssSdtFloatSlot slot) { }
+
+	// RVA: 0x3629654 Offset: 0x3625654 VA: 0x3629654
+	public void .ctor() { }
+
+	// RVA: 0x3629710 Offset: 0x3625710 VA: 0x3629710
+	public void SetValue(float v) { }
+
+	// RVA: 0x3629780 Offset: 0x3625780 VA: 0x3629780
+	public float GetValue() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class TssSdtFloat // TypeDefIndex: 851
+{
+	// Fields
+	private TssSdtFloatSlot m_slot; // 0xB7BE95A9
+
+	// Methods
+
+	// RVA: 0x36297BC Offset: 0x36257BC VA: 0x36297BC
+	public static TssSdtFloat NewTssSdtFloat() { }
+
+	// RVA: 0x3629838 Offset: 0x3625838 VA: 0x3629838
+	public float GetValue() { }
+
+	// RVA: 0x3629870 Offset: 0x3625870 VA: 0x3629870
+	public void SetValue(float v) { }
+
+	// RVA: 0x36298B8 Offset: 0x36258B8 VA: 0x36298B8
+	public static float op_Implicit(TssSdtFloat v) { }
+
+	// RVA: 0x3629994 Offset: 0x3625994 VA: 0x3629994
+	public static TssSdtFloat op_Implicit(float v) { }
+
+	// RVA: 0x3629A08 Offset: 0x3625A08 VA: 0x3629A08 Slot: 0
+	public override bool Equals(object obj) { }
+
+	// RVA: 0x3629A10 Offset: 0x3625A10 VA: 0x3629A10 Slot: 2
+	public override int GetHashCode() { }
+
+	// RVA: 0x36298EC Offset: 0x36258EC VA: 0x36298EC
+	public static bool op_Equality(TssSdtFloat a, TssSdtFloat b) { }
+
+	// RVA: 0x3629A30 Offset: 0x3625A30 VA: 0x3629A30
+	public static bool op_Inequality(TssSdtFloat a, TssSdtFloat b) { }
+
+	// RVA: 0x3629AD8 Offset: 0x3625AD8 VA: 0x3629AD8
+	public static TssSdtFloat op_Increment(TssSdtFloat v) { }
+
+	// RVA: 0x3629B70 Offset: 0x3625B70 VA: 0x3629B70
+	public static TssSdtFloat op_Decrement(TssSdtFloat v) { }
+
+	// RVA: 0x3629C08 Offset: 0x3625C08 VA: 0x3629C08 Slot: 3
+	public override string ToString() { }
+
+	// RVA: 0x3629830 Offset: 0x3625830 VA: 0x3629830
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class TssSdtSmallFloat // TypeDefIndex: 852
+{
+	// Fields
+	private TssSdtLongSlot m_slot; // 0xFEB5BEB9
+
+	// Methods
+
+	// RVA: 0x3629C90 Offset: 0x3625C90 VA: 0x3629C90
+	public static TssSdtSmallFloat NewTssSdtSmallFloat() { }
+
+	// RVA: 0x3629D0C Offset: 0x3625D0C VA: 0x3629D0C
+	public float GetValue() { }
+
+	// RVA: 0x3629D58 Offset: 0x3625D58 VA: 0x3629D58
+	public void SetValue(float v) { }
+
+	// RVA: 0x3629DC0 Offset: 0x3625DC0 VA: 0x3629DC0
+	public static float op_Implicit(TssSdtSmallFloat v) { }
+
+	// RVA: 0x3629E9C Offset: 0x3625E9C VA: 0x3629E9C
+	public static TssSdtSmallFloat op_Implicit(float v) { }
+
+	// RVA: 0x3629F10 Offset: 0x3625F10 VA: 0x3629F10 Slot: 0
+	public override bool Equals(object obj) { }
+
+	// RVA: 0x3629F18 Offset: 0x3625F18 VA: 0x3629F18 Slot: 2
+	public override int GetHashCode() { }
+
+	// RVA: 0x3629DF4 Offset: 0x3625DF4 VA: 0x3629DF4
+	public static bool op_Equality(TssSdtSmallFloat a, TssSdtSmallFloat b) { }
+
+	// RVA: 0x3629F38 Offset: 0x3625F38 VA: 0x3629F38
+	public static bool op_Inequality(TssSdtSmallFloat a, TssSdtSmallFloat b) { }
+
+	// RVA: 0x3629FE0 Offset: 0x3625FE0 VA: 0x3629FE0 Slot: 3
+	public override string ToString() { }
+
+	// RVA: 0x3629D04 Offset: 0x3625D04 VA: 0x3629D04
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class UnityMessageAttribute : Attribute // TypeDefIndex: 853
+{
+	// Methods
+
+	// RVA: 0x362A068 Offset: 0x3626068 VA: 0x362A068
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class UnityThread : MonoBehaviour // TypeDefIndex: 854
+{
+	// Fields
+	private static UnityThread _I; // 0xA5A0BE99
+	private static List<Action> _UpdateActionsPending; // 0x97EAEAA4
+	private List<Action> _UpdateActionsExecuting; // 0xB59BA4B5
+	private static bool _HasUpdateActions; // 0xA4BE99A9
+	private static int _UnityMainThreadId; // 0xB9BE85F8
+
+	// Properties
+	public static bool IsUnityMainThread { get; }
+
+	// Methods
+
+	// RVA: 0x362A070 Offset: 0x3626070 VA: 0x362A070
+	public static void Init(bool visible = false) { }
+
+	// RVA: 0x362A230 Offset: 0x3626230 VA: 0x362A230
+	private void Awake() { }
+
+	// RVA: 0x362A29C Offset: 0x362629C VA: 0x362A29C
+	public static void RunInUpdate(Action action) { }
+
+	// RVA: 0x362A454 Offset: 0x3626454 VA: 0x362A454
+	public static void ActionUpdate() { }
+
+	// RVA: 0x362A518 Offset: 0x3626518 VA: 0x362A518
+	private void Update() { }
+
+	// RVA: 0x362A86C Offset: 0x362686C VA: 0x362A86C
+	private void OnApplicationQuit() { }
+
+	// RVA: 0x362A8F4 Offset: 0x36268F4 VA: 0x362A8F4
+	public static bool get_IsUnityMainThread() { }
+
+	// RVA: 0x362A974 Offset: 0x3626974 VA: 0x362A974
+	public static void RunOnUnityMainThread(Action action) { }
+
+	// RVA: 0x362AA08 Offset: 0x3626A08 VA: 0x362AA08
+	public void .ctor() { }
+
+	// RVA: 0x362AA90 Offset: 0x3626A90 VA: 0x362AA90
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class UV2 // TypeDefIndex: 855
+{
+	// Fields
+	public Vector2[] verts; // 0xBE95A9A4
+
+	// Methods
+
+	// RVA: 0x362AB50 Offset: 0x3626B50 VA: 0x362AB50
+	public void .ctor(Vector2[] verts) { }
+
+	// RVA: 0x362AB80 Offset: 0x3626B80 VA: 0x362AB80
+	public static UV2 op_Implicit(Vector2[] verts) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class UV2Info : ScriptableObject // TypeDefIndex: 856
+{
+	// Fields
+	public Mesh[] meshes; // 0xB5BEB9B7
+	public Mesh[] clonedMeshes; // 0xA9B59BFE
+
+	// Methods
+
+	// RVA: 0x362ABE8 Offset: 0x3626BE8 VA: 0x362ABE8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public interface IVibrateInterface // TypeDefIndex: 857
+{
+	// Properties
+	public abstract bool EnableVibrateFeature { get; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract bool get_EnableVibrateFeature();
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class IVibrateInterfaceImplNone : IVibrateInterface // TypeDefIndex: 858
+{
+	// Properties
+	public bool EnableVibrateFeature { get; }
+
+	// Methods
+
+	// RVA: 0x362ABF0 Offset: 0x3626BF0 VA: 0x362ABF0 Slot: 4
+	public bool get_EnableVibrateFeature() { }
+
+	// RVA: 0x362ABF8 Offset: 0x3626BF8 VA: 0x362ABF8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public static class VibrateFacade // TypeDefIndex: 859
+{
+	// Fields
+	private static IVibrateInterface m_Impl; // 0xB5B4BF93
+
+	// Properties
+	public static bool EnableVibrateFeature { get; }
+
+	// Methods
+
+	// RVA: 0x362AC00 Offset: 0x3626C00 VA: 0x362AC00
+	public static void SetImpl(IVibrateInterface impl) { }
+
+	// RVA: 0x362AC94 Offset: 0x3626C94 VA: 0x362AC94
+	public static bool get_EnableVibrateFeature() { }
+
+	// RVA: 0x362AD68 Offset: 0x3626D68 VA: 0x362AD68
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[RequireComponent(typeof(Renderer))]
+public class WaterAlphaSetter : MonoBehaviour // TypeDefIndex: 860
+{
+	// Fields
+	public float AlphaOverride; // 0xB193D0F9
+	public bool UseInstance; // 0xA4BFBEBE
+
+	// Methods
+
+	// RVA: 0x362ADE4 Offset: 0x3626DE4 VA: 0x362ADE4
+	private void Start() { }
+
+	// RVA: 0x362AF10 Offset: 0x3626F10 VA: 0x362AF10
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class WaterChangeController : MonoBehaviour // TypeDefIndex: 861
+{
+	// Fields
+	public List<Material> WaterMaterials; // 0xA2B1BDF0
+	public Color StartColor; // 0xBCB1B8A3
+	public Color EndColor; // 0xB5B9B6F0
+	public Color StartFogColor; // 0xF7F0B4BC
+	public Color EndFogColor; // 0xB1808FBD
+	private static readonly int m_ColorID; // 0xB3B9A4A2
+	private static readonly int m_FogColorID; // 0xA983B5BC
+	private float m_Blend1; // 0xBDB5A4A3
+	private float m_Blend2; // 0xB6BFF0F7
+	private bool m_Dirty; // 0xA0A9A4F0
+
+	// Methods
+
+	// RVA: 0x362AF28 Offset: 0x3626F28 VA: 0x362AF28
+	public void SetBlend1(float rate) { }
+
+	// RVA: 0x362AF38 Offset: 0x3626F38 VA: 0x362AF38
+	public void SetBlend2(float rate) { }
+
+	// RVA: 0x362AF48 Offset: 0x3626F48 VA: 0x362AF48
+	private void Update() { }
+
+	// RVA: 0x362AF58 Offset: 0x3626F58 VA: 0x362AF58
+	private void UpdateBlend() { }
+
+	// RVA: 0x362B1E8 Offset: 0x36271E8 VA: 0x362B1E8
+	public void .ctor() { }
+
+	// RVA: 0x362B214 Offset: 0x3627214 VA: 0x362B214
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+public class WorldPosToMat : MonoBehaviour // TypeDefIndex: 862
+{
+	// Fields
+	public Material[] Materials; // 0x9DF7F0B5
+	public string PropName; // 0x9DBEB9B1
+	private Vector4 transPosWS_Last; // 0xBCA5B4BF
+
+	// Methods
+
+	// RVA: 0x362B2B0 Offset: 0x36272B0 VA: 0x362B2B0
+	private void Update() { }
+
+	// RVA: 0x362B2B4 Offset: 0x36272B4 VA: 0x362B2B4
+	private void SetPosInfoToMaterials() { }
+
+	// RVA: 0x362B3EC Offset: 0x36273EC VA: 0x362B3EC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public interface INetworkInterface // TypeDefIndex: 863
+{
+	// Properties
+	public abstract bool EnableUnZipOptimize { get; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract bool get_EnableUnZipOptimize();
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class INetworkInterfaceImplNone : INetworkInterface // TypeDefIndex: 864
+{
+	// Properties
+	public bool EnableUnZipOptimize { get; }
+
+	// Methods
+
+	// RVA: 0x362B3F4 Offset: 0x36273F4 VA: 0x362B3F4 Slot: 4
+	public bool get_EnableUnZipOptimize() { }
+
+	// RVA: 0x362B3FC Offset: 0x36273FC VA: 0x362B3FC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public static class NetworkFacade // TypeDefIndex: 865
+{
+	// Fields
+	private static INetworkInterface m_Impl; // 0xF0EAF7B5
+
+	// Properties
+	public static bool EnableVibrateFeature { get; }
+
+	// Methods
+
+	// RVA: 0x362B404 Offset: 0x3627404 VA: 0x362B404
+	public static void SetImpl(INetworkInterface impl) { }
+
+	// RVA: 0x362B498 Offset: 0x3627498 VA: 0x362B498
+	public static bool get_EnableVibrateFeature() { }
+
+	// RVA: 0x362B56C Offset: 0x362756C VA: 0x362B56C
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public static class ConfigConstName // TypeDefIndex: 866
+{
+	// Fields
+	public const string SlidePrefabCsvName = "SlidePrefabConfig";
+	public const string SlideModelCsvName = "SlideModelConfig";
+
+	// Methods
+
+	// RVA: 0x362B5E8 Offset: 0x36275E8 VA: 0x362B5E8
+	public static string GetConfigResIDNameWithMapName(string fileNameWithoutExtension, string mapName) { }
+
+	// RVA: 0x362B64C Offset: 0x362764C VA: 0x362B64C
+	public static ResourceID GetConfigResIDWithMapName(string fileNameWithoutExtension, string mapName) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class Pos // TypeDefIndex: 867
+{
+	// Fields
+	public float PosX; // 0xA9A4F0B5
+	public float PosY; // 0xB6F0B5A0
+
+	// Methods
+
+	// RVA: 0x362B734 Offset: 0x3627734 VA: 0x362B734
+	public void .ctor(float posX, float posY) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+[RequireComponent(typeof(MeshCollider))]
+public class UICustomMeshCollider : MonoBehaviour // TypeDefIndex: 868
+{
+	// Fields
+	public string MeshName; // 0xB4BCB5B9
+	public Mesh MeshRef; // 0xA2B1BDF0
+	public bool SectorShape; // 0xBCB1B8A3
+	public float Radius; // 0xF0B7BEB9
+	public float InnerRadius; // 0xBEF0A3B9
+	public float AngleDegree; // 0xA3F0A4BF
+	public uint Segments; // 0xBFA0A0A5
+	public float AngleStart; // 0xB4B5A4A2
+	public float OffsetX; // 0xBE85D0FE
+	public float OffsetY; // 0x95A9A4B9
+	public uint Size; // 0xBEB9B7BE
+	[SerializeField]
+	public Pos[] Vertices; // 0xB180FEB5
+	private MeshCollider m_Collider; // 0xB3B9A4A2
+	private Mesh m_Mesh; // 0xA983B5BC
+
+	// Properties
+	public Mesh MMesh { get; set; }
+
+	// Methods
+
+	// RVA: 0x362B760 Offset: 0x3627760 VA: 0x362B760
+	public Mesh get_MMesh() { }
+
+	// RVA: 0x362B768 Offset: 0x3627768 VA: 0x362B768
+	public void set_MMesh(Mesh value) { }
+
+	// RVA: 0x362B770 Offset: 0x3627770 VA: 0x362B770
+	private void Start() { }
+
+	// RVA: 0x362B82C Offset: 0x362782C VA: 0x362B82C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+protected internal class UIDropdown.UIDropdownItem : MonoBehaviour // TypeDefIndex: 869
+{
+	// Fields
+	[HideInInspector]
+	public UILabel Label; // 0xBDB5A4A3
+	[HideInInspector]
+	public UIToggle Toggle; // 0xB9B19DFF
+	[HideInInspector]
+	public Color SelectColor; // 0xB4BF9DBE
+	[HideInInspector]
+	public UISprite SelectSprite; // 0xEAB5BCA5
+
+	// Methods
+
+	// RVA: 0x362CA4C Offset: 0x3628A4C VA: 0x362CA4C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class UIDropdown.<>c__DisplayClass28_0 // TypeDefIndex: 870
+{
+	// Fields
+	public UIDropdownItem item; // 0xA4B5A3EA
+	public int index; // 0xBDB9A38F
+	public UIDropdown <>4__this; // 0xA4B1BCA5
+
+	// Methods
+
+	// RVA: 0x362C41C Offset: 0x362841C VA: 0x362C41C
+	public void .ctor() { }
+
+	// RVA: 0x362CA54 Offset: 0x3628A54 VA: 0x362CA54
+	internal void <Show>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class UIDropdown : MonoBehaviour // TypeDefIndex: 871
+{
+	// Fields
+	public Action<int> onValueChanged; // 0x83BEBFB9
+	[SerializeField]
+	private UILabel m_CaptionLabel; // 0xB5B3B1A0
+	[SerializeField]
+	private UIButton m_Button; // 0xBABE998F
+	[SerializeField]
+	private GameObject m_ListRoot; // 0xB5A4B3B5
+	[SerializeField]
+	private UIButton m_Block; // 0xBE85F8B4
+	[SerializeField]
+	private Transform m_ItemContent; // 0x95A9A4B9
+	[SerializeField]
+	private GameObject m_ItemTemplate; // 0xBEB9B7BE
+	[SerializeField]
+	private UILabel m_ItemLabel; // 0xB180FEB5
+	[SerializeField]
+	private int m_Value; // 0xB3B9A4A2
+	[SerializeField]
+	private UISprite m_Arrow; // 0xA983B5BC
+	[SerializeField]
+	private Transform m_ListBottom; // 0xBDB5A4A3
+	[SerializeField]
+	private Transform m_ListTop; // 0xB9B19DFF
+	[SerializeField]
+	private UISprite m_ItemSprite; // 0xB4BF9DBE
+	private bool m_ValidTemplate; // 0xF6B5BCA5
+	private bool m_InitFinished; // 0xB9BE85FC
+	private bool m_IsExpand; // 0xBE95A9A4
+	private Quaternion m_ArrowInitRot; // 0xB5BEB9B7
+	private List<string> m_Options; // 0xA2B180FE
+	private List<UIDropdownItem> m_Items; // 0xBCB3B9A4
+	[CompilerGenerated]
+	private bool <NeedAdjustPosition>k__BackingField; // 0xA3A983B5
+
+	// Properties
+	public int Value { get; set; }
+	public bool NeedAdjustPosition { get; set; }
+
+	// Methods
+
+	// RVA: 0x362B8B4 Offset: 0x36278B4 VA: 0x362B8B4
+	public int get_Value() { }
+
+	// RVA: 0x362B8BC Offset: 0x36278BC VA: 0x362B8BC
+	public void set_Value(int value) { }
+
+	[CompilerGenerated]
+	// RVA: 0x362BA28 Offset: 0x3627A28 VA: 0x362BA28
+	public bool get_NeedAdjustPosition() { }
+
+	[CompilerGenerated]
+	// RVA: 0x362BA30 Offset: 0x3627A30 VA: 0x362BA30
+	public void set_NeedAdjustPosition(bool value) { }
+
+	// RVA: 0x362BA3C Offset: 0x3627A3C VA: 0x362BA3C
+	public void SetOpentions(List<string> options) { }
+
+	// RVA: 0x362BEC8 Offset: 0x3627EC8 VA: 0x362BEC8
+	public void Show() { }
+
+	// RVA: 0x362C424 Offset: 0x3628424 VA: 0x362C424
+	public void Hide() { }
+
+	// RVA: 0x362C454 Offset: 0x3628454 VA: 0x362C454
+	private void Awake() { }
+
+	// RVA: 0x362C678 Offset: 0x3628678 VA: 0x362C678
+	private void OnClickButton() { }
+
+	// RVA: 0x362B95C Offset: 0x362795C VA: 0x362B95C
+	private void RefreshShowValue() { }
+
+	// RVA: 0x362C458 Offset: 0x3628458 VA: 0x362C458
+	private void Init() { }
+
+	// RVA: 0x362C2F0 Offset: 0x36282F0 VA: 0x362C2F0
+	private void RotateArrow() { }
+
+	// RVA: 0x362C688 Offset: 0x3628688 VA: 0x362C688
+	private void SetupTemplate() { }
+
+	// RVA: 0x362BADC Offset: 0x3627ADC VA: 0x362BADC
+	private void InitDropdownItems() { }
+
+	// RVA: 0x362C970 Offset: 0x3628970 VA: 0x362C970
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class UIEventMutex.<>c__DisplayClass2_0 // TypeDefIndex: 872
+{
+	// Fields
+	public UIEventMutex <>4__this; // 0x83BDB5A4
+	public int Id; // 0xBCA5BDB9
+
+	// Methods
+
+	// RVA: 0x362CC8C Offset: 0x3628C8C VA: 0x362CC8C
+	public void .ctor() { }
+
+	// RVA: 0x362CE28 Offset: 0x3628E28 VA: 0x362CE28
+	internal void <SetMutex>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class UIEventMutex // TypeDefIndex: 873
+{
+	// Fields
+	private HashSet<int> m_MutexList; // 0xBFB9A4B1
+
+	// Methods
+
+	// RVA: 0x362CAA4 Offset: 0x3628AA4 VA: 0x362CAA4
+	public bool IsMutex(int Id) { }
+
+	// RVA: 0x362CB2C Offset: 0x3628B2C VA: 0x362CB2C
+	public void SetMutex(int Id, uint autoReleaseTimeMs = 0) { }
+
+	// RVA: 0x362CC94 Offset: 0x3628C94 VA: 0x362CC94
+	public void ReleaseMutex(int Id) { }
+
+	// RVA: 0x362CCEC Offset: 0x3628CEC VA: 0x362CCEC
+	public bool Check(int Id, Action callback, uint autoReleaseTimeMs = 0) { }
+
+	// RVA: 0x362CD50 Offset: 0x3628D50 VA: 0x362CD50
+	public void Clear() { }
+
+	// RVA: 0x362CDA0 Offset: 0x3628DA0 VA: 0x362CDA0
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Extension]
+public static class UIExtensions // TypeDefIndex: 874
+{
+	// Methods
+
+	[Extension]
+	// RVA: 0x362CE48 Offset: 0x3628E48 VA: 0x362CE48
+	public static Vector3[] GetPrintedSides(UILabel uiLabel, Transform relativeTo) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class UIGyroMove : MonoBehaviour // TypeDefIndex: 875
+{
+	// Fields
+	public bool m_EnableGyro; // 0xB1A083BE
+	public float m_MoveSpeed; // 0xD0F9B5B3
+	public float m_RebackSpeed; // 0xA4B9BE85
+	public float m_XLimit; // 0xB7BE95A9
+	public float m_YLimit; // 0xFEB5BEB9
+	private Transform m_Transform; // 0xA4A2B180
+	private Vector3 m_OriginPosition; // 0xB5BCB3B9
+
+	// Methods
+
+	// RVA: 0x362D078 Offset: 0x3629078 VA: 0x362D078
+	private void Start() { }
+
+	// RVA: 0x362D0C8 Offset: 0x36290C8 VA: 0x362D0C8
+	public bool IsEnable() { }
+
+	// RVA: 0x362D14C Offset: 0x362914C VA: 0x362D14C
+	private void Update() { }
+
+	// RVA: 0x362D2F8 Offset: 0x36292F8 VA: 0x362D2F8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[AddComponentMenu("")]
+public class UIHudShowcaseBGRoot : MonoBehaviour // TypeDefIndex: 876
+{
+	// Fields
+	public GameObject m_BGPanel; // 0xA4A3A983
+	public GameObject m_ExtraBGPanel; // 0x83FFBDB5
+
+	// Methods
+
+	// RVA: 0x362D314 Offset: 0x3629314 VA: 0x362D314
+	public void SetBgPanelTexture(ResourceID resID) { }
+
+	// RVA: 0x362D4A8 Offset: 0x36294A8 VA: 0x362D4A8
+	public void ReplaceShader() { }
+
+	// RVA: 0x362D5FC Offset: 0x36295FC VA: 0x362D5FC
+	public void ShowExtraBG() { }
+
+	// RVA: 0x362D6C0 Offset: 0x36296C0 VA: 0x362D6C0
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class UIInputEnhance : UIInput // TypeDefIndex: 877
+{
+	// Methods
+
+	// RVA: 0x362D6C8 Offset: 0x36296C8 VA: 0x362D6C8 Slot: 10
+	protected override char Validate(string text, int pos, char ch) { }
+
+	// RVA: 0x362D7A8 Offset: 0x36297A8 VA: 0x362D7A8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[RequireComponent(typeof(UILabel))]
+[ExecuteInEditMode]
+public class UILabelCustomMaterial : MonoBehaviour // TypeDefIndex: 878
+{
+	// Fields
+	public bool addMode; // 0xB5A0B1B8
+	public Texture detailTex; // 0xA5B4BF9D
+	public Vector2 detailTilling; // 0xEAEAB5BC
+	public Vector2 detailPanner; // 0x8FA4B5B7
+	[ColorUsage(true, true)]
+	public Color color; // 0xB9B4B1A2
+	private Material fontMaterial; // 0xA083A3A5
+	private Vector3 posTemp; // 0x8FB4B5B5
+	private UILabel label; // 0xB5BABE99
+	private int _LabelPos_ID; // 0xB4B5A4B3
+	private int _Color_ID; // 0xB9BE85F8
+	private int _rFontSize_ID; // 0xBE95A9A4
+	private int _DetailTex_ID; // 0xB5BEB9B7
+	private int _DetailPanner_ID; // 0xA2B180FE
+
+	// Properties
+	private int LabelPosID { get; }
+	private int ColorID { get; }
+	private int rFontSizeID { get; }
+	private int DetailTexID { get; }
+	private int DetailPannerID { get; }
+
+	// Methods
+
+	// RVA: 0x362D800 Offset: 0x3629800 VA: 0x362D800
+	private int get_LabelPosID() { }
+
+	// RVA: 0x362D858 Offset: 0x3629858 VA: 0x362D858
+	private int get_ColorID() { }
+
+	// RVA: 0x362D8B0 Offset: 0x36298B0 VA: 0x362D8B0
+	private int get_rFontSizeID() { }
+
+	// RVA: 0x362D908 Offset: 0x3629908 VA: 0x362D908
+	private int get_DetailTexID() { }
+
+	// RVA: 0x362D960 Offset: 0x3629960 VA: 0x362D960
+	private int get_DetailPannerID() { }
+
+	// RVA: 0x362D9B8 Offset: 0x36299B8 VA: 0x362D9B8
+	private void Start() { }
+
+	// RVA: 0x362DCAC Offset: 0x3629CAC VA: 0x362DCAC
+	private void OnEnable() { }
+
+	// RVA: 0x362DDE4 Offset: 0x3629DE4 VA: 0x362DDE4
+	private void OnDisable() { }
+
+	// RVA: 0x362DE94 Offset: 0x3629E94 VA: 0x362DE94
+	public void OnCustomMaterialRender(Material mat) { }
+
+	// RVA: 0x362DBC8 Offset: 0x3629BC8 VA: 0x362DBC8
+	private void SetMaterialProperty(Material mat) { }
+
+	// RVA: 0x362E008 Offset: 0x362A008 VA: 0x362E008
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum UIRelocateToLabel.RelocateUpdate // TypeDefIndex: 879
+{
+	// Fields
+	public int value__; // 0xBCB3B9A4
+	public const RelocateUpdate AtStart = 0;
+	public const RelocateUpdate InUpdate = 1;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum UIRelocateToLabel.RelocatePosition // TypeDefIndex: 880
+{
+	// Fields
+	public int value__; // 0xA0B1B883
+	public const RelocatePosition ToLeft = 0;
+	public const RelocatePosition ToRight = 1;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+public class UIRelocateToLabel : MonoBehaviour // TypeDefIndex: 881
+{
+	// Fields
+	[SerializeField]
+	private RelocateUpdate UpdateMode; // 0xB9BE85FC
+	[SerializeField]
+	private RelocatePosition LocatePosition; // 0xBE95A9A4
+	[SerializeField]
+	private UILabel toLabel; // 0xB5BEB9B7
+	private UIWidget target; // 0xA2B180FE
+	private string lastText; // 0xBCB3B9A4
+
+	// Methods
+
+	// RVA: 0x362E020 Offset: 0x362A020 VA: 0x362E020
+	private void Start() { }
+
+	// RVA: 0x362E284 Offset: 0x362A284 VA: 0x362E284
+	private void Update() { }
+
+	// RVA: 0x362E098 Offset: 0x362A098 VA: 0x362E098
+	private void UpdatePosition() { }
+
+	// RVA: 0x362E308 Offset: 0x362A308 VA: 0x362E308
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum UIRelocateToLabelSprite.RelocateUpdate // TypeDefIndex: 882
+{
+	// Fields
+	public int value__; // 0xA3A983B5
+	public const RelocateUpdate AtStart = 0;
+	public const RelocateUpdate InUpdate = 1;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+[RequireComponent(typeof(UIWidget))]
+public class UIRelocateToLabelSprite : MonoBehaviour // TypeDefIndex: 883
+{
+	// Fields
+	[SerializeField]
+	private RelocateUpdate UpdateMode; // 0xA593A8B1
+	[SerializeField]
+	private UILabel toLabel; // 0xF6B5A6A2
+	[SerializeField]
+	private string spriteString; // 0xBE85D0F9
+	[SerializeField]
+	private int locateSpriteIndex; // 0x95A9A4B9
+	[SerializeField]
+	private GameObject visibleObj; // 0xBEB9B7BE
+	private UIWidget target; // 0xB180FEB5
+	private string lastText; // 0xB3B9A4A2
+
+	// Properties
+	public UILabel ToLabel { get; set; }
+	public int LocateSpriteIndex { get; set; }
+	public GameObject Obj { get; }
+
+	// Methods
+
+	// RVA: 0x36F7C3C Offset: 0x36F3C3C VA: 0x36F7C3C
+	public void set_ToLabel(UILabel value) { }
+
+	// RVA: 0x36F7F78 Offset: 0x36F3F78 VA: 0x36F7F78
+	public UILabel get_ToLabel() { }
+
+	// RVA: 0x36F7F80 Offset: 0x36F3F80 VA: 0x36F7F80
+	public void set_LocateSpriteIndex(int value) { }
+
+	// RVA: 0x36F7F88 Offset: 0x36F3F88 VA: 0x36F7F88
+	public int get_LocateSpriteIndex() { }
+
+	// RVA: 0x36F7F90 Offset: 0x36F3F90 VA: 0x36F7F90
+	public GameObject get_Obj() { }
+
+	// RVA: 0x36F7F98 Offset: 0x36F3F98 VA: 0x36F7F98
+	private void Start() { }
+
+	// RVA: 0x36F8010 Offset: 0x36F4010 VA: 0x36F8010
+	private void Update() { }
+
+	// RVA: 0x36F7D08 Offset: 0x36F3D08 VA: 0x36F7D08
+	private void UpdatePosition() { }
+
+	// RVA: 0x36F8094 Offset: 0x36F4094 VA: 0x36F8094
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum AssetRefType // TypeDefIndex: 884
+{
+	// Fields
+	public int value__; // 0xA983B5BC
+	public const AssetRefType All = 0;
+	public const AssetRefType MetaTemplate = 1;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class AssetReference : Attribute // TypeDefIndex: 885
+{
+	// Fields
+	[CompilerGenerated]
+	private AssetRefType <RefType>k__BackingField; // 0xBF9DB5A0
+
+	// Properties
+	public AssetRefType RefType { get; set; }
+
+	// Methods
+
+	[CompilerGenerated]
+	// RVA: 0x36F8104 Offset: 0x36F4104 VA: 0x36F8104
+	public AssetRefType get_RefType() { }
+
+	[CompilerGenerated]
+	// RVA: 0x36F810C Offset: 0x36F410C VA: 0x36F810C
+	private void set_RefType(AssetRefType value) { }
+
+	// RVA: 0x36F8114 Offset: 0x36F4114 VA: 0x36F8114
+	public void .ctor(AssetRefType refType) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class DisplayName : PropertyAttribute // TypeDefIndex: 886
+{
+	// Fields
+	[CompilerGenerated]
+	private string <displayName>k__BackingField; // 0xB5BCA5B4
+
+	// Properties
+	public string displayName { get; set; }
+
+	// Methods
+
+	[CompilerGenerated]
+	// RVA: 0x36F813C Offset: 0x36F413C VA: 0x36F813C
+	public string get_displayName() { }
+
+	[CompilerGenerated]
+	// RVA: 0x36F8144 Offset: 0x36F4144 VA: 0x36F8144
+	protected void set_displayName(string value) { }
+
+	// RVA: 0x36F814C Offset: 0x36F414C VA: 0x36F814C
+	public void .ctor(string InDisplayName) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum FCoroutine.EStatus // TypeDefIndex: 887
+{
+	// Fields
+	public int value__; // 0xB5B7EAEA
+	public const EStatus ES_Invalid = -1;
+	public const EStatus ES_WaitForStart = 0;
+	public const EStatus ES_Running = 1;
+	public const EStatus ES_WaitForStop = 2;
+	public const EStatus ES_Stopped = 3;
+	public const EStatus ES_Count = 4;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+internal struct FCoroutine : IEquatable<FCoroutine> // TypeDefIndex: 888
+{
+	// Fields
+	public IEnumerator Enu; // 0x85F8B4B5
+	public EStatus Status; // 0xA9A4B9BE
+
+	// Methods
+
+	// RVA: 0x36F81B0 Offset: 0x36F41B0 VA: 0x36F81B0 Slot: 4
+	public bool Equals(FCoroutine other) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class FCoroutineMgr // TypeDefIndex: 889
+{
+	// Fields
+	private List<FCoroutine> Coroutines; // 0xB9B7BE95
+	private List<FCoroutine> WaitingList; // 0x80FEB5BE
+	private List<int> RmvList; // 0xB9A4A2B1
+
+	// Methods
+
+	// RVA: 0x36F81D0 Offset: 0x36F41D0 VA: 0x36F81D0
+	public void StartCoroutine(IEnumerator inEnu) { }
+
+	// RVA: 0x36F8398 Offset: 0x36F4398 VA: 0x36F8398
+	public void FinishImmdiateFCoroutine(IEnumerator inEnu) { }
+
+	// RVA: 0x36F8460 Offset: 0x36F4460 VA: 0x36F8460
+	public void StopCoroutine(IEnumerator inEnu) { }
+
+	// RVA: 0x36F8584 Offset: 0x36F4584 VA: 0x36F8584
+	public void Update() { }
+
+	// RVA: 0x36F88D0 Offset: 0x36F48D0 VA: 0x36F88D0
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class FTimer // TypeDefIndex: 890
+{
+	// Fields
+	private uint m_milliSeconds; // 0x83B5BCB3
+	private Stopwatch m_sw; // 0xB5A4A3A9
+
+	// Properties
+	public bool TimeOut { get; }
+
+	// Methods
+
+	// RVA: 0x36F89DC Offset: 0x36F49DC VA: 0x36F89DC
+	public void .ctor(uint milliSeconds) { }
+
+	// RVA: 0x36F8A5C Offset: 0x36F4A5C VA: 0x36F8A5C
+	public void Reset() { }
+
+	// RVA: 0x36F8A8C Offset: 0x36F4A8C VA: 0x36F8A8C
+	public void SetLimitTime(uint milliSeconds) { }
+
+	// RVA: 0x36F8A94 Offset: 0x36F4A94 VA: 0x36F8A94
+	public bool get_TimeOut() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Extension]
+public static class GameObjectExtension // TypeDefIndex: 891
+{
+	// Methods
+
+	[Extension]
+	// RVA: 0x36F8AC4 Offset: 0x36F4AC4 VA: 0x36F8AC4
+	public static void CustomSetActive(GameObject obj, bool bActive) { }
+
+	[Extension]
+	// RVA: 0x36F8B70 Offset: 0x36F4B70 VA: 0x36F8B70
+	public static void EnableReusableObject(GameObject obj, bool enabled) { }
+
+	[Extension]
+	// RVA: 0x36F8C54 Offset: 0x36F4C54 VA: 0x36F8C54
+	public static void IdentitySelf(GameObject self) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Extension]
+public static class AnimExtension // TypeDefIndex: 892
+{
+	// Methods
+
+	[Extension]
+	// RVA: 0x36F8DD4 Offset: 0x36F4DD4 VA: 0x36F8DD4
+	public static void AnimatorPlay(Animator animator, string animName, int layer = -1) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Extension]
+public static class DelegateExtension // TypeDefIndex: 893
+{
+	// Methods
+
+	[Extension]
+	// RVA: 0x36F8E70 Offset: 0x36F4E70 VA: 0x36F8E70
+	public static void SafeInvoke(Action self) { }
+
+	[Extension]
+	// RVA: -1 Offset: -1
+	public static void SafeInvoke<T>(Action<T> self, T t) { }
+
+	[Extension]
+	// RVA: -1 Offset: -1
+	public static void SafeInvoke<T1, T2>(Action<T1, T2> self, T1 t1, T2 t2) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Extension]
+public static class DictionaryExtension // TypeDefIndex: 894
+{
+	// Methods
+
+	[Extension]
+	// RVA: -1 Offset: -1
+	public static void KeysCopyTo<TKey, TValue>(Dictionary<TKey, TValue> self, ICollection<TKey> keys, bool clearValue = true) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Extension]
+public static class HashSetExtension // TypeDefIndex: 895
+{
+	// Methods
+
+	[Extension]
+	// RVA: -1 Offset: -1
+	public static void AddRange<T>(HashSet<T> self, ICollection<T> collection) { }
+
+	[Extension]
+	// RVA: -1 Offset: -1
+	public static void CopyTo<T>(HashSet<T> self, ICollection<T> collection) { }
+
+	[Extension]
+	// RVA: -1 Offset: -1
+	public static HashSet<T> MergeDictKey<T, TDictValue, TDictValue2>(HashSet<T> self, Dictionary<T, TDictValue> dict1, Dictionary<T, TDictValue2> dict2, bool clearHashSet = true) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Extension]
+public static class VectorExtension // TypeDefIndex: 896
+{
+	// Methods
+
+	[Extension]
+	// RVA: 0x36F8E8C Offset: 0x36F4E8C VA: 0x36F8E8C
+	public static Vector3 Lerp(Vector3[] self, float t) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public struct Debug_ColliderTrigger.ServerColliderShape // TypeDefIndex: 897
+{
+	// Fields
+	public byte ShapeType; // 0xB883FFBD
+	public byte Layer; // 0x9DB5A0B1
+	public bool IsTrigger; // 0xBCA5B4BF
+	public Vector3 Position; // 0xD0F9F6B5
+	public Quaternion Rotation; // 0xA4B9BE85
+	public Vector3 Scale; // 0xB7BE95A9
+	public Vector3 Extent; // 0xFEB5BEB9
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class Debug_ColliderTrigger : MonoBehaviour // TypeDefIndex: 898
+{
+	// Fields
+	public Mesh BoxMesh; // 0xA4A2B180
+	public Mesh SphereMesh; // 0xB5BCB3B9
+	public Mesh CapsuleMesh; // 0xA4A3A983
+	public Shader DebugColliderShader; // 0x84FFBDB5
+	[HideInInspector]
+	public bool activateDebugCollider; // 0xB7B7B9A2
+	private Material _DebugColliderMat; // 0xBF9DA2B5
+	private Material _DebugTriggerMat; // 0xB5BCA5B4
+	private bool ShowColliderFlag; // 0xB5B7EAEA
+	private bool ShowTriggerFlag; // 0xBEB58FA4
+	private Material _DebugServerColliderMat; // 0x8FA2B5A4
+	private GameObject _tmpCollider_TriggerObj; // 0xB5BABE99
+	private GameObject _tmpColliderObj; // 0xB4B5A4B3
+	private GameObject _tmpTriggerObj; // 0xB9BE85F8
+	private GameObject _tmpServerColliderObj; // 0xBE95A9A4
+	private bool m_showCollider; // 0xB5BEB9B7
+	private bool m_showTrigger; // 0xA2B180FE
+	private bool m_showServerCollider; // 0xBCB3B9A4
+	private bool m_showClientOnlyCollider; // 0xA3A983B5
+	private GameObject _tmpBoxColliderObj; // 0xFFBDB5A4
+	private GameObject _tmpBoxTriggerObj; // 0xB7B9A284
+	private GameObject _tmpSphereColliderObj; // 0x9DA2B5B7
+	private GameObject _tmpSphereTriggerObj; // 0xBCA5B4BF
+	private GameObject _tmpCapsuleColliderObj; // 0xD0F9F6B5
+	private GameObject _tmpCapsuleTriggerObj; // 0xA4B9BE85
+	private GameObject _tmpMeshColliderObj; // 0xB7BE95A9
+	private GameObject _tmpMeshTriggerObj; // 0xFEB5BEB9
+	private GameObject _tmpServerBoxObj; // 0xA4A2B180
+	private GameObject _tmpServerSphereObj; // 0xB5BCB3B9
+	private GameObject _tmpServerCapsuleObj; // 0xA4A3A983
+	private Dictionary<string, List<GameObject>> debugMeshRendererDic; // 0x9CFFBDB5
+	[CompilerGenerated]
+	private static Debug_ColliderTrigger <instance>k__BackingField; // 0xA4B9BDB9
+
+	// Properties
+	public static Debug_ColliderTrigger instance { get; set; }
+
+	// Methods
+
+	[CompilerGenerated]
+	// RVA: 0x36F8FD0 Offset: 0x36F4FD0 VA: 0x36F8FD0
+	public static Debug_ColliderTrigger get_instance() { }
+
+	[CompilerGenerated]
+	// RVA: 0x36F9018 Offset: 0x36F5018 VA: 0x36F9018
+	private static void set_instance(Debug_ColliderTrigger value) { }
+
+	// RVA: 0x36F9070 Offset: 0x36F5070 VA: 0x36F9070
+	private void Awake() { }
+
+	// RVA: 0x36F949C Offset: 0x36F549C VA: 0x36F949C
+	public void Init() { }
+
+	// RVA: 0x36F9778 Offset: 0x36F5778 VA: 0x36F9778
+	private void OnDestroy() { }
+
+	// RVA: 0x36F9C7C Offset: 0x36F5C7C VA: 0x36F9C7C
+	public void UnloadGameObject(string sceneName) { }
+
+	// RVA: 0x36F9E38 Offset: 0x36F5E38 VA: 0x36F9E38
+	private void AddMeshColShow() { }
+
+	// RVA: 0x36FA0E8 Offset: 0x36F60E8 VA: 0x36FA0E8
+	private void OnShowCollider(object[] data) { }
+
+	// RVA: 0x36FA30C Offset: 0x36F630C VA: 0x36FA30C
+	private void OnShowTrigger(object[] data) { }
+
+	// RVA: 0x36FA3B4 Offset: 0x36F63B4 VA: 0x36FA3B4
+	private void OnShowClientCollider(object[] data) { }
+
+	// RVA: 0x36FA554 Offset: 0x36F6554 VA: 0x36FA554
+	private void OnShowServerCollider(object[] data) { }
+
+	// RVA: -1 Offset: -1
+	private static T[] FilterClientOnlyNonTrigger<T>(T[] colliders) { }
+
+	// RVA: 0x36FA6B4 Offset: 0x36F66B4 VA: 0x36FA6B4
+	public static bool IsClientOnlyCollider(Component c) { }
+
+	// RVA: 0x36FA7C0 Offset: 0x36F67C0 VA: 0x36FA7C0
+	private void OnRebuildCollider(object[] data) { }
+
+	// RVA: 0x36FA7F0 Offset: 0x36F67F0 VA: 0x36FA7F0
+	private void OnDestroyCollider(object[] data) { }
+
+	// RVA: 0x36F9B14 Offset: 0x36F5B14 VA: 0x36F9B14
+	private void DestroyAllAssets() { }
+
+	// RVA: 0x36F91C0 Offset: 0x36F51C0 VA: 0x36F91C0
+	private void InitColliderMats() { }
+
+	// RVA: 0x36F9394 Offset: 0x36F5394 VA: 0x36F9394
+	private void InitAllMesh() { }
+
+	// RVA: 0x36FA904 Offset: 0x36F6904 VA: 0x36FA904
+	private void CreateColliderMesh() { }
+
+	// RVA: 0x36FBD7C Offset: 0x36F7D7C VA: 0x36FBD7C
+	private void CreateServerSubRoots(GameObject root) { }
+
+	// RVA: 0x36FA218 Offset: 0x36F6218 VA: 0x36FA218
+	public void PaintCollider(BoxCollider[] boxColliders, SphereCollider[] sphereColliders, CapsuleCollider[] capsuleColliders, MeshCollider[] meshColliders, string sceneName) { }
+
+	// RVA: 0x36FDA9C Offset: 0x36F9A9C VA: 0x36FDA9C
+	private bool CheckRequireName(string name) { }
+
+	// RVA: 0x36FDBA0 Offset: 0x36F9BA0 VA: 0x36FDBA0
+	private Transform FindStreamAnchor(Transform trans) { }
+
+	// RVA: 0x36FDC3C Offset: 0x36F9C3C VA: 0x36FDC3C
+	private string GetRootNode(Transform colliderTrans) { }
+
+	// RVA: 0x36FB050 Offset: 0x36F7050 VA: 0x36FB050
+	private void CreateBoxMesh(GameObject _tmpColliderObj, GameObject _tmpTriggerObj) { }
+
+	// RVA: 0x36FDD30 Offset: 0x36F9D30 VA: 0x36FDD30
+	private void ProcessClimbingTrigger(ClimbingTrigger climbingTrigger) { }
+
+	// RVA: 0x36FC304 Offset: 0x36F8304 VA: 0x36FC304
+	private void PaintBoxCollider(BoxCollider[] boxColliders, string sceneName) { }
+
+	// RVA: 0x36FB3A0 Offset: 0x36F73A0 VA: 0x36FB3A0
+	private void CreateSphereMesh(GameObject _tmpColliderObj, GameObject _tmpTriggerObj) { }
+
+	// RVA: 0x36FC930 Offset: 0x36F8930 VA: 0x36FC930
+	public void PaintSphereCollider(SphereCollider[] sphereColliders, string sceneName) { }
+
+	// RVA: 0x36FB6F0 Offset: 0x36F76F0 VA: 0x36FB6F0
+	private void CreateCapsuleMesh(GameObject _tmpColliderObj, GameObject _tmpTriggerObj) { }
+
+	// RVA: 0x36FCF24 Offset: 0x36F8F24 VA: 0x36FCF24
+	public void PaintCapsuleCollider(CapsuleCollider[] capsuleColliders, string sceneName) { }
+
+	// RVA: 0x36FBA40 Offset: 0x36F7A40 VA: 0x36FBA40
+	private void CreateMeshMesh(GameObject _tmpColliderObj, GameObject _tmpTriggerObj) { }
+
+	// RVA: 0x36FD4EC Offset: 0x36F94EC VA: 0x36FD4EC
+	public void PaintMeshCollider(MeshCollider[] meshColliders, string sceneName) { }
+
+	// RVA: 0x36FA7D8 Offset: 0x36F67D8 VA: 0x36FA7D8
+	public void RebuildAllMesh() { }
+
+	// RVA: 0x36FA7F4 Offset: 0x36F67F4 VA: 0x36FA7F4
+	public void DestroyAllMesh() { }
+
+	// RVA: 0x36FA27C Offset: 0x36F627C VA: 0x36FA27C
+	public void ShowColliders(bool isShow = true) { }
+
+	// RVA: 0x36FA324 Offset: 0x36F6324 VA: 0x36FA324
+	public void ShowTriggers(bool isShow = true) { }
+
+	// RVA: 0x36FA624 Offset: 0x36F6624 VA: 0x36FA624
+	public void ShowServerColliders(bool isShow = true) { }
+
+	// RVA: 0x36FA600 Offset: 0x36F6600 VA: 0x36FA600
+	public void ClearServerColliderObjects() { }
+
+	// RVA: 0x36FDFF4 Offset: 0x36F9FF4 VA: 0x36FDFF4
+	private void ClearChildren(GameObject go) { }
+
+	// RVA: 0x36FE0DC Offset: 0x36FA0DC VA: 0x36FE0DC
+	public void PaintServerColliders(IList<ServerColliderShape> shapes) { }
+
+	// RVA: 0x36FE2A0 Offset: 0x36FA2A0 VA: 0x36FE2A0
+	private void PaintOneServerCollider(ServerColliderShape s) { }
+
+	// RVA: 0x36FDF54 Offset: 0x36F9F54 VA: 0x36FDF54
+	private Color GetColorByLayer(bool isTrigger, uint layer) { }
+
+	// RVA: 0x36FE6E0 Offset: 0x36FA6E0 VA: 0x36FE6E0
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+private enum ResourceManagerTests.TestMode // TypeDefIndex: 899
+{
+	// Fields
+	public int value__; // 0xBFBCB586
+	public const TestMode TestDelLoading = 0;
+	public const TestMode TestUnloadLoading = 1;
+	public const TestMode TestCancelDependent = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class ResourceManagerTests : MonoBehaviour // TypeDefIndex: 900
+{
+	// Fields
+	private TestMode mode; // 0xB5BDB9A4
+	private List<uint> tickets; // 0xA5B4BF9D
+	private Dictionary<uint, ResourceID> ticketRid; // 0xEAEAB5BC
+	private List<string> res; // 0x8FA4B5B7
+
+	// Methods
+
+	// RVA: 0x36FE79C Offset: 0x36FA79C VA: 0x36FE79C
+	private bool TestCancelDeps(uint ticket) { }
+
+	// RVA: 0x36FEB00 Offset: 0x36FAB00 VA: 0x36FEB00
+	public bool TestDelLoading(uint ticket) { }
+
+	// RVA: 0x36FF054 Offset: 0x36FB054 VA: 0x36FF054
+	public bool TestUnloadLoading(uint ticket) { }
+
+	// RVA: 0x36FF450 Offset: 0x36FB450 VA: 0x36FF450
+	private void Update() { }
+
+	// RVA: 0x36FF67C Offset: 0x36FB67C VA: 0x36FF67C
+	public void UnloadLoadingTest() { }
+
+	// RVA: 0x36FFB64 Offset: 0x36FBB64 VA: 0x36FFB64
+	public void TestDelWhileAsyncLoading() { }
+
+	// RVA: 0x36FFB6C Offset: 0x36FBB6C VA: 0x36FFB6C
+	public void TestCancelDependent() { }
+
+	// RVA: 0x36FF684 Offset: 0x36FB684 VA: 0x36FF684
+	private void AsyncStartAll(TestMode tm) { }
+
+	// RVA: 0x36FFB74 Offset: 0x36FBB74 VA: 0x36FFB74
+	private void OnLoadOver(uint ticket, bool succeed, Object obj) { }
+
+	// RVA: 0x36FFC90 Offset: 0x36FBC90 VA: 0x36FFC90
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+private struct UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData // TypeDefIndex: 901
+{
+	// Fields
+	public byte[] FilePathsData; // 0xB9BDB9BC
+	public byte[] TypesData; // 0xA59D88A4
+	public int TotalTypes; // 0xA0B9A4BC
+	public int TotalFiles; // 0xA2B5B9BC
+	public bool IsEditorOnly; // 0xBABE998F
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+[EditorBrowsable(1)]
+[GeneratedCode("Unity.MonoScriptGenerator.MonoScriptInfoGenerator", null)]
+internal class UnitySourceGeneratedAssemblyMonoScriptTypes_v1 // TypeDefIndex: 902
+{
+	// Methods
+
+	// RVA: 0x3700304 Offset: 0x36FC304 VA: 0x3700304
+	private static MonoScriptData Get() { }
+
+	// RVA: 0x3700404 Offset: 0x36FC404 VA: 0x3700404
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: MeshCombiner
+[ExecuteInEditMode]
+[RequireComponent(typeof(NotBuildInVersionObject))]
+[DisallowMultipleComponent]
+public class MeshCombinerRecorder : MonoBehaviour // TypeDefIndex: 903
+{
+	// Methods
+
+	// RVA: 0x3700548 Offset: 0x36FC548 VA: 0x3700548
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: SimpleJSON
+public enum JSONNodeType // TypeDefIndex: 904
+{
+	// Fields
+	public int value__; // 0xB5A4B3B5
+	public const JSONNodeType Array = 1;
+	public const JSONNodeType Object = 2;
+	public const JSONNodeType String = 3;
+	public const JSONNodeType Number = 4;
+	public const JSONNodeType NullValue = 5;
+	public const JSONNodeType Boolean = 6;
+	public const JSONNodeType None = 7;
+	public const JSONNodeType Custom = 255;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: SimpleJSON
+public enum JSONTextMode // TypeDefIndex: 905
+{
+	// Fields
+	public int value__; // 0xB586A4B9
+	public const JSONTextMode Compact = 0;
+	public const JSONTextMode Indent = 1;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+private enum JSONNode.Enumerator.Type // TypeDefIndex: 906
+{
+	// Fields
+	public int value__; // 0xB99CA2B5
+	public const Type None = 0;
+	public const Type Array = 1;
+	public const Type Object = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public struct JSONNode.Enumerator // TypeDefIndex: 907
+{
+	// Fields
+	private Type type; // 0x85D0F9F6
+	private Enumerator<string, JSONNode> m_Object; // 0xA9A4B9BE
+	private Enumerator<JSONNode> m_Array; // 0xB9B7BE95
+
+	// Properties
+	public bool IsValid { get; }
+	public KeyValuePair<string, JSONNode> Current { get; }
+
+	// Methods
+
+	// RVA: 0x3702054 Offset: 0x36FE054 VA: 0x3702054
+	public bool get_IsValid() { }
+
+	// RVA: 0x3702074 Offset: 0x36FE074 VA: 0x3702074
+	public void .ctor(Enumerator<JSONNode> aArrayEnum) { }
+
+	// RVA: 0x37020F8 Offset: 0x36FE0F8 VA: 0x37020F8
+	public void .ctor(Enumerator<string, JSONNode> aDictEnum) { }
+
+	// RVA: 0x3702188 Offset: 0x36FE188 VA: 0x3702188
+	public KeyValuePair<string, JSONNode> get_Current() { }
+
+	// RVA: 0x3702260 Offset: 0x36FE260 VA: 0x3702260
+	public bool MoveNext() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public struct JSONNode.ValueEnumerator // TypeDefIndex: 908
+{
+	// Fields
+	private Enumerator m_Enumerator; // 0x80FEB5BE
+
+	// Properties
+	public JSONNode Current { get; }
+
+	// Methods
+
+	// RVA: 0x3702330 Offset: 0x36FE330 VA: 0x3702330
+	public void .ctor(Enumerator<JSONNode> aArrayEnum) { }
+
+	// RVA: 0x370240C Offset: 0x36FE40C VA: 0x370240C
+	public void .ctor(Enumerator<string, JSONNode> aDictEnum) { }
+
+	// RVA: 0x3702508 Offset: 0x36FE508 VA: 0x3702508
+	public void .ctor(Enumerator aEnumerator) { }
+
+	// RVA: 0x370254C Offset: 0x36FE54C VA: 0x370254C
+	public JSONNode get_Current() { }
+
+	// RVA: 0x3702598 Offset: 0x36FE598 VA: 0x3702598
+	public bool MoveNext() { }
+
+	// RVA: 0x37025A4 Offset: 0x36FE5A4 VA: 0x37025A4
+	public ValueEnumerator GetEnumerator() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public struct JSONNode.KeyEnumerator // TypeDefIndex: 909
+{
+	// Fields
+	private Enumerator m_Enumerator; // 0xB9A4A2B1
+
+	// Properties
+	public JSONNode Current { get; }
+
+	// Methods
+
+	// RVA: 0x3702604 Offset: 0x36FE604 VA: 0x3702604
+	public void .ctor(Enumerator<JSONNode> aArrayEnum) { }
+
+	// RVA: 0x37026E0 Offset: 0x36FE6E0 VA: 0x37026E0
+	public void .ctor(Enumerator<string, JSONNode> aDictEnum) { }
+
+	// RVA: 0x37027DC Offset: 0x36FE7DC VA: 0x37027DC
+	public void .ctor(Enumerator aEnumerator) { }
+
+	// RVA: 0x3702820 Offset: 0x36FE820 VA: 0x3702820
+	public JSONNode get_Current() { }
+
+	// RVA: 0x3702868 Offset: 0x36FE868 VA: 0x3702868
+	public bool MoveNext() { }
+
+	// RVA: 0x3702874 Offset: 0x36FE874 VA: 0x3702874
+	public KeyEnumerator GetEnumerator() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class JSONNode.LinqEnumerator : IEnumerator<KeyValuePair<string, JSONNode>>, IEnumerator, IDisposable, IEnumerable<KeyValuePair<string, JSONNode>>, IEnumerable // TypeDefIndex: 910
+{
+	// Fields
+	private JSONNode m_Node; // 0x83B5BCB3
+	private Enumerator m_Enumerator; // 0xB5A4A3A9
+
+	// Properties
+	public KeyValuePair<string, JSONNode> Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	// RVA: 0x3700964 Offset: 0x36FC964 VA: 0x3700964
+	internal void .ctor(JSONNode aNode) { }
+
+	// RVA: 0x37028A0 Offset: 0x36FE8A0 VA: 0x37028A0 Slot: 4
+	public KeyValuePair<string, JSONNode> get_Current() { }
+
+	// RVA: 0x37028A8 Offset: 0x36FE8A8 VA: 0x37028A8 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+
+	// RVA: 0x370290C Offset: 0x36FE90C VA: 0x370290C Slot: 6
+	public bool MoveNext() { }
+
+	// RVA: 0x3702914 Offset: 0x36FE914 VA: 0x3702914 Slot: 5
+	public void Dispose() { }
+
+	// RVA: 0x370294C Offset: 0x36FE94C VA: 0x370294C Slot: 9
+	public IEnumerator<KeyValuePair<string, JSONNode>> GetEnumerator() { }
+
+	// RVA: 0x37029A8 Offset: 0x36FE9A8 VA: 0x37029A8 Slot: 8
+	public void Reset() { }
+
+	// RVA: 0x3702A30 Offset: 0x36FEA30 VA: 0x3702A30 Slot: 10
+	private IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class JSONNode.<get_Children>d__39 : IEnumerable<JSONNode>, IEnumerable, IEnumerator<JSONNode>, IEnumerator, IDisposable // TypeDefIndex: 911
+{
+	// Fields
+	private int <>1__state; // 0xB99CFFBD
+	private JSONNode <>2__current; // 0x86A4B9BD
+	private int <>l__initialThreadId; // 0xB3BFBCB5
+
+	// Properties
+	private JSONNode System.Collections.Generic.IEnumerator<SimpleJSON.JSONNode>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x37006E4 Offset: 0x36FC6E4 VA: 0x37006E4
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHidden]
+	// RVA: 0x3702A8C Offset: 0x36FEA8C VA: 0x3702A8C Slot: 7
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x3702A90 Offset: 0x36FEA90 VA: 0x3702A90 Slot: 8
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x3702AA8 Offset: 0x36FEAA8 VA: 0x3702AA8 Slot: 6
+	private JSONNode System.Collections.Generic.IEnumerator<SimpleJSON.JSONNode>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x3702AB0 Offset: 0x36FEAB0 VA: 0x3702AB0 Slot: 10
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x3702AE8 Offset: 0x36FEAE8 VA: 0x3702AE8 Slot: 9
+	private object System.Collections.IEnumerator.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x3702AF0 Offset: 0x36FEAF0 VA: 0x3702AF0 Slot: 4
+	private IEnumerator<JSONNode> System.Collections.Generic.IEnumerable<SimpleJSON.JSONNode>.GetEnumerator() { }
+
+	[DebuggerHidden]
+	// RVA: 0x3702B80 Offset: 0x36FEB80 VA: 0x3702B80 Slot: 5
+	private IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class JSONNode.<get_DeepChildren>d__41 : IEnumerable<JSONNode>, IEnumerable, IEnumerator<JSONNode>, IEnumerator, IDisposable // TypeDefIndex: 912
+{
+	// Fields
+	private int <>1__state; // 0x9FA9A4B9
+	private JSONNode <>2__current; // 0x9CA2B5A6
+	private int <>l__initialThreadId; // 0xA4B5B6B9
+	public JSONNode <>4__this; // 0x9DB5BDB9
+	private IEnumerator<JSONNode> <>7__wrap1; // 0xBCA5B4BF
+	private IEnumerator<JSONNode> <>7__wrap2; // 0xA3EAEAB5
+
+	// Properties
+	private JSONNode System.Collections.Generic.IEnumerator<SimpleJSON.JSONNode>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x3700794 Offset: 0x36FC794 VA: 0x3700794
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHidden]
+	// RVA: 0x3702B84 Offset: 0x36FEB84 VA: 0x3702B84 Slot: 7
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x3702C34 Offset: 0x36FEC34 VA: 0x3702C34 Slot: 8
+	private bool MoveNext() { }
+
+	// RVA: 0x3703198 Offset: 0x36FF198 VA: 0x3703198
+	private void <>m__Finally1() { }
+
+	// RVA: 0x37030DC Offset: 0x36FF0DC VA: 0x37030DC
+	private void <>m__Finally2() { }
+
+	[DebuggerHidden]
+	// RVA: 0x3703254 Offset: 0x36FF254 VA: 0x3703254 Slot: 6
+	private JSONNode System.Collections.Generic.IEnumerator<SimpleJSON.JSONNode>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x370325C Offset: 0x36FF25C VA: 0x370325C Slot: 10
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x3703294 Offset: 0x36FF294 VA: 0x3703294 Slot: 9
+	private object System.Collections.IEnumerator.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x370329C Offset: 0x36FF29C VA: 0x370329C Slot: 4
+	private IEnumerator<JSONNode> System.Collections.Generic.IEnumerable<SimpleJSON.JSONNode>.GetEnumerator() { }
+
+	[DebuggerHidden]
+	// RVA: 0x3703340 Offset: 0x36FF340 VA: 0x3703340 Slot: 5
+	private IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: SimpleJSON
+[DefaultMember("Item")]
+public abstract class JSONNode // TypeDefIndex: 913
+{
+	// Fields
+	public static bool forceASCII; // 0xBD8FA4B5
+	[ThreadStatic]
+	private static StringBuilder m_EscapeBuilder; // 0xB9A4BCA5
+
+	// Properties
+	public abstract JSONNodeType Tag { get; }
+	public virtual JSONNode Item { get; set; }
+	public virtual JSONNode Item { get; set; }
+	public virtual string Value { get; set; }
+	public virtual int Count { get; }
+	public virtual bool IsNumber { get; }
+	public virtual bool IsString { get; }
+	public virtual bool IsBoolean { get; }
+	public virtual bool IsNull { get; }
+	public virtual bool IsArray { get; }
+	public virtual bool IsObject { get; }
+	public virtual bool Inline { get; set; }
+	public virtual IEnumerable<JSONNode> Children { get; }
+	public IEnumerable<JSONNode> DeepChildren { get; }
+	public IEnumerable<KeyValuePair<string, JSONNode>> Linq { get; }
+	public KeyEnumerator Keys { get; }
+	public ValueEnumerator Values { get; }
+	public virtual double AsDouble { get; set; }
+	public virtual int AsInt { get; set; }
+	public virtual float AsFloat { get; set; }
+	public virtual bool AsBool { get; set; }
+	public virtual JSONArray AsArray { get; }
+	public virtual JSONObject AsObject { get; }
+	internal static StringBuilder EscapeBuilder { get; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public abstract JSONNodeType get_Tag();
+
+	// RVA: 0x3700550 Offset: 0x36FC550 VA: 0x3700550 Slot: 5
+	public virtual JSONNode get_Item(int aIndex) { }
+
+	// RVA: 0x3700558 Offset: 0x36FC558 VA: 0x3700558 Slot: 6
+	public virtual void set_Item(int aIndex, JSONNode value) { }
+
+	// RVA: 0x370055C Offset: 0x36FC55C VA: 0x370055C Slot: 7
+	public virtual JSONNode get_Item(string aKey) { }
+
+	// RVA: 0x3700564 Offset: 0x36FC564 VA: 0x3700564 Slot: 8
+	public virtual void set_Item(string aKey, JSONNode value) { }
+
+	// RVA: 0x3700568 Offset: 0x36FC568 VA: 0x3700568 Slot: 9
+	public virtual string get_Value() { }
+
+	// RVA: 0x37005A8 Offset: 0x36FC5A8 VA: 0x37005A8 Slot: 10
+	public virtual void set_Value(string value) { }
+
+	// RVA: 0x37005AC Offset: 0x36FC5AC VA: 0x37005AC Slot: 11
+	public virtual int get_Count() { }
+
+	// RVA: 0x37005B4 Offset: 0x36FC5B4 VA: 0x37005B4 Slot: 12
+	public virtual bool get_IsNumber() { }
+
+	// RVA: 0x37005BC Offset: 0x36FC5BC VA: 0x37005BC Slot: 13
+	public virtual bool get_IsString() { }
+
+	// RVA: 0x37005C4 Offset: 0x36FC5C4 VA: 0x37005C4 Slot: 14
+	public virtual bool get_IsBoolean() { }
+
+	// RVA: 0x37005CC Offset: 0x36FC5CC VA: 0x37005CC Slot: 15
+	public virtual bool get_IsNull() { }
+
+	// RVA: 0x37005D4 Offset: 0x36FC5D4 VA: 0x37005D4 Slot: 16
+	public virtual bool get_IsArray() { }
+
+	// RVA: 0x37005DC Offset: 0x36FC5DC VA: 0x37005DC Slot: 17
+	public virtual bool get_IsObject() { }
+
+	// RVA: 0x37005E4 Offset: 0x36FC5E4 VA: 0x37005E4 Slot: 18
+	public virtual bool get_Inline() { }
+
+	// RVA: 0x37005EC Offset: 0x36FC5EC VA: 0x37005EC Slot: 19
+	public virtual void set_Inline(bool value) { }
+
+	// RVA: 0x37005F0 Offset: 0x36FC5F0 VA: 0x37005F0 Slot: 20
+	public virtual void Add(string aKey, JSONNode aItem) { }
+
+	// RVA: 0x37005F4 Offset: 0x36FC5F4 VA: 0x37005F4 Slot: 21
+	public virtual void Add(JSONNode aItem) { }
+
+	// RVA: 0x3700664 Offset: 0x36FC664 VA: 0x3700664 Slot: 22
+	public virtual JSONNode Remove(string aKey) { }
+
+	// RVA: 0x370066C Offset: 0x36FC66C VA: 0x370066C Slot: 23
+	public virtual JSONNode Remove(int aIndex) { }
+
+	// RVA: 0x3700674 Offset: 0x36FC674 VA: 0x3700674 Slot: 24
+	public virtual JSONNode Remove(JSONNode aNode) { }
+
+	[IteratorStateMachine(typeof(<get_Children>d__39))]
+	// RVA: 0x370067C Offset: 0x36FC67C VA: 0x370067C Slot: 25
+	public virtual IEnumerable<JSONNode> get_Children() { }
+
+	[IteratorStateMachine(typeof(<get_DeepChildren>d__41))]
+	// RVA: 0x3700718 Offset: 0x36FC718 VA: 0x3700718
+	public IEnumerable<JSONNode> get_DeepChildren() { }
+
+	// RVA: 0x37007C8 Offset: 0x36FC7C8 VA: 0x37007C8 Slot: 3
+	public override string ToString() { }
+
+	// RVA: 0x3700864 Offset: 0x36FC864 VA: 0x3700864 Slot: 26
+	public virtual string ToString(int aIndent) { }
+
+	// RVA: -1 Offset: -1 Slot: 27
+	internal abstract void WriteToStringBuilder(StringBuilder aSB, int aIndent, int aIndentInc, JSONTextMode aMode);
+
+	// RVA: -1 Offset: -1 Slot: 28
+	public abstract Enumerator GetEnumerator();
+
+	// RVA: 0x370090C Offset: 0x36FC90C VA: 0x370090C
+	public IEnumerable<KeyValuePair<string, JSONNode>> get_Linq() { }
+
+	// RVA: 0x3700A0C Offset: 0x36FCA0C VA: 0x3700A0C
+	public KeyEnumerator get_Keys() { }
+
+	// RVA: 0x3700A6C Offset: 0x36FCA6C VA: 0x3700A6C
+	public ValueEnumerator get_Values() { }
+
+	// RVA: 0x3700ACC Offset: 0x36FCACC VA: 0x3700ACC Slot: 29
+	public virtual double get_AsDouble() { }
+
+	// RVA: 0x3700B1C Offset: 0x36FCB1C VA: 0x3700B1C Slot: 30
+	public virtual void set_AsDouble(double value) { }
+
+	// RVA: 0x3700B68 Offset: 0x36FCB68 VA: 0x3700B68 Slot: 31
+	public virtual int get_AsInt() { }
+
+	// RVA: 0x3700BAC Offset: 0x36FCBAC VA: 0x3700BAC Slot: 32
+	public virtual void set_AsInt(int value) { }
+
+	// RVA: 0x3700BE4 Offset: 0x36FCBE4 VA: 0x3700BE4 Slot: 33
+	public virtual float get_AsFloat() { }
+
+	// RVA: 0x3700C14 Offset: 0x36FCC14 VA: 0x3700C14 Slot: 34
+	public virtual void set_AsFloat(float value) { }
+
+	// RVA: 0x3700C4C Offset: 0x36FCC4C VA: 0x3700C4C Slot: 35
+	public virtual bool get_AsBool() { }
+
+	// RVA: 0x3700D14 Offset: 0x36FCD14 VA: 0x3700D14 Slot: 36
+	public virtual void set_AsBool(bool value) { }
+
+	// RVA: 0x3700D98 Offset: 0x36FCD98 VA: 0x3700D98 Slot: 37
+	public virtual JSONArray get_AsArray() { }
+
+	// RVA: 0x3700E10 Offset: 0x36FCE10 VA: 0x3700E10 Slot: 38
+	public virtual JSONObject get_AsObject() { }
+
+	// RVA: 0x3700E88 Offset: 0x36FCE88 VA: 0x3700E88
+	public static JSONNode op_Implicit(string s) { }
+
+	// RVA: 0x3700F20 Offset: 0x36FCF20 VA: 0x3700F20
+	public static string op_Implicit(JSONNode d) { }
+
+	// RVA: 0x37010DC Offset: 0x36FD0DC VA: 0x37010DC
+	public static JSONNode op_Implicit(double n) { }
+
+	// RVA: 0x3701168 Offset: 0x36FD168 VA: 0x3701168
+	public static double op_Implicit(JSONNode d) { }
+
+	// RVA: 0x37011B0 Offset: 0x36FD1B0 VA: 0x37011B0
+	public static JSONNode op_Implicit(float n) { }
+
+	// RVA: 0x3701218 Offset: 0x36FD218 VA: 0x3701218
+	public static float op_Implicit(JSONNode d) { }
+
+	// RVA: 0x3701260 Offset: 0x36FD260 VA: 0x3701260
+	public static JSONNode op_Implicit(int n) { }
+
+	// RVA: 0x37012C8 Offset: 0x36FD2C8 VA: 0x37012C8
+	public static int op_Implicit(JSONNode d) { }
+
+	// RVA: 0x3701310 Offset: 0x36FD310 VA: 0x3701310
+	public static JSONNode op_Implicit(bool b) { }
+
+	// RVA: 0x3701398 Offset: 0x36FD398 VA: 0x3701398
+	public static bool op_Implicit(JSONNode d) { }
+
+	// RVA: 0x37013E0 Offset: 0x36FD3E0 VA: 0x37013E0
+	public static JSONNode op_Implicit(KeyValuePair<string, JSONNode> aKeyValue) { }
+
+	// RVA: 0x3700F64 Offset: 0x36FCF64 VA: 0x3700F64
+	public static bool op_Equality(JSONNode a, object b) { }
+
+	// RVA: 0x370141C Offset: 0x36FD41C VA: 0x370141C
+	public static bool op_Inequality(JSONNode a, object b) { }
+
+	// RVA: 0x3701434 Offset: 0x36FD434 VA: 0x3701434 Slot: 0
+	public override bool Equals(object obj) { }
+
+	// RVA: 0x3701440 Offset: 0x36FD440 VA: 0x3701440 Slot: 2
+	public override int GetHashCode() { }
+
+	// RVA: 0x3701448 Offset: 0x36FD448 VA: 0x3701448
+	internal static StringBuilder get_EscapeBuilder() { }
+
+	// RVA: 0x37014E4 Offset: 0x36FD4E4 VA: 0x37014E4
+	internal static string Escape(string aText) { }
+
+	// RVA: 0x37017B0 Offset: 0x36FD7B0 VA: 0x37017B0
+	private static void ParseElement(JSONNode ctx, string token, string tokenName, bool quoted) { }
+
+	// RVA: 0x3701928 Offset: 0x36FD928 VA: 0x3701928
+	public static JSONNode Parse(string aJSON) { }
+
+	// RVA: 0x3702018 Offset: 0x36FE018 VA: 0x3702018
+	protected void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class JSONArray.<get_Children>d__22 : IEnumerable<JSONNode>, IEnumerable, IEnumerator<JSONNode>, IEnumerator, IDisposable // TypeDefIndex: 914
+{
+	// Fields
+	private int <>1__state; // 0x94A9BCA0
+	private JSONNode <>2__current; // 0x92B7B1A2
+	private int <>l__initialThreadId; // 0xA2B180A9
+	public JSONArray <>4__this; // 0xBCB3B9A4
+	private Enumerator<JSONNode> <>7__wrap1; // 0xBCB586B5
+
+	// Properties
+	private JSONNode System.Collections.Generic.IEnumerator<SimpleJSON.JSONNode>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x3703AF8 Offset: 0x36FFAF8 VA: 0x3703AF8
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHidden]
+	// RVA: 0x3703CAC Offset: 0x36FFCAC VA: 0x3703CAC Slot: 7
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x3703CC8 Offset: 0x36FFCC8 VA: 0x3703CC8 Slot: 8
+	private bool MoveNext() { }
+
+	// RVA: 0x3703E70 Offset: 0x36FFE70 VA: 0x3703E70
+	private void <>m__Finally1() { }
+
+	[DebuggerHidden]
+	// RVA: 0x3703EC0 Offset: 0x36FFEC0 VA: 0x3703EC0 Slot: 6
+	private JSONNode System.Collections.Generic.IEnumerator<SimpleJSON.JSONNode>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x3703EC8 Offset: 0x36FFEC8 VA: 0x3703EC8 Slot: 10
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x3703F00 Offset: 0x36FFF00 VA: 0x3703F00 Slot: 9
+	private object System.Collections.IEnumerator.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x3703F08 Offset: 0x36FFF08 VA: 0x3703F08 Slot: 4
+	private IEnumerator<JSONNode> System.Collections.Generic.IEnumerable<SimpleJSON.JSONNode>.GetEnumerator() { }
+
+	[DebuggerHidden]
+	// RVA: 0x3703FAC Offset: 0x36FFFAC VA: 0x3703FAC Slot: 5
+	private IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: SimpleJSON
+[DefaultMember("Item")]
+public class JSONArray : JSONNode // TypeDefIndex: 915
+{
+	// Fields
+	private List<JSONNode> m_List; // 0xA4B9B3BF
+	private bool inline; // 0xBE998FA9
+
+	// Properties
+	public override bool Inline { get; set; }
+	public override JSONNodeType Tag { get; }
+	public override bool IsArray { get; }
+	public override JSONNode Item { get; set; }
+	public override JSONNode Item { get; set; }
+	public override int Count { get; }
+	public override IEnumerable<JSONNode> Children { get; }
+
+	// Methods
+
+	// RVA: 0x3703344 Offset: 0x36FF344 VA: 0x3703344 Slot: 18
+	public override bool get_Inline() { }
+
+	// RVA: 0x370334C Offset: 0x36FF34C VA: 0x370334C Slot: 19
+	public override void set_Inline(bool value) { }
+
+	// RVA: 0x3703358 Offset: 0x36FF358 VA: 0x3703358 Slot: 4
+	public override JSONNodeType get_Tag() { }
+
+	// RVA: 0x3703360 Offset: 0x36FF360 VA: 0x3703360 Slot: 16
+	public override bool get_IsArray() { }
+
+	// RVA: 0x3703368 Offset: 0x36FF368 VA: 0x3703368 Slot: 28
+	public override Enumerator GetEnumerator() { }
+
+	// RVA: 0x3703404 Offset: 0x36FF404 VA: 0x3703404 Slot: 5
+	public override JSONNode get_Item(int aIndex) { }
+
+	// RVA: 0x37034F0 Offset: 0x36FF4F0 VA: 0x37034F0 Slot: 6
+	public override void set_Item(int aIndex, JSONNode value) { }
+
+	// RVA: 0x37036D8 Offset: 0x36FF6D8 VA: 0x37036D8 Slot: 7
+	public override JSONNode get_Item(string aKey) { }
+
+	// RVA: 0x3703730 Offset: 0x36FF730 VA: 0x3703730 Slot: 8
+	public override void set_Item(string aKey, JSONNode value) { }
+
+	// RVA: 0x3703828 Offset: 0x36FF828 VA: 0x3703828 Slot: 11
+	public override int get_Count() { }
+
+	// RVA: 0x3703870 Offset: 0x36FF870 VA: 0x3703870 Slot: 20
+	public override void Add(string aKey, JSONNode aItem) { }
+
+	// RVA: 0x3703968 Offset: 0x36FF968 VA: 0x3703968 Slot: 23
+	public override JSONNode Remove(int aIndex) { }
+
+	// RVA: 0x3703A1C Offset: 0x36FFA1C VA: 0x3703A1C Slot: 24
+	public override JSONNode Remove(JSONNode aNode) { }
+
+	[IteratorStateMachine(typeof(<get_Children>d__22))]
+	// RVA: 0x3703A7C Offset: 0x36FFA7C VA: 0x3703A7C Slot: 25
+	public override IEnumerable<JSONNode> get_Children() { }
+
+	// RVA: 0x3703B2C Offset: 0x36FFB2C VA: 0x3703B2C Slot: 27
+	internal override void WriteToStringBuilder(StringBuilder aSB, int aIndent, int aIndentInc, JSONTextMode aMode) { }
+
+	// RVA: 0x3701F90 Offset: 0x36FDF90 VA: 0x3701F90
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class JSONObject.<>c__DisplayClass21_0 // TypeDefIndex: 916
+{
+	// Fields
+	public JSONNode aNode; // 0xA4B3B5BA
+
+	// Methods
+
+	// RVA: 0x3704948 Offset: 0x3700948 VA: 0x3704948
+	public void .ctor() { }
+
+	// RVA: 0x3704D10 Offset: 0x3700D10 VA: 0x3704D10
+	internal bool <Remove>b__0(KeyValuePair<string, JSONNode> k) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class JSONObject.<get_Children>d__23 : IEnumerable<JSONNode>, IEnumerable, IEnumerator<JSONNode>, IEnumerator, IDisposable // TypeDefIndex: 917
+{
+	// Fields
+	private int <>1__state; // 0x85F8B4B5
+	private JSONNode <>2__current; // 0xA9A4B9BE
+	private int <>l__initialThreadId; // 0xB9B7BE95
+	public JSONObject <>4__this; // 0x80FEB5BE
+	private Enumerator<string, JSONNode> <>7__wrap1; // 0xB9A4A2B1
+
+	// Properties
+	private JSONNode System.Collections.Generic.IEnumerator<SimpleJSON.JSONNode>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x37049CC Offset: 0x37009CC VA: 0x37049CC
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHidden]
+	// RVA: 0x3704D54 Offset: 0x3700D54 VA: 0x3704D54 Slot: 7
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x3704D70 Offset: 0x3700D70 VA: 0x3704D70 Slot: 8
+	private bool MoveNext() { }
+
+	// RVA: 0x3704F2C Offset: 0x3700F2C VA: 0x3704F2C
+	private void <>m__Finally1() { }
+
+	[DebuggerHidden]
+	// RVA: 0x3704F7C Offset: 0x3700F7C VA: 0x3704F7C Slot: 6
+	private JSONNode System.Collections.Generic.IEnumerator<SimpleJSON.JSONNode>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x3704F84 Offset: 0x3700F84 VA: 0x3704F84 Slot: 10
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x3704FBC Offset: 0x3700FBC VA: 0x3704FBC Slot: 9
+	private object System.Collections.IEnumerator.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x3704FC4 Offset: 0x3700FC4 VA: 0x3704FC4 Slot: 4
+	private IEnumerator<JSONNode> System.Collections.Generic.IEnumerable<SimpleJSON.JSONNode>.GetEnumerator() { }
+
+	[DebuggerHidden]
+	// RVA: 0x3705068 Offset: 0x3701068 VA: 0x3705068 Slot: 5
+	private IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: SimpleJSON
+[DefaultMember("Item")]
+public class JSONObject : JSONNode // TypeDefIndex: 918
+{
+	// Fields
+	private Dictionary<string, JSONNode> m_Dict; // 0x83B5BCB3
+	private bool inline; // 0xB5A4A3A9
+
+	// Properties
+	public override bool Inline { get; set; }
+	public override JSONNodeType Tag { get; }
+	public override bool IsObject { get; }
+	public override JSONNode Item { get; set; }
+	public override JSONNode Item { get; set; }
+	public override int Count { get; }
+	public override IEnumerable<JSONNode> Children { get; }
+
+	// Methods
+
+	// RVA: 0x3703FB0 Offset: 0x36FFFB0 VA: 0x3703FB0 Slot: 18
+	public override bool get_Inline() { }
+
+	// RVA: 0x3703FB8 Offset: 0x36FFFB8 VA: 0x3703FB8 Slot: 19
+	public override void set_Inline(bool value) { }
+
+	// RVA: 0x3703FC4 Offset: 0x36FFFC4 VA: 0x3703FC4 Slot: 4
+	public override JSONNodeType get_Tag() { }
+
+	// RVA: 0x3703FCC Offset: 0x36FFFCC VA: 0x3703FCC Slot: 17
+	public override bool get_IsObject() { }
+
+	// RVA: 0x3703FD4 Offset: 0x36FFFD4 VA: 0x3703FD4 Slot: 28
+	public override Enumerator GetEnumerator() { }
+
+	// RVA: 0x370407C Offset: 0x370007C VA: 0x370407C Slot: 7
+	public override JSONNode get_Item(string aKey) { }
+
+	// RVA: 0x3704180 Offset: 0x3700180 VA: 0x3704180 Slot: 8
+	public override void set_Item(string aKey, JSONNode value) { }
+
+	// RVA: 0x3704288 Offset: 0x3700288 VA: 0x3704288 Slot: 5
+	public override JSONNode get_Item(int aIndex) { }
+
+	// RVA: 0x3704328 Offset: 0x3700328 VA: 0x3704328 Slot: 6
+	public override void set_Item(int aIndex, JSONNode value) { }
+
+	// RVA: 0x3704440 Offset: 0x3700440 VA: 0x3704440 Slot: 11
+	public override int get_Count() { }
+
+	// RVA: 0x3704490 Offset: 0x3700490 VA: 0x3704490 Slot: 20
+	public override void Add(string aKey, JSONNode aItem) { }
+
+	// RVA: 0x37045E4 Offset: 0x37005E4 VA: 0x37045E4 Slot: 22
+	public override JSONNode Remove(string aKey) { }
+
+	// RVA: 0x37046A8 Offset: 0x37006A8 VA: 0x37046A8 Slot: 23
+	public override JSONNode Remove(int aIndex) { }
+
+	// RVA: 0x3704784 Offset: 0x3700784 VA: 0x3704784 Slot: 24
+	public override JSONNode Remove(JSONNode aNode) { }
+
+	[IteratorStateMachine(typeof(<get_Children>d__23))]
+	// RVA: 0x3704950 Offset: 0x3700950 VA: 0x3704950 Slot: 25
+	public override IEnumerable<JSONNode> get_Children() { }
+
+	// RVA: 0x3704A00 Offset: 0x3700A00 VA: 0x3704A00 Slot: 27
+	internal override void WriteToStringBuilder(StringBuilder aSB, int aIndent, int aIndentInc, JSONTextMode aMode) { }
+
+	// RVA: 0x3701F08 Offset: 0x36FDF08 VA: 0x3701F08
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: SimpleJSON
+public class JSONString : JSONNode // TypeDefIndex: 919
+{
+	// Fields
+	private string m_Data; // 0xB99CFFBD
+
+	// Properties
+	public override JSONNodeType Tag { get; }
+	public override bool IsString { get; }
+	public override string Value { get; set; }
+
+	// Methods
+
+	// RVA: 0x370506C Offset: 0x370106C VA: 0x370506C Slot: 4
+	public override JSONNodeType get_Tag() { }
+
+	// RVA: 0x3705074 Offset: 0x3701074 VA: 0x3705074 Slot: 13
+	public override bool get_IsString() { }
+
+	// RVA: 0x370507C Offset: 0x370107C VA: 0x370507C Slot: 28
+	public override Enumerator GetEnumerator() { }
+
+	// RVA: 0x3705090 Offset: 0x3701090 VA: 0x3705090 Slot: 9
+	public override string get_Value() { }
+
+	// RVA: 0x3705098 Offset: 0x3701098 VA: 0x3705098 Slot: 10
+	public override void set_Value(string value) { }
+
+	// RVA: 0x3700EF0 Offset: 0x36FCEF0 VA: 0x3700EF0
+	public void .ctor(string aData) { }
+
+	// RVA: 0x37050A0 Offset: 0x37010A0 VA: 0x37050A0 Slot: 27
+	internal override void WriteToStringBuilder(StringBuilder aSB, int aIndent, int aIndentInc, JSONTextMode aMode) { }
+
+	// RVA: 0x37050FC Offset: 0x37010FC VA: 0x37050FC Slot: 0
+	public override bool Equals(object obj) { }
+
+	// RVA: 0x37051E8 Offset: 0x37011E8 VA: 0x37051E8 Slot: 2
+	public override int GetHashCode() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: SimpleJSON
+public class JSONNumber : JSONNode // TypeDefIndex: 920
+{
+	// Fields
+	private double m_Data; // 0x86A4B9BD
+
+	// Properties
+	public override JSONNodeType Tag { get; }
+	public override bool IsNumber { get; }
+	public override string Value { get; set; }
+	public override double AsDouble { get; set; }
+
+	// Methods
+
+	// RVA: 0x3705214 Offset: 0x3701214 VA: 0x3705214 Slot: 4
+	public override JSONNodeType get_Tag() { }
+
+	// RVA: 0x370521C Offset: 0x370121C VA: 0x370521C Slot: 12
+	public override bool get_IsNumber() { }
+
+	// RVA: 0x3705224 Offset: 0x3701224 VA: 0x3705224 Slot: 28
+	public override Enumerator GetEnumerator() { }
+
+	// RVA: 0x3705238 Offset: 0x3701238 VA: 0x3705238 Slot: 9
+	public override string get_Value() { }
+
+	// RVA: 0x3705244 Offset: 0x3701244 VA: 0x3705244 Slot: 10
+	public override void set_Value(string value) { }
+
+	// RVA: 0x3705280 Offset: 0x3701280 VA: 0x3705280 Slot: 29
+	public override double get_AsDouble() { }
+
+	// RVA: 0x3705288 Offset: 0x3701288 VA: 0x3705288 Slot: 30
+	public override void set_AsDouble(double value) { }
+
+	// RVA: 0x3701140 Offset: 0x36FD140 VA: 0x3701140
+	public void .ctor(double aData) { }
+
+	// RVA: 0x3705290 Offset: 0x3701290 VA: 0x3705290
+	public void .ctor(string aData) { }
+
+	// RVA: 0x37052CC Offset: 0x37012CC VA: 0x37052CC Slot: 27
+	internal override void WriteToStringBuilder(StringBuilder aSB, int aIndent, int aIndentInc, JSONTextMode aMode) { }
+
+	// RVA: 0x37052EC Offset: 0x37012EC VA: 0x37052EC
+	private static bool IsNumeric(object value) { }
+
+	// RVA: 0x370548C Offset: 0x370148C VA: 0x370548C Slot: 0
+	public override bool Equals(object obj) { }
+
+	// RVA: 0x3705598 Offset: 0x3701598 VA: 0x3705598 Slot: 2
+	public override int GetHashCode() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: SimpleJSON
+public class JSONBool : JSONNode // TypeDefIndex: 921
+{
+	// Fields
+	private bool m_Data; // 0xB3BFBCB5
+
+	// Properties
+	public override JSONNodeType Tag { get; }
+	public override bool IsBoolean { get; }
+	public override string Value { get; set; }
+	public override bool AsBool { get; set; }
+
+	// Methods
+
+	// RVA: 0x37055B8 Offset: 0x37015B8 VA: 0x37055B8 Slot: 4
+	public override JSONNodeType get_Tag() { }
+
+	// RVA: 0x37055C0 Offset: 0x37015C0 VA: 0x37055C0 Slot: 14
+	public override bool get_IsBoolean() { }
+
+	// RVA: 0x37055C8 Offset: 0x37015C8 VA: 0x37055C8 Slot: 28
+	public override Enumerator GetEnumerator() { }
+
+	// RVA: 0x37055DC Offset: 0x37015DC VA: 0x37055DC Slot: 9
+	public override string get_Value() { }
+
+	// RVA: 0x3705634 Offset: 0x3701634 VA: 0x3705634 Slot: 10
+	public override void set_Value(string value) { }
+
+	// RVA: 0x37056B0 Offset: 0x37016B0 VA: 0x37056B0 Slot: 35
+	public override bool get_AsBool() { }
+
+	// RVA: 0x37056B8 Offset: 0x37016B8 VA: 0x37056B8 Slot: 36
+	public override void set_AsBool(bool value) { }
+
+	// RVA: 0x3701370 Offset: 0x36FD370 VA: 0x3701370
+	public void .ctor(bool aData) { }
+
+	// RVA: 0x37056C4 Offset: 0x37016C4 VA: 0x37056C4
+	public void .ctor(string aData) { }
+
+	// RVA: 0x3705700 Offset: 0x3701700 VA: 0x3705700 Slot: 27
+	internal override void WriteToStringBuilder(StringBuilder aSB, int aIndent, int aIndentInc, JSONTextMode aMode) { }
+
+	// RVA: 0x3705778 Offset: 0x3701778 VA: 0x3705778 Slot: 0
+	public override bool Equals(object obj) { }
+
+	// RVA: 0x37057F0 Offset: 0x37017F0 VA: 0x37057F0 Slot: 2
+	public override int GetHashCode() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: SimpleJSON
+public class JSONNull : JSONNode // TypeDefIndex: 922
+{
+	// Fields
+	private static JSONNull m_StaticInstance; // 0x9FA9A4B9
+	public static bool reuseSameInstance; // 0x9CA2B5A6
+
+	// Properties
+	public override JSONNodeType Tag { get; }
+	public override bool IsNull { get; }
+	public override string Value { get; set; }
+	public override bool AsBool { get; set; }
+
+	// Methods
+
+	// RVA: 0x370364C Offset: 0x36FF64C VA: 0x370364C
+	public static JSONNull CreateOrGet() { }
+
+	// RVA: 0x3705848 Offset: 0x3701848 VA: 0x3705848
+	private void .ctor() { }
+
+	// RVA: 0x3705850 Offset: 0x3701850 VA: 0x3705850 Slot: 4
+	public override JSONNodeType get_Tag() { }
+
+	// RVA: 0x3705858 Offset: 0x3701858 VA: 0x3705858 Slot: 15
+	public override bool get_IsNull() { }
+
+	// RVA: 0x3705860 Offset: 0x3701860 VA: 0x3705860 Slot: 28
+	public override Enumerator GetEnumerator() { }
+
+	// RVA: 0x3705874 Offset: 0x3701874 VA: 0x3705874 Slot: 9
+	public override string get_Value() { }
+
+	// RVA: 0x37058B4 Offset: 0x37018B4 VA: 0x37058B4 Slot: 10
+	public override void set_Value(string value) { }
+
+	// RVA: 0x37058B8 Offset: 0x37018B8 VA: 0x37058B8 Slot: 35
+	public override bool get_AsBool() { }
+
+	// RVA: 0x37058C0 Offset: 0x37018C0 VA: 0x37058C0 Slot: 36
+	public override void set_AsBool(bool value) { }
+
+	// RVA: 0x37058C4 Offset: 0x37018C4 VA: 0x37058C4 Slot: 0
+	public override bool Equals(object obj) { }
+
+	// RVA: 0x3705950 Offset: 0x3701950 VA: 0x3705950 Slot: 2
+	public override int GetHashCode() { }
+
+	// RVA: 0x3705958 Offset: 0x3701958 VA: 0x3705958 Slot: 27
+	internal override void WriteToStringBuilder(StringBuilder aSB, int aIndent, int aIndentInc, JSONTextMode aMode) { }
+
+	// RVA: 0x37059AC Offset: 0x37019AC VA: 0x37059AC
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: SimpleJSON
+[DefaultMember("Item")]
+internal class JSONLazyCreator : JSONNode // TypeDefIndex: 923
+{
+	// Fields
+	private JSONNode m_Node; // 0xA4B5B6B9
+	private string m_Key; // 0x9DB5BDB9
+
+	// Properties
+	public override JSONNodeType Tag { get; }
+	public override JSONNode Item { get; set; }
+	public override JSONNode Item { get; set; }
+	public override int AsInt { get; set; }
+	public override float AsFloat { get; set; }
+	public override double AsDouble { get; set; }
+	public override bool AsBool { get; set; }
+	public override JSONArray AsArray { get; }
+	public override JSONObject AsObject { get; }
+
+	// Methods
+
+	// RVA: 0x3705A28 Offset: 0x3701A28 VA: 0x3705A28 Slot: 4
+	public override JSONNodeType get_Tag() { }
+
+	// RVA: 0x3705A30 Offset: 0x3701A30 VA: 0x3705A30 Slot: 28
+	public override Enumerator GetEnumerator() { }
+
+	// RVA: 0x37034B0 Offset: 0x36FF4B0 VA: 0x37034B0
+	public void .ctor(JSONNode aNode) { }
+
+	// RVA: 0x370413C Offset: 0x370013C VA: 0x370413C
+	public void .ctor(JSONNode aNode, string aKey) { }
+
+	// RVA: 0x3705A44 Offset: 0x3701A44 VA: 0x3705A44
+	private void Set(JSONNode aVal) { }
+
+	// RVA: 0x3705AD4 Offset: 0x3701AD4 VA: 0x3705AD4 Slot: 5
+	public override JSONNode get_Item(int aIndex) { }
+
+	// RVA: 0x3705B2C Offset: 0x3701B2C VA: 0x3705B2C Slot: 6
+	public override void set_Item(int aIndex, JSONNode value) { }
+
+	// RVA: 0x3705BB8 Offset: 0x3701BB8 VA: 0x3705BB8 Slot: 7
+	public override JSONNode get_Item(string aKey) { }
+
+	// RVA: 0x3705C20 Offset: 0x3701C20 VA: 0x3705C20 Slot: 8
+	public override void set_Item(string aKey, JSONNode value) { }
+
+	// RVA: 0x3705CB4 Offset: 0x3701CB4 VA: 0x3705CB4 Slot: 21
+	public override void Add(JSONNode aItem) { }
+
+	// RVA: 0x3705D40 Offset: 0x3701D40 VA: 0x3705D40 Slot: 20
+	public override void Add(string aKey, JSONNode aItem) { }
+
+	// RVA: 0x3705DD4 Offset: 0x3701DD4 VA: 0x3705DD4
+	public static bool op_Equality(JSONLazyCreator a, object b) { }
+
+	// RVA: 0x3705DEC Offset: 0x3701DEC VA: 0x3705DEC
+	public static bool op_Inequality(JSONLazyCreator a, object b) { }
+
+	// RVA: 0x3705E04 Offset: 0x3701E04 VA: 0x3705E04 Slot: 0
+	public override bool Equals(object obj) { }
+
+	// RVA: 0x3705E1C Offset: 0x3701E1C VA: 0x3705E1C Slot: 2
+	public override int GetHashCode() { }
+
+	// RVA: 0x3705E24 Offset: 0x3701E24 VA: 0x3705E24 Slot: 31
+	public override int get_AsInt() { }
+
+	// RVA: 0x3705E8C Offset: 0x3701E8C VA: 0x3705E8C Slot: 32
+	public override void set_AsInt(int value) { }
+
+	// RVA: 0x3705F04 Offset: 0x3701F04 VA: 0x3705F04 Slot: 33
+	public override float get_AsFloat() { }
+		// RVA: 0x3705F6C Offset: 0x3701F6C VA: 0x3705F6C Slot: 34
+	public override void set_AsFloat(float value) { }
+
+	// RVA: 0x3705FDC Offset: 0x3701FDC VA: 0x3705FDC Slot: 29
+	public override double get_AsDouble() { }
+
+	// RVA: 0x3706044 Offset: 0x3702044 VA: 0x3706044 Slot: 30
+	public override void set_AsDouble(double value) { }
+
+	// RVA: 0x37060B0 Offset: 0x37020B0 VA: 0x37060B0 Slot: 35
+	public override bool get_AsBool() { }
+
+	// RVA: 0x3706118 Offset: 0x3702118 VA: 0x3706118 Slot: 36
+	public override void set_AsBool(bool value) { }
+
+	// RVA: 0x3706188 Offset: 0x3702188 VA: 0x3706188 Slot: 37
+	public override JSONArray get_AsArray() { }
+
+	// RVA: 0x37061E8 Offset: 0x37021E8 VA: 0x37061E8 Slot: 38
+	public override JSONObject get_AsObject() { }
+
+	// RVA: 0x3706248 Offset: 0x3702248 VA: 0x3706248 Slot: 27
+	internal override void WriteToStringBuilder(StringBuilder aSB, int aIndent, int aIndentInc, JSONTextMode aMode) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: SimpleJSON
+public static class JSON // TypeDefIndex: 924
+{
+	// Methods
+
+	// RVA: 0x370629C Offset: 0x370229C VA: 0x370629C
+	public static JSONNode Parse(string aJSON) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum GlobalLightSetting.AmbientType // TypeDefIndex: 925
+{
+	// Fields
+	public int value__; // 0xBCA5B4BF
+	public const AmbientType Environment_On = 0;
+	public const AmbientType Character_Off = 1;
+	public const AmbientType UnityAmbient = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: FF_TA
+[ExecuteInEditMode]
+public class GlobalLightSetting : MonoBehaviour // TypeDefIndex: 926
+{
+	// Fields
+	[Range(0, 10)]
+	public float _RefStrength; // 0xB1B5BCBF
+	public Color _ShadowColor; // 0x85D0F9BE
+	[Range(0, 30)]
+	public float _OutLineWidth; // 0xA9A4B9BE
+	[Range(1, 100)]
+	public float _DistanceFix; // 0xB9B7BE95
+	public Color _OutLineColor; // 0x80FEB5BE
+	[Range(0, 4)]
+	public float _LightScale; // 0xB9A4A2B1
+	[Range(0, 5)]
+	public float _LightmapScale; // 0x83B5BCB3
+	public bool _AutoCharacterAmbinet; // 0xB5A4A3A9
+	public bool _AmbientSH; // 0xB983FFBD
+	public AmbientType _AmbientType; // 0xA69FB5AA
+	public bool _PropMode; // 0xB99CA2B5
+	[HideInInspector]
+	public float _bakeyShadow; // 0xB9A4B5B6
+	public Color _AmbientColor; // 0xBF9DB5BD
+	[Range(0, 10)]
+	public float _LightScaleLow; // 0xB5BCA5B4
+	[Range(0, 1)]
+	public float _AoScale; // 0xB5B7EAEA
+	public bool _Optimize; // 0x9DA88FA4
+	public bool _OptimizeOnlyUltra; // 0xB9A4BCA5
+	public bool _OptimizeOnlyLow; // 0xB5B9BCA0
+	public bool _OptimizeOnlyLowest; // 0xBE998FA2
+	[Range(0, 1)]
+	public float _fogCover; // 0xA4B3B5BA
+	[Range(0, 128)]
+	public float _sunPow; // 0x85F8B4B5
+	[Range(0, 2)]
+	public float _sunIntencity; // 0xA9A4B9BE
+	public Color _sunColor; // 0xB9B7BE95
+	[Range(0, 1000)]
+	public float _sunDistance; // 0x80FEB5BE
+	[HideInInspector]
+	public Color characterAmbinet; // 0xB9A4A2B1
+	[HideInInspector]
+	public Vector4 _custom_SHAr; // 0x83B5BCB3
+	[HideInInspector]
+	public Vector4 _custom_SHAg; // 0xB5A4A3A9
+	[HideInInspector]
+	public Vector4 _custom_SHAb; // 0xB983FFBD
+	[HideInInspector]
+	public Vector4 _custom_SHBr; // 0xA69FB5AA
+	[HideInInspector]
+	public Vector4 _custom_SHBg; // 0xB99CA2B5
+	[HideInInspector]
+	public Vector4 _custom_SHBb; // 0xB9A4B5B6
+	[HideInInspector]
+	public Vector4 _custom_SHC; // 0xBF9DB5BD
+	private int m_custom_ambientSHID; // 0xB5BCA5B4
+	private int m_custom_ShadowColorID; // 0x85D0F9F6
+	private int m_custom_OutLineColorID; // 0xA9A4B9BE
+	private int m_custom_Ref_OutW_LiS_LimapSID; // 0xB9B7BE95
+	private int m_custom_SHArID; // 0x80FEB5BE
+	private int m_custom_SHAgID; // 0xB9A4A2B1
+	private int m_custom_SHAbID; // 0x83B5BCB3
+	private int m_custom_SHBrID; // 0xB5A4A3A9
+	private int m_custom_SHBgID; // 0xB99CFFBD
+	private int m_custom_SHBbID; // 0xA3A4B8B7
+	private int m_custom_SHCID; // 0xA5B4BF9D
+	private int m_custom_AmbientColorID; // 0xEAEAB5BC
+	private int m_custom_LightScaleLowID; // 0x8FA4B5B7
+	private int m_custom_BakedShadowScale; // 0xB5A4BEB9
+	private int m_custom_fogCoverID; // 0xA4B9A3BE
+	private int m_custom_sunColID; // 0xBE998FA9
+	private int m_custom_sunIntencityID; // 0xA4B3B5BA
+	private int m_custom_sunPowID; // 0x85F8B4B5
+	private int m_custom_sunStartEndID; // 0xA9A4B9BE
+	private int m_custom_AoScaleID; // 0xB9B7BE95
+
+	// Properties
+	public float BakeyShadow { get; }
+
+	// Methods
+
+	// RVA: 0x37062A0 Offset: 0x37022A0 VA: 0x37062A0
+	public float get_BakeyShadow() { }
+
+	// RVA: 0x37063A0 Offset: 0x37023A0 VA: 0x37063A0
+	private void Start() { }
+
+	// RVA: 0x3706428 Offset: 0x3702428 VA: 0x3706428
+	private void SetCharacterAmbint() { }
+
+	// RVA: 0x3706450 Offset: 0x3702450 VA: 0x3706450
+	private void HideLight() { }
+
+	// RVA: 0x3706588 Offset: 0x3702588 VA: 0x3706588
+	private void SetGloalLight() { }
+
+	// RVA: 0x3706880 Offset: 0x3702880 VA: 0x3706880
+	private void SetOptimize() { }
+
+	// RVA: 0x37069D0 Offset: 0x37029D0 VA: 0x37069D0
+	private void OnDisable() { }
+
+	// RVA: 0x3706A14 Offset: 0x3702A14 VA: 0x3706A14
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: InterApp
+public class BaseAppInfo // TypeDefIndex: 927
+{
+	// Fields
+	protected static readonly string[] EMPTY_STRING_ARRAY; // 0x80FEB5BE
+
+	// Properties
+	public string[] URLSchemes { get; }
+	public string[] BundleIdentifiers { get; }
+	public virtual string[] URLSchemes_iOS { get; }
+	public virtual string URLScheme_Android { get; }
+	public virtual string[] BundleIdentifiers_iOS { get; }
+	public virtual string[] BundleIdentifiers_Android { get; }
+
+	// Methods
+
+	// RVA: 0x3706DA4 Offset: 0x3702DA4 VA: 0x3706DA4
+	public string[] get_URLSchemes() { }
+
+	// RVA: 0x3706E38 Offset: 0x3702E38 VA: 0x3706E38
+	public string[] get_BundleIdentifiers() { }
+
+	// RVA: 0x3706E5C Offset: 0x3702E5C VA: 0x3706E5C Slot: 4
+	public virtual string[] get_URLSchemes_iOS() { }
+
+	// RVA: 0x3706EB4 Offset: 0x3702EB4 VA: 0x3706EB4 Slot: 5
+	public virtual string get_URLScheme_Android() { }
+
+	// RVA: 0x3706EFC Offset: 0x3702EFC VA: 0x3706EFC Slot: 6
+	public virtual string[] get_BundleIdentifiers_iOS() { }
+
+	// RVA: 0x3706F54 Offset: 0x3702F54 VA: 0x3706F54 Slot: 7
+	public virtual string[] get_BundleIdentifiers_Android() { }
+
+	// RVA: 0x3706FAC Offset: 0x3702FAC VA: 0x3706FAC Slot: 8
+	public virtual bool OAuthRequiresAndroidSystemWebView() { }
+
+	// RVA: 0x3706FB4 Offset: 0x3702FB4 VA: 0x3706FB4 Slot: 9
+	public virtual bool CanLaunch() { }
+
+	// RVA: 0x37070C4 Offset: 0x37030C4 VA: 0x37070C4 Slot: 10
+	public virtual bool CanShareText() { }
+
+	// RVA: 0x37070CC Offset: 0x37030CC VA: 0x37070CC Slot: 11
+	public virtual void ShareText(string text) { }
+
+	// RVA: 0x37070D0 Offset: 0x37030D0 VA: 0x37070D0 Slot: 12
+	public virtual bool CanShareImage() { }
+
+	// RVA: 0x37070D8 Offset: 0x37030D8 VA: 0x37070D8 Slot: 13
+	public virtual void ShareImage(string filePath) { }
+
+	// RVA: 0x37070DC Offset: 0x37030DC VA: 0x37070DC Slot: 14
+	public virtual bool CanShareVideo() { }
+
+	// RVA: 0x37070E4 Offset: 0x37030E4 VA: 0x37070E4 Slot: 15
+	public virtual void ShareVideo(string identifier, Action<int, string> callback) { }
+
+	// RVA: 0x37070E8 Offset: 0x37030E8 VA: 0x37070E8
+	public void .ctor() { }
+
+	// RVA: 0x37070F0 Offset: 0x37030F0 VA: 0x37070F0
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: InterApp
+public class DiscordAppInfo : BaseAppInfo // TypeDefIndex: 928
+{
+	// Fields
+	public static readonly string URL_SCHEME; // 0xB9A4A2B1
+
+	// Properties
+	public override string[] URLSchemes_iOS { get; }
+	public override string URLScheme_Android { get; }
+	public override string[] BundleIdentifiers_Android { get; }
+
+	// Methods
+
+	// RVA: 0x3707164 Offset: 0x3703164 VA: 0x3707164 Slot: 4
+	public override string[] get_URLSchemes_iOS() { }
+
+	// RVA: 0x3707208 Offset: 0x3703208 VA: 0x3707208 Slot: 5
+	public override string get_URLScheme_Android() { }
+
+	// RVA: 0x3707260 Offset: 0x3703260 VA: 0x3707260 Slot: 7
+	public override string[] get_BundleIdentifiers_Android() { }
+
+	// RVA: 0x37072E8 Offset: 0x37032E8 VA: 0x37072E8 Slot: 14
+	public override bool CanShareVideo() { }
+
+	// RVA: 0x37072F0 Offset: 0x37032F0 VA: 0x37072F0 Slot: 12
+	public override bool CanShareImage() { }
+
+	// RVA: 0x37072F8 Offset: 0x37032F8 VA: 0x37072F8 Slot: 10
+	public override bool CanShareText() { }
+
+	// RVA: 0x3707300 Offset: 0x3703300 VA: 0x3707300
+	public void .ctor() { }
+
+	// RVA: 0x3707358 Offset: 0x3703358 VA: 0x3707358
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: InterApp
+public class FacebookAppInfo : BaseAppInfo // TypeDefIndex: 929
+{
+	// Fields
+	public static readonly string URL_SCHEME; // 0x83B5BCB3
+
+	// Properties
+	public override string[] URLSchemes_iOS { get; }
+	public override string URLScheme_Android { get; }
+	public override string[] BundleIdentifiers_Android { get; }
+
+	// Methods
+
+	// RVA: 0x37073C4 Offset: 0x37033C4 VA: 0x37073C4 Slot: 4
+	public override string[] get_URLSchemes_iOS() { }
+
+	// RVA: 0x3707468 Offset: 0x3703468 VA: 0x3707468 Slot: 5
+	public override string get_URLScheme_Android() { }
+
+	// RVA: 0x37074C0 Offset: 0x37034C0 VA: 0x37074C0 Slot: 7
+	public override string[] get_BundleIdentifiers_Android() { }
+
+	// RVA: 0x3707548 Offset: 0x3703548 VA: 0x3707548 Slot: 10
+	public override bool CanShareText() { }
+
+	// RVA: 0x370756C Offset: 0x370356C VA: 0x370756C Slot: 12
+	public override bool CanShareImage() { }
+
+	// RVA: 0x3707590 Offset: 0x3703590 VA: 0x3707590
+	public void .ctor() { }
+
+	// RVA: 0x37075E8 Offset: 0x37035E8 VA: 0x37075E8
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: InterApp
+public class InstagramAppInfo : BaseAppInfo // TypeDefIndex: 930
+{
+	// Properties
+	public override string[] URLSchemes_iOS { get; }
+	public override string[] BundleIdentifiers_Android { get; }
+
+	// Methods
+
+	// RVA: 0x3707654 Offset: 0x3703654 VA: 0x3707654 Slot: 4
+	public override string[] get_URLSchemes_iOS() { }
+
+	// RVA: 0x3707710 Offset: 0x3703710 VA: 0x3707710 Slot: 7
+	public override string[] get_BundleIdentifiers_Android() { }
+
+	// RVA: 0x3707798 Offset: 0x3703798 VA: 0x3707798 Slot: 10
+	public override bool CanShareText() { }
+
+	// RVA: 0x3707818 Offset: 0x3703818 VA: 0x3707818 Slot: 11
+	public override void ShareText(string text) { }
+
+	// RVA: 0x3707A4C Offset: 0x3703A4C VA: 0x3707A4C Slot: 12
+	public override bool CanShareImage() { }
+
+	// RVA: 0x3707ACC Offset: 0x3703ACC VA: 0x3707ACC Slot: 13
+	public override void ShareImage(string filePath) { }
+
+	// RVA: 0x3707D0C Offset: 0x3703D0C VA: 0x3707D0C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: InterApp
+public class InterAppAction // TypeDefIndex: 931
+{
+	// Fields
+	public string Action; // 0xB5A4A3A9
+	public Dictionary<string, string> Parameters; // 0xB99CFFBD
+	public string Fragment; // 0xA3A4B8B7
+
+	// Methods
+
+	// RVA: 0x3707D64 Offset: 0x3703D64 VA: 0x3707D64
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class InterAppActionType.ActDelegate : MulticastDelegate // TypeDefIndex: 932
+{
+	// Methods
+
+	// RVA: 0x3707FBC Offset: 0x3703FBC VA: 0x3707FBC
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x37080C4 Offset: 0x37040C4 VA: 0x37080C4 Slot: 13
+	public virtual void Invoke(InterAppAction action) { }
+
+	// RVA: 0x37080D8 Offset: 0x37040D8 VA: 0x37080D8 Slot: 14
+	public virtual IAsyncResult BeginInvoke(InterAppAction action, AsyncCallback callback, object object) { }
+
+	// RVA: 0x37080F8 Offset: 0x37040F8 VA: 0x37080F8 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: InterApp
+public class InterAppActionType // TypeDefIndex: 933
+{
+	// Fields
+	public string Action; // 0xA5B4BF9D
+	public string[] Parameters; // 0xFCF6B5BC
+	public string[] OptionalParameters; // 0xA4B9BE85
+	public ActDelegate Act; // 0xB7BE95A9
+	public bool NeedCheckVersion; // 0xFEB5BEB9
+
+	// Methods
+
+	// RVA: 0x3707D6C Offset: 0x3703D6C VA: 0x3707D6C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class InterAppUtility.LogDelegate : MulticastDelegate // TypeDefIndex: 934
+{
+	// Methods
+
+	// RVA: 0x3708A58 Offset: 0x3704A58 VA: 0x3708A58
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x3708B08 Offset: 0x3704B08 VA: 0x3708B08 Slot: 13
+	public virtual void Invoke(string log) { }
+
+	// RVA: 0x3708B1C Offset: 0x3704B1C VA: 0x3708B1C Slot: 14
+	public virtual IAsyncResult BeginInvoke(string log, AsyncCallback callback, object object) { }
+
+	// RVA: 0x3708B3C Offset: 0x3704B3C VA: 0x3708B3C Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: InterApp
+public static class InterAppUtility // TypeDefIndex: 935
+{
+	// Fields
+	public static LogDelegate OnLog; // 0xA4A2B180
+	public static Dictionary<int, BaseAppInfo> appInfos; // 0xB5BCB3B9
+
+	// Properties
+	public static string[] LSApplicationQueriesSchemes { get; }
+
+	// Methods
+
+	// RVA: 0x3708104 Offset: 0x3704104 VA: 0x3708104
+	public static BaseAppInfo Info(InterAppName name) { }
+
+	// RVA: 0x3708218 Offset: 0x3704218 VA: 0x3708218
+	public static string[] get_LSApplicationQueriesSchemes() { }
+
+	// RVA: 0x3707984 Offset: 0x3703984 VA: 0x3707984
+	public static void Log(string log) { }
+
+	// RVA: 0x370853C Offset: 0x370453C VA: 0x370853C
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: InterApp
+public enum InterAppName // TypeDefIndex: 936
+{
+	// Fields
+	public int value__; // 0xA4A3A983
+	public const InterAppName None = 0;
+	public const InterAppName Line = 1;
+	public const InterAppName Facebook = 2;
+	public const InterAppName Instagram = 3;
+	public const InterAppName WhatsApp = 4;
+	public const InterAppName TikTok = 5;
+	public const InterAppName Discord = 6;
+	public const InterAppName Twitter = 7;
+	public const InterAppName VKontakte = 8;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: InterApp
+public class LineAppInfo : BaseAppInfo // TypeDefIndex: 937
+{
+	// Fields
+	public static readonly string URL_SCHEME; // 0xA3A983B5
+	private const string ANDROID_PACKAGE_NAME = "jp.naver.line.android";
+	private const string ANDROID_SEND_TO_ACTIVITY_NAME = "com.linecorp.line.share.common.view.FullPickerLaunchActivity";
+
+	// Properties
+	public override string[] URLSchemes_iOS { get; }
+	public override string URLScheme_Android { get; }
+	public override string[] BundleIdentifiers_Android { get; }
+
+	// Methods
+
+	// RVA: 0x3708B48 Offset: 0x3704B48 VA: 0x3708B48 Slot: 4
+	public override string[] get_URLSchemes_iOS() { }
+
+	// RVA: 0x3708BEC Offset: 0x3704BEC VA: 0x3708BEC Slot: 5
+	public override string get_URLScheme_Android() { }
+
+	// RVA: 0x3708C44 Offset: 0x3704C44 VA: 0x3708C44 Slot: 7
+	public override string[] get_BundleIdentifiers_Android() { }
+
+	// RVA: 0x3708CCC Offset: 0x3704CCC VA: 0x3708CCC Slot: 10
+	public override bool CanShareText() { }
+
+	// RVA: 0x3708DB8 Offset: 0x3704DB8 VA: 0x3708DB8 Slot: 11
+	public override void ShareText(string text) { }
+
+	// RVA: 0x3709028 Offset: 0x3705028 VA: 0x3709028 Slot: 12
+	public override bool CanShareImage() { }
+
+	// RVA: 0x370904C Offset: 0x370504C VA: 0x370904C Slot: 13
+	public override void ShareImage(string filePath) { }
+
+	// RVA: 0x37087FC Offset: 0x37047FC VA: 0x37087FC
+	public void .ctor() { }
+
+	// RVA: 0x3709240 Offset: 0x3705240 VA: 0x3709240
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class OpenedByUrlProcessor.WillProcessDelegate : MulticastDelegate // TypeDefIndex: 938
+{
+	// Methods
+
+	// RVA: 0x370A4AC Offset: 0x37064AC VA: 0x370A4AC
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x370A55C Offset: 0x370655C VA: 0x370A55C Slot: 13
+	public virtual bool Invoke(string url) { }
+
+	// RVA: 0x370A570 Offset: 0x3706570 VA: 0x370A570 Slot: 14
+	public virtual IAsyncResult BeginInvoke(string url, AsyncCallback callback, object object) { }
+
+	// RVA: 0x370A590 Offset: 0x3706590 VA: 0x370A590 Slot: 15
+	public virtual bool EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class OpenedByUrlProcessor.ProcessDelegate : MulticastDelegate // TypeDefIndex: 939
+{
+	// Methods
+
+	// RVA: 0x370A65C Offset: 0x370665C VA: 0x370A65C
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x370A70C Offset: 0x370670C VA: 0x370A70C Slot: 13
+	public virtual void Invoke(string url) { }
+
+	// RVA: 0x370A720 Offset: 0x3706720 VA: 0x370A720 Slot: 14
+	public virtual IAsyncResult BeginInvoke(string url, AsyncCallback callback, object object) { }
+
+	// RVA: 0x370A740 Offset: 0x3706740 VA: 0x370A740 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class OpenedByUrlProcessor.CheckVersionDelegate : MulticastDelegate // TypeDefIndex: 940
+{
+	// Methods
+
+	// RVA: 0x370A9D8 Offset: 0x37069D8 VA: 0x370A9D8
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x370AAE4 Offset: 0x3706AE4 VA: 0x370AAE4 Slot: 13
+	public virtual bool Invoke(InterAppActionType actionType, InterAppAction action) { }
+
+	// RVA: 0x370AAF8 Offset: 0x3706AF8 VA: 0x370AAF8 Slot: 14
+	public virtual IAsyncResult BeginInvoke(InterAppActionType actionType, InterAppAction action, AsyncCallback callback, object object) { }
+
+	// RVA: 0x370AB20 Offset: 0x3706B20 VA: 0x370AB20 Slot: 15
+	public virtual bool EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: InterApp
+[DefaultMember("Item")]
+public class OpenedByUrlProcessor // TypeDefIndex: 941
+{
+	// Fields
+	public WillProcessDelegate WillProcessFallback; // 0xB4BF9DBC
+	public ProcessDelegate ProcessFallback; // 0xEAB5BCA5
+	public CheckVersionDelegate CheckClientVersion; // 0xA4B5B7EA
+	public Action CheckVersionFallback; // 0xB5B9B48F
+	public const string STRING_VERSION = "version";
+	public string ClientVersion; // 0xA4A2B180
+	private string _Url; // 0xB5BCB3B9
+	private string _ActionKey; // 0xBE998FA3
+	private Dictionary<string, InterAppActionType> _ActionToType; // 0xA4B3B5BA
+	private static readonly char[] PARAMETER_PAIR_SEPARATOR; // 0x85F8B4B5
+	private static readonly char[] PARAMETER_KEY_VALUE_SEPARATOR; // 0xA9A4B9BE
+
+	// Properties
+	public string Url { get; }
+	public string ActionKey { get; }
+	public InterAppActionType Item { get; set; }
+
+	// Methods
+
+	// RVA: 0x37092AC Offset: 0x37052AC VA: 0x37092AC
+	public string get_Url() { }
+
+	// RVA: 0x37092B4 Offset: 0x37052B4 VA: 0x37092B4
+	public string get_ActionKey() { }
+
+	// RVA: 0x37092BC Offset: 0x37052BC VA: 0x37092BC
+	public void .ctor(string url, string actionKey) { }
+
+	// RVA: 0x37093C0 Offset: 0x37053C0 VA: 0x37093C0
+	public InterAppActionType get_Item(string action) { }
+
+	// RVA: 0x3709454 Offset: 0x3705454 VA: 0x3709454
+	public void set_Item(string action, InterAppActionType value) { }
+
+	// RVA: 0x37094BC Offset: 0x37054BC VA: 0x37094BC
+	public string Prepare(string url, string action, Dictionary<string, string> parameters, bool isDeepLink = false) { }
+
+	// RVA: 0x3709CF8 Offset: 0x3705CF8 VA: 0x3709CF8
+	private bool ExtractParameters(string url, out InterAppActionType actionType, out InterAppAction action) { }
+
+	// RVA: 0x370A11C Offset: 0x370611C VA: 0x370A11C
+	public bool WillProcess(string url) { }
+
+	// RVA: 0x370A1C0 Offset: 0x37061C0 VA: 0x370A1C0
+	public void Process(string url) { }
+
+	// RVA: 0x370A23C Offset: 0x370623C VA: 0x370A23C
+	public InterAppAction PeekInterAppAction(string url) { }
+
+	// RVA: 0x370A328 Offset: 0x3706328 VA: 0x370A328
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: InterApp
+[DefaultMember("Item")]
+public class OpenedByUrlProcessorManager // TypeDefIndex: 942
+{
+	// Fields
+	private static OpenedByUrlProcessorManager _I; // 0xB9B7BE95
+	private static readonly char[] URL_STRIP_SEPARATOR; // 0x80FEB5BE
+	private Dictionary<string, OpenedByUrlProcessor> _UriToProcessor; // 0xB9A4A2B1
+
+	// Properties
+	public static OpenedByUrlProcessorManager I { get; }
+	public OpenedByUrlProcessor Item { get; set; }
+
+	// Methods
+
+	// RVA: 0x370AB48 Offset: 0x3706B48 VA: 0x370AB48
+	private void .ctor() { }
+
+	// RVA: 0x370ABD0 Offset: 0x3706BD0 VA: 0x370ABD0
+	public static OpenedByUrlProcessorManager get_I() { }
+
+	// RVA: 0x3709C30 Offset: 0x3705C30 VA: 0x3709C30
+	public static string UrlStrip(string uri) { }
+
+	// RVA: 0x370AC80 Offset: 0x3706C80 VA: 0x370AC80
+	public OpenedByUrlProcessor get_Item(string uri) { }
+
+	// RVA: 0x370AD54 Offset: 0x3706D54 VA: 0x370AD54
+	public void set_Item(string uri, OpenedByUrlProcessor value) { }
+
+	// RVA: 0x370ADEC Offset: 0x3706DEC VA: 0x370ADEC
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class OpenedWithParamsDelegate.OpenedWithParams // TypeDefIndex: 943
+{
+	// Fields
+	public string DeepLinkUrl; // 0x83B5BCB3
+	public string WebViewUrl; // 0xB5A4A3A9
+	public string WebViewStyle; // 0xA284FFBD
+	public string BrowserUrl; // 0x9DBCB9B1
+	public Dictionary<string, string> Extras; // 0xBCA5B4BF
+
+	// Methods
+
+	// RVA: 0x370B0D8 Offset: 0x37070D8 VA: 0x370B0D8
+	public bool HasValue() { }
+
+	// RVA: 0x370B0C8 Offset: 0x37070C8 VA: 0x370B0C8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: InterApp
+public class OpenedWithParamsDelegate // TypeDefIndex: 944
+{
+	// Methods
+
+	// RVA: 0x370AEA0 Offset: 0x3706EA0 VA: 0x370AEA0
+	protected static bool Has(Dictionary<string, string> parameters, string key) { }
+
+	// RVA: 0x370AF48 Offset: 0x3706F48 VA: 0x370AF48
+	protected static string _(string v) { }
+
+	// RVA: 0x370B00C Offset: 0x370700C VA: 0x370B00C Slot: 4
+	public virtual OpenedWith OverrideOpenedWith(OpenedWith ow) { }
+
+	// RVA: 0x370B068 Offset: 0x3707068 VA: 0x370B068 Slot: 5
+	public virtual void Processed(OpenedWithParams openedWithParams) { }
+
+	// RVA: 0x370B06C Offset: 0x370706C VA: 0x370B06C Slot: 6
+	public virtual bool CanProcess(Dictionary<string, string> parameters) { }
+
+	// RVA: 0x370B074 Offset: 0x3707074 VA: 0x370B074 Slot: 7
+	public virtual OpenedWithParams Process(Dictionary<string, string> parameters) { }
+
+	// RVA: 0x370B0D0 Offset: 0x37070D0 VA: 0x370B0D0
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum OpenedWithParamsProcessor.EnumProcessStatus // TypeDefIndex: 945
+{
+	// Fields
+	public int value__; // 0xD0F9F6B5
+	public const EnumProcessStatus None = 0;
+	public const EnumProcessStatus Queued = 1;
+	public const EnumProcessStatus Done = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public interface OpenedWithParamsProcessor.ISpontaneousMessageHandler // TypeDefIndex: 946
+{
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract void OnSpontaneousMessage(Dictionary<string, string> msg, bool isSilent);
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: InterApp
+public static class OpenedWithParamsProcessor // TypeDefIndex: 947
+{
+	// Fields
+	private static EnumProcessStatus _ProcessStatus; // 0xA4A2B180
+	private static List<OpenedWithParamsDelegate> _Delegates; // 0xB5BCB3B9
+	private static List<ISpontaneousMessageHandler> _SpontaneousMessageHandlers; // 0xA4A3A983
+
+	// Properties
+	public static EnumProcessStatus ProcessStatus { get; set; }
+	public static List<OpenedWithParamsDelegate> Delegates { get; }
+
+	// Methods
+
+	// RVA: 0x370B124 Offset: 0x3707124 VA: 0x370B124
+	public static EnumProcessStatus get_ProcessStatus() { }
+
+	// RVA: 0x370B17C Offset: 0x370717C VA: 0x370B17C
+	private static void set_ProcessStatus(EnumProcessStatus value) { }
+
+	// RVA: 0x370B1D8 Offset: 0x37071D8 VA: 0x370B1D8
+	public static List<OpenedWithParamsDelegate> get_Delegates() { }
+
+	// RVA: 0x370B230 Offset: 0x3707230 VA: 0x370B230
+	public static void AddDelegate(OpenedWithParamsDelegate d) { }
+
+	// RVA: 0x370B340 Offset: 0x3707340 VA: 0x370B340
+	public static bool HasDelegate(OpenedWithParamsDelegate d) { }
+
+	// RVA: 0x370B3C0 Offset: 0x37073C0 VA: 0x370B3C0
+	public static void RemoveDelegate(OpenedWithParamsDelegate d) { }
+
+	// RVA: 0x370B468 Offset: 0x3707468 VA: 0x370B468
+	public static OpenedWithParams Process(Dictionary<string, string> parameters) { }
+
+	// RVA: 0x370B664 Offset: 0x3707664 VA: 0x370B664
+	public static void Processed(OpenedWithParams openedWithParams) { }
+
+	// RVA: 0x370B7E8 Offset: 0x37077E8 VA: 0x370B7E8
+	public static void OnProcessingQueued() { }
+
+	// RVA: 0x370B874 Offset: 0x3707874 VA: 0x370B874
+	public static void OnProcessingDone() { }
+
+	// RVA: 0x370B900 Offset: 0x3707900 VA: 0x370B900
+	public static void RegisterSpontaneousMessageHandler(ISpontaneousMessageHandler handler) { }
+
+	// RVA: 0x370BA38 Offset: 0x3707A38 VA: 0x370BA38
+	public static void UnregisterSpontaneousMessageHandler(ISpontaneousMessageHandler handler) { }
+
+	// RVA: 0x370BB0C Offset: 0x3707B0C VA: 0x370BB0C
+	public static void TriggerSpontaneousMessage(Dictionary<string, string> msg, bool isSilent) { }
+
+	// RVA: 0x370BD0C Offset: 0x3707D0C VA: 0x370BD0C
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class TikTokAppInfo.<>c__DisplayClass9_0 // TypeDefIndex: 948
+{
+	// Fields
+	public Action<int, string> callback; // 0xB582BDB5
+
+	// Methods
+
+	// RVA: 0x370C11C Offset: 0x370811C VA: 0x370C11C
+	public void .ctor() { }
+
+	// RVA: 0x370C190 Offset: 0x3708190 VA: 0x370C190
+	internal void <ShareVideo>b__0(int code, string _msg) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class TikTokAppInfo.<>c__DisplayClass9_1 // TypeDefIndex: 949
+{
+	// Fields
+	public int code; // 0xA2B5B4BE
+	public string _msg; // 0xEAEAA2B5
+	public <>c__DisplayClass9_0 CS$<>8__locals1; // 0x8FA4B5B7
+
+	// Methods
+
+	// RVA: 0x370C2A8 Offset: 0x37082A8 VA: 0x370C2A8
+	public void .ctor() { }
+
+	// RVA: 0x370C2B0 Offset: 0x37082B0 VA: 0x370C2B0
+	internal void <ShareVideo>b__1() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: InterApp
+public class TikTokAppInfo : BaseAppInfo // TypeDefIndex: 950
+{
+	// Fields
+	public static readonly string URL_SCHEME; // 0xB8A3B5BD
+
+	// Properties
+	public override string[] URLSchemes_iOS { get; }
+	public override string URLScheme_Android { get; }
+	public override string[] BundleIdentifiers_Android { get; }
+
+	// Methods
+
+	// RVA: 0x370BE00 Offset: 0x3707E00 VA: 0x370BE00 Slot: 4
+	public override string[] get_URLSchemes_iOS() { }
+
+	// RVA: 0x370BEBC Offset: 0x3707EBC VA: 0x370BEBC Slot: 5
+	public override string get_URLScheme_Android() { }
+
+	// RVA: 0x370BF14 Offset: 0x3707F14 VA: 0x370BF14 Slot: 7
+	public override string[] get_BundleIdentifiers_Android() { }
+
+	// RVA: 0x370BFD0 Offset: 0x3707FD0 VA: 0x370BFD0 Slot: 9
+	public override bool CanLaunch() { }
+
+	// RVA: 0x370C030 Offset: 0x3708030 VA: 0x370C030 Slot: 14
+	public override bool CanShareVideo() { }
+
+	// RVA: 0x370C054 Offset: 0x3708054 VA: 0x370C054 Slot: 15
+	public override void ShareVideo(string identifier, Action<int, string> callback) { }
+
+	// RVA: 0x37088AC Offset: 0x37048AC VA: 0x37088AC
+	public void .ctor() { }
+
+	// RVA: 0x370C124 Offset: 0x3708124 VA: 0x370C124
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: InterApp
+public class TwitterAppInfo : BaseAppInfo // TypeDefIndex: 951
+{
+	// Properties
+	public override string[] URLSchemes_iOS { get; }
+	public override string[] BundleIdentifiers_Android { get; }
+
+	// Methods
+
+	// RVA: 0x370C2E4 Offset: 0x37082E4 VA: 0x370C2E4 Slot: 4
+	public override string[] get_URLSchemes_iOS() { }
+
+	// RVA: 0x370C3A0 Offset: 0x37083A0 VA: 0x370C3A0 Slot: 7
+	public override string[] get_BundleIdentifiers_Android() { }
+
+	// RVA: 0x370C428 Offset: 0x3708428 VA: 0x370C428 Slot: 14
+	public override bool CanShareVideo() { }
+
+	// RVA: 0x370C430 Offset: 0x3708430 VA: 0x370C430 Slot: 12
+	public override bool CanShareImage() { }
+
+	// RVA: 0x370C438 Offset: 0x3708438 VA: 0x370C438 Slot: 10
+	public override bool CanShareText() { }
+
+	// RVA: 0x3708904 Offset: 0x3704904 VA: 0x3708904
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: InterApp
+public class VKontakteAppInfo : BaseAppInfo // TypeDefIndex: 952
+{
+	// Properties
+	public override string[] URLSchemes_iOS { get; }
+	public override string[] BundleIdentifiers_Android { get; }
+
+	// Methods
+
+	// RVA: 0x370C440 Offset: 0x3708440 VA: 0x370C440 Slot: 4
+	public override string[] get_URLSchemes_iOS() { }
+
+	// RVA: 0x370C4C8 Offset: 0x37084C8 VA: 0x370C4C8 Slot: 7
+	public override string[] get_BundleIdentifiers_Android() { }
+
+	// RVA: 0x370C550 Offset: 0x3708550 VA: 0x370C550 Slot: 8
+	public override bool OAuthRequiresAndroidSystemWebView() { }
+
+	// RVA: 0x370C580 Offset: 0x3708580 VA: 0x370C580 Slot: 12
+	public override bool CanShareImage() { }
+
+	// RVA: 0x370C5E4 Offset: 0x37085E4 VA: 0x370C5E4 Slot: 10
+	public override bool CanShareText() { }
+
+	// RVA: 0x370C648 Offset: 0x3708648 VA: 0x370C648 Slot: 14
+	public override bool CanShareVideo() { }
+
+	// RVA: 0x370895C Offset: 0x370495C VA: 0x370895C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: InterApp
+public class WhatsAppAppInfo : BaseAppInfo // TypeDefIndex: 953
+{
+	// Properties
+	public override string[] URLSchemes_iOS { get; }
+	public override string[] BundleIdentifiers_Android { get; }
+
+	// Methods
+
+	// RVA: 0x370C650 Offset: 0x3708650 VA: 0x370C650 Slot: 4
+	public override string[] get_URLSchemes_iOS() { }
+
+	// RVA: 0x370C6D8 Offset: 0x37086D8 VA: 0x370C6D8 Slot: 7
+	public override string[] get_BundleIdentifiers_Android() { }
+
+	// RVA: 0x370C760 Offset: 0x3708760 VA: 0x370C760 Slot: 10
+	public override bool CanShareText() { }
+
+	// RVA: 0x370C784 Offset: 0x3708784 VA: 0x370C784 Slot: 11
+	public override void ShareText(string text) { }
+
+	// RVA: 0x370C8F0 Offset: 0x37088F0 VA: 0x370C8F0 Slot: 12
+	public override bool CanShareImage() { }
+
+	// RVA: 0x370C914 Offset: 0x3708914 VA: 0x370C914 Slot: 13
+	public override void ShareImage(string filePath) { }
+
+	// RVA: 0x3708854 Offset: 0x3704854 VA: 0x3708854
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: DecalAtlas
+public class DecalGroup : MonoBehaviour // TypeDefIndex: 954
+{
+	// Fields
+	[SerializeField]
+	protected DecalManager DecalManager; // 0xA4A3B994
+	[HideInInspector]
+	public Texture2D MainTexAtlas; // 0xA5B2B9A2
+	[HideInInspector]
+	public List<Vector4> RectList; // 0xBEBFB9A4
+	[HideInInspector]
+	[SerializeField]
+	public int Granularities; // 0x85D0F9F8
+	[SerializeField]
+	[HideInInspector]
+	public GranularityGrids PersistGridData; // 0xA9A4B9BE
+	[SerializeField]
+	[HideInInspector]
+	protected Vector2[] PersistDecalPositions; // 0xB9B7BE95
+	protected MeshRenderer _MeshRenderer; // 0x80FEB5BE
+	protected MeshFilter _MeshFilter; // 0xB9A4A2B1
+	protected Mesh m_mesh; // 0x83B5BCB3
+	public Material m_mat; // 0xB5A4A3A9
+	protected int m_layerMask; // 0xBEB582BD
+	protected MaterialPropertyBlock m_matBlock; // 0xB5A2B5B4
+	[SerializeField]
+	public float m_visiblePercent; // 0xA3EAEAA2
+	protected bool m_partVisible; // 0xBD8FA4B5
+
+	// Methods
+
+	// RVA: 0x370CAB4 Offset: 0x3708AB4 VA: 0x370CAB4 Slot: 4
+	protected virtual void Start() { }
+
+	// RVA: 0x370CBCC Offset: 0x3708BCC VA: 0x370CBCC Slot: 5
+	protected virtual void UpdateDecalMesh(int swapDataIndex) { }
+
+	// RVA: 0x370CC04 Offset: 0x3708C04 VA: 0x370CC04 Slot: 6
+	public virtual void DrawDecalMesh() { }
+
+	// RVA: 0x370CC3C Offset: 0x3708C3C VA: 0x370CC3C
+	public void UpdateDecals() { }
+
+	// RVA: 0x370CE60 Offset: 0x3708E60 VA: 0x370CE60
+	private bool _UpdateGridCellVisibilityCheckEach(int swapDataIndex, ref GranularityDatum granularityDatum, ref GridForGranularity granularityGrid) { }
+
+	// RVA: 0x370CD94 Offset: 0x3708D94 VA: 0x370CD94
+	private bool _UpdateGridCellVisibility(int swapDataIndex, ref GranularityDatum granularityDatum, ref GridForGranularity granularityGrid) { }
+
+	// RVA: 0x370D618 Offset: 0x3709618 VA: 0x370D618
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: DecalAtlas
+public class DecalManager : MonoBehaviour // TypeDefIndex: 955
+{
+	// Fields
+	[SerializeField]
+	public Rect TerrainRect; // 0xB180BEB9
+	[HideInInspector]
+	[SerializeField]
+	public GranularityDatum[] GranularityData; // 0xB3B9A4A2
+	[SerializeField]
+	public ProjectionDecalGroup[] ProjectionDecalGroups; // 0xB983B5BC
+	[SerializeField]
+	public QuadDecalGroup[] QuadDecalGroups; // 0x83F8B5AA
+	public Dictionary<int, DecalDatum> EditorData; // 0xB5A4A3A9
+	private int _SwapDataIndex; // 0xB983FEBD
+	public Vector2[] CameraTriangles; // 0xB5BCB7BE
+	public Camera _Camera; // 0xBE85D0F9
+	private Vector3 cameraPosition; // 0x95A9A4B9
+	private Vector2 cameraForward; // 0xBEB9B7BE
+	private float halfHorizontalCos; // 0xB180FEB5
+	private Vector3 _LastCameraForward; // 0xB3B9A4A2
+	private Vector3 _LastCameraPosition; // 0xA983B5BC
+	private readonly Vector3 _midDown; // 0xBDB5A4A3
+	private readonly List<Vector2> _3Points; // 0xB4BEB582
+	private readonly List<Vector2> _4Points; // 0xA2B5A2B5
+	private List<Vector2> _Points; // 0xB5A3EAEA
+	private Vector3 cameraForward3D; // 0xB1BD8FA4
+	[HideInInspector]
+	public bool camLookingDown; // 0xBE99BBA3
+	private bool camLookingBack; // 0xB1A2B5A4
+	private float leftRightScale; // 0xBFB9A4B3
+	private int distanceIndex; // 0xBE85F8BE
+
+	// Properties
+	public int SwapDataIndex { get; }
+
+	// Methods
+
+	// RVA: 0x370D628 Offset: 0x3709628 VA: 0x370D628
+	public int get_SwapDataIndex() { }
+
+	// RVA: 0x370D630 Offset: 0x3709630 VA: 0x370D630
+	private void Start() { }
+
+	// RVA: 0x370DAF0 Offset: 0x3709AF0 VA: 0x370DAF0
+	private void LateUpdate() { }
+
+	// RVA: 0x370DDC8 Offset: 0x3709DC8 VA: 0x370DDC8
+	private void _UpdateCameraData() { }
+
+	// RVA: 0x370E4E4 Offset: 0x370A4E4 VA: 0x370E4E4
+	public void _UpdateCellVisiblity() { }
+
+	// RVA: 0x370EF70 Offset: 0x370AF70 VA: 0x370EF70
+	private void SortByCamDistance(ref List<Vector2Int> cells, int mid, Vector2Int camCoord) { }
+
+	// RVA: 0x370F0F8 Offset: 0x370B0F8 VA: 0x370F0F8
+	private int DistanceSqr(Vector2Int p0, Vector2Int p1) { }
+
+	// RVA: 0x370D1D8 Offset: 0x37091D8 VA: 0x370D1D8
+	public bool IsInTrapezoid(ref Vector2 position, ref Vector2 v0, ref Vector2 v1, ref Vector2 v2, ref Vector2 v3) { }
+
+	// RVA: 0x370D0D0 Offset: 0x37090D0 VA: 0x370D0D0
+	public bool IsGOVisible(Vector2 point) { }
+
+	// RVA: 0x370F114 Offset: 0x370B114 VA: 0x370F114
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: DecalAtlas
+public enum DecalType // TypeDefIndex: 956
+{
+	// Fields
+	public int value__; // 0x95A9A4B9
+	public const DecalType Quad = 0;
+	public const DecalType Projection = 1;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: DecalAtlas
+public enum EGranularity // TypeDefIndex: 957
+{
+	// Fields
+	public int value__; // 0xB5A4B9A2
+	public const EGranularity Small = 0;
+	public const EGranularity Large = 1;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: DecalAtlas
+public class DecalDatum // TypeDefIndex: 958
+{
+	// Fields
+	public GameObject Prefab; // 0xA4B3B1A2
+	public Material Material; // 0xF9BEBFB9
+
+	// Methods
+
+	// RVA: 0x370F6E8 Offset: 0x370B6E8 VA: 0x370F6E8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: DecalAtlas
+[Serializable]
+public class GranularityDatum // TypeDefIndex: 959
+{
+	// Fields
+	[SerializeField]
+	public int Granularity; // 0xB9BE85D0
+	[SerializeField]
+	public float[] DistanceByQuality; // 0xBE95A9A4
+	[SerializeField]
+	public float GridSize; // 0xB5BEB9B7
+	[SerializeField]
+	public bool Enabled; // 0xA2B180FE
+	[SerializeField]
+	public bool[] CellExistances; // 0xBCB3B9A4
+	public int[] CellsNeedUpdate; // 0xA3A983B5
+	public List<Vector2Int> VisibleCells; // 0x82BDB5A4
+	public byte[][] CellVisibleCorners; // 0xB5B4BEB5
+	public Vector2Int CellsXZ; // 0xEAA2B5A2
+	public Vector2 CameraLeft; // 0xA4B583EA
+	public Vector2 CameraRight; // 0xB8A3B59D
+
+	// Methods
+
+	// RVA: 0x370F6F0 Offset: 0x370B6F0 VA: 0x370F6F0
+	public void .ctor(int granularity, float size, float[] distanceByQuality) { }
+
+	// RVA: 0x370DACC Offset: 0x3709ACC VA: 0x370DACC
+	public static int DistanceIndexForQuality(MNMBLBKENMK quality) { }
+
+	// RVA: 0x370D87C Offset: 0x370987C VA: 0x370D87C
+	public void Load(Rect terrainRect) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: DecalAtlas
+[Serializable]
+public class GridCell // TypeDefIndex: 960
+{
+	// Fields
+	[SerializeField]
+	public int Index; // 0x85F8A3B5
+	[SerializeField]
+	public int[] PersistDecals; // 0xA9A4B9BE
+	public bool[,] RuntimeDecalVisibilities; // 0xB9B7BE95
+
+	// Methods
+
+	// RVA: 0x370F738 Offset: 0x370B738 VA: 0x370F738
+	public void Load() { }
+
+	// RVA: 0x370F7EC Offset: 0x370B7EC VA: 0x370F7EC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: DecalAtlas
+[Serializable]
+public class GridForGranularity // TypeDefIndex: 961
+{
+	// Fields
+	[SerializeField]
+	public int Granularity; // 0x9DFEB5BE
+	[SerializeField]
+	public int NumberOfCells; // 0x8BB8A3B5
+	[SerializeField]
+	private GridCell[] _PersistCells; // 0xA983FC8D
+	public GridCell[] RuntimeCells; // 0xBDB5A4A3
+	public Dictionary<int, int> IndexMap; // 0xA4BE99FE
+
+	// Methods
+
+	// RVA: 0x370F7F4 Offset: 0x370B7F4 VA: 0x370F7F4
+	public void Load() { }
+
+	// RVA: 0x370F97C Offset: 0x370B97C VA: 0x370F97C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: DecalAtlas
+[Serializable]
+public class GranularityGrids // TypeDefIndex: 962
+{
+	// Fields
+	[SerializeField]
+	public int Granularities; // 0xD0F9E2E3
+	[SerializeField]
+	private GridForGranularity[] _PersistGrids; // 0xA4B9BE85
+	[HideInInspector]
+	public GridForGranularity[] RuntimeGrids; // 0xB7BE95A9
+
+	// Methods
+
+	// RVA: 0x370CACC Offset: 0x3708ACC VA: 0x370CACC
+	public void Load() { }
+
+	// RVA: 0x370F984 Offset: 0x370B984 VA: 0x370F984
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: DecalAtlas
+public static class DecalUtility // TypeDefIndex: 963
+{
+	// Fields
+	public static int maxDecalsInCell; // 0xFEB5BEB9
+	private static int _arraySize; // 0xA4A2B180
+	private static byte[,] _array2D; // 0xB5BCB3B9
+	private static byte _fillInNum; // 0xA4A3A983
+	public static readonly Dictionary<int, GranularityDatum> DefaultGranularityData; // 0xB582BDB5
+	public static readonly Dictionary<int, string> GranumlaritySuffix; // 0xA2B5B4BE
+
+	// Methods
+
+	// RVA: 0x370F98C Offset: 0x370B98C VA: 0x370F98C
+	private static void SetSize(int size) { }
+
+	// RVA: 0x370D7D8 Offset: 0x37097D8 VA: 0x370D7D8
+	public static void Init(int size) { }
+
+	// RVA: 0x370FA50 Offset: 0x370BA50 VA: 0x370FA50
+	private static void CalculateLineCells(Vector2 p0, Vector2 p1, int step) { }
+
+	// RVA: 0x370ED54 Offset: 0x370AD54 VA: 0x370ED54
+	public static byte[,] CalculateCellVisiblity(List<Vector2> points, Vector2Int Offset, int gridSize, int xSize, int zSize) { }
+
+	// RVA: 0x370FE5C Offset: 0x370BE5C VA: 0x370FE5C
+	private static void FillInside(int xSize, int zSize) { }
+
+	// RVA: 0x3710110 Offset: 0x370C110 VA: 0x3710110
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: DecalAtlas
+[Extension]
+internal static class VectorExtension // TypeDefIndex: 964
+{
+	// Fields
+	private static Vector2Int result; // 0xEAEAA2B5
+
+	// Methods
+
+	[Extension]
+	// RVA: 0x37D7D30 Offset: 0x37D3D30 VA: 0x37D7D30
+	public static Vector2Int Floor(Vector2 vector2) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class ProjectionDecalGroup.DecalData // TypeDefIndex: 965
+{
+	// Fields
+	[SerializeField]
+	public Vector4[] MainTexRects; // 0x8FA4B5A3
+	[SerializeField]
+	public Matrix4x4[] TransformLocalToWorlds; // 0xBFA6B9A0
+	[SerializeField]
+	public Vector4[] RendererWorldToLocalRows; // 0xBE998FA4
+
+	// Methods
+
+	// RVA: 0x37D8DD4 Offset: 0x37D4DD4 VA: 0x37D8DD4
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: DecalAtlas
+public class ProjectionDecalGroup : DecalGroup // TypeDefIndex: 966
+{
+	// Fields
+	private static readonly Vector4[] VERTICES; // 0xA4B3B5BA
+	private static readonly int[] TRIANGLES; // 0x85F8B4B5
+	private List<Vector3> _RuntimeMeshVertices; // 0xA9A4B9BE
+	private List<int> _RuntimeMeshTriangles; // 0xB9B7BE95
+	private List<Vector4> _RuntimeMainTexRects; // 0x86FEB5BE
+	private List<Vector4> _RuntimeWorldToLocalRow0; // 0xBFA4B3B5
+	private List<Vector4> _RuntimeWorldToLocalRow1; // 0xF9F6E3A2
+	private List<Vector4> _RuntimeWorldToLocalRow2; // 0xB9BE85D0
+	[SerializeField]
+	public DecalData PersistDecals; // 0xBE95A9A4
+
+	// Methods
+
+	// RVA: 0x37D7E60 Offset: 0x37D3E60 VA: 0x37D7E60 Slot: 4
+	protected override void Start() { }
+
+	// RVA: 0x37D8358 Offset: 0x37D4358 VA: 0x37D8358 Slot: 6
+	public override void DrawDecalMesh() { }
+
+	// RVA: 0x37D835C Offset: 0x37D435C VA: 0x37D835C Slot: 5
+	protected override void UpdateDecalMesh(int swapDataIndex) { }
+
+	// RVA: 0x37D8C54 Offset: 0x37D4C54 VA: 0x37D8C54
+	public void .ctor() { }
+
+	// RVA: 0x37D8C5C Offset: 0x37D4C5C VA: 0x37D8C5C
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: DecalAtlas
+public class QuadDecalGroup : DecalGroup // TypeDefIndex: 967
+{
+	// Fields
+	private static readonly Vector4[] VERTICES; // 0xB5BEB9B7
+	private static readonly Vector4 Normal; // 0xA9B880FE
+	private static readonly Vector2[] UVS; // 0xA3B3B9A3
+	private static readonly int[] TRIANGLES; // 0xA581EAEA
+	public List<int> RectIndexes; // 0x8FA9A2B5
+	private List<Vector3> _RuntimeMeshVertices; // 0xA3A0B193
+	private List<Vector3> _RuntimeMeshNormals; // 0x93B5BCA5
+	private List<int> _RuntimeMeshTriangles; // 0x95A4A3B1
+	private List<Vector2> _RuntimeMainTexUVs; // 0xB1A2A4A8
+	[SerializeField]
+	private List<Vector2> _UVArray; // 0xBBA3B19D
+	[SerializeField]
+	private List<Vector3> _NormalArray; // 0x8FBCBC91
+	[SerializeField]
+	private List<Vector3> _VerticesArray; // 0xB5BABE99
+	private int decalNumLimit; // 0xB4B5A4B3
+	private readonly Vector3 farPos; // 0xB9BE85F8
+
+	// Methods
+
+	// RVA: 0x37D8DDC Offset: 0x37D4DDC VA: 0x37D8DDC Slot: 4
+	protected override void Start() { }
+
+	// RVA: 0x37D8FF4 Offset: 0x37D4FF4 VA: 0x37D8FF4
+	private void InitRuntimeContainer() { }
+
+	// RVA: 0x37D9610 Offset: 0x37D5610 VA: 0x37D9610 Slot: 5
+	protected override void UpdateDecalMesh(int swapDataIndex) { }
+
+	// RVA: 0x37D9ED0 Offset: 0x37D5ED0 VA: 0x37D9ED0 Slot: 6
+	public override void DrawDecalMesh() { }
+
+	// RVA: 0x37D9674 Offset: 0x37D5674 VA: 0x37D9674
+	private void UpdateMesh(int swapDataIndex) { }
+
+	// RVA: 0x37DA02C Offset: 0x37D602C VA: 0x37DA02C
+	public void .ctor() { }
+
+	// RVA: 0x37DA044 Offset: 0x37D6044 VA: 0x37DA044
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class AudioSourceExtension.<Pause>d__2 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 968
+{
+	// Fields
+	private int <>1__state; // 0xBE95A9A4
+	private object <>2__current; // 0xB5BEB9B7
+	public AudioSource source; // 0xA9B880FE
+	public float fadeTime; // 0xA3B3B9A3
+	public Action onFadeEnd; // 0xBEB5B383
+	private float <initialVolume>5__2; // 0x85FCF6B5
+	private float <elapsedTime>5__3; // 0xA9A4B9BE
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x37DA4D0 Offset: 0x37D64D0 VA: 0x37DA4D0
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHidden]
+	// RVA: 0x37DA660 Offset: 0x37D6660 VA: 0x37DA660 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x37DA664 Offset: 0x37D6664 VA: 0x37DA664 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x37DA800 Offset: 0x37D6800 VA: 0x37DA800 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x37DA808 Offset: 0x37D6808 VA: 0x37DA808 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x37DA840 Offset: 0x37D6840 VA: 0x37DA840 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class AudioSourceExtension.<Play>d__0 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 969
+{
+	// Fields
+	private int <>1__state; // 0xB9B7BE95
+	private object <>2__current; // 0x86FEB5BE
+	public AudioSource source; // 0xBFA4B3B5
+	public float fadeTime; // 0xFCF6E3A2
+	public Action onFadeEnd; // 0xA4B9BE85
+	private float <targetVolume>5__2; // 0xB7BE95A9
+	private float <elapsedTime>5__3; // 0xFEB5BEB9
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x37DA350 Offset: 0x37D6350 VA: 0x37DA350
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHidden]
+	// RVA: 0x37DA848 Offset: 0x37D6848 VA: 0x37DA848 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x37DA84C Offset: 0x37D684C VA: 0x37DA84C Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x37DAA08 Offset: 0x37D6A08 VA: 0x37DAA08 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x37DAA10 Offset: 0x37D6A10 VA: 0x37DAA10 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x37DAA48 Offset: 0x37D6A48 VA: 0x37DAA48 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class AudioSourceExtension.<Resume>d__3 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 970
+{
+	// Fields
+	private int <>1__state; // 0xA4B3B586
+	private object <>2__current; // 0xF6E3A2BF
+	public AudioSource source; // 0xA3A983FC
+	public float fadeTime; // 0xFEBDB5A4
+	public Action onFadeEnd; // 0xB7BEB983
+	private float <targetVolume>5__2; // 0x85FCB5BC
+	private float <elapsedTime>5__3; // 0xA9A4B9BE
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x37DA590 Offset: 0x37D6590 VA: 0x37DA590
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHidden]
+	// RVA: 0x37DAA50 Offset: 0x37D6A50 VA: 0x37DAA50 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x37DAA54 Offset: 0x37D6A54 VA: 0x37DAA54 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x37DAC20 Offset: 0x37D6C20 VA: 0x37DAC20 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x37DAC28 Offset: 0x37D6C28 VA: 0x37DAC28 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x37DAC60 Offset: 0x37D6C60 VA: 0x37DAC60 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class AudioSourceExtension.<SetVolume>d__4 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 971
+{
+	// Fields
+	private int <>1__state; // 0xB9B7BE95
+	private object <>2__current; // 0x86FEB5BE
+	public AudioSource source; // 0xBFA4B3B5
+	public float targetVolume; // 0xFCF6E3A2
+	public float fadeTime; // 0xA4A3A983
+	private float <sourceVolume>5__2; // 0x83FEBDB5
+	private float <elapsedTime>5__3; // 0xBCB7BEB9
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x37DA638 Offset: 0x37D6638 VA: 0x37DA638
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHidden]
+	// RVA: 0x37DAC68 Offset: 0x37D6C68 VA: 0x37DAC68 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x37DAC6C Offset: 0x37D6C6C VA: 0x37DAC6C Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x37DADE0 Offset: 0x37D6DE0 VA: 0x37DADE0 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x37DADE8 Offset: 0x37D6DE8 VA: 0x37DADE8 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x37DAE20 Offset: 0x37D6E20 VA: 0x37DAE20 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class AudioSourceExtension.<Stop>d__1 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 972
+{
+	// Fields
+	private int <>1__state; // 0xA983FCB5
+	private object <>2__current; // 0xBDB5A4A3
+	public AudioSource source; // 0xA4BE99FE
+	public float fadeTime; // 0x85FCE2E3
+	public Action onFadeEnd; // 0xA9A4B9BE
+	private float <initialVolume>5__2; // 0xB9B7BE95
+	private float <elapsedTime>5__3; // 0x81FEB5BE
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x37DA410 Offset: 0x37D6410 VA: 0x37DA410
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHidden]
+	// RVA: 0x37DAE28 Offset: 0x37D6E28 VA: 0x37DAE28 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x37DAE2C Offset: 0x37D6E2C VA: 0x37DAE2C Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x37DAFC8 Offset: 0x37D6FC8 VA: 0x37DAFC8 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x37DAFD0 Offset: 0x37D6FD0 VA: 0x37DAFD0 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x37DB008 Offset: 0x37D7008 VA: 0x37DB008 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: GAudio.Core
+[Extension]
+public static class AudioSourceExtension // TypeDefIndex: 973
+{
+	// Methods
+
+	[Extension]
+	[IteratorStateMachine(typeof(<Play>d__0))]
+	// RVA: 0x37DA2B8 Offset: 0x37D62B8 VA: 0x37DA2B8
+	public static IEnumerator Play(AudioSource source, float fadeTime, Action onFadeEnd) { }
+
+	[Extension]
+	[IteratorStateMachine(typeof(<Stop>d__1))]
+	// RVA: 0x37DA378 Offset: 0x37D6378 VA: 0x37DA378
+	public static IEnumerator Stop(AudioSource source, float fadeTime, Action onFadeEnd) { }
+
+	[IteratorStateMachine(typeof(<Pause>d__2))]
+	[Extension]
+	// RVA: 0x37DA438 Offset: 0x37D6438 VA: 0x37DA438
+	public static IEnumerator Pause(AudioSource source, float fadeTime, Action onFadeEnd) { }
+
+	[Extension]
+	[IteratorStateMachine(typeof(<Resume>d__3))]
+	// RVA: 0x37DA4F8 Offset: 0x37D64F8 VA: 0x37DA4F8
+	public static IEnumerator Resume(AudioSource source, float fadeTime, Action onFadeEnd) { }
+
+	[Extension]
+	[IteratorStateMachine(typeof(<SetVolume>d__4))]
+	// RVA: 0x37DA5B8 Offset: 0x37D65B8 VA: 0x37DA5B8
+	public static IEnumerator SetVolume(AudioSource source, float targetVolume, float fadeTime) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: GAudio.Tools
+public enum AudioObjectType // TypeDefIndex: 974
+{
+	// Fields
+	public int value__; // 0xA9A2B5A5
+	public const AudioObjectType Sound = 0;
+	public const AudioObjectType Music = 1;
+	public const AudioObjectType Voice = 2;
+	public const AudioObjectType AudioClip = 3;
+	public const AudioObjectType Snapshot = 4;
+	public const AudioObjectType WwiseEvent = 5;
+	public const AudioObjectType SoundBank = 6;
+	public const AudioObjectType Switch = 7;
+	public const AudioObjectType State = 8;
+	public const AudioObjectType Parameter = 9;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: GAudio.Tools
+public enum AudioLogVerbosity // TypeDefIndex: 975
+{
+	// Fields
+	public int value__; // 0xB9A2B5A4
+	public const AudioLogVerbosity Log = 0;
+	public const AudioLogVerbosity Warning = 1;
+	public const AudioLogVerbosity Error = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: GAudio.Tools
+public enum AudioAction // TypeDefIndex: 976
+{
+	// Fields
+	public int value__; // 0xA296B3B9
+	public const AudioAction Play = 0;
+	public const AudioAction Stop = 1;
+	public const AudioAction Break = 2;
+	public const AudioAction Pause = 3;
+	public const AudioAction Resume = 4;
+	public const AudioAction Mute = 5;
+	public const AudioAction Unmute = 6;
+	public const AudioAction Seek = 7;
+	public const AudioAction Virtualize = 8;
+	public const AudioAction Load = 9;
+	public const AudioAction LoadAsync = 10;
+	public const AudioAction Unload = 11;
+	public const AudioAction SetValue = 12;
+	public const AudioAction TransitionEnter = 13;
+	public const AudioAction TransitionExit = 14;
+	public const AudioAction Intro = 15;
+	public const AudioAction Loop = 16;
+	public const AudioAction Tail = 17;
+	public const AudioAction End = 18;
+	public const AudioAction Activate = 19;
+	public const AudioAction Deactivate = 20;
+	public const AudioAction Queue = 21;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: GAudio.Tools
+public struct AudioLogMessage // TypeDefIndex: 977
+{
+	// Fields
+	public AudioLogVerbosity AudioLogVerbosity; // 0xA4B9BE85
+	public string Time; // 0xB7BE95A9
+	public EAudioEngineType Engine; // 0xFEB5BEB9
+	public AudioObjectType ObjectType; // 0xB9B7B982
+	public AudioAction Action; // 0xB4BFB2B4
+	public string ObjectName; // 0xA3EAEAA9
+	public Object Context; // 0xA28FA4B5
+	public string ContextName; // 0xA4B1A4BF
+	public string Message; // 0x8FBEBFB9
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: GAudio.Tools
+public static class AudioDebugHelper // TypeDefIndex: 978
+{
+	// Fields
+	public static Action<AudioLogMessage> ConsoleCallback; // 0xB5BABE99
+	private static Dictionary<GameObject, string> m_DisplayNameMap; // 0xB4B5A4B3
+
+	// Properties
+	public static bool ShouldLog { get; }
+
+	// Methods
+
+	// RVA: 0x37DB1E8 Offset: 0x37D71E8 VA: 0x37DB1E8
+	public static bool get_ShouldLog() { }
+
+	// RVA: 0x37DB1F0 Offset: 0x37D71F0 VA: 0x37DB1F0
+	public static void LogAudioClip(AudioAction action, AudioClip clip, string message = "") { }
+
+	// RVA: 0x37DB370 Offset: 0x37D7370 VA: 0x37DB370
+	public static void LogMultiSound(AudioAction action, ResourceID soundID, bool result) { }
+
+	// RVA: 0x37DB400 Offset: 0x37D7400 VA: 0x37DB400
+	public static void LogSound(AudioAction action, ResourceID soundID, GameObject emitter, uint playingID = 0, PlaySoundResult result = 0) { }
+
+	// RVA: 0x37DB51C Offset: 0x37D751C VA: 0x37DB51C
+	public static void LogMusic(AudioAction action, AudioResource musicRes, string message = "") { }
+
+	// RVA: 0x37DB5C0 Offset: 0x37D75C0 VA: 0x37DB5C0
+	public static void LogVoice(AudioAction action, ResourceID voiceID, GameObject emitter, string message = "") { }
+
+	// RVA: 0x37DB644 Offset: 0x37D7644 VA: 0x37DB644
+	public static void LogState(string stateGroupName, string stateName, EAudioEngineType engine) { }
+
+	// RVA: 0x37DB6D4 Offset: 0x37D76D4 VA: 0x37DB6D4
+	public static void LogSwitch(string switchGroupName, string switchName, GameObject target, EAudioEngineType engine) { }
+
+	// RVA: 0x37DB764 Offset: 0x37D7764 VA: 0x37DB764
+	public static void LogParameter(string paramName, float value) { }
+
+	// RVA: 0x37DB828 Offset: 0x37D7828 VA: 0x37DB828
+	public static void LogSnapshot(AudioAction action, AudioMixerSnapshot snapshot) { }
+
+	// RVA: 0x37DB2B0 Offset: 0x37D72B0 VA: 0x37DB2B0
+	private static void AddLogEntry(AudioLogVerbosity verbosity, EAudioEngineType engine, AudioObjectType objectType, AudioAction action, string objectName, Object context, string message = "") { }
+
+	// RVA: 0x37DB898 Offset: 0x37D7898 VA: 0x37DB898
+	public static void RegisterDisplayedName(GameObject gameObject, string name) { }
+
+	// RVA: 0x37DB928 Offset: 0x37D7928 VA: 0x37DB928
+	public static string GetDisplayedName(GameObject gameObject) { }
+
+	// RVA: 0x37DB9D8 Offset: 0x37D79D8 VA: 0x37DB9D8
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class Streamer.AOPMCCBHKOI : MulticastDelegate // TypeDefIndex: 979
+{
+	// Methods
+
+	// RVA: 0x37EE180 Offset: 0x37EA180 VA: 0x37EE180
+	public void .ctor(object ENDAIDEJNJA, IntPtr FFBLHHKFPDN) { }
+
+	// RVA: 0x37EE28C Offset: 0x37EA28C VA: 0x37EE28C Slot: 13
+	public virtual void Invoke(Texture KEGGGBNKLKE, ref int JHLFKPBBKBO) { }
+
+	// RVA: 0x37EE2A0 Offset: 0x37EA2A0 VA: 0x37EE2A0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(Texture KEGGGBNKLKE, ref int JHLFKPBBKBO, AsyncCallback CEHELPAIELA, object ENDAIDEJNJA) { }
+
+	// RVA: 0x37EE334 Offset: 0x37EA334 VA: 0x37EE334 Slot: 15
+	public virtual void EndInvoke(ref int JHLFKPBBKBO, IAsyncResult EMANEBGLLJG) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+private enum Streamer.LHMBKBCJKJO // TypeDefIndex: 980
+{
+	// Fields
+	public int value__; // 0xB9BE85F8
+	public const LHMBKBCJKJO Type_None = 0;
+	public const LHMBKBCJKJO Type_MaxScene = 1;
+	public const LHMBKBCJKJO Type_FreeMemory = 2;
+	public const LHMBKBCJKJO Type_UsedMemory = 4;
+	public const LHMBKBCJKJO Type_MaxWaitTime = 8;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class Streamer.KACBNGLGMLC // TypeDefIndex: 981
+{
+	// Fields
+	public ABSceneGOInfo NCKNOJMNMML; // 0xBE85D0F9
+
+	// Methods
+
+	// RVA: 0x37E9B10 Offset: 0x37E5B10 VA: 0x37E9B10
+	public void .ctor() { }
+
+	// RVA: 0x37EE350 Offset: 0x37EA350 VA: 0x37EE350
+	internal bool EHCPOPKEMIM(ABSceneGOInfo KBNDOLHOEHC) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class Streamer.CNPGNNJBJHN // TypeDefIndex: 982
+{
+	// Fields
+	public ABSceneGOInfo POKDIECMBHE; // 0x95A9A4B9
+
+	// Methods
+
+	// RVA: 0x37E9BB4 Offset: 0x37E5BB4 VA: 0x37E9BB4
+	public void .ctor() { }
+
+	// RVA: 0x37EE364 Offset: 0x37EA364 VA: 0x37EE364
+	internal bool CEMACHGLICB(ABSceneGOInfo KBNDOLHOEHC) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class Streamer.CHBEENIIFNO // TypeDefIndex: 983
+{
+	// Fields
+	public int AGCFICOBJJJ; // 0xBEB9B7BE
+
+	// Methods
+
+	// RVA: 0x37E9BBC Offset: 0x37E5BBC VA: 0x37E9BBC
+	public void .ctor() { }
+
+	// RVA: 0x37EE378 Offset: 0x37EA378 VA: 0x37EE378
+	internal bool IPJCPCBBHMI(int CEFDLHBDPHO) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class Streamer.LFDPNGBPGDE : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 984
+{
+	// Fields
+	private int CBPPJACCGOH; // 0xB893FEB5
+	private object MHDKFGLHFKH; // 0xB3B1A2B1
+	public Streamer KOKNHFGCGLN; // 0x93A2B5A4
+	public SceneSplit EDMGLIKOPNJ; // 0xA2A4BEBF
+	private string KIMNHOBEMIF; // 0xB5BCBCBF
+	private ABSceneInfo BMBAHBJILIP; // 0xB7EAEAA2
+	private List<ABSceneGOInfo> CFNGCEOICEH; // 0xA38FA4B5
+	private AssetBundleRequest ONEOMLPAHOC; // 0xB5A0BFBC
+	private int NABCALOLFKK; // 0xB9BDB99C
+	private ABSceneGOInfo HFJDAFOKKEI; // 0xD0F9F8A4
+	private int GHPIENHFNOJ; // 0xA4B9BE85
+	private int BOJLLCMPLHE; // 0xB7BE95A9
+	private GameObject ODKOLDDJGLP; // 0xFEB5BEB9
+	private bool CODGHALHOPL; // 0xA2B1B893
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x37E28C8 Offset: 0x37DE8C8 VA: 0x37E28C8
+	public void .ctor(int CBPPJACCGOH) { }
+
+	[DebuggerHidden]
+	// RVA: 0x37EE388 Offset: 0x37EA388 VA: 0x37EE388 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x37EE38C Offset: 0x37EA38C VA: 0x37EE38C Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x37EF980 Offset: 0x37EB980 VA: 0x37EF980 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x37EF988 Offset: 0x37EB988 VA: 0x37EF988 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x37EF9C0 Offset: 0x37EB9C0 VA: 0x37EF9C0 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class Streamer.PPONKGJBAJH : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 985
+{
+	// Fields
+	private int CBPPJACCGOH; // 0xB5A4B3B1
+	private object MHDKFGLHFKH; // 0xBEBF93A2
+	public Streamer KOKNHFGCGLN; // 0xBCBFA2A4
+	public SceneSplit EDMGLIKOPNJ; // 0xEAA2B5BC
+	private string KIMNHOBEMIF; // 0xA4B5B7EA
+	private int HNKLFKBFALA; // 0xB1BEB58F
+	private ABSceneInfo DMCEMKEIHCD; // 0x9FB5BCB2
+	private bool OFOLIMDLBNJ; // 0xBCA2B5A6
+	private string LGHGNACJHOC; // 0xB582A0B1
+	private List<ABSceneGOInfo> OHGFKBNBDFF; // 0xB5A6BFB3
+	private List<CFIJFGBBLON> MLHINLCIIID; // 0xF9F8A9A2
+	private List<CMJDPFKEJDI> MECAICDIENO; // 0xB9BE85D0
+	private int EDGEBEBMGCJ; // 0xBE95A9A4
+	private ABSceneGOInfo FBEBOOMOGHH; // 0xB5BEB9B7
+	private int CGCLAPDNMCJ; // 0xA2A083FE
+	private int LCPJMKNDFNJ; // 0x9DB5A4B9
+	private GameObject ILIJPLKPJIK; // 0xEABBA3B1
+	private bool FKCPOBAJIPD; // 0xA4B5B7EA
+	private StreamPrefabSource HMDAMKFNKJE; // 0xA2A0A38F
+	private AssetBundleRequest MDCLOMGFFIH; // 0xF8B5A4B9
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x38C4690 Offset: 0x38C0690 VA: 0x38C4690
+	public void .ctor(int CBPPJACCGOH) { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C46B8 Offset: 0x38C06B8 VA: 0x38C46B8 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x38C46BC Offset: 0x38C06BC VA: 0x38C46BC Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C62B8 Offset: 0x38C22B8 VA: 0x38C62B8 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C62C0 Offset: 0x38C22C0 VA: 0x38C62C0 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C62F8 Offset: 0x38C22F8 VA: 0x38C62F8 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class Streamer.PPBMJNJGLHL : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 986
+{
+	// Fields
+	private int CBPPJACCGOH; // 0xBE85D0F9
+	private object MHDKFGLHFKH; // 0x95A9A4B9
+	public SceneSplit EDMGLIKOPNJ; // 0xBEB9B7BE
+	public Streamer KOKNHFGCGLN; // 0xB584FEB5
+	private string KIMNHOBEMIF; // 0xB9B1A2A2
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x38C6300 Offset: 0x38C2300 VA: 0x38C6300
+	public void .ctor(int CBPPJACCGOH) { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C6328 Offset: 0x38C2328 VA: 0x38C6328 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x38C632C Offset: 0x38C232C VA: 0x38C632C Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C6C6C Offset: 0x38C2C6C VA: 0x38C6C6C Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C6C74 Offset: 0x38C2C74 VA: 0x38C6C74 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C6CAC Offset: 0x38C2CAC VA: 0x38C6CAC Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class Streamer.PBHDGMODPNL : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 987
+{
+	// Fields
+	private int CBPPJACCGOH; // 0x83EAEABE
+	private object MHDKFGLHFKH; // 0xB59EA4B5
+	public AssetBundle BHBLBJFIPHD; // 0xB2B8B7B9
+	public string JFGDOLJIJPJ; // 0xF8A3A2BF
+	public Streamer KOKNHFGCGLN; // 0xA4B9BE85
+	public ABSceneInfo CAAFLDLGPJF; // 0xB7BE95A9
+	public Action<GameObject, int, StreamPrefabSource, int> AIBJFJIGEFM; // 0xFEB5BEB9
+	public int CIMIFKBPPOM; // 0xA2A2B584
+	public StreamPrefabSource HJCANOGMANP; // 0xFCBEB9B1
+	public int BLMHBKAEIHF; // 0xA4B9BE85
+	private AssetBundleRequest LGHHFGDOHNF; // 0xB7BE95A9
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x38C6CB4 Offset: 0x38C2CB4 VA: 0x38C6CB4
+	public void .ctor(int CBPPJACCGOH) { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C6CDC Offset: 0x38C2CDC VA: 0x38C6CDC Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x38C6CE0 Offset: 0x38C2CE0 VA: 0x38C6CE0 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C7084 Offset: 0x38C3084 VA: 0x38C7084 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C708C Offset: 0x38C308C VA: 0x38C708C Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C70C4 Offset: 0x38C30C4 VA: 0x38C70C4 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class Streamer.OCFECLBFEAF : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 988
+{
+	// Fields
+	private int CBPPJACCGOH; // 0xFEB5BEB9
+	private object MHDKFGLHFKH; // 0xA2A2B584
+	public string LEBOJCAHGEM; // 0xFCBEB9B1
+	public AssetBundle JIACECIJLGO; // 0xA4B9BE85
+	public Transform GJDLFMIFHMG; // 0xB7BE95A9
+	private AssetBundleRequest LGHHFGDOHNF; // 0xFEB5BEB9
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x38C70CC Offset: 0x38C30CC VA: 0x38C70CC
+	public void .ctor(int CBPPJACCGOH) { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C70F4 Offset: 0x38C30F4 VA: 0x38C70F4 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x38C70F8 Offset: 0x38C30F8 VA: 0x38C70F8 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C757C Offset: 0x38C357C VA: 0x38C757C Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C7584 Offset: 0x38C3584 VA: 0x38C7584 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C75BC Offset: 0x38C35BC VA: 0x38C75BC Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class Streamer.LMIBNGANMHL : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 989
+{
+	// Fields
+	private int CBPPJACCGOH; // 0xA2A2B584
+	private object MHDKFGLHFKH; // 0xFCBEB9B1
+	public List<string> PDMECBBIAEK; // 0xA4B9BE85
+	public AssetBundle JIACECIJLGO; // 0xB7BE95A9
+	public Transform GJDLFMIFHMG; // 0xFEB5BEB9
+	private Material[] PBONGFJJFCL; // 0xA2A2B584
+	private int EBMHPHMFLKA; // 0xF9BEB9B1
+	private string KFLFACLJPLH; // 0xB9BE85D0
+	private AssetBundleRequest ONEOMLPAHOC; // 0xBE95A9A4
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x38C75C4 Offset: 0x38C35C4 VA: 0x38C75C4
+	public void .ctor(int CBPPJACCGOH) { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C75EC Offset: 0x38C35EC VA: 0x38C75EC Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x38C75F0 Offset: 0x38C35F0 VA: 0x38C75F0 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C7A84 Offset: 0x38C3A84 VA: 0x38C7A84 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C7A8C Offset: 0x38C3A8C VA: 0x38C7A8C Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C7AC4 Offset: 0x38C3AC4 VA: 0x38C7AC4 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class Streamer.DIAKGFOOPKA : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 990
+{
+	// Fields
+	private int CBPPJACCGOH; // 0xB5BEB9B7
+	private object MHDKFGLHFKH; // 0xA8B584FE
+	public string GKKJOIBECJN; // 0xA3B59DA4
+	public AssetBundle JIACECIJLGO; // 0xA3EAEAB8
+	public Transform GJDLFMIFHMG; // 0xB68FA4B5
+	private AssetBundleRequest LGHHFGDOHNF; // 0xF8A4BEBF
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x38C7ACC Offset: 0x38C3ACC VA: 0x38C7ACC
+	public void .ctor(int CBPPJACCGOH) { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C7AF4 Offset: 0x38C3AF4 VA: 0x38C7AF4 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x38C7AF8 Offset: 0x38C3AF8 VA: 0x38C7AF8 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C7E78 Offset: 0x38C3E78 VA: 0x38C7E78 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C7E80 Offset: 0x38C3E80 VA: 0x38C7E80 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C7EB8 Offset: 0x38C3EB8 VA: 0x38C7EB8 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class Streamer.MOBFMPNPNLB : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 991
+{
+	// Fields
+	private int CBPPJACCGOH; // 0xA4B9BE85
+	private object MHDKFGLHFKH; // 0xB7BE95A9
+	public string KGKBAPBGOBE; // 0xFEB5BEB9
+	public AssetBundle BHBLBJFIPHD; // 0xA4BEBF96
+	public Streamer KOKNHFGCGLN; // 0xBE85D0F9
+	public Transform GJDLFMIFHMG; // 0x95A9A4B9
+	private bool KBHKLJNLNPJ; // 0xBEB9B7BE
+	private AssetBundleRequest LGJGACDNDHA; // 0xBF96FEB5
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x38C7EC0 Offset: 0x38C3EC0 VA: 0x38C7EC0
+	public void .ctor(int CBPPJACCGOH) { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C7EE8 Offset: 0x38C3EE8 VA: 0x38C7EE8 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x38C7EEC Offset: 0x38C3EEC VA: 0x38C7EEC Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C8554 Offset: 0x38C4554 VA: 0x38C8554 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C855C Offset: 0x38C455C VA: 0x38C855C Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C8594 Offset: 0x38C4594 VA: 0x38C8594 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class Streamer.GHJJNPKECHA : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 992
+{
+	// Fields
+	private int CBPPJACCGOH; // 0xEAEAA4BE
+	private object MHDKFGLHFKH; // 0xB5A4BE99
+	public Streamer KOKNHFGCGLN; // 0xBCB1BEA2
+	private List<SceneSplit> ELODPOJPJIL; // 0xB5A2938F
+	private int EHKOKJALFNO; // 0x94B5A4B1
+	private Enumerator<SceneSplit> NOJNNNFMDMP; // 0xBDB1BEA9
+	private SceneSplit OMFIMPHDPCK; // 0xBF96B3B9
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x38C859C Offset: 0x38C459C VA: 0x38C859C
+	public void .ctor(int CBPPJACCGOH) { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C85C4 Offset: 0x38C45C4 VA: 0x38C85C4 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x38C85E0 Offset: 0x38C45E0 VA: 0x38C85E0 Slot: 6
+	private bool MoveNext() { }
+
+	// RVA: 0x38C9CF4 Offset: 0x38C5CF4 VA: 0x38C9CF4
+	private void FCCDBLLBMAO() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C9D44 Offset: 0x38C5D44 VA: 0x38C9D44 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C9D4C Offset: 0x38C5D4C VA: 0x38C9D4C Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C9D84 Offset: 0x38C5D84 VA: 0x38C9D84 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class Streamer.DEADHCBAGBJ : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 993
+{
+	// Fields
+	private int CBPPJACCGOH; // 0x85F8A4BE
+	private object MHDKFGLHFKH; // 0xA9A4B9BE
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x38C9D8C Offset: 0x38C5D8C VA: 0x38C9D8C
+	public void .ctor(int CBPPJACCGOH) { }
+
+	[DebuggerHidden]
+	// RVA: 0x38C9DB4 Offset: 0x38C5DB4 VA: 0x38C9DB4 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x38C9DB8 Offset: 0x38C5DB8 VA: 0x38C9DB8 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38CA1CC Offset: 0x38C61CC VA: 0x38CA1CC Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38CA1D4 Offset: 0x38C61D4 VA: 0x38CA1D4 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38CA20C Offset: 0x38C620C VA: 0x38CA20C Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: WorldStreamer
+[HelpURL("")]
+public class Streamer : MonoBehaviour, IPreviewLayer // TypeDefIndex: 994
+{
+	// Fields
+	[Tooltip("This checkbox deactivates streamer and unload or doesn't load it's data.")]
+	public bool streamerActive; // 0xB9B7BE95
+	public static string STREAMERTAG; // 0x96FEB5BE
+	[Tooltip("Drag and drop here your scene collection prefab. You could find it in catalogue with scenes which were generated by scene splitter.")]
+	[Header("Scene Collection")]
+	public SceneCollection sceneCollection; // 0xFCA4BEBF
+	public SceneSplit[] splits; // 0xA4A3A983
+	[Tooltip("Distance in grid elements that you want hold loaded.")]
+	[Header("Ranges")]
+	public Vector3 loadingRange; // 0x83FEBDB5
+	[Tooltip("Enables ring streaming.")]
+	public bool useLoadingRangeMin; // 0xBEB9A2A4
+	[Tooltip("Area that you want to cutout from loading range.")]
+	public Vector3 loadingRangeMin; // 0xFC8D8BB7
+	[Tooltip("Distance in grid elements after which you want to unload assets.")]
+	public Vector3 deloadingRange; // 0xA4A3A983
+	[Tooltip("Load under a certain height")]
+	public float loadingMaxY; // 0x99FEBDB5
+	[Tooltip("Frequancy in seconds in which you want to check if grid element is close /far enough to load/unload.")]
+	[Header("Settings")]
+	public float positionCheckTime; // 0xE2E3A4BE
+	[Tooltip("Time in seconds after which grid element will be unloaded.")]
+	public float destroyTileDelay; // 0xBE85D0F9
+	[Tooltip("Amount of max grid elements that you want to start loading in one frame.")]
+	public int maxParallelSceneLoading; // 0x95A9A4B9
+	[Tooltip("Number of empty frames between loading actions.")]
+	public int sceneLoadWaitFrames; // 0xBEB9B7BE
+	[Tooltip("Preview Layer will deactive gameobject if gameobjects of identical name in other layers loaded.")]
+	public bool isPreviewLayer; // 0xBF89FEB5
+	[Space(10)]
+	[Tooltip("Enable looping system, each layer is streamed independently, so if you want to synchronize them, they should have the same XYZ size. More info at manual.")]
+	public bool looping; // 0x9EFEB1B7
+	[Header("Player Settings")]
+	[Tooltip("Drag and drop here, an object that system have to follow during streaming process.")]
+	[Space(10)]
+	public Transform player; // 0xA6B9A4B1
+	[Tooltip("Streamer will wait for player spawn and fill it automatically")]
+	public bool spawnedPlayer; // 0x89EAEAB5
+	[HideInInspector]
+	public string playerTag; // 0xB4BF9E97
+	[HideInInspector]
+	public bool showLoadingScreen; // 0xA4B583B5
+	[HideInInspector]
+	public bool initialized; // 0x9EA3B198
+	[HideInInspector]
+	public int tilesToLoad; // 0xB19CA7B5
+	[HideInInspector]
+	public int tilesLoaded; // 0xA4A5BFA9
+	[HideInInspector]
+	public Vector3 currentMove; // 0xA3A983F8
+	public Vector3 currentRange; // 0xFEBDB5A4
+	public Vector3 currentRangeEntity; // 0x80A4BE99
+	private int EFBLNGHNFJP; // 0x83FCA2A4
+	private int ENDJLCPNKDG; // 0xB5A4A3A9
+	private int LAEAPELLFHL; // 0xBF92FEBD
+	private int KILENLOAABC; // 0xB1B5BCBF
+	private int IGFABAJLEJG; // 0x85D0F9BE
+	private int JELIPOMMLME; // 0xA9A4B9BE
+	public Dictionary<int[], SceneSplit> scenesArray; // 0xB9B7BE95
+	[HideInInspector]
+	public List<SceneSplit> loadedScenes; // 0x89FEB5BE
+	private int AENKLCMPLOO; // 0xFEB1B7BF
+	private List<SceneSplit> FMPDOIJFEGG; // 0xB9A4B19E
+	private int NMCFBCPPOLE; // 0xEAEAB5A6
+	private bool ICOPFDJPELD; // 0xBF9E9789
+	private int NCKJDMOCHKN; // 0xB597B5B4
+	private int IBBDOEAJEDI; // 0xA3B198A4
+	private int NEFBDGJNMIP; // 0x9CA7B59E
+	private int KGJIBIPIGBO; // 0xA5BFA9B1
+	private int NMCCJFAHCDF; // 0xA983F8A4
+	private int NFCGHGKOFDK; // 0xBDB5A4A3
+	private int IJNIFPACNGG; // 0xA4BE99FE
+	private int DJLDHNNMFMD; // 0xF9A2A480
+	private int PNNAMOKIPIG; // 0xB9BE85D0
+	private bool DFAIPICABOH; // 0xBE95A9A4
+	private string OIBFKMFALIJ; // 0xB5BEB9B7
+	private bool LLDCLAPECKM; // 0xB7BF89FE
+	private Vector3 HNIHLEOOAAJ; // 0xB19EFEB1
+	private const float JGNKLMNENHG = 100;
+	public static bool skipPreviewShrink; // 0x9789EAEA
+	private static bool CJDIFMHGFDO; // 0xB5B4BF9E
+	public static float waitTillNextUnload; // 0xBFA9B19C
+	private static bool CGNNGLFPPHJ; // 0xB597A4A5
+	private static float CFMELBHDEMA; // 0xB4B180A4
+	public static Streamer defaultLayer; // 0xB7BEB9B4
+	public static IPreviewLayer previewerLayer; // 0xA3A983F8
+	public static IPreviewLayer nonstreamPreviewLayer; // 0xFEBDB5A4
+	private Dictionary<string, GameObject> GHNMPOOKOMB; // 0x80A4BE99
+	private Dictionary<string, int> BKIMNALNFJK; // 0x85FCA2A4
+	private Dictionary<int, ABSceneInfo> OIBAMPPOJFB; // 0xA9A4B9BE
+	private Dictionary<int, ABSceneGOInfo> IEHNHJKIECL; // 0xB9B7BE95
+	private Dictionary<int, SharedSceneObjectRecord> HAJJKKCKCOO; // 0x89FEB5BE
+	private static Dictionary<int, ABScenePrefabRef> MJDLNJMONDF; // 0xFEB1B7BF
+	private static Dictionary<int, ABScenePrefabMeshInfo> NGKNJFCGHHI; // 0xB1B7BF89
+	private static Dictionary<int, ABSceneMeshRef> BDOMCHDHLBG; // 0xB5B7B495
+	private static List<string> MOOJDPDPJIJ; // 0xB193D0F9
+	private static AssetBundle EPJOOMGPANG; // 0xA4BFBEBE
+	private SceneStreamerInfoHelper OEJNFAHOKGN; // 0xA2B1BDF0
+	private GameObject AMAINHMIGOG; // 0xBCB1B8A3
+	private GameObject BACLBCCLCDA; // 0xB5B9B6F0
+	private static List<int> PDPLFIPELIE; // 0xF7F0B4BC
+	private static List<int> GPMECFJKABL; // 0xF7B3A2A3
+	private static bool AODMPGJLMLP; // 0xF0B6BFF0
+	private static List<List<short>> EIMLHLKLNPO; // 0xB5A0A9A4
+	private static List<ABSceneMatRef> OEANJFABAMG; // 0xBC92F7F0
+	private static Dictionary<short, ABSceneTexRef> BHLHDMALMMH; // 0xBE99A4B9
+	private static List<short> IJBKANMLEMI; // 0xEAF7BFB6
+	private static List<short> BNEEDNOBDEH; // 0xB6B582F0
+	public AOPMCCBHKOI m_ABTextureRefIncreaseCallBack; // 0xBEB5A2B5
+	public List<string> destoryedSceneList; // 0xA4F0B5B3
+	public static bool useNewUnloadType; // 0xF0B5A0A9
+	public static int unloadType; // 0xBCB5B9B6
+	public static int unloadMaxDestoryScene; // 0xB1BDF0B4
+	public static int unloadMaxFreeMemory; // 0xB1B8A3A2
+	public static int unloadProcessMemory; // 0xB7BEB9BC
+	public static float unloadProcessMemFreq; // 0xF0A3B9F0
+	private float DLDMMGGKFIC; // 0xF0A4BFBE
+	private bool APODKAMNKHD; // 0xA0A0A5A3
+	public static int unloadMaxUsedMemory; // 0xB5A4A2BF
+	public static float unloadMaxWaitTime; // 0x93D0FEB4
+	public static float unloadMaxFreeMemFreq; // 0xBFBEBEB1
+	private float AAAFAKDAJNN; // 0xB1BDF0A4
+	private float NDKJHPKBIBK; // 0xB1B8A3A2
+	public static int unloadUnsedCount; // 0xB9B6F0BC
+	private static int AONFOGMFBNM; // 0xF0B4BCB5
+	private static bool OGDKFKAKKON; // 0x838FBDF7
+	public static bool TryFixCurrentSceneLoading; // 0xB5BCA9A4
+	public static bool needUpdate; // 0xA5BCB186
+	public static bool abSceneUnloadMesh; // 0xF0F7A3B5
+	public static bool abSceneUnloadTexture; // 0xA4F0B6BF
+	private int[] NMLPOKEKCDJ; // 0xF0B5A0A9
+	private int[] PGIPFGLJIAA; // 0xA9A483F7
+	private List<GameObject> POJOEODNODB; // 0xB186B5BC
+	public StreamerType streamerType; // 0xA3B5A5BC
+	private LStreamer LEFLCFEIEIN; // 0x82F0EAF7
+	private static FTimer JFPIKCLDIII; // 0xA2B5B6B5
+	private bool GFHGNPPMHLA; // 0xB5B3BEB5
+	private FTimer NMOGLEBAAKG; // 0xA0A9A4F0
+	private bool JEOPHBOFADF; // 0xB9B6F0B5
+	private IEnumerator DOLEDCIICKE; // 0xF0B4BCB5
+	private bool LEODDKACNOM; // 0xA3A2B1BD
+	private Vector3 CDKMKHNDKPB; // 0xB9BCB1B8
+	private Vector3 CMBLJCBHKII; // 0xB9F0B7BE
+	private List<int> DGHMJJJBHCO; // 0xBFBEF0A3
+	public const string NonstreamRootName = "scene-nonstream-preview";
+	public const string NotInStreamerRootName = "scene_not_in_streamer";
+	public static Dictionary<int, List<CFIJFGBBLON>> patchShared; // 0xFEB4B5A4
+	public Dictionary<int, List<CMJDPFKEJDI>> patchLocal; // 0xBEB193D0
+	private static Dictionary<string, GameObject> JOAKNPEGLLN; // 0xF0A4BFBE
+	private static Dictionary<string, GameObject> ACKEEFMLPFN; // 0xA3A2B1BD
+	private static Dictionary<string, Material> HANKIPPEMHC; // 0xF0BCB1B8
+	private static Dictionary<string, GameObject> LAHEBEPKIJN; // 0xBCB5B9B6
+	private bool AIKBNJJHLKD; // 0xBDF7F0B4
+	private HashSet<int> IMKLHGLJDLI; // 0xA3B9948F
+	private Transform KJLFPAJIHGD; // 0xB3A4B1A0
+	private List<Transform> JMGOHJNAONK; // 0xF7A2B5B8
+	private Dictionary<int, Dictionary<int, List<TilePrefabSearchKey>>> KPBMIMIOHHE; // 0xF0B6BFF0
+	private Dictionary<ABSceneGOInfo, MapPatchKey> FDDBFMEBLJC; // 0xB5A0A9A4
+	private bool PEHDPNKODNO; // 0xA695F7F0
+	private ABSceneGOInfo ODNCAKOFEGA; // 0x94A4BEB5
+	private Predicate<ABSceneGOInfo> BILEIOHAJNC; // 0xB1A0A3B9
+	private int CIMPLLIINGM; // 0xB5B8B3A4
+	private Predicate<int> KDPMHEFFPPB; // 0xA4B197A2
+	private WaitForEndOfFrame OPIFHBBFFIN; // 0xF0EAF7B5
+	private List<MeshRenderer> OABANNJODBF; // 0xB5B6B582
+	private Stack<List<ABSceneGOInfo>> MDPBAEGIAKF; // 0xB3BEB5A2
+
+	// Properties
+	public float LJLGBGJJADE { get; }
+	public LStreamer IJEJICBBEDA { get; }
+
+	// Methods
+
+	// RVA: 0x37DBA68 Offset: 0x37D7A68 VA: 0x37DBA68
+	public float get_LoadingProgress() { }
+
+	// RVA: 0x37DBA90 Offset: 0x37D7A90 VA: 0x37DBA90
+	public LStreamer get_LStreamer() { }
+
+	// RVA: 0x37DBA98 Offset: 0x37D7A98 VA: 0x37DBA98
+	public Transform GetPlayerSafe() { }
+
+	// RVA: 0x37DBB04 Offset: 0x37D7B04 VA: 0x37DBB04
+	public static bool HasAsyncLoading() { }
+
+	// RVA: 0x37DBB64 Offset: 0x37D7B64 VA: 0x37DBB64
+	public void ForceUpdatePositionChecker() { }
+
+	// RVA: 0x37DBB84 Offset: 0x37D7B84 VA: 0x37DBB84
+	public static void StopAsyncLoading() { }
+
+	// RVA: 0x37DBBE0 Offset: 0x37D7BE0 VA: 0x37DBBE0
+	public static void ResetAsyncLoading() { }
+
+	// RVA: 0x37DBC38 Offset: 0x37D7C38 VA: 0x37DBC38
+	public static Streamer FindStreamerByName(string EEHMNLEPLIG) { }
+
+	// RVA: 0x37DBCE4 Offset: 0x37D7CE4 VA: 0x37DBCE4
+	private void Awake() { }
+
+	// RVA: 0x37DC030 Offset: 0x37D8030 VA: 0x37DC030
+	public LStreamer InitLStreamer() { }
+
+	// RVA: 0x37DC118 Offset: 0x37D8118 VA: 0x37DC118
+	private void Start() { }
+
+	// RVA: 0x37DF7CC Offset: 0x37DB7CC VA: 0x37DF7CC
+	private void OnDestroy() { }
+
+	// RVA: 0x37DD39C Offset: 0x37D939C VA: 0x37DD39C
+	private void JDBEPBCDMLF() { }
+
+	// RVA: 0x37E0250 Offset: 0x37DC250 VA: 0x37E0250
+	private void FBNCGINDCMN() { }
+
+	// RVA: 0x37DD268 Offset: 0x37D9268 VA: 0x37DD268
+	public void UpdateRange() { }
+
+	// RVA: 0x37E0A9C Offset: 0x37DCA9C VA: 0x37E0A9C
+	private int PHCFCCBODIH(int FADOEDJHAGD, int ODMCAGFHNKL) { }
+
+	// RVA: 0x37E0AB4 Offset: 0x37DCAB4 VA: 0x37E0AB4
+	public void AddSceneGO(SceneSplit EDMGLIKOPNJ, GameObject COPMKENEIOJ) { }
+
+	// RVA: 0x37E1134 Offset: 0x37DD134 VA: 0x37E1134 Slot: 4
+	public void OriginLoaded(string EOJMLPCAEFP) { }
+
+	// RVA: 0x37E129C Offset: 0x37DD29C VA: 0x37E129C Slot: 5
+	public void OriginUnloaded(string EOJMLPCAEFP) { }
+
+	// RVA: 0x37E13F4 Offset: 0x37DD3F4 VA: 0x37E13F4
+	private ABSceneInfo GPBKDCHJFNM(int CIMIFKBPPOM) { }
+
+	// RVA: 0x37E1464 Offset: 0x37DD464 VA: 0x37E1464
+	private void Update() { }
+
+	// RVA: 0x37E1554 Offset: 0x37DD554 VA: 0x37E1554
+	private void KPIJKINMFIO() { }
+
+	// RVA: 0x37E2364 Offset: 0x37DE364 VA: 0x37E2364
+	private bool NCFBPKHJOLD() { }
+
+	[IteratorStateMachine(typeof(PPBMJNJGLHL))]
+	// RVA: 0x37E194C Offset: 0x37DD94C VA: 0x37E194C
+	private IEnumerator KOPLEPMKHOE(SceneSplit EDMGLIKOPNJ) { }
+
+	// RVA: 0x37E2424 Offset: 0x37DE424 VA: 0x37E2424
+	private void JHIBOBHNOPA(GameObject BEKENKHJNPL, string EOJMLPCAEFP) { }
+
+	// RVA: 0x37E268C Offset: 0x37DE68C VA: 0x37E268C
+	private bool NICGONKOGKC(int LIKPJDHGPFG) { }
+
+	// RVA: 0x37E27BC Offset: 0x37DE7BC VA: 0x37E27BC
+	private bool NFMCDDMNMEK(int LIKPJDHGPFG) { }
+
+	[IteratorStateMachine(typeof(LFDPNGBPGDE))]
+	// RVA: 0x37E1A6C Offset: 0x37DDA6C VA: 0x37E1A6C
+	private IEnumerator BJPCCKIHKKJ(SceneSplit EDMGLIKOPNJ) { }
+
+	// RVA: 0x37E28F0 Offset: 0x37DE8F0 VA: 0x37E28F0
+	private void CKCAILCANHA() { }
+
+	// RVA: 0x37E440C Offset: 0x37E040C VA: 0x37E440C
+	public bool CheckIsInStreamerRange(Vector3 NODKAKMLNCB) { }
+
+	// RVA: 0x37E451C Offset: 0x37E051C VA: 0x37E451C
+	public bool GetStreamerRange(out Vector3 MHAAFMCMHAC, out Vector3 PAFBAHJAAGC) { }
+
+	// RVA: 0x37E46A4 Offset: 0x37E06A4 VA: 0x37E46A4
+	public void ForcePositionChecker() { }
+
+	// RVA: 0x37E2A7C Offset: 0x37DEA7C VA: 0x37E2A7C
+	public void CheckPositionTiles() { }
+
+	// RVA: 0x37E5770 Offset: 0x37E1770 VA: 0x37E5770
+	private int FNOJKICENLC(int NIBBKONKPHP) { }
+
+	// RVA: 0x37E474C Offset: 0x37E074C VA: 0x37E474C
+	private void KOEOFEIFABP() { }
+
+	// RVA: 0x37E5788 Offset: 0x37E1788 VA: 0x37E5788
+	private void SceneUnloading() { }
+
+	[IteratorStateMachine(typeof(GHJJNPKECHA))]
+	// RVA: 0x37E590C Offset: 0x37E190C VA: 0x37E590C
+	private IEnumerator HNHCMHJLLJO() { }
+
+	// RVA: 0x37E5980 Offset: 0x37E1980 VA: 0x37E5980
+	public void StopSceneUnloadingFCO() { }
+
+	// RVA: 0x37E3F88 Offset: 0x37DFF88 VA: 0x37E3F88
+	public void UnloadUnUsedAssets() { }
+
+	// RVA: 0x37E3A00 Offset: 0x37DFA00 VA: 0x37E3A00
+	public void UnloadAllScenes() { }
+
+	// RVA: 0x37E5A14 Offset: 0x37E1A14 VA: 0x37E5A14
+	public static void UnloadAssets(Streamer KJFMIJFMLON) { }
+
+	[IteratorStateMachine(typeof(DEADHCBAGBJ))]
+	// RVA: 0x37E5ACC Offset: 0x37E1ACC VA: 0x37E5ACC
+	public IEnumerator UnloadAssetsWait() { }
+
+	// RVA: 0x37E5B24 Offset: 0x37E1B24 VA: 0x37E5B24
+	private bool COMNLNFJLDI(int APMMODHBLDA) { }
+
+	// RVA: 0x37E5CFC Offset: 0x37E1CFC VA: 0x37E5CFC
+	private void DGPFMEIOLKP(int APMMODHBLDA, bool AKPMODNFFPA = true) { }
+
+	// RVA: 0x37E1AF4 Offset: 0x37DDAF4 VA: 0x37E1AF4
+	private void DINNPAPOIBO() { }
+
+	// RVA: 0x37E5E88 Offset: 0x37E1E88 VA: 0x37E5E88
+	private bool GDJAOCBBLDH(GameObject ANEJGNJCJEB, int APMMODHBLDA) { }
+
+	// RVA: 0x37E614C Offset: 0x37E214C VA: 0x37E614C
+	public void RegistABTextureExtraRefCallBack(AOPMCCBHKOI AMFIKBOBOIJ) { }
+
+	// RVA: 0x37E61E0 Offset: 0x37E21E0 VA: 0x37E61E0
+	public void UnRegistABTextureExtraRefCallBack(AOPMCCBHKOI AMFIKBOBOIJ) { }
+
+	// RVA: 0x37DFCC0 Offset: 0x37DBCC0 VA: 0x37DFCC0
+	private void KODHAAODPDG() { }
+
+	// RVA: 0x37E075C Offset: 0x37DC75C VA: 0x37E075C
+	private bool PLJKLOMPHBO() { }
+
+	// RVA: 0x37E6284 Offset: 0x37E2284 VA: 0x37E6284
+	private void FGIMBNKMNCP(GameObject ANEJGNJCJEB, int APMMODHBLDA) { }
+
+	// RVA: 0x37E6884 Offset: 0x37E2884 VA: 0x37E6884
+	private void OMJAEBNEKMK(int APMMODHBLDA) { }
+
+	// RVA: 0x37E1E0C Offset: 0x37DDE0C VA: 0x37E1E0C
+	private void BCHLCALPKNF() { }
+
+	// RVA: 0x37DCCE4 Offset: 0x37D8CE4 VA: 0x37DCCE4
+	private void BIJOJIPMFKI(bool ANOIAPKFOCD) { }
+
+	// RVA: 0x37E6EAC Offset: 0x37E2EAC VA: 0x37E6EAC
+	public static int BetterParseInt(string PIEELDNNLPA, int DKMODBCEJLH) { }
+
+	// RVA: 0x37E6D40 Offset: 0x37E2D40 VA: 0x37E6D40
+	public static void SceneNameToPos(SceneCollection CCBBIJCLAAN, string JFGDOLJIJPJ, out int KLOMMOLOALL, out int PHBBCDDBBFE, out int KJLCMMICDGF) { }
+
+	// RVA: 0x37E6FCC Offset: 0x37E2FCC VA: 0x37E6FCC
+	private void OnDrawGizmosSelected() { }
+
+	// RVA: 0x37E7320 Offset: 0x37E3320 VA: 0x37E7320
+	private List<ABSceneGOInfo> PLJLDDNHFKJ() { }
+
+	// RVA: 0x37E742C Offset: 0x37E342C VA: 0x37E742C
+	private void HGNMMMPGJFG(List<ABSceneGOInfo> IPCPKIPFHKF) { }
+
+	// RVA: 0x37DF538 Offset: 0x37DB538 VA: 0x37DF538
+	private void HNNMHIPGKCA() { }
+
+	// RVA: 0x37E79AC Offset: 0x37E39AC VA: 0x37E79AC
+	private void HBHPKFCIDFC(int BLMHBKAEIHF, CFIJFGBBLON MEOMMIHHEOP, CMJDPFKEJDI BPIIGGNEEHI) { }
+
+	// RVA: 0x37DFD74 Offset: 0x37DBD74 VA: 0x37DFD74
+	private void LCIFNAJDPLA() { }
+
+	// RVA: 0x37E9B18 Offset: 0x37E5B18 VA: 0x37E9B18
+	private bool MFIFOEINLMM(ABSceneGOInfo NCKNOJMNMML) { }
+
+	// RVA: 0x37E9A78 Offset: 0x37E5A78 VA: 0x37E9A78
+	private bool DANDAHMOAPI() { }
+
+	// RVA: 0x37E74CC Offset: 0x37E34CC VA: 0x37E74CC
+	private void ONGBFKBDFDJ() { }
+
+	// RVA: 0x37E97B4 Offset: 0x37E57B4 VA: 0x37E97B4
+	private void HNJHJOEFOII(int[] BFLNMMGECKO) { }
+
+	// RVA: 0x37E9550 Offset: 0x37E5550 VA: 0x37E9550
+	private void BLGPGACFBOF(CFIJFGBBLON MEOMMIHHEOP, MapPatchInfo FLNLCENHPMO) { }
+
+	// RVA: 0x37E9BC4 Offset: 0x37E5BC4 VA: 0x37E9BC4
+	private void HKGNJBJGLEJ(MapPatchInfo FLNLCENHPMO) { }
+
+	// RVA: 0x37EAB98 Offset: 0x37E6B98 VA: 0x37EAB98
+	private Transform MLGGHMPPLJM(string AHBNHODHNAH) { }
+
+	// RVA: 0x37EA4EC Offset: 0x37E64EC VA: 0x37EA4EC
+	private void ANCCLKIOFJG(MapPatchInfo FLNLCENHPMO, AssetBundle JIACECIJLGO) { }
+
+	// RVA: 0x37E9EEC Offset: 0x37E5EEC VA: 0x37E9EEC
+	private void LDPNBPBOIKF(MapPatchInfo FLNLCENHPMO, int MDAAABMACNC, AssetBundle JIACECIJLGO) { }
+
+	// RVA: 0x37EBC24 Offset: 0x37E7C24 VA: 0x37EBC24
+	private void MLKGPNCCBFF(ABSceneGOInfo KBNDOLHOEHC, GameObject BEKENKHJNPL, AssetBundle JIACECIJLGO, AssetBundle BHBLBJFIPHD) { }
+
+	// RVA: 0x37EAD50 Offset: 0x37E6D50 VA: 0x37EAD50
+	private void FEECAMCHBME(Transform GJDLFMIFHMG, NotInStreamerData JCONDDPFBKK, int PMFMJCHLDNI) { }
+
+	// RVA: 0x37EB0DC Offset: 0x37E70DC VA: 0x37EB0DC
+	private void DONAGGJOFKE(Transform GJDLFMIFHMG, NotInStreamerData JCONDDPFBKK, AssetBundle JIACECIJLGO) { }
+
+	// RVA: 0x37EB62C Offset: 0x37E762C VA: 0x37EB62C
+	private void KFMMFLKADPH(Transform GJDLFMIFHMG, NotInStreamerData JCONDDPFBKK, AssetBundle JIACECIJLGO) { }
+
+	// RVA: 0x37EB848 Offset: 0x37E7848 VA: 0x37EB848
+	private GameObject LOOHCJHPPAK(Transform GJDLFMIFHMG, NotInStreamerData JCONDDPFBKK, AssetBundle JIACECIJLGO) { }
+
+	// RVA: 0x37EB3E4 Offset: 0x37E73E4 VA: 0x37EB3E4
+	private void LEMAGDCBHHO(Transform GJDLFMIFHMG, NotInStreamerData JCONDDPFBKK, AssetBundle JIACECIJLGO) { }
+
+	// RVA: 0x37EB4C8 Offset: 0x37E74C8 VA: 0x37EB4C8
+	private void KNELMOJNPMJ(Transform GJDLFMIFHMG, NotInStreamerData JCONDDPFBKK, AssetBundle JIACECIJLGO) { }
+
+	// RVA: 0x37EC534 Offset: 0x37E8534 VA: 0x37EC534
+	private void DBGDMMCMMIF(Transform GJDLFMIFHMG, string LEBOJCAHGEM, AssetBundle JIACECIJLGO) { }
+
+	// RVA: 0x37EC908 Offset: 0x37E8908 VA: 0x37EC908
+	private void MAMALCPOFNB(Transform GJDLFMIFHMG, string GKKJOIBECJN, AssetBundle JIACECIJLGO) { }
+
+	// RVA: 0x37ECBEC Offset: 0x37E8BEC VA: 0x37ECBEC
+	private void DONAGGJOFKE(Transform GJDLFMIFHMG, List<string> PDMECBBIAEK, AssetBundle JIACECIJLGO) { }
+
+	// RVA: 0x37EC204 Offset: 0x37E8204 VA: 0x37EC204
+	private void IOBEBKCPELG(Transform GJDLFMIFHMG, List<string> BFDJAJMPPFM, AssetBundle JIACECIJLGO) { }
+
+	// RVA: 0x37ED014 Offset: 0x37E9014 VA: 0x37ED014
+	private void HIHFCHPMFLB(Transform GJDLFMIFHMG, string KGKBAPBGOBE, AssetBundle JIACECIJLGO, AssetBundle BHBLBJFIPHD) { }
+
+	[IteratorStateMachine(typeof(OCFECLBFEAF))]
+	// RVA: 0x37EC018 Offset: 0x37E8018 VA: 0x37EC018
+	private IEnumerator BJACEIHEJAK(Transform GJDLFMIFHMG, string LEBOJCAHGEM, AssetBundle JIACECIJLGO) { }
+
+	[IteratorStateMachine(typeof(DIAKGFOOPKA))]
+	// RVA: 0x37EC0BC Offset: 0x37E80BC VA: 0x37EC0BC
+	private IEnumerator OLDCGDGDCIC(Transform GJDLFMIFHMG, string GKKJOIBECJN, AssetBundle JIACECIJLGO) { }
+
+	[IteratorStateMachine(typeof(LMIBNGANMHL))]
+	// RVA: 0x37EC160 Offset: 0x37E8160 VA: 0x37EC160
+	private IEnumerator PELPIHJPDFP(Transform GJDLFMIFHMG, List<string> PDMECBBIAEK, AssetBundle JIACECIJLGO) { }
+
+	[IteratorStateMachine(typeof(MOBFMPNPNLB))]
+	// RVA: 0x37EC474 Offset: 0x37E8474 VA: 0x37EC474
+	private IEnumerator OLAGIMEMCPP(Transform GJDLFMIFHMG, string KGKBAPBGOBE, AssetBundle JIACECIJLGO, AssetBundle BHBLBJFIPHD) { }
+
+	[IteratorStateMachine(typeof(PPONKGJBAJH))]
+	// RVA: 0x37E19DC Offset: 0x37DD9DC VA: 0x37E19DC
+	private IEnumerator BIMKKEIIEPL(SceneSplit EDMGLIKOPNJ) { }
+
+	[IteratorStateMachine(typeof(PBHDGMODPNL))]
+	// RVA: 0x37ED598 Offset: 0x37E9598 VA: 0x37ED598
+	private IEnumerator LLJDKHGBKCH(string JFGDOLJIJPJ, ABSceneInfo CAAFLDLGPJF, AssetBundle BHBLBJFIPHD, int CIMIFKBPPOM, Action<GameObject, int, StreamPrefabSource, int> AIBJFJIGEFM, StreamPrefabSource HJCANOGMANP = 0, int BLMHBKAEIHF = -1) { }
+
+	// RVA: 0x37ED690 Offset: 0x37E9690 VA: 0x37ED690
+	private void GCFJDBGGKMP(GameObject EIEMDKHHEAG, int CIMIFKBPPOM, StreamPrefabSource HJCANOGMANP, int BLMHBKAEIHF) { }
+
+	// RVA: 0x37ED9D4 Offset: 0x37E99D4 VA: 0x37ED9D4
+	public void .ctor() { }
+
+	// RVA: 0x37EDC68 Offset: 0x37E9C68 VA: 0x37EDC68
+	private static void .cctor() { }
+
+	[CompilerGenerated]
+	// RVA: 0x37EDEC8 Offset: 0x37E9EC8 VA: 0x37EDEC8
+	private bool PFDEECBELAH(ABSceneGOInfo KBNDOLHOEHC) { }
+
+	[CompilerGenerated]
+	// RVA: 0x37EDEDC Offset: 0x37E9EDC VA: 0x37EDEDC
+	private bool DOKDKDHCLCA(ABSceneGOInfo KBNDOLHOEHC) { }
+
+	[CompilerGenerated]
+	// RVA: 0x37EDEF0 Offset: 0x37E9EF0 VA: 0x37EDEF0
+	private bool CHCKAPPEJBI(int CEFDLHBDPHO) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: WorldStreamer
+public class CFIJFGBBLON // TypeDefIndex: 995
+{
+	// Fields
+	public int AODBCGHELBG; // 0xA9A4F0B5
+	public int OPFGJGPJJID; // 0xB6F0B5A0
+	public AssetBundle NMEGKMJHIJK; // 0xB4BCB5B9
+	public MapPatchInfo BJMOMHCFMBH; // 0xA2B1BDF0
+	public MapPatchPrefabs KMDDNICLFHG; // 0xBCB1B8A3
+
+	// Methods
+
+	// RVA: 0x38CA214 Offset: 0x38C6214 VA: 0x38CA214
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: WorldStreamer
+public class CMJDPFKEJDI // TypeDefIndex: 996
+{
+	// Fields
+	public HashSet<int> GNENNBKNIJL; // 0xF0B7BEB9
+
+	// Methods
+
+	// RVA: 0x38CA21C Offset: 0x38C621C VA: 0x38CA21C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: VoxelBusters.ReplayKit
+public class AudioRecordListener : MonoBehaviour // TypeDefIndex: 997
+{
+	// Methods
+
+	// RVA: 0x38CA224 Offset: 0x38C6224 VA: 0x38CA224
+	private void OnAudioFilterRead(float[] data, int channels) { }
+
+	// RVA: 0x38CA364 Offset: 0x38C6364 VA: 0x38CA364
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: VoxelBusters.ReplayKit
+public class AudioData // TypeDefIndex: 998
+{
+	// Fields
+	public const int AUDIO_MAX_COUNT = 2048;
+	private float[] mBuffers; // 0xA3F0A4BF
+	private int mLength; // 0xBFA0A0A5
+
+	// Properties
+	public int Count { get; }
+
+	// Methods
+
+	// RVA: 0x38CA36C Offset: 0x38C636C VA: 0x38CA36C
+	public void Reset() { }
+
+	// RVA: 0x38CA374 Offset: 0x38C6374 VA: 0x38CA374
+	public bool Full() { }
+
+	// RVA: 0x38CA384 Offset: 0x38C6384 VA: 0x38CA384
+	public bool Empty() { }
+
+	// RVA: 0x38CA394 Offset: 0x38C6394 VA: 0x38CA394
+	public int get_Count() { }
+
+	// RVA: 0x38CA39C Offset: 0x38C639C VA: 0x38CA39C
+	public int Write(float[] datas, int offest) { }
+
+	// RVA: 0x38CA450 Offset: 0x38C6450 VA: 0x38CA450
+	public int Read(float[] datas, int offest) { }
+
+	// RVA: 0x38CA4F8 Offset: 0x38C64F8 VA: 0x38CA4F8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: VoxelBusters.ReplayKit
+public static class AudioUtils // TypeDefIndex: 999
+{
+	// Fields
+	private static AudioData current_data; // 0xB4B5A4A2
+	private static Queue<AudioData> audio_pools; // 0xBE85D0FE
+	private static Queue<AudioData> audio_datas; // 0x95A9A4B9
+
+	// Methods
+
+	// RVA: 0x38CA55C Offset: 0x38C655C VA: 0x38CA55C
+	public static void Reset() { }
+
+	// RVA: 0x38CA64C Offset: 0x38C664C VA: 0x38CA64C
+	private static AudioData GetEmptyAudioData() { }
+
+	// RVA: 0x38CA72C Offset: 0x38C672C VA: 0x38CA72C
+	public static void CollectAudioData(AudioData data) { }
+
+	// RVA: 0x38CA7C0 Offset: 0x38C67C0 VA: 0x38CA7C0
+	public static void WriteData(float[] data) { }
+
+	// RVA: 0x38CA8E0 Offset: 0x38C68E0 VA: 0x38CA8E0
+	public static bool Empty() { }
+
+	// RVA: 0x38CA958 Offset: 0x38C6958 VA: 0x38CA958
+	public static AudioData Dequeue() { }
+
+	// RVA: 0x38CA9D0 Offset: 0x38C69D0 VA: 0x38CA9D0
+	public static float[] GetCurrentLastData() { }
+
+	// RVA: 0x38CAAD4 Offset: 0x38C6AD4 VA: 0x38CAAD4
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+private enum AudioRecordManager.RecordState // TypeDefIndex: 1000
+{
+	// Fields
+	public int value__; // 0xBEB9B7BE
+	public const RecordState None = 0;
+	public const RecordState Normal = 1;
+	public const RecordState Pause = 2;
+	public const RecordState Pause_Resume = 3;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: VoxelBusters.ReplayKit
+public class AudioRecordManager : SingletonPattern<AudioRecordManager> // TypeDefIndex: 1001
+{
+	// Fields
+	private RecordState mRecordState; // 0xB587A9A4
+	private const int WAIT_FRAME_HIGH = 30;
+	private const int WAIT_FRAME_NORMAL = 60;
+	private float[] sample_data; // 0xB597EAEA
+	private int m_WaitFrame; // 0x848498A4
+	private long mLastRecordPoint; // 0xB1A48380
+	private long mResumeTicks; // 0x83A3A5A4
+	private AudioListener mAudioListener; // 0xBEB9A2A4
+	private AudioRecordListener listener; // 0xA983F8B7
+
+	// Properties
+	public bool isRecording { get; }
+
+	// Methods
+
+	// RVA: 0x38CAB8C Offset: 0x38C6B8C VA: 0x38CAB8C
+	public bool get_isRecording() { }
+
+	// RVA: 0x38CAB9C Offset: 0x38C6B9C VA: 0x38CAB9C Slot: 10
+	protected override void Init() { }
+
+	// RVA: 0x38CAC38 Offset: 0x38C6C38 VA: 0x38CAC38
+	public void StartRecord(string filePath) { }
+
+	// RVA: 0x38CB030 Offset: 0x38C7030 VA: 0x38CB030
+	public void PauseRecord() { }
+
+	// RVA: 0x38CB1DC Offset: 0x38C71DC VA: 0x38CB1DC
+	public void ResumeRecord() { }
+
+	// RVA: 0x38CB1F8 Offset: 0x38C71F8 VA: 0x38CB1F8
+	private void Update() { }
+
+	// RVA: 0x38CA29C Offset: 0x38C629C VA: 0x38CA29C
+	public void WriteData(float[] data, int channels) { }
+
+	// RVA: 0x38CB3E0 Offset: 0x38C73E0 VA: 0x38CB3E0
+	public void EndRecord() { }
+
+	// RVA: 0x38CB490 Offset: 0x38C7490 VA: 0x38CB490 Slot: 9
+	protected override void OnDestroy() { }
+
+	// RVA: 0x38CB5BC Offset: 0x38C75BC VA: 0x38CB5BC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: VoxelBusters.ReplayKit
+public enum ReplayKitInitialisationState // TypeDefIndex: 1002
+{
+	// Fields
+	public int value__; // 0xBDB5A4A3
+	public const ReplayKitInitialisationState Success = 0;
+	public const ReplayKitInitialisationState Failed = 1;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: VoxelBusters.ReplayKit
+public enum ReplayKitRecordingState // TypeDefIndex: 1003
+{
+	// Fields
+	public int value__; // 0xA4B9BE85
+	public const ReplayKitRecordingState None = 0;
+	public const ReplayKitRecordingState Starting = 1;
+	public const ReplayKitRecordingState Started = 2;
+	public const ReplayKitRecordingState Stoping = 3;
+	public const ReplayKitRecordingState Stoped = 4;
+	public const ReplayKitRecordingState Saveing = 5;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: VoxelBusters.ReplayKit
+public enum ReplayKitPreviewState // TypeDefIndex: 1004
+{
+	// Fields
+	public int value__; // 0xBD8FA4B5
+	public const ReplayKitPreviewState Opened = 0;
+	public const ReplayKitPreviewState Closed = 1;
+	public const ReplayKitPreviewState Failed = 2;
+	public const ReplayKitPreviewState Shared = 3;
+	public const ReplayKitPreviewState Played = 4;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: VoxelBusters.ReplayKit
+public enum VideoQuality // TypeDefIndex: 1005
+{
+	// Fields
+	public int value__; // 0xB5BCB7BE
+	public const VideoQuality QUALITY_1080P = 0;
+	public const VideoQuality QUALITY_720P = 1;
+	public const VideoQuality QUALITY_480P = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: VoxelBusters.ReplayKit
+public enum RecordingUIAction // TypeDefIndex: 1006
+{
+	// Fields
+	public int value__; // 0xB986FEB5
+	public const RecordingUIAction Started = 0;
+	public const RecordingUIAction Stopped = 1;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitInternal.<>c__DisplayClass52_0 // TypeDefIndex: 1007
+{
+	// Fields
+	public ReplayKitInternal <>4__this; // 0xB1BC80BF
+	public string message; // 0xEAA2B5A9
+
+	// Methods
+
+	// RVA: 0x38CD0B0 Offset: 0x38C90B0 VA: 0x38CD0B0
+	public void .ctor() { }
+
+	// RVA: 0x38CDE90 Offset: 0x38C9E90 VA: 0x38CDE90
+	internal void <OnInitialiseFailed>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitInternal.<>c__DisplayClass55_0 // TypeDefIndex: 1008
+{
+	// Fields
+	public ReplayKitInternal <>4__this; // 0xA4B5B7EA
+	public string message; // 0xB9BCB38F
+
+	// Methods
+
+	// RVA: 0x38CD2A0 Offset: 0x38C92A0 VA: 0x38CD2A0
+	public void .ctor() { }
+
+	// RVA: 0x38CDEE0 Offset: 0x38C9EE0 VA: 0x38CDEE0
+	internal void <OnRecordingFailed>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitInternal.<>c__DisplayClass56_0 // TypeDefIndex: 1009
+{
+	// Fields
+	public ReplayKitInternal <>4__this; // 0xD0F9F8A0
+	public string message; // 0xA4B9BE85
+
+	// Methods
+
+	// RVA: 0x38CD38C Offset: 0x38C938C VA: 0x38CD38C
+	public void .ctor() { }
+
+	// RVA: 0x38CDF2C Offset: 0x38C9F2C VA: 0x38CDF2C
+	internal void <OnRecordingAvailable>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitInternal.<>c__DisplayClass61_0 // TypeDefIndex: 1010
+{
+	// Fields
+	public ReplayKitInternal <>4__this; // 0xB7BE95A9
+	public string filePath; // 0xFEB5BEB9
+
+	// Methods
+
+	// RVA: 0x38CD484 Offset: 0x38C9484 VA: 0x38CD484
+	public void .ctor() { }
+
+	// RVA: 0x38CDF78 Offset: 0x38C9F78 VA: 0x38CDF78
+	internal void <OnPreviewSaveScuessed>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitInternal.<>c__DisplayClass62_0 // TypeDefIndex: 1011
+{
+	// Fields
+	public ReplayKitInternal <>4__this; // 0xB5B4B986
+	public string error; // 0xB986FEBF
+
+	// Methods
+
+	// RVA: 0x38CD560 Offset: 0x38C9560 VA: 0x38CD560
+	public void .ctor() { }
+
+	// RVA: 0x38CDFC4 Offset: 0x38C9FC4 VA: 0x38CDFC4
+	internal void <OnPreviewSaveFailed>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitInternal.<>c__DisplayClass63_0 // TypeDefIndex: 1012
+{
+	// Fields
+	public ReplayKitInternal <>4__this; // 0x80BFB5B4
+	public string filePath; // 0xB5A9B1BC
+
+	// Methods
+
+	// RVA: 0x38CD638 Offset: 0x38C9638 VA: 0x38CD638
+	public void .ctor() { }
+
+	// RVA: 0x38CE010 Offset: 0x38CA010 VA: 0x38CE010
+	internal void <OnPreviewVideo>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitInternal.<>c__DisplayClass64_0 // TypeDefIndex: 1013
+{
+	// Fields
+	public ReplayKitInternal <>4__this; // 0x83EAEAA2
+	public string filePath; // 0xB994A4B5
+
+	// Methods
+
+	// RVA: 0x38CD710 Offset: 0x38C9710 VA: 0x38CD710
+	public void .ctor() { }
+
+	// RVA: 0x38CE0D8 Offset: 0x38CA0D8 VA: 0x38CE0D8
+	internal void <OnDiscardVideo>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitInternal.<>c__DisplayClass65_0 // TypeDefIndex: 1014
+{
+	// Fields
+	public ReplayKitInternal <>4__this; // 0xA4B3B5A2
+	public string input; // 0xB9B4A591
+	public string output; // 0xA4A59DBF
+
+	// Methods
+
+	// RVA: 0x38CD820 Offset: 0x38C9820 VA: 0x38CD820
+	public void .ctor() { }
+
+	// RVA: 0x38CE1A0 Offset: 0x38CA1A0 VA: 0x38CE1A0
+	internal void <OnThumbnail>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitInternal.<>c__DisplayClass66_0 // TypeDefIndex: 1015
+{
+	// Fields
+	public ReplayKitInternal <>4__this; // 0xA983F8B5
+	public string filePath; // 0xBDB5A4A3
+	public string size; // 0xBE9985FE
+	public string duration; // 0xFCE6E1A4
+
+	// Methods
+
+	// RVA: 0x38CD950 Offset: 0x38C9950 VA: 0x38CD950
+	public void .ctor() { }
+
+	// RVA: 0x38CE1F0 Offset: 0x38CA1F0 VA: 0x38CE1F0
+	internal void <OnVideoInfo>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitInternal.<>c__DisplayClass68_0 // TypeDefIndex: 1016
+{
+	// Fields
+	public ReplayKitInternal <>4__this; // 0xA4A3A983
+	public int iValue; // 0x92FEBDB5
+
+	// Methods
+
+	// RVA: 0x38CDA98 Offset: 0x38C9A98 VA: 0x38CDA98
+	public void .ctor() { }
+
+	// RVA: 0x38CE244 Offset: 0x38CA244 VA: 0x38CE244
+	internal void <OnVideoMuxerProgress>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitInternal.<>c__DisplayClass70_0 // TypeDefIndex: 1017
+{
+	// Fields
+	public ReplayKitInternal <>4__this; // 0xB5BCBFBF
+	public int iValue; // 0xD0F9BEB1
+
+	// Methods
+
+	// RVA: 0x38CDBE0 Offset: 0x38C9BE0 VA: 0x38CDBE0
+	public void .ctor() { }
+
+	// RVA: 0x38CE280 Offset: 0x38CA280 VA: 0x38CE280
+	internal void <OnAudioEncodeProgress>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: VoxelBusters.ReplayKit
+internal class ReplayKitInternal : SingletonPattern<ReplayKitInternal>, INativeCallbackListener // TypeDefIndex: 1018
+{
+	// Fields
+	private INativeService m_service; // 0xA4A3A983
+	private OnRecordActionCallback m_InitialiseCallback; // 0x94FEBDB5
+	private OnRecordActionCallback m_startRecordCallback; // 0xFEB1A4B1
+	private OnRecordActionCallback m_stopRecordCallback; // 0xD0BCBCB4
+	private OnRecordActionCallback m_stopRecordAvailableCallback; // 0xA4A3A983
+	private OnRecordActionCallback m_saveVideoCallback; // 0x9EFEBDB5
+	private OnRecordActionCallback m_discardVideoCallback; // 0xA2B5BDA5
+	private OnRecordActionCallback m_previewVideoCallback; // 0xFEA3B3B9
+	private OnVideoMuxerActionCallback m_muxerVideoCallback; // 0xD0BCBCB4
+	private OnThumbnailCallback m_thumbnailCallback; // 0x92FFEA94
+	private OnVideoInfoCallback m_videoInfoCallback; // 0xB4BCB9A5
+	private OnAudioEncodeProgressCallback m_audioEncodeProgressCallback; // 0xA0A4A59F
+	private bool m_audioListenerStatus; // 0x808FA4A5
+	private bool m_isInitialised; // 0xB99C9582
+	[CompilerGenerated]
+	private ReplayKitRecordingState <recordingState>k__BackingField; // 0xB18FB5A6
+
+	// Properties
+	public ReplayKitRecordingState recordingState { get; set; }
+
+	// Methods
+
+	[CompilerGenerated]
+	// RVA: 0x38CB660 Offset: 0x38C7660 VA: 0x38CB660
+	public ReplayKitRecordingState get_recordingState() { }
+
+	[CompilerGenerated]
+	// RVA: 0x38CB668 Offset: 0x38C7668 VA: 0x38CB668
+	public void set_recordingState(ReplayKitRecordingState value) { }
+
+	// RVA: 0x38CB670 Offset: 0x38C7670 VA: 0x38CB670
+	public void RegisterMuxerAction(OnVideoMuxerActionCallback callback) { }
+
+	// RVA: 0x38CB700 Offset: 0x38C7700 VA: 0x38CB700
+	public void UnregisterMuxerAction(OnVideoMuxerActionCallback callback) { }
+
+	// RVA: 0x38CB790 Offset: 0x38C7790 VA: 0x38CB790
+	public void RegisterAudioEncodeAction(OnAudioEncodeProgressCallback callback) { }
+
+	// RVA: 0x38CB820 Offset: 0x38C7820 VA: 0x38CB820
+	public void UnregisterAudioEncodeAction(OnAudioEncodeProgressCallback callback) { }
+
+	// RVA: 0x38CB8B0 Offset: 0x38C78B0 VA: 0x38CB8B0
+	public void Initialise(OnRecordActionCallback callback) { }
+
+	// RVA: 0x38CB988 Offset: 0x38C7988 VA: 0x38CB988
+	public bool IsInitialised() { }
+
+	// RVA: 0x38CB990 Offset: 0x38C7990 VA: 0x38CB990
+	public bool IsRecordingAPIAvailable() { }
+
+	// RVA: 0x38CBA40 Offset: 0x38C7A40 VA: 0x38CBA40
+	public bool IsCameraEnabled() { }
+
+	// RVA: 0x38CBAF0 Offset: 0x38C7AF0 VA: 0x38CBAF0
+	public bool IsRecording() { }
+
+	// RVA: 0x38CBBA0 Offset: 0x38C7BA0 VA: 0x38CBBA0
+	public bool IsMicrophoneEnabled() { }
+
+	// RVA: 0x38CBBF8 Offset: 0x38C7BF8 VA: 0x38CBBF8
+	public bool IsPreviewAvailable() { }
+
+	// RVA: 0x38CBCA8 Offset: 0x38C7CA8 VA: 0x38CBCA8
+	public bool IsExistVideo(string filePath) { }
+
+	// RVA: 0x38CBD68 Offset: 0x38C7D68 VA: 0x38CBD68
+	public void SetRecordingUIVisibility(bool visible) { }
+
+	// RVA: 0x38CBE28 Offset: 0x38C7E28 VA: 0x38CBE28
+	public void PrepareRecording() { }
+
+	// RVA: 0x38CBF64 Offset: 0x38C7F64 VA: 0x38CBF64
+	public void StartRecording(string video_path, OnRecordActionCallback callback) { }
+
+	// RVA: 0x38CC058 Offset: 0x38C8058 VA: 0x38CC058
+	public void StopRecording(string sandbox_video_path, OnRecordActionCallback stopCallback, OnRecordActionCallback recordAvailableCallback) { }
+
+	// RVA: 0x38CC164 Offset: 0x38C8164 VA: 0x38CC164
+	public bool Preview() { }
+
+	// RVA: 0x38CC214 Offset: 0x38C8214 VA: 0x38CC214
+	public string GetPreviewFilePath() { }
+
+	// RVA: 0x38CC2C4 Offset: 0x38C82C4 VA: 0x38CC2C4
+	public bool Discard(string filePath) { }
+
+	// RVA: 0x38CC384 Offset: 0x38C8384 VA: 0x38CC384
+	public void SavePreview(string filename, string outputPath, OnRecordActionCallback callback) { }
+
+	// RVA: 0x38CC484 Offset: 0x38C8484 VA: 0x38CC484
+	public void SharePreview(string text, string subject) { }
+
+	// RVA: 0x38CC54C Offset: 0x38C854C VA: 0x38CC54C
+	public void SetVideoQuality(VideoQuality quality) { }
+
+	// RVA: 0x38CC5A0 Offset: 0x38C85A0 VA: 0x38CC5A0
+	public void GetVideoInfo(string filePath, OnVideoInfoCallback callback) { }
+
+	// RVA: 0x38CC694 Offset: 0x38C8694 VA: 0x38CC694
+	public void DiscardVideo(string filePath, OnRecordActionCallback callback) { }
+
+	// RVA: 0x38CC7CC Offset: 0x38C87CC VA: 0x38CC7CC
+	public void PreviewVideo(string filePath, OnRecordActionCallback callback) { }
+
+	// RVA: 0x38CC904 Offset: 0x38C8904 VA: 0x38CC904
+	public void PreviewVideoFinish() { }
+
+	// RVA: 0x38CC9B4 Offset: 0x38C89B4 VA: 0x38CC9B4
+	public void GetThumbnail(string input, int kind, string output, OnThumbnailCallback callback) { }
+
+	// RVA: 0x38CCAC4 Offset: 0x38C8AC4 VA: 0x38CCAC4
+	public void SetAudio(string filePath, int sampleRate, int channels) { }
+
+	// RVA: 0x38CCB9C Offset: 0x38C8B9C VA: 0x38CCB9C
+	public void WriteAudio(float[] data, int channels) { }
+
+	// RVA: 0x38CCC64 Offset: 0x38C8C64 VA: 0x38CCC64
+	public void WriteRecordoPauseTime(long microsecond) { }
+
+	// RVA: 0x38CCD24 Offset: 0x38C8D24 VA: 0x38CCD24
+	public string GetDeviceHardWare() { }
+
+	// RVA: 0x38CCDD4 Offset: 0x38C8DD4 VA: 0x38CCDD4 Slot: 10
+	protected override void Init() { }
+
+	// RVA: 0x38CCEE4 Offset: 0x38C8EE4 VA: 0x38CCEE4
+	private void OnApplicationPause(bool pauseStatus) { }
+
+	// RVA: 0x38CCF5C Offset: 0x38C8F5C VA: 0x38CCF5C Slot: 11
+	public void OnInitialiseSuccess() { }
+
+	// RVA: 0x38CCFE0 Offset: 0x38C8FE0 VA: 0x38CCFE0 Slot: 12
+	public void OnInitialiseFailed(string message) { }
+
+	// RVA: 0x38CD0B8 Offset: 0x38C90B8 VA: 0x38CD0B8 Slot: 13
+	public void OnRecordingStarted() { }
+
+	// RVA: 0x38CD140 Offset: 0x38C9140 VA: 0x38CD140 Slot: 14
+	public void OnRecordingStopped() { }
+
+	// RVA: 0x38CD1CC Offset: 0x38C91CC VA: 0x38CD1CC Slot: 15
+	public void OnRecordingFailed(string message) { }
+
+	// RVA: 0x38CD2A8 Offset: 0x38C92A8 VA: 0x38CD2A8 Slot: 16
+	public void OnRecordingAvailable(string message) { }
+
+	// RVA: 0x38CD394 Offset: 0x38C9394 VA: 0x38CD394 Slot: 17
+	public void OnPreviewOpened() { }
+
+	// RVA: 0x38CD398 Offset: 0x38C9398 VA: 0x38CD398 Slot: 18
+	public void OnPreviewClosed() { }
+
+	// RVA: 0x38CD39C Offset: 0x38C939C VA: 0x38CD39C
+	public void OnPreviewPlayed() { }
+
+	// RVA: 0x38CD3A0 Offset: 0x38C93A0 VA: 0x38CD3A0 Slot: 19
+	public void OnPreviewShared() { }
+
+	// RVA: 0x38CD3A4 Offset: 0x38C93A4 VA: 0x38CD3A4 Slot: 20
+	public void OnPreviewSaveScuessed(string filePath) { }
+
+	// RVA: 0x38CD48C Offset: 0x38C948C VA: 0x38CD48C Slot: 21
+	public void OnPreviewSaveFailed(string error) { }
+
+	// RVA: 0x38CD568 Offset: 0x38C9568 VA: 0x38CD568 Slot: 22
+	public void OnPreviewVideo(string filePath) { }
+
+	// RVA: 0x38CD640 Offset: 0x38C9640 VA: 0x38CD640 Slot: 23
+	public void OnDiscardVideo(string filePath) { }
+
+	// RVA: 0x38CD718 Offset: 0x38C9718 VA: 0x38CD718 Slot: 24
+	public void OnThumbnail(string input, string output) { }
+
+	// RVA: 0x38CD828 Offset: 0x38C9828 VA: 0x38CD828 Slot: 25
+	public void OnVideoInfo(string filePath, string size, string duration) { }
+
+	// RVA: 0x38CD958 Offset: 0x38C9958 VA: 0x38CD958 Slot: 26
+	public void OnVideoMuxerStart() { }
+
+	// RVA: 0x38CD9D4 Offset: 0x38C99D4 VA: 0x38CD9D4 Slot: 27
+	public void OnVideoMuxerProgress(int iValue) { }
+
+	// RVA: 0x38CDAA0 Offset: 0x38C9AA0 VA: 0x38CDAA0 Slot: 28
+	public void OnVideoMuxerEnd() { }
+
+	// RVA: 0x38CDB1C Offset: 0x38C9B1C VA: 0x38CDB1C Slot: 29
+	public void OnAudioEncodeProgress(int iValue) { }
+
+	// RVA: 0x38CCFD8 Offset: 0x38C8FD8 VA: 0x38CCFD8
+	private void Dispatch(Action action) { }
+
+	// RVA: 0x38CDC80 Offset: 0x38C9C80 VA: 0x38CDC80
+	public void .ctor() { }
+
+	[CompilerGenerated]
+	// RVA: 0x38CDCEC Offset: 0x38C9CEC VA: 0x38CDCEC
+	private void <OnInitialiseSuccess>b__51_0() { }
+
+	[CompilerGenerated]
+	// RVA: 0x38CDD60 Offset: 0x38C9D60 VA: 0x38CDD60
+	private void <OnRecordingStarted>b__53_0() { }
+
+	[CompilerGenerated]
+	// RVA: 0x38CDDD4 Offset: 0x38C9DD4 VA: 0x38CDDD4
+	private void <OnRecordingStopped>b__54_0() { }
+
+	[CompilerGenerated]
+	// RVA: 0x38CDE48 Offset: 0x38C9E48 VA: 0x38CDE48
+	private void <OnVideoMuxerStart>b__67_0() { }
+
+	[CompilerGenerated]
+	// RVA: 0x38CDE6C Offset: 0x38C9E6C VA: 0x38CDE6C
+	private void <OnVideoMuxerEnd>b__69_0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class ReplayKitDelegates.InitialiseCallback : MulticastDelegate // TypeDefIndex: 1019
+{
+	// Methods
+
+	// RVA: 0x38CE364 Offset: 0x38CA364 VA: 0x38CE364
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x38CE404 Offset: 0x38CA404 VA: 0x38CE404 Slot: 13
+	public virtual void Invoke(ReplayKitInitialisationState state, string message) { }
+
+	// RVA: 0x38CE418 Offset: 0x38CA418 VA: 0x38CE418 Slot: 14
+	public virtual IAsyncResult BeginInvoke(ReplayKitInitialisationState state, string message, AsyncCallback callback, object object) { }
+
+	// RVA: 0x38CE4AC Offset: 0x38CA4AC VA: 0x38CE4AC Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class ReplayKitDelegates.PreviewStateChangedCallback : MulticastDelegate // TypeDefIndex: 1020
+{
+	// Methods
+
+	// RVA: 0x38CE55C Offset: 0x38CA55C VA: 0x38CE55C
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x38CE5FC Offset: 0x38CA5FC VA: 0x38CE5FC Slot: 13
+	public virtual void Invoke(ReplayKitPreviewState state, string message) { }
+
+	// RVA: 0x38CE610 Offset: 0x38CA610 VA: 0x38CE610 Slot: 14
+	public virtual IAsyncResult BeginInvoke(ReplayKitPreviewState state, string message, AsyncCallback callback, object object) { }
+
+	// RVA: 0x38CE6A4 Offset: 0x38CA6A4 VA: 0x38CE6A4 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class ReplayKitDelegates.RecordingUIActionChangedCallback : MulticastDelegate // TypeDefIndex: 1021
+{
+	// Methods
+
+	// RVA: 0x38CE714 Offset: 0x38CA714 VA: 0x38CE714
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x38CE7B4 Offset: 0x38CA7B4 VA: 0x38CE7B4 Slot: 13
+	public virtual void Invoke(RecordingUIAction action) { }
+
+	// RVA: 0x38CE7C8 Offset: 0x38CA7C8 VA: 0x38CE7C8 Slot: 14
+	public virtual IAsyncResult BeginInvoke(RecordingUIAction action, AsyncCallback callback, object object) { }
+
+	// RVA: 0x38CE84C Offset: 0x38CA84C VA: 0x38CE84C Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class ReplayKitDelegates.OnRecordingPreviewAvailable : MulticastDelegate // TypeDefIndex: 1022
+{
+	// Methods
+
+	// RVA: 0x38CE934 Offset: 0x38CA934 VA: 0x38CE934
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x38CE9E8 Offset: 0x38CA9E8 VA: 0x38CE9E8 Slot: 13
+	public virtual void Invoke(string path, string error) { }
+
+	// RVA: 0x38CE9FC Offset: 0x38CA9FC VA: 0x38CE9FC Slot: 14
+	public virtual IAsyncResult BeginInvoke(string path, string error, AsyncCallback callback, object object) { }
+
+	// RVA: 0x38CEA24 Offset: 0x38CAA24 VA: 0x38CEA24 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class ReplayKitDelegates.OnRecordActionCallback : MulticastDelegate // TypeDefIndex: 1023
+{
+	// Methods
+
+	// RVA: 0x38CEAD4 Offset: 0x38CAAD4 VA: 0x38CEAD4
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x38CEB74 Offset: 0x38CAB74 VA: 0x38CEB74 Slot: 13
+	public virtual void Invoke(bool result, string message) { }
+
+	// RVA: 0x38CEB8C Offset: 0x38CAB8C VA: 0x38CEB8C Slot: 14
+	public virtual IAsyncResult BeginInvoke(bool result, string message, AsyncCallback callback, object object) { }
+
+	// RVA: 0x38CEC24 Offset: 0x38CAC24 VA: 0x38CEC24 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class ReplayKitDelegates.OnThumbnailCallback : MulticastDelegate // TypeDefIndex: 1024
+{
+	// Methods
+
+	// RVA: 0x38CED0C Offset: 0x38CAD0C VA: 0x38CED0C
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x38CEDC0 Offset: 0x38CADC0 VA: 0x38CEDC0 Slot: 13
+	public virtual void Invoke(string input, string output) { }
+
+	// RVA: 0x38CEDD4 Offset: 0x38CADD4 VA: 0x38CEDD4 Slot: 14
+	public virtual IAsyncResult BeginInvoke(string input, string output, AsyncCallback callback, object object) { }
+
+	// RVA: 0x38CEDFC Offset: 0x38CADFC VA: 0x38CEDFC Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class ReplayKitDelegates.OnVideoInfoCallback : MulticastDelegate // TypeDefIndex: 1025
+{
+	// Methods
+
+	// RVA: 0x38CEF18 Offset: 0x38CAF18 VA: 0x38CEF18
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x38CEFCC Offset: 0x38CAFCC VA: 0x38CEFCC Slot: 13
+	public virtual void Invoke(string path, string size, string duration) { }
+
+	// RVA: 0x38CEFE0 Offset: 0x38CAFE0 VA: 0x38CEFE0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(string path, string size, string duration, AsyncCallback callback, object object) { }
+
+	// RVA: 0x38CF00C Offset: 0x38CB00C VA: 0x38CF00C Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class ReplayKitDelegates.OnVideoMuxerActionCallback : MulticastDelegate // TypeDefIndex: 1026
+{
+	// Methods
+
+	// RVA: 0x38CF094 Offset: 0x38CB094 VA: 0x38CF094
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x38CF134 Offset: 0x38CB134 VA: 0x38CF134 Slot: 13
+	public virtual void Invoke(int result, int progress) { }
+
+	// RVA: 0x38CF148 Offset: 0x38CB148 VA: 0x38CF148 Slot: 14
+	public virtual IAsyncResult BeginInvoke(int result, int progress, AsyncCallback callback, object object) { }
+
+	// RVA: 0x38CF1E4 Offset: 0x38CB1E4 VA: 0x38CF1E4 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class ReplayKitDelegates.OnAudioEncodeProgressCallback : MulticastDelegate // TypeDefIndex: 1027
+{
+	// Methods
+
+	// RVA: 0x38CF254 Offset: 0x38CB254 VA: 0x38CF254
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x38CF2F4 Offset: 0x38CB2F4 VA: 0x38CF2F4 Slot: 13
+	public virtual void Invoke(int progress) { }
+
+	// RVA: 0x38CF308 Offset: 0x38CB308 VA: 0x38CF308 Slot: 14
+	public virtual IAsyncResult BeginInvoke(int progress, AsyncCallback callback, object object) { }
+
+	// RVA: 0x38CF38C Offset: 0x38CB38C VA: 0x38CF38C Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: VoxelBusters.ReplayKit
+public class ReplayKitDelegates // TypeDefIndex: 1028
+{
+	// Methods
+
+	// RVA: 0x38CE2B8 Offset: 0x38CA2B8 VA: 0x38CE2B8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: VoxelBusters.ReplayKit.Internal
+public interface INativeCallbackListener // TypeDefIndex: 1029
+{
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract void OnInitialiseSuccess();
+
+	// RVA: -1 Offset: -1 Slot: 1
+	public abstract void OnInitialiseFailed(string message);
+
+	// RVA: -1 Offset: -1 Slot: 2
+	public abstract void OnRecordingStarted();
+
+	// RVA: -1 Offset: -1 Slot: 3
+	public abstract void OnRecordingStopped();
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public abstract void OnRecordingFailed(string message);
+
+	// RVA: -1 Offset: -1 Slot: 5
+	public abstract void OnRecordingAvailable(string message);
+
+	// RVA: -1 Offset: -1 Slot: 6
+	public abstract void OnPreviewOpened();
+
+	// RVA: -1 Offset: -1 Slot: 7
+	public abstract void OnPreviewClosed();
+
+	// RVA: -1 Offset: -1 Slot: 8
+	public abstract void OnPreviewShared();
+
+	// RVA: -1 Offset: -1 Slot: 9
+	public abstract void OnPreviewSaveScuessed(string filePath);
+
+	// RVA: -1 Offset: -1 Slot: 10
+	public abstract void OnPreviewSaveFailed(string error);
+
+	// RVA: -1 Offset: -1 Slot: 11
+	public abstract void OnPreviewVideo(string filePath);
+
+	// RVA: -1 Offset: -1 Slot: 12
+	public abstract void OnDiscardVideo(string filePath);
+
+	// RVA: -1 Offset: -1 Slot: 13
+	public abstract void OnThumbnail(string input, string output);
+
+	// RVA: -1 Offset: -1 Slot: 14
+	public abstract void OnVideoInfo(string filePath, string size, string duration);
+
+	// RVA: -1 Offset: -1 Slot: 15
+	public abstract void OnVideoMuxerStart();
+
+	// RVA: -1 Offset: -1 Slot: 16
+	public abstract void OnVideoMuxerProgress(int iValue);
+
+	// RVA: -1 Offset: -1 Slot: 17
+	public abstract void OnVideoMuxerEnd();
+
+	// RVA: -1 Offset: -1 Slot: 18
+	public abstract void OnAudioEncodeProgress(int iValue);
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: VoxelBusters.ReplayKit.Internal
+public interface INativeService // TypeDefIndex: 1030
+{
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract void Initialise(INativeCallbackListener listener);
+
+	// RVA: -1 Offset: -1 Slot: 1
+	public abstract bool IsRecordingAPIAvailable();
+
+	// RVA: -1 Offset: -1 Slot: 2
+	public abstract bool IsRecording();
+
+	// RVA: -1 Offset: -1 Slot: 3
+	public abstract bool IsPreviewAvailable();
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public abstract bool IsCameraEnabled();
+
+	// RVA: -1 Offset: -1 Slot: 5
+	public abstract bool IsExistVideo(string filePath);
+
+	// RVA: -1 Offset: -1 Slot: 6
+	public abstract void SetMicrophoneStatus(bool enable);
+
+	// RVA: -1 Offset: -1 Slot: 7
+	public abstract void SetRecordingUIVisibility(bool show);
+
+	// RVA: -1 Offset: -1 Slot: 8
+	public abstract void PrepareRecording();
+
+	// RVA: -1 Offset: -1 Slot: 9
+	public abstract void StartRecording(string video_path);
+
+	// RVA: -1 Offset: -1 Slot: 10
+	public abstract void SetAudio(string filePath, int sampleRate, int channels);
+
+	// RVA: -1 Offset: -1 Slot: 11
+	public abstract void WriteAudio(float[] data, int channels);
+
+	// RVA: -1 Offset: -1 Slot: 12
+	public abstract void WriteRecordoPauseTime(long millisecond);
+
+	// RVA: -1 Offset: -1 Slot: 13
+	public abstract void StopRecording(string sandbox_video_path);
+
+	// RVA: -1 Offset: -1 Slot: 14
+	public abstract bool Preview();
+
+	// RVA: -1 Offset: -1 Slot: 15
+	public abstract bool Discard(string filePath);
+
+	// RVA: -1 Offset: -1 Slot: 16
+	public abstract bool Discard();
+
+	// RVA: -1 Offset: -1 Slot: 17
+	public abstract string GetPreviewFilePath();
+
+	// RVA: -1 Offset: -1 Slot: 18
+	public abstract void SavePreview(string filename, string outputPath);
+
+	// RVA: -1 Offset: -1 Slot: 19
+	public abstract void SharePreview(string text, string subject);
+
+	// RVA: -1 Offset: -1 Slot: 20
+	public abstract void DiscardVideo(string filePath);
+
+	// RVA: -1 Offset: -1 Slot: 21
+	public abstract void PreviewVideo(string filePath);
+
+	// RVA: -1 Offset: -1 Slot: 22
+	public abstract void GetThumbnail(string input, int kind, string output);
+
+	// RVA: -1 Offset: -1 Slot: 23
+	public abstract void GetVideoInfo(string filePath);
+
+	// RVA: -1 Offset: -1 Slot: 24
+	public abstract string GetDeviceHardWare();
+
+	// RVA: -1 Offset: -1 Slot: 25
+	public abstract void PreviewVideoFinish();
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: VoxelBusters.ReplayKit.Internal
+public class UnityThreadDispatcher : SingletonPattern<UnityThreadDispatcher> // TypeDefIndex: 1031
+{
+	// Fields
+	private Queue<Action> m_queue; // 0xFFB3A4A3
+
+	// Methods
+
+	[RuntimeInitializeOnLoadMethod(1)]
+	// RVA: 0x38CF398 Offset: 0x38CB398 VA: 0x38CF398
+	private static void OnBeforeSceneLoad() { }
+
+	// RVA: 0x38CF3FC Offset: 0x38CB3FC VA: 0x38CF3FC
+	private void Update() { }
+
+	// RVA: 0x38CDBE8 Offset: 0x38C9BE8 VA: 0x38CDBE8
+	public static void Enqueue(Action action) { }
+
+	// RVA: 0x38CF488 Offset: 0x38CB488 VA: 0x38CF488
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: VoxelBusters.ReplayKit.Internal
+public enum NativeVideoQualityType // TypeDefIndex: 1032
+{
+	// Fields
+	public int value__; // 0xB5869696
+	public const NativeVideoQualityType QUALITY_MATCH_SCREEN_SIZE = 0;
+	public const NativeVideoQualityType QUALITY_1080P = 1;
+	public const NativeVideoQualityType QUALITY_720P = 2;
+	public const NativeVideoQualityType QUALITY_480P = 3;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+internal class ReplayKitAndroid.Native.Class // TypeDefIndex: 1033
+{
+	// Fields
+	internal const string NAME = "com.voxelbusters.androidlib.ReplayKitHandler";
+
+	// Methods
+
+	// RVA: 0x38D2CC0 Offset: 0x38CECC0 VA: 0x38D2CC0
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+internal class ReplayKitAndroid.Native.Methods // TypeDefIndex: 1034
+{
+	// Fields
+	internal const string IS_RECORDING_API_AVAILABLE = "isRecordingApiAvailable";
+	internal const string IS_RECORDING = "isRecording";
+	internal const string IS_PREVIEW_AVAILABLE = "isPreviewAvailable";
+	internal const string IS_CAMERA_ENABLED = "isCameraEnabled";
+	internal const string IS_EXIST_VIDEO = "isExistVideo";
+	internal const string INITIALISE = "initialise";
+	internal const string SET_APP_AUDIO_PRIORITY = "setIsAppAudioPriorityOverMicrophone";
+	internal const string PREPARE_RECORDING = "prepareRecording";
+	internal const string START_RECORDING = "startRecording";
+	internal const string STOP_RECORDING = "stopRecording";
+	internal const string PREVIEW_RECORDING = "previewRecording";
+	internal const string DISCARD_RECORDING = "discardRecording";
+	internal const string PREVIEW_FILE_PATH = "getRecordingPath";
+	internal const string SAVE_PREVIEW = "savePreviewRecordingToGallery";
+	internal const string SHARE_PREVIEW = "sharePreviewRecording";
+	internal const string SET_MICROPHONE_STATUS = "setMicrophoneStatus";
+	internal const string SET_RECORDING_UI_VISIBILITY = "setRecordingUIVisibility";
+	internal const string DISCARD_VIDEO = "discardvideo";
+	internal const string GET_THUMBNAIL = "getThumbnail";
+	internal const string GET_VIDEO_INFO = "getVideoInfo";
+	internal const string PREVIEW_VIDEO = "previewvideo";
+	internal const string SET_AUDIO = "setAudio";
+	internal const string WRITE_AUDIO = "writeAudioData";
+	internal const string WRITE_AUDIO_PAUSE_TIME = "writeAudioPauseTime";
+	internal const string SHOW_MESSAGE = "showMessage";
+	internal const string DevideHardWare = "getDeviceHardWare";
+
+	// Methods
+
+	// RVA: 0x38D2CC8 Offset: 0x38CECC8 VA: 0x38D2CC8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+private class ReplayKitAndroid.Native // TypeDefIndex: 1035
+{
+	// Methods
+
+	// RVA: 0x38D2CB8 Offset: 0x38CECB8 VA: 0x38D2CB8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+[Serializable]
+private sealed class ReplayKitAndroid.<>c // TypeDefIndex: 1036
+{
+	// Fields
+	public static readonly <>c <>9; // 0x80BCB1B5
+	public static Func<bool> <>9__5_0; // 0xA9A8BFA2
+
+	// Methods
+
+	// RVA: 0x38D2CD0 Offset: 0x38CECD0 VA: 0x38D2CD0
+	private static void .cctor() { }
+
+	// RVA: 0x38D2D38 Offset: 0x38CED38 VA: 0x38D2D38
+	public void .ctor() { }
+
+	// RVA: 0x38D2D40 Offset: 0x38CED40 VA: 0x38D2D40
+	internal bool <IsRecordingAPIAvailable>b__5_0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitAndroid.<>c__DisplayClass10_0 // TypeDefIndex: 1037
+{
+	// Fields
+	public ReplayKitAndroid <>4__this; // 0xA0A0B3FE
+	public bool enable; // 0xF9E7E2F8
+
+	// Methods
+
+	// RVA: 0x38CFF78 Offset: 0x38CBF78 VA: 0x38CFF78
+	public void .ctor() { }
+
+	// RVA: 0x38D2F5C Offset: 0x38CEF5C VA: 0x38D2F5C
+	internal void <SetMicrophoneStatus>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitAndroid.<>c__DisplayClass11_0 // TypeDefIndex: 1038
+{
+	// Fields
+	public ReplayKitAndroid <>4__this; // 0x85F0EAF0
+	public bool show; // 0xA0A5A3BE
+
+	// Methods
+
+	// RVA: 0x38D0080 Offset: 0x38CC080 VA: 0x38D0080
+	public void .ctor() { }
+
+	// RVA: 0x38D3068 Offset: 0x38CF068 VA: 0x38D3068
+	internal void <SetRecordingUIVisibility>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitAndroid.<>c__DisplayClass14_0 // TypeDefIndex: 1039
+{
+	// Fields
+	public ReplayKitAndroid <>4__this; // 0xA4A2BFA0
+	public string video_path; // 0xB9F0B4B5
+
+	// Methods
+
+	// RVA: 0x38D3174 Offset: 0x38CF174 VA: 0x38D3174
+	public void .ctor() { }
+
+	// RVA: 0x38D317C Offset: 0x38CF17C VA: 0x38D317C
+	internal void <StartRecordingInternal>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitAndroid.<>c__DisplayClass16_0 // TypeDefIndex: 1040
+{
+	// Fields
+	public ReplayKitAndroid <>4__this; // 0xA2B5A4BE
+	public string sandbox_video_path; // 0xF0BCB1BE
+
+	// Methods
+
+	// RVA: 0x38D33F8 Offset: 0x38CF3F8 VA: 0x38D33F8
+	public void .ctor() { }
+
+	// RVA: 0x38D3400 Offset: 0x38CF400 VA: 0x38D3400
+	internal void <StopRecordingInternal>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitAndroid.<>c__DisplayClass18_0 // TypeDefIndex: 1041
+{
+	// Fields
+	public ReplayKitAndroid <>4__this; // 0xBCBCB1B3
+	public string filePath; // 0xA2BFB6F0
+
+	// Methods
+
+	// RVA: 0x38D07E4 Offset: 0x38CC7E4 VA: 0x38D07E4
+	public void .ctor() { }
+
+	// RVA: 0x38D34D8 Offset: 0x38CF4D8 VA: 0x38D34D8
+	internal bool <Discard>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitAndroid.<>c__DisplayClass21_0 // TypeDefIndex: 1042
+{
+	// Fields
+	public ReplayKitAndroid <>4__this; // 0xE29C99F0
+	public string filename; // 0xEA808093
+	public string outputPath; // 0xBCB1B582
+
+	// Methods
+
+	// RVA: 0x38D0ABC Offset: 0x38CCABC VA: 0x38D0ABC
+	public void .ctor() { }
+
+	// RVA: 0x38D35C4 Offset: 0x38CF5C4 VA: 0x38D35C4
+	internal void <SavePreview>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitAndroid.<>c__DisplayClass22_0 // TypeDefIndex: 1043
+{
+	// Fields
+	public ReplayKitAndroid <>4__this; // 0xA8BFA280
+	public string text; // 0x99EAEAA9
+	public string subject; // 0xA2B5A4BE
+
+	// Methods
+
+	// RVA: 0x38D0BDC Offset: 0x38CCBDC VA: 0x38D0BDC
+	public void .ctor() { }
+
+	// RVA: 0x38D36DC Offset: 0x38CF6DC VA: 0x38D36DC
+	internal void <SharePreview>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitAndroid.<>c__DisplayClass23_0 // TypeDefIndex: 1044
+{
+	// Fields
+	public ReplayKitAndroid <>4__this; // 0x97BCB1BE
+	public string filePath; // 0xA280A4B5
+
+	// Methods
+
+	// RVA: 0x38D0CE8 Offset: 0x38CCCE8 VA: 0x38D0CE8
+	public void .ctor() { }
+
+	// RVA: 0x38D37F4 Offset: 0x38CF7F4 VA: 0x38D37F4
+	internal void <DiscardVideo>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitAndroid.<>c__DisplayClass24_0 // TypeDefIndex: 1045
+{
+	// Fields
+	public ReplayKitAndroid <>4__this; // 0x84A9A8BF
+	public string input; // 0xF0B5A0A9
+
+	// Methods
+
+	// RVA: 0x38D0DF4 Offset: 0x38CCDF4 VA: 0x38D0DF4
+	public void .ctor() { }
+
+	// RVA: 0x38D38CC Offset: 0x38CF8CC VA: 0x38D38CC
+	internal void <PreviewVideo>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitAndroid.<>c__DisplayClass25_0 // TypeDefIndex: 1046
+{
+	// Fields
+	public ReplayKitAndroid <>4__this; // 0xA983F0FD
+	public string input; // 0xBDB5A4A3
+	public int kind; // 0xBEA582FE
+	public string output; // 0xB5BDB9A4
+
+	// Methods
+
+	// RVA: 0x38D0F28 Offset: 0x38CCF28 VA: 0x38D0F28
+	public void .ctor() { }
+
+	// RVA: 0x38D39A4 Offset: 0x38CF9A4 VA: 0x38D39A4
+	internal void <GetThumbnail>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitAndroid.<>c__DisplayClass26_0 // TypeDefIndex: 1047
+{
+	// Fields
+	public ReplayKitAndroid <>4__this; // 0xBDB582FE
+	public string filePath; // 0xBEB9A4BF
+
+	// Methods
+
+	// RVA: 0x38D1034 Offset: 0x38CD034 VA: 0x38D1034
+	public void .ctor() { }
+
+	// RVA: 0x38D3B28 Offset: 0x38CFB28 VA: 0x38D3B28
+	internal void <GetVideoInfo>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitAndroid.<>c__DisplayClass27_0 // TypeDefIndex: 1048
+{
+	// Fields
+	public ReplayKitAndroid <>4__this; // 0xA3B9F0B7
+	public string filePath; // 0xA4BFBEF0
+	public int sampleRate; // 0xA0A5A3F0
+	public int channels; // 0xA4A2BFA0
+
+	// Methods
+
+	// RVA: 0x38D115C Offset: 0x38CD15C VA: 0x38D115C
+	public void .ctor() { }
+
+	// RVA: 0x38D3C00 Offset: 0x38CFC00 VA: 0x38D3C00
+	internal void <SetAudio>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitAndroid.<>c__DisplayClass28_0 // TypeDefIndex: 1049
+{
+	// Fields
+	public ReplayKitAndroid <>4__this; // 0xD0FEB4B5
+	public float[] data; // 0xBCBCA59E
+	public int channels; // 0xB5BCB2B1
+
+	// Methods
+
+	// RVA: 0x38D1274 Offset: 0x38CD274 VA: 0x38D1274
+	public void .ctor() { }
+
+	// RVA: 0x38D3DFC Offset: 0x38CFDFC VA: 0x38D3DFC
+	internal void <WriteAudio>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitAndroid.<>c__DisplayClass29_0 // TypeDefIndex: 1050
+{
+	// Fields
+	public ReplayKitAndroid <>4__this; // 0x99D0E1B0
+	public long microsecond; // 0xE6E1A4BE
+
+	// Methods
+
+	// RVA: 0x38D1378 Offset: 0x38CD378 VA: 0x38D1378
+	public void .ctor() { }
+
+	// RVA: 0x38D3F48 Offset: 0x38CFF48 VA: 0x38D3F48
+	internal void <WriteRecordoPauseTime>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitAndroid.<>c__DisplayClass30_0 // TypeDefIndex: 1051
+{
+	// Fields
+	public string cpuName; // 0xBDA5BE95
+	public ReplayKitAndroid <>4__this; // 0xB1BE85D0
+
+	// Methods
+
+	// RVA: 0x38D14F4 Offset: 0x38CD4F4 VA: 0x38D14F4
+	public void .ctor() { }
+
+	// RVA: 0x38D4054 Offset: 0x38D0054 VA: 0x38D4054
+	internal void <GetDeviceHardWare>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitAndroid.<>c__DisplayClass9_0 // TypeDefIndex: 1052
+{
+	// Fields
+	public string filePath; // 0xF0B5BCB2
+
+	// Methods
+
+	// RVA: 0x38CFE70 Offset: 0x38CBE70 VA: 0x38CFE70
+	public void .ctor() { }
+
+	// RVA: 0x38D4100 Offset: 0x38D0100 VA: 0x38D4100
+	internal bool <IsExistVideo>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitAndroid.<ResumeAudioInternal>d__34 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 1053
+{
+	// Fields
+	private int <>1__state; // 0xBCF0BFA4
+	private object <>2__current; // 0xF0B4B1BF
+	public ReplayKitAndroid <>4__this; // 0xB1BEA9B4
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x38D158C Offset: 0x38CD58C VA: 0x38D158C
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHidden]
+	// RVA: 0x38D4378 Offset: 0x38D0378 VA: 0x38D4378 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x38D437C Offset: 0x38D037C VA: 0x38D437C Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38D469C Offset: 0x38D069C VA: 0x38D469C Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38D46A4 Offset: 0x38D06A4 VA: 0x38D46A4 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38D46DC Offset: 0x38D06DC VA: 0x38D46DC Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitAndroid.<StartRecordingInternal>d__14 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 1054
+{
+	// Fields
+	private int <>1__state; // 0xF0B3B9BD
+	private object <>2__current; // 0xA2B2B9BC
+	public ReplayKitAndroid <>4__this; // 0xF0A9A2B1
+	public string video_path; // 0xBE99D0F7
+	private <>c__DisplayClass14_0 <>8__1; // 0xBEA2B5A4
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x38D043C Offset: 0x38CC43C VA: 0x38D043C
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHidden]
+	// RVA: 0x38D46E4 Offset: 0x38D06E4 VA: 0x38D46E4 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x38D46E8 Offset: 0x38D06E8 VA: 0x38D46E8 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38D4A48 Offset: 0x38D0A48 VA: 0x38D4A48 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38D4A50 Offset: 0x38D0A50 VA: 0x38D4A50 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38D4A88 Offset: 0x38D0A88 VA: 0x38D4A88 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitAndroid.<StopRecordingInternal>d__16 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 1055
+{
+	// Fields
+	private int <>1__state; // 0xA291BCB1
+	private object <>2__current; // 0x8FA9B1A2
+	public ReplayKitAndroid <>4__this; // 0xBE95998F
+	public string sandbox_video_path; // 0xA2B5BDA5
+	private <>c__DisplayClass16_0 <>8__1; // 0xB5BCB2B1
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x38D05D0 Offset: 0x38CC5D0 VA: 0x38D05D0
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHidden]
+	// RVA: 0x38D4A90 Offset: 0x38D0A90 VA: 0x38D4A90 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x38D4A94 Offset: 0x38D0A94 VA: 0x38D4A94 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38D4C08 Offset: 0x38D0C08 VA: 0x38D4C08 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38D4C10 Offset: 0x38D0C10 VA: 0x38D4C10 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38D4C48 Offset: 0x38D0C48 VA: 0x38D4C48 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: VoxelBusters.ReplayKit.Internal
+public class ReplayKitAndroid : MonoBehaviour, INativeService // TypeDefIndex: 1056
+{
+	// Fields
+	private INativeCallbackListener m_listener; // 0xBE99D08F
+	private Dictionary<AudioSource, float> collection; // 0xBEA2B5A4
+	private MinimalEncoder m_minimalEncoder; // 0xA291BCB1
+	private AndroidJavaObject m_PluginClass; // 0x8FA9B1A2
+
+	// Properties
+	private AndroidJavaObject Plugin { get; }
+
+	// Methods
+
+	// RVA: 0x38CF548 Offset: 0x38CB548 VA: 0x38CF548
+	public void .ctor() { }
+
+	// RVA: 0x38CF5D0 Offset: 0x38CB5D0 VA: 0x38CF5D0 Slot: 4
+	public void Initialise(INativeCallbackListener listener) { }
+
+	// RVA: 0x38CF834 Offset: 0x38CB834 VA: 0x38CF834 Slot: 5
+	public bool IsRecordingAPIAvailable() { }
+
+	// RVA: 0x38CFB00 Offset: 0x38CBB00 VA: 0x38CFB00 Slot: 6
+	public bool IsRecording() { }
+
+	// RVA: 0x38CFBCC Offset: 0x38CBBCC VA: 0x38CFBCC Slot: 7
+	public bool IsPreviewAvailable() { }
+
+	// RVA: 0x38CFC98 Offset: 0x38CBC98 VA: 0x38CFC98 Slot: 8
+	public bool IsCameraEnabled() { }
+
+	// RVA: 0x38CFD64 Offset: 0x38CBD64 VA: 0x38CFD64 Slot: 9
+	public bool IsExistVideo(string filePath) { }
+
+	// RVA: 0x38CFE78 Offset: 0x38CBE78 VA: 0x38CFE78 Slot: 10
+	public void SetMicrophoneStatus(bool enable) { }
+
+	// RVA: 0x38CFF80 Offset: 0x38CBF80 VA: 0x38CFF80 Slot: 11
+	public void SetRecordingUIVisibility(bool show) { }
+
+	// RVA: 0x38D0088 Offset: 0x38CC088 VA: 0x38D0088 Slot: 12
+	public void PrepareRecording() { }
+
+	// RVA: 0x38D0178 Offset: 0x38CC178 VA: 0x38D0178 Slot: 13
+	public void StartRecording(string video_path) { }
+
+	[IteratorStateMachine(typeof(<StartRecordingInternal>d__14))]
+	// RVA: 0x38D03B4 Offset: 0x38CC3B4 VA: 0x38D03B4
+	private IEnumerator StartRecordingInternal(string video_path) { }
+
+	// RVA: 0x38D0464 Offset: 0x38CC464 VA: 0x38D0464 Slot: 17
+	public void StopRecording(string sandbox_video_path) { }
+
+	[IteratorStateMachine(typeof(<StopRecordingInternal>d__16))]
+	// RVA: 0x38D0548 Offset: 0x38CC548 VA: 0x38D0548
+	private IEnumerator StopRecordingInternal(string sandbox_video_path) { }
+
+	// RVA: 0x38D05F8 Offset: 0x38CC5F8 VA: 0x38D05F8 Slot: 18
+	public bool Preview() { }
+
+	// RVA: 0x38D06C4 Offset: 0x38CC6C4 VA: 0x38D06C4 Slot: 19
+	public bool Discard(string filePath) { }
+
+	// RVA: 0x38D07EC Offset: 0x38CC7EC VA: 0x38D07EC Slot: 20
+	public bool Discard() { }
+
+	// RVA: 0x38D08B8 Offset: 0x38CC8B8 VA: 0x38D08B8 Slot: 21
+	public string GetPreviewFilePath() { }
+
+	// RVA: 0x38D09A4 Offset: 0x38CC9A4 VA: 0x38D09A4 Slot: 22
+	public void SavePreview(string filename, string outputPath) { }
+
+	// RVA: 0x38D0AC4 Offset: 0x38CCAC4 VA: 0x38D0AC4 Slot: 23
+	public void SharePreview(string text, string subject) { }
+
+	// RVA: 0x38D0BE4 Offset: 0x38CCBE4 VA: 0x38D0BE4 Slot: 24
+	public void DiscardVideo(string filePath) { }
+
+	// RVA: 0x38D0CF0 Offset: 0x38CCCF0 VA: 0x38D0CF0 Slot: 25
+	public void PreviewVideo(string input) { }
+
+	// RVA: 0x38D0DFC Offset: 0x38CCDFC VA: 0x38D0DFC Slot: 26
+	public void GetThumbnail(string input, int kind, string output) { }
+
+	// RVA: 0x38D0F30 Offset: 0x38CCF30 VA: 0x38D0F30 Slot: 27
+	public void GetVideoInfo(string filePath) { }
+
+	// RVA: 0x38D103C Offset: 0x38CD03C VA: 0x38D103C Slot: 14
+	public void SetAudio(string filePath, int sampleRate, int channels) { }
+
+	// RVA: 0x38D1164 Offset: 0x38CD164 VA: 0x38D1164 Slot: 15
+	public void WriteAudio(float[] data, int channels) { }
+
+	// RVA: 0x38D127C Offset: 0x38CD27C VA: 0x38D127C Slot: 16
+	public void WriteRecordoPauseTime(long microsecond) { }
+
+	// RVA: 0x38D1380 Offset: 0x38CD380 VA: 0x38D1380 Slot: 28
+	public string GetDeviceHardWare() { }
+
+	// RVA: 0x38D14FC Offset: 0x38CD4FC VA: 0x38D14FC Slot: 29
+	public void PreviewVideoFinish() { }
+
+	// RVA: 0x38D01C8 Offset: 0x38CC1C8 VA: 0x38D01C8
+	private void PauseAudio() { }
+
+	// RVA: 0x38D1500 Offset: 0x38CD500 VA: 0x38D1500
+	private void ResumeAudio() { }
+
+	[IteratorStateMachine(typeof(<ResumeAudioInternal>d__34))]
+	// RVA: 0x38D1520 Offset: 0x38CD520 VA: 0x38D1520
+	private IEnumerator ResumeAudioInternal() { }
+
+	// RVA: 0x38D15B4 Offset: 0x38CD5B4 VA: 0x38D15B4
+	public void OnReplayKitInitialiseSuccess(string message) { }
+
+	// RVA: 0x38D1660 Offset: 0x38CD660 VA: 0x38D1660
+	public void OnReplayKitInitialiseFailed(string message) { }
+
+	// RVA: 0x38D1720 Offset: 0x38CD720 VA: 0x38D1720
+	public void OnReplayKitRecordingStarted(string message) { }
+
+	// RVA: 0x38D17E8 Offset: 0x38CD7E8 VA: 0x38D17E8
+	public void OnReplayKitRecordingStopped(string message) { }
+
+	// RVA: 0x38D18B0 Offset: 0x38CD8B0 VA: 0x38D18B0
+	public void OnReplayKitRecordingAvailable(string message) { }
+
+	// RVA: 0x38D1970 Offset: 0x38CD970 VA: 0x38D1970
+	public void OnReplayKitRecordingFailed(string message) { }
+
+	// RVA: 0x38D1A48 Offset: 0x38CDA48 VA: 0x38D1A48
+	public void OnReplayKitPreviewOpened(string message) { }
+
+	// RVA: 0x38D1AF8 Offset: 0x38CDAF8 VA: 0x38D1AF8
+	public void OnReplayKitPreviewClosed(string message) { }
+
+	// RVA: 0x38D1BA8 Offset: 0x38CDBA8 VA: 0x38D1BA8
+	public void OnReplayKitPreviewShared(string message) { }
+
+	// RVA: 0x38D1C58 Offset: 0x38CDC58 VA: 0x38D1C58
+	public void OnReplayKitPreviewSaveSuccess(string message) { }
+
+	// RVA: 0x38D1D18 Offset: 0x38CDD18 VA: 0x38D1D18
+	public void OnReplayKitPreviewSaveFailed(string message) { }
+
+	// RVA: 0x38D1DD8 Offset: 0x38CDDD8 VA: 0x38D1DD8
+	public void OnReplayKitPreviewVideo(string message) { }
+
+	// RVA: 0x38D1E98 Offset: 0x38CDE98 VA: 0x38D1E98
+	public void OnReplayKitDiscardVideoFinished(string message) { }
+
+	// RVA: 0x38D1F58 Offset: 0x38CDF58 VA: 0x38D1F58
+	public void OnReplayKitGetThumbnail(string message) { }
+
+	// RVA: 0x38D20FC Offset: 0x38CE0FC VA: 0x38D20FC
+	public void OnReplayKitGetVideoInfo(string message) { }
+
+	// RVA: 0x38D22BC Offset: 0x38CE2BC VA: 0x38D22BC
+	public void OnReplayKitMuxerStart(string message) { }
+
+	// RVA: 0x38D236C Offset: 0x38CE36C VA: 0x38D236C
+	public void OnReplayKitMuxerProgress(string message) { }
+
+	// RVA: 0x38D245C Offset: 0x38CE45C VA: 0x38D245C
+	public void OnReplayKitMuxerEnd(string message) { }
+
+	// RVA: 0x38D250C Offset: 0x38CE50C VA: 0x38D250C
+	public void OnReplayKitAudioEncodeProgress(string message) { }
+
+	// RVA: 0x38CF798 Offset: 0x38CB798 VA: 0x38CF798
+	private AndroidJavaObject get_Plugin() { }
+
+	[CompilerGenerated]
+	// RVA: 0x38D25FC Offset: 0x38CE5FC VA: 0x38D25FC
+	private void <Initialise>b__4_0() { }
+
+	[CompilerGenerated]
+	// RVA: 0x38D2680 Offset: 0x38CE680 VA: 0x38D2680
+	private bool <IsRecording>b__6_0() { }
+
+	[CompilerGenerated]
+	// RVA: 0x38D2718 Offset: 0x38CE718 VA: 0x38D2718
+	private bool <IsPreviewAvailable>b__7_0() { }
+
+	[CompilerGenerated]
+	// RVA: 0x38D27B0 Offset: 0x38CE7B0 VA: 0x38D27B0
+	private bool <IsCameraEnabled>b__8_0() { }
+
+	[CompilerGenerated]
+	// RVA: 0x38D2848 Offset: 0x38CE848 VA: 0x38D2848
+	private void <PrepareRecording>b__12_0() { }
+
+	[CompilerGenerated]
+	// RVA: 0x38D28CC Offset: 0x38CE8CC VA: 0x38D28CC
+	private bool <Preview>b__17_0() { }
+
+	[CompilerGenerated]
+	// RVA: 0x38D2964 Offset: 0x38CE964 VA: 0x38D2964
+	private bool <Discard>b__19_0() { }
+
+	[CompilerGenerated]
+	// RVA: 0x38D29FC Offset: 0x38CE9FC VA: 0x38D29FC
+	private string <GetPreviewFilePath>b__20_0() { }
+
+	[CompilerGenerated]
+	// RVA: 0x38D2A94 Offset: 0x38CEA94 VA: 0x38D2A94
+	private void <get_Plugin>b__57_0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: VoxelBusters.ReplayKit.Internal
+public class SafeAndroidJNICall // TypeDefIndex: 1057
+{
+	// Methods
+
+	// RVA: 0x38CF940 Offset: 0x38CB940 VA: 0x38CF940
+	public static bool SafeCall(Action androidJavaCall, string tag = "AndroidJNI") { }
+
+	// RVA: -1 Offset: -1
+	public static T SafeCall<T>(Func<T> androidJavaCall, T defaultValue, string tag = "AndroidJNI") { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-SafeAndroidJNICall.SafeCall<bool>
+	|-SafeAndroidJNICall.SafeCall<object>
+	|-SafeAndroidJNICall.SafeCall<__Il2CppFullySharedGenericType>
+	*/
+
+	// RVA: 0x38D4C50 Offset: 0x38D0C50 VA: 0x38D4C50
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ReplayKitDefaultPlatform.<SavingVideo>d__23 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 1058
+{
+	// Fields
+	private int <>1__state; // 0xB582998F
+	private object <>2__current; // 0xBE9FB4B1
+	public ReplayKitDefaultPlatform <>4__this; // 0xBF93A9BC
+	public string filename; // 0xB3B5BCBC
+	private int <progress>5__2; // 0xBEBFB9A4
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x38D512C Offset: 0x38D112C VA: 0x38D512C
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHidden]
+	// RVA: 0x38D562C Offset: 0x38D162C VA: 0x38D562C Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x38D5630 Offset: 0x38D1630 VA: 0x38D5630 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38D58F4 Offset: 0x38D18F4 VA: 0x38D58F4 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38D58FC Offset: 0x38D18FC VA: 0x38D58FC Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38D5934 Offset: 0x38D1934 VA: 0x38D5934 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: VoxelBusters.ReplayKit.Internal
+public class ReplayKitDefaultPlatform : MonoBehaviour, INativeService // TypeDefIndex: 1059
+{
+	// Fields
+	private INativeCallbackListener m_listener; // 0xBE99D08F
+	private bool m_isRecording; // 0x9FA8B5B4
+	private bool m_isPreviewAvailable; // 0xB69FA4A5
+	private string m_previewVideoFile; // 0xB7BEB182
+
+	// Methods
+
+	// RVA: 0x38D4C58 Offset: 0x38D0C58 VA: 0x38D4C58 Slot: 4
+	public void Initialise(INativeCallbackListener listener) { }
+
+	// RVA: 0x38D4D48 Offset: 0x38D0D48 VA: 0x38D4D48 Slot: 8
+	public bool IsCameraEnabled() { }
+
+	// RVA: 0x38D4D50 Offset: 0x38D0D50 VA: 0x38D4D50 Slot: 7
+	public bool IsPreviewAvailable() { }
+
+	// RVA: 0x38D4D58 Offset: 0x38D0D58 VA: 0x38D4D58 Slot: 6
+	public bool IsRecording() { }
+
+	// RVA: 0x38D4D40 Offset: 0x38D0D40 VA: 0x38D4D40 Slot: 5
+	public bool IsRecordingAPIAvailable() { }
+
+	// RVA: 0x38D4D60 Offset: 0x38D0D60 VA: 0x38D4D60 Slot: 9
+	public bool IsExistVideo(string filePath) { }
+
+	// RVA: 0x38D4D68 Offset: 0x38D0D68 VA: 0x38D4D68 Slot: 10
+	public void SetMicrophoneStatus(bool enable) { }
+
+	// RVA: 0x38D4D6C Offset: 0x38D0D6C VA: 0x38D4D6C Slot: 11
+	public void SetRecordingUIVisibility(bool show) { }
+
+	// RVA: 0x38D4DD4 Offset: 0x38D0DD4 VA: 0x38D4DD4 Slot: 12
+	public void PrepareRecording() { }
+
+	// RVA: 0x38D4E3C Offset: 0x38D0E3C VA: 0x38D4E3C Slot: 13
+	public void StartRecording(string video_path) { }
+
+	// RVA: 0x38D4EF4 Offset: 0x38D0EF4 VA: 0x38D4EF4 Slot: 14
+	public void SetAudio(string filePath, int sampleRate, int channels) { }
+
+	// RVA: 0x38D4EF8 Offset: 0x38D0EF8 VA: 0x38D4EF8 Slot: 15
+	public void WriteAudio(float[] data, int channels) { }
+
+	// RVA: 0x38D4EFC Offset: 0x38D0EFC VA: 0x38D4EFC Slot: 16
+	public void WriteRecordoPauseTime(long microsecond) { }
+
+	// RVA: 0x38D4F00 Offset: 0x38D0F00 VA: 0x38D4F00 Slot: 17
+	public void StopRecording(string sandbox_video_path) { }
+
+	// RVA: 0x38D5044 Offset: 0x38D1044 VA: 0x38D5044 Slot: 18
+	public bool Preview() { }
+
+	// RVA: 0x38D504C Offset: 0x38D104C VA: 0x38D504C Slot: 19
+	public bool Discard(string filePath) { }
+
+	// RVA: 0x38D505C Offset: 0x38D105C VA: 0x38D505C Slot: 20
+	public bool Discard() { }
+
+	// RVA: 0x38D506C Offset: 0x38D106C VA: 0x38D506C Slot: 21
+	public string GetPreviewFilePath() { }
+
+	// RVA: 0x38D5084 Offset: 0x38D1084 VA: 0x38D5084 Slot: 22
+	public void SavePreview(string filename, string outputPath) { }
+
+	[IteratorStateMachine(typeof(<SavingVideo>d__23))]
+	// RVA: 0x38D50A4 Offset: 0x38D10A4 VA: 0x38D50A4
+	private IEnumerator SavingVideo(string filename) { }
+
+	// RVA: 0x38D5154 Offset: 0x38D1154 VA: 0x38D5154 Slot: 23
+	public void SharePreview(string text, string subject) { }
+
+	// RVA: 0x38D5204 Offset: 0x38D1204 VA: 0x38D5204 Slot: 24
+	public void DiscardVideo(string filePath) { }
+
+	// RVA: 0x38D52C4 Offset: 0x38D12C4 VA: 0x38D52C4 Slot: 25
+	public void PreviewVideo(string input) { }
+
+	// RVA: 0x38D5400 Offset: 0x38D1400 VA: 0x38D5400 Slot: 26
+	public void GetThumbnail(string input, int kind, string output) { }
+
+	// RVA: 0x38D54C8 Offset: 0x38D14C8 VA: 0x38D54C8 Slot: 27
+	public void GetVideoInfo(string filePath) { }
+
+	// RVA: 0x38D55C8 Offset: 0x38D15C8 VA: 0x38D55C8 Slot: 28
+	public string GetDeviceHardWare() { }
+
+	// RVA: 0x38D55D0 Offset: 0x38D15D0 VA: 0x38D55D0 Slot: 29
+	public void PreviewVideoFinish() { }
+
+	// RVA: 0x38D55D4 Offset: 0x38D15D4 VA: 0x38D55D4
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: VoxelBusters.ReplayKit.Internal
+public class ReplayKitSettings // TypeDefIndex: 1060
+{
+	// Fields
+	private const string strReplayKitVideoQualityKey = "ReplayKitVideoQuality";
+	private const string ReplayKitMicrophoneKey = "ReplayKitMicrophoneKey";
+	private const string ReplayKitAudioCodecCombineKey = "ReplayKitAudioCodecCombineKey";
+	private const string ReplayKitVideoBitRateKey = "ReplayKitVideoBitRateKey";
+	private const string AudioFormatCodeKey = "AudioFormatCodeKey";
+
+	// Properties
+	public static bool UsesMicrophone { get; set; }
+	public static VideoQuality VideoQuality { get; set; }
+	public static bool EnableAudioCodecCombine { get; set; }
+	public static bool HighlightRecordRequestPermession { get; }
+	public static bool EnableVideoBitRate { get; set; }
+	public static bool EncodePCMFloat { get; set; }
+	public static bool UseMinimalEncoder { get; }
+
+	// Methods
+
+	// RVA: 0x38CBBA4 Offset: 0x38C7BA4 VA: 0x38CBBA4
+	public static bool get_UsesMicrophone() { }
+
+	// RVA: 0x38D593C Offset: 0x38D193C VA: 0x38D593C
+	public static void set_UsesMicrophone(bool value) { }
+
+	// RVA: 0x38D5988 Offset: 0x38D1988 VA: 0x38D5988
+	public static void SetUsesMicrophone(bool state) { }
+
+	// RVA: 0x38D5990 Offset: 0x38D1990 VA: 0x38D5990
+	public static VideoQuality get_VideoQuality() { }
+
+	// RVA: 0x38CC554 Offset: 0x38C8554 VA: 0x38CC554
+	public static void set_VideoQuality(VideoQuality value) { }
+
+	// RVA: 0x38D5A10 Offset: 0x38D1A10 VA: 0x38D5A10
+	public static NativeVideoQualityType GetNativeVideoQualityType(VideoQuality videoQuality) { }
+
+	// RVA: 0x38D33C8 Offset: 0x38CF3C8 VA: 0x38D33C8
+	public static NativeVideoQualityType GetNativeVideoQualityType() { }
+
+	// RVA: 0x38D5A28 Offset: 0x38D1A28 VA: 0x38D5A28
+	public static bool get_EnableAudioCodecCombine() { }
+
+	// RVA: 0x38D5A30 Offset: 0x38D1A30 VA: 0x38D5A30
+	public static void set_EnableAudioCodecCombine(bool value) { }
+
+	// RVA: 0x38D5A7C Offset: 0x38D1A7C VA: 0x38D5A7C
+	public static void SetAudioCodecCombine(bool state) { }
+
+	// RVA: 0x38D5A84 Offset: 0x38D1A84 VA: 0x38D5A84
+	public static bool get_HighlightRecordRequestPermession() { }
+
+	// RVA: 0x38D33F0 Offset: 0x38CF3F0 VA: 0x38D33F0
+	public static bool get_EnableVideoBitRate() { }
+
+	// RVA: 0x38D5AD8 Offset: 0x38D1AD8 VA: 0x38D5AD8
+	public static void set_EnableVideoBitRate(bool value) { }
+
+	// RVA: 0x38D5B24 Offset: 0x38D1B24 VA: 0x38D5B24
+	public static void SetVideoBitRate(bool state) { }
+
+	// RVA: 0x38D3DF4 Offset: 0x38CFDF4 VA: 0x38D3DF4
+	public static bool get_EncodePCMFloat() { }
+
+	// RVA: 0x38D5B2C Offset: 0x38D1B2C VA: 0x38D5B2C
+	public static void set_EncodePCMFloat(bool value) { }
+
+	// RVA: 0x38D5B78 Offset: 0x38D1B78 VA: 0x38D5B78
+	public static void SetAudioEncodeFormat(bool floating) { }
+
+	// RVA: 0x38D5B80 Offset: 0x38D1B80 VA: 0x38D5B80
+	public static bool get_UseMinimalEncoder() { }
+
+	// RVA: 0x38D49F8 Offset: 0x38D09F8 VA: 0x38D49F8
+	public static Camera GetUICamera() { }
+
+	// RVA: 0x38D5BDC Offset: 0x38D1BDC VA: 0x38D5BDC
+	public static PostEffectManagerBase GetPostEffectManager() { }
+
+	// RVA: 0x38D5D94 Offset: 0x38D1D94 VA: 0x38D5D94
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: VoxelBusters.ReplayKit.Common.DesignPatterns
+public interface ISingleton // TypeDefIndex: 1061
+{
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract void ForceDestroy();
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: VoxelBusters.ReplayKit.Common.DesignPatterns
+public class SingletonPattern`1<T> : MonoBehaviour, ISingleton // TypeDefIndex: 1062
+{
+	// Fields
+	protected static T instance; // 0xA0B5B3A8
+	protected static object instanceLock; // 0xBEBFB9A4
+	protected static bool destroyedOnApplicationQuit; // 0xFFEA94D0
+	private Transform m_transform; // 0xBCB9A592
+	private GameObject m_gameObject; // 0xA4A59FB4
+	private bool m_isInitialized; // 0x8FA4A5A0
+	private bool m_isForcefullyDestroyed; // 0x9C958280
+
+	// Properties
+	public static T Instance { get; set; }
+	public Transform CachedTransform { get; }
+	public GameObject CachedGameObject { get; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public static T get_Instance() { }
+
+	// RVA: -1 Offset: -1
+	private static void set_Instance(T value) { }
+
+	// RVA: -1 Offset: -1
+	public Transform get_CachedTransform() { }
+
+	// RVA: -1 Offset: -1
+	public GameObject get_CachedGameObject() { }
+
+	// RVA: -1 Offset: -1
+	private void Awake() { }
+
+	// RVA: -1 Offset: -1 Slot: 5
+	protected virtual void Start() { }
+
+	// RVA: -1 Offset: -1 Slot: 6
+	protected virtual void Reset() { }
+
+	// RVA: -1 Offset: -1 Slot: 7
+	protected virtual void OnEnable() { }
+
+	// RVA: -1 Offset: -1 Slot: 8
+	protected virtual void OnDisable() { }
+
+	// RVA: -1 Offset: -1 Slot: 9
+	protected virtual void OnDestroy() { }
+
+	// RVA: -1 Offset: -1 Slot: 10
+	protected virtual void Init() { }
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public void ForceDestroy() { }
+
+	// RVA: -1 Offset: -1
+	public void .ctor() { }
+
+	// RVA: -1 Offset: -1
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMACharacterSystem
+[Flags]
+public enum ChangeRaceOptions // TypeDefIndex: 1063
+{
+	// Fields
+	public int value__; // 0x8FB5A6B9
+	public const ChangeRaceOptions useDefaults = 0;
+	public const ChangeRaceOptions none = 1;
+	public const ChangeRaceOptions keepWardrobe = 4;
+	public const ChangeRaceOptions keepBodyColors = 8;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Flags]
+public enum DynamicCharacterAvatar.LoadOptions // TypeDefIndex: 1064
+{
+	// Fields
+	public int value__; // 0xB1BC8FA2
+	public const LoadOptions useDefaults = 0;
+	public const LoadOptions loadRace = 1;
+	public const LoadOptions loadWardrobe = 4;
+	public const LoadOptions loadBodyColors = 8;
+	public const LoadOptions loadWardrobeColors = 16;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Flags]
+public enum DynamicCharacterAvatar.SaveOptions // TypeDefIndex: 1065
+{
+	// Fields
+	public int value__; // 0xB1BDFFB3
+	public const SaveOptions useDefaults = 0;
+	public const SaveOptions saveWardrobe = 2;
+	public const SaveOptions saveColors = 4;
+	public const SaveOptions saveAnimator = 8;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum DynamicCharacterAvatar.loadPathTypes // TypeDefIndex: 1066
+{
+	// Fields
+	public int value__; // 0xB5BABFA2
+	public const loadPathTypes persistentDataPath = 0;
+	public const loadPathTypes Resources = 1;
+	public const loadPathTypes FileSystem = 2;
+	public const loadPathTypes CharacterSystem = 3;
+	public const loadPathTypes String = 4;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum DynamicCharacterAvatar.savePathTypes // TypeDefIndex: 1067
+{
+	// Fields
+	public int value__; // 0xBCB1B3B9
+	public const savePathTypes persistentDataPath = 0;
+	public const savePathTypes Resources = 1;
+	public const savePathTypes FileSystem = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class DynamicCharacterAvatar.RaceSetter // TypeDefIndex: 1068
+{
+	// Fields
+	public string name; // 0xA4A3A983
+	[SerializeField]
+	private RaceData _data; // 0x91FFBDB5
+	[SerializeField]
+	private RaceData[] _cachedRaceDatas; // 0xBF94A0A0
+
+	// Properties
+	public RaceData data { get; set; }
+	public RaceData racedata { get; }
+
+	// Methods
+
+	// RVA: 0x38D8234 Offset: 0x38D4234 VA: 0x38D8234
+	public RaceData get_data() { }
+
+	// RVA: 0x38DBEFC Offset: 0x38D7EFC VA: 0x38DBEFC
+	public void set_data(RaceData value) { }
+
+	// RVA: 0x38DBF04 Offset: 0x38D7F04 VA: 0x38DBF04
+	public RaceData get_racedata() { }
+
+	// RVA: 0x38DBDC8 Offset: 0x38D7DC8 VA: 0x38DBDC8
+	private RaceData Validate() { }
+
+	// RVA: 0x38DBD38 Offset: 0x38D7D38 VA: 0x38DBD38
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class DynamicCharacterAvatar.WardrobeRecipeListItem // TypeDefIndex: 1069
+{
+	// Fields
+	public string _recipeName; // 0xBEB9B1BD
+	public UMATextRecipe _recipe; // 0xA0A0B3FE
+	public List<string> _compatibleRaces; // 0xF9E6E6F8
+
+	// Methods
+
+	// RVA: 0x38DBF0C Offset: 0x38D7F0C VA: 0x38DBF0C
+	public void .ctor() { }
+
+	// RVA: 0x38DBF14 Offset: 0x38D7F14 VA: 0x38DBF14
+	public void .ctor(string recipeName) { }
+
+	// RVA: 0x38DBF44 Offset: 0x38D7F44 VA: 0x38DBF44
+	public void .ctor(UMATextRecipe recipe) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class DynamicCharacterAvatar.WardrobeRecipeList // TypeDefIndex: 1070
+{
+	// Fields
+	[Tooltip("If this is checked and the Avatar is NOT creating itself from a previously saved recipe, recipes in here will be added to the Avatar when it loads")]
+	public bool loadDefaultRecipes; // 0x85F0EAF0
+	public List<WardrobeRecipeListItem> recipes; // 0xA0A5A3BE
+
+	// Methods
+
+	// RVA: 0x38DC00C Offset: 0x38D800C VA: 0x38DC00C
+	public List<WardrobeRecipeListItem> Validate(bool allowDownloadables = false, string raceName = "") { }
+
+	// RVA: 0x38DC65C Offset: 0x38D865C VA: 0x38DC65C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class DynamicCharacterAvatar.ColorValue : OverlayColorData // TypeDefIndex: 1071
+{
+	// Fields
+	[FormerlySerializedAs("Name")]
+	[SerializeField]
+	private string _name; // 0xA4A2BFA0
+	[SerializeField]
+	[FormerlySerializedAs("Color")]
+	private Color _color; // 0xB9F0B4B5
+	[FormerlySerializedAs("MetallicGloss")]
+	[SerializeField]
+	private Color _metallicGloss; // 0xA2B5A4BE
+	public bool valuesConverted; // 0xF0BCB1BE
+
+	// Properties
+	public string Name { get; set; }
+	public Color Color { get; set; }
+	public Color MetallicGloss { get; set; }
+
+	// Methods
+
+	// RVA: 0x38DC6EC Offset: 0x38D86EC VA: 0x38DC6EC
+	public string get_Name() { }
+
+	// RVA: 0x38DC7AC Offset: 0x38D87AC VA: 0x38DC7AC
+	public void set_Name(string value) { }
+
+	// RVA: 0x38DC7B4 Offset: 0x38D87B4 VA: 0x38DC7B4
+	public Color get_Color() { }
+
+	// RVA: 0x38DC7DC Offset: 0x38D87DC VA: 0x38DC7DC
+	public void set_Color(Color value) { }
+
+	// RVA: 0x38DC7E4 Offset: 0x38D87E4 VA: 0x38DC7E4
+	public Color get_MetallicGloss() { }
+
+	// RVA: 0x38DC828 Offset: 0x38D8828 VA: 0x38DC828
+	public void set_MetallicGloss(Color value) { }
+
+	// RVA: 0x38DC89C Offset: 0x38D889C VA: 0x38DC89C
+	public void .ctor() { }
+
+	// RVA: 0x38DC994 Offset: 0x38D8994 VA: 0x38DC994
+	public void .ctor(int channels) { }
+
+	// RVA: 0x38DC9A8 Offset: 0x38D89A8 VA: 0x38DC9A8
+	public void .ctor(string nameVal, Color colorVal) { }
+
+	// RVA: 0x38DCAF8 Offset: 0x38D8AF8 VA: 0x38DCAF8
+	public void .ctor(string nameVal, OverlayColorData color) { }
+
+	// RVA: 0x38DCB48 Offset: 0x38D8B48 VA: 0x38DCB48
+	public void .ctor(ColorValue col) { }
+
+	// RVA: 0x38DCB84 Offset: 0x38D8B84 VA: 0x38DCB84
+	public void .ctor(OverlayColorData col) { }
+
+	// RVA: 0x38DC710 Offset: 0x38D8710 VA: 0x38DC710
+	private void ConvertOldFieldsToNew() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[ExecuteInEditMode]
+[Serializable]
+public class DynamicCharacterAvatar.ColorValueList // TypeDefIndex: 1072
+{
+	// Fields
+	[FormerlySerializedAs("Colors")]
+	public List<ColorValue> _colors; // 0xBCBCB1B3
+
+	// Properties
+	public List<ColorValue> Colors { get; set; }
+
+	// Methods
+
+	// RVA: 0x38DCBC0 Offset: 0x38D8BC0 VA: 0x38DCBC0
+	public List<ColorValue> get_Colors() { }
+
+	// RVA: 0x38DCBC8 Offset: 0x38D8BC8 VA: 0x38DCBC8
+	public void set_Colors(List<ColorValue> value) { }
+
+	// RVA: 0x38DBD40 Offset: 0x38D7D40 VA: 0x38DBD40
+	public void .ctor() { }
+
+	// RVA: 0x38DCBD0 Offset: 0x38D8BD0 VA: 0x38DCBD0
+	public void .ctor(OverlayColorData[] colors) { }
+
+	// RVA: 0x38DCCAC Offset: 0x38D8CAC VA: 0x38DCCAC
+	public void .ctor(List<ColorValue> colorValueList) { }
+
+	// RVA: 0x38DCD4C Offset: 0x38D8D4C VA: 0x38DCD4C
+	private ColorValue GetColorValue(string name) { }
+
+	// RVA: 0x38DCEBC Offset: 0x38D8EBC VA: 0x38DCEBC
+	public OverlayColorData[] ToOverlayColors() { }
+
+	// RVA: 0x38DCF0C Offset: 0x38D8F0C VA: 0x38DCF0C
+	public OverlayColorData ToOverlayColorData(ColorValue cv) { }
+
+	// RVA: 0x38DCF14 Offset: 0x38D8F14 VA: 0x38DCF14
+	public bool GetColor(string Name, out Color c) { }
+
+	// RVA: 0x38D999C Offset: 0x38D599C VA: 0x38D999C
+	public bool GetColor(string Name, out OverlayColorData c) { }
+
+	// RVA: 0x38DCF74 Offset: 0x38D8F74 VA: 0x38DCF74
+	public void SetColor(string name, Color c) { }
+
+	// RVA: 0x38D9B90 Offset: 0x38D5B90 VA: 0x38D9B90
+	public void SetColor(string name, OverlayColorData c) { }
+
+	// RVA: 0x38DD0E0 Offset: 0x38D90E0 VA: 0x38DD0E0
+	public void RemoveColor(string name) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class DynamicCharacterAvatar.<BuildCharacterWhenReady>d__68 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 1073
+{
+	// Fields
+	private int <>1__state; // 0xA2BFB6F0
+	private object <>2__current; // 0xE29C99F0
+	public DynamicCharacterAvatar <>4__this; // 0xEA808093
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x38DA940 Offset: 0x38D6940 VA: 0x38DA940
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHidden]
+	// RVA: 0x38DD294 Offset: 0x38D9294 VA: 0x38DD294 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x38DD298 Offset: 0x38D9298 VA: 0x38DD298 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38DD30C Offset: 0x38D930C VA: 0x38DD30C Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38DD314 Offset: 0x38D9314 VA: 0x38DD314 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38DD34C Offset: 0x38D934C VA: 0x38DD34C Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class DynamicCharacterAvatar.<BuildFromComponentSettingsCO>d__38 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 1074
+{
+	// Fields
+	private int <>1__state; // 0x94A0A091
+	private object <>2__current; // 0xB9B1BDBF
+	public DynamicCharacterAvatar <>4__this; // 0x99EAEABE
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x38D820C Offset: 0x38D420C VA: 0x38D820C
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHidden]
+	// RVA: 0x38DD354 Offset: 0x38D9354 VA: 0x38DD354 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x38DD358 Offset: 0x38D9358 VA: 0x38DD358 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38DD428 Offset: 0x38D9428 VA: 0x38DD428 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38DD430 Offset: 0x38D9430 VA: 0x38DD430 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38DD468 Offset: 0x38D9468 VA: 0x38DD468 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class DynamicCharacterAvatar.<ImportSettingsCO>d__67 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 1075
+{
+	// Fields
+	private int <>1__state; // 0xA2B5A4BE
+	private object <>2__current; // 0x83BCB1BE
+	public LoadOptions customLoadOptions; // 0xBF94A4B5
+	public DynamicCharacterAvatar <>4__this; // 0xBEB9B1BD
+	public bool forceDCSLoad; // 0xF2F0FDF0
+	public DCSUniversalPackRecipe settingsToLoad; // 0xA3B9B884
+	private LoadOptions <thisLoadOptions>5__2; // 0xB1B3B9F0
+	private bool <wasBuildCharacterEnabled>5__3; // 0xB9F0BCBC
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x38DA918 Offset: 0x38D6918 VA: 0x38DA918
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHidden]
+	// RVA: 0x38DD470 Offset: 0x38D9470 VA: 0x38DD470 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x38DD474 Offset: 0x38D9474 VA: 0x38DD474 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38DD7D4 Offset: 0x38D97D4 VA: 0x38DD7D4 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38DD7DC Offset: 0x38D97DC VA: 0x38DD7DC Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x38DD814 Offset: 0x38D9814 VA: 0x38DD814 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMACharacterSystem
+public class DynamicCharacterAvatar : UmaAvatarWithSlots<UMATextRecipe>, IUmaAvatar, IUmaAvatarWithSlots, IUmaAvatarBase // TypeDefIndex: 1076
+{
+	// Fields
+	public UMADataEvent RecipeUpdated; // 0xBEBFF0A3
+	[Tooltip("Selects the race to used. When initialized, the Avatar will use the base recipe from the RaceData selected.")]
+	public RaceSetter activeRace; // 0xA5F0A9BC
+	[EnumFlags]
+	public ChangeRaceOptions defaultChangeRaceOptions; // 0xF0B4B5A3
+	[Tooltip("Any colors here are set when the Avatar is first generated and updated as the values are changed using the color sliders")]
+	public ColorValueList characterColors; // 0xA4F0BEB9
+	[EnumFlags]
+	public LoadOptions defaultLoadOptions; // 0x83F0B5B8
+	[Tooltip("If true ALL the colors in the 'characterColors' section of the component are added to the recipe on save. Otherwise only the colors used by the recipe are saved (UMA default)")]
+	public bool ensureSharedColors; // 0xB5A4A3A9
+	[HideInInspector]
+	public List<string> assetBundlesUsedbyCharacter; // 0xA582FEBD
+	public bool IsAsyncGeneration; // 0xBDB9A4BE
+	[Tooltip("Builds the character on recipe load or race changed. If you want to load multiple recipes into a character you can disable this and enable it when you are done. By default this should be true.")]
+	[SerializeField]
+	private bool _buildCharacterEnabled; // 0xB582FEB5
+	private string cacheStateNull; // 0xB9A4BFBD
+	private List<string> HiddenSlots; // 0xBEF0B7BE
+	private bool _isFirstSettingsBuild; // 0xA3B5BDB1
+	private List<UMATextRecipe> _visibleRecipes; // 0xB5B3B1A0
+	private List<KeyValuePair<SlotData, AdditiveInfo>> m_AdditiveSlots; // 0x85D0F2FE
+	private List<int> m_RecipeSlotsStarts; // 0xBCB2B1BE
+	private bool m_CustomTextureDirty; // 0xBFA4F0B5
+
+	// Properties
+	public string RacePreset { get; set; }
+	public Dictionary<string, List<UMATextRecipe>> AvailableRecipes { get; }
+	public List<string> CurrentWardrobeSlots { get; }
+	public List<ColorValue> ActiveColors { get; }
+	public bool BuildCharacterEnabled { get; set; }
+	private bool BuildUsingComponentSettings { get; }
+
+	// Methods
+
+	// RVA: 0x38D5D9C Offset: 0x38D1D9C VA: 0x38D5D9C
+	public string get_RacePreset() { }
+
+	// RVA: 0x38D5DB8 Offset: 0x38D1DB8 VA: 0x38D5DB8
+	public void set_RacePreset(string value) { }
+
+	// RVA: 0x38D5DD4 Offset: 0x38D1DD4 VA: 0x38D5DD4
+	public Dictionary<string, List<UMATextRecipe>> get_AvailableRecipes() { }
+
+	// RVA: 0x38D5EB8 Offset: 0x38D1EB8 VA: 0x38D5EB8
+	public void AddAvailableRaceRecipesDictionary(string raceName, ref Dictionary<int, UMATextRecipe> availableRecipesDict) { }
+
+	// RVA: 0x38D62A0 Offset: 0x38D22A0 VA: 0x38D62A0
+	public List<string> get_CurrentWardrobeSlots() { }
+
+	// RVA: 0x38D62C4 Offset: 0x38D22C4 VA: 0x38D62C4
+	public List<ColorValue> get_ActiveColors() { }
+
+	// RVA: 0x38D62E0 Offset: 0x38D22E0 VA: 0x38D62E0
+	public bool get_BuildCharacterEnabled() { }
+
+	// RVA: 0x38D62E8 Offset: 0x38D22E8 VA: 0x38D62E8
+	public void set_BuildCharacterEnabled(bool value) { }
+
+	// RVA: 0x38D63FC Offset: 0x38D23FC VA: 0x38D63FC
+	private bool get_BuildUsingComponentSettings() { }
+
+	// RVA: 0x38D6534 Offset: 0x38D2534 VA: 0x38D6534 Slot: 25
+	public override void Awake() { }
+
+	// RVA: 0x38D67E8 Offset: 0x38D27E8 VA: 0x38D67E8 Slot: 48
+	public void BuildCharacterImmediatly() { }
+
+	// RVA: 0x38D6904 Offset: 0x38D2904 VA: 0x38D6904
+	public void SetAnimator(Animator amtr) { }
+
+	// RVA: 0x38D68E8 Offset: 0x38D28E8 VA: 0x38D68E8
+	private void BuildFromComponentSettingsCOSync() { }
+
+	[IteratorStateMachine(typeof(<BuildFromComponentSettingsCO>d__38))]
+	// RVA: 0x38D645C Offset: 0x38D245C VA: 0x38D645C
+	private IEnumerator BuildFromComponentSettingsCO() { }
+
+	// RVA: 0x38D69A4 Offset: 0x38D29A4 VA: 0x38D69A4
+	private void SetActiveRace(bool allowGenderFallback = false) { }
+
+	// RVA: 0x38D82A4 Offset: 0x38D42A4 VA: 0x38D82A4 Slot: 44
+	public void ChangeRace(string racename, ChangeRaceOptions customChangeRaceOptions = 0) { }
+
+	// RVA: 0x38D837C Offset: 0x38D437C VA: 0x38D837C
+	public void ChangeRace(RaceData race, ChangeRaceOptions customChangeRaceOptions = 0) { }
+
+	// RVA: 0x38D8948 Offset: 0x38D4948 VA: 0x38D8948
+	private void PerformRaceChange(RaceData race, ChangeRaceOptions customChangeRaceOptions = 0) { }
+
+	// RVA: 0x38D8D00 Offset: 0x38D4D00 VA: 0x38D8D00
+	protected UMATextRecipe FindSlotRecipe(string Slotname, int Recipename) { }
+
+	// RVA: 0x38D8E78 Offset: 0x38D4E78 VA: 0x38D8E78 Slot: 39
+	protected override UMATextRecipe FindSlotRecipe(int Recipename) { }
+
+	// RVA: 0x38D8F08 Offset: 0x38D4F08 VA: 0x38D8F08 Slot: 40
+	protected override string GetRecipeSlot(UMATextRecipe recipe) { }
+
+	// RVA: 0x38D8F80 Offset: 0x38D4F80 VA: 0x38D8F80
+	public string GetWardrobeItemName(string SlotName) { }
+
+	// RVA: 0x38D9084 Offset: 0x38D5084 VA: 0x38D9084
+	public void SetSlot(UMATextRecipe utr) { }
+
+	// RVA: 0x38D9188 Offset: 0x38D5188 VA: 0x38D9188
+	public void SetSlot(string Slotname, int Recipename) { }
+
+	// RVA: 0x38D92C0 Offset: 0x38D52C0 VA: 0x38D92C0 Slot: 42
+	public override bool IsSlotVisible(string slot) { }
+
+	// RVA: 0x38D947C Offset: 0x38D547C VA: 0x38D947C Slot: 51
+	public void InitAsyncLoading(bool pre) { }
+
+	// RVA: 0x38D9480 Offset: 0x38D5480 VA: 0x38D9480 Slot: 52
+	public bool IsAsyncLoading() { }
+
+	// RVA: 0x38D9488 Offset: 0x38D5488 VA: 0x38D9488
+	private void ApplyCurrentWardrobeToNewRace() { }
+
+	// RVA: 0x38D9734 Offset: 0x38D5734 VA: 0x38D9734
+	public void LoadWardrobeSet(List<WardrobeSettings> wardrobeSet, bool clearExisting = false) { }
+
+	// RVA: 0x38D996C Offset: 0x38D596C VA: 0x38D996C
+	public OverlayColorData GetColor(string Name) { }
+
+	// RVA: 0x38D9A3C Offset: 0x38D5A3C VA: 0x38D9A3C
+	public void SetColor(string SharedColorName, Color AlbedoColor, Color MetallicRGB, float Gloss = 0, bool UpdateTexture = false) { }
+
+	// RVA: 0x38D9B34 Offset: 0x38D5B34 VA: 0x38D9B34 Slot: 45
+	public void SetColor(string Name, OverlayColorData colorData, bool UpdateTexture = true) { }
+
+	// RVA: 0x38D9E3C Offset: 0x38D5E3C VA: 0x38D9E3C Slot: 47
+	public void ForceUpdateColor() { }
+
+	// RVA: 0x38D9D08 Offset: 0x38D5D08 VA: 0x38D9D08
+	public void UpdateColors(bool triggerDirty = false) { }
+
+	// RVA: 0x38D9E44 Offset: 0x38D5E44 VA: 0x38D9E44
+	private OverlayColorData[] ImportSharedColors(OverlayColorData[] colorsToLoad, LoadOptions thisLoadOptions) { }
+
+	// RVA: 0x38DA088 Offset: 0x38D6088 VA: 0x38DA088
+	private List<string> GetBodyColorNames() { }
+
+	// RVA: 0x38DA070 Offset: 0x38D6070 VA: 0x38DA070
+	public List<OverlayColorData> LoadBodyColors(OverlayColorData[] colorsToLoad, bool apply = false) { }
+
+	// RVA: 0x38DA07C Offset: 0x38D607C VA: 0x38DA07C
+	public List<OverlayColorData> LoadWardrobeColors(OverlayColorData[] colorsToLoad, bool apply = false) { }
+
+	// RVA: 0x38DA264 Offset: 0x38D6264 VA: 0x38DA264
+	private List<OverlayColorData> LoadBodyOrWardrobeColors(OverlayColorData[] colorsToLoad, bool loadingBody = true, bool apply = false) { }
+
+	// RVA: 0x38D8C34 Offset: 0x38D4C34 VA: 0x38D8C34
+	public List<OverlayColorData> RestoreCachedBodyColors(bool apply = false, bool fullRestore = false) { }
+
+	// RVA: 0x38D8C48 Offset: 0x38D4C48 VA: 0x38D8C48
+	public List<OverlayColorData> RestoreCachedWardrobeColors(bool apply = false, bool fullRestore = false) { }
+
+	// RVA: 0x38DA588 Offset: 0x38D6588 VA: 0x38DA588
+	private List<OverlayColorData> RestoreCachedBodyOrWardrobeColors(bool restoringBody = true, bool apply = false, bool fullRestore = false) { }
+
+	[IteratorStateMachine(typeof(<ImportSettingsCO>d__67))]
+	// RVA: 0x38D8C5C Offset: 0x38D4C5C VA: 0x38D8C5C
+	private IEnumerator ImportSettingsCO(DCSUniversalPackRecipe settingsToLoad, LoadOptions customLoadOptions = 0, bool forceDCSLoad = false) { }
+
+	[IteratorStateMachine(typeof(<BuildCharacterWhenReady>d__68))]
+	// RVA: 0x38D64C8 Offset: 0x38D24C8 VA: 0x38D64C8
+	private IEnumerator BuildCharacterWhenReady() { }
+
+	// RVA: 0x38D728C Offset: 0x38D328C VA: 0x38D728C Slot: 49
+	public void BuildCharacter() { }
+
+	// RVA: 0x38DA968 Offset: 0x38D6968 VA: 0x38DA968
+	private bool LoadCharacter(UMARecipeBase umaRecipe, List<UMAWardrobeRecipe> Replaces, UMATextRecipe[] umaAdditionalSerializedRecipes) { }
+
+	// RVA: 0x38D84E0 Offset: 0x38D44E0 VA: 0x38D84E0
+	private void UnloadAvatar() { }
+
+	// RVA: 0x38DAC58 Offset: 0x38D6C58 VA: 0x38DAC58
+	private void FixAdditiveSlotInBaseSlots(UMARecipe umaRecipe) { }
+
+	// RVA: 0x38DB5CC Offset: 0x38D75CC VA: 0x38DB5CC
+	private void AddAdditiveToBaseSlot(SlotData[] slotDataList, int start, int end, SlotData slot, AdditiveInfo additiveInfo) { }
+
+	// RVA: 0x38DAE78 Offset: 0x38D6E78 VA: 0x38DAE78
+	public void AddAdditionalSerializedRecipes(UMATextRecipe[] umaAdditionalSerializedRecipes) { }
+
+	// RVA: 0x38DB718 Offset: 0x38D7718 VA: 0x38DB718
+	private void AddAdditiveSlots(UMATextRecipe[] recipes, List<int> recipeSlotStarts, SlotData[] slots, List<KeyValuePair<SlotData, AdditiveInfo>> additiveSlots) { }
+
+	// RVA: 0x38DBA0C Offset: 0x38D7A0C VA: 0x38DBA0C
+	private void AddAdditiveToWardrobeSlot(SlotData[] slotDataList, int start, int end, SlotData slot, AdditiveInfo additiveInfo) { }
+
+	// RVA: 0x38DB6C4 Offset: 0x38D76C4 VA: 0x38DB6C4
+	private void UpdateOverlayLimitSize(UMATextRecipe utr, UMARecipe cachedRecipe) { }
+
+	// RVA: 0x38DB3E8 Offset: 0x38D73E8 VA: 0x38DB3E8
+	private void RemoveHiddenSlots() { }
+
+	// RVA: 0x38DBAE8 Offset: 0x38D7AE8 VA: 0x38DBAE8 Slot: 55
+	public void SetCustomTextureDirty(bool dirty) { }
+
+	// RVA: 0x38DBAF4 Offset: 0x38D7AF4 VA: 0x38DBAF4
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMACharacterSystem
+public class DynamicCharacterSystem : DynamicCharacterSystemBase // TypeDefIndex: 1077
+{
+	// Fields
+	public Dictionary<int, UMATextRecipe> RecipeIndex; // 0xA3B1B3F0
+	public Dictionary<string, Dictionary<string, List<UMATextRecipe>>> Recipes; // 0xB2BFF0A4
+	public Dictionary<string, string> CharacterRecipes; // 0xA4B3B5BA
+	public bool initializeOnAwake; // 0xF0B6BFF0
+	[HideInInspector]
+	public bool initialized; // 0xB5A0A9A4
+	private bool isInitializing; // 0x97D0F7F0
+	public bool dynamicallyAddFromResources; // 0xB187F093
+	[Tooltip("Limit the Global Library search to the following folders (no starting slash and seperate multiple entries with a comma)")]
+	public string resourcesCharactersFolder; // 0xBEB9BEA2
+	[Tooltip("Limit the Global Library search to the following folders (no starting slash and seperate multiple entries with a comma)")]
+	public string resourcesRecipesFolder; // 0x9FF0EAB7
+	public bool dynamicallyAddFromAssetBundles; // 0xBFF0A4A5
+	[Tooltip("Limit the AssetBundles search to the following bundles (no starting slash and seperate multiple entries with a comma)")]
+	public string assetBundlesForCharactersToSearch; // 0xB5BDF0B6
+	[Tooltip("Limit the AssetBundles search to the following bundles (no starting slash and seperate multiple entries with a comma)")]
+	public string assetBundlesForRecipesToSearch; // 0xA9A2BFBD
+	[Tooltip("If true will automatically scan and add all UMATextRecipes from any downloaded bundles.")]
+	public bool addAllRecipesFromDownloadedBundles; // 0xA4F0FDF0
+	[HideInInspector]
+	public UMAContext context; // 0xBEB9A9A2
+	public Dictionary<string, List<string>> assetBundlesUsedDict; // 0xBFA4F0B7
+	[HideInInspector]
+	public bool downloadAssetsEnabled; // 0xBCBCB1F0
+	public static bool ManulInit; // 0xA4B1B3BF
+	private static DynamicCharacterSystem m_Instance; // 0xB5A2F0B5
+
+	// Methods
+
+	// RVA: 0x39A91AC Offset: 0x39A51AC VA: 0x39A91AC
+	private void OnDestroy() { }
+
+	// RVA: 0x39A9258 Offset: 0x39A5258 VA: 0x39A9258 Slot: 4
+	public override void Awake() { }
+
+	// RVA: 0x39A933C Offset: 0x39A533C VA: 0x39A933C Slot: 6
+	public override void Start() { }
+
+	// RVA: 0x39A93B4 Offset: 0x39A53B4 VA: 0x39A93B4
+	public static void ResetManualInitAndEnsureInitd() { }
+
+	// RVA: 0x39A946C Offset: 0x39A546C VA: 0x39A946C Slot: 9
+	public override void Init() { }
+
+	// RVA: 0x39A98D0 Offset: 0x39A58D0 VA: 0x39A98D0
+	public void EnsureRaceKey(string race) { }
+
+	// RVA: 0x39A99A4 Offset: 0x39A59A4 VA: 0x39A99A4
+	public void RefreshRaceKeys() { }
+
+	// RVA: 0x39AA818 Offset: 0x39A6818 VA: 0x39AA818 Slot: 7
+	public override void Refresh(bool forceUpdateRaceLibrary = true, string bundleToGather = "") { }
+
+	// RVA: 0x39A98CC Offset: 0x39A58CC VA: 0x39A98CC
+	private void GatherCharacterRecipes(string filename = "", string bundleToGather = "") { }
+
+	// RVA: 0x39AAB20 Offset: 0x39A6B20 VA: 0x39AAB20
+	private void GatherRecipeFiles(int filenamehash = 0, string bundleToGather = "") { }
+
+	// RVA: 0x39AAE6C Offset: 0x39A6E6C VA: 0x39AAE6C
+	public void AddRecipesFromAB(UMATextRecipe[] uparts) { }
+
+	// RVA: 0x39AAE74 Offset: 0x39A6E74 VA: 0x39AAE74
+	public void AddRecipe(UMATextRecipe upart) { }
+
+	// RVA: 0x39A9F90 Offset: 0x39A5F90 VA: 0x39A9F90
+	public void AddRecipes(UMATextRecipe[] uparts, int filenamehash = 0) { }
+
+	// RVA: 0x39AAF6C Offset: 0x39A6F6C VA: 0x39AAF6C
+	public UMATextRecipe GetRecipe(int filenamehash, bool dynamicallyAdd = true) { }
+
+	// RVA: 0x39AB050 Offset: 0x39A7050 VA: 0x39AB050
+	public string GetOriginatingAssetBundle(string recipeName) { }
+
+	// RVA: 0x39AB2F8 Offset: 0x39A72F8 VA: 0x39AB2F8 Slot: 11
+	public override List<string> GetRecipeNamesForRaceSlot(string race, string slot) { }
+
+	// RVA: 0x39AB620 Offset: 0x39A7620 VA: 0x39AB620 Slot: 12
+	public override List<UMARecipeBase> GetRecipesForRaceSlot(string race, string slot) { }
+
+	// RVA: 0x39AB928 Offset: 0x39A7928 VA: 0x39AB928 Slot: 13
+	public override bool CheckRecipeAvailability(string recipeName) { }
+
+	// RVA: 0x39ABA74 Offset: 0x39A7A74 VA: 0x39ABA74 Slot: 10
+	public override UMARecipeBase GetBaseRecipe(int filename, bool dynamicallyAdd = true) { }
+
+	// RVA: 0x39ABA7C Offset: 0x39A7A7C VA: 0x39ABA7C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMACharacterSystem
+[Extension]
+public static class EnumExtensions // TypeDefIndex: 1078
+{
+	// Methods
+
+	[Extension]
+	// RVA: 0x39ABC4C Offset: 0x39A7C4C VA: 0x39ABC4C
+	public static bool HasFlag(Enum self, Enum flag) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMACharacterSystem
+public class EnumFlagsAttribute : PropertyAttribute // TypeDefIndex: 1079
+{
+	// Methods
+
+	// RVA: 0x39ABD7C Offset: 0x39A7D7C VA: 0x39ABD7C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMACharacterSystem
+public enum recipeTypeOpts // TypeDefIndex: 1080
+{
+	// Fields
+	public int value__; // 0xA3B5A5A1
+	public const recipeTypeOpts Standard = 0;
+	public const recipeTypeOpts WardrobeItem = 1;
+	public const recipeTypeOpts DynamicCharacterAvatar = 2;
+	public const recipeTypeOpts WardrobeCollection = 3;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMACharacterSystem
+[Serializable]
+public class WardrobeSettings // TypeDefIndex: 1081
+{
+	// Fields
+	public string slot; // 0xB5A4A9B2
+	public string recipe; // 0xFEFEF9A3
+
+	// Methods
+
+	// RVA: 0x39ABD84 Offset: 0x39A7D84 VA: 0x39ABD84
+	public void .ctor() { }
+
+	// RVA: 0x39ABD8C Offset: 0x39A7D8C VA: 0x39ABD8C
+	public void .ctor(string _slot, string _recipe) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMACharacterSystem
+public class DynamicCharacterSystemBase : MonoBehaviour // TypeDefIndex: 1082
+{
+	// Methods
+
+	// RVA: 0x39ABDD0 Offset: 0x39A7DD0 VA: 0x39ABDD0 Slot: 4
+	public virtual void Awake() { }
+
+	// RVA: 0x39ABDD4 Offset: 0x39A7DD4 VA: 0x39ABDD4 Slot: 5
+	public virtual void OnEnable() { }
+
+	// RVA: 0x39ABDD8 Offset: 0x39A7DD8 VA: 0x39ABDD8 Slot: 6
+	public virtual void Start() { }
+
+	// RVA: 0x39ABDDC Offset: 0x39A7DDC VA: 0x39ABDDC Slot: 7
+	public virtual void Refresh(bool forceUpdateRaceLibrary = true, string bundleToGather = "") { }
+
+	// RVA: 0x39ABDE0 Offset: 0x39A7DE0 VA: 0x39ABDE0 Slot: 8
+	public virtual void Update() { }
+
+	// RVA: 0x39ABDE4 Offset: 0x39A7DE4 VA: 0x39ABDE4 Slot: 9
+	public virtual void Init() { }
+
+	// RVA: 0x39ABDE8 Offset: 0x39A7DE8 VA: 0x39ABDE8 Slot: 10
+	public virtual UMARecipeBase GetBaseRecipe(int filename, bool dynamicallyAdd = true) { }
+
+	// RVA: 0x39ABDF0 Offset: 0x39A7DF0 VA: 0x39ABDF0 Slot: 11
+	public virtual List<string> GetRecipeNamesForRaceSlot(string race, string slot) { }
+
+	// RVA: 0x39ABDF8 Offset: 0x39A7DF8 VA: 0x39ABDF8 Slot: 12
+	public virtual List<UMARecipeBase> GetRecipesForRaceSlot(string race, string slot) { }
+
+	// RVA: 0x39ABE00 Offset: 0x39A7E00 VA: 0x39ABE00 Slot: 13
+	public virtual bool CheckRecipeAvailability(string recipeName) { }
+
+	// RVA: 0x39ABC44 Offset: 0x39A7C44 VA: 0x39ABC44
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public class OverlayDataAssetWithAtlas : OverlayDataAsset // TypeDefIndex: 1083
+{
+	// Fields
+	public Rect SrcRect; // 0x92D0DAFE
+
+	// Methods
+
+	// RVA: 0x39ABE08 Offset: 0x39A7E08 VA: 0x39ABE08
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public class DynamicAssetLoader : MonoBehaviour // TypeDefIndex: 1084
+{
+	// Fields
+	private static DynamicAssetLoader _instance; // 0xB3F0B4B1
+	[HideInInspector]
+	public bool isInitialized; // 0xBCA0BDBF
+	[Space]
+	public RaceData placeholderRace; // 0xB4F0A8B5
+	public UMATextRecipe placeholderWardrobeRecipe; // 0xA2B3A3B5
+	public SlotDataAsset placeholderSlot; // 0xBFA4A0B9
+	public OverlayDataAsset placeholderOverlay; // 0x9397D0A2
+	[HideInInspector]
+	public bool debugOnFail; // 0x9E99968F
+
+	// Properties
+	public static DynamicAssetLoader Instance { get; set; }
+
+	// Methods
+
+	// RVA: 0x39A9820 Offset: 0x39A5820 VA: 0x39A9820
+	public static DynamicAssetLoader get_Instance() { }
+
+	// RVA: 0x39ABF60 Offset: 0x39A7F60 VA: 0x39ABF60
+	public static void set_Instance(DynamicAssetLoader value) { }
+
+	// RVA: 0x39ABFB8 Offset: 0x39A7FB8 VA: 0x39ABFB8
+	private void Awake() { }
+
+	// RVA: 0x39AC134 Offset: 0x39A8134 VA: 0x39AC134
+	private void Start() { }
+
+	// RVA: 0x39AC144 Offset: 0x39A8144 VA: 0x39AC144
+	private void OnDestroy() { }
+
+	// RVA: 0x39AC02C Offset: 0x39A802C VA: 0x39AC02C
+	private void StartCO() { }
+
+	// RVA: 0x39ABE18 Offset: 0x39A7E18 VA: 0x39ABE18
+	public static DynamicAssetLoader FindInstance() { }
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public virtual bool AddAssets<T>(ref Dictionary<string, List<string>> assetBundlesUsedDict, bool searchResources, bool searchBundles, bool downloadAssetsEnabled, string bundlesToSearch = "", string resourcesFolderPath = "", Nullable<int> assetNameHash, string assetName = "", Action<T[]> callback, bool forceDownloadAll = false) { }
+
+	// RVA: -1 Offset: -1
+	public bool AddAssets<T>(bool searchResources, bool searchBundles, bool downloadAssetsEnabled, string bundlesToSearch = "", string resourcesFolderPath = "", Nullable<int> assetNameHash, string assetName = "", Action<T[]> callback, bool forceDownloadAll = false) { }
+
+	// RVA: -1 Offset: -1
+	public bool AddAssetsFromResourcesIndex<T>(ref List<T> assetsToReturn, string[] resourcesFolderPathArray, Nullable<int> assetNameHash, string assetName = "") { }
+
+	// RVA: 0x39AC1F8 Offset: 0x39A81F8 VA: 0x39AC1F8
+	private string[] SearchStringToArray(string searchString = "") { }
+
+	// RVA: 0x39AC388 Offset: 0x39A8388 VA: 0x39AC388 Slot: 5
+	public virtual void AddWardrobeRecipes(Action<UMAWardrobeRecipe[]> callback) { }
+
+	// RVA: 0x39AC494 Offset: 0x39A8494 VA: 0x39AC494
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public interface IUmaAvatarBase // TypeDefIndex: 1085
+{
+	// Properties
+	public abstract UMAData UmaData { get; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract GameObject GetGameObject();
+
+	// RVA: -1 Offset: -1 Slot: 1
+	public abstract UMAData get_UmaData();
+
+	// RVA: -1 Offset: -1 Slot: 2
+	public abstract void SetEnableMipMap(bool enableMipMap);
+
+	// RVA: -1 Offset: -1 Slot: 3
+	public abstract void SetEnableRenderTexturePool(bool flag);
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public abstract void SetTextureScaleFactor(int scale);
+
+	// RVA: -1 Offset: -1 Slot: 5
+	public abstract void SetNormalSpecTexScale(float scale);
+
+	// RVA: -1 Offset: -1 Slot: 6
+	public abstract void SetUpdateWhenOffSceen(bool flag);
+
+	// RVA: -1 Offset: -1 Slot: 7
+	public abstract void SetNeedGenerateMesh(bool needMesh);
+
+	// RVA: -1 Offset: -1 Slot: 8
+	public abstract void SetUsingRGB565(bool use);
+
+	// RVA: -1 Offset: -1 Slot: 9
+	public abstract void SetAtlasResolutionScale(float scale);
+
+	// RVA: -1 Offset: -1 Slot: 10
+	public abstract void SetNoMergeTexture(bool noMerge);
+
+	// RVA: -1 Offset: -1 Slot: 11
+	public abstract void SetNoClothMergeTexture(bool noMerge);
+
+	// RVA: -1 Offset: -1 Slot: 12
+	public abstract void SetNoSkinMergeWithCondition(bool noMerge);
+
+	// RVA: -1 Offset: -1 Slot: 13
+	public abstract void SetUpdateTextureSizeByChannelType(bool update);
+
+	// RVA: -1 Offset: -1 Slot: 14
+	public abstract void EnableDebugLog(bool enable);
+
+	// RVA: -1 Offset: -1 Slot: 15
+	public abstract void SetVisible(bool visible);
+
+	// RVA: -1 Offset: -1 Slot: 16
+	public abstract UMAContextIndividual UseIndividualContextCache(SlotOverlayAssetCache cache);
+
+	// RVA: -1 Offset: -1 Slot: 17
+	public abstract void SetOverrideDecalTexture(Texture tex, uint clothId, int recipeHash);
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public interface IUintId // TypeDefIndex: 1086
+{
+	// Properties
+	public abstract uint Id { get; set; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract uint get_Id();
+
+	// RVA: -1 Offset: -1 Slot: 1
+	public abstract void set_Id(uint value);
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public interface IUmaAvatarWithSlots : IUmaAvatarBase // TypeDefIndex: 1087
+{
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract void SetSlot(int recipeHash);
+
+	// RVA: -1 Offset: -1 Slot: 1
+	public abstract void SetSlot(int recipeHash, uint id);
+
+	// RVA: -1 Offset: -1 Slot: 2
+	public abstract void ClearSlot(string slot);
+
+	// RVA: -1 Offset: -1 Slot: 3
+	public abstract void ClearSlots();
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public abstract bool IsSlotVisible(string slot);
+
+	// RVA: -1 Offset: -1 Slot: 5
+	public abstract bool HasSlot(string slot);
+
+	// RVA: -1 Offset: -1 Slot: 6
+	public abstract List<uint> GetIds();
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public interface IUmaAvatar : IUmaAvatarWithSlots, IUmaAvatarBase // TypeDefIndex: 1088
+{
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract void SetForceChangeRace();
+
+	// RVA: -1 Offset: -1 Slot: 1
+	public abstract void ChangeRace(string racename, ChangeRaceOptions customChangeRaceOptions = 0);
+
+	// RVA: -1 Offset: -1 Slot: 2
+	public abstract void SetColor(string Name, OverlayColorData colorData, bool UpdateTexture = true);
+
+	// RVA: -1 Offset: -1 Slot: 3
+	public abstract void SetMaskColors(Color[] mask, Color[] additive, bool updateTexture = false);
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public abstract void ForceUpdateColor();
+
+	// RVA: -1 Offset: -1 Slot: 5
+	public abstract void BuildCharacterImmediatly();
+
+	// RVA: -1 Offset: -1 Slot: 6
+	public abstract void BuildCharacter();
+
+	// RVA: -1 Offset: -1 Slot: 7
+	public abstract void ForceUpdate(bool DnaDirty, bool TextureDirty = false, bool MeshDirty = false);
+
+	// RVA: -1 Offset: -1 Slot: 8
+	public abstract void InitAsyncLoading(bool pre);
+
+	// RVA: -1 Offset: -1 Slot: 9
+	public abstract bool IsAsyncLoading();
+
+	// RVA: -1 Offset: -1 Slot: 10
+	public abstract void SetUpdateWeaponFlag(bool flag);
+
+	// RVA: -1 Offset: -1 Slot: 11
+	public abstract bool GetUpdateWeaponFlag();
+
+	// RVA: -1 Offset: -1 Slot: 12
+	public abstract void SetCustomTextureDirty(bool dirty);
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[Serializable]
+public class SlotDataAssetExt : SlotDataAsset // TypeDefIndex: 1089
+{
+	// Fields
+	public AdditiveInfo additiveInfo; // 0x91959C94
+
+	// Methods
+
+	// RVA: 0x39AC4A4 Offset: 0x39A84A4 VA: 0x39AC4A4 Slot: 8
+	public override AdditiveInfo GetAdditiveInfo() { }
+
+	// RVA: 0x39AC4AC Offset: 0x39A84AC VA: 0x39AC4AC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public abstract class UmaAvatarWithSlots`1<T> : UMAAvatarBase, IUmaAvatarWithSlots, IUmaAvatarBase // TypeDefIndex: 1090
+{
+	// Fields
+	protected Dictionary<string, T> _wardrobeRecipes; // 0x95948F9B
+
+	// Properties
+	public Dictionary<string, T> WardrobeRecipes { get; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public Dictionary<string, T> get_WardrobeRecipes() { }
+
+	// RVA: -1 Offset: -1 Slot: 39
+	protected abstract T FindSlotRecipe(int recipe);
+
+	// RVA: -1 Offset: -1 Slot: 40
+	protected abstract string GetRecipeSlot(T recipe);
+
+	// RVA: -1 Offset: -1 Slot: 32
+	public void SetSlot(int recipe) { }
+
+	// RVA: -1 Offset: -1 Slot: 33
+	public void SetSlot(int recipe, uint id) { }
+
+	// RVA: -1 Offset: -1 Slot: 41
+	public virtual void SetSlot(string slot, T utr) { }
+
+	// RVA: -1 Offset: -1 Slot: 34
+	public void ClearSlot(string ws) { }
+
+	// RVA: -1 Offset: -1 Slot: 35
+	public void ClearSlots() { }
+
+	// RVA: -1 Offset: -1 Slot: 42
+	public virtual bool IsSlotVisible(string slot) { }
+
+	// RVA: -1 Offset: -1 Slot: 37
+	public bool HasSlot(string slot) { }
+
+	// RVA: -1 Offset: -1 Slot: 38
+	public List<uint> GetIds() { }
+
+	// RVA: -1 Offset: -1
+	protected void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public enum ERace // TypeDefIndex: 1091
+{
+	// Fields
+	public int value__; // 0x8F89919C
+	public const ERace None = 0;
+	public const ERace BaseFemale = 1;
+	public const ERace BaseFemale_N = 2;
+	public const ERace BaseMale = 3;
+	public const ERace BaseMale_N = 4;
+	public const ERace Count = 4;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public enum EBaseSlot // TypeDefIndex: 1092
+{
+	// Fields
+	public int value__; // 0x9C918F95
+	public const EBaseSlot None = 0;
+	public const EBaseSlot Base_Female_Hair = 1;
+	public const EBaseSlot Base_Female_Head_ingame = 2;
+	public const EBaseSlot Base_female_Feet = 3;
+	public const EBaseSlot Base_female_Leg = 4;
+	public const EBaseSlot Base_female_Chest = 5;
+	public const EBaseSlot Base_female_Chest_1 = 6;
+	public const EBaseSlot Base_female_Leg_1 = 7;
+	public const EBaseSlot Base_female_Chest_N = 8;
+	public const EBaseSlot Base_female_Chest_N_1 = 9;
+	public const EBaseSlot Base_female_Leg_N = 10;
+	public const EBaseSlot Base_female_Leg_N_1 = 11;
+	public const EBaseSlot Base_lobby_Female_Head_N = 12;
+	public const EBaseSlot Base_lobby_Female_Hair_N = 13;
+	public const EBaseSlot Base_female_Feet_N = 14;
+	public const EBaseSlot Base_male_Chest_1 = 15;
+	public const EBaseSlot Base_male_Chest = 16;
+	public const EBaseSlot Base_male_Feet = 17;
+	public const EBaseSlot Base_male_Head = 18;
+	public const EBaseSlot Base_male_Hair = 19;
+	public const EBaseSlot Base_male_Leg = 20;
+	public const EBaseSlot Base_male_Leg_1 = 21;
+	public const EBaseSlot Base_male_Chest_N_1 = 22;
+	public const EBaseSlot Base_male_Chest_N = 23;
+	public const EBaseSlot Base_male_Feet_N = 24;
+	public const EBaseSlot Base_male_Hair_N = 25;
+	public const EBaseSlot Base_male_Head_N = 26;
+	public const EBaseSlot Base_male_Leg_N = 27;
+	public const EBaseSlot Base_male_Leg_N_1 = 28;
+	public const EBaseSlot Max = 28;
+	public const EBaseSlot Count = 29;
+	public const EBaseSlot Start = 1;
+	public const EBaseSlot Limit = 31;
+	public const EBaseSlot AllBits = 536870911;
+	public const EBaseSlot HeadBits = 67375108;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public enum EWardrobeSlot // TypeDefIndex: 1093
+{
+	// Fields
+	public int value__; // 0xA2A4A3BF
+	public const EWardrobeSlot None = 0;
+	public const EWardrobeSlot Head = 1;
+	public const EWardrobeSlot Hair = 2;
+	public const EWardrobeSlot Face = 3;
+	public const EWardrobeSlot Set = 4;
+	public const EWardrobeSlot Chest = 5;
+	public const EWardrobeSlot Legs = 6;
+	public const EWardrobeSlot Feet = 7;
+	public const EWardrobeSlot Helmet = 8;
+	public const EWardrobeSlot Vest = 9;
+	public const EWardrobeSlot BagPack = 10;
+	public const EWardrobeSlot LegPack = 11;
+	public const EWardrobeSlot Parachute = 12;
+	public const EWardrobeSlot ParachuteBag = 13;
+	public const EWardrobeSlot HeadAdditive = 14;
+	public const EWardrobeSlot Start = 1;
+	public const EWardrobeSlot Max = 14;
+	public const EWardrobeSlot Count = 15;
+	public const EWardrobeSlot Limit = 15;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public enum EAdditiveTargetSlot // TypeDefIndex: 1094
+{
+	// Fields
+	public byte value__; // 0xF5F0B8A4
+	public const EAdditiveTargetSlot None = 0;
+	public const EAdditiveTargetSlot Head = 1;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public enum EAdditiveMethod // TypeDefIndex: 1095
+{
+	// Fields
+	public byte value__; // 0xF0BEBFB9
+	public const EAdditiveMethod Additive = 0;
+	public const EAdditiveMethod Replace = 1;
+	public const EAdditiveMethod ReplaceMat = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public enum EAdditiveOrderType // TypeDefIndex: 1096
+{
+	// Fields
+	public byte value__; // 0xBED0A3F5
+	public const EAdditiveOrderType After = 0;
+	public const EAdditiveOrderType Before = 1;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[Serializable]
+public class AdditiveInfo // TypeDefIndex: 1097
+{
+	// Fields
+	public EAdditiveTargetSlot TargetSlot; // 0xA4F0BCB1
+	public byte SlotIndex; // 0xBBBEA5B8
+	public byte OverlayOrder; // 0xF0BFA4F0
+	public EAdditiveMethod Method; // 0xD0EEFDD0
+	public EAdditiveOrderType OrderType; // 0xD0FEFEFE
+
+	// Properties
+	public EWardrobeSlot TargetWardrobeSlot { get; }
+
+	// Methods
+
+	// RVA: 0x39AC554 Offset: 0x39A8554 VA: 0x39AC554
+	public EWardrobeSlot get_TargetWardrobeSlot() { }
+
+	// RVA: 0x39AC574 Offset: 0x39A8574 VA: 0x39AC574
+	public static AdditiveInfo DeserializeFromByte(byte b) { }
+
+	// RVA: 0x39AC608 Offset: 0x39A8608 VA: 0x39AC608
+	public static bool NotNullOrEmpty(AdditiveInfo info) { }
+
+	// RVA: 0x39AC61C Offset: 0x39A861C VA: 0x39AC61C
+	public static bool IsNullOrEmpty(AdditiveInfo info) { }
+
+	// RVA: 0x39AC600 Offset: 0x39A8600 VA: 0x39AC600
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public static class UmaSettings // TypeDefIndex: 1098
+{
+	// Fields
+	public static bool LogError; // 0xEAB4A4A3
+	public static bool LogDetail; // 0xA3B1B2EA
+	public static bool LogTimes; // 0xB98FB3B9
+	public static bool UsingAvatarSimple; // 0xB5A2A4A3
+	public static bool SkipBuildIfNotVisibleV2; // 0xB3ECBDB1
+	public static bool SkipBuildIfNotVisible; // 0xFCA2B1B8
+	public static bool SkipBuildIfNoVisibleChange; // 0xB4A4A3F0
+	public static bool ReAddBaseSlotsWhenWardrobeLoadFailed; // 0xB8B3EAEA
+	public static bool PoolSlotOverlayData; // 0xA48FA2B1
+	public static bool PoolSlotOverlayDataFixMatchOverlay; // 0xA4B9B1A2
+	public static bool OptBuildGc; // 0xB8B3ECA3
+	public static bool FaceFlow; // 0xF0EEA2B1
+	public static bool FixNoClothTextureMergeForAdditive; // 0xB9A0D0EE
+	public static bool BRUMAHeadSlotsAsyncLoading; // 0xF0BCB5A8
+	public static bool FixTexMergeForColorMask; // 0xA4B3B5A6
+	public static bool RGB565ForAllShader; // 0xD08BA2BF
+	public const string StrAvatarAssetsDir = "umas/";
+	public static readonly int StrAvatarAssetsDirLength; // 0x858FD0BE
+	public const bool SkipSlotOverlayesItemNames = true;
+	public const bool RenameInApkSlotOverlayFileToHashes = true;
+	public static bool UseSharedSbStrForSlotOverlayHashNames; // 0xB5BDA5A3
+	public static readonly int SlotOverlayHashNameSbCap; // 0xB3F0F9F8
+	public static bool UsingPreAsyncLoading; // 0xA4F7BEB1
+	public static bool UsingPostAsyncLoading; // 0xA4B5A2F0
+	public static bool BuildAfterWardrobeSlotsLoadedProtect; // 0xD0BEA2A5
+	public const int MaxAssetCountPerType = 65535;
+	public const int MaxSlotsPerRecipe = 15;
+	public const int MaxOverlaysPerSlot = 1;
+	public const int MaxAdditiveSlotsPerRecipe = 7;
+	public const bool SaveAdditiveInfoInRecipeBytes = false;
+	public const bool SortReplaceSlotToFront = true;
+	public const bool SortReplaceSlotToTail = true;
+	public const int EnumInvalidBits = 1;
+	public static bool EnableDecompressDataNoGC; // 0xA2B5A4A3
+	public static bool UsingSetBoneWeights; // 0x918794F0
+	public static bool UsingSetBoneWeights2; // 0xA5F09682
+	public static bool UsingBindPosesList; // 0xBEB9A7BE
+	public static bool UsingUnloadFromGfxDevice; // 0xA2F0FCB4
+	public static string[] RaceNames; // 0xA4F0B7B5
+	public static string[] RaceRecipes; // 0xB2F0BFBF
+	public static string[] BaseSlotNames; // 0xD0DAB7B9
+	public static string[] WardrobeSlotNames; // 0xBEBEB193
+
+	// Properties
+	public static bool UsingAsyncLoading { get; }
+
+	// Methods
+
+	// RVA: 0x39AC638 Offset: 0x39A8638 VA: 0x39AC638
+	public static bool get_UsingAsyncLoading() { }
+
+	// RVA: 0x39AC6BC Offset: 0x39A86BC VA: 0x39AC6BC
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class UmaSimpleUtils.<>c__DisplayClass4_0 // TypeDefIndex: 1099
+{
+	// Fields
+	public Func<string, int> strToIdx; // 0xBDF0A4BF
+	public int ret; // 0xB8A3A2B1
+
+	// Methods
+
+	// RVA: 0x39AD3B0 Offset: 0x39A93B0 VA: 0x39AD3B0
+	public void .ctor() { }
+
+	// RVA: 0x39AEC08 Offset: 0x39AAC08 VA: 0x39AEC08
+	internal void <StringToBits>b__0(string s) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public static class UmaSimpleUtils // TypeDefIndex: 1100
+{
+	// Fields
+	public static Dictionary<string, int> RaceNameToEnums; // 0xB6F0BCB1
+	public static Dictionary<string, int> BaseSlotNameToEnums; // 0xB4BCB5B9
+	public static Dictionary<string, int> WardrobeSlotNameToEnums; // 0xBFB7F7F0
+
+	// Methods
+
+	// RVA: 0x39AD2B8 Offset: 0x39A92B8 VA: 0x39AD2B8
+	public static void LogErrorNonLive(string msg) { }
+
+	// RVA: 0x39AD2BC Offset: 0x39A92BC VA: 0x39AD2BC
+	public static int StringToBits(List<string> ss, Func<string, int> strToIdx) { }
+
+	// RVA: 0x39AD3B8 Offset: 0x39A93B8 VA: 0x39AD3B8
+	private static int StringToBitsMasked(List<string> ss, Func<string, int> strToIdx, int invalidBits = 1) { }
+
+	// RVA: 0x39AD3D0 Offset: 0x39A93D0 VA: 0x39AD3D0
+	private static Dictionary<string, int> InitNameToEnumMap(string[] ss) { }
+
+	// RVA: 0x39AD4B0 Offset: 0x39A94B0 VA: 0x39AD4B0
+	private static int GetEnumByName(Dictionary<string, int> dic, string s, int default = 0) { }
+
+	// RVA: 0x39AD534 Offset: 0x39A9534 VA: 0x39AD534
+	public static string GetRaceName(ERace e) { }
+
+	// RVA: 0x39AD5B0 Offset: 0x39A95B0 VA: 0x39AD5B0
+	public static bool IsFemale(ERace e) { }
+
+	// RVA: 0x39AD5C0 Offset: 0x39A95C0 VA: 0x39AD5C0
+	public static EBaseSlot GetBaseSlot(string s) { }
+
+	// RVA: 0x39AD670 Offset: 0x39A9670 VA: 0x39AD670
+	public static string GetWardrobeSlotName(EWardrobeSlot e) { }
+
+	// RVA: 0x39AD6EC Offset: 0x39A96EC VA: 0x39AD6EC
+	public static EWardrobeSlot GetWardrobeSlot(string s) { }
+
+	// RVA: 0x39AD79C Offset: 0x39A979C VA: 0x39AD79C
+	public static string GetWardrobeSlotName(EAdditiveTargetSlot e) { }
+
+	// RVA: 0x39AC564 Offset: 0x39A8564 VA: 0x39AC564
+	public static EWardrobeSlot GetTargetWardrobeSlot(EAdditiveTargetSlot e) { }
+
+	// RVA: 0x39AD7AC Offset: 0x39A97AC VA: 0x39AD7AC
+	public static int GetTargetBaseSlots(EAdditiveTargetSlot e) { }
+
+	// RVA: 0x39AD7C4 Offset: 0x39A97C4 VA: 0x39AD7C4
+	public static bool IsPotensialAdditiveSlot(string slotName) { }
+
+	// RVA: 0x39AD880 Offset: 0x39A9880 VA: 0x39AD880
+	public static bool IsPotensialAdditiveSrcSlot(string wardrobeSlot) { }
+
+	// RVA: 0x39AD8E8 Offset: 0x39A98E8 VA: 0x39AD8E8
+	public static bool GetRecipe(int recipe, out UMATextRecipe textRecipe, out UmaRecipeSimple simpleRecipe) { }
+
+	// RVA: 0x39ADB28 Offset: 0x39A9B28 VA: 0x39ADB28
+	public static bool IsConflict(int selectRecipe, int targetRecipe, bool considerHidingTarget) { }
+
+	// RVA: 0x39ADE18 Offset: 0x39A9E18 VA: 0x39ADE18
+	public static bool IsHidenByTarget(UmaRecipeSimple srcRecipe, UmaRecipeSimple targetRecipe) { }
+
+	// RVA: 0x39ADED8 Offset: 0x39A9ED8 VA: 0x39ADED8
+	public static bool IsHidenByTarget(UMATextRecipe srcRecipe, UMATextRecipe targetRecipe) { }
+
+	// RVA: 0x39ADF6C Offset: 0x39A9F6C VA: 0x39ADF6C
+	public static bool HasSuppress(int recipe, EWardrobeSlot slot) { }
+
+	// RVA: 0x39AE13C Offset: 0x39AA13C VA: 0x39AE13C
+	public static bool HasSuppress(UmaRecipeSimple recipe, EWardrobeSlot slot) { }
+
+	// RVA: 0x39AE06C Offset: 0x39AA06C VA: 0x39AE06C
+	public static bool HasSuppress(UMATextRecipe recipe, EWardrobeSlot slot) { }
+
+	// RVA: 0x39AE1AC Offset: 0x39AA1AC VA: 0x39AE1AC
+	public static void MergeAdditiveSlot(SlotData dst, OverlayData srcOverlay, AdditiveInfo srcInfo) { }
+
+	// RVA: 0x39AE5B0 Offset: 0x39AA5B0 VA: 0x39AE5B0
+	public static void SortReplaceSlotsInNeed(List<KeyValuePair<SlotData, AdditiveInfo>> additiveSlots) { }
+
+	// RVA: 0x39AE6DC Offset: 0x39AA6DC VA: 0x39AE6DC
+	public static bool NoClothTextureMerge(List<OverlayData> overlayList) { }
+
+	// RVA: 0x39AE988 Offset: 0x39AA988 VA: 0x39AE988
+	public static bool NoSkinTextureMerge(List<OverlayData> overlayList) { }
+
+	// RVA: 0x39AEACC Offset: 0x39AAACC VA: 0x39AEACC
+	private static bool ShouldMergeTexAndMeshIgnoreColorMask(UMAData umaData, SlotData slotData) { }
+
+	// RVA: 0x39AEB8C Offset: 0x39AAB8C VA: 0x39AEB8C
+	public static bool ShouldUseRt(UMAData umaData, SlotData slotData, ChannelType channelType) { }
+
+	// RVA: 0x39AEBCC Offset: 0x39AABCC VA: 0x39AEBCC
+	public static bool ShouldMergeTexAndMesh(UMAData umaData, SlotData slotData) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class RaceData.RaceThumbnails.WardrobeSlotThumb // TypeDefIndex: 1101
+{
+	// Fields
+	[Tooltip("A comma separated list of wardrobe slots this is the base thumbnail for (no spaces)")]
+	public string thumbIsFor; // 0xB6BFF0F7
+	public Sprite thumb; // 0xA0A9A4F0
+
+	// Methods
+
+	// RVA: 0x39AFDC8 Offset: 0x39ABDC8 VA: 0x39AFDC8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class RaceData.RaceThumbnails // TypeDefIndex: 1102
+{
+	// Fields
+	public Sprite fullThumb; // 0x94F7F0B5
+	public Sprite faceThumb; // 0xB8A4A0B5
+	[SerializeField]
+	private List<WardrobeSlotThumb> wardrobeSlotThumbs; // 0xA2A4BE95
+
+	// Methods
+
+	// RVA: 0x39AF9B8 Offset: 0x39AB9B8 VA: 0x39AF9B8
+	public Sprite GetThumbFor(string thumbToGet = "") { }
+
+	// RVA: 0x39AFD40 Offset: 0x39ABD40 VA: 0x39AFD40
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum RaceData.UMATarget // TypeDefIndex: 1103
+{
+	// Fields
+	public int value__; // 0xF0EAF7A9
+	public const UMATarget Humanoid = 0;
+	public const UMATarget Generic = 1;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[Serializable]
+public class RaceData : ScriptableObject, INameProvider // TypeDefIndex: 1104
+{
+	// Fields
+	public UMARecipeBase baseRaceRecipe; // 0xA9A4F0B5
+	[UMAAssetFieldVisible]
+	public int baseOverlayLimitSizes; // 0xB6F0B5A0
+	public List<string> wardrobeSlots; // 0xB4BCB5B9
+	public List<int> overlayLimitSizes; // 0xA2B1BDF0
+	public List<string> backwardsCompatibleWith; // 0xBCB1B8A3
+	public RaceThumbnails raceThumbnails; // 0xF0B7BEB9
+	public string raceName; // 0xBEF0A3B9
+	public UmaTPose TPose; // 0xA3F0A4BF
+	public UMATarget umaTarget; // 0xBFA0A0A5
+	public string genericRootMotionTransformName; // 0xB4B5A4A2
+	public float raceHeight; // 0x9696D0FE
+	public float raceRadius; // 0xB3B9BF86
+	public float raceMass; // 0xB5B78FB5
+
+	// Methods
+
+	// RVA: 0x39AEC48 Offset: 0x39AAC48 VA: 0x39AEC48
+	public void AddDefaultWardrobeSlots(bool forceOverride = false) { }
+
+	// RVA: 0x39AF100 Offset: 0x39AB100 VA: 0x39AF100
+	public bool ValidateWardrobeSlots(bool setToDefault = false) { }
+
+	// RVA: 0x39AF1AC Offset: 0x39AB1AC VA: 0x39AF1AC
+	public bool findBackwardsCompatibleWith(List<string> compatibleStrings) { }
+
+	// RVA: 0x39AF330 Offset: 0x39AB330 VA: 0x39AF330
+	public int GetSlotLimitSize(string s) { }
+
+	// RVA: 0x39AF41C Offset: 0x39AB41C VA: 0x39AF41C Slot: 4
+	public string GetAssetName() { }
+
+	// RVA: 0x39AF424 Offset: 0x39AB424 VA: 0x39AF424 Slot: 5
+	public int GetNameHash() { }
+
+	// RVA: 0x39AF42C Offset: 0x39AB42C VA: 0x39AF42C
+	public bool Validate() { }
+
+	// RVA: 0x39AF4EC Offset: 0x39AB4EC VA: 0x39AF4EC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public interface INameProvider // TypeDefIndex: 1105
+{
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract string GetAssetName();
+
+	// RVA: -1 Offset: -1 Slot: 1
+	public abstract int GetNameHash();
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum MaxRectsBinPack.FreeRectChoiceHeuristic // TypeDefIndex: 1106
+{
+	// Fields
+	public int value__; // 0xBCBF86A4
+	public const FreeRectChoiceHeuristic RectBestShortSideFit = 0;
+	public const FreeRectChoiceHeuristic RectBestLongSideFit = 1;
+	public const FreeRectChoiceHeuristic RectBestAreaFit = 2;
+	public const FreeRectChoiceHeuristic RectBottomLeftRule = 3;
+	public const FreeRectChoiceHeuristic RectContactPointRule = 4;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public class MaxRectsBinPack // TypeDefIndex: 1107
+{
+	// Fields
+	public int binWidth; // 0xB4BCB5B9
+	public int binHeight; // 0x93BDF7F0
+	public bool allowRotations; // 0xBFA4A3A5
+	public List<Rect> usedRectangles; // 0xF0F7E0BD
+	public List<Rect> freeRectangles; // 0xA4F0B6BF
+
+	// Methods
+
+	// RVA: 0x39AFE20 Offset: 0x39ABE20 VA: 0x39AFE20
+	public void .ctor(int width, int height, bool rotations) { }
+
+	// RVA: 0x39AFEF4 Offset: 0x39ABEF4 VA: 0x39AFEF4
+	public void Init(int width, int height, bool rotations) { }
+
+	// RVA: 0x39B0004 Offset: 0x39AC004 VA: 0x39B0004
+	public Rect Insert(int width, int height, FreeRectChoiceHeuristic method) { }
+
+	// RVA: 0x39B1944 Offset: 0x39AD944 VA: 0x39B1944
+	public void Insert(List<Rect> rects, List<Rect> dst, FreeRectChoiceHeuristic method) { }
+
+	// RVA: 0x39B1C08 Offset: 0x39ADC08 VA: 0x39B1C08
+	private void PlaceRect(Rect node) { }
+
+	// RVA: 0x39B1B44 Offset: 0x39ADB44 VA: 0x39B1B44
+	private Rect ScoreRect(int width, int height, FreeRectChoiceHeuristic method, ref int score1, ref int score2) { }
+
+	// RVA: 0x39B1D9C Offset: 0x39ADD9C VA: 0x39B1D9C
+	public float Occupancy() { }
+
+	// RVA: 0x39B0640 Offset: 0x39AC640 VA: 0x39B0640
+	private Rect FindPositionForNewNodeBottomLeft(int width, int height, ref int bestY, ref int bestX) { }
+
+	// RVA: 0x39B0278 Offset: 0x39AC278 VA: 0x39B0278
+	private Rect FindPositionForNewNodeBestShortSideFit(int width, int height, ref int bestShortSideFit, ref int bestLongSideFit) { }
+
+	// RVA: 0x39B0C20 Offset: 0x39ACC20 VA: 0x39B0C20
+	private Rect FindPositionForNewNodeBestLongSideFit(int width, int height, ref int bestShortSideFit, ref int bestLongSideFit) { }
+
+	// RVA: 0x39B0FE8 Offset: 0x39ACFE8 VA: 0x39B0FE8
+	private Rect FindPositionForNewNodeBestAreaFit(int width, int height, ref int bestAreaFit, ref int bestShortSideFit) { }
+
+	// RVA: 0x39B1E88 Offset: 0x39ADE88 VA: 0x39B1E88
+	private int CommonIntervalLength(int i1start, int i1end, int i2start, int i2end) { }
+
+	// RVA: 0x39B1EB4 Offset: 0x39ADEB4 VA: 0x39B1EB4
+	private int ContactPointScoreNode(int x, int y, int width, int height) { }
+
+	// RVA: 0x39B092C Offset: 0x39AC92C VA: 0x39B092C
+	private Rect FindPositionForNewNodeContactPoint(int width, int height, ref int bestContactScore) { }
+
+	// RVA: 0x39B1418 Offset: 0x39AD418 VA: 0x39B1418
+	private bool SplitFreeNode(Rect freeNode, ref Rect usedNode) { }
+
+	// RVA: 0x39B176C Offset: 0x39AD76C VA: 0x39B176C
+	private void PruneFreeList() { }
+
+	// RVA: 0x39B21A8 Offset: 0x39AE1A8 VA: 0x39B21A8
+	private bool IsContainedIn(Rect a, Rect b) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[Serializable]
+public class OverlayColorData : IEquatable<OverlayColorData> // TypeDefIndex: 1108
+{
+	// Fields
+	public const string UNSHARED = "-";
+	public string name; // 0xBDB193F7
+	public Color[] channelMask; // 0x83B1A2B5
+	public Color[] channelAdditiveMask; // 0xB5A4B1A4
+
+	// Properties
+	public Color color { get; set; }
+	public bool IsASharedColor { get; }
+
+	// Methods
+
+	// RVA: 0x39AEA88 Offset: 0x39AAA88 VA: 0x39AEA88
+	public Color get_color() { }
+
+	// RVA: 0x39B21E8 Offset: 0x39AE1E8 VA: 0x39B21E8
+	public void set_color(Color value) { }
+
+	// RVA: 0x39B2214 Offset: 0x39AE214 VA: 0x39B2214
+	public void .ctor() { }
+
+	// RVA: 0x39B2294 Offset: 0x39AE294 VA: 0x39B2294
+	public void .ctor(int channels) { }
+
+	// RVA: 0x39B232C Offset: 0x39AE32C VA: 0x39B232C
+	public void Reset(int channels) { }
+
+	// RVA: 0x39B2450 Offset: 0x39AE450 VA: 0x39B2450
+	public OverlayColorData Duplicate() { }
+
+	// RVA: 0x39B25C8 Offset: 0x39AE5C8 VA: 0x39B25C8
+	public bool get_IsASharedColor() { }
+
+	// RVA: 0x39B2638 Offset: 0x39AE638 VA: 0x39B2638
+	public bool HasName() { }
+
+	// RVA: 0x39B2658 Offset: 0x39AE658 VA: 0x39B2658
+	public static bool SameColor(Color color1, Color color2) { }
+
+	// RVA: 0x39B2790 Offset: 0x39AE790 VA: 0x39B2790
+	public static bool DifferentColor(Color color1, Color color2) { }
+
+	// RVA: 0x39B28C8 Offset: 0x39AE8C8 VA: 0x39B28C8
+	public static bool op_Implicit(OverlayColorData obj) { }
+
+	// RVA: 0x39B28D4 Offset: 0x39AE8D4 VA: 0x39B28D4 Slot: 4
+	public bool Equals(OverlayColorData other) { }
+
+	// RVA: 0x39B2A20 Offset: 0x39AEA20 VA: 0x39B2A20 Slot: 0
+	public override bool Equals(object other) { }
+
+	// RVA: 0x39B28D8 Offset: 0x39AE8D8 VA: 0x39B28D8
+	public static bool op_Equality(OverlayColorData cd1, OverlayColorData cd2) { }
+
+	// RVA: 0x39AE848 Offset: 0x39AA848 VA: 0x39AE848
+	public static bool op_Inequality(OverlayColorData cd1, OverlayColorData cd2) { }
+
+	// RVA: 0x39B2AA0 Offset: 0x39AEAA0 VA: 0x39B2AA0 Slot: 2
+	public override int GetHashCode() { }
+
+	// RVA: 0x39B2AA8 Offset: 0x39AEAA8 VA: 0x39B2AA8
+	public int GetChannels() { }
+
+	// RVA: 0x39B2AC0 Offset: 0x39AEAC0 VA: 0x39B2AC0
+	public void EnsureChannels(int channels) { }
+
+	// RVA: 0x39B2CF4 Offset: 0x39AECF4 VA: 0x39B2CF4
+	public void AssignTo(OverlayColorData dest) { }
+
+	// RVA: 0x39B2E58 Offset: 0x39AEE58 VA: 0x39B2E58
+	public void AssignFrom(OverlayColorData src) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[Serializable]
+public class OverlayData : IEquatable<OverlayData> // TypeDefIndex: 1109
+{
+	// Fields
+	public OverlayDataAsset asset; // 0x82F0EAF7
+	public Rect rect; // 0xA2B5B6B5
+	public OverlayColorData colorData; // 0xB5B3BEB5
+	public byte additiveOrder; // 0xA0A9A4F0
+	public int refCount; // 0xB9B6F0B5
+
+	// Properties
+	public string overlayName { get; }
+
+	// Methods
+
+	// RVA: 0x39B2F50 Offset: 0x39AEF50 VA: 0x39B2F50
+	public string get_overlayName() { }
+
+	// RVA: 0x39B2F6C Offset: 0x39AEF6C VA: 0x39B2F6C
+	public OverlayData Duplicate() { }
+
+	// RVA: 0x39B303C Offset: 0x39AF03C VA: 0x39B303C
+	public void .ctor() { }
+
+	// RVA: 0x39B3010 Offset: 0x39AF010 VA: 0x39B3010
+	public void .ctor(OverlayDataAsset asset) { }
+
+	// RVA: 0x39B3044 Offset: 0x39AF044 VA: 0x39B3044
+	public void SetAsset(OverlayDataAsset asset) { }
+
+	// RVA: 0x39B3490 Offset: 0x39AF490 VA: 0x39B3490
+	private void CreateOrResetColorData(int channels) { }
+
+	// RVA: 0x39B355C Offset: 0x39AF55C VA: 0x39B355C
+	public void Reset() { }
+
+	// RVA: 0x39B350C Offset: 0x39AF50C VA: 0x39B350C
+	public void InitMaskColor(OverlayColorData colorData) { }
+
+	// RVA: 0x39B3594 Offset: 0x39AF594 VA: 0x39B3594
+	public void CopyColors(OverlayData overlay) { }
+
+	// RVA: 0x39B35C4 Offset: 0x39AF5C4 VA: 0x39B35C4
+	public void EnsureChannels(int channels, bool createNewColor) { }
+
+	// RVA: 0x39B3628 Offset: 0x39AF628 VA: 0x39B3628
+	public static bool Equivalent(OverlayData overlay1, OverlayData overlay2) { }
+
+	// RVA: 0x39B37A8 Offset: 0x39AF7A8 VA: 0x39B37A8
+	public static bool EquivalentAssetAndUse(OverlayData overlay1, OverlayData overlay2) { }
+
+	// RVA: 0x39B3734 Offset: 0x39AF734 VA: 0x39B3734
+	public static bool op_Implicit(OverlayData obj) { }
+
+	// RVA: 0x39B38B0 Offset: 0x39AF8B0 VA: 0x39B38B0 Slot: 4
+	public bool Equals(OverlayData other) { }
+
+	// RVA: 0x39B38B4 Offset: 0x39AF8B4 VA: 0x39B38B4 Slot: 0
+	public override bool Equals(object other) { }
+
+	// RVA: 0x39AE568 Offset: 0x39AA568 VA: 0x39AE568
+	public static bool op_Equality(OverlayData overlay, OverlayData obj) { }
+
+	// RVA: 0x39AE800 Offset: 0x39AA800 VA: 0x39AE800
+	public static bool op_Inequality(OverlayData overlay, OverlayData obj) { }
+
+	// RVA: 0x39B3934 Offset: 0x39AF934 VA: 0x39B3934 Slot: 2
+	public override int GetHashCode() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum OverlayDataAsset.OverlayType // TypeDefIndex: 1110
+{
+	// Fields
+	public int value__; // 0xF0B4BCB5
+	public const OverlayType Normal = 0;
+	public const OverlayType Cutout = 1;
+	public const OverlayType Additive = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[Serializable]
+public class OverlayDataAsset : ScriptableObject, ISerializationCallbackReceiver, INameProvider // TypeDefIndex: 1111
+{
+	// Fields
+	public string overlayName; // 0xBFBEF0A3
+	public int nameHash; // 0xA5A3F0A4
+	public OverlayType overlayType; // 0xA2BFA0A0
+	public Rect rect; // 0xFEB4B5A4
+	public Texture alphaMask; // 0xBCD0B3D0
+	public Texture[] textureList; // 0xBBB5B5A3
+	[UMAAssetFieldVisible]
+	public UMAMaterial material; // 0xA2B996D0
+
+	// Methods
+
+	// RVA: 0x39B393C Offset: 0x39AF93C VA: 0x39B393C Slot: 6
+	public string GetAssetName() { }
+
+	// RVA: 0x39B3944 Offset: 0x39AF944 VA: 0x39B3944 Slot: 7
+	public int GetNameHash() { }
+
+	// RVA: 0x39B394C Offset: 0x39AF94C VA: 0x39B394C Slot: 5
+	public void OnAfterDeserialize() { }
+
+	// RVA: 0x39B396C Offset: 0x39AF96C VA: 0x39B396C Slot: 4
+	public void OnBeforeSerialize() { }
+
+	// RVA: 0x39B3970 Offset: 0x39AF970 VA: 0x39B3970
+	public Texture GetAlphaMask() { }
+
+	// RVA: 0x39ABE10 Offset: 0x39A7E10 VA: 0x39ABE10
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public abstract class RaceLibraryBase : MonoBehaviour // TypeDefIndex: 1112
+{
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public abstract void AddRace(RaceData race);
+
+	// RVA: -1 Offset: -1 Slot: 5
+	public abstract RaceData GetRace(string raceName);
+
+	// RVA: -1 Offset: -1 Slot: 6
+	public abstract RaceData GetRace(int raceHash);
+
+	// RVA: -1 Offset: -1 Slot: 7
+	public abstract RaceData[] GetAllRaces();
+
+	// RVA: -1 Offset: -1 Slot: 8
+	public abstract void UpdateDictionary();
+
+	// RVA: -1 Offset: -1 Slot: 9
+	public abstract void ValidateDictionary();
+
+	// RVA: 0x39B3A04 Offset: 0x39AFA04 VA: 0x39B3A04
+	protected void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[ExecuteInEditMode]
+public class SeamRemoval : MonoBehaviour // TypeDefIndex: 1113
+{
+	// Fields
+	public bool runScript; // 0xA3B1B2B5
+	public float threshold; // 0xBE918FB5
+	public Transform separatedMesh; // 0xA4A9BCB1
+	public Transform unifiedMesh; // 0x8FA3B3B9
+
+	// Methods
+
+	// RVA: 0x39B3A0C Offset: 0x39AFA0C VA: 0x39B3A0C
+	private void Update() { }
+
+	// RVA: 0x39B3B70 Offset: 0x39AFB70 VA: 0x39B3B70
+	public static Mesh PerformSeamRemoval(SkinnedMeshRenderer originalMesh, SkinnedMeshRenderer referenceMesh, float threshold) { }
+
+	// RVA: 0x39B3E8C Offset: 0x39AFE8C VA: 0x39B3E8C
+	public static void calculateMeshTangents(Mesh mesh) { }
+
+	// RVA: 0x39B4350 Offset: 0x39B0350 VA: 0x39B4350
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class SharedUMAHelper.UMASharedData // TypeDefIndex: 1114
+{
+	// Fields
+	public List<Texture[]> sharedResultingTextures; // 0xB1B88393
+	public Mesh sharedMesh; // 0x838FA0A2
+
+	// Methods
+
+	// RVA: 0x39B47B8 Offset: 0x39B07B8 VA: 0x39B47B8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public class SharedUMAHelper // TypeDefIndex: 1115
+{
+	// Fields
+	public static Dictionary<uint, UMASharedData> sharedData; // 0xBE91A4B5
+
+	// Methods
+
+	// RVA: 0x39B4364 Offset: 0x39B0364 VA: 0x39B4364
+	public static bool SharedTexExist(UMAData umaData) { }
+
+	// RVA: 0x39B4430 Offset: 0x39B0430 VA: 0x39B4430
+	public static void SaveSharedTex(UMAData umaData) { }
+
+	// RVA: 0x39B47C0 Offset: 0x39B07C0 VA: 0x39B47C0
+	public static bool SharedMeshExist(UMAData umaData) { }
+
+	// RVA: 0x39B48C0 Offset: 0x39B08C0 VA: 0x39B48C0
+	public static void SaveSharedMesh(UMAData umaData) { }
+
+	// RVA: 0x39B4A74 Offset: 0x39B0A74 VA: 0x39B4A74
+	public static void ReleaseSharedData() { }
+
+	// RVA: 0x39B4EF4 Offset: 0x39B0EF4 VA: 0x39B4EF4
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class SkinnedMeshCombiner.CombineInstance // TypeDefIndex: 1116
+{
+	// Fields
+	public UMAMeshData meshData; // 0xA4A9BCB1
+	public List<int> targetSubmeshIndices; // 0x93A3B3B9
+
+	// Methods
+
+	// RVA: 0x39BB9F8 Offset: 0x39B79F8 VA: 0x39BB9F8
+	public void Clear() { }
+
+	// RVA: 0x39BBA58 Offset: 0x39B7A58 VA: 0x39BBA58
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+private enum SkinnedMeshCombiner.MeshComponents // TypeDefIndex: 1117
+{
+	// Fields
+	public int value__; // 0xB5BCBCBF
+	public const MeshComponents none = 0;
+	public const MeshComponents has_normals = 1;
+	public const MeshComponents has_tangents = 2;
+	public const MeshComponents has_colors32 = 4;
+	public const MeshComponents has_uv = 8;
+	public const MeshComponents has_uv2 = 16;
+	public const MeshComponents has_uv3 = 32;
+	public const MeshComponents has_uv4 = 64;
+	public const MeshComponents has_blendShapes = 128;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[DefaultMember("Item")]
+private class SkinnedMeshCombiner.BoneIndexEntry // TypeDefIndex: 1118
+{
+	// Fields
+	public int index; // 0x9C8FA0A2
+	public List<int> indices; // 0xA695B7BF
+
+	// Properties
+	public int Count { get; }
+	public int Item { get; }
+
+	// Methods
+
+	// RVA: 0x39BB34C Offset: 0x39B734C VA: 0x39BB34C
+	public int get_Count() { }
+
+	// RVA: 0x39BB2A8 Offset: 0x39B72A8 VA: 0x39BB2A8
+	public int get_Item(int idx) { }
+
+	// RVA: 0x39BB3A4 Offset: 0x39B73A4 VA: 0x39BB3A4
+	internal void AddIndex(int idx) { }
+
+	// RVA: 0x39B6844 Offset: 0x39B2844 VA: 0x39B6844
+	public void Clear() { }
+
+	// RVA: 0x39B6B14 Offset: 0x39B2B14 VA: 0x39B6B14
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public static class SkinnedMeshCombiner // TypeDefIndex: 1119
+{
+	// Fields
+	public static bool m_enableNewUMABuild; // 0x8FA4BEB5
+	public static Color32 m_defaultColor; // 0x9987838F
+	private static Dictionary<int, BoneIndexEntry> bonesCollection; // 0xD0E08F97
+	private static List<Matrix4x4> bindPoses; // 0xB5A2B996
+	private static List<int> bonesList; // 0xB5A3B1B2
+	private static List<int> s_SubMeshTrisCnt; // 0xA0A0918F
+	public static bool OptGc; // 0xB883938F
+	private static List<BoneIndexEntry> s_BoneIndexEntryPool; // 0x8FA0A2B1
+	private static int s_BoneIndexEntryPoolUsedCnt; // 0xB9A2A483
+	private static int[] s_nonSharedBoneMapping; // 0xB99CB7BE
+	private static int[] s_sharedBoneMapping; // 0x978FA4A3
+
+	// Methods
+
+	// RVA: 0x39B4EFC Offset: 0x39B0EFC VA: 0x39B4EFC
+	public static void BuildBones(UMAMeshDataForBuild target, List<CombineInstance> sources, bool ignoreBlendShapes = false) { }
+
+	// RVA: 0x39B63C0 Offset: 0x39B23C0 VA: 0x39B63C0
+	private static void ResetBoneIndexEntryPool() { }
+
+	// RVA: 0x39B6898 Offset: 0x39B2898 VA: 0x39B6898
+	private static BoneIndexEntry AllocBoneIndexEntry() { }
+
+	// RVA: 0x39B6B1C Offset: 0x39B2B1C VA: 0x39B6B1C
+	private static bool UseBoneWeight2(bool isBone2) { }
+
+	// RVA: 0x39B6B90 Offset: 0x39B2B90 VA: 0x39B6B90
+	public static void CombineMeshes(UMAMeshDataForBuild target, List<CombineInstance> sources, ref List<Vector3> verticesList, ref List<Vector4> tangentsList, ref List<Vector3> normalsList, ref List<Vector2> uvList, ref List<Vector2> uv2List, ref List<List<int>> trianglesList, ref List<Color32> vertColorList, ref BoneWeight[] boneWeightsCache, ref BoneWeight2[] boneWeights2Cache, int maxTriNum, bool ignoreBlendShapes = false, bool needTangent = true, bool isBone2 = false) { }
+
+	// RVA: 0x39B6144 Offset: 0x39B2144 VA: 0x39B6144
+	private static void MergeSortedTransforms(UMATransform[] mergedTransforms, ref int len1, UMATransform[] umaTransforms) { }
+
+	// RVA: 0x39B5AB4 Offset: 0x39B1AB4 VA: 0x39B5AB4
+	private static void AnalyzeSources(List<CombineInstance> sources, List<int> subMeshTriangleLength, int subMeshCnt, ref int vertexCount, ref int bindPoseCount, ref int transformHierarchyCount, ref MeshComponents meshComponents, ref int blendShapeCount) { }
+
+	// RVA: 0x39B5858 Offset: 0x39B1858 VA: 0x39B5858
+	private static int FindTargetSubMeshCount(List<CombineInstance> sources) { }
+
+	// RVA: 0x39BA15C Offset: 0x39B615C VA: 0x39BA15C
+	private static void BuildBoneWeights(UMAMeshData meshData, int sourceIndex, BoneWeight[] dest, BoneWeight2[] dest2, int destIndex, int count, Dictionary<int, BoneIndexEntry> bonesCollection, List<Matrix4x4> bindPosesList, List<int> bonesList, int[] sharedBoneMapping, int[] nonSharedBoneMapping) { }
+
+	// RVA: 0x39BB170 Offset: 0x39B7170 VA: 0x39BB170
+	public static bool CompareSkinningMatrices(ref Matrix4x4 m1, ref Matrix4x4 m2) { }
+
+	// RVA: 0x39B64D0 Offset: 0x39B24D0 VA: 0x39B64D0
+	private static int TranslateBoneIndex(int index, int[] bonesHashes, Matrix4x4[] bindPoses, Dictionary<int, BoneIndexEntry> bonesCollection, List<Matrix4x4> bindPosesList, List<int> bonesList) { }
+
+	// RVA: 0x39BB550 Offset: 0x39B7550 VA: 0x39BB550
+	private static void CopyColorsToColors32(Color[] source, int sourceIndex, Color32[] dest, int destIndex, int count) { }
+
+	// RVA: 0x39BA884 Offset: 0x39B6884 VA: 0x39BA884
+	private static void FillArray(Vector4[] array, int index, int count, Vector4 value) { }
+
+	// RVA: 0x39BA830 Offset: 0x39B6830 VA: 0x39BA830
+	private static void FillArray(Vector3[] array, int index, int count, Vector3 value) { }
+
+	// RVA: 0x39BAE14 Offset: 0x39B6E14 VA: 0x39BAE14
+	private static void FillArray(Vector2[] array, int index, int count, Vector2 value) { }
+
+	// RVA: 0x39BB8D8 Offset: 0x39B78D8 VA: 0x39BB8D8
+	private static void FillArray(Color[] array, int index, int count, Color value) { }
+
+	// RVA: 0x39BA8D4 Offset: 0x39B68D4 VA: 0x39BA8D4
+	private static void FillArray(Color32[] array, int index, int count, Color32 value) { }
+
+	// RVA: 0x39BB110 Offset: 0x39B7110 VA: 0x39BB110
+	private static void CopyIntArrayAdd(int[] source, int sourceIndex, int[] dest, int destIndex, int count, int add) { }
+
+	// RVA: 0x39BB010 Offset: 0x39B7010 VA: 0x39BB010
+	private static void CopyIntArrayAdd(int[] source, int sourceIndex, List<int> dest, int destIndex, int count, int add) { }
+
+	// RVA: 0x39BAF94 Offset: 0x39B6F94 VA: 0x39BAF94
+	private static void CopyByteArrayAdd(byte[] source, int sourceIndex, int[] dest, int destIndex, int count, int add) { }
+
+	// RVA: 0x39BAE60 Offset: 0x39B6E60 VA: 0x39BAE60
+	private static void CopyByteArrayAdd(byte[] source, int sourceIndex, List<int> dest, int destIndex, int count, int add) { }
+
+	// RVA: -1 Offset: -1
+	private static T[] EnsureArrayLength<T>(T[] oldArray, int newLength) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-SkinnedMeshCombiner.EnsureArrayLength<BoneWeight>
+	|-SkinnedMeshCombiner.EnsureArrayLength<BoneWeight2>
+	|-SkinnedMeshCombiner.EnsureArrayLength<Color32>
+	|-SkinnedMeshCombiner.EnsureArrayLength<int>
+	|-SkinnedMeshCombiner.EnsureArrayLength<object>
+	|-SkinnedMeshCombiner.EnsureArrayLength<Vector2>
+	|-SkinnedMeshCombiner.EnsureArrayLength<Vector3>
+	|-SkinnedMeshCombiner.EnsureArrayLength<Vector4>
+	|-SkinnedMeshCombiner.EnsureArrayLength<__Il2CppFullySharedGenericType>
+	*/
+
+	// RVA: 0x39BAA30 Offset: 0x39B6A30 VA: 0x39BAA30
+	private static void AddSourceUVToDes(int uvIndex, UMAMeshData sourceMeshData, int vertexCount, int vertexIndex, ref List<Vector2> uvList, Vector2[] uv) { }
+
+	// RVA: 0x39BA91C Offset: 0x39B691C VA: 0x39BA91C
+	private static void AddSourceUVToDes(int uvIndex, UMAMeshData sourceMeshData, ref List<Vector2> uvList) { }
+
+	// RVA: 0x39BB928 Offset: 0x39B7928 VA: 0x39BB928
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[Serializable]
+public class SlotData : IEquatable<SlotData>, ISerializationCallbackReceiver // TypeDefIndex: 1120
+{
+	// Fields
+	public SlotDataAsset asset; // 0xB182A4B5
+	public float overlayScale; // 0xD0B5B7BE
+	public int overlayLimitSize; // 0xB5A2B996
+	public bool dontSerialize; // 0xB5A3B1B2
+	private List<OverlayData> overlayList; // 0xA0A0918F
+	private List<OverlayData> individualOverlayList; // 0xB883938F
+	public UMAMaterial overrideMaterial; // 0x8FA0A2B1
+	public Texture overrideDecalTexture; // 0xB9A2A483
+	public int overrideDecalTextureIndex; // 0xB99CB7BE
+
+	// Properties
+	public string slotName { get; }
+	public int OverlayCount { get; }
+
+	// Methods
+
+	// RVA: 0x39BBA60 Offset: 0x39B7A60 VA: 0x39BBA60
+	public string get_slotName() { }
+
+	// RVA: 0x39BBA7C Offset: 0x39B7A7C VA: 0x39BBA7C
+	public void .ctor(SlotDataAsset asset) { }
+
+	// RVA: 0x39BBB6C Offset: 0x39B7B6C VA: 0x39BBB6C
+	public void .ctor() { }
+
+	// RVA: 0x39BBB38 Offset: 0x39B7B38 VA: 0x39BBB38
+	public void SetAsset(SlotDataAsset asset) { }
+
+	// RVA: 0x39BBC18 Offset: 0x39B7C18 VA: 0x39BBC18
+	public void Reset() { }
+
+	// RVA: 0x39BBCD8 Offset: 0x39B7CD8 VA: 0x39BBCD8
+	public SlotData Copy() { }
+
+	// RVA: 0x39BBEB0 Offset: 0x39B7EB0 VA: 0x39BBEB0
+	public OverlayData GetOverlay(int index) { }
+
+	// RVA: 0x39BBF34 Offset: 0x39B7F34 VA: 0x39BBF34
+	public OverlayData GetEquivalentUsedOverlay(OverlayData overlay) { }
+
+	// RVA: 0x39BC088 Offset: 0x39B8088 VA: 0x39BC088
+	public int get_OverlayCount() { }
+
+	// RVA: 0x39BC0D0 Offset: 0x39B80D0 VA: 0x39BC0D0
+	public void SetOverlayList(List<OverlayData> overlayList) { }
+
+	// RVA: 0x39BC160 Offset: 0x39B8160 VA: 0x39BC160
+	private void CopyOverlayList(List<OverlayData> src) { }
+
+	// RVA: 0x39BC4B8 Offset: 0x39B84B8 VA: 0x39BC4B8
+	public void AddOverlay(OverlayData overlayData) { }
+
+	// RVA: 0x39BC5DC Offset: 0x39B85DC VA: 0x39BC5DC
+	public List<OverlayData> GetOverlayList() { }
+
+	// RVA: 0x39BC5E4 Offset: 0x39B85E4 VA: 0x39BC5E4
+	public List<OverlayData> GetSharedOverlayList() { }
+
+	// RVA: 0x39BC6F0 Offset: 0x39B86F0 VA: 0x39BC6F0
+	internal bool Validate() { }
+
+	// RVA: 0x39BCAE8 Offset: 0x39B8AE8 VA: 0x39BCAE8 Slot: 3
+	public override string ToString() { }
+
+	// RVA: 0x39BCB40 Offset: 0x39B8B40 VA: 0x39BCB40
+	public static bool op_Implicit(SlotData obj) { }
+
+	// RVA: 0x39BCBB4 Offset: 0x39B8BB4 VA: 0x39BCBB4 Slot: 4
+	public bool Equals(SlotData other) { }
+
+	// RVA: 0x39BCC00 Offset: 0x39B8C00 VA: 0x39BCC00 Slot: 0
+	public override bool Equals(object other) { }
+
+	// RVA: 0x39BCBB8 Offset: 0x39B8BB8 VA: 0x39BCBB8
+	public static bool op_Equality(SlotData slot, SlotData obj) { }
+
+	// RVA: 0x39BCC80 Offset: 0x39B8C80 VA: 0x39BCC80
+	public static bool op_Inequality(SlotData slot, SlotData obj) { }
+
+	// RVA: 0x39BCCC8 Offset: 0x39B8CC8 VA: 0x39BCCC8 Slot: 2
+	public override int GetHashCode() { }
+
+	// RVA: 0x39BCCD0 Offset: 0x39B8CD0 VA: 0x39BCCD0 Slot: 6
+	public void OnAfterDeserialize() { }
+
+	// RVA: 0x39BCD58 Offset: 0x39B8D58 VA: 0x39BCD58 Slot: 5
+	public void OnBeforeSerialize() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[Serializable]
+public class SlotDataAsset : ScriptableObject, ISerializationCallbackReceiver, INameProvider // TypeDefIndex: 1121
+{
+	// Fields
+	public string slotName; // 0x998FA4A3
+	public int nameHash; // 0xA2B5A3BE
+	[UMAAssetFieldVisible]
+	public UMAMaterial material; // 0xBEB182A4
+	public float overlayScale; // 0x96D0B5B7
+	public string[] animatedBoneNames; // 0xB2B5A2B9
+	[HideInInspector]
+	public int[] animatedBoneHashes; // 0x8FB5A3B1
+	public UMAMeshAsset meshAsset; // 0x8FA0A091
+	public int subMeshIndex; // 0xB1B88393
+	public string slotGroup; // 0x838FA0A2
+	public string[] dynamicBoneRoots; // 0xBEB9A2A4
+	public UMADynamicBoneProperties[] dynamicBones; // 0xA3B99CB7
+	public UMADynamicBoneColliderProperties[] dynamicBoneColliders; // 0xB5828FA4
+	public List<HangStringProperty> fluxAssets; // 0xA3A2B5A6
+	public OverlayDataAsset overlayAsset; // 0x838F8FB5
+
+	// Methods
+
+	// RVA: 0x39BCD5C Offset: 0x39B8D5C VA: 0x39BCD5C Slot: 6
+	public string GetAssetName() { }
+
+	// RVA: 0x39BCD64 Offset: 0x39B8D64 VA: 0x39BCD64 Slot: 7
+	public int GetNameHash() { }
+
+	// RVA: 0x39BCD6C Offset: 0x39B8D6C VA: 0x39BCD6C Slot: 8
+	public virtual AdditiveInfo GetAdditiveInfo() { }
+
+	// RVA: 0x39BCD74 Offset: 0x39B8D74 VA: 0x39BCD74
+	public bool ValidateDynamicBones() { }
+
+	// RVA: 0x39BCA68 Offset: 0x39B8A68 VA: 0x39BCA68
+	public UMAMeshData GetMeshData() { }
+
+	// RVA: 0x39BCE38 Offset: 0x39B8E38 VA: 0x39BCE38
+	public int GetTextureChannelCount(UMAGeneratorBase generator) { }
+
+	// RVA: 0x39BCE5C Offset: 0x39B8E5C VA: 0x39BCE5C Slot: 3
+	public override string ToString() { }
+
+	// RVA: 0x39BCEA8 Offset: 0x39B8EA8 VA: 0x39BCEA8
+	public void UpdateMeshAsset(UMAMeshAsset mas) { }
+
+	// RVA: 0x39BCEB0 Offset: 0x39B8EB0 VA: 0x39BCEB0 Slot: 5
+	public void OnAfterDeserialize() { }
+
+	// RVA: 0x39BCED0 Offset: 0x39B8ED0 VA: 0x39BCED0 Slot: 4
+	public void OnBeforeSerialize() { }
+
+	// RVA: 0x39AC4B0 Offset: 0x39A84B0 VA: 0x39AC4B0
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class TextureMerge.TextureMergeRect // TypeDefIndex: 1122
+{
+	// Fields
+	public Material mat; // 0x8F979987
+	public Texture tex; // 0xB996D0E0
+	public Rect rect; // 0xB1B2B5A2
+	public Rect srcRect; // 0x918FB5A3
+
+	// Methods
+
+	// RVA: 0x3A86604 Offset: 0x3A82604 VA: 0x3A86604
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[ExecuteInEditMode]
+public class TextureMerge : MonoBehaviour // TypeDefIndex: 1123
+{
+	// Fields
+	public Camera myCamera; // 0x938FA0A0
+	public Material material; // 0xA2B1B883
+	public Shader normalShader; // 0xA5968FA0
+	public Shader diffuseShader; // 0xB5A2A5A4
+	public Shader dataShader; // 0xB9A2A483
+	public Shader cutoutShader; // 0x838FB7BE
+	public Shader skinShader; // 0x8F979987
+	public Shader blendShader; // 0xB5B5A296
+	public Shader maskShader; // 0xA0BDBF93
+	public int textureMergeRectCount; // 0xB9A4B5BC
+	public TextureMergeRect[] textureMergeRects; // 0xB194BEBF
+	private int _MainTex; // 0x96D0B1A4
+	private int _ExtraTex; // 0xB2B5A2B9
+	private int _Color; // 0x8FB5A3B1
+	private int _AdditiveColor; // 0x8FA0A091
+	private int _SecondAddtiveColor; // 0xB1B88393
+	private int _AlphaTex; // 0x918FA0A2
+	private int _BiasScale; // 0xA09FA0A0
+	private int _RegionCoord; // 0xBEBFB9A4
+	private int _ClipFlag; // 0xA4BE99A3
+	private int _DestBlend; // 0xB1BEA2B5
+	private Rect atlasRect; // 0xA0918FBC
+	private int height; // 0x8FB499A0
+
+	// Methods
+
+	// RVA: 0x39BCED4 Offset: 0x39B8ED4 VA: 0x39BCED4
+	private void Awake() { }
+
+	// RVA: 0x39BD088 Offset: 0x39B9088 VA: 0x39BD088
+	private void OnRenderObject() { }
+
+	// RVA: 0x39BD154 Offset: 0x39B9154 VA: 0x39BD154
+	private void DrawRect(ref TextureMergeRect textureMergeRect) { }
+
+	// RVA: 0x39BD2DC Offset: 0x39B92DC VA: 0x39BD2DC
+	public void BlitTexture(ref RenderTexture renderTexture, float normalSpecTexScale) { }
+
+	// RVA: 0x39BD6C0 Offset: 0x39B96C0 VA: 0x39BD6C0
+	public void DrawAllRects(RenderTexture target, int width, int height, Color background) { }
+
+	// RVA: 0x39BD63C Offset: 0x39B963C VA: 0x39BD63C
+	public Vector4 SetBiasScale(Rect rect, int rtWidth, int rtHeight, Rect srcRect) { }
+
+	// RVA: 0x39BD840 Offset: 0x39B9840 VA: 0x39BD840
+	public void Reset() { }
+
+	// RVA: 0x39BD9D0 Offset: 0x39B99D0 VA: 0x39BD9D0
+	internal void EnsureCapacity(int moduleCount) { }
+
+	// RVA: 0x39BDC28 Offset: 0x39B9C28 VA: 0x39BDC28
+	private void SetupMaterial(ref TextureMergeRect textureMergeRect, MaterialFragment source, int textureType) { }
+
+	// RVA: 0x39BDF28 Offset: 0x39B9F28 VA: 0x39BDF28
+	public void SetupModule(MaterialFragment source, int textureType) { }
+
+	// RVA: 0x39BDFF0 Offset: 0x39B9FF0 VA: 0x39BDFF0
+	public void SetupModule(GeneratedMaterial atlas, int idx, int textureType) { }
+
+	// RVA: 0x39BE11C Offset: 0x39BA11C VA: 0x39BE11C
+	private void SetupOverlay(MaterialFragment source, int i2, int textureType) { }
+
+	// RVA: 0x39BE290 Offset: 0x39BA290 VA: 0x39BE290
+	private bool SetupMaterial(ref TextureMergeRect textureMergeRect, MaterialFragment source, int i2, Rect overlayRect, int textureType) { }
+
+	// RVA: 0x39BE7C0 Offset: 0x39BA7C0 VA: 0x39BE7C0
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public abstract class TextureProcessBaseCoroutine : WorkerCoroutine // TypeDefIndex: 1124
+{
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 8
+	public abstract void Prepare(UMAData _umaData, UMAGeneratorBase _umaGenerator);
+
+	// RVA: 0x3A8660C Offset: 0x3A8260C VA: 0x3A8660C
+	protected void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class TextureProcessPROCoroutine.<workerMethod>d__14 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 1125
+{
+	// Fields
+	private int <>1__state; // 0xD0A4B5A3
+	private object <>2__current; // 0xB5A2B996
+	public TextureProcessPROCoroutine <>4__this; // 0xB5A3B1B2
+	private bool <sharedTexExist>5__2; // 0xA0A0918F
+	private TextureMerge <textureMerge>5__3; // 0xB883938F
+	private int <atlasIndex>5__4; // 0x8FA0A2B1
+	private GeneratedMaterial <atlas>5__5; // 0xB5A2B996
+	private MaterialFragment <firstFragment>5__6; // 0xB5A3B1B2
+	private SlotData <slotData>5__7; // 0x8FA0A091
+	private bool <usingRGB565>5__8; // 0x9CA4B597
+	private int <textureType>5__9; // 0xB59CB7BF
+	private Texture2D <tempTexture>5__10; // 0x99BCB5A6
+	private int <xblocks>5__11; // 0xA2B5A4BE
+	private int <yblocks>5__12; // 0xD0BCB1BE
+	private int <x>5__13; // 0xB5A2B996
+	private int <y>5__14; // 0xB5A3B1B2
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x3A86790 Offset: 0x3A82790 VA: 0x3A86790
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHidden]
+	// RVA: 0x3A86870 Offset: 0x3A82870 VA: 0x3A86870 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x3A86874 Offset: 0x3A82874 VA: 0x3A86874 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x3A88978 Offset: 0x3A84978 VA: 0x3A88978 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x3A88980 Offset: 0x3A84980 VA: 0x3A88980 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x3A889B8 Offset: 0x3A849B8 VA: 0x3A889B8 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[Serializable]
+public class TextureProcessPROCoroutine : TextureProcessBaseCoroutine // TypeDefIndex: 1126
+{
+	// Fields
+	private UMAData umaData; // 0xA0A0918F
+	private RenderTexture destinationTexture; // 0xB883938F
+	private Texture[] resultingTextures; // 0x8FA0A2B1
+	private UMAGeneratorBase umaGenerator; // 0xB9A2B186
+	private Camera renderCamera; // 0x86A4BEB1
+	private RenderTextureDescriptor mTextureDescriptor; // 0xB1B9A2B1
+	private int _alphaMaskID; // 0xB19DA4BE
+	private int _colorEffectParamID; // 0xBC938FA0
+
+	// Properties
+	private int alphaMaskID { get; }
+	private int colorEffectParamID { get; }
+
+	// Methods
+
+	// RVA: 0x3A86614 Offset: 0x3A82614 VA: 0x3A86614
+	private int get_alphaMaskID() { }
+
+	// RVA: 0x3A8666C Offset: 0x3A8266C VA: 0x3A8666C
+	private int get_colorEffectParamID() { }
+
+	// RVA: 0x3A866C4 Offset: 0x3A826C4 VA: 0x3A866C4 Slot: 8
+	public override void Prepare(UMAData _umaData, UMAGeneratorBase _umaGenerator) { }
+
+	// RVA: 0x3A86720 Offset: 0x3A82720 VA: 0x3A86720 Slot: 4
+	protected override void Start() { }
+
+	[IteratorStateMachine(typeof(<workerMethod>d__14))]
+	// RVA: 0x3A86724 Offset: 0x3A82724 VA: 0x3A86724 Slot: 5
+	protected override IEnumerator workerMethod() { }
+
+	// RVA: 0x3A867B8 Offset: 0x3A827B8 VA: 0x3A867B8
+	private bool IsOpenGL() { }
+
+	// RVA: 0x3A86804 Offset: 0x3A82804 VA: 0x3A86804 Slot: 6
+	protected override void Stop() { }
+
+	// RVA: 0x3A86808 Offset: 0x3A82808 VA: 0x3A86808
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public abstract class UMAAvatarBase : MonoBehaviour, IUmaAvatarBase // TypeDefIndex: 1127
+{
+	// Fields
+	public UMAContext context; // 0xD0A2B1B5
+	public UMAData umaData; // 0xB5A2B996
+	public UMARecipeBase umaRecipe; // 0xB5A3B1B2
+	public UMARecipeBase[] mUmaAdditionalRecipes; // 0xA0A0918F
+	public UMAGeneratorBase umaGenerator; // 0xB883938F
+	public RuntimeAnimatorController animationController; // 0x8FA0A2B1
+	protected RaceData umaRace; // 0xB9A2B186
+	public UMADataEvent CharacterCreated; // 0x8FA4BEB1
+	public UMADataEvent CharacterDestroyed; // 0xA4A0BD95
+	public UMADataEvent CharacterUpdated; // 0xB3B586A9
+	[Tooltip("If true the existing skeleton is cleared and then rebuilt when the race is changed. Turn this off if you experience animation issues.")]
+	public bool rebuildSkeleton; // 0xD0A2BFA4
+	public static bool ReleaseDataOnRaceChange; // 0xB5A2B996
+	public string override1PSlotName; // 0xB5A3B1B2
+	public UMAMaterial source1PMaterial; // 0xB1A2938F
+	public UMAMaterial override1PMaterial; // 0xA9BCB8A3
+	public bool m_IsForceChangeRace; // 0xA3B3B9A4
+	private string overrideDecalPropertyName; // 0xB883938F
+	protected Texture overrideDecalTexture; // 0x8FA0A2B1
+	protected uint overrideDecalClothId; // 0xB5A2B996
+	protected int overrideDecalRecipeHash; // 0xB5A3B1B2
+	protected bool m_UpdateWeaponFlag; // 0xA3B1A293
+
+	// Properties
+	public UMAData UmaData { get; }
+	public RaceData[] AvailableRaces { get; }
+	public OverlayColorData[] CurrentSharedColors { get; }
+
+	// Methods
+
+	// RVA: 0x3A889C0 Offset: 0x3A849C0 VA: 0x3A889C0 Slot: 22
+	public void SetForceChangeRace() { }
+
+	// RVA: 0x3A889CC Offset: 0x3A849CC VA: 0x3A889CC Slot: 23
+	public void SetUpdateWeaponFlag(bool flag) { }
+
+	// RVA: 0x3A889D0 Offset: 0x3A849D0 VA: 0x3A889D0 Slot: 24
+	public bool GetUpdateWeaponFlag() { }
+
+	// RVA: 0x3A889D8 Offset: 0x3A849D8 VA: 0x3A889D8 Slot: 25
+	public virtual void Awake() { }
+
+	// RVA: 0x3A88A00 Offset: 0x3A84A00 VA: 0x3A88A00 Slot: 26
+	public virtual void Initialize() { }
+
+	// RVA: 0x3A88CDC Offset: 0x3A84CDC VA: 0x3A88CDC Slot: 27
+	public virtual UMAContextIndividual UseIndividualContextCache(SlotOverlayAssetCache cache) { }
+
+	// RVA: 0x3A88E5C Offset: 0x3A84E5C VA: 0x3A88E5C Slot: 4
+	public GameObject GetGameObject() { }
+
+	// RVA: 0x3A88E64 Offset: 0x3A84E64 VA: 0x3A88E64 Slot: 5
+	public UMAData get_UmaData() { }
+
+	// RVA: 0x3A88E6C Offset: 0x3A84E6C VA: 0x3A88E6C Slot: 28
+	public void ForceUpdate(bool DnaDirty, bool TextureDirty = false, bool MeshDirty = false) { }
+
+	// RVA: 0x3A88EE4 Offset: 0x3A84EE4 VA: 0x3A88EE4
+	public void UpdateSameRace() { }
+
+	// RVA: 0x3A88F20 Offset: 0x3A84F20 VA: 0x3A88F20
+	public void UpdateNewRace() { }
+
+	// RVA: 0x3A89004 Offset: 0x3A85004 VA: 0x3A89004
+	public RaceData[] get_AvailableRaces() { }
+
+	// RVA: 0x3A89038 Offset: 0x3A85038 VA: 0x3A89038
+	public OverlayColorData[] get_CurrentSharedColors() { }
+
+	// RVA: 0x3A8905C Offset: 0x3A8505C VA: 0x3A8905C Slot: 6
+	public void SetEnableMipMap(bool enableMipMap) { }
+
+	// RVA: 0x3A890E4 Offset: 0x3A850E4 VA: 0x3A890E4 Slot: 7
+	public void SetEnableRenderTexturePool(bool flag) { }
+
+	// RVA: 0x3A8916C Offset: 0x3A8516C VA: 0x3A8916C Slot: 8
+	public void SetTextureScaleFactor(int scale) { }
+
+	// RVA: 0x3A891F0 Offset: 0x3A851F0 VA: 0x3A891F0 Slot: 9
+	public void SetNormalSpecTexScale(float scale) { }
+
+	// RVA: 0x3A89274 Offset: 0x3A85274 VA: 0x3A89274 Slot: 10
+	public void SetUpdateWhenOffSceen(bool flag) { }
+
+	// RVA: 0x3A893A8 Offset: 0x3A853A8 VA: 0x3A893A8 Slot: 11
+	public void SetNeedGenerateMesh(bool needMesh) { }
+
+	// RVA: 0x3A89430 Offset: 0x3A85430 VA: 0x3A89430 Slot: 12
+	public void SetUsingRGB565(bool needMesh) { }
+
+	// RVA: 0x3A894B8 Offset: 0x3A854B8 VA: 0x3A894B8 Slot: 13
+	public void SetAtlasResolutionScale(float scale) { }
+
+	// RVA: 0x3A8953C Offset: 0x3A8553C VA: 0x3A8953C Slot: 14
+	public void SetNoMergeTexture(bool noMerge) { }
+
+	// RVA: 0x3A895C4 Offset: 0x3A855C4 VA: 0x3A895C4 Slot: 15
+	public void SetNoClothMergeTexture(bool noMerge) { }
+
+	// RVA: 0x3A8964C Offset: 0x3A8564C VA: 0x3A8964C Slot: 16
+	public void SetNoSkinMergeWithCondition(bool noMerge) { }
+
+	// RVA: 0x3A896D4 Offset: 0x3A856D4 VA: 0x3A896D4 Slot: 17
+	public void SetUpdateTextureSizeByChannelType(bool update) { }
+
+	// RVA: 0x3A8975C Offset: 0x3A8575C VA: 0x3A8975C
+	protected void SetBaseOverlayLimitSize(RaceData racedata) { }
+
+	// RVA: 0x3A89784 Offset: 0x3A85784 VA: 0x3A89784
+	protected void SetOverlayLimitSize(int limitSize, UMARecipe cachedRecipe, bool ignoreSkin = false) { }
+
+	// RVA: 0x3A89804 Offset: 0x3A85804 VA: 0x3A89804
+	public static void SetOverlayLimitSize(int limitSize, SlotData s, bool ignoreSkin = false) { }
+
+	// RVA: 0x3A898DC Offset: 0x3A858DC VA: 0x3A898DC Slot: 29
+	public virtual void EnableDebugLog(bool enable) { }
+
+	// RVA: 0x3A898E0 Offset: 0x3A858E0 VA: 0x3A898E0 Slot: 30
+	public virtual void SetVisible(bool visible) { }
+
+	// RVA: 0x3A898E4 Offset: 0x3A858E4 VA: 0x3A898E4 Slot: 31
+	public void SetMaskColors(Color[] mask, Color[] additive, bool updateTexture = false) { }
+
+	// RVA: 0x3A899A0 Offset: 0x3A859A0 VA: 0x3A899A0
+	protected void Override1PSlotMaterials() { }
+
+	// RVA: 0x3A89B38 Offset: 0x3A85B38 VA: 0x3A89B38 Slot: 21
+	public void SetOverrideDecalTexture(Texture tex, uint clothId, int recipeHash) { }
+
+	// RVA: 0x3A89B68 Offset: 0x3A85B68 VA: 0x3A89B68
+	protected void ApplyDecalOverrideIfAny(IList<SlotData> slots, int slotStart, int slotEnd, uint recipeId) { }
+
+	// RVA: 0x3A89DC0 Offset: 0x3A85DC0 VA: 0x3A89DC0
+	protected void CleanMeshForRebuildSkeleton() { }
+
+	// RVA: 0x3A8A3AC Offset: 0x3A863AC VA: 0x3A8A3AC
+	protected void RemoveUGCHidenSlots() { }
+
+	// RVA: 0x3A8A5F8 Offset: 0x3A865F8 VA: 0x3A8A5F8
+	protected void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[Serializable]
+public struct OptimizedBoneWeightV2 // TypeDefIndex: 1128
+{
+	// Fields
+	public uint boneIndex; // 0xA4A9BCB8
+	public uint weight; // 0x99A3B3B9
+
+	// Methods
+
+	// RVA: 0x3A8A650 Offset: 0x3A86650 VA: 0x3A8A650
+	private static int FloatToByte(float x) { }
+
+	// RVA: 0x3A8A738 Offset: 0x3A86738 VA: 0x3A8A738
+	private static float ByteToFloat(uint x) { }
+
+	// RVA: 0x3A8A74C Offset: 0x3A8674C VA: 0x3A8A74C
+	public static uint ConvertToUInt(float x, float y, float z, float w) { }
+
+	// RVA: 0x3A8A7B0 Offset: 0x3A867B0 VA: 0x3A8A7B0
+	public static OptimizedBoneWeightV2 op_Implicit(BoneWeight sourceWeight) { }
+
+	// RVA: 0x3A8A87C Offset: 0x3A8687C VA: 0x3A8A87C
+	public static OptimizedBoneWeightV2 op_Implicit(OptimizedBoneWeight sourceWeight) { }
+
+	// RVA: 0x3A8A98C Offset: 0x3A8698C VA: 0x3A8A98C
+	public static BoneWeight op_Implicit(OptimizedBoneWeightV2 sourceWeight) { }
+
+	// RVA: 0x3A8AA70 Offset: 0x3A86A70 VA: 0x3A8AA70
+	public static BoneWeight[] Convert(OptimizedBoneWeightV2[] boneWeights) { }
+
+	// RVA: 0x3A8AB40 Offset: 0x3A86B40 VA: 0x3A8AB40
+	public static BoneWeight2 op_Implicit(OptimizedBoneWeightV2 sourceWeight) { }
+
+	// RVA: 0x3A8ABD4 Offset: 0x3A86BD4 VA: 0x3A8ABD4
+	public static BoneWeight2[] ConvertBoneWeight2(OptimizedBoneWeightV2[] boneWeights) { }
+
+	// RVA: 0x3A8AC90 Offset: 0x3A86C90 VA: 0x3A8AC90
+	public static OptimizedBoneWeightV2[] Convert(BoneWeight[] boneWeights) { }
+
+	// RVA: 0x3A8AD64 Offset: 0x3A86D64 VA: 0x3A8AD64
+	public void TranslateBoneWeight2(ref BoneWeight2 dest, int[] boneMapping) { }
+
+	// RVA: 0x3A8ADF4 Offset: 0x3A86DF4 VA: 0x3A8ADF4
+	public void TranslateBoneWeight(ref BoneWeight dest, int[] boneMapping) { }
+
+	// RVA: 0x3A8AEEC Offset: 0x3A86EEC VA: 0x3A8AEEC
+	public void ExplicitTranslateBoneWeight2(ref BoneWeight2 dest, int[] boneMapping) { }
+
+	// RVA: 0x3A8AFBC Offset: 0x3A86FBC VA: 0x3A8AFBC
+	public void ExplicitTranslateBoneWeight(ref BoneWeight dest, int[] boneMapping) { }
+
+	// RVA: 0x3A8B0F0 Offset: 0x3A870F0 VA: 0x3A8B0F0
+	public static OptimizedBoneWeightV2 UpdateBoneIndex(ref OptimizedBoneWeightV2 source, int[] indexMapping) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[Serializable]
+public struct OptimizedBoneWeight // TypeDefIndex: 1129
+{
+	// Fields
+	public uint boneIndex; // 0xA2B5A4BE
+	public uint weight01; // 0x8FBCB1BE
+	public uint weight23; // 0x85A4B583
+
+	// Methods
+
+	// RVA: 0x3A8B128 Offset: 0x3A87128 VA: 0x3A8B128
+	private static ushort FloatToUShort(float weight) { }
+
+	// RVA: 0x3A8B144 Offset: 0x3A87144 VA: 0x3A8B144
+	private static float ShortToFloat(ushort weight) { }
+
+	// RVA: 0x3A8B15C Offset: 0x3A8715C VA: 0x3A8B15C
+	public static OptimizedBoneWeight op_Implicit(BoneWeight sourceWeight) { }
+
+	// RVA: 0x3A8B25C Offset: 0x3A8725C VA: 0x3A8B25C
+	public static OptimizedBoneWeight op_Implicit(UMABoneWeight sourceWeight) { }
+
+	// RVA: 0x3A8A8A4 Offset: 0x3A868A4 VA: 0x3A8A8A4
+	public static BoneWeight op_Implicit(OptimizedBoneWeight sourceWeight) { }
+
+	// RVA: 0x3A8B2DC Offset: 0x3A872DC VA: 0x3A8B2DC
+	public static BoneWeight2 op_Implicit(OptimizedBoneWeight sourceWeight) { }
+
+	// RVA: 0x3A8B370 Offset: 0x3A87370 VA: 0x3A8B370
+	public void TranslateBoneWeight2(ref BoneWeight2 dest, int[] boneMapping) { }
+
+	// RVA: 0x3A8B40C Offset: 0x3A8740C VA: 0x3A8B40C
+	public void TranslateBoneWeight(ref BoneWeight dest, int[] boneMapping) { }
+
+	// RVA: 0x3A8B510 Offset: 0x3A87510 VA: 0x3A8B510
+	public void ExplicitTranslateBoneWeight2(ref BoneWeight2 dest, int[] boneMapping) { }
+
+	// RVA: 0x3A8B5E0 Offset: 0x3A875E0 VA: 0x3A8B5E0
+	public void ExplicitTranslateBoneWeight(ref BoneWeight dest, int[] boneMapping) { }
+
+	// RVA: 0x3A8B714 Offset: 0x3A87714 VA: 0x3A8B714
+	public static OptimizedBoneWeight[] Convert(BoneWeight[] boneWeights) { }
+
+	// RVA: 0x3A8B7EC Offset: 0x3A877EC VA: 0x3A8B7EC
+	public static BoneWeight2[] ConvertBoneWeight2(OptimizedBoneWeight[] boneWeights) { }
+
+	// RVA: 0x3A8B8C4 Offset: 0x3A878C4 VA: 0x3A8B8C4
+	public static BoneWeight[] Convert(OptimizedBoneWeight[] boneWeights) { }
+
+	// RVA: 0x3A8B9B0 Offset: 0x3A879B0 VA: 0x3A8B9B0
+	public static OptimizedBoneWeight UpdateBoneIndex(ref OptimizedBoneWeight source, int[] indexMapping) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[Serializable]
+public struct UMABoneWeight // TypeDefIndex: 1130
+{
+	// Fields
+	public int boneIndex0; // 0x99A2B5A3
+	public int boneIndex1; // 0x8783D0B4
+	public int boneIndex2; // 0xB5829799
+	public int boneIndex3; // 0xA4A3B9B7
+	public float weight0; // 0xA895A2B5
+	public float weight1; // 0xA4A0B5B3
+	public float weight2; // 0x93BEBFB9
+	public float weight3; // 0xB2BCBCB1
+
+	// Methods
+
+	// RVA: 0x3A8B9EC Offset: 0x3A879EC VA: 0x3A8B9EC
+	public static UMABoneWeight UpdateBoneIndex(ref UMABoneWeight source, int[] indexMapping) { }
+
+	// RVA: 0x3A8BB2C Offset: 0x3A87B2C VA: 0x3A8BB2C
+	public static UMABoneWeight op_Implicit(BoneWeight sourceWeight) { }
+
+	// RVA: 0x3A8BBF0 Offset: 0x3A87BF0 VA: 0x3A8BBF0
+	public static BoneWeight op_Implicit(UMABoneWeight sourceWeight) { }
+
+	// RVA: 0x3A8BCA4 Offset: 0x3A87CA4 VA: 0x3A8BCA4
+	public static BoneWeight2 op_Implicit(UMABoneWeight sourceWeight) { }
+
+	// RVA: 0x3A8BD1C Offset: 0x3A87D1C VA: 0x3A8BD1C
+	public void TranslateBoneWeight2(ref BoneWeight2 dest, int[] boneMapping) { }
+
+	// RVA: 0x3A8BA34 Offset: 0x3A87A34 VA: 0x3A8BA34
+	public void TranslateBoneWeight(ref BoneWeight dest, int[] boneMapping) { }
+
+	// RVA: 0x3A8BDD4 Offset: 0x3A87DD4 VA: 0x3A8BDD4
+	public static UMABoneWeight[] Convert(BoneWeight[] boneWeights) { }
+
+	// RVA: 0x3A8BEB8 Offset: 0x3A87EB8 VA: 0x3A8BEB8
+	public static BoneWeight[] Convert(UMABoneWeight[] boneWeights) { }
+
+	// RVA: 0x3A8BF94 Offset: 0x3A87F94 VA: 0x3A8BF94
+	public static BoneWeight2[] ConvertBoneWeight2(UMABoneWeight[] boneWeights) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum UMAData.EffectType // TypeDefIndex: 1131
+{
+	// Fields
+	public int value__; // 0xA3BBB3B1
+	public const EffectType EFFECTTYPE_NONE = 0;
+	public const EffectType EFFECTTYPE_GOD = 1;
+	public const EffectType EFFECTTYPE_FROZEN = 2;
+	public const EffectType EFFECTTYPE_FREESTYLE = 3;
+	public const EffectType EFFECTTYPE_SNOWBALLFROZEN = 4;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum UMAData.DynamicBoneType // TypeDefIndex: 1132
+{
+	// Fields
+	public int value__; // 0xA2B996D0
+	public const DynamicBoneType None = 0;
+	public const DynamicBoneType DynamicBone = 1;
+	public const DynamicBoneType Flux = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class UMAData.CharacterUpdatedDelgate : MulticastDelegate // TypeDefIndex: 1133
+{
+	// Methods
+
+	// RVA: 0x3A9301C Offset: 0x3A8F01C VA: 0x3A9301C
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x3A93124 Offset: 0x3A8F124 VA: 0x3A93124 Slot: 13
+	public virtual void Invoke(UMAData umaData) { }
+
+	// RVA: 0x3A93138 Offset: 0x3A8F138 VA: 0x3A93138 Slot: 14
+	public virtual IAsyncResult BeginInvoke(UMAData umaData, AsyncCallback callback, object object) { }
+
+	// RVA: 0x3A93158 Offset: 0x3A8F158 VA: 0x3A93158 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public sealed class UMAData.CharacterBeginCreationDelgate : MulticastDelegate // TypeDefIndex: 1134
+{
+	// Methods
+
+	// RVA: 0x3A933A4 Offset: 0x3A8F3A4 VA: 0x3A933A4
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x3A934AC Offset: 0x3A8F4AC VA: 0x3A934AC Slot: 13
+	public virtual void Invoke(UMAData umaData) { }
+
+	// RVA: 0x3A934C0 Offset: 0x3A8F4C0 VA: 0x3A934C0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(UMAData umaData, AsyncCallback callback, object object) { }
+
+	// RVA: 0x3A934E0 Offset: 0x3A8F4E0 VA: 0x3A934E0 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class UMAData.GeneratedMaterials // TypeDefIndex: 1135
+{
+	// Fields
+	public List<GeneratedMaterial> materials; // 0x8FB7BEB9
+	public static List<GeneratedMaterial> EmptyMaterials; // 0xB1B88393
+
+	// Methods
+
+	// RVA: 0x3A8C97C Offset: 0x3A8897C VA: 0x3A8C97C
+	public void .ctor() { }
+
+	// RVA: 0x3A934EC Offset: 0x3A8F4EC VA: 0x3A934EC
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class UMAData.GeneratedMaterial // TypeDefIndex: 1136
+{
+	// Fields
+	public UMAMaterial umaMaterial; // 0xB48FA0A2
+	public Material material; // 0xA4B5BCB5
+	public List<MaterialFragment> materialFragments; // 0xBE918FB5
+	public Texture[] resultingAtlasList; // 0xB9BFA2B4
+	public Vector2 cropResolution; // 0xA4BF9EB4
+	public float resolutionScale; // 0xB3B9B6B9
+	public string[] textureNameList; // 0xBFB9A4B1
+	public float normalHeightRatio; // 0xA2B180BE
+	public float normalWidthRatio; // 0x99A3BDB1
+	public float textureHeightRatio; // 0xA2B5A4BE
+	public float textureWidthRatio; // 0xD0BCB1BE
+	public bool noMerge; // 0xB5A2B996
+
+	// Methods
+
+	// RVA: 0x3A93584 Offset: 0x3A8F584 VA: 0x3A93584
+	public void Reset() { }
+
+	// RVA: 0x3A93678 Offset: 0x3A8F678 VA: 0x3A93678
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class UMAData.MaterialFragment // TypeDefIndex: 1137
+{
+	// Fields
+	public int size; // 0xB5A3B1B2
+	public Color baseColor; // 0xA3B59D8F
+	public UMAMaterial umaMaterial; // 0xB9B7B1A3
+	public Rect[] rects; // 0x938FB7BE
+	public textureData[] overlays; // 0xA2B1B883
+	public Color32[] overlayColors; // 0xB5BE8FA0
+	public Color[][] channelMask; // 0xB9968FA7
+	public Color[][] channelAdditiveMask; // 0xB1B2B5A2
+	public SlotData slotData; // 0xBF9EB5A3
+	public OverlayData[] overlayData; // 0xB9B6B9A4
+	public Rect atlasRegion; // 0xB9A4B1B3
+	public bool isRectShared; // 0xBE99BEBF
+	public List<OverlayData> overlayList; // 0xBEA2B5A4
+	public MaterialFragment rectFragment; // 0x96D0BCB1
+	public textureData baseOverlay; // 0xB2B5A2B9
+	public int width; // 0x8FB5A3B1
+	public int height; // 0xA3A3B59D
+	public float channelTypeNormalWidthRatio; // 0xBEB9B7B1
+	public float channelTypeNormalHeightRatio; // 0x83938FB7
+	public float channelTypeTextureWidthRatio; // 0xA0A2B1B8
+	public float channelTypeTextureHeightRatio; // 0xA2B9968F
+
+	// Methods
+
+	// RVA: 0x3A93700 Offset: 0x3A8F700 VA: 0x3A93700
+	public Color GetMultiplier(int overlay, int textureType) { }
+
+	// RVA: 0x3A937DC Offset: 0x3A8F7DC VA: 0x3A937DC
+	public Color32 GetAdditive(int overlay, int textureType) { }
+
+	// RVA: 0x3A9386C Offset: 0x3A8F86C VA: 0x3A9386C
+	public void Reset() { }
+
+	// RVA: 0x3A93998 Offset: 0x3A8F998 VA: 0x3A93998
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class UMAData.textureData // TypeDefIndex: 1138
+{
+	// Fields
+	public Texture[] textureList; // 0xA3B1B2B5
+	public Texture alphaTexture; // 0xA3B59DB5
+	public OverlayType overlayType; // 0xB5B7B1A3
+
+	// Methods
+
+	// RVA: 0x3A939A0 Offset: 0x3A8F9A0 VA: 0x3A939A0
+	public void Reset() { }
+
+	// RVA: 0x3A939D0 Offset: 0x3A8F9D0 VA: 0x3A939D0
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class UMAData.UMARecipe // TypeDefIndex: 1139
+{
+	// Fields
+	public RaceData raceData; // 0xB5A4BE99
+	protected Dictionary<string, int> mergedSharedColors; // 0xBCB1BEA2
+	public SlotData[] slotDataList; // 0xA2A2B58F
+	public OverlayColorData[] sharedColors; // 0xB78FA2BF
+
+	// Methods
+
+	// RVA: 0x3A8CD80 Offset: 0x3A88D80 VA: 0x3A8CD80
+	public bool Validate() { }
+
+	// RVA: 0x3A939D8 Offset: 0x3A8F9D8 VA: 0x3A939D8
+	public void SetRace(RaceData raceData) { }
+
+	// RVA: 0x3A939E0 Offset: 0x3A8F9E0 VA: 0x3A939E0
+	public RaceData GetRace() { }
+
+	// RVA: 0x3A939E8 Offset: 0x3A8F9E8 VA: 0x3A939E8
+	public void SetSlot(int index, SlotData slot) { }
+
+	// RVA: 0x3A93AE0 Offset: 0x3A8FAE0 VA: 0x3A93AE0
+	public void SetSlots(SlotData[] slots) { }
+
+	// RVA: 0x3A93AE8 Offset: 0x3A8FAE8 VA: 0x3A93AE8
+	public void MergeSlot(SlotData slot, bool dontSerialize) { }
+
+	// RVA: 0x3A8EF80 Offset: 0x3A8AF80 VA: 0x3A8EF80
+	public SlotData GetSlot(int index) { }
+
+	// RVA: 0x3A940E8 Offset: 0x3A900E8 VA: 0x3A940E8
+	public SlotData[] GetAllSlots() { }
+
+	// RVA: 0x3A8EFE0 Offset: 0x3A8AFE0 VA: 0x3A8EFE0
+	public int GetSlotArraySize() { }
+
+	// RVA: 0x3A940F0 Offset: 0x3A900F0 VA: 0x3A940F0
+	public static bool OverlayListsMatch(List<OverlayData> list1, List<OverlayData> list2) { }
+
+	// RVA: 0x3A93F70 Offset: 0x3A8FF70 VA: 0x3A93F70
+	public void MergeMatchingOverlays() { }
+
+	// RVA: 0x3A94218 Offset: 0x3A90218 VA: 0x3A94218
+	public UMARecipe Mirror() { }
+
+	// RVA: 0x3A8F2F8 Offset: 0x3A8B2F8 VA: 0x3A8F2F8
+	public void Merge(UMARecipe recipe, bool dontSerialize) { }
+
+	// RVA: 0x3A8CB7C Offset: 0x3A88B7C VA: 0x3A8CB7C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public class UMAData : MonoBehaviour // TypeDefIndex: 1140
+{
+	// Fields
+	public static bool OptimizeMeshMemory; // 0x96D0A4B5
+	public SkinnedMeshRenderer myRenderer; // 0xB2B5A2B9
+	public HashSet<Renderer> EffectForceShowRenderers; // 0x8FB5A3B1
+	public uint avatarId; // 0xA3A3B59D
+	public bool isSharedModel; // 0xBEB9B7B1
+	public bool isUsingSharedTex; // 0x83938FB7
+	public bool isUsingSharedMesh; // 0xA0A2B1B8
+	public bool firstBake; // 0xA2B9968F
+	public bool GenerateMeshSkipped; // 0xA3B1B2B5
+	public bool SkipBuildIfNoVisibleChangedSlots; // 0xA3B59DB5
+	public UMAGeneratorBase umaGenerator; // 0xB5B7B1A3
+	public GeneratedMaterials generatedMaterials; // 0xB5A4BE99
+	private LinkedListNode<UMAData> listNode; // 0xBCB1BEA2
+	public float atlasResolutionScale; // 0xA2A2B58F
+	public bool atlasRelease; // 0xB48FA2BF
+	public bool meshRelease; // 0xA2B3A3B5
+	public bool isMeshDirty; // 0xB9A4A0B9
+	public bool isShapeDirty; // 0xB78FBEBF
+	public bool isTextureDirty; // 0x93D0A4B5
+	public bool isAtlasDirty; // 0xBFBEBEB1
+	public BHGGAEEHJCO playerid; // 0xB1BDF0A4
+	public bool isLocalPlayer; // 0xB1B8A3A2
+	public bool isTeammate; // 0xB9B6F0BC
+	public bool isCastShadow; // 0xF0B4BCB5
+	private bool _isHideHead; // 0xA4B5BDF7
+	private bool _isHideHeadChanged; // 0xF7B4BFB8
+	public bool noTextureMerge; // 0xF0B6BFF0
+	public bool noClothTextureMerge; // 0xB5A0A9A4
+	public bool noSkinMergeWithCondition; // 0xBF9DF7F0
+	public bool updateTextureSizeByType; // 0xB59DBFBE
+	public bool isBone2; // 0xB4BFB8A4
+	public DynamicBoneType dynamicBoneType; // 0xA3A3B59D
+	public bool dynamicBoneAnimatePhysicsMode; // 0xF7B5B7B1
+	public StringType hangStringType; // 0xB582F0EA
+	public bool ignoreBlendShapes; // 0xB5A2B5B6
+	public bool updateWhenOffsceen; // 0xF0B5B3BE
+	public EffectType effectType; // 0xB5A0A9A4
+	public string m_OverrideShaderName; // 0xB5B9B6F0
+	private HELBFMHHPBI m_OverrideMaterialPropertyInfo; // 0xBDF0B4BC
+	private Dictionary<int, HELBFMHHPBI> m_DefaultMaterialPropertyInfo; // 0xB8A3A2B1
+	private Nullable<int> m_OverrideRenderQ; // 0xBEB9BCB1
+	private bool m_OverrideRenderQIgnoreTransparentLimit; // 0xA3B9F0B7
+	private Dictionary<int, int> m_DefaultRenderQ; // 0xA4BFBEF0
+	public RuntimeAnimatorController animationController; // 0xA0A5A3F0
+	private Dictionary<int, int> animatedBonesTable; // 0xA4A2BFA0
+	public Animator mAnimator; // 0xD0FEB4B5
+	public bool m_IsLocalPlayerUma; // 0xBEBEB193
+	public bool m_EnableLocalPlayerCullingModeAlwaysAnim; // 0xBDF0A4BF
+	public bool m_ForceAnimatorAlwaysAnimate; // 0xB8A3A2B1
+	public bool isThermalView; // 0xB6F0BCB1
+	public bool isPlanarShadow; // 0xB4BCB5B9
+	public bool isManuallyTickAnimator; // 0x84ECF7F0
+	[CompilerGenerated]
+	private bool <cancelled>k__BackingField; // 0xB4B5A0A9
+	public bool dirty; // 0xA5BCB186
+	public bool breakUpdate; // 0x8FBBEEB5
+	private bool isOfficiallyCreated; // 0xB3B1928F
+	public CharacterUpdatedDelgate OnCharacterUpdatedFixed; // 0xB7BEB9BB
+	public CharacterBeginCreationDelgate OnCharacterBeginCreation; // 0xBCB5B996
+	public UMADataEvent CharacterCreated; // 0xBFF0F7B4
+	public UMADataEvent CharacterDestroyed; // 0xA9A4F0B6
+	public UMADataEvent CharacterUpdated; // 0xF7F0B5A0
+	public GameObject umaRoot; // 0xA4A3A593
+	public UMARecipe umaRecipe; // 0xA491BDBF
+	public Animator animator; // 0xB2B9A2A4
+	public UMASkeleton skeleton; // 0x9EB5A4A5
+	public float characterHeight; // 0xB4B5BDB1
+	public float characterRadius; // 0xA5B7A291
+	public float characterMass; // 0xA4BEB5BD
+	private bool textureReady; // 0x85D0FEF7
+	private bool meshReady; // 0xA9A4B9BE
+	public bool enableMipmap; // 0xB9B7BE95
+	public bool usingRendertargetPool; // 0x91FEB5BE
+	public int textureScale; // 0xBFA2B4BE
+	public float normalSpecTexScale; // 0x9E9AB4B9
+	private bool mIsPausedDuringGenerating; // 0x9EEAEA99
+	public bool needGenerateMesh; // 0xB29FA7B5
+	public bool usingRGB565; // 0xA4B3B5BA
+	public static int PauseFrameCount; // 0xA983F891
+	public bool isUseSpecialAnimCtrl; // 0xBDB5A4A3
+	public bool isRed; // 0xA4BE99FE
+	private List<Texture> backUpTexture; // 0xFCA2A480
+	public Color[] maskColors; // 0xA4A3A983
+	public Color[] maskAdditiveColors; // 0x99FEBDB5
+	private bool m_Hide; // 0xA480A4BE
+	private bool m_releaseResource; // 0xBE85FCA2
+	private bool m_HasPendingDirtyData; // 0x95A9A4B9
+	private static int m_ColorEffectParamID; // 0xBEB9B7BE
+	private static List<Material> m_ChangeShaderMaterialsCached; // 0xA6BAFEB5
+	private static List<Material> m_MaterialsCache; // 0xB5A5BCB1
+
+	// Properties
+	public bool isHideHead { get; set; }
+	public bool isHideHeadChanged { get; }
+	public bool cancelled { get; set; }
+
+	// Methods
+
+	// RVA: 0x3A8C064 Offset: 0x3A88064 VA: 0x3A8C064
+	public void SetRendererEnable(bool enable) { }
+
+	// RVA: 0x3A8C220 Offset: 0x3A88220 VA: 0x3A8C220
+	public void MoveToList(LinkedList<UMAData> list) { }
+
+	// RVA: 0x3A8C2B0 Offset: 0x3A882B0 VA: 0x3A8C2B0
+	public bool get_isHideHead() { }
+
+	// RVA: 0x3A8C2B8 Offset: 0x3A882B8 VA: 0x3A8C2B8
+	public void set_isHideHead(bool value) { }
+
+	// RVA: 0x3A8C2D8 Offset: 0x3A882D8 VA: 0x3A8C2D8
+	public bool get_isHideHeadChanged() { }
+
+	// RVA: 0x3A8C2E0 Offset: 0x3A882E0 VA: 0x3A8C2E0
+	public void resetHideHeadChanged() { }
+
+	// RVA: 0x3A8C2E8 Offset: 0x3A882E8 VA: 0x3A8C2E8
+	public void ResetAnimatedBones() { }
+
+	// RVA: 0x3A8C388 Offset: 0x3A88388 VA: 0x3A8C388
+	public void RegisterAnimatedBone(int hash) { }
+
+	// RVA: 0x3A8C440 Offset: 0x3A88440 VA: 0x3A8C440
+	public void RegisterAnimatedBoneHierarchy(int hash) { }
+
+	[CompilerGenerated]
+	// RVA: 0x3A8C4F8 Offset: 0x3A884F8 VA: 0x3A8C4F8
+	public bool get_cancelled() { }
+
+	[CompilerGenerated]
+	// RVA: 0x3A8C500 Offset: 0x3A88500 VA: 0x3A8C500
+	private void set_cancelled(bool value) { }
+
+	// RVA: 0x3A8C50C Offset: 0x3A8850C VA: 0x3A8C50C
+	public void add_OnCharacterCreated(Action<UMAData> value) { }
+
+	// RVA: 0x3A8C63C Offset: 0x3A8863C VA: 0x3A8C63C
+	public void remove_OnCharacterCreated(Action<UMAData> value) { }
+
+	// RVA: 0x3A8C6E4 Offset: 0x3A886E4 VA: 0x3A8C6E4
+	public void add_OnCharacterDestroyed(Action<UMAData> value) { }
+
+	// RVA: 0x3A8C7CC Offset: 0x3A887CC VA: 0x3A8C7CC
+	public void remove_OnCharacterDestroyed(Action<UMAData> value) { }
+
+	// RVA: 0x3A8C874 Offset: 0x3A88874 VA: 0x3A8C874
+	public void .ctor() { }
+
+	// RVA: 0x3A8CA04 Offset: 0x3A88A04 VA: 0x3A8CA04
+	private void Awake() { }
+
+	// RVA: 0x3A8CA8C Offset: 0x3A88A8C VA: 0x3A8CA8C
+	private void EnsureGenerator() { }
+
+	// RVA: 0x3A8CC04 Offset: 0x3A88C04 VA: 0x3A8CC04
+	public void SetupOnAwake() { }
+
+	// RVA: 0x3A8CC80 Offset: 0x3A88C80 VA: 0x3A8CC80
+	public bool Validate() { }
+
+	// RVA: 0x3A8CF5C Offset: 0x3A88F5C VA: 0x3A8CF5C
+	public bool UMAReady() { }
+
+	// RVA: 0x3A8D2B8 Offset: 0x3A892B8 VA: 0x3A8D2B8
+	public void FireUpdatedEvent(bool cancelled) { }
+
+	// RVA: 0x3A8D670 Offset: 0x3A89670 VA: 0x3A8D670 Slot: 4
+	public virtual void Dirty() { }
+
+	// RVA: 0x3A8D688 Offset: 0x3A89688 VA: 0x3A8D688
+	private void AddToDirtyUMA() { }
+
+	// RVA: 0x3A8D738 Offset: 0x3A89738 VA: 0x3A8D738
+	public bool NeedGenerateCombinedMesh() { }
+
+	// RVA: 0x3A8D7C4 Offset: 0x3A897C4 VA: 0x3A8D7C4
+	public bool IsVisible() { }
+
+	// RVA: 0x3A8D7D4 Offset: 0x3A897D4 VA: 0x3A8D7D4
+	public void VisibilitySwitch(bool v, bool releaseResource = false) { }
+
+	// RVA: 0x3A8DD7C Offset: 0x3A89D7C VA: 0x3A8DD7C
+	public void SetUMARendererActive(bool active) { }
+
+	// RVA: 0x3A8DE20 Offset: 0x3A89E20 VA: 0x3A8DE20
+	public void SetUMARendererMaterial(Material material) { }
+
+	// RVA: 0x3A8DF70 Offset: 0x3A89F70 VA: 0x3A8DF70
+	private void OnDestroy() { }
+
+	// RVA: 0x3A8E7C0 Offset: 0x3A8A7C0 VA: 0x3A8E7C0
+	public void ClearSlotOverlays() { }
+
+	// RVA: 0x3A8E288 Offset: 0x3A8A288 VA: 0x3A8E288
+	public void ClearGeneratedMaterialsForUnload() { }
+
+	// RVA: 0x3A8E378 Offset: 0x3A8A378 VA: 0x3A8E378
+	public void CleanAvatar() { }
+
+	// RVA: 0x3A8E844 Offset: 0x3A8A844 VA: 0x3A8E844
+	public void CleanTextureSingle(Texture tempTexture) { }
+
+	// RVA: 0x3A8DB98 Offset: 0x3A89B98 VA: 0x3A8DB98
+	public void CleanTextures() { }
+
+	// RVA: 0x3A8EA44 Offset: 0x3A8AA44 VA: 0x3A8EA44
+	public void ClearImplicitTextureRefsBeforeUnload() { }
+
+	// RVA: 0x3A8A16C Offset: 0x3A8616C VA: 0x3A8A16C
+	public void CleanMesh(bool destroyRenderer) { }
+
+	// RVA: 0x3A8D9E0 Offset: 0x3A899E0 VA: 0x3A8D9E0
+	public void ReleaseMesh() { }
+
+	// RVA: 0x3A8996C Offset: 0x3A8596C VA: 0x3A8996C
+	public void SetMaskColors(Color[] mask, Color[] additive) { }
+
+	// RVA: 0x3A8ED1C Offset: 0x3A8AD1C VA: 0x3A8ED1C
+	public void backUpTextures() { }
+
+	// RVA: 0x3A8E168 Offset: 0x3A8A168 VA: 0x3A8E168
+	public void CleanBackUpTextures() { }
+
+	// RVA: 0x3A88E90 Offset: 0x3A84E90 VA: 0x3A88E90
+	public void Dirty(bool dnaDirty, bool textureDirty, bool meshDirty) { }
+
+	// RVA: 0x3A8EF68 Offset: 0x3A8AF68 VA: 0x3A8EF68
+	public SlotData GetSlot(int index) { }
+
+	// RVA: 0x3A8EFBC Offset: 0x3A8AFBC VA: 0x3A8EFBC
+	public int GetSlotArraySize() { }
+
+	// RVA: 0x3A8EFFC Offset: 0x3A8AFFC VA: 0x3A8EFFC
+	public void GotoTPose() { }
+
+	// RVA: 0x3A8F24C Offset: 0x3A8B24C VA: 0x3A8F24C
+	public void FireCharacterBegunEvents() { }
+
+	// RVA: 0x3A8D46C Offset: 0x3A8946C VA: 0x3A8D46C
+	public void FireCharacterCompletedEvents() { }
+
+	// RVA: 0x3A8F26C Offset: 0x3A8B26C VA: 0x3A8F26C
+	public void AddAdditionalRecipes(UMARecipeBase[] umaAdditionalRecipes, UMAContext context) { }
+
+	// RVA: 0x3A8F7BC Offset: 0x3A8B7BC VA: 0x3A8F7BC
+	public void SetMeshReady() { }
+
+	// RVA: 0x3A8F7D0 Offset: 0x3A8B7D0 VA: 0x3A8F7D0
+	public void SetTextureReady() { }
+
+	// RVA: 0x3A8F7E0 Offset: 0x3A8B7E0 VA: 0x3A8F7E0
+	private void OnApplicationPause(bool paused) { }
+
+	// RVA: 0x3A8F924 Offset: 0x3A8B924 VA: 0x3A8F924
+	public void SetAnimator(Animator amtr, bool isLocalPlayer = false, bool Enable1PCullingmodeAlwaysAnim = false) { }
+
+	// RVA: 0x3A8F958 Offset: 0x3A8B958 VA: 0x3A8F958
+	public void SetForceAnimatorAlwaysAnimate(bool force) { }
+
+	// RVA: 0x3A8D470 Offset: 0x3A89470 VA: 0x3A8D470
+	public void UpdateRenderVisible(bool visible) { }
+
+	// RVA: 0x3A89308 Offset: 0x3A85308 VA: 0x3A89308
+	public void SetUpdateWhenOffSceen(bool flag) { }
+
+	// RVA: 0x3A8F9FC Offset: 0x3A8B9FC VA: 0x3A8F9FC
+	public void SwitchEffect(EffectType effect) { }
+
+	// RVA: 0x3A8FB30 Offset: 0x3A8BB30 VA: 0x3A8FB30
+	public static void ChangeRenderEffect(SkinnedMeshRenderer renderer, EffectType effect) { }
+
+	// RVA: 0x3A8FEA8 Offset: 0x3A8BEA8 VA: 0x3A8FEA8
+	public void SetAvatartColor(Color color) { }
+
+	// RVA: 0x3A8FFAC Offset: 0x3A8BFAC VA: 0x3A8FFAC
+	public bool GetMeshBounds(ref Bounds bound) { }
+
+	// RVA: 0x3A8D218 Offset: 0x3A89218 VA: 0x3A8D218
+	private void OverrideShaderAfterUMAReady() { }
+
+	// RVA: 0x3A90060 Offset: 0x3A8C060 VA: 0x3A90060
+	public void SetShader(string shaderPath, HELBFMHHPBI overrideProperty, bool force = false, Shader overrideShader) { }
+
+	// RVA: 0x3A92CA4 Offset: 0x3A8ECA4 VA: 0x3A92CA4
+	public void RevertToDefaultShader() { }
+
+	// RVA: 0x3A920C0 Offset: 0x3A8E0C0 VA: 0x3A920C0
+	public void RevertToDefaultShaderInternal(bool clearOverrideShaderInfo) { }
+
+	// RVA: 0x3A91470 Offset: 0x3A8D470 VA: 0x3A91470
+	public void SetRenderQ(int renderQ, bool force = false, bool ignoreTransparentLimit = false) { }
+
+	// RVA: 0x3A92CAC Offset: 0x3A8ECAC VA: 0x3A92CAC
+	public void RevertToDefaultRenderQ() { }
+
+	// RVA: 0x3A91B1C Offset: 0x3A8DB1C VA: 0x3A91B1C
+	public void RevertToDefaultRenderQInternal(bool clearOverrideInfo) { }
+
+	// RVA: 0x3A92CB4 Offset: 0x3A8ECB4 VA: 0x3A92CB4
+	public void ClearCallbacks() { }
+
+	// RVA: 0x3A92D10 Offset: 0x3A8ED10 VA: 0x3A92D10
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public class UMADefaultMeshCombiner : UMAMeshCombiner // TypeDefIndex: 1141
+{
+	// Fields
+	protected List<CombineInstance> combinedMeshList; // 0x85D0F9FA
+	protected List<CombineInstance> combinedMeshListPool; // 0xA9A4B9BE
+	protected Material[] combinedMaterialList; // 0xB9B7BE95
+	protected const int MaxCacheMatArrayLength = 10;
+	protected Material[][] cachedMatArrays; // 0xBFA2B4BE
+	private int atlasResolution; // 0x9E9AB4B9
+	public static int MAX_VERT_NUM; // 0x97EAEA99
+	public static int MAX_VERT_NUM_LOWMEM; // 0xA483A4B5
+	private static List<Vector3> verticesList; // 0xB7BEB9A2
+	private static List<Vector4> tangentsList; // 0x93968485
+	private static List<Vector3> normalsList; // 0xA3A2B1B8
+	private static List<Vector2> uvList; // 0xA3A983F8
+	private static List<Vector2> uv2List; // 0xFEBDB5A4
+	private static List<Color32> vertColorList; // 0x80A4BE99
+	private static List<List<int>> trianglesList; // 0xD0F9A2A4
+	private static BoneWeight[] boneWeightsCache; // 0xA4B9BE85
+	private static BoneWeight[] emptyBoneWeights; // 0xB7BE95A9
+	private static BoneWeight2[] boneWeights2Cache; // 0xFEB5BEB9
+	private static BoneWeight2[] emptyBoneWeights2; // 0xA2B4BE91
+	private string useSpecialUVShaderName; // 0x9AB4B9BF
+	private string noTangentShaderName; // 0xEAEA999E
+	public static bool OptGc; // 0xBCBCB193
+	private static UMAMeshDataForBuild s_SharedUMAMeshData; // 0x9DA4BE99
+
+	// Methods
+
+	// RVA: 0x3A94294 Offset: 0x3A90294 VA: 0x3A94294
+	public void Start() { }
+
+	// RVA: 0x3A948FC Offset: 0x3A908FC VA: 0x3A948FC
+	private void OnDestroy() { }
+
+	// RVA: 0x3A94818 Offset: 0x3A90818 VA: 0x3A94818
+	public static int GetMaxTriangleNum() { }
+
+	// RVA: 0x3A94A24 Offset: 0x3A90A24 VA: 0x3A94A24
+	protected void EnsureUMADataSetup(UMAData umaData) { }
+
+	// RVA: 0x3A95134 Offset: 0x3A91134 VA: 0x3A95134 Slot: 4
+	public override void UpdateUMAMesh(bool updatedAtlas, UMAData umaData, int atlasResolution) { }
+
+	// RVA: 0x3A95B58 Offset: 0x3A91B58 VA: 0x3A95B58
+	protected void BuildCombineInstances(UMAData umaData) { }
+
+	// RVA: 0x3A95F94 Offset: 0x3A91F94 VA: 0x3A95F94
+	protected bool NeedTangent(UMAData umaData) { }
+
+	// RVA: 0x3A96068 Offset: 0x3A92068 VA: 0x3A96068
+	protected void RecalculateUV(UMAMeshData umaMesh, UMAData umaData, ref List<Vector2> uv2List) { }
+
+	// RVA: 0x3A966A0 Offset: 0x3A926A0 VA: 0x3A966A0
+	public void .ctor() { }
+
+	// RVA: 0x3A96724 Offset: 0x3A92724 VA: 0x3A96724
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[Serializable]
+public class UMADynamicBoneColliderProperties : ScriptableObject // TypeDefIndex: 1142
+{
+	// Fields
+	public string m_RootTransformName; // 0xBFB8A4B5
+	public Vector3 m_Center; // 0xA3BE85B4
+	public float m_Radius; // 0xF8B5B6B1
+	public float m_Height; // 0xA4A3A983
+	public Direction m_Direction; // 0x99FEBDB5
+
+	// Methods
+
+	// RVA: 0x3A968A4 Offset: 0x3A928A4 VA: 0x3A968A4
+	public void ApplyValues(DynamicBoneCollider dynamicBoneCollider) { }
+
+	// RVA: 0x3A968F0 Offset: 0x3A928F0 VA: 0x3A968F0
+	public void ReadValues(DynamicBoneCollider dynamicBoneCollider) { }
+
+	// RVA: 0x3A96924 Offset: 0x3A92924 VA: 0x3A96924
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[Serializable]
+public class UMADynamicBoneProperties : ScriptableObject // TypeDefIndex: 1143
+{
+	// Fields
+	public float m_UpdateRate; // 0xA480A4BE
+	[Range(0, 1)]
+	public float m_Damping; // 0xA983FCA2
+	[Range(0, 1)]
+	public float m_Elasticity; // 0xBDB5A4A3
+	[Range(0, 1)]
+	public float m_Stiffness; // 0xA4BE99FE
+	[Range(0, 1)]
+	public float m_Inert; // 0xFCA2A480
+	public float m_Radius; // 0xA4B9BE85
+	public float m_EndLength; // 0xB7BE95A9
+	public Vector3 m_EndOffset; // 0xFEB5BEB9
+	public Vector3 m_Gravity; // 0xBCB1A6BA
+	public Vector3 m_Force; // 0xF9FAB5A5
+	public bool m_AnimationControlled; // 0xB9BE85D0
+	public bool m_useNet; // 0xBE95A9A4
+	public Vector3 m_RandomAcceleration; // 0xB5BEB9B7
+	public int m_RandomAccelerationInterval; // 0xB4BE91FE
+
+	// Methods
+
+	// RVA: 0x3A9698C Offset: 0x3A9298C VA: 0x3A9698C
+	public void ApplyValues(DynamicBone dynamicBone, Transform root) { }
+
+	// RVA: 0x3A96A48 Offset: 0x3A92A48 VA: 0x3A96A48
+	public void ApplyValues(DynamicBoneNet dynamicBoneNet, Transform root) { }
+
+	// RVA: 0x3A96B04 Offset: 0x3A92B04 VA: 0x3A96B04
+	public void ReadValues(DynamicBone dynamicBone) { }
+
+	// RVA: 0x3A96B98 Offset: 0x3A92B98 VA: 0x3A96B98
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[Serializable]
+public class UMADataEvent : UnityEvent<UMAData> // TypeDefIndex: 1144
+{
+	// Methods
+
+	// RVA: 0x3A8C5F4 Offset: 0x3A885F4 VA: 0x3A8C5F4
+	public void .ctor() { }
+
+	// RVA: 0x3A96C48 Offset: 0x3A92C48 VA: 0x3A96C48
+	public void .ctor(UMADataEvent source) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class UMAGeneratorBase.AnimatorState // TypeDefIndex: 1145
+{
+	// Fields
+	private int[] stateHashes; // 0xB4B9BFA2
+	private float[] stateTimes; // 0xEA999E9A
+	private AnimatorControllerParameter[] parameters; // 0xA4B597EA
+
+	// Methods
+
+	// RVA: 0x3A973B8 Offset: 0x3A933B8 VA: 0x3A973B8
+	public void SaveAnimatorState(Animator animator) { }
+
+	// RVA: 0x3A976C0 Offset: 0x3A936C0 VA: 0x3A976C0
+	public void RestoreAnimatorState(Animator animator) { }
+
+	// RVA: 0x3A9731C Offset: 0x3A9331C VA: 0x3A9731C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public abstract class UMAGeneratorBase : MonoBehaviour // TypeDefIndex: 1146
+{
+	// Fields
+	public bool fitAtlas; // 0xA4B1A483
+	[HideInInspector]
+	public TextureMerge textureMerge; // 0xBF92B3B9
+	[Tooltip("Convert this to a normal texture.")]
+	public bool convertRenderTexture; // 0xB1B5BCBF
+	[Tooltip("Create Mipmaps for the generated texture. Checking this is a good idea.")]
+	public bool convertMipMaps; // 0xB5B996BE
+	[Tooltip("Initial size of the texture atlas (square)")]
+	public int atlasResolution; // 0x83F8B4BC
+	protected static UMAGeneratorBase Instance; // 0xB5A4A3A9
+
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public abstract void addDirtyUMA(UMAData umaToAdd);
+
+	// RVA: -1 Offset: -1 Slot: 5
+	public abstract bool IsIdle();
+
+	// RVA: -1 Offset: -1 Slot: 6
+	public abstract int QueueSize();
+
+	// RVA: -1 Offset: -1 Slot: 7
+	public abstract void Work();
+
+	// RVA: -1 Offset: -1 Slot: 8
+	public abstract void WorkSync(UMAData umadata);
+
+	// RVA: -1 Offset: -1 Slot: 9
+	public abstract void RemoveData(UMAData umadata);
+
+	// RVA: 0x3A96DFC Offset: 0x3A92DFC VA: 0x3A96DFC
+	public static UMAGeneratorBase GetInstanceNoFind() { }
+
+	// RVA: 0x3A8E4B0 Offset: 0x3A8A4B0 VA: 0x3A8E4B0
+	public static UMAGeneratorBase FindInstance() { }
+
+	// RVA: 0x3A96E44 Offset: 0x3A92E44 VA: 0x3A96E44 Slot: 10
+	public virtual void OnDestroy() { }
+
+	// RVA: 0x3A96EF8 Offset: 0x3A92EF8 VA: 0x3A96EF8 Slot: 11
+	public virtual void UpdateAvatar(UMAData umaData) { }
+
+	// RVA: 0x3A97294 Offset: 0x3A93294 VA: 0x3A97294
+	public static void SetAvatar(UMAData umaData, Animator animator) { }
+
+	// RVA: 0x3A978A0 Offset: 0x3A938A0 VA: 0x3A978A0
+	public static Avatar CreateAvatar(UMAData umaData, UmaTPose umaTPose) { }
+
+	// RVA: 0x3A978C0 Offset: 0x3A938C0 VA: 0x3A978C0
+	public static Avatar CreateGenericAvatar(UMAData umaData) { }
+
+	// RVA: 0x3A978F8 Offset: 0x3A938F8 VA: 0x3A978F8
+	public static HumanDescription CreateHumanDescription(UMAData umaData, UmaTPose umaTPose) { }
+
+	// RVA: 0x3A97944 Offset: 0x3A93944 VA: 0x3A97944
+	protected void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+[Serializable]
+private sealed class UMAGeneratorBuiltin.<>c // TypeDefIndex: 1147
+{
+	// Fields
+	public static readonly <>c <>9; // 0xBE99FEBD
+	public static Func<bool> <>9__71_0; // 0xA2A480A4
+
+	// Methods
+
+	// RVA: 0x3B6F5E8 Offset: 0x3B6B5E8 VA: 0x3B6F5E8
+	private static void .cctor() { }
+
+	// RVA: 0x3B6F650 Offset: 0x3B6B650 VA: 0x3B6F650
+	public void .ctor() { }
+
+	// RVA: 0x3B6F658 Offset: 0x3B6B658 VA: 0x3B6F658
+	internal bool <.ctor>b__71_0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class UMAGeneratorBuiltin.<>c__DisplayClass12_0 // TypeDefIndex: 1148
+{
+	// Fields
+	public UMAData data; // 0xA3A983FC
+
+	// Methods
+
+	// RVA: 0x3B6F6B0 Offset: 0x3B6B6B0 VA: 0x3B6F6B0
+	public void .ctor() { }
+
+	// RVA: 0x3B6F6B8 Offset: 0x3B6B6B8 VA: 0x3B6F6B8
+	internal bool <RemoveFromCleanList>b__0(UMAData d) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class UMAGeneratorBuiltin.<SetupFluxFramebyFrame>d__56 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 1149
+{
+	// Fields
+	private int <>1__state; // 0xFEBDB5A4
+	private object <>2__current; // 0x80A4BE99
+	public UMAGeneratorBuiltin <>4__this; // 0xD0F9A2A4
+	public UMAData data; // 0xA4B9BE85
+	private bool <hasFlux>5__2; // 0xB7BE95A9
+	private List<GameObject> <gameObjects>5__3; // 0xFEB5BEB9
+	private int <Count>5__4; // 0xA2B4BE91
+	private int <i>5__5; // 0x9AB4B9BF
+	private List<HangStringProperty> <fluxassets>5__6; // 0xEAEA999E
+	private int <j>5__7; // 0x83A4B597
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x3B6F724 Offset: 0x3B6B724 VA: 0x3B6F724
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHidden]
+	// RVA: 0x3B6F74C Offset: 0x3B6B74C VA: 0x3B6F74C Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x3B6F768 Offset: 0x3B6B768 VA: 0x3B6F768 Slot: 6
+	private bool MoveNext() { }
+
+	// RVA: 0x3B702C0 Offset: 0x3B6C2C0 VA: 0x3B702C0
+	private void <>m__Finally1() { }
+
+	[DebuggerHidden]
+	// RVA: 0x3B70328 Offset: 0x3B6C328 VA: 0x3B70328 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x3B70330 Offset: 0x3B6C330 VA: 0x3B70330 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x3B70368 Offset: 0x3B6C368 VA: 0x3B70368 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public abstract class UMAGeneratorBuiltin : UMAGeneratorBase // TypeDefIndex: 1150
+{
+	// Fields
+	protected UMAData umaData; // 0xB9A4B1A4
+	protected List<UMAData> umaDirtyList; // 0xA5BF94B3
+	private LinkedList<UMAData> cleanUmas; // 0x96B5BCB2
+	private LinkedList<UMAData> dirtyUmas; // 0xB4BCB5B9
+	private UMAGeneratorCoroutine activeGeneratorCoroutine; // 0xA3A983F8
+	private UMAGeneratorCoroutine reusedGeneratorCoroutine; // 0xFEBDB5A4
+	public Transform textureMergePrefab; // 0x80A4BE99
+	public UMAMeshCombiner meshCombiner; // 0x83FCA2A4
+	private Dictionary<string, Transform> tmpTransforms; // 0xB5A4A3A9
+	private static List<Transform> s_reusedChildrenList; // 0xBE99FEBD
+	public static bool EnableFixWorkSyncRemoveData; // 0xA2A480A4
+	public static bool OptGc; // 0xBE85D0F9
+	[Tooltip("Increase scale factor to decrease texture usage. A value of 1 means the textures will not be downsampled. Values greater than 1 will result in texture savings. The size of the texture is divided by this value.")]
+	public int InitialScaleFactor; // 0x95A9A4B9
+	[Tooltip("Set Fast Generation to true to have the UMA Avatar generated in a single update. Otherwise, generation can span multiple frames.")]
+	public bool fastGeneration; // 0xBEB9B7BE
+	public static bool EnableGC; // 0xBE91FEB5
+	private int forceGarbageCollect; // 0xB9BFA2B4
+	[Tooltip("Number of character updates before triggering garbage collection.")]
+	public int garbageCollectionRate; // 0x999E9AB4
+	private int garbageCollectionRateNew; // 0xA296EAEA
+	private Stopwatch stopWatch; // 0x9283BDBF
+	public static int lastExceptionFrame; // 0x91B5A4A9
+	public static int logExceptionInterval; // 0xA9B1A2A2
+	public long ElapsedTicks; // 0xA3A983F8
+	public long DnaChanged; // 0xFEBDB5A4
+	public long TextureChanged; // 0x80A4BE99
+	public long SlotsChanged; // 0xD0F9A2A4
+	public bool ReuseDynamicBone; // 0xA4B9BE85
+	private bool ReuseMaterial; // 0xB7BE95A9
+	private Dictionary<int, List<Material>> recycledMaterials; // 0xFEB5BEB9
+	private List<UMAMaterial> recyclingUmaMaterials; // 0xA2B4BE91
+	private List<Material> recyclingMaterials; // 0x9AB4B9BF
+	private const int RecycleMaterialMaxCntEach = 5;
+	private List<DynamicBone> dbBones; // 0x93A7B59E
+	private List<HangCollider> hangColliders; // 0x91A2B1B8
+	private List<HangPivot> hangPivots; // 0xA9B1A2A2
+	private static bool s_SetupFluxCoroutineFinish; // 0xA3A983F8
+	private WaitUntil waitUntilFluxSetupEnd; // 0xFEBDB5A4
+
+	// Methods
+
+	// RVA: 0x3A8E5D4 Offset: 0x3A8A5D4 VA: 0x3A8E5D4
+	public void RemoveFromCleanList(UMAData data) { }
+
+	// RVA: 0x3A97A48 Offset: 0x3A93A48 VA: 0x3A97A48
+	public int GetInitialScaleFactor(UMAData data) { }
+
+	// RVA: 0x3A97A68 Offset: 0x3A93A68 VA: 0x3A97A68 Slot: 12
+	public virtual void OnEnable() { }
+
+	// RVA: 0x3A97A6C Offset: 0x3A93A6C VA: 0x3A97A6C Slot: 13
+	public virtual void Awake() { }
+
+	// RVA: 0x3A97D0C Offset: 0x3A93D0C VA: 0x3A97D0C Slot: 10
+	public override void OnDestroy() { }
+
+	// RVA: 0x3A98044 Offset: 0x3A94044 VA: 0x3A98044
+	public void SetGarbageCollectionRateNew(int rate, bool clearcount = false) { }
+
+	// RVA: 0x3A98054 Offset: 0x3A94054 VA: 0x3A98054
+	private void Update() { }
+
+	// RVA: 0x3A981CC Offset: 0x3A941CC VA: 0x3A981CC
+	public void EnableReuseMaterial() { }
+
+	// RVA: 0x3A982F8 Offset: 0x3A942F8 VA: 0x3A982F8 Slot: 8
+	public override void WorkSync(UMAData umaData) { }
+
+	// RVA: 0x3A98574 Offset: 0x3A94574 VA: 0x3A98574 Slot: 9
+	public override void RemoveData(UMAData data) { }
+
+	// RVA: 0x3A986B8 Offset: 0x3A946B8 VA: 0x3A986B8 Slot: 7
+	public override void Work() { }
+
+	// RVA: 0x3A98764 Offset: 0x3A94764 VA: 0x3A98764
+	private TextureProcessBaseCoroutine CreateAndPrepareTextureProcess(UMAData data) { }
+
+	// RVA: 0x3A987EC Offset: 0x3A947EC VA: 0x3A987EC Slot: 14
+	public virtual bool HandleDirtyUpdate(UMAData data, bool fastGen) { }
+
+	// RVA: 0x3A98BF8 Offset: 0x3A94BF8 VA: 0x3A98BF8
+	private void PrepareGeneratedMaterialsToRecycle(UMAData umaData) { }
+
+	// RVA: 0x3A99070 Offset: 0x3A95070 VA: 0x3A99070
+	private void RecycleGeneratedMaterials(SkinnedMeshRenderer renderer) { }
+
+	// RVA: 0x3A996D8 Offset: 0x3A956D8 VA: 0x3A996D8
+	protected void SetupDynamicBones(bool bforceDyanamic) { }
+
+	// RVA: 0x3A9ADC4 Offset: 0x3A96DC4 VA: 0x3A9ADC4
+	private void InitFlux(Transform root, out GameObject Hang, out HangManager hangManager) { }
+
+	// RVA: 0x3A9B090 Offset: 0x3A97090 VA: 0x3A9B090
+	private void ClearFluxRes(GameObject root) { }
+
+	// RVA: 0x3A9B71C Offset: 0x3A9771C VA: 0x3A9B71C
+	private static bool IsHangStringValid(StringType stringSetting, StringType avatarStringSetting) { }
+
+	// RVA: 0x3A99EF4 Offset: 0x3A95EF4 VA: 0x3A99EF4
+	protected void SetupFlux(UMAData data) { }
+
+	[IteratorStateMachine(typeof(<SetupFluxFramebyFrame>d__56))]
+	// RVA: 0x3A99E64 Offset: 0x3A95E64 VA: 0x3A99E64
+	protected IEnumerator SetupFluxFramebyFrame(UMAData data) { }
+
+	// RVA: 0x3A9A780 Offset: 0x3A96780 VA: 0x3A9A780
+	private DynamicBone GetAndRemoveDynamicBone(List<DynamicBone> list, GameObject go, bool net) { }
+
+	// RVA: 0x3A9A8F8 Offset: 0x3A968F8 VA: 0x3A9A8F8
+	protected void FilterDynamicBone(Transform tr, List<Transform> validDynamicBones) { }
+
+	// RVA: 0x3A9AA90 Offset: 0x3A96A90 VA: 0x3A9AA90
+	protected void AddColliderForDynamicBone(DynamicBone db, UMADynamicBoneColliderProperties[] dbcps) { }
+
+	// RVA: 0x3A9A418 Offset: 0x3A96418 VA: 0x3A9A418
+	private Transform FindTransformByName(Transform root, string name) { }
+
+	// RVA: 0x3A9B754 Offset: 0x3A97754 VA: 0x3A9B754
+	private void RemoveDirty() { }
+
+	// RVA: 0x3A9B838 Offset: 0x3A97838 VA: 0x3A9B838 Slot: 15
+	public virtual void OnDirtyUpdate() { }
+
+	// RVA: 0x3A995C8 Offset: 0x3A955C8 VA: 0x3A995C8
+	private void UpdateUMAMesh(bool updatedAtlas) { }
+
+	// RVA: 0x3A9BA4C Offset: 0x3A97A4C VA: 0x3A9BA4C Slot: 4
+	public override void addDirtyUMA(UMAData umaToAdd) { }
+
+	// RVA: 0x3A9BC24 Offset: 0x3A97C24 VA: 0x3A9BC24 Slot: 5
+	public override bool IsIdle() { }
+
+	// RVA: 0x3A9BC74 Offset: 0x3A97C74 VA: 0x3A9BC74 Slot: 6
+	public override int QueueSize() { }
+
+	// RVA: 0x3A9BCBC Offset: 0x3A97CBC VA: 0x3A9BCBC Slot: 16
+	public virtual bool UMAReady() { }
+
+	// RVA: 0x3A9BD3C Offset: 0x3A97D3C VA: 0x3A9BD3C Slot: 17
+	public virtual void UpdateUMABody(UMAData umaData) { }
+
+	// RVA: 0x3A994EC Offset: 0x3A954EC VA: 0x3A994EC
+	private void InitGeneratorCoroutine() { }
+
+	// RVA: 0x3A9794C Offset: 0x3A9394C VA: 0x3A9794C
+	private void ResetGeneratorCoroutine() { }
+
+	// RVA: 0x3A9BE94 Offset: 0x3A97E94 VA: 0x3A9BE94
+	protected void .ctor() { }
+
+	// RVA: 0x3A9C1EC Offset: 0x3A981EC VA: 0x3A9C1EC
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class UMAGeneratorCoroutine.MaterialDefinitionComparer : IComparer<MaterialFragment> // TypeDefIndex: 1151
+{
+	// Methods
+
+	// RVA: 0x3B731A8 Offset: 0x3B6F1A8 VA: 0x3B731A8 Slot: 4
+	public int Compare(MaterialFragment x, MaterialFragment y) { }
+
+	// RVA: 0x3B73198 Offset: 0x3B6F198 VA: 0x3B73198
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class UMAGeneratorCoroutine.<workerMethod>d__21 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 1152
+{
+	// Fields
+	private int <>1__state; // 0xE3A4BE99
+	private object <>2__current; // 0x85D0F9E2
+	public UMAGeneratorCoroutine <>4__this; // 0xA9A4B9BE
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHidden]
+	// RVA: 0x3B71DF8 Offset: 0x3B6DDF8 VA: 0x3B71DF8
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHidden]
+	// RVA: 0x3B731CC Offset: 0x3B6F1CC VA: 0x3B731CC Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x3B731D0 Offset: 0x3B6F1D0 VA: 0x3B731D0 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHidden]
+	// RVA: 0x3B73540 Offset: 0x3B6F540 VA: 0x3B73540 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHidden]
+	// RVA: 0x3B73548 Offset: 0x3B6F548 VA: 0x3B73548 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHidden]
+	// RVA: 0x3B73580 Offset: 0x3B6F580 VA: 0x3B73580 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[Serializable]
+public class UMAGeneratorCoroutine : WorkerCoroutine // TypeDefIndex: 1153
+{
+	// Fields
+	private TextureProcessBaseCoroutine textureProcessCoroutine; // 0xB9B7BE95
+	private MaxRectsBinPack packTexture; // 0x91FEB5BE
+	private UMAGeneratorBase umaGenerator; // 0xB1BDB9BE
+	private UMAData umaData; // 0xBEBFB9A4
+	private bool updateMaterialList; // 0xB5B7EAEA
+	private int scaleFactor; // 0xA3B98FA4
+	private MaterialDefinitionComparer comparer; // 0xA9B1BC80
+	private List<GeneratedMaterial> generatedMaterials; // 0xF8B7BEB9
+	private List<GeneratedMaterial> atlassedMaterials; // 0xBE85D0F9
+	private Dictionary<List<OverlayData>, GeneratedMaterial> generatedMaterialLookup; // 0x95A9A4B9
+	private Dictionary<int, List<Material>> recycledMaterials; // 0xBEB9B7BE
+	private List<textureData> m_RecycledTextureData; // 0xBE91FEB5
+	private List<MaterialFragment> m_RecycledMaterialFragments; // 0xA4B1BDB9
+	private List<GeneratedMaterial> m_RecycledGeneratedMaterials; // 0x83BEBFB9
+	private List<GeneratedMaterial> m_RecycledGeneratedMaterialsList; // 0xB5A4B1A4
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	private static T GetOrCreate<T>(List<T> list) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-UMAGeneratorCoroutine.GetOrCreate<object>
+	|-UMAGeneratorCoroutine.GetOrCreate<__Il2CppFullySharedGenericType>
+	*/
+
+	// RVA: 0x3B70370 Offset: 0x3B6C370 VA: 0x3B70370 Slot: 7
+	public override void Reset() { }
+
+	// RVA: 0x3B704A0 Offset: 0x3B6C4A0 VA: 0x3B704A0
+	public void Prepare(UMAGeneratorBase _umaGenerator, UMAData _umaData, TextureProcessBaseCoroutine textureProcessCoroutine, Dictionary<int, List<Material>> recycledMaterials, bool updateMaterialList, int InitialScaleFactor) { }
+
+	// RVA: 0x3B7051C Offset: 0x3B6C51C VA: 0x3B7051C
+	private GeneratedMaterial FindOrCreateGeneratedMaterial(UMAMaterial umaMaterial, bool noMerge) { }
+
+	// RVA: 0x3B70A74 Offset: 0x3B6CA74 VA: 0x3B70A74 Slot: 4
+	protected override void Start() { }
+
+	[IteratorStateMachine(typeof(<workerMethod>d__21))]
+	// RVA: 0x3B71D8C Offset: 0x3B6DD8C VA: 0x3B71D8C Slot: 5
+	protected override IEnumerator workerMethod() { }
+
+	// RVA: 0x3B71E20 Offset: 0x3B6DE20 VA: 0x3B71E20 Slot: 6
+	protected override void Stop() { }
+
+	// RVA: 0x3B71E24 Offset: 0x3B6DE24 VA: 0x3B71E24
+	private void GenerateAtlasData() { }
+
+	// RVA: 0x3B7238C Offset: 0x3B6E38C VA: 0x3B7238C
+	private void UpdateSharedRect(GeneratedMaterial generatedMaterial) { }
+
+	// RVA: 0x3B71F94 Offset: 0x3B6DF94 VA: 0x3B71F94
+	private bool CalculateRects(GeneratedMaterial material) { }
+
+	// RVA: 0x3B7242C Offset: 0x3B6E42C VA: 0x3B7242C
+	private void OptimizeAtlas() { }
+
+	// RVA: 0x3B727A0 Offset: 0x3B6E7A0 VA: 0x3B727A0
+	private void UpdateUV() { }
+
+	// RVA: 0x3B71BB0 Offset: 0x3B6DBB0 VA: 0x3B71BB0
+	private void ApplyMaskColors(MaterialFragment matFragment) { }
+
+	// RVA: 0x3B7291C Offset: 0x3B6E91C VA: 0x3B7291C
+	private void RecyckeGeneratedMaterialsList(List<GeneratedMaterial> list) { }
+
+	// RVA: -1 Offset: -1
+	private static void RemoveTailRange<T>(List<T> list, int maxSize) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-UMAGeneratorCoroutine.RemoveTailRange<object>
+	|-UMAGeneratorCoroutine.RemoveTailRange<__Il2CppFullySharedGenericType>
+	*/
+
+	// RVA: 0x3B730D4 Offset: 0x3B6F0D4 VA: 0x3B730D4
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum UMAMaterial.MaskType // TypeDefIndex: 1154
+{
+	// Fields
+	public int value__; // 0xB5B7EAEA
+	public const MaskType None = 0;
+	public const MaskType UseSkin = 1;
+	public const MaskType ColorMask = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum UMAMaterial.MaterialType // TypeDefIndex: 1155
+{
+	// Fields
+	public int value__; // 0xA9A4B9BE
+	public const MaterialType Atlas = 1;
+	public const MaterialType NoAtlas = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum UMAMaterial.ChannelType // TypeDefIndex: 1156
+{
+	// Fields
+	public int value__; // 0xB1BDB9BE
+	public const ChannelType Texture = 0;
+	public const ChannelType NormalMap = 1;
+	public const ChannelType MaterialColor = 2;
+	public const ChannelType TintedTexture = 3;
+	public const ChannelType DiffuseTexture = 4;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class UMAMaterial.MaterialChannel // TypeDefIndex: 1157
+{
+	// Fields
+	public ChannelType channelType; // 0xBE85D0F9
+	public RenderTextureFormat textureFormat; // 0x95A9A4B9
+	public string materialPropertyName; // 0xBEB9B7BE
+	private int _materialPropertyID; // 0xBE91FEB5
+
+	// Properties
+	public int materialPropertyID { get; }
+
+	// Methods
+
+	// RVA: 0x3B7367C Offset: 0x3B6F67C VA: 0x3B7367C
+	public int get_materialPropertyID() { }
+
+	// RVA: 0x3B736B4 Offset: 0x3B6F6B4 VA: 0x3B736B4
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public class UMAMaterial : ScriptableObject // TypeDefIndex: 1158
+{
+	// Fields
+	public Material material; // 0xA4B1BDB9
+	public MaterialType materialType; // 0x93BEBFB9
+	[HideInInspector]
+	public bool useSkin; // 0xEAA0B9BC
+	public MaskType maskType; // 0xA4B5B7EA
+	public MaterialChannel[] channels; // 0xA3B1B88F
+	private bool validated; // 0xB5BEB597
+
+	// Methods
+
+	// RVA: 0x3B73588 Offset: 0x3B6F588 VA: 0x3B73588
+	private void OnEnable() { }
+
+	// RVA: 0x3B70988 Offset: 0x3B6C988 VA: 0x3B70988
+	public bool Equals(UMAMaterial material) { }
+
+	// RVA: 0x3B735B0 Offset: 0x3B6F5B0 VA: 0x3B735B0
+	public bool ValidateChannels() { }
+
+	// RVA: 0x3B735E0 Offset: 0x3B6F5E0 VA: 0x3B735E0
+	private bool DoValidateChannels() { }
+
+	// RVA: 0x3B736A4 Offset: 0x3B6F6A4 VA: 0x3B736A4
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[Serializable]
+public class UMAMeshAsset : ScriptableObject, ISerializationCallbackReceiver, INameProvider // TypeDefIndex: 1159
+{
+	// Fields
+	public string meshName; // 0x82B3B9A2
+	public int nameHash; // 0x84A4BFBF
+	public string[] animatedBoneNames; // 0xA3BEB1A2
+	[HideInInspector]
+	public int[] animatedBoneHashes; // 0xBDA2BFB6
+	public UMAMeshData meshData; // 0x85D0F9F8
+	public string slotGroup; // 0xA9A4B9BE
+
+	// Methods
+
+	// RVA: 0x3B736BC Offset: 0x3B6F6BC VA: 0x3B736BC Slot: 6
+	public string GetAssetName() { }
+
+	// RVA: 0x3B736C4 Offset: 0x3B6F6C4 VA: 0x3B736C4 Slot: 7
+	public int GetNameHash() { }
+
+	// RVA: 0x3B736CC Offset: 0x3B6F6CC VA: 0x3B736CC
+	public void Release() { }
+
+	// RVA: 0x3B736D8 Offset: 0x3B6F6D8 VA: 0x3B736D8
+	public void .ctor() { }
+
+	// RVA: 0x3B73774 Offset: 0x3B6F774 VA: 0x3B73774 Slot: 3
+	public override string ToString() { }
+
+	// RVA: 0x3B737C0 Offset: 0x3B6F7C0 VA: 0x3B737C0
+	public static bool GetMaleInfoByName(string assetName, ref bool isMale) { }
+
+	// RVA: 0x3B73918 Offset: 0x3B6F918 VA: 0x3B73918 Slot: 5
+	public void OnAfterDeserialize() { }
+
+	// RVA: 0x3B73940 Offset: 0x3B6F940 VA: 0x3B73940 Slot: 4
+	public void OnBeforeSerialize() { }
+
+	// RVA: 0x3B73944 Offset: 0x3B6F944 VA: 0x3B73944
+	public void Assign(UMAMeshAsset source) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public abstract class UMAMeshCombiner : MonoBehaviour // TypeDefIndex: 1160
+{
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public abstract void UpdateUMAMesh(bool updatedAtlas, UMAData umaData, int atlasResolution);
+
+	// RVA: 0x3B739B8 Offset: 0x3B6F9B8 VA: 0x3B739B8 Slot: 5
+	public virtual void Preprocess(UMAData umaData) { }
+
+	// RVA: 0x3B739BC Offset: 0x3B6F9BC VA: 0x3B739BC
+	protected void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[Serializable]
+public struct SubMeshTriangles // TypeDefIndex: 1161
+{
+	// Fields
+	public int[] triangles; // 0xB9B7BE95
+	public List<int> trianglesList; // 0x91FEB5BE
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[Serializable]
+public struct SubMeshTrianglesNew // TypeDefIndex: 1162
+{
+	// Fields
+	public byte[] trianglesArray; // 0xB1BDB9BE
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class UMATransform.UMATransformComparer : IComparer<UMATransform> // TypeDefIndex: 1163
+{
+	// Methods
+
+	// RVA: 0x3B73CE4 Offset: 0x3B6FCE4 VA: 0x3B73CE4 Slot: 4
+	public int Compare(UMATransform x, UMATransform y) { }
+
+	// RVA: 0x3B73CDC Offset: 0x3B6FCDC VA: 0x3B73CDC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[Serializable]
+public class UMATransform // TypeDefIndex: 1164
+{
+	// Fields
+	public Vector3 position; // 0xEAA2BFA4
+	public Quaternion rotation; // 0xA4B5B7EA
+	public Vector3 scale; // 0xBDA5B88F
+	public string name; // 0xB383BEB1
+	public int hash; // 0xF8B5BCB1
+	public int parent; // 0xBE85D0F9
+	public static UMATransformComparer TransformComparer; // 0x95A9A4B9
+
+	// Methods
+
+	// RVA: 0x3B73AB0 Offset: 0x3B6FAB0 VA: 0x3B73AB0
+	public void .ctor() { }
+
+	// RVA: 0x3B73AB8 Offset: 0x3B6FAB8 VA: 0x3B73AB8
+	public void .ctor(Transform transform, int nameHash, int parentHash) { }
+
+	// RVA: 0x3B73B4C Offset: 0x3B6FB4C VA: 0x3B73B4C
+	public UMATransform Duplicate() { }
+
+	// RVA: 0x3B73BF4 Offset: 0x3B6FBF4 VA: 0x3B73BF4
+	public void Assign(UMATransform other) { }
+
+	// RVA: 0x3B73C60 Offset: 0x3B6FC60 VA: 0x3B73C60
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[Serializable]
+public class UMABlendFrame // TypeDefIndex: 1165
+{
+	// Fields
+	public float frameWeight; // 0xBEB9B7BE
+	public Vector3[] deltaVertices; // 0xBE91FEB5
+	public Vector3[] deltaNormals; // 0xA4B1BDB9
+	public Vector3[] deltaTangents; // 0xEAEAA2BF
+
+	// Methods
+
+	// RVA: 0x3B73D18 Offset: 0x3B6FD18 VA: 0x3B73D18
+	public void .ctor(int vertexCount) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[Serializable]
+public class UMABlendShape // TypeDefIndex: 1166
+{
+	// Fields
+	public string shapeName; // 0x98A4B583
+	public UMABlendFrame[] frames; // 0x87A4BEB9
+
+	// Methods
+
+	// RVA: 0x3B73DC8 Offset: 0x3B6FDC8 VA: 0x3B73DC8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public static class UVOptimize // TypeDefIndex: 1167
+{
+	// Methods
+
+	// RVA: 0x3B73DD0 Offset: 0x3B6FDD0 VA: 0x3B73DD0
+	private static uint FloatToUShort(float x) { }
+
+	// RVA: 0x3B73E24 Offset: 0x3B6FE24 VA: 0x3B73E24
+	public static float UShortToFloat(uint value) { }
+
+	// RVA: 0x3B73E38 Offset: 0x3B6FE38 VA: 0x3B73E38
+	public static uint Convert(ref Vector2 uv) { }
+
+	// RVA: 0x3B73EE0 Offset: 0x3B6FEE0 VA: 0x3B73EE0
+	public static void ConvertToVector2(uint value, out Vector2 v) { }
+
+	// RVA: 0x3B73F14 Offset: 0x3B6FF14 VA: 0x3B73F14
+	public static Vector2[] ConvertToUVs(uint[] opvs) { }
+
+	// RVA: 0x3B73FE4 Offset: 0x3B6FFE4 VA: 0x3B73FE4
+	public static uint[] ConvertFromUVs(Vector2[] uvs) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public static class OptimizedVector // TypeDefIndex: 1168
+{
+	// Methods
+
+	// RVA: 0x3B740C0 Offset: 0x3B700C0 VA: 0x3B740C0
+	private static int FloatToByte(float x) { }
+
+	// RVA: 0x3B741A0 Offset: 0x3B701A0 VA: 0x3B741A0
+	private static float ByteToFloat(uint x) { }
+
+	// RVA: 0x3B741B4 Offset: 0x3B701B4 VA: 0x3B741B4
+	public static uint ConvertToUInt(ref Vector3 normal) { }
+
+	// RVA: 0x3B74258 Offset: 0x3B70258 VA: 0x3B74258
+	public static uint ConvertToUInt(ref Vector4 normal) { }
+
+	// RVA: 0x3B74314 Offset: 0x3B70314 VA: 0x3B74314
+	public static void ConvertToVector4(uint data, out Vector4 res) { }
+
+	// RVA: 0x3B743B8 Offset: 0x3B703B8 VA: 0x3B743B8
+	public static void ConvertToVector3(uint data, out Vector3 res) { }
+
+	// RVA: 0x3B74464 Offset: 0x3B70464 VA: 0x3B74464
+	public static Vector3[] ConvertToVector3s(uint[] ops) { }
+
+	// RVA: 0x3B7453C Offset: 0x3B7053C VA: 0x3B7453C
+	public static Vector4[] ConvertToVector4s(uint[] ops) { }
+
+	// RVA: 0x3B74610 Offset: 0x3B70610 VA: 0x3B74610
+	public static uint[] ConvertFromVector4sToUInts(Vector4[] vs) { }
+
+	// RVA: 0x3B746E0 Offset: 0x3B706E0 VA: 0x3B746E0
+	public static uint[] ConvertFromVector3sToUInts(Vector3[] vs) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[Serializable]
+public class UMAMeshData // TypeDefIndex: 1169
+{
+	// Fields
+	public Matrix4x4[] bindPoses; // 0xB8B7B9B5
+	public UMABoneWeight[] boneWeights; // 0xA3BF80A4
+	public BoneWeight[] unityBoneWeights; // 0xBFB9A4B9
+	public BoneWeight2[] unity3PBoneWeights; // 0xBE85F8BE
+	public Vector3[] vertices; // 0x95A9A4B9
+	public Vector4[] tangents; // 0xBEB9B7BE
+	public Vector3[] normals; // 0xA691FEB5
+	public Color32[] colors32; // 0xA2B1A4B1
+	public Vector2[] uv; // 0xB9989B99
+	public Vector2[] uv2; // 0x83FCA4BE
+	public Vector2[] uv3; // 0xB5A4A3A9
+	public Vector2[] uv4; // 0xB983FEBD
+	public UMABlendShape[] blendShapes; // 0xB5BCB7BE
+	public SubMeshTriangles[] submeshes; // 0xBE85D0F9
+	public Transform[] bones; // 0x95A9A4B9
+	public Transform rootBone; // 0xBEB9B7BE
+	public UMATransform[] umaBones; // 0xBE91FEB5
+	public int umaBoneCount; // 0xA4B1BDB9
+	public int rootBoneHash; // 0xEAEAA2BF
+	public int[] boneNameHashes; // 0xB5A4BE99
+	public int subMeshCount; // 0xBCB1BEA2
+	public int vertexCount; // 0x92A4B597
+	public string RootBoneName; // 0xA6B1B8B5
+	public bool optimized; // 0xA2A5BFB9
+	public uint[] optimizeduv; // 0x9BA992A3
+	public OptimizedBoneWeight[] optimizedBoneWeights; // 0x83F8A9B5
+	public OptimizedBoneWeightV2[] optimizedBoneWeightsV2; // 0xB5A4A3A9
+	public uint[] optimizedTangents; // 0xBE99FEBD
+	public uint[] optimizedNormals; // 0xFCE2E3A4
+	public uint[] optimizeduv2; // 0xA4A3A983
+	public byte[] optimizedVertArray; // 0x99FEBDB5
+	public byte[] optimizedNormalArray; // 0xE2E3A4BE
+	public byte[] optimizedUVArray; // 0xA3A983FC
+	public byte[] optimizedBoneWeightArray; // 0xFEBDB5A4
+	public SubMeshTrianglesNew[] optimizedSubMeshArray; // 0xB5A0A984
+	public byte[] optimizedCompressNormalArray; // 0xBE85D0F9
+	public byte[] optimizedCompressTangentArray; // 0x95A9A4B9
+	public byte[] optimizedCompressTangentArrayW; // 0xBEB9B7BE
+	public byte[] optimized3PBoneWeightArray; // 0xBE91FEB5
+	public const int EXTRA_BONE_INDEX = 46;
+	private Dictionary<int, int> BoneNameHashDict; // 0xEAEAA2BF
+	private Dictionary<int, Matrix4x4> BindPoseDict; // 0xBE99A399
+	private Dictionary<int, UMATransform> BonesDict; // 0xBEB1A284
+	public Matrix4x4[] extraBindPoses; // 0xB9A4B9A3
+	public int[] extraBoneNameHashes; // 0x83F8BEBF
+	public UMATransform[] extraBones; // 0xB5A4A3A9
+	public bool isMale; // 0xBE99FEBD
+
+	// Methods
+
+	// RVA: 0x3B747B0 Offset: 0x3B707B0 VA: 0x3B747B0
+	public bool UseShareBones() { }
+
+	// RVA: 0x3B747D0 Offset: 0x3B707D0 VA: 0x3B747D0
+	public int[] GetBoneHashs() { }
+
+	// RVA: 0x3B74800 Offset: 0x3B70800 VA: 0x3B74800
+	public Matrix4x4[] GetBonePoses() { }
+
+	// RVA: 0x3B74830 Offset: 0x3B70830 VA: 0x3B74830
+	public UMATransform[] GetUMABones() { }
+
+	// RVA: 0x3B74850 Offset: 0x3B70850 VA: 0x3B74850
+	public void PrepareVertexBuffers(int size) { }
+
+	// RVA: 0x3B74A90 Offset: 0x3B70A90 VA: 0x3B74A90
+	private BoneWeight2[] GetBoneWeights2() { }
+
+	// RVA: 0x3B74AF8 Offset: 0x3B70AF8 VA: 0x3B74AF8
+	private BoneWeight[] GetBoneWeights() { }
+
+	// RVA: 0x3B74B60 Offset: 0x3B70B60 VA: 0x3B74B60
+	public Vector3[] GetNormals() { }
+
+	// RVA: 0x3B74BB8 Offset: 0x3B70BB8 VA: 0x3B74BB8
+	public Vector3[] GetVertices() { }
+
+	// RVA: 0x3B74BC0 Offset: 0x3B70BC0 VA: 0x3B74BC0
+	public void GetVerticesNew(ref Vector3[] dest, int destIndex) { }
+
+	// RVA: 0x3B74D24 Offset: 0x3B70D24 VA: 0x3B74D24
+	public void GetVerticesNew(List<Vector3> dest, int destIndex) { }
+
+	// RVA: 0x3B7503C Offset: 0x3B7103C VA: 0x3B7503C
+	public Vector3[] GetNormalNew() { }
+
+	// RVA: 0x3B753D0 Offset: 0x3B713D0 VA: 0x3B753D0
+	public void GetNormalNew(List<Vector3> dest) { }
+
+	// RVA: 0x3B7596C Offset: 0x3B7196C VA: 0x3B7596C
+	public Vector2[] GetUVNew() { }
+
+	// RVA: 0x3B75B10 Offset: 0x3B71B10 VA: 0x3B75B10
+	public void GetUVNew(List<Vector2> dest) { }
+
+	// RVA: 0x3B75F3C Offset: 0x3B71F3C VA: 0x3B75F3C
+	public Vector2[] GetUV2New() { }
+
+	// RVA: 0x3B75F98 Offset: 0x3B71F98 VA: 0x3B75F98
+	public void GetUV2New(List<Vector2> dest) { }
+
+	// RVA: 0x3B762A0 Offset: 0x3B722A0 VA: 0x3B762A0
+	public BoneWeight2[] GetBoneWeight2New() { }
+
+	// RVA: 0x3B76678 Offset: 0x3B72678 VA: 0x3B76678
+	public BoneWeight[] Get3PBoneWeightNewOpt() { }
+
+	// RVA: 0x3B76908 Offset: 0x3B72908 VA: 0x3B76908
+	public BoneWeight[] GetBoneWeightNew() { }
+
+	// RVA: 0x3B76E50 Offset: 0x3B72E50 VA: 0x3B76E50
+	public SubMeshTriangles[] GetSubMesh() { }
+
+	// RVA: 0x3B76E58 Offset: 0x3B72E58 VA: 0x3B76E58
+	public SubMeshTriangles[] GetSubMeshNew() { }
+
+	// RVA: 0x3B77040 Offset: 0x3B73040 VA: 0x3B77040
+	public bool HasUV() { }
+
+	// RVA: 0x3B770EC Offset: 0x3B730EC VA: 0x3B770EC
+	public bool HasUV2() { }
+
+	// RVA: 0x3B77188 Offset: 0x3B73188 VA: 0x3B77188
+	public bool HasColor32() { }
+
+	// RVA: 0x3B75AB8 Offset: 0x3B71AB8 VA: 0x3B75AB8
+	public Vector2[] GetUvs() { }
+
+	// RVA: 0x3B75F40 Offset: 0x3B71F40 VA: 0x3B75F40
+	public Vector2[] GetUv2s() { }
+
+	// RVA: 0x3B771A8 Offset: 0x3B731A8 VA: 0x3B771A8
+	public bool HasNormals() { }
+
+	// RVA: 0x3B77270 Offset: 0x3B73270 VA: 0x3B77270
+	public bool HasTangents() { }
+
+	// RVA: 0x3B772B8 Offset: 0x3B732B8 VA: 0x3B772B8
+	public Vector4[] GetTangents() { }
+
+	// RVA: 0x3B774B0 Offset: 0x3B734B0 VA: 0x3B774B0
+	public static bool op_Implicit(UMAMeshData obj) { }
+
+	// RVA: 0x3B774C4 Offset: 0x3B734C4 VA: 0x3B774C4
+	public bool Equals(UMAMeshData other) { }
+
+	// RVA: 0x3B7755C Offset: 0x3B7355C VA: 0x3B7755C Slot: 0
+	public override bool Equals(object other) { }
+
+	// RVA: 0x3B77510 Offset: 0x3B73510 VA: 0x3B77510
+	public static bool op_Equality(UMAMeshData overlay, UMAMeshData obj) { }
+
+	// RVA: 0x3B77620 Offset: 0x3B73620 VA: 0x3B77620
+	public static bool op_Inequality(UMAMeshData overlay, UMAMeshData obj) { }
+
+	// RVA: 0x3B77670 Offset: 0x3B73670 VA: 0x3B77670 Slot: 2
+	public override int GetHashCode() { }
+
+	// RVA: 0x3B77678 Offset: 0x3B73678 VA: 0x3B77678
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public class UMAMeshDataForBuild : UMAMeshData // TypeDefIndex: 1170
+{
+	// Fields
+	public List<int> boneNameHashesList; // 0xF9E2E3A4
+	public List<Matrix4x4> bindPosesList; // 0xB9BE85D0
+	private static int[] s_EmptyTris; // 0xBE95A9A4
+	private static Vector3[] s_EmptyVerts; // 0xB5BEB9B7
+	private static Vector2[] s_WarmupVect2; // 0xB9BE91FE
+	private static Vector3[] s_WarmupVect3; // 0xBFA4B1BD
+	private static Vector4[] s_WarmupVect4; // 0x83EAEAA2
+	private static Color32[] s_WamupColor32; // 0xBE99A4B5
+	private static BoneWeight[] s_WarmupBoneWeight; // 0xB5B7B5A4
+	private static BoneWeight2[] s_WarmupBoneWeight2; // 0xF89499A2
+
+	// Methods
+
+	// RVA: 0x3B776D0 Offset: 0x3B736D0 VA: 0x3B776D0
+	public void ApplyDataToUnityMesh(SkinnedMeshRenderer renderer, UMASkeleton skeleton, List<Vector3> verticesList, List<Vector4> tangentsList, List<Vector3> normalsList, List<Vector2> uvList, List<Vector2> uv2List, List<Color32> vertColorList, bool isBone2) { }
+
+	// RVA: 0x3B77FF8 Offset: 0x3B73FF8 VA: 0x3B77FF8
+	public void ApplySharedMesh(UMAData umaData) { }
+
+	// RVA: 0x3B77EDC Offset: 0x3B73EDC VA: 0x3B77EDC
+	private void CreateTransforms(UMASkeleton skeleton) { }
+
+	// RVA: 0x3B77FEC Offset: 0x3B73FEC VA: 0x3B77FEC
+	private bool OwnSharedBuffers() { }
+
+	// RVA: 0x3B77FF4 Offset: 0x3B73FF4 VA: 0x3B77FF4
+	private void ApplySharedBuffers(Mesh mesh) { }
+
+	// RVA: 0x3B78178 Offset: 0x3B74178 VA: 0x3B78178
+	public bool ClaimSharedBuffers() { }
+
+	// RVA: 0x3B78180 Offset: 0x3B74180 VA: 0x3B78180
+	public void ReleaseSharedBuffers() { }
+
+	// RVA: 0x3B78184 Offset: 0x3B74184 VA: 0x3B78184
+	public void .ctor() { }
+
+	// RVA: 0x3B78188 Offset: 0x3B74188 VA: 0x3B78188
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public class UMAMeshDataOptimize // TypeDefIndex: 1171
+{
+	// Methods
+
+	// RVA: 0x3B752CC Offset: 0x3B712CC VA: 0x3B752CC
+	public static Vector3 DecodeVector2(float x, float y) { }
+
+	// RVA: 0x3B76418 Offset: 0x3B72418 VA: 0x3B76418
+	public static void Tranlate3PBoneWeight2Array(ref BoneWeight2 bw, int sourceIndex, byte[] boneWeightArray, int[] boneMapping) { }
+
+	// RVA: 0x3B76AD0 Offset: 0x3B72AD0 VA: 0x3B76AD0
+	public static void Tranlate3PBoneWeightArray(ref BoneWeight bw, int sourceIndex, byte[] boneWeightArray, int[] boneMapping) { }
+
+	// RVA: 0x3B76534 Offset: 0x3B72534 VA: 0x3B76534
+	public static void TranlateBoneWeight2Array(ref BoneWeight2 bw, int sourceIndex, byte[] boneWeightArray, int[] boneMapping) { }
+
+	// RVA: 0x3B76C2C Offset: 0x3B72C2C VA: 0x3B76C2C
+	public static void TranlateBoneWeightArray(ref BoneWeight bw, int sourceIndex, byte[] boneWeightArray, int[] boneMapping) { }
+
+	// RVA: 0x3B78498 Offset: 0x3B74498 VA: 0x3B78498
+	public static void UpdateBoneIndexForBoneWightArray(int sourceIndex, byte[] boneWeightArray, int[] boneMapping) { }
+
+	// RVA: 0x3B78598 Offset: 0x3B74598 VA: 0x3B78598
+	public static void UpdateBoneIndexFor3PBoneWightArray(int sourceIndex, byte[] boneWeightArray, int[] boneMapping) { }
+
+	// RVA: 0x3B78614 Offset: 0x3B74614 VA: 0x3B78614
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public class UMARenderTextureManager : MonoBehaviour // TypeDefIndex: 1172
+{
+	// Methods
+
+	// RVA: 0x3B7861C Offset: 0x3B7461C VA: 0x3B7861C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public class UMARenderTexturePoolManager // TypeDefIndex: 1173
+{
+	// Fields
+	private static UMARenderTexturePoolManager _instance; // 0xA4A3A983
+	public static int MAX_CACHE; // 0x99FEBDB5
+	public static int freeCount; // 0xE2E3A4BE
+	private Dictionary<int, UMARenderTexturePool> mPools; // 0xA3A983FC
+
+	// Properties
+	public static UMARenderTexturePoolManager instance { get; }
+
+	// Methods
+
+	// RVA: 0x3B78624 Offset: 0x3B74624 VA: 0x3B78624
+	public static UMARenderTexturePoolManager get_instance() { }
+
+	// RVA: 0x3B786D4 Offset: 0x3B746D4 VA: 0x3B786D4
+	private void .ctor() { }
+
+	// RVA: 0x3B7875C Offset: 0x3B7475C VA: 0x3B7875C
+	public RenderTexture GetRenderTexture(int width, int height, RenderTextureFormat textFormat, bool enableMipmap) { }
+
+	// RVA: 0x3B78B2C Offset: 0x3B74B2C VA: 0x3B78B2C
+	public void RecycleRenderTexture(RenderTexture rt) { }
+
+	// RVA: 0x3B78F24 Offset: 0x3B74F24 VA: 0x3B78F24
+	public void Clear() { }
+
+	// RVA: 0x3B78798 Offset: 0x3B74798 VA: 0x3B78798
+	private UMARenderTexturePool GetPool(RenderTextureFormat textFormat) { }
+
+	// RVA: 0x3B79484 Offset: 0x3B75484 VA: 0x3B79484
+	public bool UseRenderTextureGetTemporary() { }
+
+	// RVA: 0x3B794D8 Offset: 0x3B754D8 VA: 0x3B794D8
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+internal class UMARenderTexturePool // TypeDefIndex: 1174
+{
+	// Fields
+	private Dictionary<int, List<RenderTexture>> mTexturePool; // 0xFEBDB5A4
+	private RenderTextureDescriptor mTextureDescriptor; // 0xE3A4BE99
+	private RenderTextureFormat mTextureFormat; // 0x85D0F9E2
+
+	// Methods
+
+	// RVA: 0x3B793A0 Offset: 0x3B753A0 VA: 0x3B793A0
+	public void .ctor(RenderTextureFormat textureFMT) { }
+
+	// RVA: 0x3B78BD8 Offset: 0x3B74BD8 VA: 0x3B78BD8
+	public void RecylceRenderTexture(RenderTexture rt) { }
+
+	// RVA: 0x3B78880 Offset: 0x3B74880 VA: 0x3B78880
+	public RenderTexture GetRenderTexture(int width, int height, bool enableMipmap) { }
+
+	// RVA: 0x3B790AC Offset: 0x3B750AC VA: 0x3B790AC
+	public void Clean() { }
+
+	// RVA: 0x3B79544 Offset: 0x3B75544 VA: 0x3B79544
+	private int GetHashKey(int width, int height, bool enableMipmap) { }
+
+	// RVA: 0x3B78E2C Offset: 0x3B74E2C VA: 0x3B78E2C
+	public static void RelaseSingle(RenderTexture rt) { }
+
+	// RVA: 0x3B7955C Offset: 0x3B7555C VA: 0x3B7955C
+	public static bool UseRenderTextureGetTemporary() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public class UMAResourceNotFoundException : Exception // TypeDefIndex: 1175
+{
+	// Methods
+
+	// RVA: 0x3B795B8 Offset: 0x3B755B8 VA: 0x3B795B8
+	public void .ctor(string message) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class UMASkeleton.BoneData // TypeDefIndex: 1176
+{
+	// Fields
+	public int boneNameHash; // 0xA9A4B9BE
+	public int parentBoneNameHash; // 0xB9B7BE95
+	public Transform boneTransform; // 0x91FEB5BE
+	public UMATransform umaTransform; // 0xB1BDB9BE
+	public Quaternion rotation; // 0xEAA2BFA4
+	public Vector3 position; // 0xA4B5A3EA
+	public Vector3 scale; // 0xA9B1BC8F
+	public int accessedFrame; // 0x91A3A2B5
+
+	// Methods
+
+	// RVA: 0x3B79D58 Offset: 0x3B75D58 VA: 0x3B79D58
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[Serializable]
+public class UMASkeleton // TypeDefIndex: 1177
+{
+	// Fields
+	protected bool updating; // 0xB3B5B6B6
+	protected int frame; // 0xA3B19DA4
+	[CompilerGenerated]
+	private int <rootBoneHash>k__BackingField; // 0xBEB593A3
+	private List<BoneData> boneHashDataBackup; // 0xF8A2B5A4
+	private Dictionary<int, BoneData> boneHashDataLookup; // 0xA4A3A983
+
+	// Properties
+	public int rootBoneHash { get; set; }
+	public virtual int boneCount { get; }
+	private Dictionary<int, BoneData> boneHashData { get; set; }
+
+	// Methods
+
+	[CompilerGenerated]
+	// RVA: 0x3B79620 Offset: 0x3B75620 VA: 0x3B79620
+	public int get_rootBoneHash() { }
+
+	[CompilerGenerated]
+	// RVA: 0x3B79628 Offset: 0x3B75628 VA: 0x3B79628
+	protected void set_rootBoneHash(int value) { }
+
+	// RVA: 0x3B79630 Offset: 0x3B75630 VA: 0x3B79630 Slot: 4
+	public virtual int get_boneCount() { }
+
+	// RVA: 0x3B79684 Offset: 0x3B75684 VA: 0x3B79684
+	private Dictionary<int, BoneData> get_boneHashData() { }
+
+	// RVA: 0x3B79854 Offset: 0x3B75854 VA: 0x3B79854
+	private void set_boneHashData(Dictionary<int, BoneData> value) { }
+
+	// RVA: 0x3B79918 Offset: 0x3B75918 VA: 0x3B79918
+	public void .ctor(Transform rootBone) { }
+
+	// RVA: 0x3B79CAC Offset: 0x3B75CAC VA: 0x3B79CAC
+	protected void .ctor() { }
+
+	// RVA: 0x3B79D34 Offset: 0x3B75D34 VA: 0x3B79D34 Slot: 5
+	public virtual void BeginSkeletonUpdate() { }
+
+	// RVA: 0x3B79D50 Offset: 0x3B75D50 VA: 0x3B79D50 Slot: 6
+	public virtual void EndSkeletonUpdate() { }
+
+	// RVA: 0x3B79A48 Offset: 0x3B75A48 VA: 0x3B79A48
+	private void AddBonesRecursive(Transform transform) { }
+
+	// RVA: 0x3B79D60 Offset: 0x3B75D60 VA: 0x3B79D60 Slot: 7
+	public virtual bool HasBone(int nameHash) { }
+
+	// RVA: 0x3B79DBC Offset: 0x3B75DBC VA: 0x3B79DBC Slot: 8
+	public virtual void AddBone(UMATransform transform) { }
+
+	// RVA: 0x3B79F54 Offset: 0x3B75F54 VA: 0x3B79F54 Slot: 9
+	public virtual Transform GetBoneTransform(int nameHash) { }
+
+	// RVA: 0x3B79FE4 Offset: 0x3B75FE4 VA: 0x3B79FE4 Slot: 10
+	public virtual GameObject GetBoneGameObject(int nameHash) { }
+
+	// RVA: 0x3B7A080 Offset: 0x3B76080 VA: 0x3B7A080 Slot: 11
+	public virtual void SetPosition(int nameHash, Vector3 position) { }
+
+	// RVA: 0x3B7A134 Offset: 0x3B76134 VA: 0x3B7A134 Slot: 12
+	public virtual void SetScale(int nameHash, Vector3 scale) { }
+
+	// RVA: 0x3B7A1E8 Offset: 0x3B761E8 VA: 0x3B7A1E8 Slot: 13
+	public virtual void SetRotation(int nameHash, Quaternion rotation) { }
+
+	// RVA: 0x3B7A2AC Offset: 0x3B762AC VA: 0x3B7A2AC Slot: 14
+	public virtual void ResetAll() { }
+
+	// RVA: 0x3B7A508 Offset: 0x3B76508 VA: 0x3B7A508 Slot: 15
+	public virtual void ResetScales() { }
+
+	// RVA: 0x3B7A6F8 Offset: 0x3B766F8 VA: 0x3B7A6F8
+	public static int StringToHash(string name) { }
+
+	// RVA: 0x3B7A700 Offset: 0x3B76700 VA: 0x3B7A700 Slot: 16
+	public virtual Transform[] HashesToTransforms(int[] boneNameHashes) { }
+
+	// RVA: 0x3B7A830 Offset: 0x3B76830 VA: 0x3B7A830 Slot: 17
+	public virtual Transform[] HashesToTransforms(List<int> boneNameHashes) { }
+
+	// RVA: 0x3B7A98C Offset: 0x3B7698C VA: 0x3B7A98C Slot: 18
+	public virtual void EnsureBone(UMATransform umaTransform) { }
+
+	// RVA: 0x3B7AA7C Offset: 0x3B76A7C VA: 0x3B7AA7C Slot: 19
+	public virtual void EnsureBoneHierarchy() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[Serializable]
+public class UmaTPose : ScriptableObject // TypeDefIndex: 1178
+{
+	// Fields
+	public SkeletonBone[] boneInfo; // 0x92FEBDB5
+	public HumanBone[] humanInfo; // 0xB5BCBFBF
+	public float armStretch; // 0xD0F9BEB1
+	public float feetSpacing; // 0xA4B9BE85
+	public float legStretch; // 0xB7BE95A9
+	public float lowerArmTwist; // 0xFEB5BEB9
+	public float lowerLegTwist; // 0xBDB9BE91
+	public float upperArmTwist; // 0xA2BFA4B1
+	public float upperLegTwist; // 0xB583EAEA
+	public bool extendedInfo; // 0xBFBF9CA4
+	public byte[] serializedChunk; // 0x80A491BB
+
+	// Methods
+
+	// RVA: 0x3B7AD10 Offset: 0x3B76D10 VA: 0x3B7AD10
+	public void DeSerialize() { }
+
+	// RVA: 0x3B7B06C Offset: 0x3B7706C VA: 0x3B7B06C
+	private SkeletonBone DeSerializeSkeletonBone(BinaryReader br) { }
+
+	// RVA: 0x3B7B27C Offset: 0x3B7727C VA: 0x3B7B27C
+	private Quaternion DeSerializeQuaternion(BinaryReader br) { }
+
+	// RVA: 0x3B7B138 Offset: 0x3B77138 VA: 0x3B7B138
+	private HumanBone DeSerializeHumanBone(BinaryReader br) { }
+
+	// RVA: 0x3B7B330 Offset: 0x3B77330 VA: 0x3B7B330
+	private HumanLimit DeSerializeHumanLimit(BinaryReader br) { }
+
+	// RVA: 0x3B7B1F4 Offset: 0x3B771F4 VA: 0x3B7B1F4
+	private Vector3 DeserializeVector3(BinaryReader br) { }
+
+	// RVA: 0x3B7B404 Offset: 0x3B77404 VA: 0x3B7B404
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public enum UMACompressionMode // TypeDefIndex: 1179
+{
+	// Fields
+	public int value__; // 0x0
+	public const UMACompressionMode Low = 0;
+	public const UMACompressionMode Medium = 1;
+	public const UMACompressionMode High = 2;
+	public const UMACompressionMode High_3P = 3;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+[Extension]
+public static class UMAUtils // TypeDefIndex: 1180
+{
+	// Fields
+	public const string SKIN_COLOR_NAME = "Skin";
+	public const int SKIN_COLOR_INDEX = 1;
+	public const int NONE_COLOR_INDEX = 0;
+	public const UMACompressionMode DefaultCompressMode = 3;
+
+	// Methods
+
+	// RVA: 0x3B7B40C Offset: 0x3B7740C VA: 0x3B7B40C
+	public static Transform FindMyChild(Transform parentTF, string childName) { }
+
+	[Extension]
+	// RVA: 0x3B7B518 Offset: 0x3B77518 VA: 0x3B7B518
+	public static Transform FindChildExpend(Transform parentTF, string childName) { }
+
+	[Extension]
+	// RVA: 0x3B7B624 Offset: 0x3B77624 VA: 0x3B7B624
+	public static Transform FindChildCompomentExpend(Transform parentTF, string childName) { }
+
+	// RVA: 0x3B73938 Offset: 0x3B6F938 VA: 0x3B73938
+	public static int StringToHash(string name) { }
+
+	// RVA: 0x3B7B6E8 Offset: 0x3B776E8 VA: 0x3B7B6E8
+	public static float GaussianRandom(float mean, float dev) { }
+
+	// RVA: 0x3B7B754 Offset: 0x3B77754 VA: 0x3B7B754
+	public static int Count1(int n) { }
+
+	// RVA: 0x3B7B774 Offset: 0x3B77774 VA: 0x3B7B774
+	public static OverlayColorData[] CreateDefaultColors() { }
+
+	// RVA: 0x3B7B88C Offset: 0x3B7788C VA: 0x3B7B88C
+	public static OverlayColorData CreateDefaultColor(string name) { }
+
+	// RVA: 0x3B7B9A0 Offset: 0x3B779A0 VA: 0x3B7B9A0
+	public static OverlayColorData GetColor(string name, OverlayColorData[] colors) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA
+public abstract class WorkerCoroutine // TypeDefIndex: 1181
+{
+	// Fields
+	private IEnumerator workerInstance; // 0x10
+	private WorkerCoroutine subWorker; // 0x18
+	public int TimeHint; // 0x20
+	public WorkerCoroutine lastWorker; // 0x28
+	public int lastWorkerCount; // 0x30
+
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 4
+	protected abstract void Start();
+
+	// RVA: -1 Offset: -1 Slot: 5
+	protected abstract IEnumerator workerMethod();
+
+	// RVA: -1 Offset: -1 Slot: 6
+	protected abstract void Stop();
+
+	// RVA: 0x3B7045C Offset: 0x3B6C45C VA: 0x3B7045C Slot: 7
+	public virtual void Reset() { }
+
+	// RVA: 0x3B7BA40 Offset: 0x3B77A40 VA: 0x3B7BA40
+	public void Cancel() { }
+
+	// RVA: 0x3B7BA84 Offset: 0x3B77A84 VA: 0x3B7BA84
+	public bool Work() { }
+
+	// RVA: 0x3B731A0 Offset: 0x3B6F1A0 VA: 0x3B731A0
+	protected void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class UMABonePose.PoseBone // TypeDefIndex: 1182
+{
+	// Fields
+	public string bone; // 0x10
+	public int hash; // 0x18
+	public Vector3 position; // 0x1C
+	public Quaternion rotation; // 0x28
+	public Vector3 scale; // 0x38
+
+	// Methods
+
+	// RVA: 0x3B7C0C8 Offset: 0x3B780C8 VA: 0x3B7C0C8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA.PoseTools
+[Serializable]
+public class UMABonePose : ScriptableObject // TypeDefIndex: 1183
+{
+	// Fields
+	public PoseBone[] poses; // 0x18
+	public UMABonePose[] tweenPoses; // 0x20
+	public float[] tweenWeights; // 0x28
+
+	// Methods
+
+	// RVA: 0x3B7BFA8 Offset: 0x3B77FA8 VA: 0x3B7BFA8
+	private void Reset() { }
+
+	// RVA: 0x3B7C000 Offset: 0x3B78000 VA: 0x3B7C000
+	private void OnEnable() { }
+
+	// RVA: 0x3B7C0C0 Offset: 0x3B780C0 VA: 0x3B7C0C0
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA.Simple
+public interface IGetSetIndex // TypeDefIndex: 1184
+{
+	// Properties
+	public abstract int Index { get; set; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract int get_Index();
+
+	// RVA: -1 Offset: -1 Slot: 1
+	public abstract void set_Index(int value);
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA.Simple
+public class ListPoolWithIndexedObjects`1<T> // TypeDefIndex: 1185
+{
+	// Fields
+	private List<T> m_Pool; // 0x0
+	private int m_pFree; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public T Allocate() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-ListPoolWithIndexedObjects<object>.Allocate
+	|-ListPoolWithIndexedObjects<__Il2CppFullySharedGenericType>.Allocate
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 4
+	protected virtual T Create() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-ListPoolWithIndexedObjects<object>.Create
+	|-ListPoolWithIndexedObjects<__Il2CppFullySharedGenericType>.Create
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 5
+	protected virtual void OnAllocate(T t) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-ListPoolWithIndexedObjects<object>.OnAllocate
+	|-ListPoolWithIndexedObjects<__Il2CppFullySharedGenericType>.OnAllocate
+	*/
+
+	// RVA: -1 Offset: -1
+	public void Release(T t) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-ListPoolWithIndexedObjects<object>.Release
+	|-ListPoolWithIndexedObjects<__Il2CppFullySharedGenericType>.Release
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 6
+	protected virtual void OnRelease(T t) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-ListPoolWithIndexedObjects<object>.OnRelease
+	|-ListPoolWithIndexedObjects<__Il2CppFullySharedGenericType>.OnRelease
+	*/
+
+	// RVA: -1 Offset: -1
+	public void .ctor() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-ListPoolWithIndexedObjects<object>..ctor
+	|-ListPoolWithIndexedObjects<__Il2CppFullySharedGenericType>..ctor
+	*/
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA.Simple
+public class AsyncLoadReq : IGetSetIndex // TypeDefIndex: 1186
+{
+	// Fields
+	[CompilerGenerated]
+	private int <Index>k__BackingField; // 0x10
+	public bool IsSlot; // 0x14
+	public int Hash; // 0x18
+	public int Param; // 0x1C
+	public uint Ticket; // 0x20
+	public bool Cache; // 0x24
+	public Action<uint, Object, AsyncLoadReq> Callback; // 0x28
+	public Action<Object, uint> CallbackAssetTicket; // 0x30
+	public Action<Object, uint, int> CallbackAssetTicketParam; // 0x38
+
+	// Properties
+	public int Index { get; set; }
+
+	// Methods
+
+	[CompilerGenerated]
+	// RVA: 0x3B7C0D0 Offset: 0x3B780D0 VA: 0x3B7C0D0 Slot: 4
+	public int get_Index() { }
+
+	[CompilerGenerated]
+	// RVA: 0x3B7C0D8 Offset: 0x3B780D8 VA: 0x3B7C0D8 Slot: 5
+	public void set_Index(int value) { }
+
+	// RVA: 0x3B7C0E0 Offset: 0x3B780E0 VA: 0x3B7C0E0
+	public void OnAsyncCallback(uint ticket, bool success, Object asset) { }
+
+	// RVA: 0x3B7C110 Offset: 0x3B78110 VA: 0x3B7C110
+	public void InvokeCallback(Object t) { }
+
+	// RVA: 0x3B7C174 Offset: 0x3B78174 VA: 0x3B7C174 Slot: 3
+	public override string ToString() { }
+
+	// RVA: 0x3B7C378 Offset: 0x3B78378 VA: 0x3B7C378
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA.Simple
+public class AsyncLoadReqPool : ListPoolWithIndexedObjects<AsyncLoadReq> // TypeDefIndex: 1187
+{
+	// Methods
+
+	// RVA: 0x3B7C3E0 Offset: 0x3B783E0 VA: 0x3B7C3E0 Slot: 4
+	protected override AsyncLoadReq Create() { }
+
+	// RVA: 0x3B7C430 Offset: 0x3B78430 VA: 0x3B7C430 Slot: 5
+	protected override void OnAllocate(AsyncLoadReq r) { }
+
+	// RVA: 0x3B7C434 Offset: 0x3B78434 VA: 0x3B7C434 Slot: 6
+	protected override void OnRelease(AsyncLoadReq r) { }
+
+	// RVA: 0x3B7C4DC Offset: 0x3B784DC VA: 0x3B7C4DC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA.Simple
+public class SlotOverlayAssetCache // TypeDefIndex: 1188
+{
+	// Fields
+	internal Dictionary<int, SlotDataAsset> m_SlotCache; // 0x10
+	internal Dictionary<int, OverlayDataAsset> m_OverlayCache; // 0x18
+	protected Action<uint, Object, AsyncLoadReq> m_CallbackOnAssetLoaded; // 0x20
+	protected Dictionary<uint, AsyncLoadReq> m_LoadingReqs; // 0x28
+	protected AsyncLoadReqPool m_ReqPool; // 0x30
+
+	// Properties
+	public int CachedSlotCount { get; }
+	public int CachedOverlayCount { get; }
+
+	// Methods
+
+	// RVA: 0x3B7C524 Offset: 0x3B78524 VA: 0x3B7C524
+	public int get_CachedSlotCount() { }
+
+	// RVA: 0x3B7C580 Offset: 0x3B78580 VA: 0x3B7C580
+	public int get_CachedOverlayCount() { }
+
+	// RVA: 0x3B7C5DC Offset: 0x3B785DC VA: 0x3B7C5DC Slot: 4
+	protected virtual void Init() { }
+
+	// RVA: 0x3B7C5F4 Offset: 0x3B785F4 VA: 0x3B7C5F4
+	public void InitCaches() { }
+
+	// RVA: 0x3B7C730 Offset: 0x3B78730 VA: 0x3B7C730 Slot: 5
+	public virtual void Clear() { }
+
+	// RVA: 0x3B7C7B4 Offset: 0x3B787B4 VA: 0x3B7C7B4
+	protected void ClearCaches() { }
+
+	// RVA: 0x3B7C6C4 Offset: 0x3B786C4 VA: 0x3B7C6C4
+	protected void InitAsyncAndLogSamples() { }
+
+	// RVA: 0x3B7C748 Offset: 0x3B78748 VA: 0x3B7C748
+	protected void ClearAsyncAndLogSamples() { }
+
+	// RVA: 0x3B7CC08 Offset: 0x3B78C08 VA: 0x3B7CC08
+	public SlotDataAsset GetSlotDataAsset(string name, bool cache) { }
+
+	// RVA: 0x3B7CCA8 Offset: 0x3B78CA8 VA: 0x3B7CCA8
+	public SlotDataAsset GetSlotDataAsset(int hash, bool cache) { }
+
+	// RVA: 0x3B7CD48 Offset: 0x3B78D48 VA: 0x3B7CD48
+	public OverlayDataAsset GetOverlayDataAsset(string name, bool cache) { }
+
+	// RVA: 0x3B7CDE8 Offset: 0x3B78DE8 VA: 0x3B7CDE8
+	public OverlayDataAsset GetOverlayDataAsset(int hash, bool cache) { }
+
+	// RVA: -1 Offset: -1 Slot: 6
+	protected virtual T GetAsset<T>(string name, bool isSlot, Dictionary<int, T> dic, bool preload = false) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-SlotOverlayAssetCache.GetAsset<object>
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 7
+	protected virtual T GetAsset<T>(int nameHash, bool isSlot, Dictionary<int, T> dic, bool preload = false) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-SlotOverlayAssetCache.GetAsset<object>
+	*/
+
+	// RVA: -1 Offset: -1
+	protected T GetAssetImp<T>(string name) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-SlotOverlayAssetCache.GetAssetImp<object>
+	*/
+
+	// RVA: -1 Offset: -1
+	protected T GetAssetImp<T>(int nameHash, bool preload) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-SlotOverlayAssetCache.GetAssetImp<object>
+	*/
+
+	// RVA: 0x3B7CE88 Offset: 0x3B78E88 VA: 0x3B7CE88
+	private UmaRecipeSimple GetRecipeForPreload(int recipe) { }
+
+	// RVA: 0x3B7CF90 Offset: 0x3B78F90 VA: 0x3B7CF90
+	public void PreloadRecipe(int recipe) { }
+
+	// RVA: 0x3B7D20C Offset: 0x3B7920C VA: 0x3B7D20C
+	public void PreloadRecipe(int recipe, out bool anyThingLoadedInCall) { }
+
+	// RVA: 0x3B7D034 Offset: 0x3B79034 VA: 0x3B7D034
+	public void PreloadRecipe(UmaRecipeSimple recipe) { }
+
+	// RVA: 0x3B7D498 Offset: 0x3B79498 VA: 0x3B7D498
+	public bool PreloadAsset(string name, bool isSlot, bool cache) { }
+
+	// RVA: 0x3B7D348 Offset: 0x3B79348 VA: 0x3B7D348
+	public bool PreloadAsset(int hash, bool isSlot, bool cache) { }
+
+	// RVA: 0x3B7D5E8 Offset: 0x3B795E8 VA: 0x3B7D5E8
+	public bool IsSlotContainsOverlay(string slotName, string overlayName, bool cache) { }
+
+	// RVA: 0x3B7D738 Offset: 0x3B79738 VA: 0x3B7D738
+	public bool IsSlotContainsOverlay(int slotHash, int overlayHash, bool cache) { }
+
+	// RVA: 0x3B7D880 Offset: 0x3B79880 VA: 0x3B7D880
+	public void PreloadRecipeAsync(int recipe, HashSet<int> preloaded) { }
+
+	// RVA: -1 Offset: -1 Slot: 8
+	protected virtual void SaveToCacheChecked<T>(int nameHash, bool isSlot, Dictionary<int, T> dic, T asset, bool alreadyInCache = false, bool preload = false) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-SlotOverlayAssetCache.SaveToCacheChecked<object>
+	*/
+
+	// RVA: 0x3B7DC04 Offset: 0x3B79C04 VA: 0x3B7DC04
+	public bool IsAssetCached(int hash, bool isSlot) { }
+
+	// RVA: 0x3B7DC8C Offset: 0x3B79C8C VA: 0x3B7DC8C
+	public Object GetAssetFromCache(int hash, bool isSlot) { }
+
+	// RVA: 0x3B7DD3C Offset: 0x3B79D3C VA: 0x3B7DD3C
+	public bool RemoveSlotDataAsset(int hash) { }
+
+	// RVA: 0x3B7DD94 Offset: 0x3B79D94 VA: 0x3B7DD94
+	public bool RemoveOverlayDataAsset(int hash) { }
+
+	// RVA: 0x3B7C834 Offset: 0x3B78834 VA: 0x3B7C834
+	protected void InitAsyncLoading() { }
+
+	// RVA: 0x3B7DDEC Offset: 0x3B79DEC VA: 0x3B7DDEC
+	public uint GetAssetAsync(string name, Action<Object, uint> callback, bool isSlot, bool cache) { }
+
+	// RVA: 0x3B7DAE0 Offset: 0x3B79AE0 VA: 0x3B7DAE0
+	public uint GetAssetAsync(int hash, Action<Object, uint> callback, bool isSlot, bool cache) { }
+
+	// RVA: 0x3B7DE38 Offset: 0x3B79E38 VA: 0x3B7DE38
+	public uint GetAssetAsync(int hash, Action<Object, uint, int> callback, int param, bool isSlot, bool cache) { }
+
+	// RVA: 0x3B7DF68 Offset: 0x3B79F68 VA: 0x3B7DF68 Slot: 9
+	protected virtual uint GetAssetAsync(AsyncLoadReq req) { }
+
+	// RVA: 0x3B7E020 Offset: 0x3B7A020 VA: 0x3B7E020
+	protected uint GetAssetAsyncImp(AsyncLoadReq req) { }
+
+	// RVA: 0x3B7E274 Offset: 0x3B7A274 VA: 0x3B7E274
+	internal void OnAssetLoaded(uint ticket, Object asset, AsyncLoadReq req) { }
+
+	// RVA: 0x3B7E548 Offset: 0x3B7A548 VA: 0x3B7E548
+	protected void SaveToCacheChecked(AsyncLoadReq req, Object asset, bool alreadyInCache) { }
+
+	// RVA: 0x3B7E798 Offset: 0x3B7A798 VA: 0x3B7E798
+	public void CancelAsyncLoad(uint ticket) { }
+
+	// RVA: 0x3B7C8E4 Offset: 0x3B788E4 VA: 0x3B7C8E4
+	public void CancelAllAsyncLoad() { }
+
+	// RVA: 0x3B7EA08 Offset: 0x3B7AA08 VA: 0x3B7EA08 Slot: 3
+	public override string ToString() { }
+
+	// RVA: 0x3B7EAB8 Offset: 0x3B7AAB8 VA: 0x3B7EAB8 Slot: 10
+	protected virtual void Log(string s) { }
+
+	// RVA: 0x3B7EB4C Offset: 0x3B7AB4C VA: 0x3B7EB4C Slot: 11
+	protected virtual void LogError(string s) { }
+
+	// RVA: 0x3B7EBE0 Offset: 0x3B7ABE0 VA: 0x3B7EBE0
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA.Simple
+public class SlotOverlayAssetCacheData // TypeDefIndex: 1189
+{
+	// Fields
+	public Dictionary<int, SlotDataAsset> m_SlotCache; // 0x10
+	public Dictionary<int, OverlayDataAsset> m_OverlayCache; // 0x18
+	public Dictionary<uint, AsyncLoadReq> m_LoadingReqs; // 0x20
+	public AsyncLoadReqPool m_ReqPool; // 0x28
+
+	// Methods
+
+	// RVA: 0x3B7EBE8 Offset: 0x3B7ABE8 VA: 0x3B7EBE8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA.Simple
+public abstract class SlotOverlayAssetCacheWithRefs : SlotOverlayAssetCache // TypeDefIndex: 1190
+{
+	// Fields
+	public bool IsBot; // 0x38
+	public ulong Id; // 0x40
+	public bool DisableRefCount; // 0x48
+	protected ISlotOverlayRefs m_Refs; // 0x50
+
+	// Methods
+
+	// RVA: 0x3B7EBF0 Offset: 0x3B7ABF0 VA: 0x3B7EBF0 Slot: 3
+	public override string ToString() { }
+
+	// RVA: 0x3B7EDDC Offset: 0x3B7ADDC VA: 0x3B7EDDC
+	public void Init(bool isBot, ulong id, bool disableRefs) { }
+
+	// RVA: 0x3B7EE14 Offset: 0x3B7AE14 VA: 0x3B7EE14 Slot: 4
+	protected override void Init() { }
+
+	// RVA: -1 Offset: -1 Slot: 12
+	protected abstract void InitRefs();
+
+	// RVA: 0x3B7EE44 Offset: 0x3B7AE44 VA: 0x3B7EE44 Slot: 5
+	public override void Clear() { }
+
+	// RVA: 0x3B7EE78 Offset: 0x3B7AE78 VA: 0x3B7EE78 Slot: 13
+	protected virtual void ClearRefs() { }
+
+	// RVA: 0x3B7EF28 Offset: 0x3B7AF28 VA: 0x3B7EF28 Slot: 9
+	protected override uint GetAssetAsync(AsyncLoadReq req) { }
+
+	// RVA: -1 Offset: -1 Slot: 8
+	protected override void SaveToCacheChecked<T>(int nameHash, bool isSlot, Dictionary<int, T> dic, T asset, bool alreadyInCache = false, bool preload = false) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-SlotOverlayAssetCacheWithRefs.SaveToCacheChecked<object>
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 14
+	protected abstract void AddRefCountChecked(int nameHash, bool isSlot, Object asset, bool alreadyInCache, bool preload);
+
+	// RVA: 0x3B7F030 Offset: 0x3B7B030 VA: 0x3B7F030
+	public short AddRefCount(bool isSlot, Object asset, short deltaCount) { }
+
+	// RVA: 0x3B7F108 Offset: 0x3B7B108 VA: 0x3B7F108
+	public void GetRefedAssets(ICollection<SlotDataAsset> slots, ICollection<OverlayDataAsset> overlays) { }
+
+	// RVA: 0x3B7F1D0 Offset: 0x3B7B1D0 VA: 0x3B7F1D0
+	protected void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA.Simple
+public class SlotOverlayAssetCacheWithRefsDic : SlotOverlayAssetCacheWithRefs // TypeDefIndex: 1191
+{
+	// Fields
+	[CompilerGenerated]
+	private SlotOverlayRefsDic <RefsDic>k__BackingField; // 0x58
+
+	// Properties
+	public SlotOverlayRefsDic RefsDic { get; set; }
+
+	// Methods
+
+	[CompilerGenerated]
+	// RVA: 0x3B7F1D8 Offset: 0x3B7B1D8 VA: 0x3B7F1D8
+	public SlotOverlayRefsDic get_RefsDic() { }
+
+	[CompilerGenerated]
+	// RVA: 0x3B7F1E0 Offset: 0x3B7B1E0 VA: 0x3B7F1E0
+	protected void set_RefsDic(SlotOverlayRefsDic value) { }
+
+	// RVA: 0x3B7F1E8 Offset: 0x3B7B1E8 VA: 0x3B7F1E8 Slot: 12
+	protected override void InitRefs() { }
+
+	// RVA: 0x3B7F334 Offset: 0x3B7B334 VA: 0x3B7F334
+	public SlotOverlayAssetCacheData GetCaches() { }
+
+	// RVA: 0x3B7F3D4 Offset: 0x3B7B3D4 VA: 0x3B7F3D4
+	public bool HasLoadingReqs() { }
+
+	// RVA: 0x3B7F42C Offset: 0x3B7B42C VA: 0x3B7F42C Slot: 14
+	protected override void AddRefCountChecked(int nameHash, bool isSlot, Object asset, bool alreadyInCache, bool preload) { }
+
+	// RVA: 0x3B7F554 Offset: 0x3B7B554 VA: 0x3B7F554
+	public void TouchRefCount(bool isSlot, Object asset) { }
+
+	// RVA: 0x3B7F560 Offset: 0x3B7B560 VA: 0x3B7F560
+	public bool DecreaseRefCount(bool isSlot, Object asset, bool removeOnZero) { }
+
+	// RVA: 0x3B7F7A8 Offset: 0x3B7B7A8 VA: 0x3B7F7A8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA.Simple
+public class SlotOverlayAssetCacheWithRefsChild : SlotOverlayAssetCacheWithRefs // TypeDefIndex: 1192
+{
+	// Fields
+	protected SlotOverlayAssetCacheWithRefsDic m_Root; // 0x58
+	[CompilerGenerated]
+	private SlotOverlayRefsSet <RefsSet>k__BackingField; // 0x60
+
+	// Properties
+	public SlotOverlayRefsSet RefsSet { get; set; }
+
+	// Methods
+
+	[CompilerGenerated]
+	// RVA: 0x3B7F7B0 Offset: 0x3B7B7B0 VA: 0x3B7F7B0
+	public SlotOverlayRefsSet get_RefsSet() { }
+
+	[CompilerGenerated]
+	// RVA: 0x3B7F7B8 Offset: 0x3B7B7B8 VA: 0x3B7F7B8
+	protected void set_RefsSet(SlotOverlayRefsSet value) { }
+
+	// RVA: 0x3B7F7C0 Offset: 0x3B7B7C0 VA: 0x3B7F7C0
+	public void .ctor(SlotOverlayAssetCacheWithRefsDic root) { }
+
+	// RVA: 0x3B7F7F0 Offset: 0x3B7B7F0 VA: 0x3B7F7F0
+	public SlotOverlayAssetCacheWithRefsDic GetBackCache() { }
+
+	// RVA: 0x3B7F7F8 Offset: 0x3B7B7F8 VA: 0x3B7F7F8 Slot: 4
+	protected override void Init() { }
+
+	// RVA: 0x3B7F894 Offset: 0x3B7B894 VA: 0x3B7F894
+	public void SetCaches(SlotOverlayAssetCacheWithRefsDic root) { }
+
+	// RVA: 0x3B7F838 Offset: 0x3B7B838 VA: 0x3B7F838
+	private void SetCaches(SlotOverlayAssetCacheData c) { }
+
+	// RVA: 0x3B7F8EC Offset: 0x3B7B8EC VA: 0x3B7F8EC Slot: 12
+	protected override void InitRefs() { }
+
+	// RVA: 0x3B7FA38 Offset: 0x3B7BA38 VA: 0x3B7FA38 Slot: 5
+	public override void Clear() { }
+
+	// RVA: 0x3B7FA60 Offset: 0x3B7BA60 VA: 0x3B7FA60 Slot: 14
+	protected override void AddRefCountChecked(int nameHash, bool isSlot, Object asset, bool alreadyInCache, bool preload) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA.Simple
+public class SlotOverlayCacheManager : TSingleton<SlotOverlayCacheManager> // TypeDefIndex: 1193
+{
+	// Fields
+	private const ulong AnonymousUserID = 0;
+	public const bool UnloadSlotOverlays = true;
+	public static bool UnloadSlotMeshAssets; // 0x0
+	public static bool UnloadOverlayTextures; // 0x1
+	public static bool ClearSlotMeshAssets; // 0x2
+	public const bool PreloadBotAssets = true;
+	public static bool PreloadBotAssetsInRootCache; // 0x3
+	public const bool UnloadBotAssets = true;
+	public static bool FixSlotOverlayCacheBotId; // 0x4
+	private bool m_IsWaitingCabin; // 0x10
+	private bool m_ScenePreloading; // 0x11
+	private bool m_PreloadingTeammateOnly; // 0x12
+	private bool m_PreloadingClothes; // 0x13
+	[CompilerGenerated]
+	private bool <LoadNoCache>k__BackingField; // 0x14
+	[CompilerGenerated]
+	private bool <UnloadAssets>k__BackingField; // 0x15
+	[CompilerGenerated]
+	private bool <DisableRefs>k__BackingField; // 0x16
+	private bool m_HasCaches; // 0x17
+	private SlotOverlayAssetCacheWithRefsDic m_RootCache; // 0x18
+	private SlotOverlayAssetCacheWithRefsDic m_WaitingCache; // 0x20
+	private Dictionary<ulong, SlotOverlayAssetCacheWithRefsChild> m_PlayerCaches; // 0x28
+	private Dictionary<uint, SlotOverlayAssetCacheWithRefsChild> m_BotCaches; // 0x30
+	private HashSet<SlotOverlayAssetCache> m_AnonymousCaches; // 0x38
+	private uint m_UnloadDelayCall; // 0x40
+	protected List<SlotDataAsset> m_UnloadingSlots; // 0x48
+	protected List<OverlayDataAsset> m_UnloadingOverlays; // 0x50
+	private static List<int> s_SharedRecipeList; // 0x8
+
+	// Properties
+	public bool LoadNoCache { get; set; }
+	public bool UnloadAssets { get; set; }
+	public bool DisableRefs { get; set; }
+
+	// Methods
+
+	[CompilerGenerated]
+	// RVA: 0x3B7FCB8 Offset: 0x3B7BCB8 VA: 0x3B7FCB8
+	public bool get_LoadNoCache() { }
+
+	[CompilerGenerated]
+	// RVA: 0x3B7FCC0 Offset: 0x3B7BCC0 VA: 0x3B7FCC0
+	private void set_LoadNoCache(bool value) { }
+
+	[CompilerGenerated]
+	// RVA: 0x3B7FCCC Offset: 0x3B7BCCC VA: 0x3B7FCCC
+	public bool get_UnloadAssets() { }
+
+	[CompilerGenerated]
+	// RVA: 0x3B7FCD4 Offset: 0x3B7BCD4 VA: 0x3B7FCD4
+	private void set_UnloadAssets(bool value) { }
+
+	[CompilerGenerated]
+	// RVA: 0x3B7FCE0 Offset: 0x3B7BCE0 VA: 0x3B7FCE0
+	public bool get_DisableRefs() { }
+
+	[CompilerGenerated]
+	// RVA: 0x3B7FCE8 Offset: 0x3B7BCE8 VA: 0x3B7FCE8
+	private void set_DisableRefs(bool value) { }
+
+	// RVA: 0x3B7FCF4 Offset: 0x3B7BCF4 VA: 0x3B7FCF4
+	public void SetLobbyOptions() { }
+
+	// RVA: 0x3B80058 Offset: 0x3B7C058 VA: 0x3B80058
+	public void SetGameOptions(bool isWaitingCabin, bool needPreload3p, bool preloadTeammateOnly, bool needRelease) { }
+
+	// RVA: 0x3B7FF30 Offset: 0x3B7BF30 VA: 0x3B7FF30
+	private void SetUnloadAssetsOnCacheDestroy(bool unload) { }
+
+	// RVA: 0x3B7FE44 Offset: 0x3B7BE44 VA: 0x3B7FE44
+	private void SetNeedPreloadAssets(bool preload3p, bool teammateOnly) { }
+
+	// RVA: 0x3B7FD2C Offset: 0x3B7BD2C VA: 0x3B7FD2C
+	private void SetLoadNoCache(bool noCache) { }
+
+	// RVA: 0x3B800B8 Offset: 0x3B7C0B8 VA: 0x3B800B8
+	private void UpdateDisableRefCount() { }
+
+	// RVA: 0x3B80570 Offset: 0x3B7C570 VA: 0x3B80570
+	private void SyncChildDisableRefCount(SlotOverlayAssetCacheWithRefsChild child) { }
+
+	// RVA: 0x3B805A0 Offset: 0x3B7C5A0 VA: 0x3B805A0
+	private void EnsureRootCache() { }
+
+	// RVA: 0x3B80654 Offset: 0x3B7C654 VA: 0x3B80654
+	private void EnsureWaitingCache() { }
+
+	// RVA: 0x3B806FC Offset: 0x3B7C6FC VA: 0x3B806FC
+	public SlotOverlayAssetCacheWithRefs GetRootCache() { }
+
+	// RVA: 0x3B80714 Offset: 0x3B7C714 VA: 0x3B80714
+	public SlotOverlayAssetCacheWithRefs GetPlayerCache(ulong uid, BHGGAEEHJCO pid, bool showClothesInBattle, bool isTeammate) { }
+
+	// RVA: 0x3B80AB8 Offset: 0x3B7CAB8 VA: 0x3B80AB8
+	public SlotOverlayAssetCache CreateAnonymousCache(bool noCache = false) { }
+
+	// RVA: 0x3B80B60 Offset: 0x3B7CB60 VA: 0x3B80B60
+	public void PreloadClothes(ulong userID, BHGGAEEHJCO pid, bool useHighQualityAvatar, uint avatarId, List<uint> clothList, bool async) { }
+
+	// RVA: 0x3B810CC Offset: 0x3B7D0CC VA: 0x3B810CC
+	public void PreloadBaseClothes() { }
+
+	// RVA: 0x3B811BC Offset: 0x3B7D1BC VA: 0x3B811BC
+	public void PreloadBaseClothes(string raceName) { }
+
+	// RVA: 0x3B81364 Offset: 0x3B7D364 VA: 0x3B81364
+	public bool PreloadClothes(int hash) { }
+
+	// RVA: 0x3B813C0 Offset: 0x3B7D3C0 VA: 0x3B813C0
+	public void ClearCaches(bool removeChildren = true) { }
+
+	// RVA: 0x3B81BF0 Offset: 0x3B7DBF0 VA: 0x3B81BF0
+	public void ReleaseCache(SlotOverlayAssetCache cache) { }
+
+	// RVA: 0x3B81E84 Offset: 0x3B7DE84 VA: 0x3B81E84
+	private bool RemoveCache(SlotOverlayAssetCacheWithRefsChild cache) { }
+
+	// RVA: 0x3B81F14 Offset: 0x3B7DF14 VA: 0x3B81F14
+	private void UpdateHasCaches() { }
+
+	// RVA: 0x3B81FC8 Offset: 0x3B7DFC8 VA: 0x3B81FC8
+	private void UnloadCache(SlotOverlayAssetCacheWithRefsChild cache) { }
+
+	// RVA: 0x3B81B48 Offset: 0x3B7DB48 VA: 0x3B81B48
+	private void ClearUnloadingLists() { }
+
+	// RVA: 0x3B82014 Offset: 0x3B7E014 VA: 0x3B82014
+	private bool HasUnloadingAssets() { }
+
+	// RVA: 0x3B804AC Offset: 0x3B7C4AC VA: 0x3B804AC
+	private void StartOrStopUnloading() { }
+
+	// RVA: 0x3B81D54 Offset: 0x3B7DD54 VA: 0x3B81D54
+	private void StartOrStopUnloading(bool start, bool clearOnStop = true) { }
+
+	// RVA: 0x3B8208C Offset: 0x3B7E08C VA: 0x3B8208C
+	private void TryUpdateUnloading() { }
+
+	// RVA: 0x3B82240 Offset: 0x3B7E240 VA: 0x3B82240
+	private bool DoUpdateUnloading() { }
+
+	// RVA: -1 Offset: -1
+	private bool CheckAndUnload<T>(bool isSlot, List<T> list, Action<T> unloadFunc) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-SlotOverlayCacheManager.CheckAndUnload<object>
+	*/
+
+	// RVA: 0x3B82380 Offset: 0x3B7E380 VA: 0x3B82380
+	private void UnloadSlot(SlotDataAsset slot) { }
+
+	// RVA: 0x3B82538 Offset: 0x3B7E538 VA: 0x3B82538
+	private void UnloadOverlay(OverlayDataAsset overlay) { }
+
+	// RVA: 0x3B8252C Offset: 0x3B7E52C VA: 0x3B8252C
+	private void UnloadAsset(Object asset) { }
+
+	// RVA: 0x3B827A8 Offset: 0x3B7E7A8 VA: 0x3B827A8
+	public void .ctor() { }
+
+	// RVA: 0x3B8298C Offset: 0x3B7E98C VA: 0x3B8298C
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+private enum SlotOverlayDataPool.PoolType // TypeDefIndex: 1194
+{
+	// Fields
+	public int value__; // 0x0
+	public const PoolType Slot = 0;
+	public const PoolType Overlay = 1;
+	public const PoolType SlotList = 2;
+	public const PoolType Cnt = 3;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA.Simple
+public static class SlotOverlayDataPool // TypeDefIndex: 1195
+{
+	// Fields
+	private const int InitialPoolSize = 16;
+	private static List<SlotData> s_SlotPool; // 0x0
+	private static List<OverlayData> s_OverlayPool; // 0x8
+	private static List<List<SlotData>> s_SlotListPool; // 0x10
+	private static int s_ClearCnt; // 0x18
+	private static Vector3Int[] DebugCnts; // 0x20
+
+	// Methods
+
+	// RVA: 0x3B82A38 Offset: 0x3B7EA38 VA: 0x3B82A38
+	public static void Clear() { }
+
+	// RVA: -1 Offset: -1
+	private static T GetOrCreateData<T>(List<T> pool) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-SlotOverlayDataPool.GetOrCreateData<object>
+	|-SlotOverlayDataPool.GetOrCreateData<__Il2CppFullySharedGenericType>
+	*/
+
+	// RVA: 0x3B82B44 Offset: 0x3B7EB44 VA: 0x3B82B44
+	public static SlotData CreateData(SlotDataAsset asset) { }
+
+	// RVA: 0x3B82BD8 Offset: 0x3B7EBD8 VA: 0x3B82BD8
+	public static OverlayData CreateData(OverlayDataAsset asset) { }
+
+	// RVA: 0x3B82C6C Offset: 0x3B7EC6C VA: 0x3B82C6C
+	public static List<SlotData> CreateSlotList() { }
+
+	// RVA: 0x3B82CDC Offset: 0x3B7ECDC VA: 0x3B82CDC
+	public static void RecycleListOnly(List<SlotData> list) { }
+
+	// RVA: 0x3B82E34 Offset: 0x3B7EE34 VA: 0x3B82E34
+	public static void RecycleSlotAndOverlays(SlotData slot) { }
+
+	// RVA: 0x3B82EF0 Offset: 0x3B7EEF0 VA: 0x3B82EF0
+	public static void RecycleOverlays(List<OverlayData> overlays) { }
+
+	// RVA: 0x3B830AC Offset: 0x3B7F0AC VA: 0x3B830AC
+	private static void Recycle(SlotData slot) { }
+
+	// RVA: 0x3B831A0 Offset: 0x3B7F1A0 VA: 0x3B831A0
+	private static void Recycle(OverlayData overlay) { }
+
+	[Conditional("UMA_SAMPLES")]
+	// RVA: 0x3B83294 Offset: 0x3B7F294 VA: 0x3B83294
+	private static void DebugOnClear() { }
+
+	[Conditional("UMA_SAMPLES")]
+	// RVA: 0x3B83328 Offset: 0x3B7F328 VA: 0x3B83328
+	private static void LogStats() { }
+
+	[Conditional("UMA_SAMPLES")]
+	// RVA: 0x3B835D0 Offset: 0x3B7F5D0 VA: 0x3B835D0
+	private static void DebugOnGet(PoolType t) { }
+
+	[Conditional("UMA_SAMPLES")]
+	// RVA: 0x3B83658 Offset: 0x3B7F658 VA: 0x3B83658
+	private static void DebugOnRecycle(PoolType t) { }
+
+	// RVA: 0x3B83788 Offset: 0x3B7F788 VA: 0x3B83788
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA.Simple
+public interface ISlotOverlayRefs // TypeDefIndex: 1196
+{
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract bool HasRefs();
+
+	// RVA: -1 Offset: -1 Slot: 1
+	public abstract void ClearRefs();
+
+	// RVA: -1 Offset: -1 Slot: 2
+	public abstract short AddRefCount(bool isSlot, Object asset, short deltaCount);
+
+	// RVA: -1 Offset: -1 Slot: 3
+	public abstract void GetRefedAssets(ICollection<SlotDataAsset> slots, ICollection<OverlayDataAsset> overlays);
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA.Simple
+public class SlotOverlayRefsSet : ISlotOverlayRefs // TypeDefIndex: 1197
+{
+	// Fields
+	internal readonly HashSet<SlotDataAsset> m_SlotRefs; // 0x10
+	internal readonly HashSet<OverlayDataAsset> m_OverlayRefs; // 0x18
+
+	// Methods
+
+	// RVA: 0x3B83914 Offset: 0x3B7F914 VA: 0x3B83914 Slot: 4
+	public bool HasRefs() { }
+
+	// RVA: 0x3B8398C Offset: 0x3B7F98C VA: 0x3B8398C Slot: 5
+	public void ClearRefs() { }
+
+	// RVA: 0x3B7FC08 Offset: 0x3B7BC08 VA: 0x3B7FC08
+	public bool AddRefCount(SlotDataAsset asset) { }
+
+	// RVA: 0x3B7FC60 Offset: 0x3B7BC60 VA: 0x3B7FC60
+	public bool AddRefCount(OverlayDataAsset asset) { }
+
+	// RVA: 0x3B83A00 Offset: 0x3B7FA00 VA: 0x3B83A00 Slot: 6
+	public short AddRefCount(bool isSlot, Object asset, short deltaCount) { }
+
+	// RVA: 0x3B83A38 Offset: 0x3B7FA38 VA: 0x3B83A38 Slot: 7
+	public void GetRefedAssets(ICollection<SlotDataAsset> slots, ICollection<OverlayDataAsset> overlays) { }
+
+	// RVA: 0x3B7F95C Offset: 0x3B7B95C VA: 0x3B7F95C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA.Simple
+public class SlotOverlayRefsDic : ISlotOverlayRefs // TypeDefIndex: 1198
+{
+	// Fields
+	internal readonly Dictionary<SlotDataAsset, short> m_SlotRefCount; // 0x10
+	internal readonly Dictionary<OverlayDataAsset, short> m_OverlayRefCount; // 0x18
+	protected Dictionary<UMAMeshAsset, short> m_MeshRefCount; // 0x20
+	protected Dictionary<Texture, short> m_TextureRefCount; // 0x28
+
+	// Methods
+
+	// RVA: 0x3B804E0 Offset: 0x3B7C4E0 VA: 0x3B804E0
+	public void InitMeshTexRefCounts(bool mesh, bool tex) { }
+
+	// RVA: -1 Offset: -1
+	private void InitRefsDic<T>(ref Dictionary<T, short> dic, bool create) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-SlotOverlayRefsDic.InitRefsDic<object>
+	|-SlotOverlayRefsDic.InitRefsDic<__Il2CppFullySharedGenericType>
+	*/
+
+	// RVA: 0x3B83DA4 Offset: 0x3B7FDA4 VA: 0x3B83DA4 Slot: 4
+	public bool HasRefs() { }
+
+	// RVA: 0x3B83E34 Offset: 0x3B7FE34 VA: 0x3B83E34 Slot: 5
+	public void ClearRefs() { }
+
+	// RVA: 0x3B83EFC Offset: 0x3B7FEFC VA: 0x3B83EFC Slot: 7
+	public void GetRefedAssets(ICollection<SlotDataAsset> slots, ICollection<OverlayDataAsset> overlays) { }
+
+	// RVA: 0x3B83F34 Offset: 0x3B7FF34 VA: 0x3B83F34 Slot: 6
+	public short AddRefCount(bool isSlot, Object asset, short deltaCount) { }
+
+	// RVA: 0x3B84190 Offset: 0x3B80190 VA: 0x3B84190
+	private short AddSlotRefCount(SlotDataAsset slot, short deltaCount) { }
+
+	// RVA: 0x3B84350 Offset: 0x3B80350 VA: 0x3B84350
+	private short AddOverlayRefCount(OverlayDataAsset overlay, short deltaCount) { }
+
+	// RVA: 0x3B840D0 Offset: 0x3B800D0 VA: 0x3B840D0
+	private void AddMeshRefCount(SlotDataAsset slot, short deltaCount) { }
+
+	// RVA: 0x3B841F4 Offset: 0x3B801F4 VA: 0x3B841F4
+	private void AddTextureRefCount(OverlayDataAsset overlay, short deltaCount) { }
+
+	// RVA: -1 Offset: -1
+	private short AddRefCount<T>(Dictionary<T, short> refs, T asset, short deltaCount) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-SlotOverlayRefsDic.AddRefCount<object>
+	*/
+
+	// RVA: 0x3B7F68C Offset: 0x3B7B68C VA: 0x3B7F68C
+	public bool RemoveRefCount(bool isSlot, Object asset) { }
+
+	// RVA: 0x3B824D0 Offset: 0x3B7E4D0 VA: 0x3B824D0
+	public bool RemoveIfNotRefed(UMAMeshAsset asset) { }
+
+	// RVA: 0x3B826A4 Offset: 0x3B7E6A4 VA: 0x3B826A4
+	public bool RemoveIfNotRefed(Texture asset) { }
+
+	// RVA: 0x3B82700 Offset: 0x3B7E700 VA: 0x3B82700
+	public bool ContainsTextureRef(Texture asset) { }
+
+	// RVA: -1 Offset: -1
+	private bool RemoveIfNotRefed<T>(Dictionary<T, short> refs, T asset) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-SlotOverlayRefsDic.RemoveIfNotRefed<object>
+	|-SlotOverlayRefsDic.RemoveIfNotRefed<__Il2CppFullySharedGenericType>
+	*/
+
+	// RVA: 0x3B7F258 Offset: 0x3B7B258 VA: 0x3B7F258
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA.Simple
+public class SlotOverlayResManager // TypeDefIndex: 1199
+{
+	// Fields
+	public static SlotOverlayResManager Instance; // 0x0
+	[CompilerGenerated]
+	private bool <Inited>k__BackingField; // 0x10
+	private const int VAL_APK_HASH_FILE_NAME = 1073741824;
+	public const ushort INVALID_IDX = 65535;
+	private const int AB_SHIFT = 16;
+	private const int MAX_AB_COUNT = 16383;
+	private const int PATH_MASK = 65535;
+	private int m_AbsCount; // 0x14
+	private List<string> m_Abs; // 0x18
+	private List<string> m_Pathes; // 0x20
+	private bool m_UsePackedUrls; // 0x28
+	private SlotOverlayUrlSplitResultPacked m_PackedUrls; // 0x30
+	private Dictionary<int, int> SlotMap; // 0x38
+	private Dictionary<int, int> OverlayMap; // 0x40
+	private MutableString m_Sb; // 0x48
+
+	// Properties
+	public bool Inited { get; set; }
+
+	// Methods
+
+	[CompilerGenerated]
+	// RVA: 0x3B843B4 Offset: 0x3B803B4 VA: 0x3B843B4
+	public bool get_Inited() { }
+
+	[CompilerGenerated]
+	// RVA: 0x3B843BC Offset: 0x3B803BC VA: 0x3B843BC
+	protected void set_Inited(bool value) { }
+
+	// RVA: 0x3B843C8 Offset: 0x3B803C8 VA: 0x3B843C8
+	public static void ClearForRestart() { }
+
+	// RVA: 0x3B8441C Offset: 0x3B8041C VA: 0x3B8441C
+	public static void InitInstanceInNeed() { }
+
+	// RVA: 0x3B846FC Offset: 0x3B806FC VA: 0x3B846FC
+	public void InitStringBuilderInNeed() { }
+
+	// RVA: 0x3B84820 Offset: 0x3B80820 VA: 0x3B84820
+	public void Load(TextAsset asset, Dictionary<string, int> hotAbs) { }
+
+	// RVA: 0x3B85630 Offset: 0x3B81630 VA: 0x3B85630
+	private void Load(StringReader fs, Dictionary<string, int> hotAbs, Dictionary<string, string> abDeps) { }
+
+	// RVA: 0x3B85838 Offset: 0x3B81838 VA: 0x3B85838
+	private static List<string> LoadAbs(StringReader fs, Dictionary<string, string> abDeps) { }
+
+	// RVA: 0x3B85C40 Offset: 0x3B81C40 VA: 0x3B85C40
+	private static Dictionary<int, int> LoadSlotOverlays(StringReader fs, int count, List<string> abs, List<string> pathes, Dictionary<string, int> nonIndexedAbs, Dictionary<string, int> hotAbs) { }
+
+	// RVA: 0x3B857F0 Offset: 0x3B817F0 VA: 0x3B857F0
+	private static bool ReadIntLine(StringReader r, out int val) { }
+
+	// RVA: 0x3B852E8 Offset: 0x3B812E8 VA: 0x3B852E8
+	private void Load(BinaryReader bs, Dictionary<string, int> hotAbs, Dictionary<string, string> abDeps) { }
+
+	// RVA: 0x3B86024 Offset: 0x3B82024 VA: 0x3B86024
+	private static List<string> LoadAbs(BinaryReader bs, Dictionary<string, string> abDeps) { }
+
+	// RVA: 0x3B863CC Offset: 0x3B823CC VA: 0x3B863CC
+	private static Dictionary<int, int> LoadSlotOverlays(BinaryReader bs, int count, List<string> abs, List<string> pathes, Dictionary<string, int> nonIndexedAbs, SlotOverlayUrlSplitResultPacked packedUrls, Dictionary<string, int> hotAbs) { }
+
+	// RVA: -1 Offset: -1
+	public static bool GetSlotOrOverlay<T>(int hash, out string ab, out string path, bool useSharedStr = false) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-SlotOverlayResManager.GetSlotOrOverlay<object>
+	|-SlotOverlayResManager.GetSlotOrOverlay<__Il2CppFullySharedGenericType>
+	*/
+
+	// RVA: 0x3B7E230 Offset: 0x3B7A230 VA: 0x3B7E230
+	public bool GetSlotOrOverlay(int hash, bool isSlot, out string ab, out string path, bool useSharedStr = false) { }
+
+	// RVA: 0x3B86A50 Offset: 0x3B82A50 VA: 0x3B86A50
+	public bool GetSlotOrOverlayAb(int hash, bool isSlot, out string ab) { }
+
+	// RVA: 0x3B86A98 Offset: 0x3B82A98 VA: 0x3B86A98
+	public string GetSlotOrOverlayAb(int hash, bool isSlot) { }
+
+	// RVA: 0x3B86B34 Offset: 0x3B82B34 VA: 0x3B86B34
+	public int GetSlotOrOverlayAbIdx(int hash, bool isSlot) { }
+
+	// RVA: 0x3B86B54 Offset: 0x3B82B54 VA: 0x3B86B54
+	private int GetSlotOrOverlayAbIdx(Dictionary<int, int> dic, int hash) { }
+
+	// RVA: 0x3B867AC Offset: 0x3B827AC VA: 0x3B867AC
+	private bool GetSlotOrOverlay(Dictionary<int, int> dic, int hash, out string ab, out string path, bool getPath = true, bool useSharedStr = false, bool skipError = false) { }
+
+	// RVA: 0x3B86BF8 Offset: 0x3B82BF8 VA: 0x3B86BF8
+	private string GetPathFromHash(int hash, bool useSharedStr = false) { }
+
+	// RVA: 0x3B84650 Offset: 0x3B80650 VA: 0x3B84650
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA.Simple
+public static class SlotOverlayUrlSplitDecoder // TypeDefIndex: 1200
+{
+	// Methods
+
+	// RVA: 0x3C55550 Offset: 0x3C51550 VA: 0x3C55550
+	public static SlotOverlayUrlSplitResultPacked Decode(BinaryReader bs) { }
+
+	// RVA: 0x3C55A3C Offset: 0x3C51A3C VA: 0x3C55A3C
+	private static List<string> DecodeShortStringList(BinaryReader bs) { }
+
+	// RVA: 0x3C5595C Offset: 0x3C5195C VA: 0x3C5595C
+	private static void AlignTo4(BinaryReader bs) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA.Simple
+public class SlotOverlayUrlSplitResultPacked // TypeDefIndex: 1201
+{
+	// Fields
+	public const char Sp = 95;
+	public int RecordCount; // 0x10
+	public int LoadedRecords; // 0x14
+	internal bool m_UsePrefixStr; // 0x18
+	internal bool m_OffsetTimes4; // 0x19
+	internal int m_MinUrlLength; // 0x1C
+	internal int m_MaxUrlLength; // 0x20
+	public List<string> PrefixStrs; // 0x28
+	public List<string> CenterStrs; // 0x30
+	public List<string> SuffixStrs; // 0x38
+	internal bool m_UsingShortOffset; // 0x40
+	internal ushort[] m_OffsetShort; // 0x48
+	internal int[] m_OffsetLong; // 0x50
+	private MutableString m_Sb; // 0x58
+	private MutableString[] m_Sbs; // 0x60
+	public int DataLength; // 0x68
+	internal byte[] m_Data; // 0x70
+
+	// Methods
+
+	// RVA: 0x3C55B94 Offset: 0x3C51B94 VA: 0x3C55B94
+	public void OnTransfered() { }
+
+	// RVA: 0x3C55D14 Offset: 0x3C51D14 VA: 0x3C55D14
+	public string GetUrl(int idx) { }
+
+	// RVA: 0x3C55D78 Offset: 0x3C51D78 VA: 0x3C55D78
+	public bool GetUrl(int idx, MutableString sb) { }
+
+	// RVA: 0x3C56170 Offset: 0x3C52170 VA: 0x3C56170
+	public string GetUrlWithSharedString(int idx) { }
+
+	// RVA: 0x3C56674 Offset: 0x3C52674 VA: 0x3C56674
+	public void FreeData() { }
+
+	// RVA: 0x3C564C8 Offset: 0x3C524C8 VA: 0x3C564C8
+	private MutableString GetSbWithLength(int strLen) { }
+
+	// RVA: 0x3C56040 Offset: 0x3C52040 VA: 0x3C56040
+	private static void ReadIndexStrAndAppendTo(MutableString sb, List<string> strs, byte[] data, ref int p, int offset) { }
+
+	// RVA: 0x3C56514 Offset: 0x3C52514 VA: 0x3C56514
+	private static void ReadIndexStrLen(byte[] data, ref int p, List<string> strs, out string str, ref int sbLen, int offset) { }
+
+	// RVA: 0x3C560F0 Offset: 0x3C520F0 VA: 0x3C560F0
+	private static void ReadStrAndAppendTo(MutableString sb, byte[] data, ref int p) { }
+
+	// RVA: 0x3C565E4 Offset: 0x3C525E4 VA: 0x3C565E4
+	private static void ReadStrLen(byte[] data, ref int p, out int strLen, out int strOffset, ref int sbLen) { }
+
+	// RVA: 0x3C55FC4 Offset: 0x3C51FC4 VA: 0x3C55FC4
+	private static void AppendTo(MutableString sb, byte[] data, int start, int cnt) { }
+
+	// RVA: 0x3C55954 Offset: 0x3C51954 VA: 0x3C55954
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA.Simple
+public static class UmaAssetUtil // TypeDefIndex: 1202
+{
+	// Fields
+	public const bool LoadNoCache = true;
+	public const ERefOwner RefOwner = 8;
+	public const ERefOwner RefOwnerNone = 0;
+	public static bool LoadFromIndexer; // 0x0
+	public static bool LoadFromResManager; // 0x1
+	public static bool LoadFromAssetDatabase; // 0x2
+	private static ResourceManager ResManagerInstance; // 0x8
+	public static readonly uint INVALID_REQUEST_ID; // 0x10
+	public static readonly uint INSTANT_REQUEST_ID; // 0x14
+	public static readonly uint VALID_REQUEST_ID_START; // 0x18
+
+	// Properties
+	public static int AbRefCountGeneration { get; }
+
+	// Methods
+
+	// RVA: 0x3C566F0 Offset: 0x3C526F0 VA: 0x3C566F0
+	public static void Init() { }
+
+	// RVA: 0x3C56790 Offset: 0x3C52790 VA: 0x3C56790
+	public static void LogDebug(string s) { }
+
+	// RVA: 0x3C56860 Offset: 0x3C52860 VA: 0x3C56860
+	public static void LogError(string s) { }
+
+	// RVA: -1 Offset: -1
+	public static T GetAsset<T>(string name) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-UmaAssetUtil.GetAsset<object>
+	*/
+
+	// RVA: -1 Offset: -1
+	public static T GetAsset<T>(string ab, string path, bool preload) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-UmaAssetUtil.GetAsset<object>
+	*/
+
+	// RVA: 0x3C56930 Offset: 0x3C52930 VA: 0x3C56930
+	public static bool IsDelayedRequestId(uint id) { }
+
+	// RVA: -1 Offset: -1
+	public static uint GetAsset<T>(string ab, string path, Action<uint, bool, Object> callback) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-UmaAssetUtil.GetAsset<object>
+	*/
+
+	// RVA: 0x3C56994 Offset: 0x3C52994 VA: 0x3C56994
+	public static void CancelAsyncLoad(uint ticket) { }
+
+	// RVA: 0x3C56A48 Offset: 0x3C52A48 VA: 0x3C56A48
+	public static int get_AbRefCountGeneration() { }
+
+	// RVA: 0x3C56AD0 Offset: 0x3C52AD0 VA: 0x3C56AD0
+	public static void UpdateAbRefCount(ICollection<SlotData> umaRecipeSlots, short delta) { }
+
+	// RVA: 0x3C57040 Offset: 0x3C53040 VA: 0x3C57040
+	private static void UpdateAbRefCount(INameProvider asset, bool isSlot, short delta) { }
+
+	// RVA: 0x3C571A0 Offset: 0x3C531A0 VA: 0x3C571A0
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA.Simple
+public class UmaAvatarSimple : UMAAvatarBase, IUmaAvatar, IUmaAvatarWithSlots, IUmaAvatarBase // TypeDefIndex: 1203
+{
+	// Fields
+	private UMAContextSimple m_ContextSimple; // 0xB8
+	private UmaRecipeSimpleLibrary m_RecipeLibrary; // 0xC0
+	private RaceData m_RaceData; // 0xC8
+	private int[] m_Recipes; // 0xD0
+	private int m_VisibleSlots; // 0xD8
+	private int m_ChangedSlots; // 0xDC
+	private bool lastBuildNotFinish; // 0xE0
+	private ChangeRaceOptions defaultChangeRaceOptions; // 0xE4
+	public string m_RaceName; // 0xE8
+	private static int m_DebugIdGen; // 0x0
+	public bool LogDebug; // 0xF0
+	public int m_DebugId; // 0xF4
+	public bool PreAsyncLoading; // 0xF8
+	public bool CountAbRefs; // 0xF9
+	public int m_CacheGeneration; // 0xFC
+	private bool m_CustomTextureDirty; // 0x100
+	private bool IsVisible; // 0x101
+	private static int[] s_SharedWardrobeSuppressBits; // 0x8
+	private static int[] s_SharedWardrobeBeSuppressBits; // 0x10
+	private static SlotData[] s_SharedOverlayData; // 0x18
+	private static List<KeyValuePair<SlotData, AdditiveInfo>> s_SharedAdditiveSlots; // 0x20
+	public bool AsyncLoadingBaseSlots; // 0x102
+	public bool BuildAfterWardrobeSlotsLoaded; // 0x103
+	public int NoAsyncLoadingWardrobeSlots; // 0x104
+	private int m_LoadingWardrobeSlots; // 0x108
+	private int m_LoadedWardrobeSlots; // 0x10C
+	private LinkedList<uint>[] m_LoadingWardrobeTickes; // 0x110
+	private LinkedList<uint> m_LoadingBaseTickes; // 0x118
+	private Action<Object, uint, int> m_CallbackOnWardrobeSlotLoaded; // 0x120
+
+	// Properties
+	public int DisableAsyncLoadingWardrobeSlots { get; set; }
+
+	// Methods
+
+	// RVA: 0x3C57204 Offset: 0x3C53204 VA: 0x3C57204 Slot: 26
+	public override void Initialize() { }
+
+	// RVA: 0x3C5770C Offset: 0x3C5370C VA: 0x3C5770C Slot: 40
+	public void InitAsyncLoading(bool pre) { }
+
+	// RVA: 0x3C57908 Offset: 0x3C53908 VA: 0x3C57908 Slot: 29
+	public override void EnableDebugLog(bool enable) { }
+
+	// RVA: 0x3C57AE8 Offset: 0x3C53AE8 VA: 0x3C57AE8 Slot: 27
+	public override UMAContextIndividual UseIndividualContextCache(SlotOverlayAssetCache cache) { }
+
+	// RVA: 0x3C57B74 Offset: 0x3C53B74 VA: 0x3C57B74
+	private void OnDestroy() { }
+
+	// RVA: 0x3C57CC8 Offset: 0x3C53CC8 VA: 0x3C57CC8
+	private UmaRecipeSimple GetRecipe(int recipe) { }
+
+	// RVA: 0x3C57840 Offset: 0x3C53840 VA: 0x3C57840
+	private void Log(string s) { }
+
+	// RVA: 0x3C574DC Offset: 0x3C534DC VA: 0x3C574DC
+	private void LogError(string s) { }
+
+	// RVA: 0x3C575A4 Offset: 0x3C535A4 VA: 0x3C575A4
+	private void InitSlots() { }
+
+	// RVA: 0x3C57DC4 Offset: 0x3C53DC4 VA: 0x3C57DC4 Slot: 45
+	public void SetSlot(int recipe) { }
+
+	// RVA: 0x3C57E84 Offset: 0x3C53E84 VA: 0x3C57E84 Slot: 46
+	public void SetSlot(int recipe, uint id) { }
+
+	// RVA: 0x3C57DE0 Offset: 0x3C53DE0 VA: 0x3C57DE0
+	private void SetSlot(UmaRecipeSimple r) { }
+
+	// RVA: 0x3C5803C Offset: 0x3C5403C VA: 0x3C5803C
+	private void SetSlot(int slot, int r) { }
+
+	// RVA: 0x3C5819C Offset: 0x3C5419C VA: 0x3C5819C Slot: 47
+	public void ClearSlot(string ws) { }
+
+	// RVA: 0x3C581C4 Offset: 0x3C541C4 VA: 0x3C581C4 Slot: 48
+	public void ClearSlots() { }
+
+	// RVA: 0x3C581FC Offset: 0x3C541FC VA: 0x3C581FC Slot: 49
+	public bool IsSlotVisible(string slot) { }
+
+	// RVA: 0x3C58224 Offset: 0x3C54224 VA: 0x3C58224 Slot: 50
+	public bool HasSlot(string slot) { }
+
+	// RVA: 0x3C5826C Offset: 0x3C5426C VA: 0x3C5826C Slot: 41
+	public bool IsAsyncLoading() { }
+
+	// RVA: 0x3C5828C Offset: 0x3C5428C VA: 0x3C5828C
+	private UmaRecipeSimple GetRecipeForIdx(int idx) { }
+
+	// RVA: 0x3C58308 Offset: 0x3C54308 VA: 0x3C58308 Slot: 51
+	public List<uint> GetIds() { }
+
+	// RVA: 0x3C58514 Offset: 0x3C54514 VA: 0x3C58514 Slot: 44
+	public void SetCustomTextureDirty(bool dirty) { }
+
+	// RVA: 0x3C57644 Offset: 0x3C53644 VA: 0x3C57644
+	public void InitRace(string racename) { }
+
+	// RVA: 0x3C58520 Offset: 0x3C54520 VA: 0x3C58520 Slot: 33
+	public void ChangeRace(string racename, ChangeRaceOptions opt = 0) { }
+
+	// RVA: 0x3C586AC Offset: 0x3C546AC VA: 0x3C586AC
+	public void ChangeRace(RaceData race, ChangeRaceOptions opt = 0) { }
+
+	// RVA: 0x3C57610 Offset: 0x3C53610 VA: 0x3C57610
+	private void InitColor() { }
+
+	// RVA: 0x3C58860 Offset: 0x3C54860 VA: 0x3C58860
+	private void LoadRaceBodyColor(RaceData race) { }
+
+	// RVA: 0x3C58894 Offset: 0x3C54894 VA: 0x3C58894 Slot: 34
+	public void SetColor(string name, OverlayColorData colorData, bool updateTexture = true) { }
+
+	// RVA: 0x3C58904 Offset: 0x3C54904 VA: 0x3C58904
+	public void SetColor(string name, Color color, bool updateTexture = true) { }
+
+	// RVA: 0x3C589A8 Offset: 0x3C549A8 VA: 0x3C589A8
+	private OverlayColorData GetColor(string name) { }
+
+	// RVA: 0x3C589EC Offset: 0x3C549EC VA: 0x3C589EC Slot: 36
+	public void ForceUpdateColor() { }
+
+	// RVA: 0x3C589D8 Offset: 0x3C549D8 VA: 0x3C589D8
+	private void UpdateColors() { }
+
+	// RVA: 0x3C58A00 Offset: 0x3C54A00 VA: 0x3C58A00 Slot: 30
+	public override void SetVisible(bool visible) { }
+
+	// RVA: 0x3C58B1C Offset: 0x3C54B1C VA: 0x3C58B1C Slot: 37
+	public void BuildCharacterImmediatly() { }
+
+	// RVA: 0x3C58864 Offset: 0x3C54864 VA: 0x3C58864 Slot: 38
+	public void BuildCharacter() { }
+
+	// RVA: 0x3C58D3C Offset: 0x3C54D3C VA: 0x3C58D3C
+	private void DoBuild(bool onWardrobesLoaded, bool onBaseLoaded, bool immediatly) { }
+
+	// RVA: 0x3C58BF8 Offset: 0x3C54BF8 VA: 0x3C58BF8
+	private bool InitForBuildInNeed() { }
+
+	// RVA: 0x3C59418 Offset: 0x3C55418 VA: 0x3C59418
+	private bool IsRaceChanged() { }
+
+	// RVA: 0x3C59504 Offset: 0x3C55504 VA: 0x3C59504
+	private int CalcWardrobeSlots() { }
+
+	// RVA: 0x3C59D10 Offset: 0x3C55D10 VA: 0x3C59D10
+	private int CalcBaseSlots(int wardrobeSlots) { }
+
+	// RVA: 0x3C59FE8 Offset: 0x3C55FE8 VA: 0x3C59FE8
+	private void LoadCharacter(int wardrobeSlots, int baseSlots, bool raceChanged) { }
+
+	// RVA: 0x3C5A298 Offset: 0x3C56298 VA: 0x3C5A298
+	private void AddBaseSlots(List<SlotData> dst, RaceData racedata, UMARecipe umaRecipe, UMATextRecipe baseRecipe, int baseSlots) { }
+
+	// RVA: 0x3C5AAFC Offset: 0x3C56AFC VA: 0x3C5AAFC
+	private void AddWardrobeRecipes(RaceData racedata, UMARecipe umaRecipe, List<SlotData> dst, int wardrobeSlots, UMATextRecipe baseRecipe, int baseSlots) { }
+
+	// RVA: 0x3C5B524 Offset: 0x3C57524 VA: 0x3C5B524
+	private void UpdateRaceOnLoad(bool raceChanged) { }
+
+	// RVA: 0x3C5A930 Offset: 0x3C56930 VA: 0x3C5A930
+	private void FixAdditiveSlotInBaseSlots(List<SlotData> slots) { }
+
+	// RVA: 0x3C5BA6C Offset: 0x3C57A6C VA: 0x3C5BA6C
+	private void AddAdditiveSlots(List<SlotData> dst, int wardrobeSlots, int baseSlotsEnd, List<KeyValuePair<SlotData, AdditiveInfo>> additiveSlots) { }
+
+	// RVA: 0x3C5BCF0 Offset: 0x3C57CF0 VA: 0x3C5BCF0
+	private void AddAdditiveToBaseSlot(List<SlotData> dst, int baseSlotsEnd, OverlayData srcOverlay, AdditiveInfo additiveInfo) { }
+
+	// RVA: 0x3C5BEAC Offset: 0x3C57EAC VA: 0x3C5BEAC
+	public int get_DisableAsyncLoadingWardrobeSlots() { }
+
+	// RVA: 0x3C5BEB4 Offset: 0x3C57EB4 VA: 0x3C5BEB4
+	public void set_DisableAsyncLoadingWardrobeSlots(int value) { }
+
+	// RVA: 0x3C5827C Offset: 0x3C5427C VA: 0x3C5827C
+	private bool HasWardrobeSlotsLoading() { }
+
+	// RVA: 0x3C59920 Offset: 0x3C55920 VA: 0x3C59920
+	private void UpdateWardrobeSlotsLoading(ref int wardrobeSlots, bool needload) { }
+
+	// RVA: 0x3C5BEBC Offset: 0x3C57EBC VA: 0x3C5BEBC
+	private void CancelWardrobeSlotLoading(int slot) { }
+
+	// RVA: 0x3C5BEDC Offset: 0x3C57EDC VA: 0x3C5BEDC
+	private void StartWardrobeSlotLoading(int slot) { }
+
+	// RVA: 0x3C5C70C Offset: 0x3C5870C VA: 0x3C5C70C
+	private LinkedList<uint> EnsureWardrobeTicketsList(int slot) { }
+
+	// RVA: 0x3C5C828 Offset: 0x3C58828 VA: 0x3C5C828
+	private void OnWardrobeSlotLoaded(Object asset, uint ticket, int slot) { }
+
+	// RVA: 0x3C5D3C4 Offset: 0x3C593C4 VA: 0x3C5D3C4
+	private void MarkSlotLoadFailed(int slot) { }
+
+	// RVA: 0x3C5D3F4 Offset: 0x3C593F4 VA: 0x3C5D3F4
+	private void OnAllWardrobeSlotsLoaded() { }
+
+	// RVA: 0x3C59F94 Offset: 0x3C55F94 VA: 0x3C59F94
+	private bool HasBaseSlotsLoading() { }
+
+	// RVA: 0x3C59DCC Offset: 0x3C55DCC VA: 0x3C59DCC
+	private void UpdateBaseSlotsLoading(int baseSlots, bool raceChanged) { }
+
+	// RVA: 0x3C5D490 Offset: 0x3C59490 VA: 0x3C5D490
+	private void StartBaseSlotLoading(string name, bool isSlot) { }
+
+	// RVA: 0x3C5D608 Offset: 0x3C59608 VA: 0x3C5D608
+	private void OnBaseSlotLoaded(Object asset, uint ticket) { }
+
+	// RVA: 0x3C5D82C Offset: 0x3C5982C VA: 0x3C5D82C
+	private void OnAllBaseSlotsLoaded() { }
+
+	// RVA: 0x3C57CA8 Offset: 0x3C53CA8 VA: 0x3C57CA8
+	private void CancelAllSlotsLoading() { }
+
+	// RVA: 0x3C5D404 Offset: 0x3C59404 VA: 0x3C5D404
+	private void CancelBaseSlotsLoading() { }
+
+	// RVA: 0x3C5D83C Offset: 0x3C5983C VA: 0x3C5D83C
+	private void CancelWardrobeSlotsLoading() { }
+
+	// RVA: 0x3C5D848 Offset: 0x3C59848 VA: 0x3C5D848
+	private void CancelSlotsLoading(ref int slots, ICollection<uint>[] slotTickets) { }
+
+	// RVA: 0x3C5C36C Offset: 0x3C5836C VA: 0x3C5C36C
+	private void CancelSlotLoading(ICollection<uint>[] slotTickets, int slot) { }
+
+	// RVA: 0x3C5D8B4 Offset: 0x3C598B4 VA: 0x3C5D8B4
+	public void .ctor() { }
+
+	// RVA: 0x3C5D8D8 Offset: 0x3C598D8 VA: 0x3C5D8D8
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA.Simple
+public class SlotOverlayHashPair // TypeDefIndex: 1204
+{
+	// Fields
+	public int SlotHash; // 0x10
+	public int OverlayHash; // 0x14
+	public bool NullOverlay; // 0x18
+	private static List<SlotOverlayHashPair> s_SharedList; // 0x0
+
+	// Methods
+
+	// RVA: 0x3C5DA04 Offset: 0x3C59A04 VA: 0x3C5DA04
+	public void .ctor(int s, int o, bool n) { }
+
+	// RVA: 0x3C5DA40 Offset: 0x3C59A40 VA: 0x3C5DA40
+	public static List<SlotOverlayHashPair> GetSharedList(bool clear = true) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA.Simple
+public struct UmaRecipeSimple : IUintId // TypeDefIndex: 1205
+{
+	// Fields
+	public const int INVALID_VAL = 0;
+	public static readonly UmaRecipeSimple INVALID; // 0x0
+	internal int m_Ptr; // 0x0
+	private static List<KeyValuePair<int, bool>> s_SharedSlotOverlayHashList; // 0x8
+
+	// Properties
+	public string Name { get; }
+	public uint Id { get; set; }
+
+	// Methods
+
+	// RVA: 0x3C5DB2C Offset: 0x3C59B2C VA: 0x3C5DB2C
+	public string get_Name() { }
+
+	// RVA: 0x3C5DB3C Offset: 0x3C59B3C VA: 0x3C5DB3C
+	private void .ctor(int ptr) { }
+
+	// RVA: 0x3C5DB4C Offset: 0x3C59B4C VA: 0x3C5DB4C
+	public void .ctor(int ptr, string name) { }
+
+	// RVA: 0x3C58194 Offset: 0x3C54194 VA: 0x3C58194 Slot: 3
+	public override string ToString() { }
+
+	// RVA: 0x3C5DB68 Offset: 0x3C59B68 VA: 0x3C5DB68
+	public static int op_Implicit(UmaRecipeSimple id) { }
+
+	// RVA: 0x3C5818C Offset: 0x3C5418C VA: 0x3C5818C
+	public static UmaRecipeSimple op_Implicit(int value) { }
+
+	// RVA: 0x3C57FA8 Offset: 0x3C53FA8 VA: 0x3C57FA8
+	public static bool op_Equality(UmaRecipeSimple a, UmaRecipeSimple b) { }
+
+	// RVA: 0x3C5DB6C Offset: 0x3C59B6C VA: 0x3C5DB6C
+	public static bool op_Inequality(UmaRecipeSimple a, UmaRecipeSimple b) { }
+
+	// RVA: 0x3C5DB78 Offset: 0x3C59B78 VA: 0x3C5DB78 Slot: 0
+	public override bool Equals(object obj) { }
+
+	// RVA: 0x3C5DC28 Offset: 0x3C59C28 VA: 0x3C5DC28 Slot: 2
+	public override int GetHashCode() { }
+
+	// RVA: 0x3C57FB4 Offset: 0x3C53FB4 VA: 0x3C57FB4
+	public EWardrobeSlot GetSlot() { }
+
+	// RVA: 0x3C5A158 Offset: 0x3C56158 VA: 0x3C5A158
+	public int GetSuppressBits() { }
+
+	// RVA: 0x3C5A1F4 Offset: 0x3C561F4 VA: 0x3C5A1F4
+	public int GetHidesBits() { }
+
+	// RVA: 0x3C5DC50 Offset: 0x3C59C50 VA: 0x3C5DC50
+	private int GetSlotsPtr(out int[] data, out int slotCnt, out int isSkins, out int isAdditive, out int pAdditive) { }
+
+	// RVA: 0x3C5C424 Offset: 0x3C58424 VA: 0x3C5C424
+	public List<KeyValuePair<int, bool>> GetSlotOverlaysInSharedListIgnoreNull() { }
+
+	// RVA: 0x3C5DD68 Offset: 0x3C59D68 VA: 0x3C5DD68
+	public List<SlotOverlayHashPair> GetSlotOverlaysInSharedList() { }
+
+	// RVA: 0x3C5847C Offset: 0x3C5447C VA: 0x3C5847C Slot: 4
+	public uint get_Id() { }
+
+	// RVA: 0x3C57F14 Offset: 0x3C53F14 VA: 0x3C57F14 Slot: 5
+	public void set_Id(uint value) { }
+
+	// RVA: 0x3C5DF40 Offset: 0x3C59F40 VA: 0x3C5DF40
+	private int GetHashPtr(out int[] data) { }
+
+	// RVA: 0x3C5B59C Offset: 0x3C5759C VA: 0x3C5B59C
+	public bool MergeTo(UMAContextSimple context, RaceData racedata, UMARecipe umaRecipe, List<SlotData> dst, List<KeyValuePair<SlotData, AdditiveInfo>> additiveSlots) { }
+
+	// RVA: 0x3C5DFD0 Offset: 0x3C59FD0 VA: 0x3C5DFD0
+	private static SlotData CreateMergeSlotData(UMARecipe umaRecipe, UMAContextSimple context, int slotHash, int overlayHash, bool isSkin, int limitSize, bool potensialAdditive) { }
+
+	// RVA: 0x3C5E554 Offset: 0x3C5A554 VA: 0x3C5E554
+	private static bool MergeSlot(List<SlotData> dst, SlotData slotData) { }
+
+	// RVA: 0x3C5EAF4 Offset: 0x3C5AAF4 VA: 0x3C5EAF4
+	private void MergeAdditiveSlot(List<SlotData> dst, OverlayData srcOverlay, AdditiveInfo addtiveInfo, int beforeAddSlotCount, int addedSlotCount, int[] data, int pSlots) { }
+
+	// RVA: 0x3C5BDF0 Offset: 0x3C57DF0 VA: 0x3C5BDF0
+	public void MergeAdditiveSlot(List<SlotData> dst, OverlayData srcOverlay, AdditiveInfo addtiveInfo) { }
+
+	// RVA: 0x3C5EF00 Offset: 0x3C5AF00 VA: 0x3C5EF00
+	public bool AllSlotOverlaysCached(UMAContextSimple context) { }
+
+	// RVA: 0x3C5F024 Offset: 0x3C5B024 VA: 0x3C5F024
+	public void GetUnCachedSlotOverlays(UMAContextSimple context, List<int> dst) { }
+
+	// RVA: 0x3C5F294 Offset: 0x3C5B294 VA: 0x3C5F294
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: UMA.Simple
+public class UmaRecipeSimpleLibrary // TypeDefIndex: 1206
+{
+	// Fields
+	public const byte Version = 2;
+	public const byte FlagHasAdditive = 128;
+	public const byte FlagHasHides = 64;
+	public const byte FlagHasSups = 32;
+	public const byte FlagHasBeSups = 16;
+	public const byte FlagHasSupOrBeSups = 48;
+	public const byte FlagMaskSlotCount = 15;
+	public const int EndMark = 2;
+	public const bool ExportBaseRecipes = false;
+	public static UmaRecipeSimpleLibrary Instance; // 0x0
+	public static bool ParseDataByUnsafe; // 0x8
+	private bool m_Inited; // 0x10
+	internal int[] m_Data; // 0x18
+	private byte m_Version; // 0x20
+	private ushort m_Count; // 0x22
+	private int[] m_pBaseRecipes; // 0x28
+	private int m_pWardrobeRecipeStart; // 0x30
+	private Dictionary<int, int> m_pWardrobeRecipes; // 0x38
+
+	// Properties
+	public int Count { get; }
+
+	// Methods
+
+	// RVA: 0x3C5F2DC Offset: 0x3C5B2DC VA: 0x3C5F2DC
+	public int get_Count() { }
+
+	// RVA: 0x3C5F2E4 Offset: 0x3C5B2E4 VA: 0x3C5F2E4
+	public Dictionary<int, int> GetAllRecipes() { }
+
+	// RVA: 0x3C5F2EC Offset: 0x3C5B2EC VA: 0x3C5F2EC
+	public static void ClearForRestart() { }
+
+	// RVA: 0x3C5F340 Offset: 0x3C5B340 VA: 0x3C5F340
+	public static void InitInstanceInNeed() { }
+
+	// RVA: 0x3C5F3EC Offset: 0x3C5B3EC VA: 0x3C5F3EC
+	private void InitInNeed() { }
+
+	// RVA: 0x3C5F57C Offset: 0x3C5B57C VA: 0x3C5F57C
+	public void Load(TextAsset asset) { }
+
+	// RVA: 0x3C5FB84 Offset: 0x3C5BB84 VA: 0x3C5FB84
+	private bool ReadRecipe(int[] data, ref int p, bool isBase) { }
+
+	// RVA: 0x3C5FEC4 Offset: 0x3C5BEC4 VA: 0x3C5FEC4
+	private bool GetWardrobeReipcePtr(string name, out int ptr) { }
+
+	// RVA: 0x3C5FEF8 Offset: 0x3C5BEF8 VA: 0x3C5FEF8
+	private bool GetWardrobeReipcePtr(int hash, out int ptr) { }
+
+	// RVA: 0x3C57D40 Offset: 0x3C53D40 VA: 0x3C57D40
+	public UmaRecipeSimple GetWardrobeRecipe(int hash) { }
+
+	// RVA: 0x3C5F3E4 Offset: 0x3C5B3E4 VA: 0x3C5F3E4
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: OrbCreationExtensions
+[Extension]
+public static class GameObjectExtensions // TypeDefIndex: 1207
+{
+	// Methods
+
+	[Extension]
+	// RVA: 0x3C5FF70 Offset: 0x3C5BF70 VA: 0x3C5FF70
+	public static GameObject FindFirstChildWithName(GameObject go, string childName) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: OrbCreationExtensions
+[Extension]
+public static class MeshExtensions // TypeDefIndex: 1208
+{
+	// Methods
+
+	[Extension]
+	// RVA: 0x3C60304 Offset: 0x3C5C304 VA: 0x3C60304
+	public static int GetTriangleCount(Mesh orig) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: OrbCreationExtensions
+[Extension]
+public static class Texture2DExtensions // TypeDefIndex: 1209
+{
+	// Methods
+
+	[Extension]
+	// RVA: 0x3C60340 Offset: 0x3C5C340 VA: 0x3C60340
+	public static int GetByteCount(Texture2D tex) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: OrbCreationExtensions
+[Extension]
+public static class TransformExtensions // TypeDefIndex: 1210
+{
+	// Methods
+
+	[Extension]
+	// RVA: 0x3C60444 Offset: 0x3C5C444 VA: 0x3C60444
+	public static Transform FindFirstChildWithName(Transform trans, string childName) { }
+
+	[Extension]
+	// RVA: 0x3C607C8 Offset: 0x3C5C7C8 VA: 0x3C607C8
+	public static Transform FindFirstChildWhereNameContains(Transform trans, string childName) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib
+[Serializable]
+public class SharpZipBaseException : ApplicationException // TypeDefIndex: 1211
+{
+	// Methods
+
+	// RVA: 0x3C60B50 Offset: 0x3C5CB50 VA: 0x3C60B50
+	protected void .ctor(SerializationInfo info, StreamingContext context) { }
+
+	// RVA: 0x3C60B58 Offset: 0x3C5CB58 VA: 0x3C60B58
+	public void .ctor() { }
+
+	// RVA: 0x3C60B60 Offset: 0x3C5CB60 VA: 0x3C60B60
+	public void .ctor(string message) { }
+
+	// RVA: 0x3C60B68 Offset: 0x3C5CB68 VA: 0x3C60B68
+	public void .ctor(string message, Exception innerException) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip
+public enum UseZip64 // TypeDefIndex: 1212
+{
+	// Fields
+	public int value__; // 0x0
+	public const UseZip64 Off = 0;
+	public const UseZip64 On = 1;
+	public const UseZip64 Dynamic = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip
+public enum CompressionMethod // TypeDefIndex: 1213
+{
+	// Fields
+	public int value__; // 0x0
+	public const CompressionMethod Stored = 0;
+	public const CompressionMethod Deflated = 8;
+	public const CompressionMethod Deflate64 = 9;
+	public const CompressionMethod BZip2 = 11;
+	public const CompressionMethod WinZipAES = 99;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip
+public enum EncryptionAlgorithm // TypeDefIndex: 1214
+{
+	// Fields
+	public int value__; // 0x0
+	public const EncryptionAlgorithm None = 0;
+	public const EncryptionAlgorithm PkzipClassic = 1;
+	public const EncryptionAlgorithm Des = 26113;
+	public const EncryptionAlgorithm RC2 = 26114;
+	public const EncryptionAlgorithm TripleDes168 = 26115;
+	public const EncryptionAlgorithm TripleDes112 = 26121;
+	public const EncryptionAlgorithm Aes128 = 26126;
+	public const EncryptionAlgorithm Aes192 = 26127;
+	public const EncryptionAlgorithm Aes256 = 26128;
+	public const EncryptionAlgorithm RC2Corrected = 26370;
+	public const EncryptionAlgorithm Blowfish = 26400;
+	public const EncryptionAlgorithm Twofish = 26401;
+	public const EncryptionAlgorithm RC4 = 26625;
+	public const EncryptionAlgorithm Unknown = 65535;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip
+[Flags]
+public enum GeneralBitFlags // TypeDefIndex: 1215
+{
+	// Fields
+	public int value__; // 0x0
+	public const GeneralBitFlags Encrypted = 1;
+	public const GeneralBitFlags Method = 6;
+	public const GeneralBitFlags Descriptor = 8;
+	public const GeneralBitFlags ReservedPKware4 = 16;
+	public const GeneralBitFlags Patched = 32;
+	public const GeneralBitFlags StrongEncryption = 64;
+	public const GeneralBitFlags Unused7 = 128;
+	public const GeneralBitFlags Unused8 = 256;
+	public const GeneralBitFlags Unused9 = 512;
+	public const GeneralBitFlags Unused10 = 1024;
+	public const GeneralBitFlags UnicodeText = 2048;
+	public const GeneralBitFlags EnhancedCompress = 4096;
+	public const GeneralBitFlags HeaderMasked = 8192;
+	public const GeneralBitFlags ReservedPkware14 = 16384;
+	public const GeneralBitFlags ReservedPkware15 = 32768;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip
+public sealed class ZipConstants // TypeDefIndex: 1216
+{
+	// Fields
+	public const int VersionMadeBy = 51;
+	[Obsolete("Use VersionMadeBy instead")]
+	public const int VERSION_MADE_BY = 51;
+	public const int VersionStrongEncryption = 50;
+	[Obsolete("Use VersionStrongEncryption instead")]
+	public const int VERSION_STRONG_ENCRYPTION = 50;
+	public const int VERSION_AES = 51;
+	public const int VersionZip64 = 45;
+	public const int LocalHeaderBaseSize = 30;
+	[Obsolete("Use LocalHeaderBaseSize instead")]
+	public const int LOCHDR = 30;
+	public const int Zip64DataDescriptorSize = 24;
+	public const int DataDescriptorSize = 16;
+	[Obsolete("Use DataDescriptorSize instead")]
+	public const int EXTHDR = 16;
+	public const int CentralHeaderBaseSize = 46;
+	[Obsolete("Use CentralHeaderBaseSize instead")]
+	public const int CENHDR = 46;
+	public const int EndOfCentralRecordBaseSize = 22;
+	[Obsolete("Use EndOfCentralRecordBaseSize instead")]
+	public const int ENDHDR = 22;
+	public const int CryptoHeaderSize = 12;
+	[Obsolete("Use CryptoHeaderSize instead")]
+	public const int CRYPTO_HEADER_SIZE = 12;
+	public const int LocalHeaderSignature = 67324752;
+	[Obsolete("Use LocalHeaderSignature instead")]
+	public const int LOCSIG = 67324752;
+	public const int SpanningSignature = 134695760;
+	[Obsolete("Use SpanningSignature instead")]
+	public const int SPANNINGSIG = 134695760;
+	public const int SpanningTempSignature = 808471376;
+	[Obsolete("Use SpanningTempSignature instead")]
+	public const int SPANTEMPSIG = 808471376;
+	public const int DataDescriptorSignature = 134695760;
+	[Obsolete("Use DataDescriptorSignature instead")]
+	public const int EXTSIG = 134695760;
+	[Obsolete("Use CentralHeaderSignature instead")]
+	public const int CENSIG = 33639248;
+	public const int CentralHeaderSignature = 33639248;
+	public const int Zip64CentralFileHeaderSignature = 101075792;
+	[Obsolete("Use Zip64CentralFileHeaderSignature instead")]
+	public const int CENSIG64 = 101075792;
+	public const int Zip64CentralDirLocatorSignature = 117853008;
+	public const int ArchiveExtraDataSignature = 117853008;
+	public const int CentralHeaderDigitalSignature = 84233040;
+	[Obsolete("Use CentralHeaderDigitalSignaure instead")]
+	public const int CENDIGITALSIG = 84233040;
+	public const int EndOfCentralDirectorySignature = 101010256;
+	[Obsolete("Use EndOfCentralDirectorySignature instead")]
+	public const int ENDSIG = 101010256;
+	private static int defaultCodePage; // 0x0
+
+	// Properties
+	public static int DefaultCodePage { get; set; }
+
+	// Methods
+
+	// RVA: 0x3C60B70 Offset: 0x3C5CB70 VA: 0x3C60B70
+	public static int get_DefaultCodePage() { }
+
+	// RVA: 0x3C60BC8 Offset: 0x3C5CBC8 VA: 0x3C60BC8
+	public static void set_DefaultCodePage(int value) { }
+
+	// RVA: 0x3C60C24 Offset: 0x3C5CC24 VA: 0x3C60C24
+	public static string ConvertToString(byte[] data, int count) { }
+
+	// RVA: 0x3C60CBC Offset: 0x3C5CCBC VA: 0x3C60CBC
+	public static string ConvertToString(byte[] data) { }
+
+	// RVA: 0x3C60D44 Offset: 0x3C5CD44 VA: 0x3C60D44
+	public static string ConvertToStringExt(int flags, byte[] data, int count) { }
+
+	// RVA: 0x3C60E2C Offset: 0x3C5CE2C VA: 0x3C60E2C
+	public static string ConvertToStringExt(int flags, byte[] data) { }
+
+	// RVA: 0x3C60F04 Offset: 0x3C5CF04 VA: 0x3C60F04
+	public static byte[] ConvertToArray(string str) { }
+
+	// RVA: 0x3C60F8C Offset: 0x3C5CF8C VA: 0x3C60F8C
+	public static byte[] ConvertToArray(int flags, string str) { }
+
+	// RVA: 0x3C61050 Offset: 0x3C5D050 VA: 0x3C61050
+	private void .ctor() { }
+
+	// RVA: 0x3C61058 Offset: 0x3C5D058 VA: 0x3C61058
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip
+public enum HostSystemID // TypeDefIndex: 1217
+{
+	// Fields
+	public int value__; // 0x0
+	public const HostSystemID Msdos = 0;
+	public const HostSystemID Amiga = 1;
+	public const HostSystemID OpenVms = 2;
+	public const HostSystemID Unix = 3;
+	public const HostSystemID VMCms = 4;
+	public const HostSystemID AtariST = 5;
+	public const HostSystemID OS2 = 6;
+	public const HostSystemID Macintosh = 7;
+	public const HostSystemID ZSystem = 8;
+	public const HostSystemID Cpm = 9;
+	public const HostSystemID WindowsNT = 10;
+	public const HostSystemID MVS = 11;
+	public const HostSystemID Vse = 12;
+	public const HostSystemID AcornRisc = 13;
+	public const HostSystemID Vfat = 14;
+	public const HostSystemID AlternateMvs = 15;
+	public const HostSystemID BeOS = 16;
+	public const HostSystemID Tandem = 17;
+	public const HostSystemID OS400 = 18;
+	public const HostSystemID OSX = 19;
+	public const HostSystemID WinZipAES = 99;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Flags]
+private enum ZipEntry.Known // TypeDefIndex: 1218
+{
+	// Fields
+	public byte value__; // 0x0
+	public const Known None = 0;
+	public const Known Size = 1;
+	public const Known CompressedSize = 2;
+	public const Known Crc = 4;
+	public const Known Time = 8;
+	public const Known ExternalAttributes = 16;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip
+public class ZipEntry : ICloneable // TypeDefIndex: 1219
+{
+	// Fields
+	private Known known; // 0x10
+	private int externalFileAttributes; // 0x14
+	private ushort versionMadeBy; // 0x18
+	private string name; // 0x20
+	private ulong size; // 0x28
+	private ulong compressedSize; // 0x30
+	private ushort versionToExtract; // 0x38
+	private uint crc; // 0x3C
+	private uint dosTime; // 0x40
+	private CompressionMethod method; // 0x44
+	private byte[] extra; // 0x48
+	private string comment; // 0x50
+	private int flags; // 0x58
+	private long zipFileIndex; // 0x60
+	private long offset; // 0x68
+	private bool forceZip64_; // 0x70
+	private byte cryptoCheckValue_; // 0x71
+	private int _aesVer; // 0x74
+	private int _aesEncryptionStrength; // 0x78
+
+	// Properties
+	public bool HasCrc { get; }
+	public bool IsCrypted { get; set; }
+	public bool IsUnicodeText { get; set; }
+	internal byte CryptoCheckValue { get; set; }
+	public int Flags { get; set; }
+	public long ZipFileIndex { get; set; }
+	public long Offset { get; set; }
+	public int ExternalFileAttributes { get; set; }
+	public int VersionMadeBy { get; }
+	public bool IsDOSEntry { get; }
+	public int HostSystem { get; set; }
+	public int Version { get; }
+	public bool CanDecompress { get; }
+	public bool LocalHeaderRequiresZip64 { get; }
+	public bool CentralHeaderRequiresZip64 { get; }
+	public long DosTime { get; set; }
+	public DateTime DateTime { get; set; }
+	public string Name { get; }
+	public long Size { get; set; }
+	public long CompressedSize { get; set; }
+	public long Crc { get; set; }
+	public CompressionMethod CompressionMethod { get; set; }
+	internal CompressionMethod CompressionMethodForHeader { get; }
+	public byte[] ExtraData { get; set; }
+	public int AESKeySize { get; set; }
+	internal byte AESEncryptionStrength { get; }
+	internal int AESSaltLen { get; }
+	internal int AESOverheadSize { get; }
+	public string Comment { get; set; }
+	public bool IsDirectory { get; }
+	public bool IsFile { get; }
+
+	// Methods
+
+	// RVA: 0x3C610F8 Offset: 0x3C5D0F8 VA: 0x3C610F8
+	public void .ctor(string name) { }
+
+	// RVA: 0x3C612AC Offset: 0x3C5D2AC VA: 0x3C612AC
+	internal void .ctor(string name, int versionRequiredToExtract) { }
+
+	// RVA: 0x3C61108 Offset: 0x3C5D108 VA: 0x3C61108
+	internal void .ctor(string name, int versionRequiredToExtract, int madeByInfo, CompressionMethod method) { }
+
+	[Obsolete("Use Clone instead")]
+	// RVA: 0x3C613EC Offset: 0x3C5D3EC VA: 0x3C613EC
+	public void .ctor(ZipEntry entry) { }
+
+	// RVA: 0x3C61564 Offset: 0x3C5D564 VA: 0x3C61564
+	public bool get_HasCrc() { }
+
+	// RVA: 0x3C61570 Offset: 0x3C5D570 VA: 0x3C61570
+	public bool get_IsCrypted() { }
+
+	// RVA: 0x3C6157C Offset: 0x3C5D57C VA: 0x3C6157C
+	public void set_IsCrypted(bool value) { }
+
+	// RVA: 0x3C6158C Offset: 0x3C5D58C VA: 0x3C6158C
+	public bool get_IsUnicodeText() { }
+
+	// RVA: 0x3C61598 Offset: 0x3C5D598 VA: 0x3C61598
+	public void set_IsUnicodeText(bool value) { }
+
+	// RVA: 0x3C615B8 Offset: 0x3C5D5B8 VA: 0x3C615B8
+	internal byte get_CryptoCheckValue() { }
+
+	// RVA: 0x3C615C0 Offset: 0x3C5D5C0 VA: 0x3C615C0
+	internal void set_CryptoCheckValue(byte value) { }
+
+	// RVA: 0x3C615C8 Offset: 0x3C5D5C8 VA: 0x3C615C8
+	public int get_Flags() { }
+
+	// RVA: 0x3C615D0 Offset: 0x3C5D5D0 VA: 0x3C615D0
+	public void set_Flags(int value) { }
+
+	// RVA: 0x3C615D8 Offset: 0x3C5D5D8 VA: 0x3C615D8
+	public long get_ZipFileIndex() { }
+
+	// RVA: 0x3C615E0 Offset: 0x3C5D5E0 VA: 0x3C615E0
+	public void set_ZipFileIndex(long value) { }
+
+	// RVA: 0x3C615E8 Offset: 0x3C5D5E8 VA: 0x3C615E8
+	public long get_Offset() { }
+
+	// RVA: 0x3C615F0 Offset: 0x3C5D5F0 VA: 0x3C615F0
+	public void set_Offset(long value) { }
+
+	// RVA: 0x3C615F8 Offset: 0x3C5D5F8 VA: 0x3C615F8
+	public int get_ExternalFileAttributes() { }
+
+	// RVA: 0x3C61610 Offset: 0x3C5D610 VA: 0x3C61610
+	public void set_ExternalFileAttributes(int value) { }
+
+	// RVA: 0x3C61624 Offset: 0x3C5D624 VA: 0x3C61624
+	public int get_VersionMadeBy() { }
+
+	// RVA: 0x3C6162C Offset: 0x3C5D62C VA: 0x3C6162C
+	public bool get_IsDOSEntry() { }
+
+	// RVA: 0x3C61650 Offset: 0x3C5D650 VA: 0x3C61650
+	private bool HasDosAttributes(int attributes) { }
+
+	// RVA: 0x3C61648 Offset: 0x3C5D648 VA: 0x3C61648
+	public int get_HostSystem() { }
+
+	// RVA: 0x3C61680 Offset: 0x3C5D680 VA: 0x3C61680
+	public void set_HostSystem(int value) { }
+
+	// RVA: 0x3C61688 Offset: 0x3C5D688 VA: 0x3C61688
+	public int get_Version() { }
+
+	// RVA: 0x3C61880 Offset: 0x3C5D880 VA: 0x3C61880
+	public bool get_CanDecompress() { }
+
+	// RVA: 0x3C61910 Offset: 0x3C5D910 VA: 0x3C61910
+	public void ForceZip64() { }
+
+	// RVA: 0x3C6191C Offset: 0x3C5D91C VA: 0x3C6191C
+	public bool IsZip64Forced() { }
+
+	// RVA: 0x3C61924 Offset: 0x3C5D924 VA: 0x3C61924
+	public bool get_LocalHeaderRequiresZip64() { }
+
+	// RVA: 0x3C617B8 Offset: 0x3C5D7B8 VA: 0x3C617B8
+	public bool get_CentralHeaderRequiresZip64() { }
+
+	// RVA: 0x3C61980 Offset: 0x3C5D980 VA: 0x3C61980
+	public long get_DosTime() { }
+
+	// RVA: 0x3C61998 Offset: 0x3C5D998 VA: 0x3C61998
+	public void set_DosTime(long value) { }
+
+	// RVA: 0x3C619AC Offset: 0x3C5D9AC VA: 0x3C619AC
+	public DateTime get_DateTime() { }
+
+	// RVA: 0x3C612B8 Offset: 0x3C5D2B8 VA: 0x3C612B8
+	public void set_DateTime(DateTime value) { }
+
+	// RVA: 0x3C61B08 Offset: 0x3C5DB08 VA: 0x3C61B08
+	public string get_Name() { }
+
+	// RVA: 0x3C61B10 Offset: 0x3C5DB10 VA: 0x3C61B10
+	public long get_Size() { }
+
+	// RVA: 0x3C61B28 Offset: 0x3C5DB28 VA: 0x3C61B28
+	public void set_Size(long value) { }
+
+	// RVA: 0x3C61B3C Offset: 0x3C5DB3C VA: 0x3C61B3C
+	public long get_CompressedSize() { }
+
+	// RVA: 0x3C61B54 Offset: 0x3C5DB54 VA: 0x3C61B54
+	public void set_CompressedSize(long value) { }
+
+	// RVA: 0x3C61B68 Offset: 0x3C5DB68 VA: 0x3C61B68
+	public long get_Crc() { }
+
+	// RVA: 0x3C61B80 Offset: 0x3C5DB80 VA: 0x3C61B80
+	public void set_Crc(long value) { }
+
+	// RVA: 0x3C61B94 Offset: 0x3C5DB94 VA: 0x3C61B94
+	public CompressionMethod get_CompressionMethod() { }
+
+	// RVA: 0x3C61B9C Offset: 0x3C5DB9C VA: 0x3C61B9C
+	public void set_CompressionMethod(CompressionMethod value) { }
+
+	// RVA: 0x3C61C08 Offset: 0x3C5DC08 VA: 0x3C61C08
+	internal CompressionMethod get_CompressionMethodForHeader() { }
+
+	// RVA: 0x3C61C30 Offset: 0x3C5DC30 VA: 0x3C61C30
+	public byte[] get_ExtraData() { }
+
+	// RVA: 0x3C61C38 Offset: 0x3C5DC38 VA: 0x3C61C38
+	public void set_ExtraData(byte[] value) { }
+
+	// RVA: 0x3C61730 Offset: 0x3C5D730 VA: 0x3C61730
+	public int get_AESKeySize() { }
+
+	// RVA: 0x3C61D24 Offset: 0x3C5DD24 VA: 0x3C61D24
+	public void set_AESKeySize(int value) { }
+
+	// RVA: 0x3C61DC0 Offset: 0x3C5DDC0 VA: 0x3C61DC0
+	internal byte get_AESEncryptionStrength() { }
+
+	// RVA: 0x3C61DC8 Offset: 0x3C5DDC8 VA: 0x3C61DC8
+	internal int get_AESSaltLen() { }
+
+	// RVA: 0x3C61DE8 Offset: 0x3C5DDE8 VA: 0x3C61DE8
+	internal int get_AESOverheadSize() { }
+
+	// RVA: 0x3C61E0C Offset: 0x3C5DE0C VA: 0x3C61E0C
+	internal void ProcessExtraData(bool localHeader) { }
+
+	// RVA: 0x3C624EC Offset: 0x3C5E4EC VA: 0x3C624EC
+	private void ProcessAESExtraData(ZipExtraData extraData) { }
+
+	// RVA: 0x3C62638 Offset: 0x3C5E638 VA: 0x3C62638
+	public string get_Comment() { }
+
+	// RVA: 0x3C62640 Offset: 0x3C5E640 VA: 0x3C62640
+	public void set_Comment(string value) { }
+
+	// RVA: 0x3C617E8 Offset: 0x3C5D7E8 VA: 0x3C617E8
+	public bool get_IsDirectory() { }
+
+	// RVA: 0x3C626C4 Offset: 0x3C5E6C4 VA: 0x3C626C4
+	public bool get_IsFile() { }
+
+	// RVA: 0x3C61900 Offset: 0x3C5D900 VA: 0x3C61900
+	public bool IsCompressionMethodSupported() { }
+
+	// RVA: 0x3C62710 Offset: 0x3C5E710 VA: 0x3C62710 Slot: 4
+	public object Clone() { }
+
+	// RVA: 0x3C62800 Offset: 0x3C5E800 VA: 0x3C62800 Slot: 3
+	public override string ToString() { }
+
+	// RVA: 0x3C61BFC Offset: 0x3C5DBFC VA: 0x3C61BFC
+	public static bool IsCompressionMethodSupported(CompressionMethod method) { }
+
+	// RVA: 0x3C62808 Offset: 0x3C5E808 VA: 0x3C62808
+	public static string CleanName(string name) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip
+[Serializable]
+public class ZipException : SharpZipBaseException // TypeDefIndex: 1220
+{
+	// Methods
+
+	// RVA: 0x3C62954 Offset: 0x3C5E954 VA: 0x3C62954
+	protected void .ctor(SerializationInfo info, StreamingContext context) { }
+
+	// RVA: 0x3C6295C Offset: 0x3C5E95C VA: 0x3C6295C
+	public void .ctor() { }
+
+	// RVA: 0x3C61D1C Offset: 0x3C5DD1C VA: 0x3C61D1C
+	public void .ctor(string message) { }
+
+	// RVA: 0x3C62964 Offset: 0x3C5E964 VA: 0x3C62964
+	public void .ctor(string message, Exception exception) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip
+public interface ITaggedData // TypeDefIndex: 1221
+{
+	// Properties
+	public abstract short TagID { get; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract short get_TagID();
+
+	// RVA: -1 Offset: -1 Slot: 1
+	public abstract void SetData(byte[] data, int offset, int count);
+
+	// RVA: -1 Offset: -1 Slot: 2
+	public abstract byte[] GetData();
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip
+public class RawTaggedData : ITaggedData // TypeDefIndex: 1222
+{
+	// Fields
+	private short _tag; // 0x10
+	private byte[] _data; // 0x18
+
+	// Properties
+	public short TagID { get; set; }
+	public byte[] Data { get; set; }
+
+	// Methods
+
+	// RVA: 0x3C6296C Offset: 0x3C5E96C VA: 0x3C6296C
+	public void .ctor(short tag) { }
+
+	// RVA: 0x3C62994 Offset: 0x3C5E994 VA: 0x3C62994 Slot: 4
+	public short get_TagID() { }
+
+	// RVA: 0x3C6299C Offset: 0x3C5E99C VA: 0x3C6299C
+	public void set_TagID(short value) { }
+
+	// RVA: 0x3C629A4 Offset: 0x3C5E9A4 VA: 0x3C629A4 Slot: 5
+	public void SetData(byte[] data, int offset, int count) { }
+
+	// RVA: 0x3C62A78 Offset: 0x3C5EA78 VA: 0x3C62A78 Slot: 6
+	public byte[] GetData() { }
+
+	// RVA: 0x3C62A80 Offset: 0x3C5EA80 VA: 0x3C62A80
+	public byte[] get_Data() { }
+
+	// RVA: 0x3C62A88 Offset: 0x3C5EA88 VA: 0x3C62A88
+	public void set_Data(byte[] value) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Flags]
+public enum ExtendedUnixData.Flags // TypeDefIndex: 1223
+{
+	// Fields
+	public byte value__; // 0x0
+	public const Flags ModificationTime = 1;
+	public const Flags AccessTime = 2;
+	public const Flags CreateTime = 4;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip
+public class ExtendedUnixData : ITaggedData // TypeDefIndex: 1224
+{
+	// Fields
+	private Flags _flags; // 0x10
+	private DateTime _modificationTime; // 0x18
+	private DateTime _lastAccessTime; // 0x20
+	private DateTime _createTime; // 0x28
+
+	// Properties
+	public short TagID { get; }
+	public DateTime ModificationTime { get; set; }
+	public DateTime AccessTime { get; set; }
+	public DateTime CreateTime { get; set; }
+	private Flags Include { get; set; }
+
+	// Methods
+
+	// RVA: 0x3C62A90 Offset: 0x3C5EA90 VA: 0x3C62A90 Slot: 4
+	public short get_TagID() { }
+
+	// RVA: 0x3C62A98 Offset: 0x3C5EA98 VA: 0x3C62A98 Slot: 5
+	public void SetData(byte[] data, int index, int count) { }
+
+	// RVA: 0x3C63148 Offset: 0x3C5F148 VA: 0x3C63148 Slot: 6
+	public byte[] GetData() { }
+
+	// RVA: 0x3C6381C Offset: 0x3C5F81C VA: 0x3C6381C
+	public static bool IsValidValue(DateTime value) { }
+
+	// RVA: 0x3C63904 Offset: 0x3C5F904 VA: 0x3C63904
+	public DateTime get_ModificationTime() { }
+
+	// RVA: 0x3C6390C Offset: 0x3C5F90C VA: 0x3C6390C
+	public void set_ModificationTime(DateTime value) { }
+
+	// RVA: 0x3C6398C Offset: 0x3C5F98C VA: 0x3C6398C
+	public DateTime get_AccessTime() { }
+
+	// RVA: 0x3C63994 Offset: 0x3C5F994 VA: 0x3C63994
+	public void set_AccessTime(DateTime value) { }
+
+	// RVA: 0x3C63A14 Offset: 0x3C5FA14 VA: 0x3C63A14
+	public DateTime get_CreateTime() { }
+
+	// RVA: 0x3C63A1C Offset: 0x3C5FA1C VA: 0x3C63A1C
+	public void set_CreateTime(DateTime value) { }
+
+	// RVA: 0x3C63A9C Offset: 0x3C5FA9C VA: 0x3C63A9C
+	private Flags get_Include() { }
+
+	// RVA: 0x3C63AA4 Offset: 0x3C5FAA4 VA: 0x3C63AA4
+	private void set_Include(Flags value) { }
+
+	// RVA: 0x3C63AAC Offset: 0x3C5FAAC VA: 0x3C63AAC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip
+public class NTTaggedData : ITaggedData // TypeDefIndex: 1225
+{
+	// Fields
+	private DateTime _lastAccessTime; // 0x10
+	private DateTime _lastModificationTime; // 0x18
+	private DateTime _createTime; // 0x20
+
+	// Properties
+	public short TagID { get; }
+	public DateTime LastModificationTime { get; set; }
+	public DateTime CreateTime { get; set; }
+	public DateTime LastAccessTime { get; set; }
+
+	// Methods
+
+	// RVA: 0x3C63B3C Offset: 0x3C5FB3C VA: 0x3C63B3C Slot: 4
+	public short get_TagID() { }
+
+	// RVA: 0x3C63B44 Offset: 0x3C5FB44 VA: 0x3C63B44 Slot: 5
+	public void SetData(byte[] data, int index, int count) { }
+
+	// RVA: 0x3C640BC Offset: 0x3C600BC VA: 0x3C640BC Slot: 6
+	public byte[] GetData() { }
+
+	// RVA: 0x3C64590 Offset: 0x3C60590 VA: 0x3C64590
+	public static bool IsValidValue(DateTime value) { }
+
+	// RVA: 0x3C64668 Offset: 0x3C60668 VA: 0x3C64668
+	public DateTime get_LastModificationTime() { }
+
+	// RVA: 0x3C64670 Offset: 0x3C60670 VA: 0x3C64670
+	public void set_LastModificationTime(DateTime value) { }
+
+	// RVA: 0x3C646E4 Offset: 0x3C606E4 VA: 0x3C646E4
+	public DateTime get_CreateTime() { }
+
+	// RVA: 0x3C646EC Offset: 0x3C606EC VA: 0x3C646EC
+	public void set_CreateTime(DateTime value) { }
+
+	// RVA: 0x3C64760 Offset: 0x3C60760 VA: 0x3C64760
+	public DateTime get_LastAccessTime() { }
+
+	// RVA: 0x3C64768 Offset: 0x3C60768 VA: 0x3C64768
+	public void set_LastAccessTime(DateTime value) { }
+
+	// RVA: 0x3C647DC Offset: 0x3C607DC VA: 0x3C647DC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip
+internal interface ITaggedDataFactory // TypeDefIndex: 1226
+{
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract ITaggedData Create(short tag, byte[] data, int offset, int count);
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip
+public sealed class ZipExtraData : IDisposable // TypeDefIndex: 1227
+{
+	// Fields
+	private int _index; // 0x10
+	private int _readValueStart; // 0x14
+	private int _readValueLength; // 0x18
+	private MemoryStream _newEntry; // 0x20
+	private byte[] _data; // 0x28
+
+	// Properties
+	public int Length { get; }
+	public int ValueLength { get; }
+	public int CurrentReadIndex { get; }
+	public int UnreadCount { get; }
+
+	// Methods
+
+	// RVA: 0x3C64864 Offset: 0x3C60864 VA: 0x3C64864
+	public void .ctor() { }
+
+	// RVA: 0x3C62198 Offset: 0x3C5E198 VA: 0x3C62198
+	public void .ctor(byte[] data) { }
+
+	// RVA: 0x3C648F4 Offset: 0x3C608F4 VA: 0x3C648F4
+	public byte[] GetEntryData() { }
+
+	// RVA: 0x3C64880 Offset: 0x3C60880 VA: 0x3C64880
+	public void Clear() { }
+
+	// RVA: 0x3C649BC Offset: 0x3C609BC VA: 0x3C649BC
+	public int get_Length() { }
+
+	// RVA: 0x3C649D8 Offset: 0x3C609D8 VA: 0x3C649D8
+	public Stream GetStreamForTag(int tag) { }
+
+	// RVA: 0x3C64A70 Offset: 0x3C60A70 VA: 0x3C64A70
+	private ITaggedData GetData(short tag) { }
+
+	// RVA: 0x3C64AB4 Offset: 0x3C60AB4 VA: 0x3C64AB4
+	private static ITaggedData Create(short tag, byte[] data, int offset, int count) { }
+
+	// RVA: 0x3C64C20 Offset: 0x3C60C20 VA: 0x3C64C20
+	public int get_ValueLength() { }
+
+	// RVA: 0x3C64C28 Offset: 0x3C60C28 VA: 0x3C64C28
+	public int get_CurrentReadIndex() { }
+
+	// RVA: 0x3C62408 Offset: 0x3C5E408 VA: 0x3C62408
+	public int get_UnreadCount() { }
+
+	// RVA: 0x3C62214 Offset: 0x3C5E214 VA: 0x3C62214
+	public bool Find(int headerID) { }
+
+	// RVA: 0x3C64CD4 Offset: 0x3C60CD4 VA: 0x3C64CD4
+	public void AddEntry(ITaggedData taggedData) { }
+
+	// RVA: 0x3C64E48 Offset: 0x3C60E48 VA: 0x3C64E48
+	public void AddEntry(int headerID, byte[] fieldData) { }
+
+	// RVA: 0x3C651B4 Offset: 0x3C611B4 VA: 0x3C651B4
+	public void StartNewEntry() { }
+
+	// RVA: 0x3C65214 Offset: 0x3C61214 VA: 0x3C65214
+	public void AddNewEntry(int headerID) { }
+
+	// RVA: 0x3C65284 Offset: 0x3C61284 VA: 0x3C65284
+	public void AddData(byte data) { }
+
+	// RVA: 0x3C652C4 Offset: 0x3C612C4 VA: 0x3C652C4
+	public void AddData(byte[] data) { }
+
+	// RVA: 0x3C6535C Offset: 0x3C6135C VA: 0x3C6535C
+	public void AddLeShort(int toAdd) { }
+
+	// RVA: 0x3C653CC Offset: 0x3C613CC VA: 0x3C653CC
+	public void AddLeInt(int toAdd) { }
+
+	// RVA: 0x3C653F8 Offset: 0x3C613F8 VA: 0x3C653F8
+	public void AddLeLong(long toAdd) { }
+
+	// RVA: 0x3C65054 Offset: 0x3C61054 VA: 0x3C65054
+	public bool Delete(int headerID) { }
+
+	// RVA: 0x3C622B4 Offset: 0x3C5E2B4 VA: 0x3C622B4
+	public long ReadLong() { }
+
+	// RVA: 0x3C622F4 Offset: 0x3C5E2F4 VA: 0x3C622F4
+	public int ReadInt() { }
+
+	// RVA: 0x3C62380 Offset: 0x3C5E380 VA: 0x3C62380
+	public int ReadShort() { }
+
+	// RVA: 0x3C6248C Offset: 0x3C5E48C VA: 0x3C6248C
+	public int ReadByte() { }
+
+	// RVA: 0x3C623DC Offset: 0x3C5E3DC VA: 0x3C623DC
+	public void Skip(int amount) { }
+
+	// RVA: 0x3C6543C Offset: 0x3C6143C VA: 0x3C6543C
+	private void ReadCheck(int length) { }
+
+	// RVA: 0x3C64C30 Offset: 0x3C60C30 VA: 0x3C64C30
+	private int ReadShortInternal() { }
+
+	// RVA: 0x3C6514C Offset: 0x3C6114C VA: 0x3C6514C
+	private void SetShort(ref int index, int source) { }
+
+	// RVA: 0x3C65514 Offset: 0x3C61514 VA: 0x3C65514 Slot: 4
+	public void Dispose() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip
+public class DescriptorData // TypeDefIndex: 1228
+{
+	// Fields
+	private long size; // 0x10
+	private long compressedSize; // 0x18
+	private long crc; // 0x20
+
+	// Properties
+	public long CompressedSize { get; set; }
+	public long Size { get; set; }
+	public long Crc { get; set; }
+// Methods
+
+	// RVA: 0x3C65548 Offset: 0x3C61548 VA: 0x3C65548
+	public long get_CompressedSize() { }
+
+	// RVA: 0x3C65550 Offset: 0x3C61550 VA: 0x3C65550
+	public void set_CompressedSize(long value) { }
+
+	// RVA: 0x3C65558 Offset: 0x3C61558 VA: 0x3C65558
+	public long get_Size() { }
+
+	// RVA: 0x3C65560 Offset: 0x3C61560 VA: 0x3C65560
+	public void set_Size(long value) { }
+
+	// RVA: 0x3C65568 Offset: 0x3C61568 VA: 0x3C65568
+	public long get_Crc() { }
+
+	// RVA: 0x3C65570 Offset: 0x3C61570 VA: 0x3C65570
+	public void set_Crc(long value) { }
+
+	// RVA: 0x3C6557C Offset: 0x3C6157C VA: 0x3C6557C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip
+internal class EntryPatchData // TypeDefIndex: 1229
+{
+	// Fields
+	private long sizePatchOffset_; // 0x10
+	private long crcPatchOffset_; // 0x18
+
+	// Properties
+	public long SizePatchOffset { get; set; }
+	public long CrcPatchOffset { get; set; }
+
+	// Methods
+
+	// RVA: 0x3C65584 Offset: 0x3C61584 VA: 0x3C65584
+	public long get_SizePatchOffset() { }
+
+	// RVA: 0x3C6558C Offset: 0x3C6158C VA: 0x3C6558C
+	public void set_SizePatchOffset(long value) { }
+
+	// RVA: 0x3C65594 Offset: 0x3C61594 VA: 0x3C65594
+	public long get_CrcPatchOffset() { }
+
+	// RVA: 0x3C6559C Offset: 0x3C6159C VA: 0x3C6559C
+	public void set_CrcPatchOffset(long value) { }
+
+	// RVA: 0x3C655A4 Offset: 0x3C615A4 VA: 0x3C655A4
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip
+internal class ZipHelperStream : Stream // TypeDefIndex: 1230
+{
+	// Fields
+	private bool isOwner_; // 0x28
+	private Stream stream_; // 0x30
+
+	// Properties
+	public bool IsStreamOwner { get; set; }
+	public override bool CanRead { get; }
+	public override bool CanSeek { get; }
+	public override bool CanTimeout { get; }
+	public override long Length { get; }
+	public override long Position { get; set; }
+	public override bool CanWrite { get; }
+
+	// Methods
+
+	// RVA: 0x3C655AC Offset: 0x3C615AC VA: 0x3C655AC
+	public void .ctor(string name) { }
+
+	// RVA: 0x3C630A8 Offset: 0x3C5F0A8 VA: 0x3C630A8
+	public void .ctor(Stream stream) { }
+
+	// RVA: 0x3C65660 Offset: 0x3C61660 VA: 0x3C65660
+	public bool get_IsStreamOwner() { }
+
+	// RVA: 0x3C65668 Offset: 0x3C61668 VA: 0x3C65668
+	public void set_IsStreamOwner(bool value) { }
+
+	// RVA: 0x3C65674 Offset: 0x3C61674 VA: 0x3C65674 Slot: 7
+	public override bool get_CanRead() { }
+
+	// RVA: 0x3C656A0 Offset: 0x3C616A0 VA: 0x3C656A0 Slot: 8
+	public override bool get_CanSeek() { }
+
+	// RVA: 0x3C656CC Offset: 0x3C616CC VA: 0x3C656CC Slot: 9
+	public override bool get_CanTimeout() { }
+
+	// RVA: 0x3C656F8 Offset: 0x3C616F8 VA: 0x3C656F8 Slot: 11
+	public override long get_Length() { }
+
+	// RVA: 0x3C65724 Offset: 0x3C61724 VA: 0x3C65724 Slot: 12
+	public override long get_Position() { }
+
+	// RVA: 0x3C65750 Offset: 0x3C61750 VA: 0x3C65750 Slot: 13
+	public override void set_Position(long value) { }
+
+	// RVA: 0x3C65790 Offset: 0x3C61790 VA: 0x3C65790 Slot: 10
+	public override bool get_CanWrite() { }
+
+	// RVA: 0x3C657BC Offset: 0x3C617BC VA: 0x3C657BC Slot: 21
+	public override void Flush() { }
+
+	// RVA: 0x3C657EC Offset: 0x3C617EC VA: 0x3C657EC Slot: 31
+	public override long Seek(long offset, SeekOrigin origin) { }
+
+	// RVA: 0x3C65834 Offset: 0x3C61834 VA: 0x3C65834 Slot: 32
+	public override void SetLength(long value) { }
+
+	// RVA: 0x3C65874 Offset: 0x3C61874 VA: 0x3C65874 Slot: 33
+	public override int Read(byte[] buffer, int offset, int count) { }
+
+	// RVA: 0x3C658CC Offset: 0x3C618CC VA: 0x3C658CC Slot: 36
+	public override void Write(byte[] buffer, int offset, int count) { }
+
+	// RVA: 0x3C65924 Offset: 0x3C61924 VA: 0x3C65924 Slot: 19
+	public override void Close() { }
+
+	// RVA: 0x3C65988 Offset: 0x3C61988 VA: 0x3C65988
+	private void WriteLocalHeader(ZipEntry entry, EntryPatchData patchData) { }
+
+	// RVA: 0x3C65D28 Offset: 0x3C61D28 VA: 0x3C65D28
+	public long LocateBlockWithSignature(int signature, long endLocation, int minimumBlockSize, int maximumVariableData) { }
+
+	// RVA: 0x3C65E34 Offset: 0x3C61E34 VA: 0x3C65E34
+	public void WriteZip64EndOfCentralDirectory(long noOfEntries, long sizeEntries, long centralDirOffset) { }
+
+	// RVA: 0x3C65F7C Offset: 0x3C61F7C VA: 0x3C65F7C
+	public void WriteEndOfCentralDirectory(long noOfEntries, long sizeEntries, long startOfCentralDirectory, byte[] comment) { }
+
+	// RVA: 0x3C63FC8 Offset: 0x3C5FFC8 VA: 0x3C63FC8
+	public int ReadLEShort() { }
+
+	// RVA: 0x3C6311C Offset: 0x3C5F11C VA: 0x3C6311C
+	public int ReadLEInt() { }
+
+	// RVA: 0x3C64070 Offset: 0x3C60070 VA: 0x3C64070
+	public long ReadLELong() { }
+
+	// RVA: 0x3C644E0 Offset: 0x3C604E0 VA: 0x3C644E0
+	public void WriteLEShort(int value) { }
+
+	// RVA: 0x3C661CC Offset: 0x3C621CC VA: 0x3C661CC
+	public void WriteLEUshort(ushort value) { }
+
+	// RVA: 0x3C637F4 Offset: 0x3C5F7F4 VA: 0x3C637F4
+	public void WriteLEInt(int value) { }
+
+	// RVA: 0x3C6623C Offset: 0x3C6223C VA: 0x3C6623C
+	public void WriteLEUint(uint value) { }
+
+	// RVA: 0x3C64550 Offset: 0x3C60550 VA: 0x3C64550
+	public void WriteLELong(long value) { }
+
+	// RVA: 0x3C66264 Offset: 0x3C62264 VA: 0x3C66264
+	public void WriteLEUlong(ulong value) { }
+
+	// RVA: 0x3C662A4 Offset: 0x3C622A4 VA: 0x3C662A4
+	public int WriteDataDescriptor(ZipEntry entry) { }
+
+	// RVA: 0x3C663F8 Offset: 0x3C623F8 VA: 0x3C663F8
+	public void ReadDataDescriptor(bool zip64, DescriptorData data) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip
+public class ZipOutputStream : DeflaterOutputStream // TypeDefIndex: 1231
+{
+	// Fields
+	private ArrayList entries; // 0x60
+	private Crc32 crc; // 0x68
+	private ZipEntry curEntry; // 0x70
+	private int defaultCompressionLevel; // 0x78
+	private CompressionMethod curMethod; // 0x7C
+	private long size; // 0x80
+	private long offset; // 0x88
+	private byte[] zipComment; // 0x90
+	private bool patchEntryHeader; // 0x98
+	private long crcPatchPos; // 0xA0
+	private long sizePatchPos; // 0xA8
+	private UseZip64 useZip64_; // 0xB0
+
+	// Properties
+	public bool IsFinished { get; }
+	public UseZip64 UseZip64 { get; set; }
+
+	// Methods
+
+	// RVA: 0x3C66504 Offset: 0x3C62504 VA: 0x3C66504
+	public void .ctor(Stream baseOutputStream) { }
+
+	// RVA: 0x3C6678C Offset: 0x3C6278C VA: 0x3C6678C
+	public void .ctor(Stream baseOutputStream, int bufferSize) { }
+
+	// RVA: 0x3C668D4 Offset: 0x3C628D4 VA: 0x3C668D4
+	public bool get_IsFinished() { }
+
+	// RVA: 0x3C668E4 Offset: 0x3C628E4 VA: 0x3C668E4
+	public void SetComment(string comment) { }
+
+	// RVA: 0x3C669B0 Offset: 0x3C629B0 VA: 0x3C669B0
+	public void SetLevel(int level) { }
+
+	// RVA: 0x3C66A70 Offset: 0x3C62A70 VA: 0x3C66A70
+	public int GetLevel() { }
+
+	// RVA: 0x3C66A8C Offset: 0x3C62A8C VA: 0x3C66A8C
+	public UseZip64 get_UseZip64() { }
+
+	// RVA: 0x3C66A94 Offset: 0x3C62A94 VA: 0x3C66A94
+	public void set_UseZip64(UseZip64 value) { }
+
+	// RVA: 0x3C66A9C Offset: 0x3C62A9C VA: 0x3C66A9C
+	private void WriteLeShort(int value) { }
+
+	// RVA: 0x3C66B0C Offset: 0x3C62B0C VA: 0x3C66B0C
+	private void WriteLeInt(int value) { }
+
+	// RVA: 0x3C66B34 Offset: 0x3C62B34 VA: 0x3C66B34
+	private void WriteLeLong(long value) { }
+
+	// RVA: 0x3C66B74 Offset: 0x3C62B74 VA: 0x3C66B74
+	public void PutNextEntry(ZipEntry entry) { }
+
+	// RVA: 0x3C67398 Offset: 0x3C63398 VA: 0x3C67398
+	public void CloseEntry() { }
+
+	// RVA: 0x3C67BC0 Offset: 0x3C63BC0 VA: 0x3C67BC0
+	private void WriteEncryptionHeader(long crcValue) { }
+
+	// RVA: 0x3C67A5C Offset: 0x3C63A5C VA: 0x3C67A5C
+	private static void AddExtraDataAES(ZipEntry entry, ZipExtraData extraData) { }
+
+	// RVA: 0x3C67B04 Offset: 0x3C63B04 VA: 0x3C67B04
+	private void WriteAESHeader(ZipEntry entry) { }
+
+	// RVA: 0x3C67CE8 Offset: 0x3C63CE8 VA: 0x3C67CE8 Slot: 36
+	public override void Write(byte[] buffer, int offset, int count) { }
+
+	// RVA: 0x3C67F14 Offset: 0x3C63F14 VA: 0x3C67F14
+	private void CopyAndEncrypt(byte[] buffer, int offset, int count) { }
+
+	// RVA: 0x3C68014 Offset: 0x3C64014 VA: 0x3C68014 Slot: 39
+	public override void Finish() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip.Compression
+public class Deflater // TypeDefIndex: 1232
+{
+	// Fields
+	public const int BEST_COMPRESSION = 9;
+	public const int BEST_SPEED = 1;
+	public const int DEFAULT_COMPRESSION = -1;
+	public const int NO_COMPRESSION = 0;
+	public const int DEFLATED = 8;
+	private const int IS_SETDICT = 1;
+	private const int IS_FLUSHING = 4;
+	private const int IS_FINISHING = 8;
+	private const int INIT_STATE = 0;
+	private const int SETDICT_STATE = 1;
+	private const int BUSY_STATE = 16;
+	private const int FLUSHING_STATE = 20;
+	private const int FINISHING_STATE = 28;
+	private const int FINISHED_STATE = 30;
+	private const int CLOSED_STATE = 127;
+	private int level; // 0x10
+	private bool noZlibHeaderOrFooter; // 0x14
+	private int state; // 0x18
+	private long totalOut; // 0x20
+	private DeflaterPending pending; // 0x28
+	private DeflaterEngine engine; // 0x30
+
+	// Properties
+	public int Adler { get; }
+	public long TotalIn { get; }
+	public long TotalOut { get; }
+	public bool IsFinished { get; }
+	public bool IsNeedingInput { get; }
+
+	// Methods
+
+	// RVA: 0x3C68BE4 Offset: 0x3C64BE4 VA: 0x3C68BE4
+	public void .ctor() { }
+
+	// RVA: 0x3C68BF0 Offset: 0x3C64BF0 VA: 0x3C68BF0
+	public void .ctor(int level) { }
+
+	// RVA: 0x3C6663C Offset: 0x3C6263C VA: 0x3C6663C
+	public void .ctor(int level, bool noZlibHeaderOrFooter) { }
+
+	// RVA: 0x3C67AC4 Offset: 0x3C63AC4 VA: 0x3C67AC4
+	public void Reset() { }
+
+	// RVA: 0x3C68E38 Offset: 0x3C64E38 VA: 0x3C68E38
+	public int get_Adler() { }
+
+	// RVA: 0x3C68E80 Offset: 0x3C64E80 VA: 0x3C68E80
+	public long get_TotalIn() { }
+
+	// RVA: 0x3C68E9C Offset: 0x3C64E9C VA: 0x3C68E9C
+	public long get_TotalOut() { }
+
+	// RVA: 0x3C68EA4 Offset: 0x3C64EA4 VA: 0x3C68EA4
+	public void Flush() { }
+
+	// RVA: 0x3C68EB4 Offset: 0x3C64EB4 VA: 0x3C68EB4
+	public void Finish() { }
+
+	// RVA: 0x3C68EC4 Offset: 0x3C64EC4 VA: 0x3C68EC4
+	public bool get_IsFinished() { }
+
+	// RVA: 0x3C68EF8 Offset: 0x3C64EF8 VA: 0x3C68EF8
+	public bool get_IsNeedingInput() { }
+
+	// RVA: 0x3C68F2C Offset: 0x3C64F2C VA: 0x3C68F2C
+	public void SetInput(byte[] input) { }
+
+	// RVA: 0x3C68F48 Offset: 0x3C64F48 VA: 0x3C68F48
+	public void SetInput(byte[] input, int offset, int count) { }
+
+	// RVA: 0x3C669E0 Offset: 0x3C629E0 VA: 0x3C669E0
+	public void SetLevel(int level) { }
+
+	// RVA: 0x3C6936C Offset: 0x3C6536C VA: 0x3C6936C
+	public int GetLevel() { }
+
+	// RVA: 0x3C68D70 Offset: 0x3C64D70 VA: 0x3C68D70
+	public void SetStrategy(DeflateStrategy strategy) { }
+
+	// RVA: 0x3C69374 Offset: 0x3C65374 VA: 0x3C69374
+	public int Deflate(byte[] output) { }
+
+	// RVA: 0x3C69390 Offset: 0x3C65390 VA: 0x3C69390
+	public int Deflate(byte[] output, int offset, int length) { }
+
+	// RVA: 0x3C6976C Offset: 0x3C6576C VA: 0x3C6976C
+	public void SetDictionary(byte[] dictionary) { }
+
+	// RVA: 0x3C69788 Offset: 0x3C65788 VA: 0x3C69788
+	public void SetDictionary(byte[] dictionary, int index, int count) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip.Compression
+public class DeflaterConstants // TypeDefIndex: 1233
+{
+	// Fields
+	public const bool DEBUGGING = false;
+	public const int STORED_BLOCK = 0;
+	public const int STATIC_TREES = 1;
+	public const int DYN_TREES = 2;
+	public const int PRESET_DICT = 32;
+	public const int DEFAULT_MEM_LEVEL = 8;
+	public const int MAX_MATCH = 258;
+	public const int MIN_MATCH = 3;
+	public const int MAX_WBITS = 15;
+	public const int WSIZE = 32768;
+	public const int WMASK = 32767;
+	public const int HASH_BITS = 15;
+	public const int HASH_SIZE = 32768;
+	public const int HASH_MASK = 32767;
+	public const int HASH_SHIFT = 5;
+	public const int MIN_LOOKAHEAD = 262;
+	public const int MAX_DIST = 32506;
+	public const int PENDING_BUF_SIZE = 65536;
+	public static int MAX_BLOCK_SIZE; // 0x0
+	public const int DEFLATE_STORED = 0;
+	public const int DEFLATE_FAST = 1;
+	public const int DEFLATE_SLOW = 2;
+	public static int[] GOOD_LENGTH; // 0x8
+	public static int[] MAX_LAZY; // 0x10
+	public static int[] NICE_LENGTH; // 0x18
+	public static int[] MAX_CHAIN; // 0x20
+	public static int[] COMPR_FUNC; // 0x28
+
+	// Methods
+
+	// RVA: 0x3C6989C Offset: 0x3C6589C VA: 0x3C6989C
+	public void .ctor() { }
+
+	// RVA: 0x3C698A4 Offset: 0x3C658A4 VA: 0x3C698A4
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip.Compression
+public enum DeflateStrategy // TypeDefIndex: 1234
+{
+	// Fields
+	public int value__; // 0x0
+	public const DeflateStrategy Default = 0;
+	public const DeflateStrategy Filtered = 1;
+	public const DeflateStrategy HuffmanOnly = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip.Compression
+public class DeflaterEngine : DeflaterConstants // TypeDefIndex: 1235
+{
+	// Fields
+	private const int TooFar = 4096;
+	private int ins_h; // 0x10
+	private short[] head; // 0x18
+	private short[] prev; // 0x20
+	private int matchStart; // 0x28
+	private int matchLen; // 0x2C
+	private bool prevAvailable; // 0x30
+	private int blockStart; // 0x34
+	private int strstart; // 0x38
+	private int lookahead; // 0x3C
+	private byte[] window; // 0x40
+	private DeflateStrategy strategy; // 0x48
+	private int max_chain; // 0x4C
+	private int max_lazy; // 0x50
+	private int niceLength; // 0x54
+	private int goodLength; // 0x58
+	private int compressionFunction; // 0x5C
+	private byte[] inputBuf; // 0x60
+	private long totalIn; // 0x68
+	private int inputOff; // 0x70
+	private int inputEnd; // 0x74
+	private DeflaterPending pending; // 0x78
+	private DeflaterHuffman huffman; // 0x80
+	private Adler32 adler; // 0x88
+
+	// Properties
+	public int Adler { get; }
+	public long TotalIn { get; }
+	public DeflateStrategy Strategy { get; set; }
+
+	// Methods
+
+	// RVA: 0x3C68BF8 Offset: 0x3C64BF8 VA: 0x3C68BF8
+	public void .ctor(DeflaterPending pending) { }
+
+	// RVA: 0x3C69674 Offset: 0x3C65674 VA: 0x3C69674
+	public bool Deflate(bool flush, bool finish) { }
+
+	// RVA: 0x3C68FB0 Offset: 0x3C64FB0 VA: 0x3C68FB0
+	public void SetInput(byte[] buffer, int offset, int count) { }
+
+	// RVA: 0x3C68F1C Offset: 0x3C64F1C VA: 0x3C68F1C
+	public bool NeedsInput() { }
+
+	// RVA: 0x3C697E8 Offset: 0x3C657E8 VA: 0x3C697E8
+	public void SetDictionary(byte[] buffer, int offset, int length) { }
+
+	// RVA: 0x3C68D8C Offset: 0x3C64D8C VA: 0x3C68D8C
+	public void Reset() { }
+
+	// RVA: 0x3C69658 Offset: 0x3C65658 VA: 0x3C69658
+	public void ResetAdler() { }
+
+	// RVA: 0x3C68E60 Offset: 0x3C64E60 VA: 0x3C68E60
+	public int get_Adler() { }
+
+	// RVA: 0x3C6A2BC Offset: 0x3C662BC VA: 0x3C6A2BC
+	public long get_TotalIn() { }
+
+	// RVA: 0x3C6A2C4 Offset: 0x3C662C4 VA: 0x3C6A2C4
+	public DeflateStrategy get_Strategy() { }
+
+	// RVA: 0x3C6A2CC Offset: 0x3C662CC VA: 0x3C6A2CC
+	public void set_Strategy(DeflateStrategy value) { }
+
+	// RVA: 0x3C690DC Offset: 0x3C650DC VA: 0x3C690DC
+	public void SetLevel(int level) { }
+
+	// RVA: 0x3C69A94 Offset: 0x3C65A94 VA: 0x3C69A94
+	public void FillWindow() { }
+
+	// RVA: 0x3C6A1E4 Offset: 0x3C661E4 VA: 0x3C6A1E4
+	private void UpdateHash() { }
+
+	// RVA: 0x3C6A230 Offset: 0x3C66230 VA: 0x3C6A230
+	private int InsertString() { }
+
+	// RVA: 0x3C6A2D4 Offset: 0x3C662D4 VA: 0x3C6A2D4
+	private void SlideWindow() { }
+
+	// RVA: 0x3C6A394 Offset: 0x3C66394 VA: 0x3C6A394
+	private bool FindLongestMatch(int curMatch) { }
+
+	// RVA: 0x3C69B74 Offset: 0x3C65B74 VA: 0x3C69B74
+	private bool DeflateStored(bool flush, bool finish) { }
+
+	// RVA: 0x3C69CCC Offset: 0x3C65CCC VA: 0x3C69CCC
+	private bool DeflateFast(bool flush, bool finish) { }
+
+	// RVA: 0x3C69F24 Offset: 0x3C65F24 VA: 0x3C69F24
+	private bool DeflateSlow(bool flush, bool finish) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+private class DeflaterHuffman.Tree // TypeDefIndex: 1236
+{
+	// Fields
+	public short[] freqs; // 0x10
+	public byte[] length; // 0x18
+	public int minNumCodes; // 0x20
+	public int numCodes; // 0x24
+	private short[] codes; // 0x28
+	private int[] bl_counts; // 0x30
+	private int maxLength; // 0x38
+	private DeflaterHuffman dh; // 0x40
+
+	// Methods
+
+	// RVA: 0x3D54EB0 Offset: 0x3D50EB0 VA: 0x3D54EB0
+	public void .ctor(DeflaterHuffman dh, int elems, int minCodes, int maxLength) { }
+
+	// RVA: 0x3D54FBC Offset: 0x3D50FBC VA: 0x3D54FBC
+	public void Reset() { }
+
+	// RVA: 0x3D5582C Offset: 0x3D5182C VA: 0x3D5582C
+	public void WriteSymbol(int code) { }
+
+	// RVA: 0x3D56998 Offset: 0x3D52998 VA: 0x3D56998
+	public void CheckEmpty() { }
+
+	// RVA: 0x3D566F4 Offset: 0x3D526F4 VA: 0x3D566F4
+	public void SetStaticCodes(short[] staticCodes, byte[] staticLengths) { }
+
+	// RVA: 0x3D551A0 Offset: 0x3D511A0 VA: 0x3D551A0
+	public void BuildCodes() { }
+
+	// RVA: 0x3D55E2C Offset: 0x3D51E2C VA: 0x3D55E2C
+	public void BuildTree() { }
+
+	// RVA: 0x3D56674 Offset: 0x3D52674 VA: 0x3D56674
+	public int GetEncodedLength() { }
+
+	// RVA: 0x3D564EC Offset: 0x3D524EC VA: 0x3D564EC
+	public void CalcBLFreq(Tree blTree) { }
+
+	// RVA: 0x3D55428 Offset: 0x3D51428 VA: 0x3D55428
+	public void WriteTree(Tree blTree) { }
+
+	// RVA: 0x3D56A44 Offset: 0x3D52A44 VA: 0x3D56A44
+	private void BuildLength(int[] childs) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip.Compression
+public class DeflaterHuffman // TypeDefIndex: 1237
+{
+	// Fields
+	private const int BUFSIZE = 16384;
+	private const int LITERAL_NUM = 286;
+	private const int DIST_NUM = 30;
+	private const int BITLEN_NUM = 19;
+	private const int REP_3_6 = 16;
+	private const int REP_3_10 = 17;
+	private const int REP_11_138 = 18;
+	private const int EOF_SYMBOL = 256;
+	private static readonly int[] BL_ORDER; // 0x0
+	private static readonly byte[] bit4Reverse; // 0x8
+	private static short[] staticLCodes; // 0x10
+	private static byte[] staticLLength; // 0x18
+	private static short[] staticDCodes; // 0x20
+	private static byte[] staticDLength; // 0x28
+	public DeflaterPending pending; // 0x10
+	private Tree literalTree; // 0x18
+	private Tree distTree; // 0x20
+	private Tree blTree; // 0x28
+	private short[] d_buf; // 0x30
+	private byte[] l_buf; // 0x38
+	private int last_lit; // 0x40
+	private int extra_bits; // 0x44
+
+	// Methods
+
+	// RVA: 0x3D548B4 Offset: 0x3D508B4 VA: 0x3D548B4
+	private static void .cctor() { }
+
+	// RVA: 0x3D54D54 Offset: 0x3D50D54 VA: 0x3D54D54
+	public void .ctor(DeflaterPending pending) { }
+
+	// RVA: 0x3D54F84 Offset: 0x3D50F84 VA: 0x3D54F84
+	public void Reset() { }
+
+	// RVA: 0x3D5502C Offset: 0x3D5102C VA: 0x3D5502C
+	public void SendAllTrees(int blTreeCodes) { }
+
+	// RVA: 0x3D55600 Offset: 0x3D51600 VA: 0x3D55600
+	public void CompressBlock() { }
+
+	// RVA: 0x3D558C0 Offset: 0x3D518C0 VA: 0x3D558C0
+	public void FlushStoredBlock(byte[] stored, int storedOffset, int storedLength, bool lastBlock) { }
+
+	// RVA: 0x3D55AA0 Offset: 0x3D51AA0 VA: 0x3D55AA0
+	public void FlushBlock(byte[] stored, int storedOffset, int storedLength, bool lastBlock) { }
+
+	// RVA: 0x3D56724 Offset: 0x3D52724 VA: 0x3D56724
+	public bool IsFull() { }
+
+	// RVA: 0x3D56734 Offset: 0x3D52734 VA: 0x3D56734
+	public bool TallyLit(int literal) { }
+
+	// RVA: 0x3D567C4 Offset: 0x3D527C4 VA: 0x3D567C4
+	public bool TallyDist(int distance, int length) { }
+
+	// RVA: 0x3D54C8C Offset: 0x3D50C8C VA: 0x3D54C8C
+	public static short BitReverse(int toReverse) { }
+
+	// RVA: 0x3D557F0 Offset: 0x3D517F0 VA: 0x3D557F0
+	private static int Lcode(int length) { }
+
+	// RVA: 0x3D5588C Offset: 0x3D5188C VA: 0x3D5588C
+	private static int Dcode(int distance) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip.Compression
+public class DeflaterPending : PendingBuffer // TypeDefIndex: 1238
+{
+	// Methods
+
+	// RVA: 0x3D56E10 Offset: 0x3D52E10 VA: 0x3D56E10
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip.Compression
+public class Inflater // TypeDefIndex: 1239
+{
+	// Fields
+	private static readonly int[] CPLENS; // 0x0
+	private static readonly int[] CPLEXT; // 0x8
+	private static readonly int[] CPDIST; // 0x10
+	private static readonly int[] CPDEXT; // 0x18
+	private const int DECODE_HEADER = 0;
+	private const int DECODE_DICT = 1;
+	private const int DECODE_BLOCKS = 2;
+	private const int DECODE_STORED_LEN1 = 3;
+	private const int DECODE_STORED_LEN2 = 4;
+	private const int DECODE_STORED = 5;
+	private const int DECODE_DYN_HEADER = 6;
+	private const int DECODE_HUFFMAN = 7;
+	private const int DECODE_HUFFMAN_LENBITS = 8;
+	private const int DECODE_HUFFMAN_DIST = 9;
+	private const int DECODE_HUFFMAN_DISTBITS = 10;
+	private const int DECODE_CHKSUM = 11;
+	private const int FINISHED = 12;
+	private int mode; // 0x10
+	private int readAdler; // 0x14
+	private int neededBits; // 0x18
+	private int repLength; // 0x1C
+	private int repDist; // 0x20
+	private int uncomprLen; // 0x24
+	private bool isLastBlock; // 0x28
+	private long totalOut; // 0x30
+	private long totalIn; // 0x38
+	private bool noHeader; // 0x40
+	private StreamManipulator input; // 0x48
+	private OutputWindow outputWindow; // 0x50
+	private InflaterDynHeader dynHeader; // 0x58
+	private InflaterHuffmanTree litlenTree; // 0x60
+	private InflaterHuffmanTree distTree; // 0x68
+	private Adler32 adler; // 0x70
+	private bool m_EnableReadOptimize; // 0x78
+
+	// Properties
+	public bool IsNeedingInput { get; }
+	public bool IsNeedingDictionary { get; }
+	public bool IsFinished { get; }
+	public int Adler { get; }
+	public long TotalOut { get; }
+	public long TotalIn { get; }
+	public int RemainingInput { get; }
+
+	// Methods
+
+	// RVA: 0x3D56E88 Offset: 0x3D52E88 VA: 0x3D56E88
+	public void .ctor() { }
+
+	// RVA: 0x3D56F9C Offset: 0x3D52F9C VA: 0x3D56F9C
+	public void InitOptimize(bool readOptimize) { }
+
+	// RVA: 0x3D56E90 Offset: 0x3D52E90 VA: 0x3D56E90
+	public void .ctor(bool noHeader) { }
+
+	// RVA: 0x3D57034 Offset: 0x3D53034 VA: 0x3D57034
+	public void Reset() { }
+
+	// RVA: 0x3D570D4 Offset: 0x3D530D4 VA: 0x3D570D4
+	private bool DecodeHeader() { }
+
+	// RVA: 0x3D57294 Offset: 0x3D53294 VA: 0x3D57294
+	private bool DecodeDict() { }
+
+	// RVA: 0x3D57300 Offset: 0x3D53300 VA: 0x3D57300
+	private bool DecodeHuffman() { }
+
+	// RVA: 0x3D57A8C Offset: 0x3D53A8C VA: 0x3D57A8C
+	private bool DecodeChksum() { }
+
+	// RVA: 0x3D57BD8 Offset: 0x3D53BD8 VA: 0x3D57BD8
+	private bool Decode(bool enable_optimize = false) { }
+
+	// RVA: 0x3D58944 Offset: 0x3D54944 VA: 0x3D58944
+	public void SetDictionary(byte[] buffer) { }
+
+	// RVA: 0x3D58960 Offset: 0x3D54960 VA: 0x3D58960
+	public void SetDictionary(byte[] buffer, int index, int count) { }
+
+	// RVA: 0x3D58DD8 Offset: 0x3D54DD8 VA: 0x3D58DD8
+	public void SetInput(byte[] buffer) { }
+
+	// RVA: 0x3D58DF4 Offset: 0x3D54DF4 VA: 0x3D58DF4
+	public void SetInput(byte[] buffer, int index, int count) { }
+
+	// RVA: 0x3D58FD0 Offset: 0x3D54FD0 VA: 0x3D58FD0
+	public int Inflate(byte[] buffer) { }
+
+	// RVA: 0x3D59034 Offset: 0x3D55034 VA: 0x3D59034
+	public int Inflate(byte[] buffer, int offset, int count, bool enable_optimize = false) { }
+
+	// RVA: 0x3D59370 Offset: 0x3D55370 VA: 0x3D59370
+	public bool get_IsNeedingInput() { }
+
+	// RVA: 0x3D58B08 Offset: 0x3D54B08 VA: 0x3D58B08
+	public bool get_IsNeedingDictionary() { }
+
+	// RVA: 0x3D59250 Offset: 0x3D55250 VA: 0x3D59250
+	public bool get_IsFinished() { }
+
+	// RVA: 0x3D59394 Offset: 0x3D55394 VA: 0x3D59394
+	public int get_Adler() { }
+
+	// RVA: 0x3D593D0 Offset: 0x3D553D0 VA: 0x3D593D0
+	public long get_TotalOut() { }
+
+	// RVA: 0x3D593D8 Offset: 0x3D553D8 VA: 0x3D593D8
+	public long get_TotalIn() { }
+
+	// RVA: 0x3D59408 Offset: 0x3D55408 VA: 0x3D59408
+	public int get_RemainingInput() { }
+
+	// RVA: 0x3D59444 Offset: 0x3D55444 VA: 0x3D59444
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip.Compression
+internal class InflaterDynHeader // TypeDefIndex: 1240
+{
+	// Fields
+	private const int LNUM = 0;
+	private const int DNUM = 1;
+	private const int BLNUM = 2;
+	private const int BLLENS = 3;
+	private const int LENS = 4;
+	private const int REPS = 5;
+	private static readonly int[] repMin; // 0x0
+	private static readonly int[] repBits; // 0x8
+	private static readonly int[] BL_ORDER; // 0x10
+	private bool m_EnableOptimize; // 0x10
+	public InflaterHuffmanTree LitLenTree; // 0x18
+	public InflaterHuffmanTree DistTree; // 0x20
+	private byte[] blLens; // 0x28
+	private byte[] litdistLens; // 0x30
+	private InflaterHuffmanTree blTree; // 0x38
+	private int mode; // 0x40
+	private int lnum; // 0x44
+	private int dnum; // 0x48
+	private int blnum; // 0x4C
+	private int num; // 0x50
+	private int repSymbol; // 0x54
+	private byte lastLen; // 0x58
+	private int ptr; // 0x5C
+
+	// Methods
+
+	// RVA: 0x3D58014 Offset: 0x3D54014 VA: 0x3D58014
+	public void .ctor(bool optimize) { }
+
+	// RVA: 0x3D5815C Offset: 0x3D5415C VA: 0x3D5815C
+	public bool Decode(StreamManipulator input, bool enable_optimize = false) { }
+
+	// RVA: 0x3D5803C Offset: 0x3D5403C VA: 0x3D5803C
+	public void Clear() { }
+
+	// RVA: 0x3D586BC Offset: 0x3D546BC VA: 0x3D586BC
+	public InflaterHuffmanTree BuildLitLenTree(bool enable_optimize = false) { }
+
+	// RVA: 0x3D58800 Offset: 0x3D54800 VA: 0x3D58800
+	public InflaterHuffmanTree BuildDistTree(bool enable_optimize = false) { }
+
+	// RVA: 0x3D59A74 Offset: 0x3D55A74 VA: 0x3D59A74
+	public byte[] GetLenTreeLens() { }
+
+	// RVA: 0x3D59AE8 Offset: 0x3D55AE8 VA: 0x3D59AE8
+	public byte[] GetDistTreeLens() { }
+
+	// RVA: 0x3D59B58 Offset: 0x3D55B58 VA: 0x3D59B58
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip.Compression
+public class InflaterHuffmanTree // TypeDefIndex: 1241
+{
+	// Fields
+	private const int MAX_BITLEN = 15;
+	private short[] tree; // 0x10
+	public static InflaterHuffmanTree defLitLenTree; // 0x0
+	public static InflaterHuffmanTree defDistTree; // 0x8
+	private static Dictionary<int, short[]> m_HuffmanTreeCache; // 0x10
+	private int[] m_blCount; // 0x18
+	private int[] m_nextCode; // 0x20
+
+	// Methods
+
+	// RVA: 0x3D59C88 Offset: 0x3D55C88 VA: 0x3D59C88
+	private static void .cctor() { }
+
+	// RVA: 0x3D595B8 Offset: 0x3D555B8 VA: 0x3D595B8
+	public void .ctor(byte[] codeLengths, int index = -1) { }
+
+	// RVA: 0x3D59A2C Offset: 0x3D55A2C VA: 0x3D59A2C
+	public void .ctor(byte[] codeLengths, int codeStartIndex, int codeEndIndex, int index) { }
+
+	// RVA: 0x3D595F0 Offset: 0x3D555F0 VA: 0x3D595F0
+	public void BuildTree(byte[] codeLengths, int codeStartIndex, int codeEndIndex, int index, bool use_same_meme = false) { }
+
+	// RVA: 0x3D59F98 Offset: 0x3D55F98 VA: 0x3D59F98
+	public void BuildTree(byte[] codeLengths, int index, bool use_same_mem = false) { }
+
+	// RVA: 0x3D57820 Offset: 0x3D53820 VA: 0x3D57820
+	public int GetSymbol(StreamManipulator input) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip.Compression
+public class PendingBuffer // TypeDefIndex: 1242
+{
+	// Fields
+	private byte[] buffer_; // 0x10
+	private int start; // 0x18
+	private int end; // 0x1C
+	private uint bits; // 0x20
+	private int bitCount; // 0x24
+
+	// Properties
+	public int BitCount { get; }
+	public bool IsFlushed { get; }
+
+	// Methods
+
+	// RVA: 0x3D5A400 Offset: 0x3D56400 VA: 0x3D5A400
+	public void .ctor() { }
+
+	// RVA: 0x3D56E18 Offset: 0x3D52E18 VA: 0x3D56E18
+	public void .ctor(int bufferSize) { }
+
+	// RVA: 0x3D5A408 Offset: 0x3D56408 VA: 0x3D5A408
+	public void Reset() { }
+
+	// RVA: 0x3D5A414 Offset: 0x3D56414 VA: 0x3D5A414
+	public void WriteByte(int value) { }
+
+	// RVA: 0x3D559F0 Offset: 0x3D519F0 VA: 0x3D559F0
+	public void WriteShort(int value) { }
+
+	// RVA: 0x3D5A450 Offset: 0x3D56450 VA: 0x3D5A450
+	public void WriteInt(int value) { }
+
+	// RVA: 0x3D55A58 Offset: 0x3D51A58 VA: 0x3D55A58
+	public void WriteBlock(byte[] block, int offset, int length) { }
+
+	// RVA: 0x3D5A510 Offset: 0x3D56510 VA: 0x3D5A510
+	public int get_BitCount() { }
+
+	// RVA: 0x3D55964 Offset: 0x3D51964 VA: 0x3D55964
+	public void AlignToByte() { }
+
+	// RVA: 0x3D55390 Offset: 0x3D51390 VA: 0x3D55390
+	public void WriteBits(int b, int count) { }
+
+	// RVA: 0x3D5A518 Offset: 0x3D56518 VA: 0x3D5A518
+	public void WriteShortMSB(int s) { }
+
+	// RVA: 0x3D5A580 Offset: 0x3D56580 VA: 0x3D5A580
+	public bool get_IsFlushed() { }
+
+	// RVA: 0x3D5A590 Offset: 0x3D56590 VA: 0x3D5A590
+	public int Flush(byte[] output, int offset, int length) { }
+
+	// RVA: 0x3D5A64C Offset: 0x3D5664C VA: 0x3D5A64C
+	public byte[] ToByteArray() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip.Compression.Streams
+public class DeflaterOutputStream : Stream // TypeDefIndex: 1243
+{
+	// Fields
+	private string password; // 0x28
+	private ICryptoTransform cryptoTransform_; // 0x30
+	protected byte[] AESAuthCode; // 0x38
+	private byte[] buffer_; // 0x40
+	protected Deflater deflater_; // 0x48
+	protected Stream baseOutputStream_; // 0x50
+	private bool isClosed_; // 0x58
+	private bool isStreamOwner_; // 0x59
+	private static RNGCryptoServiceProvider _aesRnd; // 0x0
+
+	// Properties
+	public bool IsStreamOwner { get; set; }
+	public bool CanPatchEntries { get; }
+	public string Password { get; set; }
+	public override bool CanRead { get; }
+	public override bool CanSeek { get; }
+	public override bool CanWrite { get; }
+	public override long Length { get; }
+	public override long Position { get; set; }
+
+	// Methods
+
+	// RVA: 0x3D5A6CC Offset: 0x3D566CC VA: 0x3D5A6CC
+	public void .ctor(Stream baseOutputStream) { }
+
+	// RVA: 0x3D5A928 Offset: 0x3D56928 VA: 0x3D5A928
+	public void .ctor(Stream baseOutputStream, Deflater deflater) { }
+
+	// RVA: 0x3D5A73C Offset: 0x3D5673C VA: 0x3D5A73C
+	public void .ctor(Stream baseOutputStream, Deflater deflater, int bufferSize) { }
+
+	// RVA: 0x3D5A930 Offset: 0x3D56930 VA: 0x3D5A930 Slot: 39
+	public virtual void Finish() { }
+
+	// RVA: 0x3D5AD08 Offset: 0x3D56D08 VA: 0x3D5AD08
+	public bool get_IsStreamOwner() { }
+
+	// RVA: 0x3D5AD10 Offset: 0x3D56D10 VA: 0x3D5AD10
+	public void set_IsStreamOwner(bool value) { }
+
+	// RVA: 0x3D5AD1C Offset: 0x3D56D1C VA: 0x3D5AD1C
+	public bool get_CanPatchEntries() { }
+
+	// RVA: 0x3D5AD48 Offset: 0x3D56D48 VA: 0x3D5AD48
+	public string get_Password() { }
+
+	// RVA: 0x3D5AD50 Offset: 0x3D56D50 VA: 0x3D5AD50
+	public void set_Password(string value) { }
+
+	// RVA: 0x3D5AB98 Offset: 0x3D56B98 VA: 0x3D5AB98
+	protected void EncryptBlock(byte[] buffer, int offset, int length) { }
+
+	// RVA: 0x3D5AD70 Offset: 0x3D56D70 VA: 0x3D5AD70
+	protected void InitializePassword(string password) { }
+
+	// RVA: 0x3D5B1C8 Offset: 0x3D571C8 VA: 0x3D5B1C8
+	protected void InitializeAESPassword(ZipEntry entry, string rawPassword, out byte[] salt, out byte[] pwdVerifier) { }
+
+	// RVA: 0x3D5B6E4 Offset: 0x3D576E4 VA: 0x3D5B6E4
+	protected void Deflate() { }
+
+	// RVA: 0x3D5B7F8 Offset: 0x3D577F8 VA: 0x3D5B7F8 Slot: 7
+	public override bool get_CanRead() { }
+
+	// RVA: 0x3D5B800 Offset: 0x3D57800 VA: 0x3D5B800 Slot: 8
+	public override bool get_CanSeek() { }
+
+	// RVA: 0x3D5B808 Offset: 0x3D57808 VA: 0x3D5B808 Slot: 10
+	public override bool get_CanWrite() { }
+
+	// RVA: 0x3D5B834 Offset: 0x3D57834 VA: 0x3D5B834 Slot: 11
+	public override long get_Length() { }
+
+	// RVA: 0x3D5B860 Offset: 0x3D57860 VA: 0x3D5B860 Slot: 12
+	public override long get_Position() { }
+
+	// RVA: 0x3D5B88C Offset: 0x3D5788C VA: 0x3D5B88C Slot: 13
+	public override void set_Position(long value) { }
+
+	// RVA: 0x3D5B8D8 Offset: 0x3D578D8 VA: 0x3D5B8D8 Slot: 31
+	public override long Seek(long offset, SeekOrigin origin) { }
+
+	// RVA: 0x3D5B924 Offset: 0x3D57924 VA: 0x3D5B924 Slot: 32
+	public override void SetLength(long value) { }
+
+	// RVA: 0x3D5B970 Offset: 0x3D57970 VA: 0x3D5B970 Slot: 35
+	public override int ReadByte() { }
+
+	// RVA: 0x3D5B9BC Offset: 0x3D579BC VA: 0x3D5B9BC Slot: 33
+	public override int Read(byte[] buffer, int offset, int count) { }
+
+	// RVA: 0x3D5BA08 Offset: 0x3D57A08 VA: 0x3D5BA08 Slot: 23
+	public override IAsyncResult BeginRead(byte[] buffer, int offset, int count, AsyncCallback callback, object state) { }
+
+	// RVA: 0x3D5BA54 Offset: 0x3D57A54 VA: 0x3D5BA54 Slot: 27
+	public override IAsyncResult BeginWrite(byte[] buffer, int offset, int count, AsyncCallback callback, object state) { }
+
+	// RVA: 0x3D5BAA0 Offset: 0x3D57AA0 VA: 0x3D5BAA0 Slot: 21
+	public override void Flush() { }
+
+	// RVA: 0x3D5BAEC Offset: 0x3D57AEC VA: 0x3D5BAEC Slot: 19
+	public override void Close() { }
+
+	// RVA: 0x3D5BCB8 Offset: 0x3D57CB8 VA: 0x3D5BCB8
+	private void GetAuthCodeIfAES() { }
+
+	// RVA: 0x3D5BD48 Offset: 0x3D57D48 VA: 0x3D5BD48 Slot: 38
+	public override void WriteByte(byte value) { }
+
+	// RVA: 0x3D5BDE0 Offset: 0x3D57DE0 VA: 0x3D5BDE0 Slot: 36
+	public override void Write(byte[] buffer, int offset, int count) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip.Compression.Streams
+public class InflaterInputBuffer // TypeDefIndex: 1244
+{
+	// Fields
+	private int rawLength; // 0x10
+	private byte[] rawData; // 0x18
+	private int clearTextLength; // 0x20
+	private byte[] clearText; // 0x28
+	private byte[] internalClearText; // 0x30
+	private int available; // 0x38
+	private ICryptoTransform cryptoTransform; // 0x40
+	private Stream inputStream; // 0x48
+
+	// Properties
+	public int RawLength { get; }
+	public byte[] RawData { get; }
+	public int ClearTextLength { get; }
+	public byte[] ClearText { get; }
+	public int Available { get; set; }
+	public ICryptoTransform CryptoTransform { set; }
+
+	// Methods
+
+	// RVA: 0x3D5BE08 Offset: 0x3D57E08 VA: 0x3D5BE08
+	public void .ctor(Stream stream) { }
+
+	// RVA: 0x3D5BE38 Offset: 0x3D57E38 VA: 0x3D5BE38
+	public void .ctor(Stream stream, int bufferSize) { }
+
+	// RVA: 0x3D5BE6C Offset: 0x3D57E6C VA: 0x3D5BE6C
+	public void Reset(Stream stream, int bufferSize) { }
+
+	// RVA: 0x3D5BF18 Offset: 0x3D57F18 VA: 0x3D5BF18
+	public int get_RawLength() { }
+
+	// RVA: 0x3D5BF20 Offset: 0x3D57F20 VA: 0x3D5BF20
+	public byte[] get_RawData() { }
+
+	// RVA: 0x3D5BF28 Offset: 0x3D57F28 VA: 0x3D5BF28
+	public int get_ClearTextLength() { }
+
+	// RVA: 0x3D5BF30 Offset: 0x3D57F30 VA: 0x3D5BF30
+	public byte[] get_ClearText() { }
+
+	// RVA: 0x3D5BF38 Offset: 0x3D57F38 VA: 0x3D5BF38
+	public int get_Available() { }
+
+	// RVA: 0x3D5BF40 Offset: 0x3D57F40 VA: 0x3D5BF40
+	public void set_Available(int value) { }
+
+	// RVA: 0x3D5BF48 Offset: 0x3D57F48 VA: 0x3D5BF48
+	public void SetInflaterInput(Inflater inflater) { }
+
+	// RVA: 0x3D5BF88 Offset: 0x3D57F88 VA: 0x3D5BF88
+	public void Fill() { }
+
+	// RVA: 0x3D5C0EC Offset: 0x3D580EC VA: 0x3D5C0EC
+	public int ReadRawBuffer(byte[] buffer) { }
+
+	// RVA: 0x3D5C108 Offset: 0x3D58108 VA: 0x3D5C108
+	public int ReadRawBuffer(byte[] outBuffer, int offset, int length) { }
+
+	// RVA: 0x3D5C248 Offset: 0x3D58248 VA: 0x3D5C248
+	public int ReadClearTextBuffer(byte[] outBuffer, int offset, int length) { }
+
+	// RVA: 0x3D5C388 Offset: 0x3D58388 VA: 0x3D5C388
+	public int ReadLeByte() { }
+
+	// RVA: 0x3D5C434 Offset: 0x3D58434 VA: 0x3D5C434
+	public int ReadLeShort() { }
+
+	// RVA: 0x3D5C460 Offset: 0x3D58460 VA: 0x3D5C460
+	public int ReadLeInt() { }
+
+	// RVA: 0x3D5C4B4 Offset: 0x3D584B4 VA: 0x3D5C4B4
+	public long ReadLeLong() { }
+
+	// RVA: 0x3D5C4E8 Offset: 0x3D584E8 VA: 0x3D5C4E8
+	public void set_CryptoTransform(ICryptoTransform value) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip.Compression.Streams
+public class InflaterInputStream : Stream // TypeDefIndex: 1245
+{
+	// Fields
+	private bool m_EnableReadOptimize; // 0x28
+	protected Inflater inf; // 0x30
+	protected InflaterInputBuffer inputBuffer; // 0x38
+	private Stream baseInputStream; // 0x40
+	protected long csize; // 0x48
+	private bool isClosed; // 0x50
+	private bool isStreamOwner; // 0x51
+
+	// Properties
+	public bool IsStreamOwner { get; set; }
+	public virtual int Available { get; }
+	public override bool CanRead { get; }
+	public override bool CanSeek { get; }
+	public override bool CanWrite { get; }
+	public override long Length { get; }
+	public override long Position { get; set; }
+
+	// Methods
+
+	// RVA: 0x3D5C68C Offset: 0x3D5868C VA: 0x3D5C68C
+	public void .ctor(Stream baseInputStream) { }
+
+	// RVA: 0x3D5C7E4 Offset: 0x3D587E4 VA: 0x3D5C7E4
+	public void .ctor(Stream baseInputStream, Inflater inf) { }
+
+	// RVA: 0x3D5C6FC Offset: 0x3D586FC VA: 0x3D5C6FC
+	public void .ctor(Stream baseInputStream, Inflater inflater, int bufferSize) { }
+
+	// RVA: 0x3D5C7EC Offset: 0x3D587EC VA: 0x3D5C7EC
+	public void Reset(Stream baseInputStream, int bufferSize) { }
+
+	// RVA: 0x3D5C964 Offset: 0x3D58964 VA: 0x3D5C964
+	public bool get_IsStreamOwner() { }
+
+	// RVA: 0x3D5C96C Offset: 0x3D5896C VA: 0x3D5C96C
+	public void set_IsStreamOwner(bool value) { }
+
+	// RVA: 0x3D5C978 Offset: 0x3D58978 VA: 0x3D5C978
+	public long Skip(long count) { }
+
+	// RVA: 0x3D5CAE8 Offset: 0x3D58AE8 VA: 0x3D5CAE8
+	protected void StopDecrypting() { }
+
+	// RVA: 0x3D5CB04 Offset: 0x3D58B04 VA: 0x3D5CB04 Slot: 39
+	public virtual int get_Available() { }
+
+	// RVA: 0x3D5CB44 Offset: 0x3D58B44 VA: 0x3D5CB44
+	protected void Fill() { }
+
+	// RVA: 0x3D5CBD0 Offset: 0x3D58BD0 VA: 0x3D5CBD0 Slot: 7
+	public override bool get_CanRead() { }
+
+	// RVA: 0x3D5CBFC Offset: 0x3D58BFC VA: 0x3D5CBFC Slot: 8
+	public override bool get_CanSeek() { }
+
+	// RVA: 0x3D5CC04 Offset: 0x3D58C04 VA: 0x3D5CC04 Slot: 10
+	public override bool get_CanWrite() { }
+
+	// RVA: 0x3D5CC0C Offset: 0x3D58C0C VA: 0x3D5CC0C Slot: 11
+	public override long get_Length() { }
+
+	// RVA: 0x3D5CC28 Offset: 0x3D58C28 VA: 0x3D5CC28 Slot: 12
+	public override long get_Position() { }
+
+	// RVA: 0x3D5CC54 Offset: 0x3D58C54 VA: 0x3D5CC54 Slot: 13
+	public override void set_Position(long value) { }
+
+	// RVA: 0x3D5CCA0 Offset: 0x3D58CA0 VA: 0x3D5CCA0 Slot: 21
+	public override void Flush() { }
+
+	// RVA: 0x3D5CCD0 Offset: 0x3D58CD0 VA: 0x3D5CCD0 Slot: 31
+	public override long Seek(long offset, SeekOrigin origin) { }
+
+	// RVA: 0x3D5CD1C Offset: 0x3D58D1C VA: 0x3D5CD1C Slot: 32
+	public override void SetLength(long value) { }
+
+	// RVA: 0x3D5CD68 Offset: 0x3D58D68 VA: 0x3D5CD68 Slot: 36
+	public override void Write(byte[] buffer, int offset, int count) { }
+
+	// RVA: 0x3D5CDB4 Offset: 0x3D58DB4 VA: 0x3D5CDB4 Slot: 38
+	public override void WriteByte(byte value) { }
+
+	// RVA: 0x3D5CE00 Offset: 0x3D58E00 VA: 0x3D5CE00 Slot: 27
+	public override IAsyncResult BeginWrite(byte[] buffer, int offset, int count, AsyncCallback callback, object state) { }
+
+	// RVA: 0x3D5CE4C Offset: 0x3D58E4C VA: 0x3D5CE4C Slot: 19
+	public override void Close() { }
+
+	// RVA: 0x3D5CE9C Offset: 0x3D58E9C VA: 0x3D5CE9C Slot: 33
+	public override int Read(byte[] buffer, int offset, int count) { }
+
+	// RVA: 0x3D5CFF0 Offset: 0x3D58FF0 VA: 0x3D5CFF0
+	public void SetReadOptimize(bool optimize) { }
+
+	// RVA: 0x3D5CFFC Offset: 0x3D58FFC VA: 0x3D5CFFC Slot: 40
+	public virtual int OptimizeRead(byte[] buffer, int offset, int count) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip.Compression.Streams
+public class OutputWindow // TypeDefIndex: 1246
+{
+	// Fields
+	private const int WindowSize = 32768;
+	private const int WindowMask = 32767;
+	private byte[] window; // 0x10
+	private int windowEnd; // 0x18
+	private int windowFilled; // 0x1C
+
+	// Methods
+
+	// RVA: 0x3D5777C Offset: 0x3D5377C VA: 0x3D5777C
+	public void Write(int value) { }
+
+	// RVA: 0x3D5D150 Offset: 0x3D59150 VA: 0x3D5D150
+	private void SlowRepeat(int repStart, int length, int distance) { }
+
+	// RVA: 0x3D57958 Offset: 0x3D53958 VA: 0x3D57958
+	public void Repeat(int length, int distance) { }
+
+	// RVA: 0x3D58050 Offset: 0x3D54050 VA: 0x3D58050
+	public int CopyStored(StreamManipulator input, int length) { }
+
+	// RVA: 0x3D58D0C Offset: 0x3D54D0C VA: 0x3D58D0C
+	public void CopyDict(byte[] dictionary, int offset, int length) { }
+
+	// RVA: 0x3D5776C Offset: 0x3D5376C VA: 0x3D5776C
+	public int GetFreeSpace() { }
+
+	// RVA: 0x3D5D360 Offset: 0x3D59360 VA: 0x3D5D360
+	public int GetAvailable() { }
+
+	// RVA: 0x3D59288 Offset: 0x3D55288 VA: 0x3D59288
+	public int CopyOutput(byte[] output, int offset, int len) { }
+
+	// RVA: 0x3D570C0 Offset: 0x3D530C0 VA: 0x3D570C0
+	public void Reset() { }
+
+	// RVA: 0x3D56FD0 Offset: 0x3D52FD0 VA: 0x3D56FD0
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Zip.Compression.Streams
+public class StreamManipulator // TypeDefIndex: 1247
+{
+	// Fields
+	private byte[] window_; // 0x10
+	private int windowStart_; // 0x18
+	private int windowEnd_; // 0x1C
+	private uint buffer_; // 0x20
+	private int bitsInBuffer_; // 0x24
+
+	// Properties
+	public int AvailableBits { get; }
+	public int AvailableBytes { get; }
+	public bool IsNeedingInput { get; }
+
+	// Methods
+
+	// RVA: 0x3D56FC8 Offset: 0x3D52FC8 VA: 0x3D56FC8
+	public void .ctor() { }
+
+	// RVA: 0x3D571E0 Offset: 0x3D531E0 VA: 0x3D571E0
+	public int PeekBits(int bitCount) { }
+
+	// RVA: 0x3D57280 Offset: 0x3D53280 VA: 0x3D57280
+	public void DropBits(int bitCount) { }
+
+	// RVA: 0x3D5D368 Offset: 0x3D59368 VA: 0x3D5D368
+	public int GetBits(int bitCount) { }
+
+	// RVA: 0x3D5D3A4 Offset: 0x3D593A4 VA: 0x3D5D3A4
+	public int get_AvailableBits() { }
+
+	// RVA: 0x3D59430 Offset: 0x3D55430 VA: 0x3D59430
+	public int get_AvailableBytes() { }
+
+	// RVA: 0x3D57FFC Offset: 0x3D53FFC VA: 0x3D57FFC
+	public void SkipToByteBoundary() { }
+
+	// RVA: 0x3D5814C Offset: 0x3D5414C VA: 0x3D5814C
+	public bool get_IsNeedingInput() { }
+
+	// RVA: 0x3D5D1C4 Offset: 0x3D591C4 VA: 0x3D5D1C4
+	public int CopyBytes(byte[] output, int offset, int length) { }
+
+	// RVA: 0x3D570B8 Offset: 0x3D530B8 VA: 0x3D570B8
+	public void Reset() { }
+
+	// RVA: 0x3D58E2C Offset: 0x3D54E2C VA: 0x3D58E2C
+	public void SetInput(byte[] buffer, int offset, int count) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.GZip
+public sealed class GZipConstants // TypeDefIndex: 1248
+{
+	// Fields
+	public const int GZIP_MAGIC = 8075;
+	public const int FTEXT = 1;
+	public const int FHCRC = 2;
+	public const int FEXTRA = 4;
+	public const int FNAME = 8;
+	public const int FCOMMENT = 16;
+
+	// Methods
+
+	// RVA: 0x3D5D3AC Offset: 0x3D593AC VA: 0x3D5D3AC
+	private void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.GZip
+[Serializable]
+public class GZipException : SharpZipBaseException // TypeDefIndex: 1249
+{
+	// Methods
+
+	// RVA: 0x3D5D3B4 Offset: 0x3D593B4 VA: 0x3D5D3B4
+	protected void .ctor(SerializationInfo info, StreamingContext context) { }
+
+	// RVA: 0x3D5D3BC Offset: 0x3D593BC VA: 0x3D5D3BC
+	public void .ctor() { }
+
+	// RVA: 0x3D5D3C4 Offset: 0x3D593C4 VA: 0x3D5D3C4
+	public void .ctor(string message) { }
+
+	// RVA: 0x3D5D3CC Offset: 0x3D593CC VA: 0x3D5D3CC
+	public void .ctor(string message, Exception innerException) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.GZip
+public class GZipInputStream : InflaterInputStream // TypeDefIndex: 1250
+{
+	// Fields
+	protected Crc32 crc; // 0x58
+	private bool readGZIPHeader; // 0x60
+
+	// Methods
+
+	// RVA: 0x3D5D3D4 Offset: 0x3D593D4 VA: 0x3D5D3D4
+	public void .ctor(Stream baseInputStream) { }
+
+	// RVA: 0x3D5D3DC Offset: 0x3D593DC VA: 0x3D5D3DC
+	public void .ctor(Stream baseInputStream, int size) { }
+
+	// RVA: 0x3D5D450 Offset: 0x3D59450 VA: 0x3D5D450
+	public void Reset(Stream baseInputStream) { }
+
+	// RVA: 0x3D5D458 Offset: 0x3D59458 VA: 0x3D5D458 Slot: 33
+	public override int Read(byte[] buffer, int offset, int count) { }
+
+	// RVA: 0x3D5DD48 Offset: 0x3D59D48 VA: 0x3D5DD48 Slot: 40
+	public override int OptimizeRead(byte[] buffer, int offset, int count) { }
+
+	// RVA: 0x3D5D514 Offset: 0x3D59514 VA: 0x3D5D514
+	private bool ReadHeader() { }
+
+	// RVA: 0x3D5DAB0 Offset: 0x3D59AB0 VA: 0x3D5DAB0
+	private void ReadFooter() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+private enum GZipOutputStream.OutputState // TypeDefIndex: 1251
+{
+	// Fields
+	public int value__; // 0x0
+	public const OutputState Header = 0;
+	public const OutputState Footer = 1;
+	public const OutputState Finished = 2;
+	public const OutputState Closed = 3;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.GZip
+public class GZipOutputStream : DeflaterOutputStream // TypeDefIndex: 1252
+{
+	// Fields
+	protected Crc32 crc; // 0x60
+	private OutputState state_; // 0x68
+
+	// Methods
+
+	// RVA: 0x3D5DEC8 Offset: 0x3D59EC8 VA: 0x3D5DEC8
+	public void .ctor(Stream baseOutputStream) { }
+
+	// RVA: 0x3D5DED0 Offset: 0x3D59ED0 VA: 0x3D5DED0
+	public void .ctor(Stream baseOutputStream, int size) { }
+
+	// RVA: 0x3D5DF8C Offset: 0x3D59F8C VA: 0x3D5DF8C
+	public void SetLevel(int level) { }
+
+	// RVA: 0x3D5DFF8 Offset: 0x3D59FF8 VA: 0x3D5DFF8
+	public int GetLevel() { }
+
+	// RVA: 0x3D5E014 Offset: 0x3D5A014 VA: 0x3D5E014 Slot: 36
+	public override void Write(byte[] buffer, int offset, int count) { }
+
+	// RVA: 0x3D5E194 Offset: 0x3D5A194 VA: 0x3D5E194 Slot: 19
+	public override void Close() { }
+
+	// RVA: 0x3D5E2A8 Offset: 0x3D5A2A8 VA: 0x3D5E2A8 Slot: 39
+	public override void Finish() { }
+
+	// RVA: 0x3D5E0D0 Offset: 0x3D5A0D0 VA: 0x3D5E0D0
+	private void WriteHeader() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Encryption
+public abstract class PkzipClassic : SymmetricAlgorithm // TypeDefIndex: 1253
+{
+	// Methods
+
+	// RVA: 0x3D5AE48 Offset: 0x3D56E48 VA: 0x3D5AE48
+	public static byte[] GenerateKeys(byte[] seed) { }
+
+	// RVA: 0x3D5E4A0 Offset: 0x3D5A4A0 VA: 0x3D5E4A0
+	protected void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Encryption
+internal class PkzipClassicCryptoBase // TypeDefIndex: 1254
+{
+	// Fields
+	private uint[] keys; // 0x10
+
+	// Methods
+
+	// RVA: 0x3D5E4A8 Offset: 0x3D5A4A8 VA: 0x3D5E4A8
+	protected byte TransformByte() { }
+
+	// RVA: 0x3D5E4EC Offset: 0x3D5A4EC VA: 0x3D5E4EC
+	protected void SetKeys(byte[] keyData) { }
+
+	// RVA: 0x3D5E650 Offset: 0x3D5A650 VA: 0x3D5E650
+	protected void UpdateKeys(byte ch) { }
+
+	// RVA: 0x3D5E738 Offset: 0x3D5A738 VA: 0x3D5E738
+	protected void Reset() { }
+
+	// RVA: 0x3D5E778 Offset: 0x3D5A778 VA: 0x3D5E778
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Encryption
+internal class PkzipClassicEncryptCryptoTransform : PkzipClassicCryptoBase, ICryptoTransform, IDisposable // TypeDefIndex: 1255
+{
+	// Properties
+	public bool CanReuseTransform { get; }
+	public int InputBlockSize { get; }
+	public int OutputBlockSize { get; }
+	public bool CanTransformMultipleBlocks { get; }
+
+	// Methods
+
+	// RVA: 0x3D5E780 Offset: 0x3D5A780 VA: 0x3D5E780
+	internal void .ctor(byte[] keyBlock) { }
+
+	// RVA: 0x3D5E7AC Offset: 0x3D5A7AC VA: 0x3D5E7AC Slot: 9
+	public byte[] TransformFinalBlock(byte[] inputBuffer, int inputOffset, int inputCount) { }
+
+	// RVA: 0x3D5E838 Offset: 0x3D5A838 VA: 0x3D5E838 Slot: 8
+	public int TransformBlock(byte[] inputBuffer, int inputOffset, int inputCount, byte[] outputBuffer, int outputOffset) { }
+
+	// RVA: 0x3D5E908 Offset: 0x3D5A908 VA: 0x3D5E908 Slot: 7
+	public bool get_CanReuseTransform() { }
+
+	// RVA: 0x3D5E910 Offset: 0x3D5A910 VA: 0x3D5E910 Slot: 4
+	public int get_InputBlockSize() { }
+
+	// RVA: 0x3D5E918 Offset: 0x3D5A918 VA: 0x3D5E918 Slot: 5
+	public int get_OutputBlockSize() { }
+
+	// RVA: 0x3D5E920 Offset: 0x3D5A920 VA: 0x3D5E920 Slot: 6
+	public bool get_CanTransformMultipleBlocks() { }
+
+	// RVA: 0x3D5E928 Offset: 0x3D5A928 VA: 0x3D5E928 Slot: 10
+	public void Dispose() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Encryption
+internal class PkzipClassicDecryptCryptoTransform : PkzipClassicCryptoBase, ICryptoTransform, IDisposable // TypeDefIndex: 1256
+{
+	// Properties
+	public bool CanReuseTransform { get; }
+	public int InputBlockSize { get; }
+	public int OutputBlockSize { get; }
+	public bool CanTransformMultipleBlocks { get; }
+
+	// Methods
+
+	// RVA: 0x3D5E92C Offset: 0x3D5A92C VA: 0x3D5E92C
+	internal void .ctor(byte[] keyBlock) { }
+
+	// RVA: 0x3D5E958 Offset: 0x3D5A958 VA: 0x3D5E958 Slot: 9
+	public byte[] TransformFinalBlock(byte[] inputBuffer, int inputOffset, int inputCount) { }
+
+	// RVA: 0x3D5E9E4 Offset: 0x3D5A9E4 VA: 0x3D5E9E4 Slot: 8
+	public int TransformBlock(byte[] inputBuffer, int inputOffset, int inputCount, byte[] outputBuffer, int outputOffset) { }
+
+	// RVA: 0x3D5EAA8 Offset: 0x3D5AAA8 VA: 0x3D5EAA8 Slot: 7
+	public bool get_CanReuseTransform() { }
+
+	// RVA: 0x3D5EAB0 Offset: 0x3D5AAB0 VA: 0x3D5EAB0 Slot: 4
+	public int get_InputBlockSize() { }
+
+	// RVA: 0x3D5EAB8 Offset: 0x3D5AAB8 VA: 0x3D5EAB8 Slot: 5
+	public int get_OutputBlockSize() { }
+
+	// RVA: 0x3D5EAC0 Offset: 0x3D5AAC0 VA: 0x3D5EAC0 Slot: 6
+	public bool get_CanTransformMultipleBlocks() { }
+
+	// RVA: 0x3D5EAC8 Offset: 0x3D5AAC8 VA: 0x3D5EAC8 Slot: 10
+	public void Dispose() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Encryption
+public sealed class PkzipClassicManaged : PkzipClassic // TypeDefIndex: 1257
+{
+	// Fields
+	private byte[] key_; // 0x48
+
+	// Properties
+	public override int BlockSize { get; set; }
+	public override KeySizes[] LegalKeySizes { get; }
+	public override KeySizes[] LegalBlockSizes { get; }
+	public override byte[] Key { get; set; }
+
+	// Methods
+
+	// RVA: 0x3D5EACC Offset: 0x3D5AACC VA: 0x3D5EACC Slot: 6
+	public override int get_BlockSize() { }
+
+	// RVA: 0x3D5EAD4 Offset: 0x3D5AAD4 VA: 0x3D5EAD4 Slot: 7
+	public override void set_BlockSize(int value) { }
+
+	// RVA: 0x3D5EB2C Offset: 0x3D5AB2C VA: 0x3D5EB2C Slot: 15
+	public override KeySizes[] get_LegalKeySizes() { }
+
+	// RVA: 0x3D5EBD8 Offset: 0x3D5ABD8 VA: 0x3D5EBD8 Slot: 27
+	public override void GenerateIV() { }
+
+	// RVA: 0x3D5EBDC Offset: 0x3D5ABDC VA: 0x3D5EBDC Slot: 14
+	public override KeySizes[] get_LegalBlockSizes() { }
+
+	// RVA: 0x3D5EC88 Offset: 0x3D5AC88 VA: 0x3D5EC88 Slot: 12
+	public override byte[] get_Key() { }
+
+	// RVA: 0x3D5ED24 Offset: 0x3D5AD24 VA: 0x3D5ED24 Slot: 13
+	public override void set_Key(byte[] value) { }
+
+	// RVA: 0x3D5EE58 Offset: 0x3D5AE58 VA: 0x3D5EE58 Slot: 26
+	public override void GenerateKey() { }
+
+	// RVA: 0x3D5EF08 Offset: 0x3D5AF08 VA: 0x3D5EF08 Slot: 23
+	public override ICryptoTransform CreateEncryptor(byte[] rgbKey, byte[] rgbIV) { }
+
+	// RVA: 0x3D5EFA8 Offset: 0x3D5AFA8 VA: 0x3D5EFA8 Slot: 25
+	public override ICryptoTransform CreateDecryptor(byte[] rgbKey, byte[] rgbIV) { }
+
+	// RVA: 0x3D5AE40 Offset: 0x3D56E40 VA: 0x3D5AE40
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Encryption
+internal class ZipAESTransform : ICryptoTransform, IDisposable // TypeDefIndex: 1258
+{
+	// Fields
+	private const int PWD_VER_LENGTH = 2;
+	private const int KEY_ROUNDS = 1000;
+	private const int ENCRYPT_BLOCK = 16;
+	private int _blockSize; // 0x10
+	private ICryptoTransform _encryptor; // 0x18
+	private readonly byte[] _counterNonce; // 0x20
+	private byte[] _encryptBuffer; // 0x28
+	private int _encrPos; // 0x30
+	private byte[] _pwdVerifier; // 0x38
+	private HMACSHA1 _hmacsha1; // 0x40
+	private bool _finalised; // 0x48
+	private bool _writeMode; // 0x49
+
+	// Properties
+	public byte[] PwdVerifier { get; }
+	public int InputBlockSize { get; }
+	public int OutputBlockSize { get; }
+	public bool CanTransformMultipleBlocks { get; }
+	public bool CanReuseTransform { get; }
+
+	// Methods
+
+	// RVA: 0x3D5B3A8 Offset: 0x3D573A8 VA: 0x3D5B3A8
+	public void .ctor(string key, byte[] saltBytes, int blockSize, bool writeMode) { }
+
+	// RVA: 0x3D5F048 Offset: 0x3D5B048 VA: 0x3D5F048 Slot: 8
+	public int TransformBlock(byte[] inputBuffer, int inputOffset, int inputCount, byte[] outputBuffer, int outputOffset) { }
+
+	// RVA: 0x3D5F29C Offset: 0x3D5B29C VA: 0x3D5F29C
+	public byte[] get_PwdVerifier() { }
+
+	// RVA: 0x3D5AC6C Offset: 0x3D56C6C VA: 0x3D5AC6C
+	public byte[] GetAuthCode() { }
+
+	// RVA: 0x3D5F2A4 Offset: 0x3D5B2A4 VA: 0x3D5F2A4 Slot: 9
+	public byte[] TransformFinalBlock(byte[] inputBuffer, int inputOffset, int inputCount) { }
+
+	// RVA: 0x3D5F2F0 Offset: 0x3D5B2F0 VA: 0x3D5F2F0 Slot: 4
+	public int get_InputBlockSize() { }
+
+	// RVA: 0x3D5F2F8 Offset: 0x3D5B2F8 VA: 0x3D5F2F8 Slot: 5
+	public int get_OutputBlockSize() { }
+
+	// RVA: 0x3D5F300 Offset: 0x3D5B300 VA: 0x3D5F300 Slot: 6
+	public bool get_CanTransformMultipleBlocks() { }
+
+	// RVA: 0x3D5F308 Offset: 0x3D5B308 VA: 0x3D5F308 Slot: 7
+	public bool get_CanReuseTransform() { }
+
+	// RVA: 0x3D5F310 Offset: 0x3D5B310 VA: 0x3D5F310 Slot: 10
+	public void Dispose() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Core
+public interface INameTransform // TypeDefIndex: 1259
+{
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract string TransformFile(string name);
+
+	// RVA: -1 Offset: -1 Slot: 1
+	public abstract string TransformDirectory(string name);
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Core
+public sealed class StreamUtils // TypeDefIndex: 1260
+{
+	// Methods
+
+	// RVA: 0x3D5F3BC Offset: 0x3D5B3BC VA: 0x3D5F3BC
+	public static void ReadFully(Stream stream, byte[] buffer) { }
+
+	// RVA: 0x3D5F3D8 Offset: 0x3D5B3D8 VA: 0x3D5F3D8
+	public static void ReadFully(Stream stream, byte[] buffer, int offset, int count) { }
+
+	// RVA: 0x3D5F550 Offset: 0x3D5B550 VA: 0x3D5F550
+	public static void Copy(Stream source, Stream destination, byte[] buffer) { }
+
+	// RVA: 0x3D5F6D4 Offset: 0x3D5B6D4 VA: 0x3D5F6D4
+	public static void CopyFromGzipInputStream(GZipInputStream source, Stream destination, byte[] buffer, bool enable_optimize = false) { }
+
+	// RVA: 0x3D5F868 Offset: 0x3D5B868 VA: 0x3D5F868
+	private void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Checksums
+public sealed class Adler32 : IChecksum // TypeDefIndex: 1261
+{
+	// Fields
+	private const uint BASE = 65521;
+	private uint checksum; // 0x10
+
+	// Properties
+	public long Value { get; }
+
+	// Methods
+
+	// RVA: 0x3D57BD0 Offset: 0x3D53BD0 VA: 0x3D57BD0 Slot: 4
+	public long get_Value() { }
+
+	// RVA: 0x3D56FA8 Offset: 0x3D52FA8 VA: 0x3D56FA8
+	public void .ctor() { }
+
+	// RVA: 0x3D570C8 Offset: 0x3D530C8 VA: 0x3D570C8 Slot: 5
+	public void Reset() { }
+
+	// RVA: 0x3D5F870 Offset: 0x3D5B870 VA: 0x3D5F870 Slot: 6
+	public void Update(int value) { }
+
+	// RVA: 0x3D5F8B0 Offset: 0x3D5B8B0 VA: 0x3D5F8B0 Slot: 7
+	public void Update(byte[] buffer) { }
+
+	// RVA: 0x3D58B2C Offset: 0x3D54B2C VA: 0x3D58B2C Slot: 8
+	public void Update(byte[] buffer, int offset, int count) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Checksums
+public sealed class Crc32 : IChecksum // TypeDefIndex: 1262
+{
+	// Fields
+	private const uint CrcSeed = 4294967295;
+	private static readonly uint[] CrcTable; // 0x0
+	private uint crc; // 0x10
+
+	// Properties
+	public long Value { get; set; }
+
+	// Methods
+
+	// RVA: 0x3D5E40C Offset: 0x3D5A40C VA: 0x3D5E40C
+	internal static uint ComputeCrc32(uint oldCrc, byte value) { }
+
+	// RVA: 0x3D5DEC0 Offset: 0x3D59EC0 VA: 0x3D5DEC0 Slot: 4
+	public long get_Value() { }
+
+	// RVA: 0x3D5F910 Offset: 0x3D5B910 VA: 0x3D5F910
+	public void set_Value(long value) { }
+
+	// RVA: 0x3D5F918 Offset: 0x3D5B918 VA: 0x3D5F918 Slot: 5
+	public void Reset() { }
+
+	// RVA: 0x3D5DE0C Offset: 0x3D59E0C VA: 0x3D5DE0C Slot: 6
+	public void Update(int value) { }
+
+	// RVA: 0x3D5F920 Offset: 0x3D5B920 VA: 0x3D5F920 Slot: 7
+	public void Update(byte[] buffer) { }
+
+	// RVA: 0x3D5D8F0 Offset: 0x3D598F0 VA: 0x3D5D8F0 Slot: 8
+	public void Update(byte[] buffer, int offset, int count) { }
+
+	// RVA: 0x3D5DE04 Offset: 0x3D59E04 VA: 0x3D5DE04
+	public void .ctor() { }
+
+	// RVA: 0x3D5F980 Offset: 0x3D5B980 VA: 0x3D5F980
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: ICSharpCode.SharpZipLib.Checksums
+public interface IChecksum // TypeDefIndex: 1263
+{
+	// Properties
+	public abstract long Value { get; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract long get_Value();
+
+	// RVA: -1 Offset: -1 Slot: 1
+	public abstract void Reset();
+
+	// RVA: -1 Offset: -1 Slot: 2
+	public abstract void Update(int value);
+
+	// RVA: -1 Offset: -1 Slot: 3
+	public abstract void Update(byte[] buffer);
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public abstract void Update(byte[] buffer, int offset, int count);
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: RuntimeGizmos
+public static class ExtVector3 // TypeDefIndex: 1264
+{
+	// Methods
+
+	// RVA: 0x3D5FA20 Offset: 0x3D5BA20 VA: 0x3D5FA20
+	public static float MagnitudeInDirection(Vector3 vector, Vector3 direction, bool normalizeParameters = true) { }
+
+	// RVA: 0x3D5FB1C Offset: 0x3D5BB1C VA: 0x3D5FB1C
+	public static bool IsParallel(Vector3 direction, Vector3 otherDirection, float precision = 0.0001) { }
+
+	// RVA: 0x3D5FB60 Offset: 0x3D5BB60 VA: 0x3D5FB60
+	public static bool IsInDirection(Vector3 direction, Vector3 otherDirection) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: RuntimeGizmos
+public static class Geometry // TypeDefIndex: 1265
+{
+	// Methods
+
+	// RVA: 0x3D5FB80 Offset: 0x3D5BB80 VA: 0x3D5FB80
+	public static float LinePlaneDistance(Vector3 linePoint, Vector3 lineVec, Vector3 planePoint, Vector3 planeNormal) { }
+
+	// RVA: 0x3D5FBD8 Offset: 0x3D5BBD8 VA: 0x3D5FBD8
+	public static Vector3 LinePlaneIntersect(Vector3 linePoint, Vector3 lineVec, Vector3 planePoint, Vector3 planeNormal) { }
+
+	// RVA: 0x3D5FCA4 Offset: 0x3D5BCA4 VA: 0x3D5FCA4
+	public static IntersectPoints ClosestPointsOnTwoLines(Vector3 point1, Vector3 point1Direction, Vector3 point2, Vector3 point2Direction) { }
+
+	// RVA: 0x3D5FEAC Offset: 0x3D5BEAC VA: 0x3D5FEAC
+	public static IntersectPoints ClosestPointsOnSegmentToLine(Vector3 segment0, Vector3 segment1, Vector3 linePoint, Vector3 lineDirection) { }
+
+	// RVA: 0x3D5FF78 Offset: 0x3D5BF78 VA: 0x3D5FF78
+	public static Vector3 ClampToSegment(Vector3 point, Vector3 linePoint1, Vector3 linePoint2) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: RuntimeGizmos
+public struct AxisInfo // TypeDefIndex: 1266
+{
+	// Fields
+	public Vector3 Pivot; // 0x0
+	public Vector3 DirectionX; // 0xC
+	public Vector3 DirectionY; // 0x18
+	public Vector3 DirectionZ; // 0x24
+
+	// Methods
+
+	// RVA: 0x3D5FFF4 Offset: 0x3D5BFF4 VA: 0x3D5FFF4
+	public void Set(Transform target, Vector3 pivot, TransformSpace space) { }
+
+	// RVA: 0x3D60130 Offset: 0x3D5C130 VA: 0x3D60130
+	public Vector3 GetXAxisEnd(float size) { }
+
+	// RVA: 0x3D60180 Offset: 0x3D5C180 VA: 0x3D60180
+	public Vector3 GetYAxisEnd(float size) { }
+
+	// RVA: 0x3D601D0 Offset: 0x3D5C1D0 VA: 0x3D601D0
+	public Vector3 GetZAxisEnd(float size) { }
+
+	// RVA: 0x3D60220 Offset: 0x3D5C220 VA: 0x3D60220
+	public Vector3 GetAxisEnd(Vector3 direction, float size) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: RuntimeGizmos
+public class AxisVectors // TypeDefIndex: 1267
+{
+	// Fields
+	public List<Vector3> x; // 0x10
+	public List<Vector3> y; // 0x18
+	public List<Vector3> z; // 0x20
+	public List<Vector3> all; // 0x28
+
+	// Methods
+
+	// RVA: 0x3D60268 Offset: 0x3D5C268 VA: 0x3D60268
+	public void Clear() { }
+
+	// RVA: 0x3D602F4 Offset: 0x3D5C2F4 VA: 0x3D602F4
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: RuntimeGizmos
+public class LockVectors // TypeDefIndex: 1268
+{
+	// Fields
+	public List<Vector3> xy; // 0x10
+	public List<Vector3> yx; // 0x18
+	public List<Vector3> xz; // 0x20
+	public List<Vector3> zx; // 0x28
+	public List<Vector3> yz; // 0x30
+	public List<Vector3> zy; // 0x38
+
+	// Methods
+
+	// RVA: 0x3D603E8 Offset: 0x3D5C3E8 VA: 0x3D603E8
+	public void Clear() { }
+
+	// RVA: 0x3D6049C Offset: 0x3D5C49C VA: 0x3D6049C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: RuntimeGizmos
+public enum TransformSpace // TypeDefIndex: 1269
+{
+	// Fields
+	public int value__; // 0x0
+	public const TransformSpace Global = 0;
+	public const TransformSpace Local = 1;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: RuntimeGizmos
+public enum TransformType // TypeDefIndex: 1270
+{
+	// Fields
+	public int value__; // 0x0
+	public const TransformType None = 0;
+	public const TransformType Move = 1;
+	public const TransformType Rotate = 2;
+	public const TransformType Scale = 3;
+	public const TransformType Tangent = 4;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: RuntimeGizmos
+public enum Axis // TypeDefIndex: 1271
+{
+	// Fields
+	public int value__; // 0x0
+	public const Axis None = 0;
+	public const Axis X = 1;
+	public const Axis Y = 2;
+	public const Axis Z = 3;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: RuntimeGizmos
+public struct IntersectPoints // TypeDefIndex: 1272
+{
+	// Fields
+	public Vector3 first; // 0x0
+	public Vector3 second; // 0xC
+
+	// Methods
+
+	// RVA: 0x3D605D8 Offset: 0x3D5C5D8 VA: 0x3D605D8
+	public void .ctor(Vector3 first, Vector3 second) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: RuntimeGizmos
+[DefaultMember("Item")]
+public struct Square // TypeDefIndex: 1273
+{
+	// Fields
+	public Vector3 bottomLeft; // 0x0
+	public Vector3 bottomRight; // 0xC
+	public Vector3 topLeft; // 0x18
+	public Vector3 topRight; // 0x24
+
+	// Properties
+	public Vector3 Item { get; }
+
+	// Methods
+
+	// RVA: 0x3D605F8 Offset: 0x3D5C5F8 VA: 0x3D605F8
+	public Vector3 get_Item(int index) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: RuntimeGizmos
+public class TargetInfo // TypeDefIndex: 1274
+{
+	// Fields
+	public Vector3 centerPivotPoint; // 0x10
+	public Vector3 previousPosition; // 0x1C
+
+	// Methods
+
+	// RVA: 0x3D606A8 Offset: 0x3D5C6A8 VA: 0x3D606A8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: RuntimeGizmos
+public class TransformGizmo : MonoBehaviour // TypeDefIndex: 1275
+{
+	// Fields
+	public TransformSpace Space; // 0x20
+	public TransformType TransformType; // 0x24
+	public Color ColorX; // 0x28
+	public Color ColorY; // 0x38
+	public Color ColorZ; // 0x48
+	public Color ColorAll; // 0x58
+	public Color ColorSelected; // 0x68
+	public float HandleLength; // 0x78
+	public float HandleWidth; // 0x7C
+	public float TriangleSize; // 0x80
+	public float BoxSize; // 0x84
+	public float AxisDelta; // 0x88
+	public int CircleDetail; // 0x8C
+	public float MinSelectedDistanceCheck; // 0x90
+	public float MoveSpeedMultiplier; // 0x94
+	public float ScaleSpeedMultiplier; // 0x98
+	public float RotateSpeedMultiplier; // 0x9C
+	public bool CircularRotationMethod; // 0xA0
+	[CompilerGenerated]
+	private Camera <MyCamera>k__BackingField; // 0xA8
+	public bool DisableAxisX; // 0xB0
+	public bool DisableAxisY; // 0xB1
+	public bool DisableAxisZ; // 0xB2
+	private bool m_LockXY; // 0xB3
+	private bool m_LockXZ; // 0xB4
+	private bool m_LockYZ; // 0xB5
+	public Vector3 AxisPosX; // 0xB8
+	public Vector3 AxisPosY; // 0xC4
+	public Vector3 AxisPosZ; // 0xD0
+	[CompilerGenerated]
+	private bool <IsTransforming>k__BackingField; // 0xDC
+	[CompilerGenerated]
+	private Vector3 <Pivot>k__BackingField; // 0xE0
+	public SceneEditObjectBase TargetObj; // 0xF0
+	private AxisInfo m_AxisInfo; // 0xF8
+	private Axis m_NearAxis; // 0x128
+	private AxisVectors m_HandleLines; // 0x130
+	private AxisVectors m_HandleTriangles; // 0x138
+	private AxisVectors m_HandleSquares; // 0x140
+	private AxisVectors m_CirclesLines; // 0x148
+	private LockVectors m_LockLines; // 0x150
+	private static Material m_LineMaterial; // 0x0
+	private Vector3 m_OriginalMousePosition; // 0x158
+	private Vector3 m_OriginalPivot; // 0x164
+	private Vector3 m_Axis; // 0x170
+	private Vector3 m_ProjectedAxis; // 0x17C
+	private Vector3 m_PlaneNormal; // 0x188
+	private float m_TotalAngle; // 0x194
+	private Vector3 m_LastDirection; // 0x198
+	private Nullable<Axis> m_RotatingAxis; // 0x1A4
+	public Color ClickColorX; // 0x1AC
+	public Color ClickColorY; // 0x1BC
+	public Color ClickColorZ; // 0x1CC
+	public Color SegmentColorX; // 0x1DC
+	public Color SegmentColorY; // 0x1EC
+	public Color SegmentColorZ; // 0x1FC
+	public int RotateStep; // 0x20C
+	private List<Vector3> m_AllRotationPoints; // 0x210
+	public int m_StartRotationIndex; // 0x218
+
+	// Properties
+	public Camera MyCamera { get; set; }
+	public bool IsTransforming { get; set; }
+	public Vector3 Pivot { get; set; }
+	public Axis NearAxis { get; }
+
+	// Methods
+
+	[CompilerGenerated]
+	// RVA: 0x3D606B0 Offset: 0x3D5C6B0 VA: 0x3D606B0
+	public Camera get_MyCamera() { }
+
+	[CompilerGenerated]
+	// RVA: 0x3D606B8 Offset: 0x3D5C6B8 VA: 0x3D606B8
+	private void set_MyCamera(Camera value) { }
+
+	[CompilerGenerated]
+	// RVA: 0x3D606C0 Offset: 0x3D5C6C0 VA: 0x3D606C0
+	public bool get_IsTransforming() { }
+
+	[CompilerGenerated]
+	// RVA: 0x3D606C8 Offset: 0x3D5C6C8 VA: 0x3D606C8
+	private void set_IsTransforming(bool value) { }
+
+	[CompilerGenerated]
+	// RVA: 0x3D606D4 Offset: 0x3D5C6D4 VA: 0x3D606D4
+	public Vector3 get_Pivot() { }
+
+	[CompilerGenerated]
+	// RVA: 0x3D606E0 Offset: 0x3D5C6E0 VA: 0x3D606E0
+	private void set_Pivot(Vector3 value) { }
+
+	// RVA: 0x3D606EC Offset: 0x3D5C6EC VA: 0x3D606EC
+	public Axis get_NearAxis() { }
+
+	// RVA: 0x3D606F4 Offset: 0x3D5C6F4 VA: 0x3D606F4
+	public void Awake() { }
+
+	// RVA: 0x3D60880 Offset: 0x3D5C880 VA: 0x3D60880
+	public void LateUpdate() { }
+
+	// RVA: 0x3D60ACC Offset: 0x3D5CACC VA: 0x3D60ACC
+	public void OnPostRender() { }
+
+	// RVA: 0x3D610A4 Offset: 0x3D5D0A4 VA: 0x3D610A4
+	private void DrawLockLines() { }
+
+	// RVA: 0x3D61378 Offset: 0x3D5D378 VA: 0x3D61378
+	public TransformSpace GetProperTransformSpace() { }
+
+	// RVA: 0x3D61398 Offset: 0x3D5D398 VA: 0x3D61398
+	public float GetDeltaMove() { }
+
+	// RVA: 0x3D61444 Offset: 0x3D5D444 VA: 0x3D61444
+	public float GetDeltaScale() { }
+
+	// RVA: 0x3D614F0 Offset: 0x3D5D4F0 VA: 0x3D614F0
+	public float GetDeltaRotate() { }
+
+	// RVA: 0x3D61A54 Offset: 0x3D5DA54 VA: 0x3D61A54
+	public float GetDeltaTangent() { }
+
+	// RVA: 0x3D61B00 Offset: 0x3D5DB00 VA: 0x3D61B00
+	public void EndAxisTransform() { }
+
+	// RVA: 0x3D61B14 Offset: 0x3D5DB14 VA: 0x3D61B14
+	public void StartAxisTransform() { }
+
+	// RVA: 0x3D61E9C Offset: 0x3D5DE9C VA: 0x3D61E9C
+	public Vector3 GetNearAxisDirection(out Vector3 otherAxis1, out Vector3 otherAxis2) { }
+
+	// RVA: 0x3D61FD8 Offset: 0x3D5DFD8 VA: 0x3D61FD8
+	public void InitScaleLock(LMOFHMAFDPP type) { }
+
+	// RVA: 0x3D6203C Offset: 0x3D5E03C VA: 0x3D6203C
+	public void SetTarget(SceneEditObjectBase editObj) { }
+
+	// RVA: 0x3D62294 Offset: 0x3D5E294 VA: 0x3D62294
+	public void SetTransformType(TransformType type) { }
+
+	// RVA: 0x3D622AC Offset: 0x3D5E2AC VA: 0x3D622AC
+	public void ClearTarget() { }
+
+	// RVA: 0x3D620D0 Offset: 0x3D5E0D0 VA: 0x3D620D0
+	private void UpdateGizmo() { }
+
+	// RVA: 0x3D622B8 Offset: 0x3D5E2B8 VA: 0x3D622B8
+	public AxisInfo GetAxisInfo() { }
+
+	// RVA: 0x3D622E8 Offset: 0x3D5E2E8 VA: 0x3D622E8
+	public void SetNearAxis() { }
+
+	// RVA: 0x3D624D0 Offset: 0x3D5E4D0 VA: 0x3D624D0
+	public void HandleNearestLines(TransformType type, AxisVectors axisVectors, float minSelectedDistanceCheck) { }
+
+	// RVA: 0x3D6245C Offset: 0x3D5E45C VA: 0x3D6245C
+	public void HandleNearestPlanes(TransformType type, AxisVectors axisVectors, float minSelectedDistanceCheck) { }
+
+	// RVA: 0x3D62BF0 Offset: 0x3D5EBF0 VA: 0x3D62BF0
+	public void HandleNearest(TransformType type, float xClosestDistance, float yClosestDistance, float zClosestDistance, float minSelectedDistanceCheck) { }
+
+	// RVA: 0x3D62A14 Offset: 0x3D5EA14 VA: 0x3D62A14
+	private float ClosestDistanceFromMouseToLines(List<Vector3> lines) { }
+
+	// RVA: 0x3D62C90 Offset: 0x3D5EC90 VA: 0x3D62C90
+	private float ClosestDistanceFromMouseToPlanes(List<Vector3> planePoints) { }
+
+	// RVA: 0x3D60900 Offset: 0x3D5C900 VA: 0x3D60900
+	public void SetAxisInfo() { }
+
+	// RVA: 0x3D61914 Offset: 0x3D5D914 VA: 0x3D61914
+	public float GetDistanceMultiplier() { }
+
+	// RVA: 0x3D60A18 Offset: 0x3D5CA18 VA: 0x3D60A18
+	public void SetLines() { }
+
+	// RVA: 0x3D63020 Offset: 0x3D5F020 VA: 0x3D63020
+	public void SetHandleLines() { }
+
+	// RVA: 0x3D635AC Offset: 0x3D5F5AC VA: 0x3D635AC
+	public void SetLockLines() { }
+
+	// RVA: 0x3D63ACC Offset: 0x3D5FACC VA: 0x3D63ACC
+	public void AddLockQuads(Vector3 startPoint, Vector3 endPoint, Vector3 startDirection, Vector3 endDirection, Vector3 otherDirection, float width, List<Vector3> startBuffer, List<Vector3> endBuffer) { }
+
+	// RVA: 0x3D63218 Offset: 0x3D5F218 VA: 0x3D63218
+	public void SetHandleTriangles() { }
+
+	// RVA: 0x3D64450 Offset: 0x3D60450 VA: 0x3D64450
+	public void AddTriangles(Vector3 axisEnd, Vector3 direction, Vector3 otherDirection1, Vector3 otherDirection2, float size, List<Vector3> resultsBuffer) { }
+
+	// RVA: 0x3D649F8 Offset: 0x3D609F8 VA: 0x3D649F8
+	public void AddSquares(Vector3 axisStart, Vector3 axisDirection, Vector3 axisOtherDirection1, Vector3 axisOtherDirection2, float size, List<Vector3> resultsBuffer) { }
+
+	// RVA: 0x3D63A84 Offset: 0x3D5FA84 VA: 0x3D63A84
+	public void AddQuads(Vector3 axisStart, Vector3 axisDirection, Vector3 otherDirection1, Vector3 otherDirection2, float length, float width, List<Vector3> resultsBuffer) { }
+
+	// RVA: 0x3D64A44 Offset: 0x3D60A44 VA: 0x3D64A44
+	public void AddQuads(Vector3 axisStart, Vector3 axisEnd, Vector3 otherDirection1, Vector3 otherDirection2, float width, List<Vector3> resultsBuffer) { }
+
+	// RVA: 0x3D63DC4 Offset: 0x3D5FDC4 VA: 0x3D63DC4
+	public void AddQuads(Square square1, Square square2, List<Vector3> resultsBuffer) { }
+
+	// RVA: 0x3D63D3C Offset: 0x3D5FD3C VA: 0x3D63D3C
+	private Square GetBaseSquare(Vector3 point, Vector3 direction1, Vector3 direction2, float distance) { }
+
+	// RVA: 0x3D60F84 Offset: 0x3D5CF84 VA: 0x3D60F84
+	public void DrawTriangles(List<Vector3> lines, Color color) { }
+
+	// RVA: 0x3D60E4C Offset: 0x3D5CE4C VA: 0x3D60E4C
+	public void DrawQuads(List<Vector3> lines, Color color) { }
+
+	// RVA: 0x3D633A4 Offset: 0x3D5F3A4 VA: 0x3D633A4
+	private void SetHandleSquares() { }
+
+	// RVA: 0x3D60750 Offset: 0x3D5C750 VA: 0x3D60750
+	public void SetMaterial() { }
+
+	// RVA: 0x3D63868 Offset: 0x3D5F868 VA: 0x3D63868
+	private void SetCircles(AxisInfo axisInfo, AxisVectors axisVectors) { }
+
+	// RVA: 0x3D64B38 Offset: 0x3D60B38 VA: 0x3D64B38
+	private void AddCircle(Vector3 origin, Vector3 axisDirection, float size, List<Vector3> resultsBuffer, bool depthTest = true, bool segRocord = false) { }
+
+	// RVA: 0x3D61164 Offset: 0x3D5D164 VA: 0x3D61164
+	private void DrawRotationGizmo() { }
+
+	// RVA: 0x3D652CC Offset: 0x3D612CC VA: 0x3D652CC
+	public void DrawRotationSegments() { }
+
+	// RVA: 0x3D62544 Offset: 0x3D5E544 VA: 0x3D62544
+	private void ProcessRotationClicked() { }
+
+	// RVA: 0x3D65508 Offset: 0x3D61508 VA: 0x3D65508
+	private int ClosestPointFromMouseToLines(List<Vector3> lines) { }
+
+	// RVA: 0x3D656F0 Offset: 0x3D616F0 VA: 0x3D656F0
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: PrefabEvolution
+[AddComponentMenu("")]
+public class EvolvePrefab : PEPrefabScript // TypeDefIndex: 1276
+{
+	// Methods
+
+	// RVA: 0x3E383C8 Offset: 0x3E343C8 VA: 0x3E383C8
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+[Serializable]
+private sealed class PEExposedProperties.<>c // TypeDefIndex: 1277
+{
+	// Fields
+	public static readonly <>c <>9; // 0x0
+	public static Func<BaseExposedData, bool> <>9__7_0; // 0x8
+	public static Predicate<ExposedProperty> <>9__7_2; // 0x10
+	public static Predicate<ExposedPropertyGroup> <>9__7_3; // 0x18
+
+	// Methods
+
+	// RVA: 0x3E3A0E4 Offset: 0x3E360E4 VA: 0x3E3A0E4
+	private static void .cctor() { }
+
+	// RVA: 0x3E3A14C Offset: 0x3E3614C VA: 0x3E3A14C
+	public void .ctor() { }
+
+	// RVA: 0x3E3A154 Offset: 0x3E36154 VA: 0x3E3A154
+	internal bool <GetInheritedProperties>b__7_0(BaseExposedData i) { }
+
+	// RVA: 0x3E3A198 Offset: 0x3E36198 VA: 0x3E3A198
+	internal bool <GetInheritedProperties>b__7_2(ExposedProperty p) { }
+
+	// RVA: 0x3E3A1CC Offset: 0x3E361CC VA: 0x3E3A1CC
+	internal bool <GetInheritedProperties>b__7_3(ExposedPropertyGroup p) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class PEExposedProperties.<>c__DisplayClass13_0 // TypeDefIndex: 1278
+{
+	// Fields
+	public int id; // 0x10
+
+	// Methods
+
+	// RVA: 0x3E395E4 Offset: 0x3E355E4 VA: 0x3E395E4
+	public void .ctor() { }
+
+	// RVA: 0x3E3A1E0 Offset: 0x3E361E0 VA: 0x3E3A1E0
+	internal bool <Remove>b__0(ExposedProperty p) { }
+
+	// RVA: 0x3E3A204 Offset: 0x3E36204 VA: 0x3E3A204
+	internal bool <Remove>b__1(ExposedPropertyGroup p) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class PEExposedProperties.<>c__DisplayClass14_0 // TypeDefIndex: 1279
+{
+	// Fields
+	public string label; // 0x10
+
+	// Methods
+
+	// RVA: 0x3E396FC Offset: 0x3E356FC VA: 0x3E396FC
+	public void .ctor() { }
+
+	// RVA: 0x3E3A228 Offset: 0x3E36228 VA: 0x3E3A228
+	internal bool <FindProperty>b__0(ExposedProperty p) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class PEExposedProperties.<>c__DisplayClass15_0 // TypeDefIndex: 1280
+{
+	// Fields
+	public int id; // 0x10
+
+	// Methods
+
+	// RVA: 0x3E39808 Offset: 0x3E35808 VA: 0x3E39808
+	public void .ctor() { }
+
+	// RVA: 0x3E3A24C Offset: 0x3E3624C VA: 0x3E3A24C
+	internal bool <FindProperty>b__0(ExposedProperty p) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class PEExposedProperties.<>c__DisplayClass16_0 // TypeDefIndex: 1281
+{
+	// Fields
+	public uint id; // 0x10
+
+	// Methods
+
+	// RVA: 0x3E39914 Offset: 0x3E35914 VA: 0x3E39914
+	public void .ctor() { }
+
+	// RVA: 0x3E3A270 Offset: 0x3E36270 VA: 0x3E3A270
+	internal bool <FindProperty>b__0(ExposedProperty p) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class PEExposedProperties.<>c__DisplayClass18_0 // TypeDefIndex: 1282
+{
+	// Fields
+	public int id; // 0x10
+
+	// Methods
+
+	// RVA: 0x3E39A04 Offset: 0x3E35A04 VA: 0x3E39A04
+	public void .ctor() { }
+
+	// RVA: 0x3E3A294 Offset: 0x3E36294 VA: 0x3E3A294
+	internal bool <get_Item>b__0(BaseExposedData p) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class PEExposedProperties.<>c__DisplayClass20_0 // TypeDefIndex: 1283
+{
+	// Fields
+	public string label; // 0x10
+
+	// Methods
+
+	// RVA: 0x3E39B00 Offset: 0x3E35B00 VA: 0x3E39B00
+	public void .ctor() { }
+
+	// RVA: 0x3E3A2B8 Offset: 0x3E362B8 VA: 0x3E3A2B8
+	internal bool <get_Item>b__0(BaseExposedData p) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class PEExposedProperties.<>c__DisplayClass25_0 // TypeDefIndex: 1284
+{
+	// Fields
+	public int id; // 0x10
+
+	// Methods
+
+	// RVA: 0x3E39CA0 Offset: 0x3E35CA0 VA: 0x3E39CA0
+	public void .ctor() { }
+
+	// RVA: 0x3E3A2DC Offset: 0x3E362DC VA: 0x3E3A2DC
+	internal bool <GetInherited>b__0(BaseExposedData i) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class PEExposedProperties.<>c__DisplayClass26_0 // TypeDefIndex: 1285
+{
+	// Fields
+	public int id; // 0x10
+
+	// Methods
+
+	// RVA: 0x3E39D7C Offset: 0x3E35D7C VA: 0x3E39D7C
+	public void .ctor() { }
+
+	// RVA: 0x3E3A300 Offset: 0x3E36300 VA: 0x3E3A300
+	internal bool <GetHidden>b__0(int i) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class PEExposedProperties.<>c__DisplayClass7_0 // TypeDefIndex: 1286
+{
+	// Fields
+	public int p; // 0x10
+
+	// Methods
+
+	// RVA: 0x3E3A0DC Offset: 0x3E360DC VA: 0x3E3A0DC
+	public void .ctor() { }
+
+	// RVA: 0x3E3A310 Offset: 0x3E36310 VA: 0x3E3A310
+	internal bool <GetInheritedProperties>b__5(BaseExposedData item) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class PEExposedProperties.<>c__DisplayClass8_0 // TypeDefIndex: 1287
+{
+	// Fields
+	public Object target; // 0x10
+	public string propertyPath; // 0x18
+
+	// Methods
+
+	// RVA: 0x3E39094 Offset: 0x3E35094 VA: 0x3E39094
+	public void .ctor() { }
+
+	// RVA: 0x3E3A334 Offset: 0x3E36334 VA: 0x3E3A334
+	internal bool <HasProperty>b__0(ExposedProperty p) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class PEExposedProperties.<>c__DisplayClass9_0 // TypeDefIndex: 1288
+{
+	// Fields
+	public Object target; // 0x10
+	public string propertyPath; // 0x18
+
+	// Methods
+
+	// RVA: 0x3E3919C Offset: 0x3E3519C VA: 0x3E3919C
+	public void .ctor() { }
+
+	// RVA: 0x3E3A3D4 Offset: 0x3E363D4 VA: 0x3E3A3D4
+	internal bool <Remove>b__0(ExposedProperty p) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: PrefabEvolution
+[DefaultMember("Item")]
+[Serializable]
+public class PEExposedProperties : ISerializationCallbackReceiver // TypeDefIndex: 1289
+{
+	// Fields
+	internal List<BaseExposedData> InheritedProperties; // 0x10
+	public PEPrefabScript PrefabScript; // 0x18
+	public List<ExposedProperty> Properties; // 0x20
+	public List<ExposedPropertyGroup> Groups; // 0x28
+	[SerializeField]
+	private List<int> Hidden; // 0x30
+
+	// Properties
+	public BaseExposedData Item { get; }
+	public BaseExposedData Item { get; }
+	public IEnumerable<BaseExposedData> Items { get; }
+	public IEnumerable<BaseExposedData> OrderedItems { get; }
+
+	// Methods
+
+	// RVA: 0x3E38460 Offset: 0x3E34460 VA: 0x3E38460 Slot: 4
+	public void OnBeforeSerialize() { }
+
+	// RVA: 0x3E38464 Offset: 0x3E34464 VA: 0x3E38464 Slot: 5
+	public void OnAfterDeserialize() { }
+
+	// RVA: 0x3E38468 Offset: 0x3E34468 VA: 0x3E38468
+	public IEnumerable<BaseExposedData> GetInheritedProperties() { }
+
+	// RVA: 0x3E38F98 Offset: 0x3E34F98 VA: 0x3E38F98
+	public bool HasProperty(Object target, string propertyPath) { }
+
+	// RVA: 0x3E3909C Offset: 0x3E3509C VA: 0x3E3909C
+	public void Remove(Object target, string propertyPath) { }
+
+	// RVA: 0x3E391A4 Offset: 0x3E351A4 VA: 0x3E391A4
+	public void Add(BaseExposedData exposed) { }
+
+	// RVA: 0x3E39284 Offset: 0x3E35284 VA: 0x3E39284
+	public void Add(ExposedProperty exposed) { }
+
+	// RVA: 0x3E3938C Offset: 0x3E3538C VA: 0x3E3938C
+	public void Add(ExposedPropertyGroup exposed) { }
+
+	// RVA: 0x3E39494 Offset: 0x3E35494 VA: 0x3E39494
+	public void Remove(int id) { }
+
+	// RVA: 0x3E395EC Offset: 0x3E355EC VA: 0x3E395EC
+	public ExposedProperty FindProperty(string label) { }
+
+	// RVA: 0x3E39704 Offset: 0x3E35704 VA: 0x3E39704
+	public ExposedProperty FindProperty(int id) { }
+
+	// RVA: 0x3E39810 Offset: 0x3E35810 VA: 0x3E39810
+	public ExposedProperty FindProperty(uint id) { }
+
+	// RVA: 0x3E3991C Offset: 0x3E3591C VA: 0x3E3991C
+	public BaseExposedData get_Item(int id) { }
+
+	// RVA: 0x3E39A0C Offset: 0x3E35A0C VA: 0x3E39A0C
+	public BaseExposedData get_Item(string label) { }
+
+	// RVA: 0x3E38DFC Offset: 0x3E34DFC VA: 0x3E38DFC
+	public IEnumerable<BaseExposedData> get_Items() { }
+
+	// RVA: 0x3E39B08 Offset: 0x3E35B08 VA: 0x3E39B08
+	public IEnumerable<BaseExposedData> get_OrderedItems() { }
+
+	// RVA: 0x3E39BB8 Offset: 0x3E35BB8 VA: 0x3E39BB8
+	public bool GetInherited(int id) { }
+
+	// RVA: 0x3E39CA8 Offset: 0x3E35CA8 VA: 0x3E39CA8
+	public bool GetHidden(int id) { }
+
+	// RVA: 0x3E39D84 Offset: 0x3E35D84 VA: 0x3E39D84
+	public void SetHide(BaseExposedData property, bool state) { }
+
+	// RVA: 0x3E39EE0 Offset: 0x3E35EE0 VA: 0x3E39EE0
+	public void .ctor() { }
+
+	[CompilerGenerated]
+	// RVA: 0x3E39FA0 Offset: 0x3E35FA0 VA: 0x3E39FA0
+	private BaseExposedData <GetInheritedProperties>b__7_1(BaseExposedData p) { }
+
+	[CompilerGenerated]
+	// RVA: 0x3E39FF4 Offset: 0x3E35FF4 VA: 0x3E39FF4
+	private bool <GetInheritedProperties>b__7_4(int p) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public struct BaseExposedData.Comparer : IComparer<BaseExposedData> // TypeDefIndex: 1290
+{
+	// Methods
+
+	// RVA: 0x3E3A8C8 Offset: 0x3E368C8 VA: 0x3E3A8C8 Slot: 4
+	public int Compare(BaseExposedData x, BaseExposedData y) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class BaseExposedData.<>c__DisplayClass19_0 // TypeDefIndex: 1291
+{
+	// Fields
+	public BaseExposedData parent; // 0x10
+
+	// Methods
+
+	// RVA: 0x3E3A838 Offset: 0x3E36838 VA: 0x3E3A838
+	public void .ctor() { }
+
+	// RVA: 0x3E3A904 Offset: 0x3E36904 VA: 0x3E3A904
+	internal bool <get_Brothers>b__0(BaseExposedData i) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: PrefabEvolution
+public class BaseExposedData : ISerializationCallbackReceiver // TypeDefIndex: 1292
+{
+	// Fields
+	public PEExposedProperties Container; // 0x10
+	[SerializeField]
+	private int guid; // 0x18
+	public string Label; // 0x20
+	public int ParentId; // 0x28
+	public float Order; // 0x2C
+
+	// Properties
+	public int SiblingIndex { get; }
+	public int Id { get; }
+	public BaseExposedData Parent { get; set; }
+	public IEnumerable<BaseExposedData> Children { get; }
+	public IEnumerable<BaseExposedData> Brothers { get; }
+	public bool Inherited { get; }
+	public bool Hidden { get; set; }
+
+	// Methods
+
+	// RVA: 0x3E3A474 Offset: 0x3E36474 VA: 0x3E3A474 Slot: 6
+	public virtual void OnBeforeSerialize() { }
+
+	// RVA: 0x3E3A478 Offset: 0x3E36478 VA: 0x3E3A478 Slot: 7
+	public virtual void OnAfterDeserialize() { }
+
+	// RVA: 0x3E3A47C Offset: 0x3E3647C VA: 0x3E3A47C
+	public int get_SiblingIndex() { }
+
+	// RVA: 0x3E3A5E4 Offset: 0x3E365E4 VA: 0x3E3A5E4
+	public float GetOrder(bool next) { }
+
+	// RVA: 0x3E3A68C Offset: 0x3E3668C VA: 0x3E3A68C Slot: 8
+	public virtual BaseExposedData Clone() { }
+
+	// RVA: 0x3E3A744 Offset: 0x3E36744 VA: 0x3E3A744
+	public int get_Id() { }
+
+	// RVA: 0x3E3A74C Offset: 0x3E3674C VA: 0x3E3A74C
+	public BaseExposedData get_Parent() { }
+
+	// RVA: 0x3E3A76C Offset: 0x3E3676C VA: 0x3E3A76C
+	public void set_Parent(BaseExposedData value) { }
+
+	// RVA: 0x3E3A788 Offset: 0x3E36788 VA: 0x3E3A788
+	public IEnumerable<BaseExposedData> get_Children() { }
+
+	// RVA: 0x3E3A4F0 Offset: 0x3E364F0 VA: 0x3E3A4F0
+	public IEnumerable<BaseExposedData> get_Brothers() { }
+
+	// RVA: 0x3E3A1AC Offset: 0x3E361AC VA: 0x3E3A1AC
+	public bool get_Inherited() { }
+
+	// RVA: 0x3E3A178 Offset: 0x3E36178 VA: 0x3E3A178
+	public bool get_Hidden() { }
+
+	// RVA: 0x3E3A840 Offset: 0x3E36840 VA: 0x3E3A840
+	public void set_Hidden(bool value) { }
+
+	// RVA: 0x3E3A864 Offset: 0x3E36864 VA: 0x3E3A864
+	public void .ctor() { }
+
+	[CompilerGenerated]
+	// RVA: 0x3E3A8A4 Offset: 0x3E368A4 VA: 0x3E3A8A4
+	private bool <get_Children>b__17_0(BaseExposedData item) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: PrefabEvolution
+[Serializable]
+public class ExposedPropertyGroup : BaseExposedData // TypeDefIndex: 1293
+{
+	// Fields
+	public static Dictionary<int, bool> expandedDict; // 0x0
+	private bool expandedLoaded; // 0x30
+	private bool expanded; // 0x31
+
+	// Properties
+	public bool Expanded { get; set; }
+
+	// Methods
+
+	// RVA: 0x3E3A930 Offset: 0x3E36930 VA: 0x3E3A930
+	public bool get_Expanded() { }
+
+	// RVA: 0x3E3A9CC Offset: 0x3E369CC VA: 0x3E3A9CC
+	public void set_Expanded(bool value) { }
+
+	// RVA: 0x3E3AAFC Offset: 0x3E36AFC VA: 0x3E3AAFC
+	public void .ctor() { }
+
+	// RVA: 0x3E3AB08 Offset: 0x3E36B08 VA: 0x3E3AB08
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class ExposedProperty.PropertyInvocationChain.InvokeInfo // TypeDefIndex: 1294
+{
+	// Fields
+	public MemberInfo member; // 0x10
+	public int index; // 0x18
+	public object tempTarget; // 0x20
+	public Type valueType; // 0x28
+
+	// Methods
+
+	// RVA: 0x3E3BB30 Offset: 0x3E37B30 VA: 0x3E3BB30
+	public object GetValue(object target) { }
+
+	// RVA: 0x3E3BB64 Offset: 0x3E37B64 VA: 0x3E3BB64
+	public void SetValue(object target, object value) { }
+
+	// RVA: 0x3E3BBA0 Offset: 0x3E37BA0 VA: 0x3E3BBA0
+	public void SetValue(object value) { }
+
+	// RVA: 0x3E3BBBC Offset: 0x3E37BBC VA: 0x3E3BBBC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class ExposedProperty.PropertyInvocationChain.<>c__DisplayClass14_0 // TypeDefIndex: 1295
+{
+	// Fields
+	public string field; // 0x10
+
+	// Methods
+
+	// RVA: 0x3E3C444 Offset: 0x3E38444 VA: 0x3E3C444
+	public void .ctor() { }
+
+	// RVA: 0x3E3C44C Offset: 0x3E3844C VA: 0x3E3C44C
+	internal bool <getField>b__0(MemberInfo m) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public class ExposedProperty.PropertyInvocationChain // TypeDefIndex: 1296
+{
+	// Fields
+	public object root; // 0x10
+	public string path; // 0x18
+	public InvokeInfo[] members; // 0x20
+
+	// Properties
+	public object value { get; set; }
+	public bool isValid { get; }
+
+	// Methods
+
+	// RVA: 0x3E3ADA0 Offset: 0x3E36DA0 VA: 0x3E3ADA0
+	public void .ctor(object root, string path) { }
+
+	// RVA: 0x3E3B11C Offset: 0x3E3711C VA: 0x3E3B11C
+	public object get_value() { }
+
+	// RVA: 0x3E3B1B8 Offset: 0x3E371B8 VA: 0x3E3B1B8
+	public void set_value(object value) { }
+
+	// RVA: 0x3E3B0D4 Offset: 0x3E370D4 VA: 0x3E3B0D4
+	public bool get_isValid() { }
+
+	// RVA: 0x3E3B370 Offset: 0x3E37370 VA: 0x3E3B370
+	internal static object GetInstance(object obj, string path, out InvokeInfo[] members) { }
+
+	// RVA: 0x3E3BFE8 Offset: 0x3E37FE8 VA: 0x3E3BFE8
+	private static object GetMemberValue(object target, MemberInfo member, int index = -1) { }
+
+	// RVA: 0x3E3C1F8 Offset: 0x3E381F8 VA: 0x3E3C1F8
+	private static void setValue(object target, MemberInfo member, object value, int index = -1) { }
+
+	// RVA: 0x3E3B934 Offset: 0x3E37934 VA: 0x3E3B934
+	public static string GetValidFieldName(ref object obj, string fieldName) { }
+
+	// RVA: 0x3E3BBCC Offset: 0x3E37BCC VA: 0x3E3BBCC
+	private static object getField(object obj, string field, out MemberInfo member, int index = -1) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: PrefabEvolution
+[Serializable]
+public class ExposedProperty : BaseExposedData // TypeDefIndex: 1297
+{
+	// Fields
+	public Object Target; // 0x30
+	public string PropertyPath; // 0x38
+	private PropertyInvocationChain _invocationChain; // 0x40
+
+	// Properties
+	private PropertyInvocationChain invocationChain { get; }
+	public bool IsValid { get; }
+	public object Value { get; set; }
+
+	// Methods
+
+	// RVA: 0x3E3ABA0 Offset: 0x3E36BA0 VA: 0x3E3ABA0 Slot: 8
+	public override BaseExposedData Clone() { }
+
+	// RVA: 0x3E3AC4C Offset: 0x3E36C4C VA: 0x3E3AC4C Slot: 7
+	public override void OnAfterDeserialize() { }
+
+	// RVA: 0x3E3AC58 Offset: 0x3E36C58 VA: 0x3E3AC58
+	private PropertyInvocationChain get_invocationChain() { }
+
+	// RVA: 0x3E3B0B0 Offset: 0x3E370B0 VA: 0x3E3B0B0
+	public bool get_IsValid() { }
+
+	// RVA: 0x3E3ADF4 Offset: 0x3E36DF4 VA: 0x3E3ADF4
+	public object get_Value() { }
+
+	// RVA: 0x3E3AEF0 Offset: 0x3E36EF0 VA: 0x3E3AEF0
+	public void set_Value(object value) { }
+
+	// RVA: 0x3E3B36C Offset: 0x3E3736C VA: 0x3E3B36C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: PrefabEvolution
+public class GameObjectWrapper // TypeDefIndex: 1298
+{
+	// Fields
+	public GameObject target; // 0x10
+
+	// Properties
+	public bool m_IsActive { get; set; }
+
+	// Methods
+
+	// RVA: 0x3E3C4BC Offset: 0x3E384BC VA: 0x3E3C4BC
+	public bool get_m_IsActive() { }
+
+	// RVA: 0x3E3C4D8 Offset: 0x3E384D8 VA: 0x3E3C4D8
+	public void set_m_IsActive(bool value) { }
+
+	// RVA: 0x3E3C414 Offset: 0x3E38414 VA: 0x3E3C414
+	public void .ctor(GameObject target) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class PELinkage.Link // TypeDefIndex: 1299
+{
+	// Fields
+	public int LIIF; // 0x10
+	public Object InstanceTarget; // 0x18
+
+	// Methods
+
+	// RVA: 0x3E3C690 Offset: 0x3E38690 VA: 0x3E3C690 Slot: 3
+	public override string ToString() { }
+
+	// RVA: 0x3E3C718 Offset: 0x3E38718 VA: 0x3E3C718
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: PrefabEvolution
+[DefaultMember("Item")]
+[Serializable]
+public class PELinkage // TypeDefIndex: 1300
+{
+	// Fields
+	public List<Link> Links; // 0x10
+
+	// Properties
+	public Link Item { get; }
+	public Link Item { get; }
+	public Link Item { get; }
+
+	// Methods
+
+	// RVA: 0x3E3C4F8 Offset: 0x3E384F8 VA: 0x3E3C4F8
+	public Link get_Item(int liif) { }
+
+	// RVA: 0x3E38F84 Offset: 0x3E34F84 VA: 0x3E38F84
+	public Link get_Item(Link link) { }
+
+	// RVA: 0x3E38EA4 Offset: 0x3E34EA4 VA: 0x3E38EA4
+	public Link get_Item(Object obj) { }
+
+	// RVA: 0x3E3C598 Offset: 0x3E38598 VA: 0x3E3C598
+	public Object GetPrefabObject(GameObject prefab, Object instanceObject) { }
+
+	// RVA: 0x3E3C630 Offset: 0x3E38630 VA: 0x3E3C630
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public enum PEModifications.PropertyData.PropertyMode // TypeDefIndex: 1301
+{
+	// Fields
+	public int value__; // 0x0
+	public const PropertyMode Default = 0;
+	public const PropertyMode Keep = 1;
+	public const PropertyMode Ignore = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class PEModifications.PropertyData // TypeDefIndex: 1302
+{
+	// Fields
+	public Object Object; // 0x10
+	public int ObjeckLink; // 0x18
+	public string PropertyPath; // 0x20
+	public PropertyMode Mode; // 0x28
+	public object UserData; // 0x30
+
+	// Methods
+
+	// RVA: 0x3E3C82C Offset: 0x3E3882C VA: 0x3E3C82C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class PEModifications.HierarchyData // TypeDefIndex: 1303
+{
+	// Fields
+	public Transform child; // 0x10
+	public Transform parent; // 0x18
+
+	// Methods
+
+	// RVA: 0x3E3C834 Offset: 0x3E38834 VA: 0x3E3C834
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Serializable]
+public class PEModifications.ComponentsData // TypeDefIndex: 1304
+{
+	// Fields
+	public Component child; // 0x10
+	public GameObject parent; // 0x18
+
+	// Methods
+
+	// RVA: 0x3E3C83C Offset: 0x3E3883C VA: 0x3E3C83C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: PrefabEvolution
+[Serializable]
+public class PEModifications // TypeDefIndex: 1305
+{
+	// Fields
+	public List<PropertyData> Modificated; // 0x10
+	public List<HierarchyData> NonPrefabObjects; // 0x18
+	public List<ComponentsData> NonPrefabComponents; // 0x20
+	public List<int> RemovedObjects; // 0x28
+	public List<HierarchyData> TransformParentChanges; // 0x30
+
+	// Methods
+
+	// RVA: 0x3E3C720 Offset: 0x3E38720 VA: 0x3E3C720
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public static class PEPrefabScript.EditorBridge // TypeDefIndex: 1306
+{
+	// Fields
+	public static Action<PEPrefabScript> OnValidate; // 0x0
+	public static Func<GameObject, string> GetAssetGuid; // 0x8
+	public static Func<string, GameObject> GetAssetByGuid; // 0x10
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+private class PEPrefabScript.PrefabInternalData // TypeDefIndex: 1307
+{
+	// Fields
+	private readonly PEExposedProperties Properties; // 0x10
+	private readonly PELinkage Links; // 0x18
+	private readonly PEModifications Modifications; // 0x20
+	private readonly string ParentPrefabGUID; // 0x28
+	private readonly string PrefabGUID; // 0x30
+
+	// Methods
+
+	// RVA: 0x3E3CC3C Offset: 0x3E38C3C VA: 0x3E3CC3C
+	public void .ctor(PEPrefabScript script) { }
+
+	// RVA: 0x3E3CCB4 Offset: 0x3E38CB4 VA: 0x3E3CCB4
+	public void Fill(PEPrefabScript script) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: PrefabEvolution
+[AddComponentMenu("")]
+[SelectionBase]
+public class PEPrefabScript : MonoBehaviour, ISerializationCallbackReceiver // TypeDefIndex: 1308
+{
+	// Fields
+	[HideInInspector]
+	public PEExposedProperties Properties; // 0x20
+	[HideInInspector]
+	public PELinkage Links; // 0x28
+	[HideInInspector]
+	public PEModifications Modifications; // 0x30
+	public string ParentPrefabGUID; // 0x38
+	public string PrefabGUID; // 0x40
+	private PrefabInternalData _prefabInternalData; // 0x48
+	[CompilerGenerated]
+	private Action OnBuildModifications; // 0x50
+
+	// Properties
+	public GameObject ParentPrefab { get; set; }
+	public GameObject Prefab { get; set; }
+
+	// Methods
+
+	// RVA: 0x3E38D98 Offset: 0x3E34D98 VA: 0x3E38D98
+	public GameObject get_ParentPrefab() { }
+
+	// RVA: 0x3E3C844 Offset: 0x3E38844 VA: 0x3E3C844
+	public void set_ParentPrefab(GameObject value) { }
+
+	// RVA: 0x3E3C8E4 Offset: 0x3E388E4 VA: 0x3E3C8E4
+	public GameObject get_Prefab() { }
+
+	// RVA: 0x3E3C948 Offset: 0x3E38948 VA: 0x3E3C948
+	public void set_Prefab(GameObject value) { }
+
+	// RVA: 0x3E3C9E8 Offset: 0x3E389E8 VA: 0x3E3C9E8
+	private void OnValidate() { }
+
+	[CompilerGenerated]
+	// RVA: 0x3E3CA54 Offset: 0x3E38A54 VA: 0x3E3CA54
+	public void add_OnBuildModifications(Action value) { }
+
+	[CompilerGenerated]
+	// RVA: 0x3E3CAF0 Offset: 0x3E38AF0 VA: 0x3E3CAF0
+	public void remove_OnBuildModifications(Action value) { }
+
+	// RVA: 0x3E3CB8C Offset: 0x3E38B8C VA: 0x3E3CB8C
+	public void InvokeOnBuildModifications() { }
+
+	// RVA: 0x3E3CBA8 Offset: 0x3E38BA8 VA: 0x3E3CBA8 Slot: 4
+	public void OnBeforeSerialize() { }
+
+	// RVA: 0x3E3CBAC Offset: 0x3E38BAC VA: 0x3E3CBAC Slot: 5
+	public void OnAfterDeserialize() { }
+
+	// RVA: 0x3E3CBB0 Offset: 0x3E38BB0 VA: 0x3E3CBB0
+	private void ClearInternalData() { }
+
+	// RVA: 0x3E383CC Offset: 0x3E343CC VA: 0x3E383CC
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: PrefabEvolution
+public static class Utils // TypeDefIndex: 1309
+{
+	// Properties
+	public static bool IsBuildingPlayer { get; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public static T Create<T>() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-Utils.Create<object>
+	*/
+
+	// RVA: 0x3E3CD24 Offset: 0x3E38D24 VA: 0x3E3CD24
+	public static bool get_IsBuildingPlayer() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[Flags]
+private enum CsvReader.DataReaderValidations // TypeDefIndex: 1310
+{
+	// Fields
+	public int value__; // 0x0
+	public const DataReaderValidations None = 0;
+	public const DataReaderValidations IsInitialized = 1;
+	public const DataReaderValidations IsNotClosed = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+public struct CsvReader.RecordEnumerator : IEnumerator<string[]>, IEnumerator, IDisposable // TypeDefIndex: 1311
+{
+	// Fields
+	private CsvReader _reader; // 0x0
+	private string[] _current; // 0x8
+	private long _currentRecordIndex; // 0x10
+
+	// Properties
+	public string[] Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	// RVA: 0x3E3FE14 Offset: 0x3E3BE14 VA: 0x3E3FE14
+	public void .ctor(CsvReader reader) { }
+
+	// RVA: 0x3E405F0 Offset: 0x3E3C5F0 VA: 0x3E405F0 Slot: 4
+	public string[] get_Current() { }
+
+	// RVA: 0x3E40600 Offset: 0x3E3C600 VA: 0x3E40600 Slot: 6
+	public bool MoveNext() { }
+
+	// RVA: 0x3E40770 Offset: 0x3E3C770 VA: 0x3E40770 Slot: 8
+	public void Reset() { }
+
+	// RVA: 0x3E40828 Offset: 0x3E3C828 VA: 0x3E40828 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+
+	// RVA: 0x3E408A4 Offset: 0x3E3C8A4 VA: 0x3E408A4 Slot: 5
+	public void Dispose() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LumenWorks.Framework.IO.Csv
+[DefaultMember("Item")]
+public class CsvReader : IEnumerable<string[]>, IEnumerable, IDisposable, IIndexString // TypeDefIndex: 1312
+{
+	// Fields
+	public static readonly int DefaultBufferSize; // 0x0
+	public const char DefaultDelimiter = 44;
+	public const char DefaultQuote = 34;
+	public const char DefaultEscape = 34;
+	public const char DefaultComment = 35;
+	private static readonly StringComparer _fieldHeaderComparer; // 0x8
+	private TextReader _reader; // 0x10
+	private int _bufferSize; // 0x18
+	private char _comment; // 0x1C
+	private char _escape; // 0x1E
+	private char _delimiter; // 0x20
+	private char _quote; // 0x22
+	private ValueTrimmingOptions _trimmingOptions; // 0x24
+	private bool _hasHeaders; // 0x28
+	private ParseErrorAction _defaultParseErrorAction; // 0x2C
+	private MissingFieldAction _missingFieldAction; // 0x30
+	private bool _supportsMultiline; // 0x34
+	private bool _skipEmptyLines; // 0x35
+	private bool _initialized; // 0x36
+	private string[] _fieldHeaders; // 0x38
+	private Dictionary<string, int> _fieldHeaderIndexes; // 0x40
+	private long _currentRecordIndex; // 0x48
+	private int _nextFieldStart; // 0x50
+	private int _nextFieldIndex; // 0x54
+	private string[] _fields; // 0x58
+	private int _fieldCount; // 0x60
+	private char[] _buffer; // 0x68
+	private int _bufferLength; // 0x70
+	private bool _eof; // 0x74
+	private bool _eol; // 0x75
+	private bool _firstRecordInCache; // 0x76
+	private bool _missingFieldFlag; // 0x77
+	private bool _parseErrorFlag; // 0x78
+	private Type _csvParseType; // 0x80
+	[CompilerGenerated]
+	private EventHandler<ParseErrorEventArgs> ParseError; // 0x88
+	[CompilerGenerated]
+	private string <DefaultHeaderName>k__BackingField; // 0x90
+	private bool _isDisposed; // 0x98
+	private readonly object _lock; // 0xA0
+	[CompilerGenerated]
+	private EventHandler Disposed; // 0xA8
+
+	// Properties
+	public char Comment { get; }
+	public char Escape { get; }
+	public char Delimiter { get; }
+	public char Quote { get; }
+	public bool HasHeaders { get; }
+	public ValueTrimmingOptions TrimmingOption { get; }
+	public int BufferSize { get; }
+	public ParseErrorAction DefaultParseErrorAction { get; set; }
+	public MissingFieldAction MissingFieldAction { get; set; }
+	public bool SupportsMultiline { get; set; }
+	public bool SkipEmptyLines { get; set; }
+	public string DefaultHeaderName { get; set; }
+	public int FieldCount { get; }
+	public virtual bool EndOfStream { get; }
+	public virtual long CurrentRecordIndex { get; }
+	public bool MissingFieldFlag { get; }
+	public bool ParseErrorFlag { get; }
+	public string Item { get; }
+	public string Item { get; }
+	public string Item { get; }
+	public virtual string Item { get; }
+	[Browsable(false)]
+	public bool IsDisposed { get; }
+
+	// Methods
+
+	// RVA: 0x3E3CD2C Offset: 0x3E38D2C VA: 0x3E3CD2C
+	public void .ctor(TextReader reader, bool hasHeaders, Type csvParseType) { }
+
+	// RVA: 0x3E3D0E4 Offset: 0x3E390E4 VA: 0x3E3D0E4
+	public void .ctor(TextReader reader, bool hasHeaders, int bufferSize, Type csvParseType) { }
+
+	// RVA: 0x3E3D120 Offset: 0x3E39120 VA: 0x3E3D120
+	public void .ctor(TextReader reader, bool hasHeaders, char delimiter, Type csvParseType) { }
+
+	// RVA: 0x3E3D1D0 Offset: 0x3E391D0 VA: 0x3E3D1D0
+	public void .ctor(TextReader reader, bool hasHeaders, char delimiter, int bufferSize, Type csvParseType) { }
+
+	// RVA: 0x3E3D208 Offset: 0x3E39208 VA: 0x3E3D208
+	public void .ctor(TextReader reader, bool hasHeaders, char delimiter, char quote, char escape, char comment, ValueTrimmingOptions trimmingOptions, Type csvParseType) { }
+
+	// RVA: 0x3E3CDD8 Offset: 0x3E38DD8 VA: 0x3E3CDD8
+	public void .ctor(TextReader reader, bool hasHeaders, char delimiter, char quote, char escape, char comment, ValueTrimmingOptions trimmingOptions, int bufferSize, Type csvParseType) { }
+
+	[CompilerGenerated]
+	// RVA: 0x3E3D40C Offset: 0x3E3940C VA: 0x3E3D40C
+	public void add_ParseError(EventHandler<ParseErrorEventArgs> value) { }
+
+	[CompilerGenerated]
+	// RVA: 0x3E3D4BC Offset: 0x3E394BC VA: 0x3E3D4BC
+	public void remove_ParseError(EventHandler<ParseErrorEventArgs> value) { }
+
+	// RVA: 0x3E3D56C Offset: 0x3E3956C VA: 0x3E3D56C Slot: 8
+	protected virtual void OnParseError(ParseErrorEventArgs e) { }
+
+	// RVA: 0x3E3D594 Offset: 0x3E39594 VA: 0x3E3D594
+	public char get_Comment() { }
+
+	// RVA: 0x3E3D59C Offset: 0x3E3959C VA: 0x3E3D59C
+	public char get_Escape() { }
+
+	// RVA: 0x3E3D5A4 Offset: 0x3E395A4 VA: 0x3E3D5A4
+	public char get_Delimiter() { }
+
+	// RVA: 0x3E3D5AC Offset: 0x3E395AC VA: 0x3E3D5AC
+	public char get_Quote() { }
+
+	// RVA: 0x3E3D5B4 Offset: 0x3E395B4 VA: 0x3E3D5B4
+	public bool get_HasHeaders() { }
+
+	// RVA: 0x3E3D5BC Offset: 0x3E395BC VA: 0x3E3D5BC
+	public ValueTrimmingOptions get_TrimmingOption() { }
+
+	// RVA: 0x3E3D5C4 Offset: 0x3E395C4 VA: 0x3E3D5C4
+	public int get_BufferSize() { }
+
+	// RVA: 0x3E3D5CC Offset: 0x3E395CC VA: 0x3E3D5CC
+	public ParseErrorAction get_DefaultParseErrorAction() { }
+
+	// RVA: 0x3E3D5D4 Offset: 0x3E395D4 VA: 0x3E3D5D4
+	public void set_DefaultParseErrorAction(ParseErrorAction value) { }
+
+	// RVA: 0x3E3D5DC Offset: 0x3E395DC VA: 0x3E3D5DC
+	public MissingFieldAction get_MissingFieldAction() { }
+
+	// RVA: 0x3E3D5E4 Offset: 0x3E395E4 VA: 0x3E3D5E4
+	public void set_MissingFieldAction(MissingFieldAction value) { }
+
+	// RVA: 0x3E3D5EC Offset: 0x3E395EC VA: 0x3E3D5EC
+	public bool get_SupportsMultiline() { }
+
+	// RVA: 0x3E3D5F4 Offset: 0x3E395F4 VA: 0x3E3D5F4
+	public void set_SupportsMultiline(bool value) { }
+
+	// RVA: 0x3E3D600 Offset: 0x3E39600 VA: 0x3E3D600
+	public bool get_SkipEmptyLines() { }
+
+	// RVA: 0x3E3D608 Offset: 0x3E39608 VA: 0x3E3D608
+	public void set_SkipEmptyLines(bool value) { }
+
+	[CompilerGenerated]
+	// RVA: 0x3E3D614 Offset: 0x3E39614 VA: 0x3E3D614
+	public string get_DefaultHeaderName() { }
+
+	[CompilerGenerated]
+	// RVA: 0x3E3D61C Offset: 0x3E3961C VA: 0x3E3D61C
+	public void set_DefaultHeaderName(string value) { }
+
+	// RVA: 0x3E3D624 Offset: 0x3E39624 VA: 0x3E3D624
+	public int get_FieldCount() { }
+
+	// RVA: 0x3E3D67C Offset: 0x3E3967C VA: 0x3E3D67C Slot: 9
+	public virtual bool get_EndOfStream() { }
+
+	// RVA: 0x3E3D684 Offset: 0x3E39684 VA: 0x3E3D684
+	public string[] GetFieldHeaders() { }
+
+	// RVA: 0x3E3D758 Offset: 0x3E39758 VA: 0x3E3D758 Slot: 10
+	public virtual long get_CurrentRecordIndex() { }
+
+	// RVA: 0x3E3D760 Offset: 0x3E39760 VA: 0x3E3D760
+	public bool get_MissingFieldFlag() { }
+
+	// RVA: 0x3E3D768 Offset: 0x3E39768 VA: 0x3E3D768
+	public bool get_ParseErrorFlag() { }
+
+	// RVA: 0x3E3D770 Offset: 0x3E39770 VA: 0x3E3D770
+	public string get_Item(int record, string field) { }
+
+	// RVA: 0x3E3D9C0 Offset: 0x3E399C0 VA: 0x3E3D9C0
+	public string get_Item(int record, int field) { }
+
+	// RVA: 0x3E3D87C Offset: 0x3E3987C VA: 0x3E3D87C
+	public string get_Item(string field) { }
+
+	// RVA: 0x3E3DBA0 Offset: 0x3E39BA0 VA: 0x3E3DBA0 Slot: 11
+	public virtual string get_Item(int field) { }
+
+	// RVA: 0x3E3D63C Offset: 0x3E3963C VA: 0x3E3D63C
+	private void EnsureInitialize() { }
+
+	// RVA: 0x3E3DADC Offset: 0x3E39ADC VA: 0x3E3DADC
+	public int GetFieldIndex(string header) { }
+
+	// RVA: 0x3E3E7D8 Offset: 0x3E3A7D8 VA: 0x3E3E7D8
+	public void CopyCurrentRecordTo(string[] array) { }
+
+	// RVA: 0x3E3E7E0 Offset: 0x3E3A7E0 VA: 0x3E3E7E0
+	public void CopyCurrentRecordTo(string[] array, int index) { }
+
+	// RVA: 0x3E3EAA0 Offset: 0x3E3AAA0 VA: 0x3E3EAA0
+	public string GetCurrentRawData() { }
+
+	// RVA: 0x3E3EB18 Offset: 0x3E3AB18 VA: 0x3E3EB18
+	private bool IsWhiteSpace(char c) { }
+
+	// RVA: 0x3E3EB70 Offset: 0x3E3AB70 VA: 0x3E3EB70 Slot: 12
+	public virtual bool MoveTo(long record) { }
+
+	// RVA: 0x3E3EC14 Offset: 0x3E3AC14 VA: 0x3E3EC14
+	private bool ParseNewLine(ref int pos) { }
+
+	// RVA: 0x3E3EDE8 Offset: 0x3E3ADE8 VA: 0x3E3EDE8
+	private bool IsNewLine(int pos) { }
+
+	// RVA: 0x3E3ED50 Offset: 0x3E3AD50 VA: 0x3E3ED50
+	private bool ReadBuffer() { }
+
+	// RVA: 0x3E3DBAC Offset: 0x3E39BAC VA: 0x3E3DBAC
+	private string ReadField(int field, bool initializing, bool discardValue) { }
+
+	// RVA: 0x3E3EBE4 Offset: 0x3E3ABE4 VA: 0x3E3EBE4
+	public bool ReadNextRecord() { }
+
+	// RVA: 0x3E3F650 Offset: 0x3E3B650 VA: 0x3E3F650 Slot: 13
+	protected virtual bool ReadNextRecord(bool onlyReadHeaders, bool skipToNextLine) { }
+
+	// RVA: 0x3E3FB38 Offset: 0x3E3BB38 VA: 0x3E3FB38
+	private bool SkipEmptyAndCommentedLines(ref int pos) { }
+
+	// RVA: 0x3E3FC18 Offset: 0x3E3BC18 VA: 0x3E3FC18
+	private void DoSkipEmptyAndCommentedLines(ref int pos) { }
+
+	// RVA: 0x3E3F1D4 Offset: 0x3E3B1D4 VA: 0x3E3F1D4
+	private bool SkipWhiteSpaces(ref int pos) { }
+
+	// RVA: 0x3E3FBB0 Offset: 0x3E3BBB0 VA: 0x3E3FBB0
+	private bool SkipToNextLine(ref int pos) { }
+
+	// RVA: 0x3E3F35C Offset: 0x3E3B35C VA: 0x3E3F35C
+	private void HandleParseError(MalformedCsvException error, ref int pos) { }
+
+	// RVA: 0x3E3D2D8 Offset: 0x3E392D8 VA: 0x3E3D2D8
+	private string GetExceptionMessage(string info) { }
+
+	// RVA: 0x3E3F2A0 Offset: 0x3E3B2A0 VA: 0x3E3F2A0
+	private string GetCSVParseType() { }
+
+	// RVA: 0x3E3EF04 Offset: 0x3E3AF04 VA: 0x3E3EF04
+	private string HandleMissingField(string value, int fieldIndex, ref int currentPosition) { }
+
+	// RVA: 0x3E3FE00 Offset: 0x3E3BE00 VA: 0x3E3FE00
+	public RecordEnumerator GetEnumerator() { }
+
+	// RVA: 0x3E3FE9C Offset: 0x3E3BE9C VA: 0x3E3FE9C Slot: 4
+	private IEnumerator<string[]> System.Collections.Generic.IEnumerable<System.String[]>.GetEnumerator() { }
+
+	// RVA: 0x3E3FF1C Offset: 0x3E3BF1C VA: 0x3E3FF1C Slot: 5
+	private IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+
+	[CompilerGenerated]
+	// RVA: 0x3E3FF9C Offset: 0x3E3BF9C VA: 0x3E3FF9C
+	public void add_Disposed(EventHandler value) { }
+
+	[CompilerGenerated]
+	// RVA: 0x3E40038 Offset: 0x3E3C038 VA: 0x3E40038
+	public void remove_Disposed(EventHandler value) { }
+
+	// RVA: 0x3E400D4 Offset: 0x3E3C0D4 VA: 0x3E400D4
+	public bool get_IsDisposed() { }
+
+	// RVA: 0x3E400DC Offset: 0x3E3C0DC VA: 0x3E400DC Slot: 14
+	protected virtual void OnDisposed(EventArgs e) { }
+
+	// RVA: 0x3E3EE40 Offset: 0x3E3AE40 VA: 0x3E3EE40
+	protected void CheckDisposed() { }
+
+	// RVA: 0x3E40104 Offset: 0x3E3C104 VA: 0x3E40104 Slot: 6
+	public void Dispose() { }
+
+	// RVA: 0x3E40190 Offset: 0x3E3C190 VA: 0x3E40190 Slot: 15
+	protected virtual void Dispose(bool disposing) { }
+
+	// RVA: 0x3E4044C Offset: 0x3E3C44C VA: 0x3E4044C Slot: 1
+	protected override void Finalize() { }
+
+	// RVA: 0x3E404FC Offset: 0x3E3C4FC VA: 0x3E404FC
+	private static void .cctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LumenWorks.Framework.IO.Csv
+public class ParseErrorEventArgs : EventArgs // TypeDefIndex: 1313
+{
+	// Fields
+	private MalformedCsvException _error; // 0x10
+	private ParseErrorAction _action; // 0x18
+
+	// Properties
+	public MalformedCsvException Error { get; }
+	public ParseErrorAction Action { get; set; }
+
+	// Methods
+
+	// RVA: 0x3E3FCB4 Offset: 0x3E3BCB4 VA: 0x3E3FCB4
+	public void .ctor(MalformedCsvException error, ParseErrorAction defaultAction) { }
+
+	// RVA: 0x3E408F4 Offset: 0x3E3C8F4 VA: 0x3E408F4
+	public MalformedCsvException get_Error() { }
+
+	// RVA: 0x3E408FC Offset: 0x3E3C8FC VA: 0x3E408FC
+	public ParseErrorAction get_Action() { }
+
+	// RVA: 0x3E40904 Offset: 0x3E3C904 VA: 0x3E40904
+	public void set_Action(ParseErrorAction value) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LumenWorks.Framework.IO.Csv
+[Serializable]
+public class MalformedCsvException : Exception // TypeDefIndex: 1314
+{
+	// Fields
+	private string _message; // 0x90
+	private string _rawData; // 0x98
+	private int _currentFieldIndex; // 0xA0
+	private long _currentRecordIndex; // 0xA8
+	private int _currentPosition; // 0xB0
+
+	// Properties
+	public string RawData { get; }
+	public int CurrentPosition { get; }
+	public long CurrentRecordIndex { get; }
+	public int CurrentFieldIndex { get; }
+	public override string Message { get; }
+
+	// Methods
+
+	// RVA: 0x3E4090C Offset: 0x3E3C90C VA: 0x3E4090C
+	public void .ctor() { }
+
+	// RVA: 0x3E40A08 Offset: 0x3E3CA08 VA: 0x3E40A08
+	public void .ctor(string message) { }
+
+	// RVA: 0x3E40918 Offset: 0x3E3C918 VA: 0x3E40918
+	public void .ctor(string message, Exception innerException) { }
+
+	// RVA: 0x3E3F350 Offset: 0x3E3B350 VA: 0x3E3F350
+	public void .ctor(string rawData, int currentPosition, long currentRecordIndex, int currentFieldIndex, string csvParseType) { }
+
+	// RVA: 0x3E40A10 Offset: 0x3E3CA10 VA: 0x3E40A10
+	public void .ctor(string rawData, int currentPosition, long currentRecordIndex, int currentFieldIndex, Exception innerException, string csvParseType) { }
+
+	// RVA: 0x3E40D44 Offset: 0x3E3CD44 VA: 0x3E40D44
+	protected void .ctor(SerializationInfo info, StreamingContext context) { }
+
+	// RVA: 0x3E40EB0 Offset: 0x3E3CEB0 VA: 0x3E40EB0
+	public string get_RawData() { }
+
+	// RVA: 0x3E40EB8 Offset: 0x3E3CEB8 VA: 0x3E40EB8
+	public int get_CurrentPosition() { }
+
+	// RVA: 0x3E40EC0 Offset: 0x3E3CEC0 VA: 0x3E40EC0
+	public long get_CurrentRecordIndex() { }
+
+	// RVA: 0x3E40EC8 Offset: 0x3E3CEC8 VA: 0x3E40EC8
+	public int get_CurrentFieldIndex() { }
+
+	// RVA: 0x3E40ED0 Offset: 0x3E3CED0 VA: 0x3E40ED0 Slot: 5
+	public override string get_Message() { }
+
+	// RVA: 0x3E40ED8 Offset: 0x3E3CED8 VA: 0x3E40ED8 Slot: 13
+	public override void GetObjectData(SerializationInfo info, StreamingContext context) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LumenWorks.Framework.IO.Csv
+[Serializable]
+public class MissingFieldCsvException : MalformedCsvException // TypeDefIndex: 1315
+{
+	// Methods
+
+	// RVA: 0x3E41004 Offset: 0x3E3D004 VA: 0x3E41004
+	public void .ctor() { }
+
+	// RVA: 0x3E41010 Offset: 0x3E3D010 VA: 0x3E41010
+	public void .ctor(string message) { }
+
+	// RVA: 0x3E41018 Offset: 0x3E3D018 VA: 0x3E41018
+	public void .ctor(string message, Exception innerException) { }
+
+	// RVA: 0x3E3FDB4 Offset: 0x3E3BDB4 VA: 0x3E3FDB4
+	public void .ctor(string rawData, int currentPosition, long currentRecordIndex, int currentFieldIndex, string csvParseType) { }
+
+	// RVA: 0x3E4101C Offset: 0x3E3D01C VA: 0x3E4101C
+	public void .ctor(string rawData, int currentPosition, long currentRecordIndex, int currentFieldIndex, Exception innerException, string csvParseType) { }
+
+	// RVA: 0x3E41020 Offset: 0x3E3D020 VA: 0x3E41020
+	protected void .ctor(SerializationInfo info, StreamingContext context) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LumenWorks.Framework.IO.Csv
+public enum MissingFieldAction // TypeDefIndex: 1316
+{
+	// Fields
+	public int value__; // 0x0
+	public const MissingFieldAction ParseError = 0;
+	public const MissingFieldAction ReplaceByEmpty = 1;
+	public const MissingFieldAction ReplaceByNull = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LumenWorks.Framework.IO.Csv
+public enum ParseErrorAction // TypeDefIndex: 1317
+{
+	// Fields
+	public int value__; // 0x0
+	public const ParseErrorAction RaiseEvent = 0;
+	public const ParseErrorAction AdvanceToNextLine = 1;
+	public const ParseErrorAction ThrowException = 2;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LumenWorks.Framework.IO.Csv
+[Flags]
+public enum ValueTrimmingOptions // TypeDefIndex: 1318
+{
+	// Fields
+	public int value__; // 0x0
+	public const ValueTrimmingOptions None = 0;
+	public const ValueTrimmingOptions UnquotedOnly = 1;
+	public const ValueTrimmingOptions QuotedOnly = 2;
+	public const ValueTrimmingOptions All = 3;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LumenWorks.Framework.IO.Csv.Resources
+internal class ExceptionMessage // TypeDefIndex: 1319
+{
+	// Properties
+	internal static string BufferSizeTooSmall { get; }
+	internal static string CannotMovePreviousRecordInForwardOnly { get; }
+	internal static string CannotReadRecordAtIndex { get; }
+	internal static string EnumerationFinishedOrNotStarted { get; }
+	internal static string EnumerationVersionCheckFailed { get; }
+	internal static string FieldHeaderNotFound { get; }
+	internal static string FieldIndexOutOfRange { get; }
+	internal static string MalformedCsvException { get; }
+	internal static string MissingFieldActionNotSupported { get; }
+	internal static string NoCurrentRecord { get; }
+	internal static string NoHeaders { get; }
+	internal static string NotEnoughSpaceInArray { get; }
+	internal static string ParseErrorActionInvalidInsideParseErrorEvent { get; }
+	internal static string ParseErrorActionNotSupported { get; }
+	internal static string ReaderClosed { get; }
+	internal static string RecordIndexLessThanZero { get; }
+
+	// Methods
+
+	// RVA: 0x3E3D3CC Offset: 0x3E393CC VA: 0x3E3D3CC
+	internal static string get_BufferSizeTooSmall() { }
+
+	// RVA: 0x3E41024 Offset: 0x3E3D024 VA: 0x3E41024
+	internal static string get_CannotMovePreviousRecordInForwardOnly() { }
+
+	// RVA: 0x3E3D83C Offset: 0x3E3983C VA: 0x3E3D83C
+	internal static string get_CannotReadRecordAtIndex() { }
+
+	// RVA: 0x3E41064 Offset: 0x3E3D064 VA: 0x3E41064
+	internal static string get_EnumerationFinishedOrNotStarted() { }
+
+	// RVA: 0x3E40728 Offset: 0x3E3C728 VA: 0x3E40728
+	internal static string get_EnumerationVersionCheckFailed() { }
+
+	// RVA: 0x3E3DB60 Offset: 0x3E39B60 VA: 0x3E3DB60
+	internal static string get_FieldHeaderNotFound() { }
+
+	// RVA: 0x3E3EEC4 Offset: 0x3E3AEC4 VA: 0x3E3EEC4
+	internal static string get_FieldIndexOutOfRange() { }
+
+	// RVA: 0x3E40D04 Offset: 0x3E3CD04 VA: 0x3E40D04
+	internal static string get_MalformedCsvException() { }
+
+	// RVA: 0x3E3FDC0 Offset: 0x3E3BDC0 VA: 0x3E3FDC0
+	internal static string get_MissingFieldActionNotSupported() { }
+
+	// RVA: 0x3E3EA20 Offset: 0x3E3AA20 VA: 0x3E3EA20
+	internal static string get_NoCurrentRecord() { }
+
+	// RVA: 0x3E3DA9C Offset: 0x3E39A9C VA: 0x3E3DA9C
+	internal static string get_NoHeaders() { }
+
+	// RVA: 0x3E3EA60 Offset: 0x3E3AA60 VA: 0x3E3EA60
+	internal static string get_NotEnoughSpaceInArray() { }
+
+	// RVA: 0x3E3FD34 Offset: 0x3E3BD34 VA: 0x3E3FD34
+	internal static string get_ParseErrorActionInvalidInsideParseErrorEvent() { }
+
+	// RVA: 0x3E3FD74 Offset: 0x3E3BD74 VA: 0x3E3FD74
+	internal static string get_ParseErrorActionNotSupported() { }
+
+	// RVA: 0x3E410A4 Offset: 0x3E3D0A4 VA: 0x3E410A4
+	internal static string get_ReaderClosed() { }
+
+	// RVA: 0x3E410E4 Offset: 0x3E3D0E4 VA: 0x3E410E4
+	internal static string get_RecordIndexLessThanZero() { }
+
+	// RVA: 0x3E41124 Offset: 0x3E3D124 VA: 0x3E41124
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LitJson
+public enum JsonType // TypeDefIndex: 1320
+{
+	// Fields
+	public int value__; // 0x0
+	public const JsonType None = 0;
+	public const JsonType Object = 1;
+	public const JsonType Array = 2;
+	public const JsonType String = 3;
+	public const JsonType Int = 4;
+	public const JsonType Long = 5;
+	public const JsonType Double = 6;
+	public const JsonType Boolean = 7;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LitJson
+public interface IJsonWrapper : IList, ICollection, IEnumerable, IOrderedDictionary, IDictionary // TypeDefIndex: 1321
+{
+	// Properties
+	public abstract bool IsArray { get; }
+	public abstract bool IsBoolean { get; }
+	public abstract bool IsDouble { get; }
+	public abstract bool IsInt { get; }
+	public abstract bool IsLong { get; }
+	public abstract bool IsObject { get; }
+	public abstract bool IsString { get; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract bool get_IsArray();
+
+	// RVA: -1 Offset: -1 Slot: 1
+	public abstract bool get_IsBoolean();
+
+	// RVA: -1 Offset: -1 Slot: 2
+	public abstract bool get_IsDouble();
+
+	// RVA: -1 Offset: -1 Slot: 3
+	public abstract bool get_IsInt();
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public abstract bool get_IsLong();
+
+	// RVA: -1 Offset: -1 Slot: 5
+	public abstract bool get_IsObject();
+
+	// RVA: -1 Offset: -1 Slot: 6
+	public abstract bool get_IsString();
+
+	// RVA: -1 Offset: -1 Slot: 7
+	public abstract bool GetBoolean();
+
+	// RVA: -1 Offset: -1 Slot: 8
+	public abstract double GetDouble();
+
+	// RVA: -1 Offset: -1 Slot: 9
+	public abstract int GetInt();
+
+	// RVA: -1 Offset: -1 Slot: 10
+	public abstract JsonType GetJsonType();
+
+	// RVA: -1 Offset: -1 Slot: 11
+	public abstract long GetLong();
+
+	// RVA: -1 Offset: -1 Slot: 12
+	public abstract string GetString();
+
+	// RVA: -1 Offset: -1 Slot: 13
+	public abstract void SetBoolean(bool val);
+
+	// RVA: -1 Offset: -1 Slot: 14
+	public abstract void SetDouble(double val);
+
+	// RVA: -1 Offset: -1 Slot: 15
+	public abstract void SetInt(int val);
+
+	// RVA: -1 Offset: -1 Slot: 16
+	public abstract void SetJsonType(JsonType type);
+
+	// RVA: -1 Offset: -1 Slot: 17
+	public abstract void SetLong(long val);
+
+	// RVA: -1 Offset: -1 Slot: 18
+	public abstract void SetString(string val);
+
+	// RVA: -1 Offset: -1 Slot: 19
+	public abstract string ToJson();
+
+	// RVA: -1 Offset: -1 Slot: 20
+	public abstract void ToJson(JsonWriter writer);
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LitJson
+[DefaultMember("Item")]
+public class JsonData : IJsonWrapper, IList, ICollection, IEnumerable, IOrderedDictionary, IDictionary, IEquatable<JsonData> // TypeDefIndex: 1322
+{
+	// Fields
+	public IList<JsonData> inst_array; // 0x10
+	public bool inst_boolean; // 0x18
+	public double inst_double; // 0x20
+	public int inst_int; // 0x28
+	public long inst_long; // 0x30
+	public IDictionary<string, JsonData> inst_object; // 0x38
+	public string inst_string; // 0x40
+	public string json; // 0x48
+	public JsonType type; // 0x50
+	public IList<KeyValuePair<string, JsonData>> object_list; // 0x58
+
+	// Properties
+	public int Count { get; }
+	public bool IsArray { get; }
+	public bool IsBoolean { get; }
+	public bool IsDouble { get; }
+	public bool IsInt { get; }
+	public bool IsLong { get; }
+	public bool IsObject { get; }
+	public bool IsString { get; }
+	private int System.Collections.ICollection.Count { get; }
+	private bool System.Collections.ICollection.IsSynchronized { get; }
+	private object System.Collections.ICollection.SyncRoot { get; }
+	private bool System.Collections.IDictionary.IsFixedSize { get; }
+	private bool System.Collections.IDictionary.IsReadOnly { get; }
+	private ICollection System.Collections.IDictionary.Keys { get; }
+	private ICollection System.Collections.IDictionary.Values { get; }
+	private bool LitJson.IJsonWrapper.IsArray { get; }
+	private bool LitJson.IJsonWrapper.IsBoolean { get; }
+	private bool LitJson.IJsonWrapper.IsDouble { get; }
+	private bool LitJson.IJsonWrapper.IsInt { get; }
+	private bool LitJson.IJsonWrapper.IsLong { get; }
+	private bool LitJson.IJsonWrapper.IsObject { get; }
+	private bool LitJson.IJsonWrapper.IsString { get; }
+	private bool System.Collections.IList.IsFixedSize { get; }
+	private bool System.Collections.IList.IsReadOnly { get; }
+	private object System.Collections.IDictionary.Item { get; set; }
+	private object System.Collections.Specialized.IOrderedDictionary.Item { get; set; }
+	private object System.Collections.IList.Item { get; set; }
+	public JsonData Item { get; set; }
+	public JsonData Item { get; set; }
+
+	// Methods
+
+	// RVA: 0x3E4112C Offset: 0x3E3D12C VA: 0x3E4112C
+	public int get_Count() { }
+
+	// RVA: 0x3E412B8 Offset: 0x3E3D2B8 VA: 0x3E412B8
+	public bool get_IsArray() { }
+
+	// RVA: 0x3E412C8 Offset: 0x3E3D2C8 VA: 0x3E412C8
+	public bool get_IsBoolean() { }
+
+	// RVA: 0x3E412D8 Offset: 0x3E3D2D8 VA: 0x3E412D8
+	public bool get_IsDouble() { }
+
+	// RVA: 0x3E412E8 Offset: 0x3E3D2E8 VA: 0x3E412E8
+	public bool get_IsInt() { }
+
+	// RVA: 0x3E412F8 Offset: 0x3E3D2F8 VA: 0x3E412F8
+	public bool get_IsLong() { }
+
+	// RVA: 0x3E41308 Offset: 0x3E3D308 VA: 0x3E41308
+	public bool get_IsObject() { }
+
+	// RVA: 0x3E41318 Offset: 0x3E3D318 VA: 0x3E41318
+	public bool get_IsString() { }
+
+	// RVA: 0x3E41328 Offset: 0x3E3D328 VA: 0x3E41328 Slot: 37
+	private int System.Collections.ICollection.get_Count() { }
+
+	// RVA: 0x3E4132C Offset: 0x3E3D32C VA: 0x3E4132C Slot: 39
+	private bool System.Collections.ICollection.get_IsSynchronized() { }
+
+	// RVA: 0x3E413E4 Offset: 0x3E3D3E4 VA: 0x3E413E4 Slot: 38
+	private object System.Collections.ICollection.get_SyncRoot() { }
+
+	// RVA: 0x3E4149C Offset: 0x3E3D49C VA: 0x3E4149C Slot: 54
+	private bool System.Collections.IDictionary.get_IsFixedSize() { }
+
+	// RVA: 0x3E416C8 Offset: 0x3E3D6C8 VA: 0x3E416C8 Slot: 53
+	private bool System.Collections.IDictionary.get_IsReadOnly() { }
+
+	// RVA: 0x3E41780 Offset: 0x3E3D780 VA: 0x3E41780 Slot: 48
+	private ICollection System.Collections.IDictionary.get_Keys() { }
+
+	// RVA: 0x3E41BAC Offset: 0x3E3DBAC VA: 0x3E41BAC Slot: 49
+	private ICollection System.Collections.IDictionary.get_Values() { }
+
+	// RVA: 0x3E41FD8 Offset: 0x3E3DFD8 VA: 0x3E41FD8 Slot: 4
+	private bool LitJson.IJsonWrapper.get_IsArray() { }
+
+	// RVA: 0x3E41FE8 Offset: 0x3E3DFE8 VA: 0x3E41FE8 Slot: 5
+	private bool LitJson.IJsonWrapper.get_IsBoolean() { }
+
+	// RVA: 0x3E41FF8 Offset: 0x3E3DFF8 VA: 0x3E41FF8 Slot: 6
+	private bool LitJson.IJsonWrapper.get_IsDouble() { }
+
+	// RVA: 0x3E42008 Offset: 0x3E3E008 VA: 0x3E42008 Slot: 7
+	private bool LitJson.IJsonWrapper.get_IsInt() { }
+
+	// RVA: 0x3E42018 Offset: 0x3E3E018 VA: 0x3E42018 Slot: 8
+	private bool LitJson.IJsonWrapper.get_IsLong() { }
+
+	// RVA: 0x3E42028 Offset: 0x3E3E028 VA: 0x3E42028 Slot: 9
+	private bool LitJson.IJsonWrapper.get_IsObject() { }
+
+	// RVA: 0x3E42038 Offset: 0x3E3E038 VA: 0x3E42038 Slot: 10
+	private bool LitJson.IJsonWrapper.get_IsString() { }
+
+	// RVA: 0x3E42048 Offset: 0x3E3E048 VA: 0x3E42048 Slot: 31
+	private bool System.Collections.IList.get_IsFixedSize() { }
+
+	// RVA: 0x3E42224 Offset: 0x3E3E224 VA: 0x3E42224 Slot: 30
+	private bool System.Collections.IList.get_IsReadOnly() { }
+
+	// RVA: 0x3E422DC Offset: 0x3E3E2DC VA: 0x3E422DC Slot: 46
+	private object System.Collections.IDictionary.get_Item(object key) { }
+
+	// RVA: 0x3E423A0 Offset: 0x3E3E3A0 VA: 0x3E423A0 Slot: 47
+	private void System.Collections.IDictionary.set_Item(object key, object value) { }
+
+	// RVA: 0x3E428EC Offset: 0x3E3E8EC VA: 0x3E428EC Slot: 41
+	private object System.Collections.Specialized.IOrderedDictionary.get_Item(int idx) { }
+
+	// RVA: 0x3E429C4 Offset: 0x3E3E9C4 VA: 0x3E429C4 Slot: 42
+	private void System.Collections.Specialized.IOrderedDictionary.set_Item(int idx, object value) { }
+
+	// RVA: 0x3E42BFC Offset: 0x3E3EBFC VA: 0x3E42BFC Slot: 25
+	private object System.Collections.IList.get_Item(int index) { }
+
+	// RVA: 0x3E42CC0 Offset: 0x3E3ECC0 VA: 0x3E42CC0 Slot: 26
+	private void System.Collections.IList.set_Item(int index, object value) { }
+
+	// RVA: 0x3E42FD0 Offset: 0x3E3EFD0 VA: 0x3E42FD0
+	public bool ContainsKey(string key) { }
+
+	// RVA: 0x3E43098 Offset: 0x3E3F098 VA: 0x3E43098
+	public bool TryGetValue(string key, out JsonData value) { }
+
+	// RVA: 0x3E43168 Offset: 0x3E3F168 VA: 0x3E43168
+	public JsonData get_Item(string prop_name) { }
+
+	// RVA: 0x3E42504 Offset: 0x3E3E504 VA: 0x3E42504
+	public void set_Item(string prop_name, JsonData value) { }
+
+	// RVA: 0x3E4322C Offset: 0x3E3F22C VA: 0x3E4322C
+	public JsonData get_Item(int index) { }
+
+	// RVA: 0x3E42CF8 Offset: 0x3E3ECF8 VA: 0x3E42CF8
+	public void set_Item(int index, JsonData value) { }
+
+	// RVA: 0x3E433A0 Offset: 0x3E3F3A0 VA: 0x3E433A0
+	public void .ctor() { }
+
+	// RVA: 0x3E433A8 Offset: 0x3E3F3A8 VA: 0x3E433A8
+	public void .ctor(bool boolean) { }
+
+	// RVA: 0x3E433D8 Offset: 0x3E3F3D8 VA: 0x3E433D8
+	public void .ctor(double number) { }
+
+	// RVA: 0x3E43408 Offset: 0x3E3F408 VA: 0x3E43408
+	public void .ctor(int number) { }
+
+	// RVA: 0x3E43438 Offset: 0x3E3F438 VA: 0x3E43438
+	public void .ctor(long number) { }
+
+	// RVA: 0x3E43468 Offset: 0x3E3F468 VA: 0x3E43468
+	public void .ctor(object obj) { }
+
+	// RVA: 0x3E43698 Offset: 0x3E3F698 VA: 0x3E43698
+	public void .ctor(string str) { }
+
+	// RVA: 0x3E436D0 Offset: 0x3E3F6D0 VA: 0x3E436D0
+	public static JsonData op_Implicit(bool data) { }
+
+	// RVA: 0x3E43738 Offset: 0x3E3F738 VA: 0x3E43738
+	public static JsonData op_Implicit(double data) { }
+
+	// RVA: 0x3E437A4 Offset: 0x3E3F7A4 VA: 0x3E437A4
+	public static JsonData op_Implicit(int data) { }
+
+	// RVA: 0x3E43808 Offset: 0x3E3F808 VA: 0x3E43808
+	public static JsonData op_Implicit(long data) { }
+
+	// RVA: 0x3E4386C Offset: 0x3E3F86C VA: 0x3E4386C
+	public static JsonData op_Implicit(string data) { }
+
+	// RVA: 0x3E438DC Offset: 0x3E3F8DC VA: 0x3E438DC
+	public static bool op_Explicit(JsonData data) { }
+
+	// RVA: 0x3E43948 Offset: 0x3E3F948 VA: 0x3E43948
+	public static double op_Explicit(JsonData data) { }
+
+	// RVA: 0x3E439B4 Offset: 0x3E3F9B4 VA: 0x3E439B4
+	public static int op_Explicit(JsonData data) { }
+
+	// RVA: 0x3E43A20 Offset: 0x3E3FA20 VA: 0x3E43A20
+	public static long op_Explicit(JsonData data) { }
+
+	// RVA: 0x3E43A8C Offset: 0x3E3FA8C VA: 0x3E43A8C
+	public static string op_Explicit(JsonData data) { }
+
+	// RVA: 0x3E43AF8 Offset: 0x3E3FAF8 VA: 0x3E43AF8 Slot: 36
+	private void System.Collections.ICollection.CopyTo(Array array, int index) { }
+
+	// RVA: 0x3E43BC4 Offset: 0x3E3FBC4 VA: 0x3E43BC4 Slot: 51
+	private void System.Collections.IDictionary.Add(object key, object value) { }
+
+	// RVA: 0x3E43DB0 Offset: 0x3E3FDB0 VA: 0x3E43DB0 Slot: 52
+	private void System.Collections.IDictionary.Clear() { }
+
+	// RVA: 0x3E43F04 Offset: 0x3E3FF04 VA: 0x3E43F04 Slot: 50
+	private bool System.Collections.IDictionary.Contains(object key) { }
+
+	// RVA: 0x3E43FCC Offset: 0x3E3FFCC VA: 0x3E43FCC Slot: 55
+	private IDictionaryEnumerator System.Collections.IDictionary.GetEnumerator() { }
+
+	// RVA: 0x3E44070 Offset: 0x3E40070 VA: 0x3E44070 Slot: 56
+	private void System.Collections.IDictionary.Remove(object key) { }
+
+	// RVA: 0x3E44334 Offset: 0x3E40334 VA: 0x3E44334 Slot: 40
+	private IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+
+	// RVA: 0x3E443E8 Offset: 0x3E403E8 VA: 0x3E443E8 Slot: 11
+	private bool LitJson.IJsonWrapper.GetBoolean() { }
+
+	// RVA: 0x3E4444C Offset: 0x3E4044C VA: 0x3E4444C Slot: 12
+	private double LitJson.IJsonWrapper.GetDouble() { }
+
+	// RVA: 0x3E444B0 Offset: 0x3E404B0 VA: 0x3E444B0 Slot: 13
+	private int LitJson.IJsonWrapper.GetInt() { }
+
+	// RVA: 0x3E44514 Offset: 0x3E40514 VA: 0x3E44514 Slot: 15
+	private long LitJson.IJsonWrapper.GetLong() { }
+
+	// RVA: 0x3E44578 Offset: 0x3E40578 VA: 0x3E44578 Slot: 16
+	private string LitJson.IJsonWrapper.GetString() { }
+
+	// RVA: 0x3E445DC Offset: 0x3E405DC VA: 0x3E445DC Slot: 17
+	private void LitJson.IJsonWrapper.SetBoolean(bool val) { }
+
+	// RVA: 0x3E445F8 Offset: 0x3E405F8 VA: 0x3E445F8 Slot: 18
+	private void LitJson.IJsonWrapper.SetDouble(double val) { }
+
+	// RVA: 0x3E44610 Offset: 0x3E40610 VA: 0x3E44610 Slot: 19
+	private void LitJson.IJsonWrapper.SetInt(int val) { }
+
+	// RVA: 0x3E44628 Offset: 0x3E40628 VA: 0x3E44628 Slot: 21
+	private void LitJson.IJsonWrapper.SetLong(long val) { }
+
+	// RVA: 0x3E44640 Offset: 0x3E40640 VA: 0x3E44640 Slot: 22
+	private void LitJson.IJsonWrapper.SetString(string val) { }
+
+	// RVA: 0x3E4466C Offset: 0x3E4066C VA: 0x3E4466C Slot: 23
+	private string LitJson.IJsonWrapper.ToJson() { }
+
+	// RVA: 0x3E44748 Offset: 0x3E40748 VA: 0x3E44748 Slot: 24
+	private void LitJson.IJsonWrapper.ToJson(JsonWriter writer) { }
+
+	// RVA: 0x3E4477C Offset: 0x3E4077C VA: 0x3E4477C Slot: 27
+	private int System.Collections.IList.Add(object value) { }
+
+	// RVA: 0x3E44864 Offset: 0x3E40864 VA: 0x3E44864 Slot: 29
+	private void System.Collections.IList.Clear() { }
+
+	// RVA: 0x3E44934 Offset: 0x3E40934 VA: 0x3E44934 Slot: 28
+	private bool System.Collections.IList.Contains(object value) { }
+
+	// RVA: 0x3E449FC Offset: 0x3E409FC VA: 0x3E449FC Slot: 32
+	private int System.Collections.IList.IndexOf(object value) { }
+
+	// RVA: 0x3E44AC4 Offset: 0x3E40AC4 VA: 0x3E44AC4 Slot: 33
+	private void System.Collections.IList.Insert(int index, object value) { }
+
+	// RVA: 0x3E44BAC Offset: 0x3E40BAC VA: 0x3E44BAC Slot: 34
+	private void System.Collections.IList.Remove(object value) { }
+
+	// RVA: 0x3E44C84 Offset: 0x3E40C84 VA: 0x3E44C84 Slot: 35
+	private void System.Collections.IList.RemoveAt(int index) { }
+
+	// RVA: 0x3E44D5C Offset: 0x3E40D5C VA: 0x3E44D5C Slot: 43
+	private IDictionaryEnumerator System.Collections.Specialized.IOrderedDictionary.GetEnumerator() { }
+
+	// RVA: 0x3E44E90 Offset: 0x3E40E90 VA: 0x3E44E90 Slot: 44
+	private void System.Collections.Specialized.IOrderedDictionary.Insert(int idx, object key, object value) { }
+
+	// RVA: 0x3E44FF0 Offset: 0x3E40FF0 VA: 0x3E44FF0 Slot: 45
+	private void System.Collections.Specialized.IOrderedDictionary.RemoveAt(int idx) { }
+
+	// RVA: 0x3E411E4 Offset: 0x3E3D1E4 VA: 0x3E411E4
+	private ICollection EnsureCollection() { }
+
+	// RVA: 0x3E41554 Offset: 0x3E3D554 VA: 0x3E41554
+	private IDictionary EnsureDictionary() { }
+
+	// RVA: 0x3E42100 Offset: 0x3E3E100 VA: 0x3E42100
+	private IList EnsureList() { }
+
+	// RVA: 0x3E42478 Offset: 0x3E3E478 VA: 0x3E42478
+	private JsonData ToJsonData(object obj) { }
+
+	// RVA: 0x3E451C8 Offset: 0x3E411C8 VA: 0x3E451C8
+	private static void WriteJson(IJsonWrapper obj, JsonWriter writer) { }
+
+	// RVA: 0x3E44780 Offset: 0x3E40780 VA: 0x3E44780
+	public int Add(object value) { }
+
+	// RVA: 0x3E46808 Offset: 0x3E42808 VA: 0x3E46808
+	public void Clear() { }
+
+	// RVA: 0x3E4692C Offset: 0x3E4292C VA: 0x3E4692C Slot: 57
+	public bool Equals(JsonData x) { }
+
+	// RVA: 0x3E46A90 Offset: 0x3E42A90 VA: 0x3E46A90 Slot: 14
+	public JsonType GetJsonType() { }
+
+	// RVA: 0x3E46A98 Offset: 0x3E42A98 VA: 0x3E46A98 Slot: 20
+	public void SetJsonType(JsonType type) { }
+
+	// RVA: 0x3E44670 Offset: 0x3E40670 VA: 0x3E44670
+	public string ToJson() { }
+
+	// RVA: 0x3E4474C Offset: 0x3E4074C VA: 0x3E4474C
+	public void ToJson(JsonWriter writer) { }
+
+	// RVA: 0x3E46C90 Offset: 0x3E42C90 VA: 0x3E46C90 Slot: 3
+	public override string ToString() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LitJson
+internal class OrderedDictionaryEnumerator : IDictionaryEnumerator, IEnumerator // TypeDefIndex: 1323
+{
+	// Fields
+	private IEnumerator<KeyValuePair<string, JsonData>> list_enumerator; // 0x10
+
+	// Properties
+	public object Current { get; }
+	public DictionaryEntry Entry { get; }
+	public object Key { get; }
+	public object Value { get; }
+
+	// Methods
+
+	// RVA: 0x3E46DAC Offset: 0x3E42DAC VA: 0x3E46DAC Slot: 8
+	public object get_Current() { }
+
+	// RVA: 0x3E46E10 Offset: 0x3E42E10 VA: 0x3E46E10 Slot: 6
+	public DictionaryEntry get_Entry() { }
+
+	// RVA: 0x3E46F04 Offset: 0x3E42F04 VA: 0x3E46F04 Slot: 4
+	public object get_Key() { }
+
+	// RVA: 0x3E46FBC Offset: 0x3E42FBC VA: 0x3E46FBC Slot: 5
+	public object get_Value() { }
+
+	// RVA: 0x3E44E60 Offset: 0x3E40E60 VA: 0x3E44E60
+	public void .ctor(IEnumerator<KeyValuePair<string, JsonData>> enumerator) { }
+
+	// RVA: 0x3E4707C Offset: 0x3E4307C VA: 0x3E4707C Slot: 7
+	public bool MoveNext() { }
+
+	// RVA: 0x3E47128 Offset: 0x3E43128 VA: 0x3E47128 Slot: 9
+	public void Reset() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LitJson
+public class JsonException : ApplicationException // TypeDefIndex: 1324
+{
+	// Methods
+
+	// RVA: 0x3E471D8 Offset: 0x3E431D8 VA: 0x3E471D8
+	public void .ctor() { }
+
+	// RVA: 0x3E471E0 Offset: 0x3E431E0 VA: 0x3E471E0
+	internal void .ctor(ParserToken token) { }
+
+	// RVA: 0x3E4727C Offset: 0x3E4327C VA: 0x3E4727C
+	internal void .ctor(ParserToken token, Exception inner_exception) { }
+
+	// RVA: 0x3E47320 Offset: 0x3E43320 VA: 0x3E47320
+	internal void .ctor(int c) { }
+
+	// RVA: 0x3E473BC Offset: 0x3E433BC VA: 0x3E473BC
+	internal void .ctor(int c, Exception inner_exception) { }
+
+	// RVA: 0x3E47460 Offset: 0x3E43460 VA: 0x3E47460
+	public void .ctor(string message) { }
+
+	// RVA: 0x3E47468 Offset: 0x3E43468 VA: 0x3E47468
+	public void .ctor(string message, Exception inner_exception) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LitJson
+internal struct PropertyMetadata // TypeDefIndex: 1325
+{
+	// Fields
+	public MemberInfo Info; // 0x0
+	public bool IsField; // 0x8
+	public Type Type; // 0x10
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LitJson
+internal struct ArrayMetadata // TypeDefIndex: 1326
+{
+	// Fields
+	private Type element_type; // 0x0
+	private bool is_array; // 0x8
+	private bool is_list; // 0x9
+
+	// Properties
+	public Type ElementType { get; set; }
+	public bool IsArray { get; set; }
+	public bool IsList { get; set; }
+
+	// Methods
+
+	// RVA: 0x3E474D8 Offset: 0x3E434D8 VA: 0x3E474D8
+	public Type get_ElementType() { }
+
+	// RVA: 0x3E47588 Offset: 0x3E43588 VA: 0x3E47588
+	public void set_ElementType(Type value) { }
+
+	// RVA: 0x3E47598 Offset: 0x3E43598 VA: 0x3E47598
+	public bool get_IsArray() { }
+
+	// RVA: 0x3E475A8 Offset: 0x3E435A8 VA: 0x3E475A8
+	public void set_IsArray(bool value) { }
+
+	// RVA: 0x3E475C0 Offset: 0x3E435C0 VA: 0x3E475C0
+	public bool get_IsList() { }
+
+	// RVA: 0x3E475D0 Offset: 0x3E435D0 VA: 0x3E475D0
+	public void set_IsList(bool value) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LitJson
+internal struct ObjectMetadata // TypeDefIndex: 1327
+{
+	// Fields
+	private Type element_type; // 0x0
+	private bool is_dictionary; // 0x8
+	private IDictionary<string, PropertyMetadata> properties; // 0x10
+
+	// Properties
+	public Type ElementType { get; set; }
+	public bool IsDictionary { get; set; }
+	public IDictionary<string, PropertyMetadata> Properties { get; set; }
+
+	// Methods
+
+	// RVA: 0x3E4761C Offset: 0x3E4361C VA: 0x3E4761C
+	public Type get_ElementType() { }
+
+	// RVA: 0x3E476CC Offset: 0x3E436CC VA: 0x3E476CC
+	public void set_ElementType(Type value) { }
+
+	// RVA: 0x3E476DC Offset: 0x3E436DC VA: 0x3E476DC
+	public bool get_IsDictionary() { }
+
+	// RVA: 0x3E476EC Offset: 0x3E436EC VA: 0x3E476EC
+	public void set_IsDictionary(bool value) { }
+
+	// RVA: 0x3E47704 Offset: 0x3E43704 VA: 0x3E47704
+	public IDictionary<string, PropertyMetadata> get_Properties() { }
+
+	// RVA: 0x3E47714 Offset: 0x3E43714 VA: 0x3E47714
+	public void set_Properties(IDictionary<string, PropertyMetadata> value) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LitJson
+internal sealed class ExporterFunc : MulticastDelegate // TypeDefIndex: 1328
+{
+	// Methods
+
+	// RVA: 0x3E479A4 Offset: 0x3E439A4 VA: 0x3E479A4
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x3E47AB0 Offset: 0x3E43AB0 VA: 0x3E47AB0 Slot: 13
+	public virtual void Invoke(object obj, JsonWriter writer) { }
+
+	// RVA: 0x3E47AC4 Offset: 0x3E43AC4 VA: 0x3E47AC4 Slot: 14
+	public virtual IAsyncResult BeginInvoke(object obj, JsonWriter writer, AsyncCallback callback, object object) { }
+
+	// RVA: 0x3E47AEC Offset: 0x3E43AEC VA: 0x3E47AEC Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LitJson
+public sealed class ExporterFunc`1<T> : MulticastDelegate // TypeDefIndex: 1329
+{
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(object object, IntPtr method) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-ExporterFunc<__Il2CppFullySharedGenericType>..ctor
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 13
+	public virtual void Invoke(T obj, JsonWriter writer) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-ExporterFunc<__Il2CppFullySharedGenericType>.Invoke
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 14
+	public virtual IAsyncResult BeginInvoke(T obj, JsonWriter writer, AsyncCallback callback, object object) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-ExporterFunc<__Il2CppFullySharedGenericType>.BeginInvoke
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-ExporterFunc<__Il2CppFullySharedGenericType>.EndInvoke
+	*/
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LitJson
+internal sealed class ImporterFunc : MulticastDelegate // TypeDefIndex: 1330
+{
+	// Methods
+
+	// RVA: 0x3E47D40 Offset: 0x3E43D40 VA: 0x3E47D40
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x3E47E48 Offset: 0x3E43E48 VA: 0x3E47E48 Slot: 13
+	public virtual object Invoke(object input) { }
+
+	// RVA: 0x3E47E5C Offset: 0x3E43E5C VA: 0x3E47E5C Slot: 14
+	public virtual IAsyncResult BeginInvoke(object input, AsyncCallback callback, object object) { }
+
+	// RVA: 0x3E47E7C Offset: 0x3E43E7C VA: 0x3E47E7C Slot: 15
+	public virtual object EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LitJson
+public sealed class ImporterFunc`2<TJson, TValue> : MulticastDelegate // TypeDefIndex: 1331
+{
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: -1 Offset: -1 Slot: 13
+	public virtual TValue Invoke(TJson input) { }
+
+	// RVA: -1 Offset: -1 Slot: 14
+	public virtual IAsyncResult BeginInvoke(TJson input, AsyncCallback callback, object object) { }
+
+	// RVA: -1 Offset: -1 Slot: 15
+	public virtual TValue EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LitJson
+public sealed class WrapperFactory : MulticastDelegate // TypeDefIndex: 1332
+{
+	// Methods
+
+	// RVA: 0x3E47EDC Offset: 0x3E43EDC VA: 0x3E47EDC
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x3E47F78 Offset: 0x3E43F78 VA: 0x3E47F78 Slot: 13
+	public virtual IJsonWrapper Invoke() { }
+
+	// RVA: 0x3E47F8C Offset: 0x3E43F8C VA: 0x3E47F8C Slot: 14
+	public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
+
+	// RVA: 0x3E47FAC Offset: 0x3E43FAC VA: 0x3E47FAC Slot: 15
+	public virtual IJsonWrapper EndInvoke(IAsyncResult result) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+[Serializable]
+private sealed class JsonMapper.<>c // TypeDefIndex: 1333
+{
+	// Fields
+	public static readonly <>c <>9; // 0x0
+	public static WrapperFactory <>9__23_0; // 0x8
+	public static ExporterFunc <>9__24_0; // 0x10
+	public static ExporterFunc <>9__24_1; // 0x18
+	public static ExporterFunc <>9__24_2; // 0x20
+	public static ExporterFunc <>9__24_3; // 0x28
+	public static ExporterFunc <>9__24_4; // 0x30
+	public static ExporterFunc <>9__24_5; // 0x38
+	public static ExporterFunc <>9__24_6; // 0x40
+	public static ExporterFunc <>9__24_7; // 0x48
+	public static ExporterFunc <>9__24_8; // 0x50
+	public static ExporterFunc <>9__24_9; // 0x58
+	public static ImporterFunc <>9__25_0; // 0x60
+	public static ImporterFunc <>9__25_1; // 0x68
+	public static ImporterFunc <>9__25_2; // 0x70
+	public static ImporterFunc <>9__25_3; // 0x78
+	public static ImporterFunc <>9__25_4; // 0x80
+	public static ImporterFunc <>9__25_5; // 0x88
+	public static ImporterFunc <>9__25_6; // 0x90
+	public static ImporterFunc <>9__25_7; // 0x98
+	public static ImporterFunc <>9__25_8; // 0xA0
+	public static ImporterFunc <>9__25_9; // 0xA8
+	public static ImporterFunc <>9__25_10; // 0xB0
+	public static ImporterFunc <>9__25_11; // 0xB8
+	public static ImporterFunc <>9__25_12; // 0xC0
+	public static ImporterFunc <>9__25_13; // 0xC8
+	public static ImporterFunc <>9__25_14; // 0xD0
+	public static WrapperFactory <>9__31_0; // 0xD8
+	public static WrapperFactory <>9__32_0; // 0xE0
+	public static WrapperFactory <>9__33_0; // 0xE8
+
+	// Methods
+
+	// RVA: 0x3E50574 Offset: 0x3E4C574 VA: 0x3E50574
+	private static void .cctor() { }
+
+	// RVA: 0x3E505DC Offset: 0x3E4C5DC VA: 0x3E505DC
+	public void .ctor() { }
+
+	// RVA: 0x3E505E4 Offset: 0x3E4C5E4 VA: 0x3E505E4
+	internal IJsonWrapper <ReadSkip>b__23_0() { }
+
+	// RVA: 0x3E50640 Offset: 0x3E4C640 VA: 0x3E50640
+	internal void <RegisterBaseExporters>b__24_0(object obj, JsonWriter writer) { }
+
+	// RVA: 0x3E506F4 Offset: 0x3E4C6F4 VA: 0x3E506F4
+	internal void <RegisterBaseExporters>b__24_1(object obj, JsonWriter writer) { }
+
+	// RVA: 0x3E507A8 Offset: 0x3E4C7A8 VA: 0x3E507A8
+	internal void <RegisterBaseExporters>b__24_2(object obj, JsonWriter writer) { }
+
+	// RVA: 0x3E50894 Offset: 0x3E4C894 VA: 0x3E50894
+	internal void <RegisterBaseExporters>b__24_3(object obj, JsonWriter writer) { }
+
+	// RVA: 0x3E509EC Offset: 0x3E4C9EC VA: 0x3E509EC
+	internal void <RegisterBaseExporters>b__24_4(object obj, JsonWriter writer) { }
+
+	// RVA: 0x3E50AA0 Offset: 0x3E4CAA0 VA: 0x3E50AA0
+	internal void <RegisterBaseExporters>b__24_5(object obj, JsonWriter writer) { }
+
+	// RVA: 0x3E50B54 Offset: 0x3E4CB54 VA: 0x3E50B54
+	internal void <RegisterBaseExporters>b__24_6(object obj, JsonWriter writer) { }
+
+	// RVA: 0x3E50C08 Offset: 0x3E4CC08 VA: 0x3E50C08
+	internal void <RegisterBaseExporters>b__24_7(object obj, JsonWriter writer) { }
+
+	// RVA: 0x3E50CBC Offset: 0x3E4CCBC VA: 0x3E50CBC
+	internal void <RegisterBaseExporters>b__24_8(object obj, JsonWriter writer) { }
+
+	// RVA: 0x3E50D38 Offset: 0x3E4CD38 VA: 0x3E50D38
+	internal void <RegisterBaseExporters>b__24_9(object obj, JsonWriter writer) { }
+
+	// RVA: 0x3E50DE8 Offset: 0x3E4CDE8 VA: 0x3E50DE8
+	internal object <RegisterBaseImporters>b__25_0(object input) { }
+
+	// RVA: 0x3E50EB8 Offset: 0x3E4CEB8 VA: 0x3E50EB8
+	internal object <RegisterBaseImporters>b__25_1(object input) { }
+
+	// RVA: 0x3E50F88 Offset: 0x3E4CF88 VA: 0x3E50F88
+	internal object <RegisterBaseImporters>b__25_2(object input) { }
+
+	// RVA: 0x3E51058 Offset: 0x3E4D058 VA: 0x3E51058
+	internal object <RegisterBaseImporters>b__25_3(object input) { }
+
+	// RVA: 0x3E51128 Offset: 0x3E4D128 VA: 0x3E51128
+	internal object <RegisterBaseImporters>b__25_4(object input) { }
+
+	// RVA: 0x3E511F8 Offset: 0x3E4D1F8 VA: 0x3E511F8
+	internal object <RegisterBaseImporters>b__25_5(object input) { }
+
+	// RVA: 0x3E512C8 Offset: 0x3E4D2C8 VA: 0x3E512C8
+	internal object <RegisterBaseImporters>b__25_6(object input) { }
+
+	// RVA: 0x3E51394 Offset: 0x3E4D394 VA: 0x3E51394
+	internal object <RegisterBaseImporters>b__25_7(object input) { }
+
+	// RVA: 0x3E51460 Offset: 0x3E4D460 VA: 0x3E51460
+	internal object <RegisterBaseImporters>b__25_8(object input) { }
+
+	// RVA: 0x3E5152C Offset: 0x3E4D52C VA: 0x3E5152C
+	internal object <RegisterBaseImporters>b__25_9(object input) { }
+
+	// RVA: 0x3E51624 Offset: 0x3E4D624 VA: 0x3E51624
+	internal object <RegisterBaseImporters>b__25_10(object input) { }
+
+	// RVA: 0x3E516F4 Offset: 0x3E4D6F4 VA: 0x3E516F4
+	internal object <RegisterBaseImporters>b__25_11(object input) { }
+
+	// RVA: 0x3E517C4 Offset: 0x3E4D7C4 VA: 0x3E517C4
+	internal object <RegisterBaseImporters>b__25_12(object input) { }
+
+	// RVA: 0x3E51894 Offset: 0x3E4D894 VA: 0x3E51894
+	internal object <RegisterBaseImporters>b__25_13(object input) { }
+
+	// RVA: 0x3E51958 Offset: 0x3E4D958 VA: 0x3E51958
+	internal object <RegisterBaseImporters>b__25_14(object input) { }
+
+	// RVA: 0x3E51A54 Offset: 0x3E4DA54 VA: 0x3E51A54
+	internal IJsonWrapper <ToObject>b__31_0() { }
+
+	// RVA: 0x3E51AA8 Offset: 0x3E4DAA8 VA: 0x3E51AA8
+	internal IJsonWrapper <ToObject>b__32_0() { }
+
+	// RVA: 0x3E51AFC Offset: 0x3E4DAFC VA: 0x3E51AFC
+	internal IJsonWrapper <ToObject>b__33_0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class JsonMapper.<>c__DisplayClass21_0 // TypeDefIndex: 1334
+{
+	// Fields
+	public Type inst_type; // 0x10
+
+	// Methods
+
+	// RVA: 0x3E4CEF4 Offset: 0x3E48EF4 VA: 0x3E4CEF4
+	public void .ctor() { }
+
+	// RVA: 0x3E51B50 Offset: 0x3E4DB50 VA: 0x3E51B50
+	internal IJsonWrapper <ReadValue>b__0() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class JsonMapper.<>c__DisplayClass40_0`1<T> // TypeDefIndex: 1335
+{
+	// Fields
+	public ExporterFunc<T> exporter; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor() { }
+
+	// RVA: -1 Offset: -1
+	internal void <RegisterExporter>b__0(object obj, JsonWriter writer) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: 
+[CompilerGenerated]
+private sealed class JsonMapper.<>c__DisplayClass41_0`2<TJson, TValue> // TypeDefIndex: 1336
+{
+	// Fields
+	public ImporterFunc<TJson, TValue> importer; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor() { }
+
+	// RVA: -1 Offset: -1
+	internal object <RegisterImporter>b__0(object input) { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LitJson
+public class JsonMapper // TypeDefIndex: 1337
+{
+	// Fields
+	private static int max_nesting_depth; // 0x0
+	private static IFormatProvider datetime_format; // 0x8
+	private static IDictionary<Type, ExporterFunc> base_exporters_table; // 0x10
+	private static IDictionary<Type, ExporterFunc> custom_exporters_table; // 0x18
+	private static IDictionary<Type, IDictionary<Type, ImporterFunc>> base_importers_table; // 0x20
+	private static IDictionary<Type, IDictionary<Type, ImporterFunc>> custom_importers_table; // 0x28
+	private static IDictionary<Type, ArrayMetadata> array_metadata; // 0x30
+	private static readonly object array_metadata_lock; // 0x38
+	private static IDictionary<Type, IDictionary<Type, MethodInfo>> conv_ops; // 0x40
+	private static readonly object conv_ops_lock; // 0x48
+	private static IDictionary<Type, ObjectMetadata> object_metadata; // 0x50
+	private static readonly object object_metadata_lock; // 0x58
+	private static IDictionary<Type, IList<PropertyMetadata>> type_properties; // 0x60
+	private static readonly object type_properties_lock; // 0x68
+	private static JsonWriter static_writer; // 0x70
+	private static readonly object static_writer_lock; // 0x78
+
+	// Methods
+
+	// RVA: 0x3E47FB8 Offset: 0x3E43FB8 VA: 0x3E47FB8
+	private static void .cctor() { }
+
+	// RVA: 0x3E4A12C Offset: 0x3E4612C VA: 0x3E4A12C
+	private static void AddArrayMetadata(Type type) { }
+
+	// RVA: 0x3E4A5F4 Offset: 0x3E465F4 VA: 0x3E4A5F4
+	private static void AddObjectMetadata(Type type) { }
+
+	// RVA: 0x3E4ADF4 Offset: 0x3E46DF4 VA: 0x3E4ADF4
+	private static void AddTypeProperties(Type type) { }
+
+	// RVA: 0x3E4B398 Offset: 0x3E47398 VA: 0x3E4B398
+	private static MethodInfo GetConvOp(Type t1, Type t2) { }
+
+	// RVA: 0x3E4BC88 Offset: 0x3E47C88 VA: 0x3E4BC88
+	private static object ReadValue(Type inst_type, JsonReader reader) { }
+
+	// RVA: 0x3E4CEFC Offset: 0x3E48EFC VA: 0x3E4CEFC
+	private static IJsonWrapper ReadValue(WrapperFactory factory, JsonReader reader) { }
+
+	// RVA: 0x3E4DAF4 Offset: 0x3E49AF4 VA: 0x3E4DAF4
+	private static void ReadSkip(JsonReader reader) { }
+
+	// RVA: 0x3E48470 Offset: 0x3E44470 VA: 0x3E48470
+	private static void RegisterBaseExporters() { }
+
+	// RVA: 0x3E4922C Offset: 0x3E4522C VA: 0x3E4922C
+	private static void RegisterBaseImporters() { }
+
+	// RVA: 0x3E4DC58 Offset: 0x3E49C58 VA: 0x3E4DC58
+	private static void RegisterImporter(IDictionary<Type, IDictionary<Type, ImporterFunc>> table, Type json_type, Type value_type, ImporterFunc importer) { }
+
+	// RVA: 0x3E4DED0 Offset: 0x3E49ED0 VA: 0x3E4DED0
+	private static void WriteValue(object obj, JsonWriter writer, bool writer_is_private, int depth) { }
+
+	// RVA: 0x3E4F944 Offset: 0x3E4B944 VA: 0x3E4F944
+	private static bool CheckObjectIsDefaultValue(object value) { }
+
+	// RVA: 0x3E4FBD0 Offset: 0x3E4BBD0 VA: 0x3E4FBD0
+	public static string ToJson(object obj) { }
+
+	// RVA: 0x3E4FE3C Offset: 0x3E4BE3C VA: 0x3E4FE3C
+	public static void ToJson(object obj, JsonWriter writer) { }
+
+	// RVA: 0x3E4FEA8 Offset: 0x3E4BEA8 VA: 0x3E4FEA8
+	public static JsonData ToObject(JsonReader reader) { }
+
+	// RVA: 0x3E4FFF4 Offset: 0x3E4BFF4 VA: 0x3E4FFF4
+	public static JsonData ToObject(TextReader reader) { }
+
+	// RVA: 0x3E50174 Offset: 0x3E4C174 VA: 0x3E50174
+	public static JsonData ToObject(string json) { }
+
+	// RVA: 0x3E4DA68 Offset: 0x3E49A68 VA: 0x3E4DA68
+	public static object ToObject(string json, Type inst_type) { }
+
+	// RVA: -1 Offset: -1
+	public static T ToObject<T>(JsonReader reader) { }
+
+	// RVA: -1 Offset: -1
+	public static T ToObject<T>(TextReader reader) { }
+
+	// RVA: -1 Offset: -1
+	public static T ToObject<T>(string json) { }
+
+	// RVA: 0x3E4DBF4 Offset: 0x3E49BF4 VA: 0x3E4DBF4
+	public static IJsonWrapper ToWrapper(WrapperFactory factory, JsonReader reader) { }
+
+	// RVA: 0x3E502C0 Offset: 0x3E4C2C0 VA: 0x3E502C0
+	public static IJsonWrapper ToWrapper(WrapperFactory factory, string json) { }
+
+	// RVA: -1 Offset: -1
+	public static void RegisterExporter<T>(ExporterFunc<T> exporter) { }
+
+	// RVA: -1 Offset: -1
+	public static void RegisterImporter<TJson, TValue>(ImporterFunc<TJson, TValue> importer) { }
+
+	// RVA: 0x3E503BC Offset: 0x3E4C3BC VA: 0x3E503BC
+	public static void UnregisterExporters() { }
+
+	// RVA: 0x3E50494 Offset: 0x3E4C494 VA: 0x3E50494
+	public static void UnregisterImporters() { }
+
+	// RVA: 0x3E5056C Offset: 0x3E4C56C VA: 0x3E5056C
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LitJson
+public class JsonMockWrapper : IJsonWrapper, IList, ICollection, IEnumerable, IOrderedDictionary, IDictionary // TypeDefIndex: 1338
+{
+	// Properties
+	public bool IsArray { get; }
+	public bool IsBoolean { get; }
+	public bool IsDouble { get; }
+	public bool IsInt { get; }
+	public bool IsLong { get; }
+	public bool IsObject { get; }
+	public bool IsString { get; }
+	private bool System.Collections.IList.IsFixedSize { get; }
+	private bool System.Collections.IList.IsReadOnly { get; }
+	private object System.Collections.IList.Item { get; set; }
+	private int System.Collections.ICollection.Count { get; }
+	private bool System.Collections.ICollection.IsSynchronized { get; }
+	private object System.Collections.ICollection.SyncRoot { get; }
+	private bool System.Collections.IDictionary.IsFixedSize { get; }
+	private bool System.Collections.IDictionary.IsReadOnly { get; }
+	private ICollection System.Collections.IDictionary.Keys { get; }
+	private ICollection System.Collections.IDictionary.Values { get; }
+	private object System.Collections.IDictionary.Item { get; set; }
+	private object System.Collections.Specialized.IOrderedDictionary.Item { get; set; }
+
+	// Methods
+
+	// RVA: 0x3E51C60 Offset: 0x3E4DC60 VA: 0x3E51C60 Slot: 4
+	public bool get_IsArray() { }
+
+	// RVA: 0x3E51C68 Offset: 0x3E4DC68 VA: 0x3E51C68 Slot: 5
+	public bool get_IsBoolean() { }
+
+	// RVA: 0x3E51C70 Offset: 0x3E4DC70 VA: 0x3E51C70 Slot: 6
+	public bool get_IsDouble() { }
+
+	// RVA: 0x3E51C78 Offset: 0x3E4DC78 VA: 0x3E51C78 Slot: 7
+	public bool get_IsInt() { }
+
+	// RVA: 0x3E51C80 Offset: 0x3E4DC80 VA: 0x3E51C80 Slot: 8
+	public bool get_IsLong() { }
+
+	// RVA: 0x3E51C88 Offset: 0x3E4DC88 VA: 0x3E51C88 Slot: 9
+	public bool get_IsObject() { }
+
+	// RVA: 0x3E51C90 Offset: 0x3E4DC90 VA: 0x3E51C90 Slot: 10
+	public bool get_IsString() { }
+
+	// RVA: 0x3E51C98 Offset: 0x3E4DC98 VA: 0x3E51C98 Slot: 11
+	public bool GetBoolean() { }
+
+	// RVA: 0x3E51CA0 Offset: 0x3E4DCA0 VA: 0x3E51CA0 Slot: 12
+	public double GetDouble() { }
+
+	// RVA: 0x3E51CA8 Offset: 0x3E4DCA8 VA: 0x3E51CA8 Slot: 13
+	public int GetInt() { }
+
+	// RVA: 0x3E51CB0 Offset: 0x3E4DCB0 VA: 0x3E51CB0 Slot: 14
+	public JsonType GetJsonType() { }
+
+	// RVA: 0x3E51CB8 Offset: 0x3E4DCB8 VA: 0x3E51CB8 Slot: 15
+	public long GetLong() { }
+
+	// RVA: 0x3E51CC0 Offset: 0x3E4DCC0 VA: 0x3E51CC0 Slot: 16
+	public string GetString() { }
+
+	// RVA: 0x3E51D00 Offset: 0x3E4DD00 VA: 0x3E51D00 Slot: 17
+	public void SetBoolean(bool val) { }
+
+	// RVA: 0x3E51D04 Offset: 0x3E4DD04 VA: 0x3E51D04 Slot: 18
+	public void SetDouble(double val) { }
+
+	// RVA: 0x3E51D08 Offset: 0x3E4DD08 VA: 0x3E51D08 Slot: 19
+	public void SetInt(int val) { }
+
+	// RVA: 0x3E51D0C Offset: 0x3E4DD0C VA: 0x3E51D0C Slot: 20
+	public void SetJsonType(JsonType type) { }
+
+	// RVA: 0x3E51D10 Offset: 0x3E4DD10 VA: 0x3E51D10 Slot: 21
+	public void SetLong(long val) { }
+
+	// RVA: 0x3E51D14 Offset: 0x3E4DD14 VA: 0x3E51D14 Slot: 22
+	public void SetString(string val) { }
+
+	// RVA: 0x3E51D18 Offset: 0x3E4DD18 VA: 0x3E51D18 Slot: 23
+	public string ToJson() { }
+
+	// RVA: 0x3E51D58 Offset: 0x3E4DD58 VA: 0x3E51D58 Slot: 24
+	public void ToJson(JsonWriter writer) { }
+
+	// RVA: 0x3E51D5C Offset: 0x3E4DD5C VA: 0x3E51D5C Slot: 31
+	private bool System.Collections.IList.get_IsFixedSize() { }
+
+	// RVA: 0x3E51D64 Offset: 0x3E4DD64 VA: 0x3E51D64 Slot: 30
+	private bool System.Collections.IList.get_IsReadOnly() { }
+
+	// RVA: 0x3E51D6C Offset: 0x3E4DD6C VA: 0x3E51D6C Slot: 25
+	private object System.Collections.IList.get_Item(int index) { }
+
+	// RVA: 0x3E51D74 Offset: 0x3E4DD74 VA: 0x3E51D74 Slot: 26
+	private void System.Collections.IList.set_Item(int index, object value) { }
+
+	// RVA: 0x3E51D78 Offset: 0x3E4DD78 VA: 0x3E51D78 Slot: 27
+	private int System.Collections.IList.Add(object value) { }
+
+	// RVA: 0x3E51D80 Offset: 0x3E4DD80 VA: 0x3E51D80 Slot: 29
+	private void System.Collections.IList.Clear() { }
+
+	// RVA: 0x3E51D84 Offset: 0x3E4DD84 VA: 0x3E51D84 Slot: 28
+	private bool System.Collections.IList.Contains(object value) { }
+
+	// RVA: 0x3E51D8C Offset: 0x3E4DD8C VA: 0x3E51D8C Slot: 32
+	private int System.Collections.IList.IndexOf(object value) { }
+
+	// RVA: 0x3E51D94 Offset: 0x3E4DD94 VA: 0x3E51D94 Slot: 33
+	private void System.Collections.IList.Insert(int i, object v) { }
+
+	// RVA: 0x3E51D98 Offset: 0x3E4DD98 VA: 0x3E51D98 Slot: 34
+	private void System.Collections.IList.Remove(object value) { }
+
+	// RVA: 0x3E51D9C Offset: 0x3E4DD9C VA: 0x3E51D9C Slot: 35
+	private void System.Collections.IList.RemoveAt(int index) { }
+
+	// RVA: 0x3E51DA0 Offset: 0x3E4DDA0 VA: 0x3E51DA0 Slot: 37
+	private int System.Collections.ICollection.get_Count() { }
+
+	// RVA: 0x3E51DA8 Offset: 0x3E4DDA8 VA: 0x3E51DA8 Slot: 39
+	private bool System.Collections.ICollection.get_IsSynchronized() { }
+
+	// RVA: 0x3E51DB0 Offset: 0x3E4DDB0 VA: 0x3E51DB0 Slot: 38
+	private object System.Collections.ICollection.get_SyncRoot() { }
+
+	// RVA: 0x3E51DB8 Offset: 0x3E4DDB8 VA: 0x3E51DB8 Slot: 36
+	private void System.Collections.ICollection.CopyTo(Array array, int index) { }
+
+	// RVA: 0x3E51DBC Offset: 0x3E4DDBC VA: 0x3E51DBC Slot: 40
+	private IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+
+	// RVA: 0x3E51DC4 Offset: 0x3E4DDC4 VA: 0x3E51DC4 Slot: 54
+	private bool System.Collections.IDictionary.get_IsFixedSize() { }
+
+	// RVA: 0x3E51DCC Offset: 0x3E4DDCC VA: 0x3E51DCC Slot: 53
+	private bool System.Collections.IDictionary.get_IsReadOnly() { }
+
+	// RVA: 0x3E51DD4 Offset: 0x3E4DDD4 VA: 0x3E51DD4 Slot: 48
+	private ICollection System.Collections.IDictionary.get_Keys() { }
+
+	// RVA: 0x3E51DDC Offset: 0x3E4DDDC VA: 0x3E51DDC Slot: 49
+	private ICollection System.Collections.IDictionary.get_Values() { }
+
+	// RVA: 0x3E51DE4 Offset: 0x3E4DDE4 VA: 0x3E51DE4 Slot: 46
+	private object System.Collections.IDictionary.get_Item(object key) { }
+
+	// RVA: 0x3E51DEC Offset: 0x3E4DDEC VA: 0x3E51DEC Slot: 47
+	private void System.Collections.IDictionary.set_Item(object key, object value) { }
+
+	// RVA: 0x3E51DF0 Offset: 0x3E4DDF0 VA: 0x3E51DF0 Slot: 51
+	private void System.Collections.IDictionary.Add(object k, object v) { }
+
+	// RVA: 0x3E51DF4 Offset: 0x3E4DDF4 VA: 0x3E51DF4 Slot: 52
+	private void System.Collections.IDictionary.Clear() { }
+
+	// RVA: 0x3E51DF8 Offset: 0x3E4DDF8 VA: 0x3E51DF8 Slot: 50
+	private bool System.Collections.IDictionary.Contains(object key) { }
+
+	// RVA: 0x3E51E00 Offset: 0x3E4DE00 VA: 0x3E51E00 Slot: 56
+	private void System.Collections.IDictionary.Remove(object key) { }
+
+	// RVA: 0x3E51E04 Offset: 0x3E4DE04 VA: 0x3E51E04 Slot: 55
+	private IDictionaryEnumerator System.Collections.IDictionary.GetEnumerator() { }
+
+	// RVA: 0x3E51E0C Offset: 0x3E4DE0C VA: 0x3E51E0C Slot: 41
+	private object System.Collections.Specialized.IOrderedDictionary.get_Item(int idx) { }
+
+	// RVA: 0x3E51E14 Offset: 0x3E4DE14 VA: 0x3E51E14 Slot: 42
+	private void System.Collections.Specialized.IOrderedDictionary.set_Item(int idx, object value) { }
+
+	// RVA: 0x3E51E18 Offset: 0x3E4DE18 VA: 0x3E51E18 Slot: 43
+	private IDictionaryEnumerator System.Collections.Specialized.IOrderedDictionary.GetEnumerator() { }
+
+	// RVA: 0x3E51E20 Offset: 0x3E4DE20 VA: 0x3E51E20 Slot: 44
+	private void System.Collections.Specialized.IOrderedDictionary.Insert(int i, object k, object v) { }
+
+	// RVA: 0x3E51E24 Offset: 0x3E4DE24 VA: 0x3E51E24 Slot: 45
+	private void System.Collections.Specialized.IOrderedDictionary.RemoveAt(int i) { }
+
+	// RVA: 0x3E50638 Offset: 0x3E4C638 VA: 0x3E50638
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LitJson
+public enum JsonToken // TypeDefIndex: 1339
+{
+	// Fields
+	public int value__; // 0x0
+	public const JsonToken None = 0;
+	public const JsonToken ObjectStart = 1;
+	public const JsonToken PropertyName = 2;
+	public const JsonToken ObjectEnd = 3;
+	public const JsonToken ArrayStart = 4;
+	public const JsonToken ArrayEnd = 5;
+	public const JsonToken Int = 6;
+	public const JsonToken Long = 7;
+	public const JsonToken Double = 8;
+	public const JsonToken String = 9;
+	public const JsonToken Boolean = 10;
+	public const JsonToken Null = 11;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LitJson
+public class JsonReader // TypeDefIndex: 1340
+{
+	// Fields
+	private static IDictionary<int, IDictionary<int, int[]>> parse_table; // 0x0
+	private Stack<int> automaton_stack; // 0x10
+	private int current_input; // 0x18
+	private int current_symbol; // 0x1C
+	private bool end_of_json; // 0x20
+	private bool end_of_input; // 0x21
+	private Lexer lexer; // 0x28
+	private bool parser_in_string; // 0x30
+	private bool parser_return; // 0x31
+	private bool read_started; // 0x32
+	private TextReader reader; // 0x38
+	private bool reader_is_owned; // 0x40
+	private bool skip_non_members; // 0x41
+	private object token_value; // 0x48
+	private JsonToken token; // 0x50
+
+	// Properties
+	public int ReadedTokenNum { get; }
+	public bool AllowComments { get; set; }
+	public bool AllowSingleQuotedStrings { get; set; }
+	public bool SkipNonMembers { get; set; }
+	public bool EndOfInput { get; }
+	public bool EndOfJson { get; }
+	public JsonToken Token { get; }
+	public object Value { get; }
+
+	// Methods
+
+	// RVA: 0x3E51E28 Offset: 0x3E4DE28 VA: 0x3E51E28
+	public int get_ReadedTokenNum() { }
+
+	// RVA: 0x3E51E40 Offset: 0x3E4DE40 VA: 0x3E51E40
+	public bool get_AllowComments() { }
+
+	// RVA: 0x3E51E5C Offset: 0x3E4DE5C VA: 0x3E51E5C
+	public void set_AllowComments(bool value) { }
+
+	// RVA: 0x3E51E7C Offset: 0x3E4DE7C VA: 0x3E51E7C
+	public bool get_AllowSingleQuotedStrings() { }
+
+	// RVA: 0x3E51E98 Offset: 0x3E4DE98 VA: 0x3E51E98
+	public void set_AllowSingleQuotedStrings(bool value) { }
+
+	// RVA: 0x3E51EB8 Offset: 0x3E4DEB8 VA: 0x3E51EB8
+	public bool get_SkipNonMembers() { }
+
+	// RVA: 0x3E51EC0 Offset: 0x3E4DEC0 VA: 0x3E51EC0
+	public void set_SkipNonMembers(bool value) { }
+
+	// RVA: 0x3E51ECC Offset: 0x3E4DECC VA: 0x3E51ECC
+	public bool get_EndOfInput() { }
+
+	// RVA: 0x3E51ED4 Offset: 0x3E4DED4 VA: 0x3E51ED4
+	public bool get_EndOfJson() { }
+
+	// RVA: 0x3E51EDC Offset: 0x3E4DEDC VA: 0x3E51EDC
+	public JsonToken get_Token() { }
+
+	// RVA: 0x3E51EE4 Offset: 0x3E4DEE4 VA: 0x3E51EE4
+	public object get_Value() { }
+
+	// RVA: 0x3E51EEC Offset: 0x3E4DEEC VA: 0x3E51EEC
+	private static void .cctor() { }
+
+	// RVA: 0x3E5034C Offset: 0x3E4C34C VA: 0x3E5034C
+	public void .ctor(string json_text) { }
+
+	// RVA: 0x3E5016C Offset: 0x3E4C16C VA: 0x3E5016C
+	public void .ctor(TextReader reader) { }
+
+	// RVA: 0x3E525C8 Offset: 0x3E4E5C8 VA: 0x3E525C8
+	private void .ctor(TextReader reader, bool owned) { }
+
+	// RVA: 0x3E51EF0 Offset: 0x3E4DEF0 VA: 0x3E51EF0
+	private static void PopulateParseTable() { }
+
+	// RVA: 0x3E5297C Offset: 0x3E4E97C VA: 0x3E5297C
+	private static void TableAddCol(ParserToken row, int col, int[] symbols) { }
+
+	// RVA: 0x3E52854 Offset: 0x3E4E854 VA: 0x3E52854
+	private static void TableAddRow(ParserToken rule) { }
+
+	// RVA: 0x3E52AFC Offset: 0x3E4EAFC VA: 0x3E52AFC
+	private void ProcessNumber(string number) { }
+
+	// RVA: 0x3E52CA8 Offset: 0x3E4ECA8 VA: 0x3E52CA8
+	private void ProcessSymbol() { }
+
+	// RVA: 0x3E52E68 Offset: 0x3E4EE68 VA: 0x3E52E68
+	private bool ReadToken() { }
+
+	// RVA: 0x3E53098 Offset: 0x3E4F098 VA: 0x3E53098
+	public void Close() { }
+
+	// RVA: 0x3E4D5F0 Offset: 0x3E495F0 VA: 0x3E4D5F0
+	public bool Read() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LitJson
+internal enum Condition // TypeDefIndex: 1341
+{
+	// Fields
+	public int value__; // 0x0
+	public const Condition InArray = 0;
+	public const Condition InObject = 1;
+	public const Condition NotAProperty = 2;
+	public const Condition Property = 3;
+	public const Condition Value = 4;
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LitJson
+internal class WriterContext // TypeDefIndex: 1342
+{
+	// Fields
+	public int Count; // 0x10
+	public bool InArray; // 0x14
+	public bool InObject; // 0x15
+	public bool ExpectingValue; // 0x16
+	public int Padding; // 0x18
+
+	// Methods
+
+	// RVA: 0x3E53104 Offset: 0x3E4F104 VA: 0x3E53104
+	public void .ctor() { }
+}
+
+// Dll: Assembly-CSharp.dll
+// Namespace: LitJson
+public class JsonWriter // TypeDefIndex: 1343
+{
+	// Fields
+	private static NumberFormatInfo number_format; // 0x0
+	private WriterContext context; // 0x10
+	private Stack<WriterContext> ctx_stack; // 0x18
+	private bool has_reached_end; // 0x20
+	private char[] hex_seq; // 0x28
+	private int indentation; // 0x30
+	private int indent_value; // 0x34
+	private StringBuilder inst_string_builder; // 0x38
+	private bool pretty_print; // 0x40
+	private bool validate; // 0x41
+	private TextWriter writer; // 0x48
+	private bool unicode; // 0x50
+	private bool omit_default_value; // 0x51
+	private List<Type> ignore_types; // 0x58
+
+	// Properties
+	public int IndentValue { get; set; }
+	public bool PrettyPrint { get; set; }
+	public TextWriter TextWriter { get; }
+	public bool Validate { get; set; }
+	public bool Unicode { get; set; }
+	public bool OmitDefaultValue { get; set; }
+
+	// Methods
+
+	// RVA: 0x3E5310C Offset: 0x3E4F10C VA: 0x3E5310C
+	public int get_IndentValue() { }
+
+	// RVA: 0x3E53114 Offset: 0x3E4F114 VA: 0x3E53114
+	public void set_IndentValue(int value) { }
+
+	// RVA: 0x3E53128 Offset: 0x3E4F128 VA: 0x3E53128
+	public bool get_PrettyPrint() { }
+
+	// RVA: 0x3E53130 Offset: 0x3E4F130 VA: 0x3E53130
+	public void set_PrettyPrint(bool value) { }
+
+	// RVA: 0x3E5313C Offset: 0x3E4F13C VA: 0x3E5313C
+	public TextWriter get_TextWriter() { }
+
+	// RVA: 0x3E53144 Offset: 0x3E4F144 VA: 0x3E53144
+	public bool get_Validate() { }
+
+	// RVA: 0x3E5314C Offset: 0x3E4F14C VA: 0x3E5314C
+	public void set_Validate(bool value) { }
+
+	// RVA: 0x3E53158 Offset: 0x3E4F158 VA: 0x3E53158
+	public bool get_Unicode() { }
+
+	// RVA: 0x3E53160 Offset: 0x3E4F160 VA: 0x3E53160
+	public void set_Unicode(bool value) { }
+
+	// RVA: 0x3E5316C Offset: 0x3E4F16C VA: 0x3E5316C
+	public bool get_OmitDefaultValue() { }
+
+	// RVA: 0x3E53174 Offset: 0x3E4F174 VA: 0x3E53174
+	public void set_OmitDefaultValue(bool value) { }
+
+	// RVA: 0x3E53180 Offset: 0x3E4F180 VA: 0x3E53180
+	private static void .cctor() { }
+
+	// RVA: 0x3E483B0 Offset: 0x3E443B0 VA: 0x3E483B0
+	public void .ctor() { }
+
+	// RVA: 0x3E53314 Offset: 0x3E4F314 VA: 0x3E53314
